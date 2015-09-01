@@ -4,6 +4,9 @@ using Cellular;
 
 namespace Testing
 {
+    /// <summary>
+    /// Simple demonstration of working with period lengths.
+    /// </summary>
     static class SearchLongest
     {
         private const int SIZE = 25;
@@ -29,6 +32,10 @@ namespace Testing
             }
         }
 
+        /// <summary>
+        /// Searches for a CA with the longest period on some sample data.
+        /// </summary>
+        /// <returns>The longest period.</returns>
         public static long LongestPeriod()
         {
             var CAperiods = new SortedSet<CAwithLength>(new LengthCompare());

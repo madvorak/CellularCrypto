@@ -4,18 +4,31 @@ using System.Collections;
 
 namespace Cellular
 {
+    /// <summary>
+    /// This class contains base-constructors for all binary 1D automata and implementation of the <c>BinaryCA</c> interface.
+    /// The state is kept in a <c>BitArray</c>. It used to be bool[] originally.
+    /// </summary>
     abstract class Binary1DAutomaton : Automaton1D, BinaryCA
     {
-        protected BitArray state;               //originally bool[]
+        protected BitArray state;
 
+        /// <summary>
+        /// Creates a new <c>Binary1DAutomaton</c> of given size with 000...00100...000 as its initial state.
+        /// </summary>
+        /// <param name="size">The size of the new CA.</param>
         public Binary1DAutomaton(int size)
         {
             this.size = size;
             state = new BitArray(size);
             for (int i = 0; i < size; i++) state[i] = false;        //unnecessary
-            state[size / 2] = true;                                 //000...00100...000 is default initial state
+            state[size / 2] = true;
         }
 
+        /// <summary>
+        /// Creates a new <c>Binary1DAutomaton</c> of given initial state.
+        /// </summary>
+        /// <param name="initialState">A <c>BitArray</c> describing the initial state of the CA.
+        /// This also determines the size of the new CA.</param>
         public Binary1DAutomaton(BitArray initialState)
         {
             size = initialState.Length;

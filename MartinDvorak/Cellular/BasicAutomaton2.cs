@@ -22,7 +22,7 @@ namespace Cellular
 
         public override void Step()
         {
-            if (dictionary == null) FillDictionary();
+            if (dictionary == null) fillDictionary();
             BitArray newState = new BitArray(size);
 
             // the first cell
@@ -57,7 +57,7 @@ namespace Cellular
             time++;
         }
 
-        private void FillDictionary()
+        private void fillDictionary()
         {
             dictionary = new byte[1024];
             for (int i = 0; i < 1024; i++)

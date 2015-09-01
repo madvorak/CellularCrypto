@@ -1,5 +1,8 @@
 ﻿namespace Cellular
 {
+    /// <summary>
+    /// Stub.
+    /// </summary>
     class TotalisticNaryAutomaton : Nary1DAutomaton
     {
         int[] rule;

@@ -3,6 +3,9 @@ using Cellular;
 
 namespace Testing
 {
+    /// <summary>
+    /// Simple demonstration of utilities for CA.
+    /// </summary>
     static class UtilityTest
     {
         public static void RunTest()

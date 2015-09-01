@@ -1,8 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 namespace Cellular
 {
-    class Totalistic2DAutomaton : Binary2DAutomaton              //uses von Neumann Neighborhood
+    /// <summary>
+    /// This class represents a totalistic 2D automaton that uses Moore Neighborhood.
+    /// </summary>
+    class Totalistic2DAutomaton : Binary2DAutomaton
     {
         protected bool[] ruleLive, ruleDead;
 
@@ -18,12 +22,29 @@ namespace Cellular
 
         public Totalistic2DAutomaton(bool[] ruleLive, bool[] ruleDead, int width, int height, int seed) : base(width, height, seed)
         {
+            if (ruleLive == null || ruleLive.Length != 9 || ruleDead == null || ruleLive.Length != 9)
+            {
+                throw new ArgumentException("The array describing the rule must have have 9 elements!");
+            }
             this.ruleLive = ruleLive;
             this.ruleDead = ruleDead;
         }
 
+        /// <summary>
+        /// Creates a new totalistic 2D automaton of given ruleset with given initial state.
+        /// </summary>
+        /// <param name="ruleLive">Array that must contain 9 logical values.
+        /// The value in <c>ruleLive[i]</c> says what happens to a living cell when it has exactly i neighbours alive.</param>
+        /// <param name="ruleDead">Array that must contain 9 logical values.
+        /// The value in <c>ruleDead[i]</c> says what happens to a dead cell when it has exactly i neighbours alive.</param>
+        /// <param name="initialState">An array of <c>BitArray</c>s describing the initial state of the CA.
+        /// This also determines the size (width, height) of the new CA.</param>
         public Totalistic2DAutomaton(bool[] ruleLive, bool[] ruleDead, BitArray[] initialState) : base(initialState)
         {
+            if (ruleLive == null || ruleLive.Length != 9 || ruleDead == null || ruleLive.Length != 9)
+            {
+                throw new ArgumentException("The array describing the rule must have have 9 elements!");
+            }
             this.ruleLive = ruleLive;
             this.ruleDead = ruleDead;
         }

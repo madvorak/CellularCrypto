@@ -25,18 +25,18 @@ namespace Cellular
         public BasicAutomaton(int size) : this(30, size) {}
 
         /// <summary>
-        /// Creates a new basic CA with 000...00100...000 as its initial state.
+        /// Creates a new basic CA with given rule and 000...00100...000 as its initial state.
         /// </summary>
         /// <param name="ruleNo">The code of the elementary rule (from 0 to 255).</param>
         /// <param name="size">The size of the new CA.</param>
         public BasicAutomaton(byte ruleNo, int size) : base(size)
         {
             ruleNumber = ruleNo;
-            RuleFromNumber(ruleNo);
+            ruleFromNumber(ruleNo);
         }
 
         /// <summary>
-        /// Creates a new basic CA.
+        /// Creates a new basic CA with given rule and initial state.
         /// </summary>
         /// <param name="ruleNo">The code of the elementary rule (from 0 to 255).</param>
         /// <param name="initialState">A <c>BitArray</c> describing the initial state of the CA.
@@ -44,7 +44,7 @@ namespace Cellular
         public BasicAutomaton(byte ruleNo, BitArray initialState) : base(initialState)
         {
             ruleNumber = ruleNo;
-            RuleFromNumber(ruleNo);
+            ruleFromNumber(ruleNo);
         }
 
         /// <summary>
@@ -56,10 +56,10 @@ namespace Cellular
         public BasicAutomaton(byte ruleNo, int size, int seed) : base(size, seed)
         {
             ruleNumber = ruleNo;
-            RuleFromNumber(ruleNo);
+            ruleFromNumber(ruleNo);
         }
 
-        private void RuleFromNumber(byte ruleNo)
+        private void ruleFromNumber(byte ruleNo)
         {
             rule = new bool[2, 2, 2];
             rule[0, 0, 0] = ruleNo % 2 == 1 ? true : false;
@@ -109,7 +109,7 @@ namespace Cellular
             return "Basic Automaton No. " + ruleNumber;
         }
 
-        private bool[] GetRangeRule()
+        private bool[] getRangeRule()
         {
             bool[] ruleRange = new bool[8];
             byte ruleCopy = ruleNumber;
@@ -127,7 +127,7 @@ namespace Cellular
         /// <returns>A "copy" of this CA as <c>BinaryAutomatonRangeN</c>.</returns>
         public BinaryAutomatonRangeN ConvertToRangeN()
         {           
-            return new BinaryAutomatonRangeN(1, GetRangeRule(), state);
+            return new BinaryAutomatonRangeN(1, getRangeRule(), state);
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace Cellular
         /// <returns>A modified "copy" of this CA as <c>BinaryAutomatonCyclicRangeN</c>.</returns>
         public BinaryAutomatonCyclicRangeN ConvertToCyclicN()
         {
-            return new BinaryAutomatonCyclicRangeN(1, GetRangeRule(), state);
+            return new BinaryAutomatonCyclicRangeN(1, getRangeRule(), state);
         }
     }
 }

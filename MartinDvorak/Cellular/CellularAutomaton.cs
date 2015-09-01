@@ -8,7 +8,7 @@ namespace Cellular
     /// </summary>
     abstract class CellularAutomaton
     {
-        protected uint time;
+        protected uint time = 0;
 
         /// <summary>
         /// Performs one step applying the specific rule for creating a new state.
@@ -34,13 +34,14 @@ namespace Cellular
         }
 
         /// <summary>
-        /// Creates an appropriate copy of the CA.
+        /// Creates an appropriate copy of the CA. Its type and the specific rule are always preserved. 
+        /// However, the time (number of steps executed on the specific instance) is set back to 0.
         /// </summary>
-        /// <returns><c>CellularAutomaton</c> as <c>Object</c></returns>
+        /// <returns>A copy of the <c>CellularAutomaton</c> as an <c>Object</c></returns>
         public abstract object Clone();
 
         /// <summary>
-        /// Announces the runtime typy of the CA including info about its rule.
+        /// Announces the runtime type of the CA including info about its rule. It serves for debugging purposes.
         /// </summary>
         /// <returns>Type of the CA as a string.</returns>
         public abstract string TellType();

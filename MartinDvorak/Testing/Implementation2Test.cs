@@ -3,6 +3,9 @@ using Cellular;
 
 namespace Testing
 {
+    /// <summary>
+    /// Simple demonstration that <c>BasicAutomaton</c> and <c>BasicAutomaton2</c> do the same thing.
+    /// </summary>
     static class Implementation2Test
     {
         public static void RunTest()

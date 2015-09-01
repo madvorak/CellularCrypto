@@ -2,6 +2,9 @@
 
 namespace Cellular
 {
+    /// <summary>
+    /// This class represents a classic Conway's Game of Life automaton.
+    /// </summary>
     class GameOfLife : Totalistic2DAutomaton
     {          
         public GameOfLife(int width, int height, int seed) 
@@ -12,6 +15,11 @@ namespace Cellular
                  , width, height, seed)
         { }
 
+        /// <summary>
+        /// Creates a new Game of Life with givin initial state.
+        /// </summary>
+        /// <param name="initialState">An array of <c>BitArray</c>s describing the initial state of the CA.
+        /// This also determines the size (width, height) of the new CA.</param>
         public GameOfLife(BitArray[] initialState)
             : base(
                  new bool[] { false, false, true, true, false, false, false, false, false },

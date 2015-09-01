@@ -3,6 +3,9 @@ using Cellular;
 
 namespace Testing
 {
+    /// <summary>
+    /// Simple demonstration that <c>BinaryAutomatonRangeN</c> can be used in a place of <c>BasicAutomaton</c>.
+    /// </summary>
     static class BinaryRangeNTest
     {
         public static void RunTest()

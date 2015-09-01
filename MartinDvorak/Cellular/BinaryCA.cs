@@ -37,7 +37,8 @@
         /// <summary>
         /// Clones the underlying CA.
         /// </summary>
-        /// <returns>The same result as calling <code>CellularAutomaton.Clone();</code>, only the type is different.</returns>
+        /// <returns>The result is the same as when calling <code>CellularAutomaton.Clone();</code>,
+        /// only the type is <c>BinaryCA</c> (which is useful).</returns>
         BinaryCA Clone();
     }
 }

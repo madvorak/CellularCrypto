@@ -5,8 +5,17 @@ using System.Linq;
 
 namespace Cellular
 {
+    /// <summary>
+    /// This static class packs a group of utilities for working with CA.
+    /// </summary>
     static class Utilities
     {
+        /// <summary>
+        /// Converts an array of an array of <c>System.UInt32</c> into an array of <c>System.Boolean</c>.
+        /// The input is treated as MSB-first.
+        /// </summary>
+        /// <param name="input">Input array.</param>
+        /// <returns>Output array.</returns>
         public static bool[] UintArrToBoolArr(uint[] input)
         {
             if (input == null) return null;
@@ -24,6 +33,12 @@ namespace Cellular
             return output;
         }
 
+        /// <summary>
+        /// Converts an array of an array of <c>System.UInt32</c> into an array of <c>System.Collections.BitArray</c>.
+        /// The input is treated as MSB-first.
+        /// </summary>
+        /// <param name="input">Input array.</param>
+        /// <returns>Output array.</returns>
         public static BitArray UintArrToBitArr(uint[] input)
         {
             if (input == null) return null;
@@ -41,6 +56,16 @@ namespace Cellular
             return output;
         }
 
+        /// <summary>
+        /// Calculates a period (number of steps between repetitions) of a CA.
+        /// This method is fast, but UNREALIABLE! It gives only the lower estimate (because of hashing).
+        /// </summary>
+        /// <param name="CA">The examined cellular automaton. Don't worry, this method won't modify it.</param>
+        /// <param name="limit">Number of steps that will be performed in no repetition is found earlier.</param>
+        /// <param name="time">Output parameter telling the time of a first repetition (second occurence of the same state).
+        /// It is the number of steps done since calling this method (not a real time, not a period length).</param>
+        /// <returns>If a period is found within the limit, it returns the length of the period.
+        /// Otherwise, it returns -1.</returns>
         public static long PeriodLengthFast(CellularAutomaton CA, long limit, out long time)
         {
             CellularAutomaton ca = (CellularAutomaton)CA.Clone();
@@ -52,7 +77,7 @@ namespace Cellular
                 if (dict.ContainsKey(hash))
                 {
                     time = ca.GetTime();
-                    return i - dict[hash];      // UNRELIABLE !!! - gives only lower estimate (because of hashing)
+                    return i - dict[hash];
                 }
                 else dict.Add(hash, i);
                 ca.Step();
@@ -61,18 +86,38 @@ namespace Cellular
             return -1;
         }
 
+        /// <summary>
+        /// Calculates a period (number of steps between repetitions) of a CA.
+        /// This method is fast, but UNREALIABLE! It gives only the lower estimate (because of hashing).
+        /// </summary>
+        /// <param name="CA">The examined cellular automaton. Don't worry, this method won't modify it.</param>
+        /// <returns>If a period is found within 2^30 steps, it returns the length of the period.
+        /// Otherwise, it returns -1.</returns>
         public static long PeriodLengthFast(CellularAutomaton CA)
         {
             long time;
             return PeriodLengthFast(CA, 1 << 30, out time);
         }
 
+        /// <summary>
+        /// Inner structure for saving past states of a binary CA.
+        /// </summary>
         private struct Element
         {
             public uint[] packedState;
             public long index;
         }
 
+        /// <summary>
+        /// Calculates a period (number of steps between repetitions) of a CA.
+        /// This method is slower, but reliable.
+        /// </summary>
+        /// <param name="CA">The examined cellular automaton. Don't worry, this method won't modify it.</param>
+        /// <param name="limit">Number of steps that will be performed in no repetition is found earlier.</param>
+        /// <param name="time">Output parameter telling the time of a first repetition (second occurence of the same state).
+        /// It is the number of steps done since calling this method (not a real time, not a period length).</param>
+        /// <returns>If a period is found within the limit, it returns the length of the period.
+        /// Otherwise, it returns -1.</returns>
         public static long PeriodLengthSlow(BinaryCA CA, long limit, out long time)
         {
             BinaryCA ca = CA.Clone();
@@ -94,7 +139,7 @@ namespace Cellular
                             return i - e.index;
                         }
                     }
-                    dict[hash].Add(el);
+                    dict[hash].Add(el);   // the same state was not found
                 }
                 else 
                 {
@@ -108,7 +153,13 @@ namespace Cellular
             return -1;
         }
 
-        public static bool[] RandomBoolArr(uint length, Random rnd)
+        /// <summary>
+        /// Generates a random array of <c>System.Boolean</c> of given length.
+        /// </summary>
+        /// <param name="length">The size of the array.</param>
+        /// <param name="rnd">Pseudo-random number generator instance.</param>
+        /// <returns>Random array.</returns>
+        public static bool[] RandomBoolArr(int length, Random rnd)
         {
             bool[] array = new bool[length];
             for (int i = 0; i < length; i++)
@@ -118,11 +169,23 @@ namespace Cellular
             return array;
         }
 
-        public static bool[] RandomBoolArr(uint length)
+        /// <summary>
+        /// Generates a random array of <c>System.Boolean</c> of given length.
+        /// The instance of Pseudo-random number generator is created locally, so this method is unsuitable for repeated use.
+        /// </summary>
+        /// <param name="length">The size of the array.</param>
+        /// <returns>Random array.</returns>
+        public static bool[] RandomBoolArr(int length)
         {
             return RandomBoolArr(length, new Random());
         }
 
+        /// <summary>
+        /// Generates a random array of <c>System.Collections.BitArray</c> of given length.
+        /// </summary>
+        /// <param name="length">The size of the array.</param>
+        /// <param name="rnd">Pseudo-random number generator instance.</param>
+        /// <returns>Random array.</returns>
         public static BitArray RandomBitArr(int length, Random rnd)
         {
             BitArray b = new BitArray(length);
@@ -133,6 +196,12 @@ namespace Cellular
             return b;
         }
 
+        /// <summary>
+        /// Generates a random array of <c>System.Collections.BitArray</c> of given length.
+        /// The instance of Pseudo-random number generator is created locally, so this method is unsuitable for repeated use.
+        /// </summary>
+        /// <param name="length">The size of the array.</param>
+        /// <returns>Random array.</returns>
         public static BitArray RandomBitArr(int length)
         {
             return RandomBitArr(length, new Random());
