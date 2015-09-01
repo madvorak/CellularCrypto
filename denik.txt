@@ -1,0 +1,18 @@
+11.03.2015		Hierarchie tøíd pro CA, implementace základních CA (256 možností)
+12.03.2015		rozdìlení do složek Cellular, Crypto a Testing; interface BinaryCA a jeho implementace (1D, 2D), 
+			Game of Life (bez implementace pravidel pro okraje zatím), SimpleGen
+25.03.2015		kosmetické úpravy
+28.03.2015		vylepšení BinaryCA interface, okrajová pravidla pro Totalistic2DAutomaton
+02.04.2015		BasicAutomaton2, implementace GetHashCode
+03.04.2015		tøídy Utilities a UtilityTest (UintArrToBoolArr, PeriodLengthFast, PeriodLengthSlow), 
+			oprava Totalistic2DAutomaton (nefungoval pro neètverce), oprava implementací GetPacked na MSB-first, tvorba klonování
+24.04.2015		ICloneable
+25.04.2015		BinaryAutomatonRangeN, BinaryAutomatonCyclicRangeN, Nary1DAutomaton, zaèátek TotalisticNaryAutomaton, 
+			sjednocení poøadí parametrù v konstruktorech, rozšíøení použití klonování, kosmetické úpravy, BinaryRangeNTest
+26.04.2015		drobné metody v Utilities, hledání CA s nejdelší periodou (SearchLongest), TellType
+04.05.2015		základní návrh funkèní ètveøice: Mask, SeqGen, Factory, Solution
+07.05.2015		Primitives, Solver
+10.05.2015		CompressionTest, rozšíøení Solver a Solution, zaèátek SolverTest
+15.05.2015		zmìna vìtšiny uint na int, vìtšiny bool[] na BitArray, bool[,] na BitArray[] - technické zásahy do vìtšiny tøíd
+19.05.2015		vytvoøení online repository https://github.com/madvorak/CellularCrypto
+26.08.2015		Vytvoøení èásti XML komentáøù, vyèlenìní samostatného namespacu na Testing, GIT v rámci Visual Studia
