@@ -84,7 +84,7 @@ namespace Cellular
                 for (int j = i - range; j <= i + range; j++)       //can be optimized to only one reading of state
                 {
                     bin *= 2;
-                    if (getValueAt(j)) bin++;
+                    if (getValueAt(j)) bin++;   // depending on the ref in VMT, this behaves as limited or cyclic impl
                 }
                 newState[i] = rule[bin];
             }

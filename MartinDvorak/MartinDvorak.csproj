@@ -69,6 +69,7 @@
     <Compile Include="Cellular\GameOfLife.cs" />
     <Compile Include="Cellular\Nary1DAutomaton.cs" />
     <Compile Include="Cellular\TotalisticNaryAutomaton.cs" />
+    <Compile Include="Cellular\TotalisticNaryCyclicAutomaton.cs" />
     <Compile Include="Cellular\Utilities.cs" />
     <Compile Include="Crypto\Factory.cs" />
     <Compile Include="Crypto\Mask.cs" />
