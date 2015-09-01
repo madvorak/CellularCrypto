@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 namespace Cellular
 {
@@ -52,8 +53,8 @@ namespace Cellular
         /// </summary>
         /// <param name="ruleNo">The code of the elementary rule (from 0 to 255).</param>
         /// <param name="size">The size of the new CA.</param>
-        /// <param name="seed">A number which will become a seed of the pseudoRNG used to generate the original state.</param>
-        public BasicAutomaton(byte ruleNo, int size, int seed) : base(size, seed)
+        /// <param name="rnd">PseudoRNG instance used to generate the original state.</param>
+        public BasicAutomaton(byte ruleNo, int size, Random rnd) : base(size, rnd)
         {
             ruleNumber = ruleNo;
             ruleFromNumber(ruleNo);

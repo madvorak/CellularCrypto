@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 namespace Cellular
 {
     /// <summary>
     /// This class can work with 256 elementary CA with firmly set borders.
-    /// This specific implementation maps 10 cells onto 8 cells at once.
+    /// This specific implementation maps 10 cells onto 8 cells at once, so it should be faster a little.
     /// </summary>
     class BasicAutomaton2 : BasicAutomaton
     {
@@ -18,7 +19,7 @@ namespace Cellular
 
         public BasicAutomaton2(byte ruleNo, BitArray initialState) : base(ruleNo, initialState) {}
 
-        public BasicAutomaton2(byte ruleNo, int size, int seed) : base(ruleNo, size, seed) {}
+        public BasicAutomaton2(byte ruleNo, int size, Random rnd) : base(ruleNo, size, rnd) { }
 
         public override void Step()
         {

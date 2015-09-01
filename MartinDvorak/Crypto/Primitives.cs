@@ -4,6 +4,7 @@ namespace Crypto
 {
     class Primitives        // Singleton class
     {
+        // TODO: should be made flexible accoring to size of key
         private static Primitives instance;
 
         private string[] CAcodes;
@@ -32,7 +33,7 @@ namespace Crypto
                 }
                 maskBase[i] = new Mask(asc);             //linearly ascending mask
             }
-            r = new Random();
+            r = Program.rnd;
             for (int i = maskCount / 2; i < maskCount; i++)
             {
                 int[] rand = new int[i * 100];

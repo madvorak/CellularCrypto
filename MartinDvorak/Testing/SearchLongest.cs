@@ -43,12 +43,12 @@ namespace Testing
 
             for (int i = 0; i < 256; i++)
             {
-                ca = new BasicAutomaton2((byte)i, SIZE, 123456);
+                ca = new BasicAutomaton2((byte)i, SIZE, Program.rnd);
                 var caL = new CAwithLength(ca, Utilities.PeriodLengthFast(ca));
                 CAperiods.Add(caL);
             }
 
-            var conway = new GameOfLife(SIZEsqrt, SIZEsqrt, 123456);
+            var conway = new GameOfLife(SIZEsqrt, SIZEsqrt, Program.rnd);
             var conwayL = new CAwithLength(conway, Utilities.PeriodLengthFast(conway));
             CAperiods.Add(conwayL);
 

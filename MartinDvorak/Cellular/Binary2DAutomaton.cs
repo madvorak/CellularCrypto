@@ -43,17 +43,16 @@ namespace Cellular
             state = initialState;
         }
 
-        public Binary2DAutomaton(int width, int height, int seed)
+        public Binary2DAutomaton(int width, int height, Random rnd)
         {
             this.width = width;
             this.height = height;
-            Random r = new Random(seed);
             state = new BitArray[height];
             for (int i = 0; i < height; i++)
             {
                 state[i] = new BitArray(width);
                 for (int j = 0; j < width; j++)
-                    state[i][j] = r.Next(2) == 1;
+                    state[i][j] = rnd.Next(2) == 1;
             }
         }
 

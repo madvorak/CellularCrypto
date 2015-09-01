@@ -15,12 +15,7 @@ namespace Cellular
             ruleLive = ruleDead = new bool[9];
         }
 
-        public Totalistic2DAutomaton(int width, int height, int seed) : base(width, height, seed)
-        {
-            ruleLive = ruleDead = new bool[9];
-        }
-
-        public Totalistic2DAutomaton(bool[] ruleLive, bool[] ruleDead, int width, int height, int seed) : base(width, height, seed)
+        public Totalistic2DAutomaton(bool[] ruleLive, bool[] ruleDead, int width, int height, Random rnd) : base(width, height, rnd)
         {
             if (ruleLive == null || ruleLive.Length != 9 || ruleDead == null || ruleLive.Length != 9)
             {

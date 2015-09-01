@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 namespace Cellular
 {
@@ -6,13 +7,13 @@ namespace Cellular
     /// This class represents a classic Conway's Game of Life automaton.
     /// </summary>
     class GameOfLife : Totalistic2DAutomaton
-    {          
-        public GameOfLife(int width, int height, int seed) 
+    {
+        public GameOfLife(int width, int height, Random rnd) 
             : base(
                  new bool[] { false, false, true, true, false, false, false, false, false },
 //number of neighbours alive:   0      1      2     3     4      5      6      7      8
                  new bool[] { false, false, false, true, false, false, false, false, false }
-                 , width, height, seed)
+                 , width, height, rnd)
         { }
 
         /// <summary>

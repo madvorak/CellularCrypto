@@ -21,11 +21,11 @@ namespace Testing
             long time;
             CellularAutomaton basicCA = new BasicAutomaton(125, 10);
             Console.WriteLine("Period of length {0} at iteration {1} ", Utilities.PeriodLengthFast(basicCA, long.MaxValue, out time), time);
-            CellularAutomaton conway = new GameOfLife(60, 50, 151);
-            Console.WriteLine("Period of length {0} at iteration {1} ", Utilities.PeriodLengthFast(conway, long.MaxValue, out time), time);
+            BinaryCA conway = new GameOfLife(60, 50, Program.rnd);
+            Console.WriteLine("Period of length {0} at iteration {1} ", Utilities.PeriodLengthFast((CellularAutomaton)conway, long.MaxValue, out time), time);
             BinaryCA basicCA_ = new BasicAutomaton(125, 10);
             Console.WriteLine("Period of length {0} at iteration {1} ", Utilities.PeriodLengthSlow(basicCA_, long.MaxValue, out time), time);
-            BinaryCA conway_ = new GameOfLife(60, 50, 151);
+            BinaryCA conway_ = conway.Clone();
             Console.WriteLine("Period of length {0} at iteration {1} ", Utilities.PeriodLengthSlow(conway_, long.MaxValue, out time), time);
             Console.WriteLine();
 

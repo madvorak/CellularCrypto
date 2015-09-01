@@ -35,12 +35,11 @@ namespace Cellular
             state = initialState;
         }
 
-        public Binary1DAutomaton(int size, int seed)
+        public Binary1DAutomaton(int size, Random rnd)
         {
             this.size = size;
-            Random r = new Random(seed);
             state = new BitArray(size);
-            for (int i = 0; i < size; i++) state[i] = r.Next(2) == 1;
+            for (int i = 0; i < size; i++) state[i] = rnd.Next(2) == 1;
         }
 
         int BinaryCA.GetSize()
