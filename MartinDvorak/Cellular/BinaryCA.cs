@@ -1,5 +1,8 @@
 ﻿namespace Cellular
 {
+    /// <summary>
+    /// Common interface for all binary cellular automata.
+    /// </summary>
     interface BinaryCA
     {
         /// <summary>

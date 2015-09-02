@@ -1,5 +1,8 @@
-﻿namespace Cellular.Cellular
+﻿namespace Cellular
 {
+    /// <summary>
+    /// Stub. Cyclic variant.
+    /// </summary>
     class TotalisticNaryCyclicAutomaton : TotalisticNaryAutomaton
     {
         public TotalisticNaryCyclicAutomaton(int numberOfStates, int[] rule, int[] initialState) : base(numberOfStates, rule, initialState) {}
