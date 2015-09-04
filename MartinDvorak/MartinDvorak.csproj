@@ -58,18 +58,18 @@
   <ItemGroup>
     <Compile Include="Cellular\Automaton1D.cs" />
     <Compile Include="Cellular\Automaton2D.cs" />
-    <Compile Include="Cellular\BasicAutomaton.cs" />
-    <Compile Include="Cellular\BasicAutomaton2.cs" />
+    <Compile Include="Cellular\ElementaryAutomaton.cs" />
+    <Compile Include="Cellular\ElementaryFastAutomaton.cs" />
     <Compile Include="Cellular\Binary1DAutomaton.cs" />
     <Compile Include="Cellular\Binary2DAutomaton.cs" />
-    <Compile Include="Cellular\BinaryAutomatonCyclicRangeN.cs" />
-    <Compile Include="Cellular\BinaryAutomatonRangeN.cs" />
-    <Compile Include="Cellular\BinaryCA.cs" />
+    <Compile Include="Cellular\BinaryRangeCyclicAutomaton.cs" />
+    <Compile Include="Cellular\BinaryRangeAutomaton.cs" />
+    <Compile Include="Cellular\IBinaryCA.cs" />
     <Compile Include="Cellular\CellularAutomaton.cs" />
     <Compile Include="Cellular\GameOfLife.cs" />
     <Compile Include="Cellular\Nary1DAutomaton.cs" />
-    <Compile Include="Cellular\TotalisticNaryAutomaton.cs" />
-    <Compile Include="Cellular\TotalisticNaryCyclicAutomaton.cs" />
+    <Compile Include="Cellular\NaryTotalisticAutomaton.cs" />
+    <Compile Include="Cellular\NaryTotalisticCyclicAutomaton.cs" />
     <Compile Include="Cellular\Utilities.cs" />
     <Compile Include="Crypto\Factory.cs" />
     <Compile Include="Crypto\Mask.cs" />

@@ -3,20 +3,20 @@
 namespace Cellular
 {
     /// <summary>
-    /// Stub. Uses only (self, ) left neighbour and right neighbour.
+    /// Class representing any n-ary one-dimensional automaton with a totalistic rule.
     /// </summary>
-    class TotalisticNaryAutomaton : Nary1DAutomaton
+    class NaryTotalisticAutomaton : Nary1DAutomaton
     {
         protected int[] rule; //values (0 to N-1) for indeces from 0 to 3*(N-1) => size is 3*N - 2
 
-        public TotalisticNaryAutomaton(int numberOfStates, int[] rule, int[] initialState) : base(numberOfStates, initialState)
+        public NaryTotalisticAutomaton(int numberOfStates, int[] rule, int[] initialState) : base(numberOfStates, initialState)
         {
             this.rule = rule;
         }
 
         public override object Clone()
         {
-            return new TotalisticNaryAutomaton(N, rule, state);
+            return new NaryTotalisticAutomaton(N, rule, state);
         }
 
         public override string TellType()

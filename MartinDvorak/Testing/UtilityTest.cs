@@ -11,7 +11,7 @@ namespace Testing
         public static void RunTest()
         {
             uint[] u = new uint[2] { 123456, 999999999 };
-            BinaryCA binCA = new BasicAutomaton(1, Utilities.UintArrToBitArr(u));
+            IBinaryCA binCA = new ElementaryAutomaton(1, Utilities.UintArrToBitArr(u));
             uint[] p = binCA.GetPacked();
             Console.WriteLine(p[0] + " " + p[1]);
             if (System.Linq.Enumerable.SequenceEqual(u, p)) Console.WriteLine("OK");
@@ -19,13 +19,13 @@ namespace Testing
             Console.WriteLine();
 
             long time;
-            CellularAutomaton basicCA = new BasicAutomaton(125, 10);
+            CellularAutomaton basicCA = new ElementaryAutomaton(125, 10);
             Console.WriteLine("Period of length {0} at iteration {1} ", Utilities.PeriodLengthFast(basicCA, long.MaxValue, out time), time);
-            BinaryCA conway = new GameOfLife(60, 50, Program.rnd);
+            IBinaryCA conway = new GameOfLife(60, 50, Program.rnd);
             Console.WriteLine("Period of length {0} at iteration {1} ", Utilities.PeriodLengthFast((CellularAutomaton)conway, long.MaxValue, out time), time);
-            BinaryCA basicCA_ = new BasicAutomaton(125, 10);
+            IBinaryCA basicCA_ = new ElementaryAutomaton(125, 10);
             Console.WriteLine("Period of length {0} at iteration {1} ", Utilities.PeriodLengthSlow(basicCA_, long.MaxValue, out time), time);
-            BinaryCA conway_ = conway.Clone();
+            IBinaryCA conway_ = conway.CloneEverything();
             Console.WriteLine("Period of length {0} at iteration {1} ", Utilities.PeriodLengthSlow(conway_, long.MaxValue, out time), time);
             Console.WriteLine();
 

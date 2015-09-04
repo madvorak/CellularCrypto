@@ -3,14 +3,14 @@
 namespace Cellular
 {
     /// <summary>
-    /// This class can work with any binary 1D automaton with symmetric scope.
+    /// Class representing any binary 1D automaton with symmetric scope.
     /// The automata are cyclic - edges are connected. Therefore, all positions are equivalent.
     /// </summary>
-    class BinaryAutomatonCyclicRangeN : BinaryAutomatonRangeN
+    class BinaryRangeCyclicAutomaton : BinaryRangeAutomaton
     {
-        public BinaryAutomatonCyclicRangeN(byte scope, bool[] rule, int size) : base(scope, rule, size) { }
+        public BinaryRangeCyclicAutomaton(byte scope, bool[] rule, int size) : base(scope, rule, size) { }
 
-        public BinaryAutomatonCyclicRangeN(byte scope, bool[] rule, BitArray initialState) : base(scope, rule, initialState) { }
+        public BinaryRangeCyclicAutomaton(byte scope, bool[] rule, BitArray initialState) : base(scope, rule, initialState) { }
 
         protected override bool getValueAt(int index)
         {
@@ -22,6 +22,11 @@ namespace Cellular
             {
                 return state[index % size];
             }
+        }
+
+        protected override IBinaryCA CloneTemplate(BitArray newInstanceState)
+        {
+            return new BinaryRangeCyclicAutomaton(range, rule, newInstanceState);
         }
 
         public override string TellType()

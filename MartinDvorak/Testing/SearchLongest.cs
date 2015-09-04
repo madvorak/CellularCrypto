@@ -43,7 +43,7 @@ namespace Testing
 
             for (int i = 0; i < 256; i++)
             {
-                ca = new BasicAutomaton2((byte)i, SIZE, Program.rnd);
+                ca = new ElementaryFastAutomaton((byte)i, SIZE, Program.rnd);
                 var caL = new CAwithLength(ca, Utilities.PeriodLengthFast(ca));
                 CAperiods.Add(caL);
             }
@@ -58,11 +58,11 @@ namespace Testing
                 var initial = Utilities.RandomBitArr(SIZE);
                 if (i % 2 == 0)
                 {
-                    ca = new BinaryAutomatonRangeN(2, rule, initial);
+                    ca = new BinaryRangeAutomaton(2, rule, initial);
                 }
                 else
                 {
-                    ca = new BinaryAutomatonCyclicRangeN(2, rule, initial);
+                    ca = new BinaryRangeCyclicAutomaton(2, rule, initial);
                 }
                 var caL = new CAwithLength(ca, Utilities.PeriodLengthFast(ca));
                 CAperiods.Add(caL);

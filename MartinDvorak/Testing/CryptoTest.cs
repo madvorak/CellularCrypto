@@ -9,7 +9,7 @@ namespace Testing
     {
         public static void RunTest()
         {
-            BinaryCA ba = new BasicAutomaton(30, 128, Program.rnd);
+            IBinaryCA ba = new ElementaryAutomaton(30, 128, Program.rnd);
             SimpleGen generator = new SimpleGen(ba);
             uint[] generatedSeq = generator.Generate(100);
             foreach (uint u in generatedSeq) Console.WriteLine(u);

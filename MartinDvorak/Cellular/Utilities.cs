@@ -118,9 +118,9 @@ namespace Cellular
         /// It is the number of steps done since calling this method (not a real time, not a period length).</param>
         /// <returns>If a period is found within the limit, it returns the length of the period.
         /// Otherwise, it returns -1.</returns>
-        public static long PeriodLengthSlow(BinaryCA CA, long limit, out long time)
+        public static long PeriodLengthSlow(IBinaryCA CA, long limit, out long time)
         {
-            BinaryCA ca = CA.Clone();
+            IBinaryCA ca = CA.CloneEverything();
             var dict = new Dictionary<int, List<Element>>();
 
             for (long i = 0; i < limit; i++)

@@ -5,10 +5,10 @@ using System.Collections;
 namespace Cellular
 {
     /// <summary>
-    /// This class contains base-constructors for all binary 2D automata and implementation of the <c>BinaryCA</c> interface.
+    /// Class containing base-constructors for all binary 2D automata and implementation of the <c>IBinaryCA</c> interface.
     /// The state is kept in an array of <c>BitArray</c>s reprezenting rows. It used to be bool[,] originally.
     /// </summary>
-    abstract class Binary2DAutomaton : Automaton2D, BinaryCA
+    abstract class Binary2DAutomaton : Automaton2D, IBinaryCA
     {
         protected BitArray[] state; //represents rows
 
@@ -43,6 +43,12 @@ namespace Cellular
             state = initialState;
         }
 
+        /// <summary>
+        /// Creates a new <c>Binary2DAutomaton</c> of given size with a random initial state.
+        /// </summary>
+        /// <param name="width">The width of the new CA (length of rows).</param>
+        /// <param name="height">The height of the new CA (number of rows).</param>
+        /// <param name="rnd">PseudoRNG instance that will be used to generate the original state.</param>
         public Binary2DAutomaton(int width, int height, Random rnd)
         {
             this.width = width;
@@ -56,12 +62,12 @@ namespace Cellular
             }
         }
 
-        int BinaryCA.GetSize()
+        int IBinaryCA.GetSize()
         {
             return width * height;
         }
 
-        string BinaryCA.StateAsString()
+        string IBinaryCA.StateAsString()
         {
             StringBuilder sb = new StringBuilder();
             for (int line = 0; line < height; line++)
@@ -80,7 +86,7 @@ namespace Cellular
         /// So every 32 cells are saved into one uint (where the original array is treated as MSB-first).
         /// </summary>
         /// <returns>Condensed state of the CA in a simple one-dimensional array.</returns>
-        uint[] BinaryCA.GetPacked()
+        uint[] IBinaryCA.GetPacked()
         {
             uint[] packed = new uint[(width*height + 31) / 32];       // works like ceil(size/32)
             for (int i = 0; i < packed.Length; i++) packed[i] = 0;
@@ -96,22 +102,29 @@ namespace Cellular
             return packed;
         }
 
-        bool BinaryCA.GetValueAt(int index)
+        bool IBinaryCA.GetValueAt(int index)
         {
             int i = index / width;
             int j = index % width;
             return state[i][j];
         }
 
-        void BinaryCA.Step()
+        void IBinaryCA.Step()
         {
             this.Step();
         }
 
-        BinaryCA BinaryCA.Clone()
+        IBinaryCA IBinaryCA.CloneEverything()
         {
-            return (BinaryCA)this.Clone();
+            return (IBinaryCA)this.Clone();
         }
+
+        IBinaryCA IBinaryCA.CloneTemplate(BitArray newInstanceState)
+        {
+            return this.CloneTemplate(newInstanceState);
+        }
+
+        abstract protected IBinaryCA CloneTemplate(BitArray newInstanceState);
 
         public override int GetHashCode()
         {

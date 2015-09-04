@@ -7,8 +7,8 @@ namespace Testing
     {
         public static void RunTest()
         {
-            BinaryCA demoCA;
-            demoCA = new BasicAutomaton(90, Console.WindowWidth - 1);
+            IBinaryCA demoCA;
+            demoCA = new ElementaryAutomaton(90, Console.WindowWidth - 1);
             Console.WriteLine(demoCA.StateAsString());
             for (int i = 0; i < 30; i++)
             {
@@ -20,7 +20,7 @@ namespace Testing
 
             Console.WriteLine();
             Console.WriteLine("Game of Life");
-            BinaryCA conway;
+            IBinaryCA conway;
             conway = new GameOfLife(20, 20, Program.rnd);
             Console.WriteLine(conway.StateAsString());
             Console.ReadKey();

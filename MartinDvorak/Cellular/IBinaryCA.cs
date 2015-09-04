@@ -1,9 +1,11 @@
-﻿namespace Cellular
+﻿using System.Collections;
+
+namespace Cellular
 {
     /// <summary>
     /// Common interface for all binary cellular automata.
     /// </summary>
-    interface BinaryCA
+    interface IBinaryCA
     {
         /// <summary>
         /// Tells the size of the CA.
@@ -38,10 +40,17 @@
         void Step();
 
         /// <summary>
-        /// Clones the underlying CA.
+        /// Clones the underlying CA including its state at the moment.
         /// </summary>
-        /// <returns>The result is the same as when calling <code>CellularAutomaton.Clone();</code>,
-        /// only the type is <c>BinaryCA</c> (which is useful).</returns>
-        BinaryCA Clone();
+        /// <returns>Identical copy. The result is the same as when calling <code>CellularAutomaton.Clone();</code>,
+        /// only the type is <c>IBinaryCA</c> (which is useful).</returns>
+        IBinaryCA CloneEverything();
+
+        /// <summary>
+        /// Creates a new binary CA with the same type and the same rules.
+        /// </summary>
+        /// <param name="newInstanceState">Initial state of the new (returned) instance.</param>
+        /// <returns>New binary CA with copied behaviour, but newly given initial state.</returns>
+        IBinaryCA CloneTemplate(BitArray newInstanceState);
     }
 }

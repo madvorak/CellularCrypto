@@ -5,9 +5,9 @@ namespace Crypto
     [Obsolete]
     class SimpleGen
     {
-        private Cellular.BinaryCA ca;           //the size of the inner CA must be at least 32
+        private Cellular.IBinaryCA ca;           //the size of the inner CA must be at least 32
                                                 //ideally, the size should be a multiple of 32
-        public SimpleGen(Cellular.BinaryCA CA)
+        public SimpleGen(Cellular.IBinaryCA CA)
         {
             ca = CA;
         }

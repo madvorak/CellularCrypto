@@ -29,7 +29,7 @@ namespace Crypto
         public BitArray RunSolution(BitArray initial)
         {
             BitArray key = new BitArray(initial);
-            BinaryCA ca;
+            IBinaryCA ca;
             SeqGen seqGen;
             Mask mask;
             foreach (Couple couple in algorithm)

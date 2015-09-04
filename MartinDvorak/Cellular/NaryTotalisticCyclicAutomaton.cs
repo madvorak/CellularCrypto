@@ -1,11 +1,11 @@
 ﻿namespace Cellular
 {
     /// <summary>
-    /// Stub. Cyclic variant.
+    /// Class representing any N-ary one-dimensional automaton with a totalistic rule.
     /// </summary>
-    class TotalisticNaryCyclicAutomaton : TotalisticNaryAutomaton
+    class NaryTotalisticCyclicAutomaton : NaryTotalisticAutomaton
     {
-        public TotalisticNaryCyclicAutomaton(int numberOfStates, int[] rule, int[] initialState) : base(numberOfStates, rule, initialState) {}
+        public NaryTotalisticCyclicAutomaton(int numberOfStates, int[] rule, int[] initialState) : base(numberOfStates, rule, initialState) {}
 
         protected override int getValueAt(int index)
         {

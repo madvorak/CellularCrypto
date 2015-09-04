@@ -3,7 +3,7 @@
 namespace Cellular
 {
     /// <summary>
-    /// Abstract class for general 1D n-ary automata.
+    /// Abstract class for general 1D N-ary automata.
     /// </summary>
     abstract class Nary1DAutomaton : Automaton1D
     {

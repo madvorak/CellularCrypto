@@ -4,17 +4,17 @@ using Cellular;
 namespace Testing
 {
     /// <summary>
-    /// Simple demonstration that <c>BasicAutomaton</c> and <c>BasicAutomaton2</c> do the same thing.
+    /// Simple demonstration that <c>ElementaryAutomaton</c> and <c>ElementaryFastAutomaton</c> do the same thing.
     /// </summary>
     static class Implementation2Test
     {
         public static void RunTest()
         {
-            BinaryCA one, two;
+            IBinaryCA one, two;
             for (byte i = 0; i < 255; i++)
             {
-                one = new BasicAutomaton(i, 1000);
-                two = new BasicAutomaton2(i, 1000);
+                one = new ElementaryAutomaton(i, 1000);
+                two = new ElementaryFastAutomaton(i, 1000);
                 (one as CellularAutomaton).Step(300);
                 (two as CellularAutomaton).Step(300);
                 if (one.GetHashCode() != two.GetHashCode()) Console.WriteLine("Error of Basic Automaton No. " + i);

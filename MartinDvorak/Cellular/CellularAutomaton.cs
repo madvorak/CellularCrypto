@@ -3,7 +3,7 @@
 namespace Cellular
 {
     /// <summary>
-    /// Top class of the hierarchy. Every constructor should follow this logical order when considering its parametres:
+    /// The top class of the hierarchy. Every constructor should follow this logical order when considering its parametres:
     /// specification of the type (usually not needed), rule, size, initial state / rng seed.
     /// </summary>
     abstract class CellularAutomaton

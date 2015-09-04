@@ -6,13 +6,13 @@ namespace Crypto
 {
     static class Factory
     {
-        public static BinaryCA CreateAutomaton(string code, BitArray input)
+        public static IBinaryCA CreateAutomaton(string code, BitArray input)
         { 
             string[] s = code.Split();
             byte number = byte.Parse(s[1]);
             if (s[0] == "B")
             {
-                return new BasicAutomaton(number, input);
+                return new ElementaryAutomaton(number, input);
             }
             else if (s[0] == "G")
             { 

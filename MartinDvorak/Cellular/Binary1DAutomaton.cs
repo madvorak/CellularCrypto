@@ -5,10 +5,10 @@ using System.Collections;
 namespace Cellular
 {
     /// <summary>
-    /// This class contains base-constructors for all binary 1D automata and implementation of the <c>BinaryCA</c> interface.
+    /// Class containing base-constructors for all binary 1D automata and implementation of the <c>IBinaryCA</c> interface.
     /// The state is kept in a <c>BitArray</c>. It used to be bool[] originally.
     /// </summary>
-    abstract class Binary1DAutomaton : Automaton1D, BinaryCA
+    abstract class Binary1DAutomaton : Automaton1D, IBinaryCA
     {
         protected BitArray state;
 
@@ -35,6 +35,11 @@ namespace Cellular
             state = initialState;
         }
 
+        /// <summary>
+        /// Creates a new <c>Binary1DAutomaton</c> of given size with a random initial state.
+        /// </summary>
+        /// <param name="size">The size of the new CA.</param>
+        /// <param name="rnd">PseudoRNG instance that will be used to generate the original state.</param>
         public Binary1DAutomaton(int size, Random rnd)
         {
             this.size = size;
@@ -42,12 +47,12 @@ namespace Cellular
             for (int i = 0; i < size; i++) state[i] = rnd.Next(2) == 1;
         }
 
-        int BinaryCA.GetSize()
+        int IBinaryCA.GetSize()
         {
             return size;
         }
 
-        string BinaryCA.StateAsString()
+        string IBinaryCA.StateAsString()
         {
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < size; i++)
@@ -57,7 +62,7 @@ namespace Cellular
             return sb.ToString();
         }
 
-        uint[] BinaryCA.GetPacked()
+        uint[] IBinaryCA.GetPacked()
         {
             uint[] packed = new uint[(size + 31) / 32];       //works like ceil(size/32)
             for (int i = 0; i < packed.Length; i++) packed[i] = 0;
@@ -68,20 +73,27 @@ namespace Cellular
             return packed;
         }
 
-        bool BinaryCA.GetValueAt(int index)
+        bool IBinaryCA.GetValueAt(int index)
         {
             return state[index];
         }
 
-        void BinaryCA.Step()
+        void IBinaryCA.Step()
         {
             this.Step();
         }
 
-        BinaryCA BinaryCA.Clone()
+        IBinaryCA IBinaryCA.CloneEverything()
         {
-            return (BinaryCA)this.Clone();
+            return (IBinaryCA)this.Clone();
         }
+
+        IBinaryCA IBinaryCA.CloneTemplate(BitArray newInstanceState)
+        {
+            return this.CloneTemplate(newInstanceState);
+        }
+
+        abstract protected IBinaryCA CloneTemplate(BitArray newInstanceState);
 
         public override int GetHashCode()
         {

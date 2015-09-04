@@ -5,11 +5,11 @@ namespace Crypto
 {
     class SeqGen
     {
-        private BinaryCA automaton;
+        private IBinaryCA automaton;
         private Mask mask;
         private int sizeCA;
 
-        public SeqGen(BinaryCA automaton, Mask mask)
+        public SeqGen(IBinaryCA automaton, Mask mask)
         {
             this.automaton = automaton;
             this.mask = mask;
