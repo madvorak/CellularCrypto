@@ -6,7 +6,7 @@ namespace Cellular
 {
     /// <summary>
     /// Class containing base-constructors for all binary 2D automata and implementation of the <c>IBinaryCA</c> interface.
-    /// The state is kept in an array of <c>BitArray</c>s reprezenting rows. It used to be bool[,] originally.
+    /// The state is kept in an array of <c>BitArray</c>s reprezenting rows. It used to be <c>bool[,]</c> originally.
     /// </summary>
     abstract class Binary2DAutomaton : Automaton2D, IBinaryCA
     {
@@ -121,10 +121,10 @@ namespace Cellular
 
         IBinaryCA IBinaryCA.CloneTemplate(BitArray newInstanceState)
         {
-            return this.CloneTemplate(newInstanceState);
+            return this.cloneTemplate(newInstanceState);
         }
 
-        abstract protected IBinaryCA CloneTemplate(BitArray newInstanceState);
+        abstract protected IBinaryCA cloneTemplate(BitArray newInstanceState);
 
         public override int GetHashCode()
         {

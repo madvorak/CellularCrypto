@@ -31,7 +31,7 @@ namespace Testing
             for (int i = 0; i < size; i++) b[i] = i % 5 == 0;
             Console.WriteLine("Každá pátá 1");
             TestBitArray(b);
-            Random r = new Random();
+            Random r = Program.rnd;
             for (int i = 0; i < size; i++) b[i] = r.Next(2) == 1;
             Console.WriteLine("Náhodně s p 1/2");
             TestBitArray(b);

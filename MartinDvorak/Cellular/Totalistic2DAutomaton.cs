@@ -210,8 +210,9 @@ namespace Cellular
         /// <param name="newInstanceState">Desired initial state of the new (returned) instance.
         /// It is transformed into a square/rectangular array and padded with zeros/false.</param>
         /// <returns>New binary CA with copied behaviour, but newly given initial state.</returns>
-        protected override IBinaryCA CloneTemplate(BitArray newInstanceState)
+        protected override IBinaryCA cloneTemplate(BitArray newInstanceState)
         {
+            // TODO : the transformation should be maybe pulled outside (ideally to a higher class or Utilities)
             int newInSize = newInstanceState.Length;
             int newWidth = (int)Math.Ceiling(Math.Sqrt(newInSize));
             int newHeight = newWidth;

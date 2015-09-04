@@ -17,6 +17,7 @@ class Program
         UtilityTest.RunTest();
         Implementation2Test.RunTest();
 
+        Console.WriteLine("\n________ THE END _______");
         Console.ReadLine();
     }
 }

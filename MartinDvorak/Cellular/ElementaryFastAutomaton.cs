@@ -106,7 +106,7 @@ namespace Cellular
             }
         }
 
-        protected override IBinaryCA CloneTemplate(BitArray newInstanceState)
+        protected override IBinaryCA cloneTemplate(BitArray newInstanceState)
         {
             return new ElementaryFastAutomaton(ruleNumber, newInstanceState);
         }

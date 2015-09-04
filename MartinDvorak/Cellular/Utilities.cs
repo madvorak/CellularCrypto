@@ -6,12 +6,12 @@ using System.Linq;
 namespace Cellular
 {
     /// <summary>
-    /// This static class packs a group of utilities for working with CA.
+    /// Static class packing a group of utilities for working with CA.
     /// </summary>
     static class Utilities
     {
         /// <summary>
-        /// Converts an array of an array of <c>System.UInt32</c> into an array of <c>System.Boolean</c>.
+        /// Converts an array of <c>System.UInt32</c> into an array of <c>System.Boolean</c>.
         /// The input is treated as MSB-first.
         /// </summary>
         /// <param name="input">Input array.</param>
@@ -34,7 +34,7 @@ namespace Cellular
         }
 
         /// <summary>
-        /// Converts an array of an array of <c>System.UInt32</c> into an array of <c>System.Collections.BitArray</c>.
+        /// Converts an array of <c>System.UInt32</c> into an array of <c>System.Collections.BitArray</c>.
         /// The input is treated as MSB-first.
         /// </summary>
         /// <param name="input">Input array.</param>
@@ -109,7 +109,7 @@ namespace Cellular
         }
 
         /// <summary>
-        /// Calculates a period (number of steps between repetitions) of a CA.
+        /// Calculates a period (number of steps between repetitions) of a binary CA.
         /// This method is slower, but reliable.
         /// </summary>
         /// <param name="CA">The examined cellular automaton. Don't worry, this method won't modify it.</param>
@@ -177,7 +177,7 @@ namespace Cellular
         /// <returns>Random array.</returns>
         public static bool[] RandomBoolArr(int length)
         {
-            return RandomBoolArr(length, new Random());
+            return RandomBoolArr(length, Program.rnd);
         }
 
         /// <summary>
@@ -204,7 +204,7 @@ namespace Cellular
         /// <returns>Random array.</returns>
         public static BitArray RandomBitArr(int length)
         {
-            return RandomBitArr(length, new Random());
+            return RandomBitArr(length, Program.rnd);
         }
     }
 }

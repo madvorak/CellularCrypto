@@ -18,3 +18,5 @@
 26.08.2015		Vytvoøení èásti XML komentáøù, vyèlenìní samostatného namespacu na Testing
 01.09.2015		zavedení GITu v rámci Visual Studia, publikace na https://madv.visualstudio.com/DefaultCollection/_git/Cellular%20Cryptography,
 			spousta komentáøù, vysunutí Program.cs mimo namespace Testing, zavedení jedné centrální instance Random
+02.09.2015		Doxygen
+04.09.2015		Zásadní refaktoring. Zmìny názvù tøíd. Zmìny rozhraní. Hodnì komentáøù.

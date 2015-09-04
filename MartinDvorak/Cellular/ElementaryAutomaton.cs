@@ -105,7 +105,7 @@ namespace Cellular
             return new ElementaryAutomaton(ruleNumber, state);
         }
 
-        protected override IBinaryCA CloneTemplate(BitArray newInstanceState)
+        protected override IBinaryCA cloneTemplate(BitArray newInstanceState)
         {
             return new ElementaryAutomaton(ruleNumber, newInstanceState);
         }

@@ -16,7 +16,7 @@ namespace Crypto
         
         public Solver(uint inputSize)
         {
-            input = Utilities.RandomBitArr((int)inputSize, new Random());
+            input = Utilities.RandomBitArr((int)inputSize, Program.rnd);
             primitives = Primitives.Instance;
 
             population = new Solution[populationSize];
