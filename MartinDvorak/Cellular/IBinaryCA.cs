@@ -4,6 +4,7 @@ namespace Cellular
 {
     /// <summary>
     /// Common interface for all binary cellular automata.
+    /// Only subclasses of <c>CellularAutomaton</c> are supposed to implement this interface.
     /// </summary>
     interface IBinaryCA
     {

@@ -1,7 +1,8 @@
 ﻿namespace Cellular
 {
     /// <summary>
-    /// Class representing any N-ary one-dimensional automaton with a totalistic rule.
+    /// Class representing any N-ary one-dimensional automaton with a totalistic rule - cyclic variant.
+    /// The new state of each cell depends on the sum of its current state and the current state of adjecent cells.
     /// </summary>
     class NaryTotalisticCyclicAutomaton : NaryTotalisticAutomaton
     {

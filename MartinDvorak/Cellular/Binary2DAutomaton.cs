@@ -24,9 +24,7 @@ namespace Cellular
             state = new BitArray[height];
             for (int i = 0; i < height; i++)
             {
-                state[i] = new BitArray(width);
-                for (int j = 0; j < width; j++)
-                    state[i][j] = false;
+                state[i] = new BitArray(width, false);
             }
             state[height / 2][width / 2] = true;
         }

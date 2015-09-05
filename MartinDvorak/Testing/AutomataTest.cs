@@ -21,7 +21,7 @@ namespace Testing
             Console.WriteLine();
             Console.WriteLine("Game of Life");
             IBinaryCA conway;
-            conway = new GameOfLife(20, 20, Program.rnd);
+            conway = new GameOfLife(20, 20);
             Console.WriteLine(conway.StateAsString());
             Console.ReadKey();
             for (int i = 0; i < 10; i++)

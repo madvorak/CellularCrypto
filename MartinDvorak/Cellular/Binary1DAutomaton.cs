@@ -19,8 +19,7 @@ namespace Cellular
         public Binary1DAutomaton(int size)
         {
             this.size = size;
-            state = new BitArray(size);
-            for (int i = 0; i < size; i++) state[i] = false;        //unnecessary
+            state = new BitArray(size, false);
             state[size / 2] = true;
         }
 

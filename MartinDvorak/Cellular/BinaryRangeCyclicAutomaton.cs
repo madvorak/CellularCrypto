@@ -4,7 +4,7 @@ namespace Cellular
 {
     /// <summary>
     /// Class representing any binary 1D automaton with symmetric scope.
-    /// The automata are cyclic - edges are connected. Therefore, all positions are equivalent.
+    /// The automaton is cyclic - its edges are connected. Therefore, all positions are equivalent.
     /// </summary>
     class BinaryRangeCyclicAutomaton : BinaryRangeAutomaton
     {

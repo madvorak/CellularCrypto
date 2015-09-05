@@ -5,7 +5,7 @@ namespace Cellular
 {
     /// <summary>
     /// Class representing any binary 1D automaton with symmetric scope.
-    /// The automata have firmly set borders. Referencing a cell beyond borders acts as referencing a dead cell.
+    /// The automaton has firmly set borders. Referencing a cell beyond borders acts as referencing a dead cell.
     /// </summary>
     class BinaryRangeAutomaton : Binary1DAutomaton
     {

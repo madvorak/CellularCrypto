@@ -48,7 +48,7 @@ namespace Testing
                 CAperiods.Add(caL);
             }
 
-            var conway = new GameOfLife(SIZEsqrt, SIZEsqrt, Program.rnd);
+            var conway = new GameOfLife(SIZEsqrt, SIZEsqrt);
             var conwayL = new CAwithLength(conway, Utilities.PeriodLengthFast(conway));
             CAperiods.Add(conwayL);
 
