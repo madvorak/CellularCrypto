@@ -119,12 +119,44 @@ namespace Cellular
             return (IBinaryCA)this.Clone();
         }
 
+        /// <summary>
+        /// Creates a new binary CA with the same type and the same rules.
+        /// </summary>
+        /// <param name="newInstanceState">Desired initial state of the new (returned) instance.
+        /// It is transformed into a square/rectangular array and padded with zeros/false.</param>
+        /// <returns>New binary CA with copied behaviour, but newly given initial state.</returns>
         IBinaryCA IBinaryCA.CloneTemplate(BitArray newInstanceState)
         {
-            return this.cloneTemplate(newInstanceState);
+            int newInSize = newInstanceState.Length;
+            int newWidth = (int)Math.Ceiling(Math.Sqrt(newInSize));
+            int newHeight = newWidth;
+            //size 49 -> 7x7 ; size 50 -> 8x7 ; size 57 -> 8x8
+            if (newWidth * (newHeight - 1) >= newInSize)
+            {
+                newHeight--;
+            }
+            BitArray[] bitArray2D = new BitArray[newHeight];
+            for (int i = 0; i < newHeight; i++)
+            {
+                for (int j = 0; j < newWidth; j++)
+                {
+                    int inputIndex = i * newWidth + j;
+                    bool bit;
+                    if (inputIndex < newInSize)
+                    {
+                        bit = newInstanceState[inputIndex];
+                    }
+                    else
+                    {
+                        bit = false;
+                    }
+                    bitArray2D[i][j] = bit;
+                }
+            }
+            return this.cloneTemplate(bitArray2D);
         }
 
-        abstract protected IBinaryCA cloneTemplate(BitArray newInstanceState);
+        abstract protected IBinaryCA cloneTemplate(BitArray[] newInstanceState);
 
         public override int GetHashCode()
         {

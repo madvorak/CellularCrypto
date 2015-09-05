@@ -22,12 +22,7 @@ namespace Cellular
         /// <param name="rnd">PseudoRNG instance that will be used to generate the original state.</param>
         public Totalistic2DAutomaton(bool[] ruleLive, bool[] ruleDead, int width, int height, Random rnd) : base(width, height, rnd)
         {
-            if (ruleLive == null || ruleLive.Length != 9 || ruleDead == null || ruleLive.Length != 9)
-            {
-                throw new ArgumentException("The array describing the rule must have have 9 elements!");
-            }
-            this.ruleLive = ruleLive;
-            this.ruleDead = ruleDead;
+            init(ruleLive, ruleDead);
         }
 
         /// <summary>
@@ -41,12 +36,17 @@ namespace Cellular
         /// This also determines the size (width, height) of the new CA.</param>
         public Totalistic2DAutomaton(bool[] ruleLive, bool[] ruleDead, BitArray[] initialState) : base(initialState)
         {
-            if (ruleLive == null || ruleLive.Length != 9 || ruleDead == null || ruleLive.Length != 9)
+            init(ruleLive, ruleDead);
+        }
+
+        private void init(bool[] rulesForLive, bool[] rulesForDead)
+        {
+            if (rulesForLive == null || rulesForLive.Length != 9 || rulesForDead == null || rulesForDead.Length != 9)
             {
                 throw new ArgumentException("The array describing the rule must have have 9 elements!");
             }
-            this.ruleLive = ruleLive;
-            this.ruleDead = ruleDead;
+            ruleLive = rulesForLive;
+            ruleDead = rulesForDead;
         }
 
         public override void Step()
@@ -204,42 +204,9 @@ namespace Cellular
             return new Totalistic2DAutomaton(ruleLive, ruleDead, state);
         }
 
-        /// <summary>
-        /// Creates a new binary CA with the same type and the same rules.
-        /// </summary>
-        /// <param name="newInstanceState">Desired initial state of the new (returned) instance.
-        /// It is transformed into a square/rectangular array and padded with zeros/false.</param>
-        /// <returns>New binary CA with copied behaviour, but newly given initial state.</returns>
-        protected override IBinaryCA cloneTemplate(BitArray newInstanceState)
+        protected override IBinaryCA cloneTemplate(BitArray[] newInstanceState)
         {
-            // TODO : the transformation should be maybe pulled outside (ideally to a higher class or Utilities)
-            int newInSize = newInstanceState.Length;
-            int newWidth = (int)Math.Ceiling(Math.Sqrt(newInSize));
-            int newHeight = newWidth;
-            //size 49 -> 7x7 ; size 50 -> 8x7 ; size 57 -> 8x8
-            if (newWidth * (newHeight - 1) >= newInSize)
-            {
-                newHeight--;
-            }
-            BitArray[] bitArray2D = new BitArray[newHeight];
-            for (int i = 0; i < newHeight; i++)
-            {
-                for (int j = 0; j < newWidth; j++)
-                {
-                    int inputIndex = i * newWidth + j;
-                    bool bit;
-                    if (inputIndex < newInSize)
-                    {
-                        bit = newInstanceState[inputIndex];
-                    }
-                    else
-                    {
-                        bit = false;
-                    }
-                    bitArray2D[i][j] = bit;
-                }
-            }
-            return new Totalistic2DAutomaton(ruleLive, ruleDead, bitArray2D);
+            return new Totalistic2DAutomaton(ruleLive, ruleDead, newInstanceState);
         }
 
         public override string TellType()

@@ -97,7 +97,7 @@ namespace Cellular
 
         public override int GetHashCode()
         {
-            return base.GetHashCode() << 8 ^ ((int)ruleNumber);
+            return base.GetHashCode() ^ ((int)ruleNumber);
         }
 
         public override object Clone()
