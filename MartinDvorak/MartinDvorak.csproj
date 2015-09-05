@@ -89,6 +89,7 @@
     <Compile Include="Cellular\Totalistic2DAutomaton.cs" />
     <Compile Include="Testing\SearchLongest.cs" />
     <Compile Include="Testing\SolverTest.cs" />
+    <Compile Include="Testing\TotalisticTernaryTest.cs" />
     <Compile Include="Testing\UtilityTest.cs" />
   </ItemGroup>
   <ItemGroup>

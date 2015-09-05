@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Cellular
 {
@@ -14,6 +15,16 @@ namespace Cellular
             this.rule = rule;
         }
 
+        public override void Step()
+        {
+            int[] newState = new int[size];
+            for (int i = 0; i < size; i++)
+            {
+                newState[i] = rule[getValueAt(i - 1) + getValueAt(i) + getValueAt(i + 1)];
+            }
+            state = newState;
+        }
+
         public override object Clone()
         {
             return new NaryTotalisticAutomaton(N, rule, state);
@@ -24,14 +35,36 @@ namespace Cellular
             return "Totalistic " + N + "-ary automaton";
         }
 
-        public override void Step()
+        public string PrintTernary()
         {
-            int[] newState = new int[size];
+            StringBuilder sb = new StringBuilder();
             for (int i = 0; i < size; i++)
             {
-                newState[i] = rule[getValueAt(i - 1) + getValueAt(i) + getValueAt(i + 1)];
+                switch (state[i])
+                {
+                    case 0: sb.Append(' '); break;
+                    case 1: sb.Append('▒'); break;
+                    default: sb.Append('█'); break;
+                }
             }
-            state = newState;
+            return sb.ToString();
+        }
+
+        public string PrintQuinary()
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < size; i++)
+            {
+                switch (state[i])
+                {
+                    case 0: sb.Append(' '); break;
+                    case 1: sb.Append('░'); break;
+                    case 2: sb.Append('▒'); break;
+                    case 3: sb.Append('▒'); break;
+                    default: sb.Append('█'); break;
+                }
+            }
+            return sb.ToString();
         }
     }
 }

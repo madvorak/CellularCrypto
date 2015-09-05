@@ -8,6 +8,7 @@ class Program
     static void Main(string[] args)
     {
         rnd = new Random();
+        TotalisticTernaryTest.RunTest();
         SolverTest.RunTest();
         AutomataTest.RunTest();
         RandomTestTest.RunTest();
