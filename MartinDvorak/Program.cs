@@ -16,6 +16,7 @@ class Program
         BinaryRangeNTest.RunTest();
         UtilityTest.RunTest();
         Implementation2Test.RunTest();
+        ElementaryTimeMeasure.RunTest();
         SolverTest.RunTest();
 
         Console.WriteLine("\n________ THE END _______");

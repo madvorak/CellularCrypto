@@ -20,4 +20,4 @@
 			spousta komentáøù, vysunutí Program.cs mimo namespace Testing, zavedení jedné centrální instance Random
 02.09.2015		Doxygen
 04.09.2015		Zásadní refaktoring. Zmìny názvù tøíd. Zmìny rozhraní. Hodnì komentáøù.
-05.09.2015		Drobnı refaktoring. Práce na dokumentaci.
+05.09.2015		Drobnı refaktoring. Práce na dokumentaci. Oprava bugu.

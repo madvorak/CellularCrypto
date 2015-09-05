@@ -85,6 +85,7 @@
     <Compile Include="Testing\AutomataTest.cs" />
     <Compile Include="Testing\BinaryRangeNTest.cs" />
     <Compile Include="Testing\CryptoTest.cs" />
+    <Compile Include="Testing\ElementaryTimeMeasure.cs" />
     <Compile Include="Testing\RandomTestTest.cs" />
     <Compile Include="Testing\Implementation2Test.cs" />
     <Compile Include="Program.cs" />
