@@ -136,6 +136,7 @@ namespace Cellular
             BitArray[] bitArray2D = new BitArray[newHeight];
             for (int i = 0; i < newHeight; i++)
             {
+                bitArray2D[i] = new BitArray(newWidth);
                 for (int j = 0; j < newWidth; j++)
                 {
                     int inputIndex = i * newWidth + j;

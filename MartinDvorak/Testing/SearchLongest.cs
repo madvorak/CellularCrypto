@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Cellular;
 
@@ -38,31 +39,31 @@ namespace Testing
         /// <returns>The longest period.</returns>
         public static long LongestPeriod()
         {
+            BitArray input = Utilities.RandomBitArr(SIZE);
             var CAperiods = new SortedSet<CAwithLength>(new LengthCompare());
             CellularAutomaton ca;
 
             for (int i = 0; i < 256; i++)
             {
-                ca = new ElementaryFastAutomaton((byte)i, SIZE, Program.rnd);
+                ca = new ElementaryFastAutomaton((byte)i, input);
                 var caL = new CAwithLength(ca, Utilities.PeriodLengthFast(ca));
                 CAperiods.Add(caL);
             }
 
-            var conway = new GameOfLife(SIZEsqrt, SIZEsqrt);
+            CellularAutomaton conway = (CellularAutomaton)((IBinaryCA)(new GameOfLife(SIZEsqrt, SIZEsqrt))).CloneTemplate(input);
             var conwayL = new CAwithLength(conway, Utilities.PeriodLengthFast(conway));
             CAperiods.Add(conwayL);
 
             for (int i = 0; i < 1000; i++)
             { 
                 var rule = Utilities.RandomBoolArr(32);
-                var initial = Utilities.RandomBitArr(SIZE);
                 if (i % 2 == 0)
                 {
-                    ca = new BinaryRangeAutomaton(2, rule, initial);
+                    ca = new BinaryRangeAutomaton(2, rule, input);
                 }
                 else
                 {
-                    ca = new BinaryRangeCyclicAutomaton(2, rule, initial);
+                    ca = new BinaryRangeCyclicAutomaton(2, rule, input);
                 }
                 var caL = new CAwithLength(ca, Utilities.PeriodLengthFast(ca));
                 CAperiods.Add(caL);

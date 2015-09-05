@@ -26,6 +26,8 @@ namespace Testing
                 Console.WriteLine(rule777.PrintTernary());
                 rule777.Step();
             }
+            Console.WriteLine();
+            Console.ReadKey();
         }
     }
 }

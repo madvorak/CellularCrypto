@@ -8,15 +8,15 @@ class Program
     static void Main(string[] args)
     {
         rnd = new Random();
+        SearchLongest.LongestPeriod();
         TotalisticTernaryTest.RunTest();
-        SolverTest.RunTest();
         AutomataTest.RunTest();
         RandomTestTest.RunTest();
         //CryptoTest.RunTest();
         BinaryRangeNTest.RunTest();
-        SearchLongest.LongestPeriod();
         UtilityTest.RunTest();
         Implementation2Test.RunTest();
+        SolverTest.RunTest();
 
         Console.WriteLine("\n________ THE END _______");
         Console.ReadLine();
