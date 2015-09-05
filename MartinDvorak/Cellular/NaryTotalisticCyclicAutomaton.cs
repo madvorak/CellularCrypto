@@ -17,6 +17,11 @@
             return state[index % size];
         }
 
+        public override object Clone()
+        {
+            return new NaryTotalisticCyclicAutomaton(N, rule, state);
+        }
+
         public override string TellType()
         {
             return "Totalistic " + N + "-ary cyclic automaton";

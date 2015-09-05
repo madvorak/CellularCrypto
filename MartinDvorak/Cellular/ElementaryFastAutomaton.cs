@@ -106,6 +106,11 @@ namespace Cellular
             }
         }
 
+        public override object Clone()
+        {
+            return new ElementaryFastAutomaton(ruleNumber, state);
+        }
+
         protected override IBinaryCA cloneTemplate(BitArray newInstanceState)
         {
             return new ElementaryFastAutomaton(ruleNumber, newInstanceState);

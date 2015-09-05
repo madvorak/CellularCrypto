@@ -43,6 +43,11 @@ namespace Cellular
             }
         }
 
+        public override object Clone()
+        {
+            return new BinaryRangeCyclicAutomaton(range, rule, state);
+        }
+
         protected override IBinaryCA cloneTemplate(BitArray newInstanceState)
         {
             return new BinaryRangeCyclicAutomaton(range, rule, newInstanceState);
