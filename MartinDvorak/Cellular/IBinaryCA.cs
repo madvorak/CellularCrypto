@@ -28,7 +28,7 @@ namespace Cellular
         uint[] GetPacked();
 
         /// <summary>
-        /// Tells the specific bit of the CA.
+        /// Tells the specified bit of the CA.
         /// </summary>
         /// <param name="index">Zero-based index (which bit is required).</param>
         /// <returns>One bit.</returns>

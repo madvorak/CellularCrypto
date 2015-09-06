@@ -8,6 +8,7 @@ class Program
     static void Main(string[] args)
     {
         rnd = new Random();
+        Adapter.DisplayForm();
         AutomataTest.RunTest();
         TotalisticTernaryTest.RunTest();
         RandomTestTest.RunTest();
