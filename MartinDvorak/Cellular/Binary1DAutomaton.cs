@@ -6,7 +6,7 @@ namespace Cellular
 {
     /// <summary>
     /// Class containing base-constructors for all binary 1D automata and implementation of the <c>IBinaryCA</c> interface.
-    /// The state is kept in a <c>BitArray</c>. It used to be <c>bool[]</c> originally.
+    /// The state is kept in a <c>BitArray</c>.
     /// </summary>
     abstract class Binary1DAutomaton : Automaton1D, IBinaryCA
     {

@@ -9,27 +9,36 @@ namespace Cellular
     /// </summary>
     class ElementaryFastAutomaton : ElementaryAutomaton
     {
-        private byte[] dictionary;
+        private bool[][] lookupT;
 
         /// <summary>
         /// Creates a new basic CA of size 100 with 000...00100...000 as its initial state (faster variant).
         /// The new CA will use rule No.30 : asymmetric, pseudo-chaotic behaviour.
         /// </summary>
-        public ElementaryFastAutomaton(): base() {}
+        public ElementaryFastAutomaton(): base() 
+        {
+            fillDictionary();
+        }
 
         /// <summary>
         /// Creates a new basic CA with 000...00100...000 as its initial state (faster variant).
         /// The new CA will use rule No.30 : asymmetric, pseudo-chaotic behaviour.
         /// </summary>
         /// <param name="size">The size of the new CA.</param>
-        public ElementaryFastAutomaton(int size) : base(30, size) {}
+        public ElementaryFastAutomaton(int size) : base(30, size) 
+        {
+            fillDictionary();
+        }
 
         /// <summary>
         /// Creates a new basic CA with given rule and 000...00100...000 as its initial state (faster variant).
         /// </summary>
         /// <param name="ruleNo">The code of the elementary rule (from 0 to 255).</param>
         /// <param name="size">The size of the new CA.</param>
-        public ElementaryFastAutomaton(byte ruleNo, int size) : base(ruleNo, size) {}
+        public ElementaryFastAutomaton(byte ruleNo, int size) : base(ruleNo, size)  
+        {
+            fillDictionary();
+        }
 
         /// <summary>
         /// Creates a new basic CA with given rule and initial state (faster variant).
@@ -37,7 +46,10 @@ namespace Cellular
         /// <param name="ruleNo">The code of the elementary rule (from 0 to 255).</param>
         /// <param name="initialState">A <c>BitArray</c> describing the initial state of the CA.
         /// This also determines the size of the new CA.</param>
-        public ElementaryFastAutomaton(byte ruleNo, BitArray initialState) : base(ruleNo, initialState) {}
+        public ElementaryFastAutomaton(byte ruleNo, BitArray initialState) : base(ruleNo, initialState)  
+        {
+            fillDictionary();
+        }
 
         /// <summary>
         /// Creates a new basic CA (faster variant).
@@ -45,11 +57,13 @@ namespace Cellular
         /// <param name="ruleNo">The code of the elementary rule (from 0 to 255).</param>
         /// <param name="size">The size of the new CA.</param>
         /// <param name="rnd">PseudoRNG instance that will be used to generate the original state.</param>
-        public ElementaryFastAutomaton(byte ruleNo, int size, Random rnd) : base(ruleNo, size, rnd) { }
+        public ElementaryFastAutomaton(byte ruleNo, int size, Random rnd) : base(ruleNo, size, rnd)  
+        {
+            fillDictionary();
+        }
 
         public override void Step()
         {
-            if (dictionary == null) fillDictionary();
             BitArray newState = new BitArray(size);
 
             // the first cell
@@ -64,11 +78,9 @@ namespace Cellular
                     old10 *= 2;
                     if (state[j]) old10++;
                 }
-                byte new8 = dictionary[old10];
-                for (int j = i + 7; j >= i; j--)
+                for (int j = 0; j < 8; j++)
                 {
-                    newState[j] = new8 % 2 == 1;
-                    new8 /= 2;
+                    newState[i + j] = lookupT[old10][j];
                 }
                 i += 8;
             }
@@ -86,7 +98,7 @@ namespace Cellular
 
         private void fillDictionary()
         {
-            dictionary = new byte[1024];
+            lookupT = new bool[1024][];
             for (int i = 0; i < 1024; i++)
             {
                 byte[] tenCells = new byte[10];
@@ -96,13 +108,11 @@ namespace Cellular
                     tenCells[j] = (byte)(x % 2);
                     x /= 2;
                 }                                   //tenCells now contains a binary representation of i
-                byte value = 0;
+                lookupT[i] = new bool[8];
                 for (int j = 0; j < 8; j++)
                 {
-                    value *= 2;
-                    if (rule[tenCells[j], tenCells[j + 1], tenCells[j + 2]]) value++;
+                    lookupT[i][j] = rule[tenCells[j], tenCells[j + 1], tenCells[j + 2]];
                 }
-                dictionary[i] = value;
             }
         }
 
