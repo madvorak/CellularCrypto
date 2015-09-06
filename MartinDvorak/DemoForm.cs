@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Cellular;
 
@@ -23,7 +19,7 @@ public partial class DemoForm : Form
         InitializeComponent();
     }
 
-    private void button1_Click(object sender, EventArgs e)
+    private void btnDisplay_Click(object sender, EventArgs e)
     {
         gol = new GameOfLifeInteractive(columnCount, linesCount);
         visited = new HashSet<int>();
@@ -59,6 +55,9 @@ public partial class DemoForm : Form
         btnPlay.Enabled = true;
     }
 
+    /// <summary>
+    /// Switching the state of the cell upon clicking.
+    /// </summary>
     private void panel_Click(object sender, EventArgs e)
     { 
         Tuple<int, int> pair = (Tuple<int, int>)(((Panel)sender).Tag);
@@ -68,7 +67,7 @@ public partial class DemoForm : Form
         label1.Visible = false;
     }
 
-    private void button2_Click(object sender, EventArgs e)
+    private void btnStep_Click(object sender, EventArgs e)
     {
         drawStep();
     }
@@ -78,6 +77,9 @@ public partial class DemoForm : Form
         drawStep();
     }
 
+    /// <summary>
+    /// Calling and drawing a new step. Checker whether any state repeats.
+    /// </summary>
     private void drawStep()
     {
         gol.Step();
@@ -106,7 +108,7 @@ public partial class DemoForm : Form
         }
     }
 
-    private void button3_Click(object sender, EventArgs e)
+    private void btnPlay_Click(object sender, EventArgs e)
     {
         timer.Enabled = true;
         btnStop.Enabled = true;
@@ -114,7 +116,7 @@ public partial class DemoForm : Form
         btnStep.Enabled = false;
     }
 
-    private void button4_Click(object sender, EventArgs e)
+    private void btnStop_Click(object sender, EventArgs e)
     {
         timer.Enabled = false;
         btnPlay.Enabled = true;

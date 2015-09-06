@@ -45,7 +45,7 @@
             this.btnDisplay.TabIndex = 1;
             this.btnDisplay.Text = "Display";
             this.btnDisplay.UseVisualStyleBackColor = true;
-            this.btnDisplay.Click += new System.EventHandler(this.button1_Click);
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // btnStep
             // 
@@ -56,7 +56,7 @@
             this.btnStep.TabIndex = 2;
             this.btnStep.Text = "Step";
             this.btnStep.UseVisualStyleBackColor = true;
-            this.btnStep.Click += new System.EventHandler(this.button2_Click);
+            this.btnStep.Click += new System.EventHandler(this.btnStep_Click);
             // 
             // btnPlay
             // 
@@ -67,7 +67,7 @@
             this.btnPlay.TabIndex = 3;
             this.btnPlay.Text = "Play";
             this.btnPlay.UseVisualStyleBackColor = true;
-            this.btnPlay.Click += new System.EventHandler(this.button3_Click);
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // timer
             // 
@@ -83,7 +83,7 @@
             this.btnStop.TabIndex = 4;
             this.btnStop.Text = "Stop";
             this.btnStop.UseVisualStyleBackColor = true;
-            this.btnStop.Click += new System.EventHandler(this.button4_Click);
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // label1
             // 

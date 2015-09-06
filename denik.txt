@@ -21,4 +21,4 @@
 02.09.2015		Doxygen
 04.09.2015		Zásadní refaktoring. Zmìny názvù tøíd. Zmìny rozhraní. Hodnì komentáøù.
 05.09.2015		Drobný refaktoring. Práce na dokumentaci. Oprava bugu.
-06.09.2015		Efektivnìjší implementace ElementaryFastAutomaton. Mìøení èasu. Dokonèení dokumentace.
+06.09.2015		Efektivnìjší implementace ElementaryFastAutomaton. Mìøení èasu. Interaktivní Game of Life + uživatelský formuláø. Dokonèení dokumentace.
