@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -7,8 +8,8 @@ using Cellular;
 
 public partial class DemoForm : Form
 {
-    private const int columnCount = 36;
-    private const int linesCount = 20;
+    private const int columnCount = 52;
+    private const int linesCount = 30;
 
     private GameOfLifeInteractive gol;
     private Panel[,] matrix;
@@ -53,6 +54,8 @@ public partial class DemoForm : Form
         btnDisplay.Enabled = false;
         btnStep.Enabled = true;
         btnPlay.Enabled = true;
+        btnNewGame.Enabled = true;
+        comboBox1.SelectedItem = comboBox1.Items[0];
     }
 
     /// <summary>
@@ -69,20 +72,34 @@ public partial class DemoForm : Form
 
     private void btnStep_Click(object sender, EventArgs e)
     {
-        drawStep();
+        performStep();
     }
 
     private void timer1_Tick(object sender, EventArgs e)
     {
-        drawStep();
+        performStep();
     }
 
     /// <summary>
-    /// Calling and drawing a new step. Checker whether any state repeats.
+    /// Calling and drawing a new step. Checking whether any state repeats.
     /// </summary>
-    private void drawStep()
+    private void performStep()
     {
         gol.Step();
+        redrawState();
+        int h = gol.GetHashCode();
+        if (visited.Contains(h))
+        {
+            label1.Visible = true;
+        }
+        else
+        {
+            visited.Add(h);
+        }
+    }
+
+    private void redrawState()
+    {
         for (int i = 0; i < linesCount; i++)
         {
             for (int j = 0; j < columnCount; j++)
@@ -96,15 +113,6 @@ public partial class DemoForm : Form
                     matrix[i, j].BackColor = Color.White;
                 }
             }
-        }
-        int h = gol.GetHashCode();
-        if (visited.Contains(h))
-        {
-            label1.Visible = true;
-        }
-        else
-        {
-            visited.Add(h);
         }
     }
 
@@ -126,6 +134,58 @@ public partial class DemoForm : Form
 
     private void trackBar1_Scroll(object sender, EventArgs e)
     {
-        timer.Interval = 10000 / (trackBar1.Value * trackBar1.Value);
+        timer.Interval = 7500 / (trackBar1.Value * trackBar1.Value);
+    }
+
+    private void btnNewGame_Click(object sender, EventArgs e)
+    {
+        if (comboBox1.SelectedItem == comboBox1.Items[1])
+        {
+            //random initial state
+            gol = new GameOfLifeInteractive(columnCount, linesCount);
+        }
+        else
+        {
+            //blank initial state
+            BitArray[] initial = new BitArray[linesCount];
+            for (int i = 0; i < linesCount; i++)
+            {
+                initial[i] = new BitArray(columnCount, false);
+            }
+            if (comboBox1.SelectedItem == comboBox1.Items[2])
+            {
+                //symmetric
+                for (int i = columnCount / 2 - 4; i < columnCount / 2 + 4; i++)
+                {
+                    initial[linesCount / 2][i] = true;
+                }
+            }
+            if (comboBox1.SelectedItem == comboBox1.Items[3])
+            { 
+                //glider
+                initial[1][2] = true;
+                initial[2][3] = true;
+                initial[3][3] = true;
+                initial[3][2] = true;
+                initial[3][1] = true;
+            }
+            if (comboBox1.SelectedItem == comboBox1.Items[4])
+            {
+                //glider gun
+                initial[5][1] = initial[5][2] = initial[6][1] = initial[6][2] = true;
+                initial[3][35] = initial[3][36] = initial[4][35] = initial[4][36] = true;
+                initial[5][11] = initial[6][11] = initial[7][11] = true;
+                initial[4][12] = initial[8][12] = true;
+                initial[3][13] = initial[3][14] = initial[9][13] = initial[9][14] = true;
+                initial[6][15] = initial[4][16] = initial[8][16] = true;
+                initial[6][17] = initial[6][18] = initial[5][17] = initial[7][17] = true;
+                for (int i = 3; i <= 5; i++) initial[i][21] = initial[i][22] = true;
+                initial[2][23] = initial[6][23] = true;
+                initial[1][25] = initial[2][25] = initial[6][25] = initial[7][25] = true;
+            }
+            gol = new GameOfLifeInteractive(initial);
+        }
+        visited = new HashSet<int>();
+        redrawState();
     }
 }

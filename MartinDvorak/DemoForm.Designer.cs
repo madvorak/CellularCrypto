@@ -34,6 +34,8 @@
             this.btnStop = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.btnNewGame = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +73,7 @@
             // 
             // timer
             // 
-            this.timer.Interval = 400;
+            this.timer.Interval = 300;
             this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // btnStop
@@ -105,11 +107,38 @@
             this.trackBar1.Value = 5;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
+            // btnNewGame
+            // 
+            this.btnNewGame.Enabled = false;
+            this.btnNewGame.Location = new System.Drawing.Point(493, 12);
+            this.btnNewGame.Name = "btnNewGame";
+            this.btnNewGame.Size = new System.Drawing.Size(75, 23);
+            this.btnNewGame.TabIndex = 7;
+            this.btnNewGame.Text = "New Game";
+            this.btnNewGame.UseVisualStyleBackColor = true;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Blank",
+            "Random",
+            "Symmetric",
+            "Glider",
+            "Glider Gun"});
+            this.comboBox1.Location = new System.Drawing.Point(574, 14);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(111, 21);
+            this.comboBox1.TabIndex = 8;
+            // 
             // DemoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 342);
+            this.ClientSize = new System.Drawing.Size(695, 427);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnNewGame);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStop);
@@ -133,4 +162,6 @@
     private System.Windows.Forms.Button btnStop;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.TrackBar trackBar1;
+    private System.Windows.Forms.Button btnNewGame;
+    private System.Windows.Forms.ComboBox comboBox1;
 }

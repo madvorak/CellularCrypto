@@ -16,6 +16,13 @@ namespace Cellular
         public GameOfLifeInteractive(int width, int height) : base(width, height) {}
 
         /// <summary>
+        /// Creates a new interactive Game of Life with givin initial state.
+        /// </summary>
+        /// <param name="initialState">An array of <c>BitArray</c>s describing the initial state of the CA.
+        /// This also determines the size (width, height) of the new CA.</param>
+        public GameOfLifeInteractive(BitArray[] initialState) : base(initialState) {}
+
+        /// <summary>
         /// Tells one bit of the CA, specified by 2D coordinates.
         /// </summary>
         /// <param name="row">Vertical coordinate.</param>

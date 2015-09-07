@@ -8,7 +8,7 @@ namespace Testing
     {
         private const int autSize = 1005;
         private const int stepsCount = 9000;
-        private const byte elCode = 54;
+        private const byte elCode = 35;
 
         public static void RunTest()
         {

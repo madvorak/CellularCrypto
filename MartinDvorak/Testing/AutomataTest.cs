@@ -19,7 +19,7 @@ namespace Testing
             Console.WriteLine("Hash " + demoCA.GetHashCode());
 
             Console.WriteLine();
-            Console.WriteLine("Game of Life");
+            /*Console.WriteLine("Game of Life");
             IBinaryCA conway;
             conway = new GameOfLife(20, 20);
             Console.WriteLine(conway.StateAsString());
@@ -28,7 +28,7 @@ namespace Testing
             {
                 conway.Step();
                 Console.WriteLine(conway.StateAsString());
-            }
+            }*/
             Console.ReadKey();
             Console.WriteLine();
         }
