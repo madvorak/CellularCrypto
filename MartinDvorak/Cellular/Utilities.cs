@@ -58,7 +58,7 @@ namespace Cellular
 
         /// <summary>
         /// Calculates a period (number of steps between repetitions) of a CA.
-        /// This method is fast, but UNREALIABLE! It gives only the lower estimate (because of hashing).
+        /// This method is fast, but unreliable! It gives only the lower estimate (because of hashing).
         /// </summary>
         /// <param name="CA">The examined cellular automaton. Don't worry, this method won't modify it.</param>
         /// <param name="limit">Number of steps that will be performed in no repetition is found earlier.</param>
@@ -88,7 +88,7 @@ namespace Cellular
 
         /// <summary>
         /// Calculates a period (number of steps between repetitions) of a CA.
-        /// This method is fast, but UNREALIABLE! It gives only the lower estimate (because of hashing).
+        /// This method is fast, but unreliable! It gives only the lower estimate (because of hashing).
         /// </summary>
         /// <param name="CA">The examined cellular automaton. Don't worry, this method won't modify it.</param>
         /// <returns>If a period is found within 2^30 steps, it returns the length of the period.
