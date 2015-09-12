@@ -78,7 +78,6 @@
     <Compile Include="Cellular\NaryTotalisticAutomaton.cs" />
     <Compile Include="Cellular\NaryTotalisticCyclicAutomaton.cs" />
     <Compile Include="Cellular\Utilities.cs" />
-    <Compile Include="Crypto\Factory.cs" />
     <Compile Include="Crypto\Mask.cs" />
     <Compile Include="Crypto\Primitives.cs" />
     <Compile Include="Crypto\RandomnessTesting.cs" />

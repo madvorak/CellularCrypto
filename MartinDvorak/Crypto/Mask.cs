@@ -17,6 +17,11 @@
             return seq[next++];
         }
 
+        public int GetLength()
+        {
+            return seq.Length;
+        }
+
         public void Reset()
         {
             next = 0;

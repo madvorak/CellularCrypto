@@ -1,70 +1,91 @@
 ﻿using System;
+using System.Collections.Generic;
+using Cellular;
 
 namespace Crypto
 {
-    class Primitives        // Singleton class
+    /// <summary>
+    /// Basic store saving CA templates and masks for generating sequences.
+    /// There is at most one instance for each size (how large CA will be created using given data).
+    /// </summary>
+    class Primitives
     {
-        // TODO: should be made flexible accoring to size of key
-        private static Primitives instance;
+        private static Dictionary<int, Primitives> instances;
 
-        private string[] CAcodes;
-        private int CAcodeCount;
-        private Mask[] maskBase;
-        private int maskCount;
-        private const int maskLimit = 1 << 18;
-        private Random r;
+        private static IBinaryCA[] CAinventory;     // "Singleton" object, one for all sizes
+        private Mask[] maskBase;                    // collection of Masks adapted to the size
 
-        private Primitives()
+        private Primitives(int size)
         {
-            CAcodeCount = 300;
-            CAcodes = new string[CAcodeCount];
-            for (int i = 0; i < 256; i++) CAcodes[i] = "B " + i.ToString();
-            for (int i = 256; i < CAcodeCount; i++) CAcodes[i] = "G 0";
-
-            maskCount = 200;
-            maskBase = new Mask[maskCount];
-            maskBase[0] = new Mask(new int[] { 123456 });      //constant mask
-            for (int i = 1; i < maskCount / 2; i++)
-            {
-                int[] asc = new int[maskLimit];
-                for (int j = 0; j < maskLimit; j++)
+            if (CAinventory == null)
+            { 
+                // constructor is called the first time
+                CAinventory = new IBinaryCA[600];
+                for (int i = 0; i < 256; i++)
                 {
-                    asc[i] = (i*j) % maskLimit;
+                    CAinventory[i] = new ElementaryFastAutomaton((byte)i, 1);
                 }
-                maskBase[i] = new Mask(asc);             //linearly ascending mask
+                for (int i = 256; i < 427; i++)
+                {
+                    bool[] rule = Utilities.RandomBoolArr(32);
+                    CAinventory[i] = new BinaryRangeAutomaton(2, rule, 1);
+                }
+                for (int i = 427; i < 599; i++)
+                {
+                    bool[] rule = Utilities.RandomBoolArr(32);
+                    CAinventory[i] = new BinaryRangeCyclicAutomaton(2, rule, 1);
+                }
+                CAinventory[599] = new GameOfLife(1, 1);
             }
-            r = Program.rnd;
-            for (int i = maskCount / 2; i < maskCount; i++)
-            {
-                int[] rand = new int[i * 100];
-                for (int j = 0; j < rand.Length; j++)
-                {
-                    rand[j] = (int) r.Next(maskLimit);
-                }
-                maskBase[i] = new Mask(rand);             //pseudo-random mask
-            }
-        }
 
-        public static Primitives Instance
-        {
-            get
+            maskBase = new Mask[10];
+            maskBase[0] = new Mask(new int[] { size / 2 });
+            for (int i = 1; i < 10; i++)
             {
-                if (instance == null)
+                int[] frames = new int[i + 1];
+                for (int j = 0; j <= i; j++)
                 {
-                    instance = new Primitives();
+                    frames[j] = Program.rnd.Next(size);
                 }
-                return instance;
+                maskBase[i] = new Mask(frames);
             }
         }
 
-        public string RandomCAcode()
+        /// <summary>
+        /// Method used instead of the constructor, similar to the principle of singleton.
+        /// </summary>
+        /// <param name="size">Size of the CA we want to work with.</param>
+        /// <returns>Instance of this class for given size.</returns>
+        public static Primitives GetInstance(int size)
         {
-            return CAcodes[r.Next(CAcodeCount)];
+            if (instances.ContainsKey(size))
+            {
+                return instances[size];
+            }
+            else
+            {
+                Primitives p = new Primitives(size);
+                instances.Add(size, p);
+                return p;
+            }
         }
 
+        /// <summary>
+        /// Gives a random template for creating a new CA.
+        /// </summary>
+        /// <returns>IBinaryCA template.</returns>
+        public IBinaryCA RandomCA()
+        {
+            return CAinventory[Program.rnd.Next(CAinventory.Length)];
+        }
+
+        /// <summary>
+        /// Gives a random mask to be used to generate data by a CA.
+        /// </summary>
+        /// <returns>Mask from collection adapted to the size.</returns>
         public Mask RandomMask()
         {
-            return maskBase[r.Next(maskCount)];
+            return maskBase[Program.rnd.Next(maskBase.Length)];
         }
     }
 }

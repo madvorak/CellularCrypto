@@ -7,34 +7,48 @@ namespace Crypto
 {
     struct Couple
     {
-        public string CAcode;       // "B 30" for Basic Automaton No. 30 ;  "G 0" for Game Of Life
-        public Mask mask;
-        public Couple(string CAcode, Mask mask)
+        public readonly IBinaryCA template;
+        public readonly Mask mask;
+        public Couple(IBinaryCA exampleCA, Mask frames)
         {
-            this.CAcode = CAcode;
-            this.mask = mask;
+            template = exampleCA;
+            mask = frames;
         }
     }
 
+    /// <summary>
+    /// that consists of doubling the key by every couple of CA and mask
+    /// </summary>
     class Solution
     {
         private List<Couple> algorithm;
-        private double rank;
+        private double rank;         // quality of the last generated key
+        private int inputSize;
 
-        public Solution(List<Couple> algorithm)
+        /// <summary>
+        /// Creates a new Solution.
+        /// </summary>
+        /// <param name="automataMaskSequence">Sequence of <c>IBinaryCA</c> with masks
+        /// describing an algorithm for generating keys.</param>
+        public Solution(List<Couple> automataMaskSequence, int futureInputSize)
         {
-            this.algorithm = algorithm;
+            algorithm = automataMaskSequence;
+            inputSize = futureInputSize;
         }
 
         public BitArray RunSolution(BitArray initial)
         {
+            if (initial.Length != inputSize)
+            {
+                throw new ArgumentException("The size of the actual input does not correspond to the declared input size.");
+            }
             BitArray key = new BitArray(initial);
             IBinaryCA ca;
             SeqGen seqGen;
             Mask mask;
             foreach (Couple couple in algorithm)
             {
-                ca = Factory.CreateAutomaton(couple.CAcode, key);
+                ca = couple.template;
                 mask = couple.mask;
                 mask.Reset();
                 seqGen = new SeqGen(ca, mask);
@@ -55,30 +69,34 @@ namespace Crypto
             return rank;
         }
 
-        public Solution Mutate(double instability, Random r)
+        public Solution Mutate(double instability)
         {
-            Solution changed = new Solution(algorithm);
-            Primitives primitives = Primitives.Instance;
+            Solution changed = new Solution(new List<Couple>(algorithm), inputSize);
+            int size = inputSize;
             for (int i = 0; i < algorithm.Count; i++)
             {
-                if (r.NextDouble() < instability)
+                Primitives primitives = Primitives.GetInstance(size);
+                if (Program.rnd.NextDouble() < instability)
                 {
-                    changed.algorithm[i] = new Couple(primitives.RandomCAcode(), changed.algorithm[i].mask);
+                    // randomly changing the CA
+                    changed.algorithm[i] = new Couple(primitives.RandomCA(), changed.algorithm[i].mask);
                 }
-                if (r.NextDouble() < instability)
+                if (Program.rnd.NextDouble() < instability)
                 {
-                    changed.algorithm[i] = new Couple(changed.algorithm[i].CAcode, primitives.RandomMask());
+                    // randomly changing the mask
+                    changed.algorithm[i] = new Couple(changed.algorithm[i].template, primitives.RandomMask());
                 }
+                size *= 2;
             }
             return changed;
         }
 
-        public Solution BreedWith(Solution parent, Random r)         //uniform breeding
+        public Solution BreedWith(Solution parent)         //uniform breeding
         {
-            Solution offspring = new Solution(algorithm);
+            Solution offspring = new Solution(new List<Couple>(algorithm), inputSize);
             for (int i = 0; i < algorithm.Count; i++)
             {
-                if (r.Next(2) == 1)
+                if (Program.rnd.Next(2) == 1)
                 {
                     offspring.algorithm[i] = parent.algorithm[i];
                 }
@@ -90,7 +108,7 @@ namespace Crypto
         {
             foreach (Couple couple in algorithm)
             {
-                CellularAutomaton aut = (CellularAutomaton)Factory.CreateAutomaton(couple.CAcode, new BitArray(8));
+                CellularAutomaton aut = (CellularAutomaton)couple.template;
                 Console.WriteLine(aut.TellType());
             }
         }
