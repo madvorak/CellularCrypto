@@ -5,41 +5,20 @@ using Cellular;
 
 namespace Crypto
 {
+    /// <summary>
+    /// Stub.
+    /// </summary>
     class Solver
     {
         private BitArray input;
-        private Primitives primitives;
         private Solution[] population;
         private int populationSize = 1000;
         private int algorithmLength = 5;
         private Solution finalAlgorithm;
         
-        public Solver(uint inputSize)
+        public Solver(int inputSize)
         {
-            input = Utilities.RandomBitArr((int)inputSize, Program.rnd);
-            primitives = Primitives.Instance;
-
-            population = new Solution[populationSize];
-            Solution bestSoFar = null;
-            for (int i = 0; i < populationSize; i++)
-            {
-                List<Couple> alg = new List<Couple>(algorithmLength);
-                for (int j = 0; j < algorithmLength; j++)
-                {
-                    Couple c = new Couple(primitives.RandomCAcode(), primitives.RandomMask());
-                    alg.Add(c);
-                }
-                population[i] = new Solution(alg);
-                double rank = population[i].EvaluateSolution(input);
-                if (bestSoFar == null) bestSoFar = population[i];
-                else
-                {
-                    if (bestSoFar.GetRank() < rank) bestSoFar = population[i];
-                }
-            }
-
-            // TODO: search
-            finalAlgorithm = bestSoFar;
+            // TODO
         }
 
         public BitArray GetKey()

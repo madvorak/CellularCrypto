@@ -1,31 +1,33 @@
-﻿partial class DemoForm
+﻿namespace UserForms
 {
-    /// <summary>
-    /// Required designer variable.
-    /// </summary>
-    private System.ComponentModel.IContainer components = null;
-
-    /// <summary>
-    /// Clean up any resources being used.
-    /// </summary>
-    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-    protected override void Dispose(bool disposing)
+    partial class DemoForm
     {
-        if (disposing && (components != null))
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
         {
-            components.Dispose();
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
         }
-        base.Dispose(disposing);
-    }
 
-    #region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-    /// <summary>
-    /// Required method for Designer support - do not modify
-    /// the contents of this method with the code editor.
-    /// </summary>
-    private void InitializeComponent()
-    {
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             this.btnDisplay = new System.Windows.Forms.Button();
             this.btnStep = new System.Windows.Forms.Button();
@@ -151,17 +153,18 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button btnDisplay;
+        private System.Windows.Forms.Button btnStep;
+        private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Button btnNewGame;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
-
-    #endregion
-
-    private System.Windows.Forms.Button btnDisplay;
-    private System.Windows.Forms.Button btnStep;
-    private System.Windows.Forms.Button btnPlay;
-    private System.Windows.Forms.Timer timer;
-    private System.Windows.Forms.Button btnStop;
-    private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.TrackBar trackBar1;
-    private System.Windows.Forms.Button btnNewGame;
-    private System.Windows.Forms.ComboBox comboBox1;
 }

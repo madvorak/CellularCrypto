@@ -1,5 +1,6 @@
 ﻿using System;
 using Testing;
+using UserForms;
 
 class Program
 {
@@ -12,13 +13,11 @@ class Program
         AutomataTest.RunTest();
         TotalisticTernaryTest.RunTest();
         RandomTestTest.RunTest();
-        //CryptoTest.RunTest();
         BinaryRangeNTest.RunTest();
         UtilityTest.RunTest();
         Implementation2Test.RunTest();
         ElementaryTimeMeasure.RunTest();
         SearchLongest.LongestPeriod();
-        SolverTest.RunTest();
 
         Console.WriteLine("\n________ THE END _______");
         Console.ReadLine();

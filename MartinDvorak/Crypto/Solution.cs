@@ -91,8 +91,12 @@ namespace Crypto
             return changed;
         }
 
-        public Solution BreedWith(Solution parent)         //uniform breeding
+        public Solution BreedUniformWith(Solution parent)
         {
+            if (this.algorithm.Count != parent.algorithm.Count)
+            {
+                throw new ArgumentException("You were going to breed two solutions of unequal lengths!");
+            }
             Solution offspring = new Solution(new List<Couple>(algorithm), inputSize);
             for (int i = 0; i < algorithm.Count; i++)
             {
@@ -102,6 +106,58 @@ namespace Crypto
                 }
             }
             return offspring;
+        }
+
+        public static Solution BreedUniform(Solution fst, Solution snd)
+        {
+            return fst.BreedUniformWith(snd);
+        }
+
+        public Solution BreedCrossoverWith(Solution parent)
+        {
+            if (this.algorithm.Count != parent.algorithm.Count)
+            {
+                throw new ArgumentException("You were going to breed two solutions of unequal lengths!");
+            }
+            List<Couple> crossbred = new List<Couple>(algorithm.Count);
+            // at least one from this, at least one from the other
+            int crossoverPoint = Program.rnd.Next(algorithm.Count - 1) + 1;
+            for (int i = 0; i < crossoverPoint; i++)
+            {
+                crossbred[i] = this.algorithm[i];
+            }
+            for (int i = crossoverPoint; i < algorithm.Count; i++)
+            {
+                crossbred[i] = parent.algorithm[i];
+            }
+            return new Solution(crossbred, inputSize);
+        }
+
+        public static Solution BreedCrossover(Solution fst, Solution snd)
+        {
+            if (Program.rnd.Next(2) == 1)
+            {
+                return fst.BreedCrossoverWith(snd);
+            }
+            else
+            {
+                return snd.BreedCrossoverWith(fst);
+            }
+        }
+
+        public static Solution BreedCrazy(Solution fst, Solution snd)
+        {
+            Solution result = null;
+            if (Program.rnd.Next(2) == 1)
+            {
+                result = BreedCrossover(fst, snd);
+            }
+            else
+            {
+                result = BreedUniform(fst, snd);
+            }
+            result.Mutate(0.25d);
+            return result;
         }
 
         public void WriteAutomata()

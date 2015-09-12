@@ -23,3 +23,4 @@
 05.09.2015		Drobný refaktoring. Práce na dokumentaci. Oprava bugu.
 06.09.2015		Efektivnìjší implementace ElementaryFastAutomaton. Mìøení èasu. Interaktivní Game of Life + uživatelský formuláø. Dokonèení dokumentace.
 07.09.2015		Vylepšení interaktivní Game of Life. Uživatelská dokumentace.
+12.09.2015		Pøedìlání primitiv. Zahození Factory (místo nìj CloneTemplate).
