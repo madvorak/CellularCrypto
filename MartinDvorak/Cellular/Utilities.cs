@@ -206,5 +206,54 @@ namespace Cellular
         {
             return RandomBitArr(length, Program.rnd);
         }
+
+        public class AllBinarySequences : IEnumerable<BitArray>
+        {
+            private int length;
+
+            public AllBinarySequences(int sequenceLength)
+            {
+                length = sequenceLength;
+            }
+
+            IEnumerator IEnumerable.GetEnumerator()
+            {
+                return generateAll(length);
+            }
+
+            IEnumerator<BitArray> IEnumerable<BitArray>.GetEnumerator()
+            {
+                return generateAll(length);
+            }
+
+            private static IEnumerator<BitArray> generateAll(int length)
+            {
+                BitArray array = new BitArray(length, false);
+                return changeFrom(array, 0);
+            }
+
+            private static IEnumerator<BitArray> changeFrom(BitArray array, int index)
+            {
+                if (index == array.Length)
+                {
+                    yield return new BitArray(array);
+                }
+                else
+                {
+                    IEnumerator<BitArray> start0 = changeFrom(array, index + 1);
+                    while (start0.MoveNext())
+                    {
+                        yield return start0.Current;
+                    }
+                    array[index] = true;
+                    IEnumerator<BitArray> start1 = changeFrom(array, index + 1);
+                    while (start1.MoveNext())
+                    {
+                        yield return start1.Current;
+                    }
+                    array[index] = false;
+                }
+            }
+        }
     }
 }

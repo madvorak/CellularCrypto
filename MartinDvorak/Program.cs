@@ -9,12 +9,13 @@ class Program
     static void Main(string[] args)
     {
         rnd = new Random();
+        FunctionTestTest.RunTest();
+        UtilityTest.RunTest();
         Adapter.DisplayForm();
         AutomataTest.RunTest();
         TotalisticTernaryTest.RunTest();
         RandomTestTest.RunTest();
         BinaryRangeNTest.RunTest();
-        UtilityTest.RunTest();
         Implementation2Test.RunTest();
         ElementaryTimeMeasure.RunTest();
         SearchLongest.LongestPeriod();

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Cellular;
 
 namespace Testing
@@ -10,6 +11,13 @@ namespace Testing
     {
         public static void RunTest()
         {
+            foreach (BitArray binary in new Utilities.AllBinarySequences(5))
+            {
+                IBinaryCA foo = new ElementaryAutomaton(0, binary);
+                Console.WriteLine(foo.StateAsString());
+            }
+            Console.WriteLine();
+
             uint[] u = new uint[2] { 123456, 999999999 };
             IBinaryCA binCA = new ElementaryAutomaton(1, Utilities.UintArrToBitArr(u));
             uint[] p = binCA.GetPacked();

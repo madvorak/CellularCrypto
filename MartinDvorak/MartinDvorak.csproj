@@ -7,7 +7,7 @@
     <ProjectGuid>{03DEF077-DD59-48D3-B2D8-B9FC82C5BA32}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cellular</RootNamespace>
+    <RootNamespace>default</RootNamespace>
     <AssemblyName>MartinDvorak</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -61,6 +61,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Crypto\FunctionTesting.cs" />
+    <Compile Include="Crypto\IKeyExtender.cs" />
+    <Compile Include="Crypto\KeyExtenderAbstract.cs" />
+    <Compile Include="Crypto\KeyExtenderCheating.cs" />
+    <Compile Include="Crypto\KeyExtenderCopy.cs" />
+    <Compile Include="Crypto\KeyExtenderSimpleLinear.cs" />
+    <Compile Include="Crypto\KeyExtenderSimpleQuadratic.cs" />
+    <Compile Include="Testing\FunctionTestTest.cs" />
     <Compile Include="UserForms\Adapter.cs" />
     <Compile Include="Cellular\Automaton1D.cs" />
     <Compile Include="Cellular\Automaton2D.cs" />
