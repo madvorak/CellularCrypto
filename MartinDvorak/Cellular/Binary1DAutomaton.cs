@@ -77,11 +77,6 @@ namespace Cellular
             return state[index];
         }
 
-        void IBinaryCA.Step()
-        {
-            this.Step();
-        }
-
         IBinaryCA IBinaryCA.CloneEverything()
         {
             return (IBinaryCA)this.Clone();
