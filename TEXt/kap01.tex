@@ -1,0 +1,34 @@
+%%% Kapitola obecnì a celulárních automatech.
+
+\chapter{Celulární automaty}
+
+\section{Co jsou to celulární automaty}
+
+Celulární automat je diskrétní model, kterı se skládá z pravidelné møíky bunìk. Buòky se nacházejí v urèitıch stavech, pøièem mnoina stavù a pravidla pro pøechod mezi stavy jsou spoleèná pro celı automat. Celulární automat se vyvíjí diskrétnì v èase (celı najednou).
+
+\section{Elementární celulární automaty}
+
+Wofram popisuje 256 elementárních celulárních automatù. Jedná se o binární 1D automaty, kde novı stav kadé buòky závisí pouze na jejím stavu a stavu pøímıch sousedù. Formálnì by se dal pøechod zapsat jako:
+$$x_i(t+1) = f(x_{i-1}(t), x_i(t), x_{i+1}(t))$$, kde
+$$f:\{0,1\}^3 \rightarrow \{0,1\} $$, tudí existuje $2^{2^3} = 2^8 =256$ takovıch funkcí $f$.
+
+\section{Jiné 1D celulární automaty}
+
+\begin{itemize}
+\item Nemusíme se omezovat jen na tìsné sousedy.
+\item Mùeme povolit více ne 2 stavy.
+\item Vıznamnım druhem celulárních automatù jsou totalistické automaty. Nehledì na to, jak velké se pouívá okolí a kolik stavù buòlky nabıvají, v totalistickıch automatech se pouze èíselnì posèítají hodnoty hodnoty buòky s celım jejím okolím a podle souètu hodnot se pøiøadí vısledná hodnota. Pøechodová funkce pro automat s okolím velikosti $o$ a poètem stavù $s$ se tedy dá vyjádøít jako:
+$$f:\{0,..,(s-1)(o+1)\} \rightarrow \{0,..,s-1\}$$
+\end{itemize}
+
+\section{Dvourozmìrné celulární automaty}
+
+V oblasti 2D celulárních automatù se pouívají hlavnì totalistické automaty, protoe vytváøení jinıch typù pravidel by bylo pøíliš sloité. Typickıch pøíkladem totalistického 2D automatu je Game Of Life. To je dvourozmìrnı automat nad binární abecedou pouívající 8-okolí, kterı se øídí pravidlem, e ivá buòka pøeívá, pokud má 2 a 3 zivé sousedy (jinak umírá), zatímco mrtvá buòka obije, pokud má právì 3 ivé sousedy. Game Of Life se stal nástrojem mnoha rùznıch høíèek. Nicménì pro úèely šifrování se nezdá bıt moc uiteènı, protoe nejde dostateènì parametrizovat.
+
+\section{Implementace celulárních automatù}
+
+V teorii se typicky uvaují celulární automaty na nekoneèném høíšti. V poèáteèním stavu mají se však všechny nenulové hodnoty vyskytují jen uvnitø nìjaké koneèné oblasti bunìk. Nenulové hodnoty se pak ale mohou neomezenì rozrùstat do všech stran. Rychlost tohoto rozšiøování lze zhora omezit na základì velikosti okolí aplikovaného pravidla.
+
+V praxi implementujeme celı automat na koneèném høíšti. Monosti jsou dvì. Buï celı automat zacyklíme a jeho vıvoj v èase \uv{pokresluje nekoneènou válcovou plochu}, nebo automat na stranách ohranièíme a pøi aplikaci pravidel na okraji høištì èteme nulové hodnoty za jeho okrajem.
+
+Vıhodou je snadná implementace a nízké pamìové nároky. Nevıhodou je, e vıvoj celého automatu periodicky opakuje, pokud provedeme dostateènı poèet krokù.

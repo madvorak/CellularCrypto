@@ -166,7 +166,7 @@ namespace Crypto
                 sum += RandomnessTesting.RateSequence(algorithm.ExtendKey(Utilities.RandomBitArr(length), length * ratio));
             }
             return sum / count;
-        }
+        } 
 
         public static double TestSystematicSequences(IKeyExtender algorithm, int ratio)
         {

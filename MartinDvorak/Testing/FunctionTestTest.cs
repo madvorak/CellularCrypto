@@ -17,7 +17,7 @@ namespace Testing
             Console.WriteLine("KeyExtenderCheating:");
             runTestsOneAlgorithm(new KeyExtenderCheating());
 
-            IBinaryCA automaton = new ElementaryFastAutomaton(90, 1);
+            IBinaryCA automaton = new ElementaryFastAutomaton(30, 1);
 
             Console.WriteLine("KeyExtenderSimpleLinear:");
             runTestsOneAlgorithm(new KeyExtenderSimpleLinear(automaton));

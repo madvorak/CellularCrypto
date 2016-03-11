@@ -2,7 +2,10 @@
 
 namespace Crypto
 {
-    interface IKeyExtender
+    /// <summary>
+    /// Interface for all algorithms that can perform key stretching.
+    /// </summary>
+    public interface IKeyExtender
     {
         BitArray DoubleKey(BitArray shortKey);
 

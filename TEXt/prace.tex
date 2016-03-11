@@ -1,0 +1,166 @@
+%%% Hlavn� soubor. Zde se definuj� z�kladn� parametry a odkazuje se na ostatn� ��sti. %%%
+
+%% Verze pro jednostrann� tisk:
+% Okraje: lev� 40mm, prav� 25mm, horn� a doln� 25mm
+% (ale pozor, LaTeX si s�m p�id�v� 1in)
+\documentclass[12pt,a4paper]{report}
+\setlength\textwidth{145mm}
+\setlength\textheight{247mm}
+\setlength\oddsidemargin{15mm}
+\setlength\evensidemargin{15mm}
+\setlength\topmargin{0mm}
+\setlength\headsep{0mm}
+\setlength\headheight{0mm}
+% \openright za��d�, aby n�sleduj�c� text za��nal na prav� stran� knihy
+\let\openright=\clearpage
+
+%% Pokud tiskneme oboustrann�:
+% \documentclass[12pt,a4paper,twoside,openright]{report}
+% \setlength\textwidth{145mm}
+% \setlength\textheight{247mm}
+% \setlength\oddsidemargin{14.2mm}
+% \setlength\evensidemargin{0mm}
+% \setlength\topmargin{0mm}
+% \setlength\headsep{0mm}
+% \setlength\headheight{0mm}
+% \let\openright=\cleardoublepage
+
+% P�epneme na �eskou sazbu
+\usepackage[czech]{babel}
+\usepackage[IL2]{fontenc}
+
+%% Pou�it� k�dov�n� znak�: obvykle latin2, cp1250 nebo utf8:
+\usepackage[cp1250]{inputenc}
+
+%%% Dal�� u�ite�n� bal��ky (jsou sou��st� b��n�ch distribuc� LaTeXu)
+\usepackage{amsmath}        % roz���en� pro sazbu matematiky
+\usepackage{amsfonts}       % matematick� fonty
+\usepackage{amsthm}         % sazba v�t, definic apod.
+\usepackage{bbding}         % bal��ek s nejr�zn�j��mi symboly
+			    % (�tvere�ky, hv�zdi�ky, tu�ti�ky, n��ti�ky, ...)
+\usepackage{bm}             % tu�n� symboly (p��kaz \bm)
+\usepackage{graphicx}       % vkl�d�n� obr�zk�
+\usepackage{fancyvrb}       % vylep�en� prost�ed� pro strojov� p�smo
+\usepackage{indentfirst}    % zavede odsazen� 1. odstavce kapitoly
+\usepackage{natbib}         % zaji�tuje mo�nost odkazovat na literaturu
+			    % stylem AUTOR (ROK), resp. AUTOR [��SLO]
+\usepackage[nottoc]{tocbibind} % zajist� p�id�n� seznamu literatury,
+                            % obr�zk� a tabulek do obsahu
+\usepackage{icomma}         % inteligetn� ��rka v matematick�m m�du
+\usepackage{dcolumn}        % lep�� zarovn�n� sloupc� v tabulk�ch
+\usepackage{booktabs}       % lep�� vodorovn� linky v tabulk�ch
+\usepackage{paralist}       % lep�� enumerate a itemize
+\usepackage[usenames]{xcolor}  % barevn� sazba
+
+%%% �daje o pr�ci
+
+% N�zev pr�ce v jazyce pr�ce (p�esn� podle zad�n�)
+\def\NazevPrace{N�zev pr�ce}
+
+% N�zev pr�ce v angli�tin�
+\def\NazevPraceEN{Name of thesis}
+
+% Jm�no autora
+\def\AutorPrace{Jm�no P��jmen�}
+
+% Rok odevzd�n�
+\def\RokOdevzdani{ROK}
+
+% N�zev katedry nebo �stavu, kde byla pr�ce ofici�ln� zad�na
+% (dle Organiza�n� struktury MFF UK, p��padn� pln� n�zev pracovi�t� mimo MFF)
+\def\Katedra{N�zev katedry nebo �stavu}
+\def\KatedraEN{Name of the department}
+
+% Jedn� se o katedru (department) nebo o �stav (institute)?
+\def\TypPracoviste{Katedra}
+\def\TypPracovisteEN{Department}
+
+% Vedouc� pr�ce: Jm�no a p��jmen� s~tituly
+\def\Vedouci{Vedouc� pr�ce}
+
+% Pracovi�t� vedouc�ho (op�t dle Organiza�n� struktury MFF)
+\def\KatedraVedouciho{katedra}
+\def\KatedraVedoucihoEN{department}
+
+% Studijn� program a obor
+\def\StudijniProgram{studijn� program}
+\def\StudijniObor{studijn� obor}
+
+% Nepovinn� pod�kov�n� (vedouc�mu pr�ce, konzultantovi, tomu, kdo
+% zap�j�il software, literaturu apod.)
+\def\Podekovani{%
+Pod�kov�n�.
+}
+
+% Abstrakt (doporu�en� rozsah cca 80-200 slov; nejedn� se o zad�n� pr�ce)
+\def\Abstrakt{%
+Abstrakt.
+}
+\def\AbstraktEN{%
+Abstract.
+}
+
+% 3 a� 5 kl��ov�ch slov (doporu�eno), ka�d� uzav�eno ve slo�en�ch z�vork�ch
+\def\KlicovaSlova{%
+{kl��ov�} {slova}
+}
+\def\KlicovaSlovaEN{%
+{key} {words}
+}
+
+%% Bal��ek hyperref, kter�m jdou vyr�b�t klikac� odkazy v PDF,
+%% ale hlavn� ho pou��v�me k ulo�en� metadat do PDF (v�etn� obsahu).
+\usepackage[pdftex,unicode]{hyperref}   % Mus� b�t za v�emi ostatn�mi bal��ky
+\hypersetup{breaklinks=true}
+\hypersetup{pdftitle={\NazevPrace}}
+\hypersetup{pdfauthor={\AutorPrace}}
+\hypersetup{pdfkeywords=\KlicovaSlova}
+\hypersetup{urlcolor=blue}
+
+%% Definice r�zn�ch u�ite�n�ch maker (viz popis uvnit� souboru)
+\include{makra}
+
+%% Tituln� strana a r�zn� povinn� informa�n� strany
+\begin{document}
+\include{titulka}
+
+%%% Strana s automaticky generovan�m obsahem bakal��sk� pr�ce
+
+\tableofcontents
+
+%%% Jednotliv� kapitoly pr�ce jsou pro p�ehlednost ulo�eny v samostatn�ch souborech
+\include{uvod}
+\include{kap01}
+\include{kap02}
+\include{kap03}
+
+\include{zaver}
+
+%%% Seznam pou�it� literatury
+\include{literatura}
+
+%%% Obr�zky v bakal��sk� pr�ci
+%%% (pokud jich je mal� mno�stv�, obvykle nen� t�eba seznam uv�d�t)
+\listoffigures
+
+%%% Tabulky v bakal��sk� pr�ci (op�t nemus� b�t nutn� uv�d�t)
+%%% U matematick�ch prac� m��e b�t lep�� p�em�stit seznam tabulek na za��tek pr�ce.
+\listoftables
+
+%%% Pou�it� zkratky v bakal��sk� pr�ci (op�t nemus� b�t nutn� uv�d�t)
+%%% U matematick�ch prac� m��e b�t lep�� p�em�stit seznam zkratek na za��tek pr�ce.
+\chapwithtoc{Seznam pou�it�ch zkratek}
+
+%%% P��lohy k bakal��sk� pr�ci, existuj�-li. Ka�d� p��loha mus� b�t alespo� jednou
+%%% odkazov�na z vlastn�ho textu pr�ce. P��lohy se ��sluj�.
+%%%
+%%% Do ti�t�n� verze se sp��e hod� p��lohy, kter� lze ��st a prohl��et (dodate�n�
+%%% tabulky a grafy, r�zn� textov� dopl�ky, uk�zky v�stup� z po��ta�ov�ch program�,
+%%% apod.). Do elektronick� verze se hod� p��lohy, kter� budou sp��e pou��v�ny
+%%% v elektronick� podob� ne� �teny (zdrojov� k�dy program�, datov� soubory,
+%%% interaktivn� grafy apod.). Elektronick� p��lohy se nahr�vaj� do SISu a lze
+%%% je tak� do pr�ce vlo�it na CD/DVD.
+\chapwithtoc{P��lohy}
+
+\openright
+\end{document}

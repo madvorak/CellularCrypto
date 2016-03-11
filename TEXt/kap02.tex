@@ -1,0 +1,48 @@
+%%% Fiktivní kapitola s ukázkami citací
+
+\chapter{Odkazy na literaturu}
+
+Odkazy na literaturu vytváøíme nejlépe pomocí pøíkazù
+\verb|\citet|, \verb|\citep| atp.
+(viz {\LaTeX}ový balíèek \textsf{natbib}) a~následného použití
+Bib{\TeX}u. V~matematickém textu obvykle odkazujeme stylem \uv{Jméno
+autora/autorù (rok vydání)}, resp. \uv{Jméno autora/autorù [èíslo
+odkazu]}. V~èeském/slovenském textu je potøeba se navíc vypoøádat
+s~nutností skloòovat jméno autora, respektive pøechylovat jméno
+autorky. Je potøeba mít na pamìti, že standardní pøíkazy
+\verb|\citet|, \verb|\citep|
+produkují referenci se jménem autora/autorù v~prvním pádì a~jména
+autorek jsou nepøechýlena.
+
+Pokud nepoužíváme bib\TeX{}, øídíme se normou ISO 690 a zvyklostmi
+oboru.
+
+Jména èasopisù lze uvádìt zkrácenì, ale pouze v~kodifikované podobì.
+
+\section{Nìkolik ukázek}
+
+Mezi nejvíce citované statistické èlánky patøí práce Kaplana a~Meiera a~Coxe
+\citep{KaplanMeier58, Cox72}. \citet{Student08} napsal èlánek o~t-testu.
+
+Prof. Andìl je autorem uèebnice matematické statistiky
+\citep[viz][]{Andel98}. Teorii odhadu se vìnuje práce
+\citet{LehmannCasella98}. V~pøípadì odkazù na specifickou informaci
+(definice, dùkaz, \dots) uvedenou v~knize bývá užiteèné uvést
+specificky èíslo kapitoly, èíslo vìty atp. obsahující požadovanou
+informaci, napø. viz \citet[Vìta 4.22]{Andel07} nebo \citep[viz][Vìta
+4.22]{Andel07}.
+
+Mnoho èlánkù je výsledkem spolupráce celé øady osob. Pøi odkazování
+v~textu na èlánek se tøemi autory obvykle pøi prvním výskytu uvedeme
+plný seznam: \citet*{DempsterLairdRubin77} pøedstavili koncept EM
+algoritmu. Respektive: Koncept EM algoritmu byl pøedstaven v~práci
+Dempstera, Lairdové a~Rubina \citep*{DempsterLairdRubin77}. Pøi každém
+dalším výskytu již používáme zkrácenou verzi:
+\citet{DempsterLairdRubin77} nabízejí též nìkolik pøíkladù použití EM
+algoritmu. Respektive: Nìkolik pøíkladù použití EM algoritmu lze
+nalézt též v~práci Dempstera a~kol. \citep{DempsterLairdRubin77}.
+
+U~èlánku s~více než tøemi autory odkazujeme vždy zkrácenou formou:
+První výsledky projektu ACCEPT jsou uvedeny v~práci Genbergové a~kol.
+\citep{Genberget08}. V~textu \emph{nenapíšeme}: První výsledky
+projektu ACCEPT jsou uvedeny v~práci \citet*{Genberget08}.
