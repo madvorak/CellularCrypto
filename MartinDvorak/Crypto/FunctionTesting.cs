@@ -8,6 +8,19 @@ namespace Crypto
     class FunctionTesting
     {
         public delegate double DistanceDelegate(BitArray u, BitArray v);
+        private DistanceDelegate distanceFunction;
+
+        public FunctionTesting(bool useLevenshteinDistance = false)
+        {
+            if (useLevenshteinDistance)
+            {
+                distanceFunction = LevensteinDistance;
+            }
+            else
+            {
+                distanceFunction = HammingDistance;
+            }
+        }
 
         public static double HammingDistance(BitArray u, BitArray v)
         {
@@ -33,7 +46,7 @@ namespace Crypto
         /// <param name="u"></param>
         /// <param name="v"></param>
         /// <returns></returns>
-        public double LevensteinDistance(BitArray u, BitArray v)
+        public static double LevensteinDistance(BitArray u, BitArray v)
         {
             if (u.Length != v.Length)
             {
@@ -70,7 +83,7 @@ namespace Crypto
             return (double)d[upper, upper] / upper;
         }
 
-        public static double TestBitChange(IKeyExtender algorithm, int ratio)
+        public double TestBitChange(IKeyExtender algorithm, int ratio)
         {
             const int length = 100;
             const int repetitions = 5;
@@ -83,16 +96,16 @@ namespace Crypto
                 for (int j = 0; j < length; j++)
                 {
                     y[j] = !y[j];
-                    sum += HammingDistance(result, algorithm.ExtendKey(y, length * ratio));
+                    sum += distanceFunction(result, algorithm.ExtendKey(y, length * ratio));
                     y[j] = !y[j];
                 }
             }
             return sum / (length * repetitions);
         }
 
-        public static double TestAverageDistance(IKeyExtender algorithm, int ratio)
+        public double TestAverageDistance(IKeyExtender algorithm, int ratio)
         {
-            const int length = 500;
+            const int length = 150;
             const int count = 50;
             BitArray[] samples = new BitArray[count];
             BitArray[] results = new BitArray[count];
@@ -102,7 +115,7 @@ namespace Crypto
                 samples[i] = Utilities.RandomBitArr(length);
                 for (int j = 0; j < i; j++)
                 {
-                    if (HammingDistance(samples[i], samples[j]) < 0.005)
+                    if (distanceFunction(samples[i], samples[j]) < 0.005)
                     {
                         goto newArray;
                     }
@@ -115,14 +128,14 @@ namespace Crypto
             {
                 for (int j = 0; j < i; j++)
                 {
-                    sum += HammingDistance(results[i], results[j]);
+                    sum += distanceFunction(results[i], results[j]);
                 }
             }
 
             return sum / ((count * (count - 1)) / 2);
         }
 
-        public static double TestLargestBall(IKeyExtender algorithm)
+        public double TestLargestBallExactly(IKeyExtender algorithm)
         {
             const int length = 8;
             List<BitArray> results = new List<BitArray>();
@@ -137,7 +150,7 @@ namespace Crypto
                 double minDist = 1;
                 foreach (BitArray result in results)
                 {
-                    double distance = HammingDistance(point, result);
+                    double distance = distanceFunction(point, result);
                     if (distance < minDist)
                     {
                         minDist = distance;
@@ -156,10 +169,47 @@ namespace Crypto
             return largestRadius;
         }
 
-        public static double TestRandomSequences(IKeyExtender algorithm, int ratio)
+        public double TestLargestBallApprox(IKeyExtender algorithm)
+        {
+            const int length = 100;
+            const int count = 200;
+            const int samples = 2000;
+            List<BitArray> results = new List<BitArray>();
+            for (int i = 0; i < count; i++)
+            {
+                results.Add(algorithm.DoubleKey(Utilities.RandomBitArr(length)));
+            }
+
+            double largestRadius = 0;
+            for (int i = 0; i < samples; i++)
+            {
+                BitArray point = Utilities.RandomBitArr(2 * length);
+                double minDist = 1;
+                foreach (BitArray result in results)
+                {
+                    double distance = distanceFunction(point, result);
+                    if (distance < minDist)
+                    {
+                        minDist = distance;
+                        if (minDist <= largestRadius)
+                        {
+                            break;
+                        }
+                    }
+                }
+                if (minDist > largestRadius)
+                {
+                    largestRadius = minDist;
+                }
+            }
+
+            return largestRadius;
+        }
+
+        public double TestRandomSequences(IKeyExtender algorithm, int ratio)
         {
             const int length = 500;
-            const int count = 50;
+            const int count = 5;
             double sum = 0;
             for (int i = 0; i < count; i++)
             {
@@ -168,9 +218,9 @@ namespace Crypto
             return sum / count;
         } 
 
-        public static double TestSystematicSequences(IKeyExtender algorithm, int ratio)
+        public double TestSystematicSequences(IKeyExtender algorithm, int ratio)
         {
-            const int length = 14;
+            const int length = 10;
             double sum = 0;
             int count = 0;
             foreach (BitArray b in new Utilities.AllBinarySequences(length))

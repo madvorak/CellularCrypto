@@ -67,6 +67,7 @@
     <Compile Include="Crypto\KeyExtenderAbstract.cs" />
     <Compile Include="Crypto\KeyExtenderCheating.cs" />
     <Compile Include="Crypto\KeyExtenderCopy.cs" />
+    <Compile Include="Crypto\KeyExtenderInterlaced.cs" />
     <Compile Include="Crypto\KeyExtenderSimpleLinear.cs" />
     <Compile Include="Crypto\KeyExtenderSimpleQuadratic.cs" />
     <Compile Include="Testing\FunctionTestTest.cs" />
