@@ -6,6 +6,8 @@
 
 Celulární automat je diskrétní model, který se skládá z pravidelné møížky bunìk. Buòky se nacházejí v urèitých stavech, pøièemž množina stavù a pravidla pro pøechod mezi stavy jsou spoleèná pro celý automat. Celulární automat se vyvíjí diskrétnì v èase (celý najednou).
 
+Specialitou celulárních automatù je to, že i velmi jednoduchá sada pravidel mùže vést k velmi komplexnímu chování. Celulární automaty našly využití jako modely v biologii, chemii, fyzice, ale také tøeba jako nástroj pøi procedurálním generování terénu pro poèítaèové hry.
+
 \section{Elementární celulární automaty}
 
 Wofram popisuje 256 elementárních celulárních automatù. Jedná se o binární 1D automaty, kde nový stav každé buòky závisí pouze na jejím stavu a stavu pøímých sousedù. Formálnì by se dal pøechod zapsat jako:
@@ -17,13 +19,13 @@ $$f:\{0,1\}^3 \rightarrow \{0,1\} $$, tudíž existuje $2^{2^3} = 2^8 =256$ takový
 \begin{itemize}
 \item Nemusíme se omezovat jen na tìsné sousedy.
 \item Mùžeme povolit více než 2 stavy.
-\item Významným druhem celulárních automatù jsou totalistické automaty. Nehledì na to, jak velké se používá okolí a kolik stavù buòlky nabývají, v totalistických automatech se pouze èíselnì posèítají hodnoty hodnoty buòky s celým jejím okolím a podle souètu hodnot se pøiøadí výsledná hodnota. Pøechodová funkce pro automat s okolím velikosti $o$ a poètem stavù $s$ se tedy dá vyjádøít jako:
+\item Významným druhem celulárních automatù jsou totalistické automaty. Nehledì na to, jak velké se používá okolí a kolik stavù buòlky nabývají, v totalistických automatech se pouze èíselnì posèítají hodnoty hodnoty buòky s celým jejím okolím a podle souètu hodnot se pøiøadí výsledná hodnota. Pøechodová funkce pro totalistický automat s okolím velikosti $o$ a poètem stavù $s$ se tedy dá vyjádøít jako:
 $$f:\{0,..,(s-1)(o+1)\} \rightarrow \{0,..,s-1\}$$
 \end{itemize}
 
 \section{Dvourozmìrné celulární automaty}
 
-V oblasti 2D celulárních automatù se používají hlavnì totalistické automaty, protože vytváøení jiných typù pravidel by bylo pøíliš složité. Typických pøíkladem totalistického 2D automatu je Game Of Life. To je dvourozmìrný automat nad binární abecedou používající 8-okolí, který se øídí pravidlem, že živá buòka pøežívá, pokud má 2 až 3 zivé sousedy (jinak umírá), zatímco mrtvá buòka obžije, pokud má právì 3 živé sousedy. Game Of Life se stal nástrojem mnoha rùzných høíèek. Nicménì pro úèely šifrování se nezdá být moc užiteèný, protože nejde dostateènì parametrizovat.
+V oblasti 2D celulárních automatù se používají hlavnì totalistické automaty, protože vytváøení jiných typù pravidel by bylo pøíliš složité. Typických pøíkladem totalistického 2D automatu je Game Of Life. To je dvourozmìrný automat nad binární abecedou používající 8-okolí, který se øídí pravidlem, že živá buòka pøežívá, pokud má 2 až 3 zivé sousedy (jinak umírá), zatímco mrtvá buòka obžije, pokud má právì 3 živé sousedy. Game Of Life se stal zdrojem  mnoha rùzných høíèek. Nicménì pro úèely šifrování se nezdá být moc užiteèný, protože nejde dostateènì parametrizovat.
 
 \section{Implementace celulárních automatù}
 

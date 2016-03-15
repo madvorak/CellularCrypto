@@ -19,17 +19,35 @@ namespace Testing
             Console.WriteLine("KeyExtenderCheating:");
             runTestsOneAlgorithm(new KeyExtenderCheating());
 
-            IBinaryCA automaton = new ElementaryFastAutomaton(30, 1);
+            const int ruleNo = 30;
+            IBinaryCA automaton = new ElementaryFastAutomaton(ruleNo, 1);
 
-            Console.WriteLine("KeyExtenderSimpleLinear:");
+            Console.WriteLine($"KeyExtenderSimpleLinear using rule No. {ruleNo}:");
             runTestsOneAlgorithm(new KeyExtenderSimpleLinear(automaton));
 
             const int rows = 10;
-            const int skips = 15;
-            Console.WriteLine($"KeyExtenderInterlaced({rows}, {skips}):");
+            const int skips = 0;
+            Console.WriteLine($"KeyExtenderInterlaced({rows}, {skips}) using rule No. {ruleNo}:");
             runTestsOneAlgorithm(new KeyExtenderInterlaced(automaton, rows, skips));
 
-            Console.WriteLine("KeyExtenderSimpleQuadratic:");
+            Console.WriteLine($"KeyExtenderUncertain using rule No. {ruleNo}:");
+            runTestsOneAlgorithm(new KeyExtenderUncertain(automaton));
+
+            /*Console.WriteLine($"KeyExtenderSimpleQuadratic using rule No. {ruleNo}:");
+            runTestsOneAlgorithm(new KeyExtenderSimpleQuadratic(automaton));*/
+
+            automaton = new GameOfLife(1, 1);
+
+            Console.WriteLine("KeyExtenderSimpleLinear using Game of Life:");
+            runTestsOneAlgorithm(new KeyExtenderSimpleLinear(automaton));
+
+            Console.WriteLine($"KeyExtenderInterlaced({rows}, {skips}) using Game of Life:");
+            runTestsOneAlgorithm(new KeyExtenderInterlaced(automaton, rows, skips));
+
+            Console.WriteLine("KeyExtenderUncertain using using Game of Life:");
+            runTestsOneAlgorithm(new KeyExtenderUncertain(automaton));
+
+            Console.WriteLine("KeyExtenderSimpleQuadratic using rule Game of Life:");
             runTestsOneAlgorithm(new KeyExtenderSimpleQuadratic(automaton));
 
             Console.WriteLine();

@@ -1,48 +1,13 @@
-%%% Fiktivní kapitola s ukázkami citací
+%%% Kapitola o šifrování
 
-\chapter{Odkazy na literaturu}
+\chapter{Šifrování}
 
-Odkazy na literaturu vytváøíme nejlépe pomocí pøíkazù
-\verb|\citet|, \verb|\citep| atp.
-(viz {\LaTeX}ový balíèek \textsf{natbib}) a~následného použití
-Bib{\TeX}u. V~matematickém textu obvykle odkazujeme stylem \uv{Jméno
-autora/autorù (rok vydání)}, resp. \uv{Jméno autora/autorù [èíslo
-odkazu]}. V~èeském/slovenském textu je potøeba se navíc vypoøádat
-s~nutností skloòovat jméno autora, respektive pøechylovat jméno
-autorky. Je potøeba mít na pamìti, že standardní pøíkazy
-\verb|\citet|, \verb|\citep|
-produkují referenci se jménem autora/autorù v~prvním pádì a~jména
-autorek jsou nepøechýlena.
+Vìda zabývající se šifrováním se nazývá \textsl{kryptografie}. Lámáním šifer se zase zabývá  \textsl{kryptoanalýza}. Úkolem šifrování je uchovat a pøedat tajnou zprávu tak, aby ji mohl pøeèíst ten, pro koho je urèena, ale už nikdo jiný. Dále se nìkdy za cíl dává ovìøitelnost autora zprávy.
 
-Pokud nepoužíváme bib\TeX{}, øídíme se normou ISO 690 a zvyklostmi
-oboru.
+Pùvodní èitelná zpráva se nazývá \textsl{plaintext}. Data po zašifrování se nazývají \textsl{ciphertext}. Pro pøevod plaintextu na ciphertext je potøeba použít šifrovací algoritmus. Ten by mìl zároveò být schopen pøevézt ciphertext zpìt na plaintext (tzv. dešifrování). Protože fungování šifrovacího algoritmu se velmi snadno vyzradí, zásadní roli hraje \textsl{šifrovací klíè}. Pokud se jedná o \textsl{symetrickou kryptografii}, tak stejný klíè slouží i k dešifrování. V pøípadì \textsl{asymetrické kryptografie} se používají dva rùzné klíèe. Šifrovací resp. dešifrovací klíèe v asymetrické kryptografii se s ohledem na jejich použití nazývají jako \textsl{veøejný} resp. \textsl{tajný} klíè.
 
-Jména èasopisù lze uvádìt zkrácenì, ale pouze v~kodifikované podobì.
+Pøed zašifrováním zprávy se èasto provádí její \textsl{komprese}. To má za následek nejen úsporu pøenosového pásma a množství práce (èasu) šifrovacího algoritmu, ale velkou výhodou je dosažení výraznì rovnomìrnìjšího pravdìpodobnostního rozdìlení na prostoru plaintextù, což výraznì komplikuje kryptoanalýzu.
 
 \section{Nìkolik ukázek}
 
-Mezi nejvíce citované statistické èlánky patøí práce Kaplana a~Meiera a~Coxe
-\citep{KaplanMeier58, Cox72}. \citet{Student08} napsal èlánek o~t-testu.
-
-Prof. Andìl je autorem uèebnice matematické statistiky
-\citep[viz][]{Andel98}. Teorii odhadu se vìnuje práce
-\citet{LehmannCasella98}. V~pøípadì odkazù na specifickou informaci
-(definice, dùkaz, \dots) uvedenou v~knize bývá užiteèné uvést
-specificky èíslo kapitoly, èíslo vìty atp. obsahující požadovanou
-informaci, napø. viz \citet[Vìta 4.22]{Andel07} nebo \citep[viz][Vìta
-4.22]{Andel07}.
-
-Mnoho èlánkù je výsledkem spolupráce celé øady osob. Pøi odkazování
-v~textu na èlánek se tøemi autory obvykle pøi prvním výskytu uvedeme
-plný seznam: \citet*{DempsterLairdRubin77} pøedstavili koncept EM
-algoritmu. Respektive: Koncept EM algoritmu byl pøedstaven v~práci
-Dempstera, Lairdové a~Rubina \citep*{DempsterLairdRubin77}. Pøi každém
-dalším výskytu již používáme zkrácenou verzi:
-\citet{DempsterLairdRubin77} nabízejí též nìkolik pøíkladù použití EM
-algoritmu. Respektive: Nìkolik pøíkladù použití EM algoritmu lze
-nalézt též v~práci Dempstera a~kol. \citep{DempsterLairdRubin77}.
-
-U~èlánku s~více než tøemi autory odkazujeme vždy zkrácenou formou:
-První výsledky projektu ACCEPT jsou uvedeny v~práci Genbergové a~kol.
-\citep{Genberget08}. V~textu \emph{nenapíšeme}: První výsledky
-projektu ACCEPT jsou uvedeny v~práci \citet*{Genberget08}.
+bla bla bla

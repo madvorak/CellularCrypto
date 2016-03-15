@@ -40,7 +40,7 @@ namespace Crypto
         }
 
         /// <summary>
-        /// Použity zdroje: https://en.wikipedia.org/wiki/Levenshtein_distance ,
+        /// Sources: https://en.wikipedia.org/wiki/Levenshtein_distance ,
         /// https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#C.23
         /// </summary>
         /// <param name="u"></param>
@@ -92,11 +92,23 @@ namespace Crypto
             {
                 BitArray x = Utilities.RandomBitArr(length);
                 BitArray y = new BitArray(x);
-                BitArray result = algorithm.ExtendKey(x, length * ratio);
+                BitArray result;
+                try
+                {
+                    result = algorithm.ExtendKey(x, length * ratio);
+                }
+                catch (CannotGenerateException)
+                {
+                    continue;
+                }
                 for (int j = 0; j < length; j++)
                 {
                     y[j] = !y[j];
-                    sum += distanceFunction(result, algorithm.ExtendKey(y, length * ratio));
+                    try
+                    {
+                        sum += distanceFunction(result, algorithm.ExtendKey(y, length * ratio));
+                    }
+                    catch (CannotGenerateException) { }
                     y[j] = !y[j];
                 }
             }
@@ -120,7 +132,14 @@ namespace Crypto
                         goto newArray;
                     }
                 }
-                results[i] = algorithm.ExtendKey(samples[i], length * ratio);
+                try
+                {
+                    results[i] = algorithm.ExtendKey(samples[i], length * ratio);
+                }
+                catch (CannotGenerateException)
+                {
+                    return 0;
+                }
             }
 
             double sum = 0;
@@ -141,7 +160,11 @@ namespace Crypto
             List<BitArray> results = new List<BitArray>();
             foreach (BitArray b in new Utilities.AllBinarySequences(length))
             {
-                results.Add(algorithm.DoubleKey(b));
+                try
+                {
+                    results.Add(algorithm.DoubleKey(b));
+                }
+                catch (CannotGenerateException) { }
             }
 
             double largestRadius = 0;
@@ -177,7 +200,11 @@ namespace Crypto
             List<BitArray> results = new List<BitArray>();
             for (int i = 0; i < count; i++)
             {
-                results.Add(algorithm.DoubleKey(Utilities.RandomBitArr(length)));
+                try
+                {
+                    results.Add(algorithm.DoubleKey(Utilities.RandomBitArr(length)));
+                }
+                catch (CannotGenerateException) { }
             }
 
             double largestRadius = 0;
@@ -213,7 +240,11 @@ namespace Crypto
             double sum = 0;
             for (int i = 0; i < count; i++)
             {
-                sum += RandomnessTesting.RateSequence(algorithm.ExtendKey(Utilities.RandomBitArr(length), length * ratio));
+                try
+                {
+                    sum += RandomnessTesting.RateSequence(algorithm.ExtendKey(Utilities.RandomBitArr(length), length * ratio));
+                }
+                catch (CannotGenerateException) { }
             }
             return sum / count;
         } 
@@ -225,7 +256,11 @@ namespace Crypto
             int count = 0;
             foreach (BitArray b in new Utilities.AllBinarySequences(length))
             {
-                sum += RandomnessTesting.RateSequence(algorithm.ExtendKey(b, length * ratio));
+                try
+                {
+                    sum += RandomnessTesting.RateSequence(algorithm.ExtendKey(b, length * ratio));
+                }
+                catch (CannotGenerateException) { }
                 count++;
             }
             return sum / count;

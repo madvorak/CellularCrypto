@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  11 MAR 2016 11:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  14 MAR 2016 12:35
 entering extended mode
 **./prace.tex
 (prace.tex
@@ -460,7 +460,7 @@ LaTeX Info: Redefining \nameref on input line 124.
  (titulka.tex
 Package hyperref Info: Option `pageanchor' set `false' on input line 6.
 
-<logo.pdf, id=71, 371.3875pt x 366.36874pt>
+<logo.pdf, id=75, 371.3875pt x 366.36874pt>
 File: logo.pdf Graphic file (type pdf)
  <use logo.pdf>
 Package pdftex.def Info: logo.pdf used on input line 24.
@@ -524,66 +524,6 @@ Kapitola 1.
 
  (kap02.tex
 Kapitola 2.
-LaTeX Font Info:    Try loading font information for IL2+cmtt on input line 6.
-(C:\Users\Martin\AppData\Roaming\MiKTeX\2.9\tex\cslatex\base\il2cmtt.fd
-File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
-)
-LaTeX Font Info:    Try loading font information for IL2+cmss on input line 7.
-
-(C:\Users\Martin\AppData\Roaming\MiKTeX\2.9\tex\cslatex\base\il2cmss.fd
-File: il2cmss.fd 1997/02/13 CsLaTeX font definitions
-)
-
-Package natbib Warning: Citation `KaplanMeier58' on page 5 undefined on input l
-ine 25.
-
-
-Package natbib Warning: Citation `Cox72' on page 5 undefined on input line 25.
-
-
-Package natbib Warning: Citation `Student08' on page 5 undefined on input line 
-25.
-
-
-Package natbib Warning: Citation `Andel98' on page 5 undefined on input line 28
-.
-
-
-Package natbib Warning: Citation `LehmannCasella98' on page 5 undefined on inpu
-t line 29.
-
-
-Package natbib Warning: Citation `Andel07' on page 5 undefined on input line 32
-.
-
-
-Package natbib Warning: Citation `Andel07' on page 5 undefined on input line 33
-.
-
-
-Package natbib Warning: Citation `DempsterLairdRubin77' on page 5 undefined on 
-input line 37.
-
-
-Package natbib Warning: Citation `DempsterLairdRubin77' on page 5 undefined on 
-input line 39.
-
-
-Package natbib Warning: Citation `DempsterLairdRubin77' on page 5 undefined on 
-input line 41.
-
-
-Package natbib Warning: Citation `DempsterLairdRubin77' on page 5 undefined on 
-input line 43.
-
-
-Package natbib Warning: Citation `Genberget08' on page 5 undefined on input lin
-e 47.
-
-
-Package natbib Warning: Citation `Genberget08' on page 5 undefined on input lin
-e 48.
-
 ) [5
 
 
@@ -593,6 +533,11 @@ e 48.
 
  (kap03.tex
 Kapitola 3.
+LaTeX Font Info:    Try loading font information for IL2+cmtt on input line 66.
+
+(C:\Users\Martin\AppData\Roaming\MiKTeX\2.9\tex\cslatex\base\il2cmtt.fd
+File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
+)
 [6
 
 
@@ -629,37 +574,24 @@ No file prace.bbl.
 ] [13
 
 ]
-
-Package natbib Warning: There were undefined citations.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
-(prace.aux (titulka.aux) (uvod.aux) (kap01.aux) (kap02.aux) (kap03.aux)
-(zaver.aux) (literatura.aux))
+ (prace.aux (titulka.aux)
+(uvod.aux) (kap01.aux) (kap02.aux) (kap03.aux) (zaver.aux) (literatura.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
-
-
-Package rerunfilecheck Warning: File `prace.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `prace.out':
-(rerunfilecheck)             Before: 962964BEB0F00C9ADE29DD65F90BEF8D;2481
-(rerunfilecheck)             After:  0ED6CB9B6E07A94210C961A3975F02EF;2717.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `prace.out' has not changed.
+(rerunfilecheck)             Checksum: 25101186CA43425B416FBD2713A623DF;2665.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
  ) 
 Here is how much of TeX's memory you used:
- 11654 strings out of 493634
- 159446 string characters out of 3141311
- 246044 words of memory out of 3000000
- 14785 multiletter control sequences out of 15000+200000
- 28037 words of font info for 86 fonts, out of 3000000 for 9000
+ 11630 strings out of 493634
+ 158760 string characters out of 3141311
+ 246046 words of memory out of 3000000
+ 14764 multiletter control sequences out of 15000+200000
+ 28117 words of font info for 86 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 29i,11n,35p,612b,568s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,11n,35p,740b,568s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Pr
@@ -673,14 +605,14 @@ ta/Roaming/MiKTeX/2.9/fonts/type1/public/cs/csbx12.pfb><C:/Users/Martin/AppData
 aming/MiKTeX/2.9/fonts/type1/public/cs/csr12.pfb><C:/Users/Martin/AppData/Roami
 ng/MiKTeX/2.9/fonts/type1/public/cs/csr17.pfb><C:/Users/Martin/AppData/Roaming/
 MiKTeX/2.9/fonts/type1/public/cs/csr8.pfb><C:/Users/Martin/AppData/Roaming/MiKT
-eX/2.9/fonts/type1/public/cs/csss12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX
+eX/2.9/fonts/type1/public/cs/cssl12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX
 /2.9/fonts/type1/public/cs/csti10.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2
 .9/fonts/type1/public/cs/csti12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9
 /fonts/type1/public/cs/cstt10.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/f
 onts/type1/public/cs/cstt12.pfb>
-Output written on prace.pdf (17 pages, 330321 bytes).
+Output written on prace.pdf (17 pages, 336010 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
+ 257 PDF objects out of 1000 (max. 8388607)
  37 named destinations out of 1000 (max. 500000)
- 142 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 150 words of extra memory for PDF output out of 10000 (max. 10000000)
 

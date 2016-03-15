@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 
 namespace Crypto
 {
@@ -7,7 +6,7 @@ namespace Crypto
     {
         public abstract BitArray DoubleKey(BitArray shortKey);
 
-        public virtual BitArray ExtendKey(BitArray shortKey, int targetLength)
+        public BitArray ExtendKey(BitArray shortKey, int targetLength)
         {
             BitArray key = new BitArray(shortKey);
             while (key.Length < targetLength)
