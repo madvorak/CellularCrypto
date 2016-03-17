@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Cellular;
 
 namespace Crypto
@@ -28,6 +29,11 @@ namespace Crypto
                 longKey[i + length] = generatorCA.GetValueAt(i);
             }
             return longKey;
+        }
+
+        internal override string GetInfo()
+        {
+            return $"SimpleLinear using {((CellularAutomaton)ca).TellType()}";
         }
     }
 }

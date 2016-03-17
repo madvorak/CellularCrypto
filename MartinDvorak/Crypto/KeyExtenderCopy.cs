@@ -16,5 +16,10 @@ namespace Crypto
             }
             return longKey;
         }
+
+        internal override string GetInfo()
+        {
+            return "Copy";
+        }
     }
 }

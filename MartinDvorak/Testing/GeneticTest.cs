@@ -9,10 +9,32 @@ namespace Testing
     {
         public static void RunTest()
         {
+            BitArray input = Utilities.RandomBitArr(16);
+            const int length = 1000;
+            IBinaryCA aut = new ElementaryFastAutomaton();
+
+            BitArray simpleRes = new KeyExtenderSimpleLinear(aut).ExtendKey(input, length);
+            Console.WriteLine("KeyExtenderSimpleLinear: {0}\n", RandomnessTesting.RateSequence(simpleRes));
+
+            for (int i = 2; i < 15; i += 3)
+            {
+                for (int j = 0; j < 10; j += 2)
+                {
+                    BitArray interlRes = new KeyExtenderInterlaced(aut, i, j).ExtendKey(input, length);
+                    Console.WriteLine($"KeyExtenderInterlaced({i}, {j}): {RandomnessTesting.RateSequence(interlRes)}");
+                }
+            }
+            Console.WriteLine();
+
             KeyExtenderGenetic sga = new KeyExtenderGenetic();
-            BitArray res = sga.ExtendKey(Utilities.RandomBitArr(20), 1000);
-            Console.WriteLine(RandomnessTesting.RateSequence(res));
-            Console.WriteLine("Genetic algorithm OK\n");
+            BitArray geneticRes = sga.ExtendKey(input, length);
+            Console.WriteLine("KeyExtenderGenetic: {0}", RandomnessTesting.RateSequence(geneticRes));
+            Console.WriteLine(sga.getInfoAboutWinner());
+            Console.WriteLine();
+
+            BitArray quadratRes = new KeyExtenderSimpleQuadratic(aut).ExtendKey(input, length);
+            Console.WriteLine("KeyExtenderSimpleQuadratic: {0}\n", RandomnessTesting.RateSequence(quadratRes));
+            Console.ReadKey();
         }
     }
 }

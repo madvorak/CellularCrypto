@@ -20,5 +20,7 @@ namespace Crypto
             }
             return longKey;
         }
+
+        internal abstract string GetInfo();
     }
 }

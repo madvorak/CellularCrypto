@@ -33,5 +33,10 @@ namespace Crypto
             }
             return longKey;
         }
+
+        internal override string GetInfo()
+        {
+            return $"SimpleQuadratic using {((CellularAutomaton)ca).TellType()}";
+        }
     }
 }

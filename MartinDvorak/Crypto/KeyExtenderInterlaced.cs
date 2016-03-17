@@ -65,5 +65,10 @@ namespace Crypto
             }
             return longKey;
         }
+
+        internal override string GetInfo()
+        {
+            return $"Interlaced({rows}, {skips}) using {((CellularAutomaton)ca).TellType()}";
+        }
     }
 }
