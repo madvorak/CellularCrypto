@@ -4,11 +4,11 @@ using Cellular;
 
 namespace Crypto
 {
-    class KeyExtenderInterlaced : KeyExtenderAbstract
+    class KeyExtenderInterlaced : KeyExtenderAbstractD
     {
-        private IBinaryCA ca;
-        private int rows;
-        private int skips;
+        private readonly IBinaryCA ca;
+        private readonly int rows;
+        private readonly int skips;
 
         public KeyExtenderInterlaced(IBinaryCA binaryCA, int rowCount, int skipCount)
         {

@@ -6,7 +6,7 @@ namespace Crypto
 {
     class KeyExtenderUncertain : KeyExtenderAbstractN
     {
-        private IBinaryCA ca;
+        private readonly IBinaryCA ca;
 
         public KeyExtenderUncertain(IBinaryCA binaryCA)
         {

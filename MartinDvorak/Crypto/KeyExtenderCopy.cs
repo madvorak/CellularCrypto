@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace Crypto
 {
-    class KeyExtenderCopy : KeyExtenderAbstract
+    class KeyExtenderCopy : KeyExtenderAbstractD
     {
         public override BitArray DoubleKey(BitArray shortKey)
         {

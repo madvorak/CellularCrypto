@@ -4,11 +4,11 @@ using Cellular;
 
 namespace Crypto
 {
-    class KeyExtenderCheating : KeyExtenderAbstract
+    class KeyExtenderCheating : KeyExtenderAbstractN
     {
-        public override BitArray DoubleKey(BitArray shortKey)
+        public override BitArray ExtendKey(BitArray shortKey, int targetLength)
         {
-            return Utilities.RandomBitArr(shortKey.Length * 2);
+            return Utilities.RandomBitArr(targetLength);
         }
     }
 }

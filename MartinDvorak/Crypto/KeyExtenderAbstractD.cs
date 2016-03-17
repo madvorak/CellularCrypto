@@ -2,7 +2,7 @@
 
 namespace Crypto
 {
-    abstract class KeyExtenderAbstract : IKeyExtender
+    abstract class KeyExtenderAbstractD : IKeyExtender
     {
         public abstract BitArray DoubleKey(BitArray shortKey);
 

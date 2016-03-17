@@ -4,9 +4,9 @@ using Cellular;
 
 namespace Crypto
 {
-    class KeyExtenderSimpleQuadratic : KeyExtenderAbstract
+    class KeyExtenderSimpleQuadratic : KeyExtenderAbstractD
     {
-        private IBinaryCA ca;
+        private readonly IBinaryCA ca;
 
         public KeyExtenderSimpleQuadratic(IBinaryCA binaryCA)
         {

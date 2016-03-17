@@ -9,6 +9,7 @@ class Program
     static void Main(string[] args)
     {
         rnd = new Random();
+        GeneticTest.RunTest();
         FunctionTestTest.RunTest();
         UtilityTest.RunTest();
         Adapter.DisplayForm();
