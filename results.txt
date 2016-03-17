@@ -1,0 +1,102 @@
+KeyExtenderCopy:
+ TestBitChange: 0,00500000000000008
+ TestAverageDistance: 0,500225656565656
+ TestLargestBall: 0,5
+
+KeyExtenderCheating:
+ TestBitChange: 0,50010525
+ TestAverageDistance: 0,500029070707071
+ TestLargestBall: 0,3125
+
+KeyExtenderSimpleLinear:
+ TestBitChange: 0,0250137500000001
+ TestAverageDistance: 0,499810464646466
+ TestLargestBall: 0,375
+
+KeyExtenderSimpleQuadratic:
+ TestBitChange: 0,463566
+ TestAverageDistance: 0,499943696969698
+ TestLargestBall: 0,3125
+
+
+
+
+
+
+
+
+KeyExtenderCopy:
+ TestBitChange: 0,00999999999999988
+ TestAverageDistance: 0,500483265306122
+ TestLargestBall: 0,5
+ TestRandomSequences: 0,588315892544566
+ TestSystematicSequences: 0,630655466970678
+
+KeyExtenderCheating:
+ TestBitChange: 0,500594285714285
+ TestAverageDistance: 0,499709154518952
+ TestLargestBall: 0,25
+ TestRandomSequences: 0,969607986179891
+ TestSystematicSequences: 0,786074531426627
+
+KeyExtenderSimpleLinear:
+ TestBitChange: 0,0427485714285714
+ TestAverageDistance: 0,49944139941691
+ TestLargestBall: 0,375
+ TestRandomSequences: 0,833027804510932
+ TestSystematicSequences: 0,772043426995384
+
+KeyExtenderSimpleQuadratic:
+ TestBitChange: 0,436325714285714
+ TestAverageDistance: 0,500102390670555
+ TestLargestBall: 0,3125
+ TestRandomSequences: 0,969499753869384
+ TestSystematicSequences: 0,785492123627817
+
+
+
+
+
+
+
+Výsledky s Levenshteinovou vzdáleností (dlouhý výpoèet):
+
+KeyExtenderCopy:
+ TestBitChange: 0,00999999999999988
+ TestAverageDistance: 0,501311564625851
+ TestLargestBallExactly: 0,5
+ TestLargestBallApprox: 0,44
+ TestRandomSequences: 0,45107107411605
+ TestSystematicSequences: 0,178729209882103
+
+KeyExtenderCheating:
+ TestBitChange: 0,499334285714285
+ TestAverageDistance: 0,500031098153547
+ TestLargestBallExactly: 0,3125
+ TestLargestBallApprox: 0,435
+ TestRandomSequences: 0,996660149585138
+ TestSystematicSequences: 0,987677063792334
+
+KeyExtenderSimpleLinear:
+ TestBitChange: 0,04238
+ TestAverageDistance: 0,498256948493682
+ TestLargestBallExactly: 0,375
+ TestLargestBallApprox: 0,44
+ TestRandomSequences: 0,56977647312818
+ TestSystematicSequences: 0,458154311118147
+
+KeyExtenderInterlaced(10, 15):
+ TestBitChange: 0,453142857142856
+ TestAverageDistance: 0,478773177842564
+ TestLargestBallExactly: 0,6875
+ TestLargestBallApprox: 0,48
+ TestRandomSequences: 0,996751575530449
+ TestSystematicSequences: 0,598141110988919
+
+KeyExtenderSimpleQuadratic:
+ TestBitChange: 0,464694285714285
+ TestAverageDistance: 0,500062196307095
+ TestLargestBallExactly: 0,3125
+ TestLargestBallApprox: 0,435
+ TestRandomSequences: 0,996619730321459
+ TestSystematicSequences: 0,986743616972068

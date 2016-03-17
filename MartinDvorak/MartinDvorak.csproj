@@ -91,13 +91,7 @@
     <Compile Include="Cellular\NaryTotalisticAutomaton.cs" />
     <Compile Include="Cellular\NaryTotalisticCyclicAutomaton.cs" />
     <Compile Include="Cellular\Utilities.cs" />
-    <Compile Include="Crypto\Mask.cs" />
-    <Compile Include="Crypto\Primitives.cs" />
     <Compile Include="Crypto\RandomnessTesting.cs" />
-    <Compile Include="Crypto\SeqGen.cs" />
-    <Compile Include="Crypto\SimpleGen.cs" />
-    <Compile Include="Crypto\Solution.cs" />
-    <Compile Include="Crypto\Solver.cs" />
     <Compile Include="UserForms\DemoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,7 +100,6 @@
     </Compile>
     <Compile Include="Testing\AutomataTest.cs" />
     <Compile Include="Testing\BinaryRangeNTest.cs" />
-    <Compile Include="Testing\CryptoTest.cs" />
     <Compile Include="Testing\ElementaryTimeMeasure.cs" />
     <Compile Include="Testing\RandomTestTest.cs" />
     <Compile Include="Testing\Implementation2Test.cs" />
