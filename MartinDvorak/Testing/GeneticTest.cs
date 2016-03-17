@@ -16,9 +16,9 @@ namespace Testing
             BitArray simpleRes = new KeyExtenderSimpleLinear(aut).ExtendKey(input, length);
             Console.WriteLine("KeyExtenderSimpleLinear: {0}\n", RandomnessTesting.RateSequence(simpleRes));
 
-            for (int i = 2; i < 15; i += 3)
+            for (int i = 2; i < 15; i += 6)
             {
-                for (int j = 0; j < 10; j += 2)
+                for (int j = 0; j < 10; j += 4)
                 {
                     BitArray interlRes = new KeyExtenderInterlaced(aut, i, j).ExtendKey(input, length);
                     Console.WriteLine($"KeyExtenderInterlaced({i}, {j}): {RandomnessTesting.RateSequence(interlRes)}");

@@ -37,15 +37,18 @@ namespace Crypto
 
             public Individual Copy()
             {
-                Individual copy = new Individual(0);
-                copy.genome = genome;
+                Individual copy = new Individual(genome.Length);
+                for (int i = 0; i < genome.Length; i++)
+                {
+                    copy.genome[i] = genome[i];
+                }
                 copy.fitness = fitness;
                 return copy;
             }
         }
 
         private const int popSize = 100;
-        private const int iterations = 70;
+        private const int iterations = 200;
         private const double breedProb = 0.3;
         private const double mutProb = 0.8;
 
@@ -72,7 +75,6 @@ namespace Crypto
                 }
             }
 
-            int debug = -999;
             // evolution
             for (int i = 0; i < iterations; i++)
             {
@@ -124,21 +126,14 @@ namespace Crypto
                     if (nextGeneration[j].fitness > bestSoFar.fitness)
                     {
                         bestSoFar = nextGeneration[j].Copy();
-                        if (debug <= i - 10)
-                        {
-                            Console.WriteLine(i + " " + bestSoFar.fitness + "  " + bestSoFar.RunToRate(shortKey));
-                            debug = i;
-                        }
                     }
                 }
 
                 population = nextGeneration;
-                Console.WriteLine(bestSoFar.RunToRate(shortKey));
             }
 
             // output
             savedBest = bestSoFar;
-            Console.WriteLine($"rounds: {rounds}, fitness: {bestSoFar.RunToRate(shortKey)}");
             BitArray toOutput = bestSoFar.Run(shortKey);
             BitArray clipped = new BitArray(targetLength);
             int bias = rng.Next(toOutput.Length - targetLength + 1);
