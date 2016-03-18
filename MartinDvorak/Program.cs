@@ -9,14 +9,14 @@ class Program
     static void Main(string[] args)
     {
         rnd = new Random();
-        //Crypto.SearchSGA.SearchForGoodExtenders();
         GeneticTest.RunTest();
         FunctionTestTest.RunTest();
-        UtilityTest.RunTest();
-        Adapter.DisplayForm();
+        //Crypto.SearchSGA.SearchForGoodExtenders();
         AutomataTest.RunTest();
-        TotalisticTernaryTest.RunTest();
+        UtilityTest.RunTest();
         RandomTestTest.RunTest();
+        Adapter.DisplayForm();
+        TotalisticTernaryTest.RunTest();
         BinaryRangeNTest.RunTest();
         Implementation2Test.RunTest();
         ElementaryTimeMeasure.RunTest();

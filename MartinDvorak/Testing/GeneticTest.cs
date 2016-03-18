@@ -9,8 +9,8 @@ namespace Testing
     {
         public static void RunTest()
         {
-            BitArray input = Utilities.RandomBitArr(16);
-            const int length = 1000;
+            BitArray input = Utilities.RandomBitArr(8);
+            const int length = 500;
             IBinaryCA aut = new ElementaryFastAutomaton();
 
             BitArray simpleRes = new KeyExtenderSimpleLinear(aut).ExtendKey(input, length);

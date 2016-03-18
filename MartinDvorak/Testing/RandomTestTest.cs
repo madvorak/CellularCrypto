@@ -11,6 +11,7 @@ namespace Testing
         {
             Console.WriteLine("  Entropy test 3 max length: " + RandomnessTesting.EntropyTest(b, 3));
             Console.WriteLine("  Entropy test 6 max length: " + RandomnessTesting.EntropyTest(b, 6));
+            Console.WriteLine("  Entropy test 10 max length: " + RandomnessTesting.EntropyTest(b, 10));
             Console.WriteLine("  Compression Test: " + RandomnessTesting.CompressionTest(b));
             Console.WriteLine("  Combined Test: " + RandomnessTesting.RateSequence(b));
         }

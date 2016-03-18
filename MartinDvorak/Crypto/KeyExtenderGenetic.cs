@@ -47,8 +47,8 @@ namespace Crypto
             }
         }
 
-        private const int popSize = 100;
-        private const int iterations = 200;
+        private const int popSize = 200;
+        private const int iterations = 300;
         private const double breedProb = 0.3;
         private const double mutProb = 0.8;
 

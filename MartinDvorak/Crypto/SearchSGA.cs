@@ -13,8 +13,8 @@ namespace Crypto
             while (true)
             {
                 KeyExtenderGenetic genetic = new KeyExtenderGenetic();
-                BitArray input = Utilities.RandomBitArr(50);
-                BitArray output = genetic.ExtendKey(input, 6000);
+                BitArray input = Utilities.RandomBitArr(100);
+                BitArray output = genetic.ExtendKey(input, 25000);
                 File.WriteAllText(DateTime.Now.ToFileTime() + ".xca", 
                     RandomnessTesting.RateSequence(output).ToString() + "\n\n" +  genetic.getInfoAboutWinner());
             }
