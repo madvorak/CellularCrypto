@@ -49,7 +49,7 @@ namespace Crypto
                     }
                 }
             }
-            return score / maxScore;   //weighted average of entropies for block from 1 to length; actual vs maximal
+            return score / maxScore;   //weighted average of entropies for block from 1 to lengthLimit; actual vs maximal
         }
 
         public static double CompressionTest(BitArray b)
@@ -62,7 +62,7 @@ namespace Crypto
             gzip.Write(array, 0, length);
             gzip.Dispose();
             int compressedSize = ms.ToArray().Length;
-            return (double)(compressedSize - 30) / (double)length;
+            return (double)(compressedSize - 30) / length;
         }
 
         public static double RateSequence(BitArray sequence)

@@ -1,61 +1,74 @@
-KeyExtenderCopy:
- TestBitChange: 0,00500000000000008
- TestAverageDistance: 0,500225656565656
- TestLargestBall: 0,5
-
-KeyExtenderCheating:
- TestBitChange: 0,50010525
- TestAverageDistance: 0,500029070707071
- TestLargestBall: 0,3125
-
-KeyExtenderSimpleLinear:
- TestBitChange: 0,0250137500000001
- TestAverageDistance: 0,499810464646466
- TestLargestBall: 0,375
-
-KeyExtenderSimpleQuadratic:
- TestBitChange: 0,463566
- TestAverageDistance: 0,499943696969698
- TestLargestBall: 0,3125
-
-
-
-
-
-
-
+Výsledky s Hammingovou vzdáleností:
 
 KeyExtenderCopy:
  TestBitChange: 0,00999999999999988
- TestAverageDistance: 0,500483265306122
- TestLargestBall: 0,5
- TestRandomSequences: 0,588315892544566
- TestSystematicSequences: 0,630655466970678
+ TestAverageDistance: 0,500440816326531
+ TestLargestBallExactly: 0,5
+ TestLargestBallApprox: 0,44
+ TestRandomSequences: 0,474189394597029
+ TestSystematicSequences: 0,236174996094387
 
 KeyExtenderCheating:
- TestBitChange: 0,500594285714285
- TestAverageDistance: 0,499709154518952
- TestLargestBall: 0,25
- TestRandomSequences: 0,969607986179891
- TestSystematicSequences: 0,786074531426627
+ TestBitChange: 0,50026
+ TestAverageDistance: 0,500422934888242
+ TestLargestBallExactly: 0,3125
+ TestLargestBallApprox: 0,44
+ TestRandomSequences: 0,997129180047811
+ TestSystematicSequences: 0,989334782327389
 
-KeyExtenderSimpleLinear:
- TestBitChange: 0,0427485714285714
- TestAverageDistance: 0,49944139941691
- TestLargestBall: 0,375
- TestRandomSequences: 0,833027804510932
- TestSystematicSequences: 0,772043426995384
+KeyExtenderSimpleLinear using rule No. 30:
+ TestBitChange: 0,0422228571428571
+ TestAverageDistance: 0,498578036929057
+ TestLargestBallExactly: 0,375
+ TestLargestBallApprox: 0,435
+ TestRandomSequences: 0,580106060311298
+ TestSystematicSequences: 0,486476912191803
 
-KeyExtenderSimpleQuadratic:
- TestBitChange: 0,436325714285714
- TestAverageDistance: 0,500102390670555
- TestLargestBall: 0,3125
- TestRandomSequences: 0,969499753869384
- TestSystematicSequences: 0,785492123627817
+KeyExtenderInterlaced(10, 0) using rule No. 30:
+ TestBitChange: 0,369868571428571
+ TestAverageDistance: 0,500244897959184
+ TestLargestBallExactly: 0,375
+ TestLargestBallApprox: 0,44
+ TestRandomSequences: 0,997094207433275
+ TestSystematicSequences: 0,974264730569401
 
+KeyExtenderUncertain using rule No. 30:
+ TestBitChange: 0,450477142857142
+ TestAverageDistance: 0,49631720116618
+ TestLargestBallExactly: 0,4375
+ TestLargestBallApprox: 0,445
+ TestRandomSequences: 0,929815265098597
+ TestSystematicSequences: 0,00656731271395457
 
+KeyExtenderSimpleLinear using Game of Life:
+ TestBitChange: 0,211488571428572
+ TestAverageDistance: 0,382973760932944
+ TestLargestBallExactly: 0,4375
+ TestLargestBallApprox: 0,465
+ TestRandomSequences: 0,815928152355194
+ TestSystematicSequences: 0,29209057445357
 
+KeyExtenderInterlaced(10, 0) using Game of Life:
+ TestBitChange: 0,0855800000000002
+ TestAverageDistance: 0,177326336248785
+ TestLargestBallExactly: 0,4375
+ TestLargestBallApprox: 0,485
+ TestRandomSequences: 0,000914285714285714
+ TestSystematicSequences: 0
 
+KeyExtenderUncertain using using Game of Life:
+ TestBitChange: 0
+ TestAverageDistance: 0
+ TestLargestBallExactly: 1
+ TestLargestBallApprox: 0,445
+ TestRandomSequences: 0,225383905982846
+ TestSystematicSequences: 0,00447828702252239
+
+KeyExtenderSimpleQuadratic using rule Game of Life:
+ TestBitChange: 0,00126571428571429
+ TestAverageDistance: 0,00253994169096209
+ TestLargestBallExactly: 0,4375
+ TestLargestBallApprox: 0,485
 
 
 
@@ -63,40 +76,70 @@ Výsledky s Levenshteinovou vzdáleností (dlouhý výpoèet):
 
 KeyExtenderCopy:
  TestBitChange: 0,00999999999999988
- TestAverageDistance: 0,501311564625851
+ TestAverageDistance: 0,292897181729834
  TestLargestBallExactly: 0,5
- TestLargestBallApprox: 0,44
- TestRandomSequences: 0,45107107411605
- TestSystematicSequences: 0,178729209882103
+ TestLargestBallApprox: 0,3
+ TestRandomSequences: 0,47574478106106
+ TestSystematicSequences: 0,236174996094387
 
 KeyExtenderCheating:
- TestBitChange: 0,499334285714285
- TestAverageDistance: 0,500031098153547
- TestLargestBallExactly: 0,3125
- TestLargestBallApprox: 0,435
- TestRandomSequences: 0,996660149585138
- TestSystematicSequences: 0,987677063792334
+ TestBitChange: 0,295911428571429
+ TestAverageDistance: 0,29591137026239
+ TestLargestBallExactly: 0,25
+ TestLargestBallApprox: 0,29
+ TestRandomSequences: 0,997066001410481
+ TestSystematicSequences: 0,989328901846754
 
-KeyExtenderSimpleLinear:
- TestBitChange: 0,04238
- TestAverageDistance: 0,498256948493682
+KeyExtenderSimpleLinear using rule No. 30:
+ TestBitChange: 0,0350799999999999
+ TestAverageDistance: 0,291359378036929
+ TestLargestBallExactly: 0,3125
+ TestLargestBallApprox: 0,29
+ TestRandomSequences: 0,579761933074758
+ TestSystematicSequences: 0,486476912191803
+
+KeyExtenderInterlaced(10, 0) using rule No. 30:
+ TestBitChange: 0,266645714285715
+ TestAverageDistance: 0,296114285714285
  TestLargestBallExactly: 0,375
- TestLargestBallApprox: 0,44
- TestRandomSequences: 0,56977647312818
- TestSystematicSequences: 0,458154311118147
+ TestLargestBallApprox: 0,29
+ TestRandomSequences: 0,997193303524733
+ TestSystematicSequences: 0,974264730569401
 
-KeyExtenderInterlaced(10, 15):
- TestBitChange: 0,453142857142856
- TestAverageDistance: 0,478773177842564
- TestLargestBallExactly: 0,6875
- TestLargestBallApprox: 0,48
- TestRandomSequences: 0,996751575530449
- TestSystematicSequences: 0,598141110988919
+KeyExtenderUncertain using rule No. 30:
+ TestBitChange: 0,11678
+ TestAverageDistance: 0,298103790087463
+ TestLargestBallExactly: 0,375
+ TestLargestBallApprox: 0,295
+ TestRandomSequences: 0,925583247898766
+ TestSystematicSequences: 0,00656731271395457
 
-KeyExtenderSimpleQuadratic:
- TestBitChange: 0,464694285714285
- TestAverageDistance: 0,500062196307095
- TestLargestBallExactly: 0,3125
- TestLargestBallApprox: 0,435
- TestRandomSequences: 0,996619730321459
- TestSystematicSequences: 0,986743616972068
+KeyExtenderSimpleLinear using Game of Life:
+ TestBitChange: 0,209451428571428
+ TestAverageDistance: 0,26515296404276
+ TestLargestBallExactly: 0,375
+ TestLargestBallApprox: 0,335
+ TestRandomSequences: 0,825855440795995
+ TestSystematicSequences: 0,29209057445357
+
+KeyExtenderInterlaced(10, 0) using Game of Life:
+ TestBitChange: 0,0890714285714286
+ TestAverageDistance: 0,161519922254616
+ TestLargestBallExactly: 0,375
+ TestLargestBallApprox: 0,36
+ TestRandomSequences: 0,0353869490634693
+ TestSystematicSequences: 0
+
+KeyExtenderUncertain using using Game of Life:
+ TestBitChange: 0,0326057142857143
+ TestAverageDistance: 0
+ TestLargestBallExactly: 0,5625
+ TestLargestBallApprox: 0,3
+ TestRandomSequences: 0,0739592146880174
+ TestSystematicSequences: 0,00447828702252239
+
+KeyExtenderSimpleQuadratic using rule Game of Life:
+ TestBitChange: 0,00076
+ TestAverageDistance: 0,00125325558794946
+ TestLargestBallExactly: 0,4375
+ TestLargestBallApprox: 0,395

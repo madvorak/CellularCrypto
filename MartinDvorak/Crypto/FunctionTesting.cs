@@ -71,7 +71,7 @@ namespace Crypto
             {
                 for (int j = 1; j <= upper; j++)
                 {
-                    int cost = u[i - 1] == v[i - 1] ? 0 : 1;
+                    int cost = u[i - 1] == v[j - 1] ? 0 : 1;
 
                     int min1 = d[i - 1, j] + 1;
                     int min2 = d[i, j - 1] + 1;
