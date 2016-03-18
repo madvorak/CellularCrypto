@@ -74,6 +74,7 @@
     <Compile Include="Crypto\KeyExtenderSimpleLinear.cs" />
     <Compile Include="Crypto\KeyExtenderSimpleQuadratic.cs" />
     <Compile Include="Crypto\KeyExtenderUncertain.cs" />
+    <Compile Include="Crypto\SearchSGA.cs" />
     <Compile Include="Testing\FunctionTestTest.cs" />
     <Compile Include="Testing\GeneticTest.cs" />
     <Compile Include="UserForms\Adapter.cs" />

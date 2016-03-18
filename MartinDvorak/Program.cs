@@ -9,6 +9,7 @@ class Program
     static void Main(string[] args)
     {
         rnd = new Random();
+        //Crypto.SearchSGA.SearchForGoodExtenders();
         GeneticTest.RunTest();
         FunctionTestTest.RunTest();
         UtilityTest.RunTest();

@@ -202,6 +202,10 @@ namespace Crypto
 
         internal string getInfoAboutWinner()
         {
+            if (savedBest == null)
+            {
+                return null;
+            }
             StringBuilder sb = new StringBuilder();
             foreach (KeyExtenderAbstractD doubler in savedBest.genome)
             {

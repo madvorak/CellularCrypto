@@ -11,3 +11,35 @@ Pøed zašifrováním zprávy se èasto provádí její \textsl{komprese}. To má za násle
 \section{Nìkolik ukázek}
 
 bla bla bla
+
+V této práci se budeme vìnovat vytvoøení algoritmu na protahování klíèù (anglicky key stretching). Cílem je z krátkého klíèe (kterı lze napøíklad v krátkém èase pøenést pomocí RSA) vygenerovat dlouhı klíè (kterım lze pøeXORovat celı soubor). Je to tedy podobnı úkol jako naprogramovat \textsl{Key Stream Generator}, akorát my budeme dopøedu vìdìt cílenou délku vısledného klíèe. 
+
+Jako Key Stream Generator se dá pouít napøíklad mnoho blokovıch šifer. U blokovıch šifer záleí na módu operace. Pøi \textsl{Cipher Block Chaining} (CBC, PCBC) èi \textsl{Cipher Feedback} (CFB) módu zašifrování druhé èásti plaintextu záleí na vısledku zašifrování první èásti, tudí to není Key Stream Generator. Ale pøi zapojení jako tøeba \textsl{Counter} (CTR) vzniká proud bitù bez znalosti plaintextu, take získáme Key Stream Generator. Dobrım pøíklalem je tøeba AES-CTR.
+
+\section{Testy}
+
+Je pøíliš obtíné ukázat o šifrovacím algoritmu, e je doopravdy kvalitní. Jako záruka kvality se proto v praxi pouívá spíše jeho zveøejnìní na nìkolik let, aby ho mìli šanci oponovat nejlepší odborníci. Pokud se ani po nìkolika letech neukáe jeho slabina, je šifrovací algoritmus povaován za dost dobrı. Naštìstí alespoò ty velmi špatnì šifrovací algoritmy je moné rychle rozpoznat statistickımi testy. Na to se zamìøíme v této práci.
+
+\subsection{Testy na úrovni jednotlivıch vıstupù}
+
+vzd
+
+\subsection{Testy na úrovni celého zobrazení}
+
+Skuteènost, e vıstupem algoritmu je pseudonáhodná posloupnost èísel, je jistì dobrá. Ale co kdy algoritmus všem vstupùm pøiøadí stejnou pseudonáhodnou posloupnost? Nebo jeden konkrétní bit na vstupu neovlivní vısledek? Takovou nekvalitu musí objevit druhá skupina testù.
+
+Budeme zde zkoumat vlastnosti algoritmù jako vlastnosti celého zobrazení z krátkıch klíèù do dlouhıch klíèù. Protoe si budeme èasto klást otázky typu \uv{Jak moc se liší vıstup A od vıstupu B?}, tak by bylo vhodné zavést nìjaké hodnocení, ideálnì s vlastností metriky. Porovnávat budeme vdy jen vıstupy stejné délky. Oblíbenımi metrikami pro øetìzce jsou \textsl{Hammingova vzdálenost} a \textsl{Levenshteinova vzdálenost}. Hamming mìøí poèet pozic, na kterıch se øetìzce liší. Levenshtein mìøí minimální poèet potøebnıch zmìn k tomu, abychom z jednoho øetìzce dostali ten druhı. Jako zmìnu je moné provést zámìnu znaku, smazání znaku, nebo dopsání znaku na libovolné místo.
+
+Hammingova vzdálenost je triviálnì horním odhadem na Levenshteinovu vzdálenost. V pøípadì náhodnıch binárních øetìzcù je jejich hodnota èasto stejná, ale nìkdy mùu bıt Levenshtein vıraznì niší. Napøíklad kdy zrotujeme øetìzec o jednu pozici, tak Levenshtein dává vzdálenost 2, zatímco Hamming mùe dát hodnì vysoké èíslo. Vıznamná pro nás bude rychlost vıpoètu. Hammingovu vzdálenost lze triviálnì urèit v lineárním èase, ale vıpoèet Levenshteinovy vzdálenost zabere èas kvadratickı. e to rychleji nejde, se nelze divit, protoe Levenshtein vlastnì spouští prohledávání prostoru editací. Díky dynamickému programování to lze provést alespoò v tom kvadratickém èase.
+
+Tøída Crypto.FunctionTesting obsahuje následující metody. Podle nastavení v konstruktoru mohou všechny testy pouívat buï Hammingovu, nebo Levensteinovu vzdálenost.
+\begin{itemize}
+\item TestBitChange(IKeyExtender algorithm, int ratio) : Testuje, jak velká èást bitù vıstupu se zmìní pøi zmìnì jednoho bitù vstupu. Metoda sampluje náhodné vstupy a pro kadı z nich zkouší zmìnit zvláš všechny bity. Optimální hodnota je 0,5.
+\item TestAverageDistance(IKeyExtender algorithm, int ratio) : Testuje prùmìrnou vzdálenost vıstupù pøíslušející dvìma rùznım náhodnì zvolenım vstupùm. Optimální hodnota je 0,5.
+\item TestLargestBallExactly(IKeyExtender algorithm) : Testuje, jaká nejvìtší koule se dá vmìstnat do prostoru vıstupù tak, aby neobsahovala ádnı vygenerovatelnı dlouhı klíè. Zkouší úplnì všechny vstupy na malém prostoru a ty natahuje na dvojnásobek.
+\item TestLargestBallApprox(IKeyExtender algorithm) : Testuje to samé, ale pouívá delší vstupy, které u nezvládá vyzkoušet všechny, take je sampluje.
+\end{itemize}
+
+\section{asdf}
+
+bla bla
