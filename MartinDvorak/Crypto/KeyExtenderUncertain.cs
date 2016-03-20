@@ -4,6 +4,10 @@ using Cellular;
 
 namespace Crypto
 {
+    /// <summary>
+    /// Intelligent key extender that equalizes frequencies of 0 and 1, which may be different in the underlying CA.
+    /// However it is not guaranteed that the long key will be generated.
+    /// </summary>
     class KeyExtenderUncertain : KeyExtenderAbstractN
     {
         private readonly IBinaryCA ca;

@@ -2,6 +2,9 @@
 
 namespace Crypto
 {
+    /// <summary>
+    /// Abstract class for all key extenders that implement ExtendKey(). Method DoubleKey() simply calls ExtendKey().
+    /// </summary>
     abstract class KeyExtenderAbstractN : IKeyExtender
     {
         public BitArray DoubleKey(BitArray shortKey)

@@ -10,6 +10,12 @@ namespace Crypto
         private readonly int rows;
         private readonly int skips;
 
+        /// <summary>
+        /// Creates a new KeyExtenderInterlaced.
+        /// </summary>
+        /// <param name="binaryCA">What cellular automaton should be used to generate keys.</param>
+        /// <param name="rowCount">How many different rows should be used to generate keys.</param>
+        /// <param name="skipCount">How many extra steps of the underlying CA should be performed between every use.</param>
         public KeyExtenderInterlaced(IBinaryCA binaryCA, int rowCount, int skipCount)
         {
             if (rowCount < 2)

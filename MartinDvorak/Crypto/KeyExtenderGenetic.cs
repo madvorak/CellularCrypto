@@ -55,6 +55,12 @@ namespace Crypto
         private int rounds;
         private Individual savedBest;
 
+        /// <summary>
+        /// Runs a Simple Genetic Algorithm to find the best serie of extenders.
+        /// </summary>
+        /// <param name="shortKey">Short key (input - sequence to be stretched).</param>
+        /// <param name="targetLength">How long the result sequence should be.</param>
+        /// <returns>Long key generated using the best found serie of extenders.</returns>
         public override BitArray ExtendKey(BitArray shortKey, int targetLength)
         {
             // initiation
@@ -144,6 +150,9 @@ namespace Crypto
             return clipped;
         }
 
+        /// <summary>
+        /// Static class that keeps extenders and automata that can be used to double the key in any step.
+        /// </summary>
         private static class Primitives
         {
             private static List<IBinaryCA> automata;
@@ -167,31 +176,48 @@ namespace Crypto
                 foreach (IBinaryCA aut in automata)
                 {
                     extenders.Add(new KeyExtenderSimpleLinear(aut));
+                    extenders.Add(new KeyExtenderInterlaced(aut, 4, 0));
                     extenders.Add(new KeyExtenderInterlaced(aut, 4, 1));
+                    extenders.Add(new KeyExtenderInterlaced(aut, 4, 9));
+                    extenders.Add(new KeyExtenderInterlaced(aut, 10, 0));
+                    extenders.Add(new KeyExtenderInterlaced(aut, 10, 1));
+                    extenders.Add(new KeyExtenderInterlaced(aut, 10, 9));
                 }
             }
 
+            /// <summary>
+            /// Gives a random key extender (from the list) with already assigned CA.
+            /// </summary>
+            /// <param name="r">Random number generator to be used.</param>
+            /// <returns>KeyExtender.</returns>
             public static KeyExtenderAbstractD GetRandomExtender(Random r)
             {
                 return extenders[r.Next(extenders.Count)];
             }
         }
 
-        private void breedParents(Individual mother, Individual father, 
-            out Individual son, out Individual daughter, Random r)
+        /// <summary>
+        /// One-point crossover. Does not modify the parents.
+        /// </summary>
+        /// <param name="par1">First parent.</param>
+        /// <param name="par2">Second parent.</param>
+        /// <param name="off1">First offspring.</param>
+        /// <param name="off2">Second offspring.</param>
+        /// <param name="r">Random number generator to be used.</param>
+        private void breedParents(Individual par1, Individual par2, out Individual off1, out Individual off2, Random r)
         {
             int crossOver = r.Next(rounds - 1) + 1;
-            son = new Individual(rounds);
-            daughter = new Individual(rounds);
+            off1 = new Individual(rounds);
+            off2 = new Individual(rounds);
             for (int i = 0; i < crossOver; i++)
             {
-                son.genome[i] = mother.genome[i];
-                daughter.genome[i] = father.genome[i];
+                off1.genome[i] = par1.genome[i];
+                off2.genome[i] = par2.genome[i];
             }
             for (int i = crossOver; i < rounds; i++)
             {
-                son.genome[i] = father.genome[i];
-                daughter.genome[i] = mother.genome[i];
+                off1.genome[i] = par2.genome[i];
+                off2.genome[i] = par1.genome[i];
             }
         }
 
@@ -200,6 +226,10 @@ namespace Crypto
             ind.genome[r.Next(ind.genome.Length)] = Primitives.GetRandomExtender(r);
         }
 
+        /// <summary>
+        /// Gives info about the best (generator&CA) sequence found during the last run of the algorithm.
+        /// </summary>
+        /// <returns>Info as a string.</returns>
         internal string getInfoAboutWinner()
         {
             if (savedBest == null)

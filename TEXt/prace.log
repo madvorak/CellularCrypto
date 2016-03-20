@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  18 MAR 2016 21:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  18 MAR 2016 21:56
 entering extended mode
 **./prace.tex
 (prace.tex
@@ -535,13 +535,13 @@ e-ven-sh-tei-novu vzdá-|
  []
 
 [6]
-Overfull \hbox (17.28474pt too wide) in paragraph at lines 44--45
+Overfull \hbox (17.28474pt too wide) in paragraph at lines 46--47
 \IL2/cmr/m/n/12 nou vzdá-le-nost vý-stupù pøíslu-¹e-jící dvìma rùz-ným ná-hodnì
  zvo-le-ným vstupùm.|
  []
 
 
-Overfull \hbox (1.70265pt too wide) in paragraph at lines 46--47
+Overfull \hbox (1.70265pt too wide) in paragraph at lines 48--49
 []\IL2/cmr/m/n/12 TestLargestBallApprox(IKeyExtender al-go-ri-thm) : Tes-tuje t
 o samé, ale pou-|
  []
@@ -567,24 +567,25 @@ Kapitola 3.
 
  (literatura.tex
 No file prace.bbl.
-) (prace.lof)
+) [10
+
+
+] (prace.lof)
 \tf@lof=\write6
 \openout6 = `prace.lof'.
 
- [10
-
-
+ [11
 
 
 ] (prace.lot)
 \tf@lot=\write7
 \openout7 = `prace.lot'.
 
- [11
-
-] [12
+ [12
 
 ] [13
+
+] [14
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
@@ -598,13 +599,13 @@ Package rerunfilecheck Info: File `prace.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
  ) 
 Here is how much of TeX's memory you used:
- 11586 strings out of 493634
- 157947 string characters out of 3141311
+ 11587 strings out of 493634
+ 157954 string characters out of 3141311
  244985 words of memory out of 3000000
  14734 multiletter control sequences out of 15000+200000
  22759 words of font info for 72 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 29i,7n,35p,740b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,7n,35p,740b,390s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
@@ -616,9 +617,9 @@ pData/Roaming/MiKTeX/2.9/fonts/type1/public/cs/csbx12.pfb><C:/Users/Martin/AppD
 ata/Roaming/MiKTeX/2.9/fonts/type1/public/cs/csr12.pfb><C:/Users/Martin/AppData
 /Roaming/MiKTeX/2.9/fonts/type1/public/cs/csr17.pfb><C:/Users/Martin/AppData/Ro
 aming/MiKTeX/2.9/fonts/type1/public/cs/cssl12.pfb>
-Output written on prace.pdf (17 pages, 291505 bytes).
+Output written on prace.pdf (18 pages, 293184 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
  158 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,8 +1,10 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 
 namespace Crypto
 {
+    /// <summary>
+    /// Stupid key extender which only copies the input (repeatedly).
+    /// </summary>
     class KeyExtenderCopy : KeyExtenderAbstractD
     {
         public override BitArray DoubleKey(BitArray shortKey)
