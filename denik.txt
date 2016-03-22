@@ -29,3 +29,5 @@ Mukherjee, Ganguly, Chaudhuri: Cellular automata based authentication
 5th International Conference on Cellular automata for Research and Industry, 2002, pg 259~269
 
 http://math.stackexchange.com/questions/375505/what-is-the-average-levenshtein-distance-between-two-random-binary-strings-of-le
+
+radar chart, star chart

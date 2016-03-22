@@ -128,7 +128,8 @@
             "Random",
             "Symmetric",
             "Glider",
-            "Glider Gun"});
+            "Glider Gun",
+            "Pentadecathlon"});
             this.comboBox1.Location = new System.Drawing.Point(574, 14);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(111, 21);

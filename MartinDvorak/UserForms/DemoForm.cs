@@ -154,6 +154,7 @@ namespace UserForms
                 {
                     initial[i] = new BitArray(columnCount, false);
                 }
+
                 if (comboBox1.SelectedItem == comboBox1.Items[2])
                 {
                     //symmetric
@@ -162,6 +163,7 @@ namespace UserForms
                         initial[linesCount / 2][i] = true;
                     }
                 }
+
                 if (comboBox1.SelectedItem == comboBox1.Items[3])
                 {
                     //glider
@@ -171,6 +173,7 @@ namespace UserForms
                     initial[3][2] = true;
                     initial[3][1] = true;
                 }
+
                 if (comboBox1.SelectedItem == comboBox1.Items[4])
                 {
                     //glider gun
@@ -185,9 +188,25 @@ namespace UserForms
                     initial[2][23] = initial[6][23] = true;
                     initial[1][25] = initial[2][25] = initial[6][25] = initial[7][25] = true;
                 }
+
+                if (comboBox1.SelectedItem == comboBox1.Items[5])
+                {
+                    //pentadecathlon
+                    for (int i = columnCount / 2 - 4; i < columnCount / 2 + 4; i++)
+                    {
+                        for (int j = linesCount / 2 - 1; j <= linesCount / 2 + 1; j++)
+                        {
+                            initial[j][i] = true;
+                        }
+                    }
+                    initial[linesCount / 2][columnCount / 2 - 3] = false;
+                    initial[linesCount / 2][columnCount / 2 + 2] = false;
+                }
+
                 gol = new GameOfLifeInteractive(initial);
             }
             visited = new HashSet<int>();
+            label1.Visible = false;
             redrawState();
         }
     }

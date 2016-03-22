@@ -11,12 +11,12 @@ class Program
         rnd = new Random();
         FunctionTestTest.RunTest();
         GeneticTest.RunTest();
-        //Crypto.SearchSGA.SearchForGoodExtenders();
+        Crypto.SearchSGA.SearchForGoodExtenders();
+        Adapter.DisplayForm();
         AutomataTest.RunTest();
+        TotalisticTernaryTest.RunTest();
         UtilityTest.RunTest();
         RandomTestTest.RunTest();
-        Adapter.DisplayForm();
-        TotalisticTernaryTest.RunTest();
         BinaryRangeNTest.RunTest();
         Implementation2Test.RunTest();
         ElementaryTimeMeasure.RunTest();

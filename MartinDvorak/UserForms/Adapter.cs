@@ -14,7 +14,7 @@ namespace UserForms
             }
             else
             {
-                Console.WriteLine("OK, continuing normally");
+                Console.WriteLine("OK, continue normally...\n");
             }
         }
     }

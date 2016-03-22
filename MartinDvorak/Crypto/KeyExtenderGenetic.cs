@@ -171,6 +171,7 @@ namespace Crypto
                     automata.Add(new BinaryRangeCyclicAutomaton(2, Utilities.RandomBoolArr(32), 1));
                 }
                 automata.Add(new GameOfLife(1, 1));
+                automata.Add(new GameOfLife(1, 1));
 
                 extenders = new List<KeyExtenderAbstractD>();
                 foreach (IBinaryCA aut in automata)
