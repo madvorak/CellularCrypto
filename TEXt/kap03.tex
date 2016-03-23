@@ -2,6 +2,34 @@
 
 \chapter{Zpùsoby protahování klíèù}
 
-Bylo vytvoøeno nìokolik rùznıch algoritmù na protahování klíèù vyuívajících celulární automaty. Je moné si zvláš zvolit algoritmus (pøípadnì nìkteré z nich lze parametrizovat) a zvláš do nìj vloit libovolnı binární celulární automat.
+Bylo vytvoøeno nìokolik rùznıch algoritmù na protahování klíèù vyuívajících celulární automaty. Je moné si zvláš zvolit algoritmus (pøípadnì nìkteré z nich lze parametrizovat) a zvláš do nìj vloit libovolnı binární celulární automat. Nìkteré z agoritmù pøímo generují dlouhı klíè zadané délky. Jiné vdy prodlouí klíè na dvojnásobek a obecné nataení realizují iterací tohoto postupu.
 
 Kromì opravdovıch algoritmù byly vytvoøeny ještì dva falešné algoritmy pro úèely testování. Jeden z nich jen kopíruje kratší klíè dokola. Druhı generuje pseudonáhodnout posloupnost bez ohledu na vstup.
+
+\section{linear}
+
+Nejjednodušší zpùsob, jak natáhnout klíè na dvojnásobek. Tento algoritmus pouije vstup jako poèáteèní konfiguraci celulárního automatu. Pak udìlá krok a uloí jeho stav do první poloviny dlouhého klíèe (postupnì ze všech bunìk). Pak udìlá druhı krok a naète druhou polovinu dlouhého klíèe.
+
+\section{quadratic}
+
+Tento algoritmus natahuje klíè na dvojnásobek zpùsobem, kterı je mnohem lepší, ale mnohem pomalejší. Nejprve vytvoøí celulární automat, kterı je dva a pùl krát širší, ne délka krátkého klíèe. Ten krátkı klíè uloí do jeho prostøedních bunìk. Tedy klíè délky $n$ se uloí do stavu automatu s $2,5n$ buòkami a to od $0,75n$ po $1,75n$. Pak automat udìlá $2n$ kromù. Vıstup se ète z prostøední buòky (1 bit po kadém kroku automatu). Je to zpùsob, o kterém Stephen Wolfram ukázal, e generuje pseudonáhodné posloupnosti, které pøi volbì správného celulárního automatu splòují všechna mìøítka náhodnosti. Jeho návrh pouíval nekoneènou plochu, ale protoe nám staèí nataení na $2n$, tak plocha o šíøce $2,5n$ funguje stejnì, jako kdyby se automat mohl rozpínat do nekoneèna.
+
+\section{interlaced}
+
+Tento algoritmus se tváøí jako kompromis, ale blíí se spíše první (lineární variantì). Algoritmus je parametrizován poètem øad $p$, ze kterıch má dlouhı klíè generovat, a údajem $q$, kolik krokù navíc má automat vdy provést mezi generováním vyuívanıch stavù. Pokud se spustí s parametry $p=2$, $q=0$, potom generuje totonı klíè jako lineární algoritmus. Jeho èasová sloitost je lineární ve velikosti vstupu a ještì lineární v souèinu $p(q+1)$.
+
+\begin{tikzpicture}[label distance=.15cm]
+  \tkzKiviatDiagram[radial=5]{Poissons,Legumes,Viande,Lait,Pain}
+   \tkzKiviatLine[thick,
+                 color=red,
+                 mark=ball,
+                 ball color=red,
+                 mark size=4pt,opacity=.2, 
+                 fill=red!20](5,9,6,8,4)
+  \tkzKiviatLine[thick,
+                 color=blue,
+                 mark=ball,
+                 mark size=4pt,
+                 fill=blue!20,
+                 opacity=.5](4,6,6,4,3)   
+ \end{tikzpicture}

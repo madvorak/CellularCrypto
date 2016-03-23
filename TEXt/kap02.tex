@@ -48,6 +48,18 @@ Tøída Crypto.FunctionTesting obsahuje následující metody. Podle nastavení v kons
 \item TestLargestBallApprox(IKeyExtender algorithm) : Testuje to samé, ale používá delší vstupy, které už nezvládá vyzkoušet všechny, takže je sampluje náhodnì.
 \end{itemize}
 
-\section{asdf}
+\section{Grafické znázornìní}
 
-bla bla
+Výsledky jednotlivých algoritmù ve výše uvedených testech budeme znázoròovat na diagramech jako je tento:
+
+\begin{tikzpicture}[label distance=.15cm]
+  \tkzKiviatDiagram[radial=6]{Entropy, Compression, BitChange, AverageDistance, LargestBallExactly, LargestBallAprox}
+   \tkzKiviatLine[thick,
+                 color=red,
+                 mark=ball,
+                 ball color=red,
+                 mark size=4pt,opacity=.2, 
+                 fill=red!20](0.9,0.8,0.95,0.7,0.62,0.6)
+ \end{tikzpicture}
+
+Pro diagramy jsou hodnoty pøeškálovány. S výjimkou testù nejvìtších koulí, kde neznáme optimální hodnotu, je škálování takové, aby optimální hodnota byla 1. Tedy napøíklad když TestBitChange vrátí hodnotu $x$, pak je do diagramu zobrazeno $\min\{2x, 2(1-x)\}$, aby optimum byla hodnota 0,5 a odchylky na obì strany \uv{stejnì vážné}.

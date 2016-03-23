@@ -6,6 +6,10 @@ using Cellular;
 
 namespace Crypto
 {
+    /// <summary>
+    /// Algorithms which runs a genetic algorithm to find the best sequence of extenders for each key.
+    /// Generating the long key may take a very long time.
+    /// </summary>
     class KeyExtenderGenetic : KeyExtenderAbstractN
     {
         private class Individual

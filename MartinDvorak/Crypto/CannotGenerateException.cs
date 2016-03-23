@@ -2,6 +2,9 @@
 
 namespace Crypto
 {
+    /// <summary>
+    /// Custom exception that any key extender can throw.
+    /// </summary>
     class CannotGenerateException : InvalidOperationException
     {
         public CannotGenerateException() { }

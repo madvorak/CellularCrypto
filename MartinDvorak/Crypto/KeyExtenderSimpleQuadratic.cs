@@ -1,9 +1,12 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Cellular;
 
 namespace Crypto
 {
+    /// <summary>
+    /// Simple algorithm, which calls one step of the underlying CA for every bit to be generated.
+    /// Generating the long key may take a very long time.
+    /// </summary>
     class KeyExtenderSimpleQuadratic : KeyExtenderAbstractD
     {
         private readonly IBinaryCA ca;

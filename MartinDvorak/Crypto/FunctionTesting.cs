@@ -83,6 +83,12 @@ namespace Crypto
             return (double)d[upper, upper] / upper;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="algorithm">The (key stretching) algorithm to test.</param>
+        /// <param name="ratio"></param>
+        /// <returns>Value between 0 and 1. Both extrema are very bad, good result is 1/2.</returns>
         public double TestBitChange(IKeyExtender algorithm, int ratio)
         {
             const int length = 100;
@@ -115,6 +121,12 @@ namespace Crypto
             return sum / (length * repetitions);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="algorithm">The (key stretching) algorithm to test.</param>
+        /// <param name="ratio"></param>
+        /// <returns>Value between 0 and 1. Both extrema are very bad, good result is 1/2.</returns>
         public double TestAverageDistance(IKeyExtender algorithm, int ratio)
         {
             const int length = 150;
@@ -233,6 +245,12 @@ namespace Crypto
             return largestRadius;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="algorithm">The (key stretching) algorithm to test.</param>
+        /// <param name="ratio"></param>
+        /// <returns>Value between 0 (worst) and 1 (good).</returns>
         public double TestRandomSequences(IKeyExtender algorithm, int ratio)
         {
             const int length = 500;
@@ -247,8 +265,14 @@ namespace Crypto
                 catch (CannotGenerateException) { }
             }
             return sum / count;
-        } 
+        }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="algorithm">The (key stretching) algorithm to test.</param>
+        /// <param name="ratio"></param>
+        /// <returns>Value between 0 (works) and 1 (good).</returns>
         public double TestSystematicSequences(IKeyExtender algorithm, int ratio)
         {
             const int length = 10;

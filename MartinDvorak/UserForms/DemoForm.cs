@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using Cellular;
 
 namespace UserForms
 {
+    /// <summary>
+    /// Interactive visual demo of the Game of Life on a rectangular playground.
+    /// This is not a platform for programming or serious experiments.
+    /// </summary>
     public partial class DemoForm : Form
     {
         private const int columnCount = 52;

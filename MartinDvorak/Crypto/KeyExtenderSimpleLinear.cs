@@ -1,9 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Cellular;
 
 namespace Crypto
 {
+    /// <summary>
+    /// Simple algorithm, which uses only two steps of the underlying CA.
+    /// </summary>
     class KeyExtenderSimpleLinear : KeyExtenderAbstractD
     {
         private readonly IBinaryCA ca;

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Cellular;
 
 namespace Crypto
@@ -67,8 +66,7 @@ namespace Crypto
                         innerCA.Step();
                         if (hash == innerCA.GetHashCode())
                         {
-                            // the state of the CA no longer changes
-                            throw new CannotGenerateException();
+                            throw new CannotGenerateException("The state of the CA no longer changes.");
                         }
                     }
                     position = 1;

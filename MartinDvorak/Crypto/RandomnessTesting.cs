@@ -5,6 +5,9 @@ using System.IO.Compression;
 
 namespace Crypto
 {
+    /// <summary>
+    /// Static class that contains some tests of randomness for binary sequences.
+    /// </summary>
     static class RandomnessTesting
     {
         public static double EntropyTest(BitArray b, byte lengthLimit)

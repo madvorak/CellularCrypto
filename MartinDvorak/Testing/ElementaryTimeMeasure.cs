@@ -4,6 +4,9 @@ using Cellular;
 
 namespace Testing
 {
+    /// <summary>
+    /// Simple test of how different classes are (in)efficient for implementing elementary CA rules. 
+    /// </summary>
     static class ElementaryTimeMeasure
     {
         private const int autSize = 1005;
