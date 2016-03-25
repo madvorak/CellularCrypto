@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace Cellular
+﻿namespace Cellular
 {
     /// <summary>
-    /// The top class of the hierarchy. Every constructor should follow this logical order when considering its parametres:
+    /// The top class of the CA hierarchy. Every constructor should follow this logical order when considering its parametres:
     /// specification of the type (usually not needed), rule, size, initial state / rng.
     /// </summary>
     abstract class CellularAutomaton

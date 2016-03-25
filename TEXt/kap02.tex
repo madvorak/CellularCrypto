@@ -38,7 +38,7 @@ Budeme zde zkoumat vlastnosti algoritmù jako vlastnosti celého zobrazení z krátk
 
 Hammingova vzdálenost je triviálnì horním odhadem na Levenshteinovu vzdálenost. V pøípadì náhodných binárních øetìzcù je jejich hodnota èasto stejná, ale nìkdy mùžu být Levenshtein výraznì nižší. Napøíklad když zrotujeme øetìzec o jednu pozici, tak Levenshtein dává vzdálenost 2, zatímco Hamming mùže dát hodnì vysoké èíslo. Významná pro nás bude rychlost výpoètu. Hammingovu vzdálenost lze triviálnì urèit v lineárním èase, ale výpoèet Levenshteinovy vzdálenost zabere èas kvadratický. Že to rychleji nejde, se nelze divit, protože Levenshtein vlastnì spouští prohledávání prostoru editací. Díky dynamickému programování to lze provést alespoò v tom kvadratickém èase.
 
-Program ještì obì vzdálenosti pøeškáluje, aby výsledky mìly hodnotu v rozmezí 0 (shodné øetìzce) až 1 (øetìzec samých nul porovnán se øetìzcem samých jednièek). Støední hodnota pro dvojici náhodných binárních posloupností je u Hamminga triviálnì 0,5. Nesrovnatelnì tìžší je odhadnout støední hodnotu Levenshteinovy vzdálenosti. Posloupnost støedních hodnot Levenshteina se vzrùstající délkou vstupu roste jako subaditivní posloupnost. Pøeškálovaná hodnota proto mùže pro delší vstupy pouze klesat. Limitní hodnotu se zdá být pøíliš tìžké odhadnout, ale orientaèní experimenty i diskuze na internetu naznaèují, že mùžeme poèítat s hodnotou  kolem 0,29.
+Program ještì obì vzdálenosti pøeškáluje, aby výsledky mìly hodnotu v rozmezí 0 (shodné øetìzce) až 1 (øetìzec samých nul porovnán se øetìzcem samých jednièek). Støední hodnota pro dvojici náhodných binárních posloupností je u Hamminga triviálnì 0,5. Nesrovnatelnì tìžší je odhadnout støední hodnotu Levenshteinovy vzdálenosti. Posloupnost støedních hodnot Levenshteina se vzrùstající délkou vstupu roste jako subaditivní posloupnost. Relativní hodnota proto mùže pro delší vstupy pouze klesat. Limitní hodnotu se zdá být pøíliš tìžké odhadnout, ale orientaèní experimenty i diskuze na internetu naznaèují, že mùžeme poèítat s hodnotou  kolem 0,29.
 
 Tøída Crypto.FunctionTesting obsahuje následující metody. Podle nastavení v konstruktoru mohou všechny testy používat buï Hammingovu, nebo Levensteinovu vzdálenost. Dále uvádìno podle Hamminga.
 \begin{itemize}
@@ -53,13 +53,8 @@ Tøída Crypto.FunctionTesting obsahuje následující metody. Podle nastavení v kons
 Výsledky jednotlivých algoritmù ve výše uvedených testech budeme znázoròovat na diagramech jako je tento:
 
 \begin{tikzpicture}[label distance=.15cm]
-  \tkzKiviatDiagram[radial=6]{Entropy, Compression, BitChange, AverageDistance, LargestBallExactly, LargestBallAprox}
-   \tkzKiviatLine[thick,
-                 color=red,
-                 mark=ball,
-                 ball color=red,
-                 mark size=4pt,opacity=.2, 
-                 fill=red!20](0.9,0.8,0.95,0.7,0.62,0.6)
+  \tkzKiviatDiagram[radial=6, lattice=5, gap=1, step=5]{Entropy,Compression,BitChange,AverageDistance,BallExactly,BallApprox}
+   \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20](0.9, 0.8, 0.95, 0.7, 0.62, 0.6)
  \end{tikzpicture}
 
 Pro diagramy jsou hodnoty pøeškálovány. S výjimkou testù nejvìtších koulí, kde neznáme optimální hodnotu, je škálování takové, aby optimální hodnota byla 1. Tedy napøíklad když TestBitChange vrátí hodnotu $x$, pak je do diagramu zobrazeno $\min\{2x, 2(1-x)\}$, aby optimum byla hodnota 0,5 a odchylky na obì strany \uv{stejnì vážné}.

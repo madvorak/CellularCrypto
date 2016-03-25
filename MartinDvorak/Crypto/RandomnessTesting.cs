@@ -10,6 +10,12 @@ namespace Crypto
     /// </summary>
     static class RandomnessTesting
     {
+        /// <summary>
+        /// Calculates the Shannon entropy of the BitArray.
+        /// </summary>
+        /// <param name="b">Vector to rate.</param>
+        /// <param name="lengthLimit">Blocks of size from 1 to <c>lengthLimit</c> will be counted.</param>
+        /// <returns>Number between 0 and 1. Only values very close to 1 are good.</returns>
         public static double EntropyTest(BitArray b, byte lengthLimit)
         {
             double score = 0;
@@ -55,6 +61,11 @@ namespace Crypto
             return score / maxScore;   //weighted average of entropies for block from 1 to lengthLimit; actual vs maximal
         }
 
+        /// <summary>
+        /// Tests how much the BitArray can be compressed using gzip.
+        /// </summary>
+        /// <param name="b">Vector to rate.</param>
+        /// <returns>Ratio between new and old size.</returns>
         public static double CompressionTest(BitArray b)
         {
             int length = (int)Math.Ceiling((double)b.Length / 8);

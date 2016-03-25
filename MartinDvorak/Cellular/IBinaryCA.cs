@@ -3,7 +3,7 @@
 namespace Cellular
 {
     /// <summary>
-    /// Common interface for all binary cellular automata.
+    /// Common interface for all binary cellular automata. Most work with CA is done through this interface.
     /// Only subclasses of <c>CellularAutomaton</c> are supposed to implement this interface.
     /// </summary>
     interface IBinaryCA
@@ -36,7 +36,7 @@ namespace Cellular
         bool GetValueAt(int index);
 
         /// <summary>
-        /// Performs one step of the underlying CA. Always calls <code>CellularAutomaton.Step();</code>.
+        /// Performs one step of the cellular automaton. Always calls <code>CellularAutomaton.Step();</code>.
         /// </summary>
         void Step();
 
@@ -44,14 +44,14 @@ namespace Cellular
         /// Clones the underlying CA including its state at the moment.
         /// </summary>
         /// <returns>Identical copy. The result is the same as when calling <code>CellularAutomaton.Clone();</code>,
-        /// only the type is <c>IBinaryCA</c> (which is useful).</returns>
+        /// only its type is <c>IBinaryCA</c> (which is useful).</returns>
         IBinaryCA CloneEverything();
 
         /// <summary>
         /// Creates a new binary CA with the same type and the same rules.
         /// </summary>
         /// <param name="newInstanceState">Initial state of the new (returned) instance.</param>
-        /// <returns>New binary CA with copied behaviour, but newly given initial state.</returns>
+        /// <returns>New binary CA with identical behaviour, but newly given initial state.</returns>
         IBinaryCA CloneTemplate(BitArray newInstanceState);
     }
 }

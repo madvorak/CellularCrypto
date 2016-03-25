@@ -65,6 +65,7 @@
     <Compile Include="Crypto\CannotGenerateException.cs" />
     <Compile Include="Crypto\Export.cs" />
     <Compile Include="Crypto\FunctionTesting.cs" />
+    <Compile Include="Crypto\FunctionTestsForThesis.cs" />
     <Compile Include="Crypto\IKeyExtender.cs" />
     <Compile Include="Crypto\KeyExtenderAbstractD.cs" />
     <Compile Include="Crypto\KeyExtenderAbstractN.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Crypto\SearchSGA.cs" />
     <Compile Include="Testing\FunctionTestTest.cs" />
     <Compile Include="Testing\GeneticTest.cs" />
+    <Compile Include="Testing\MainTests.cs" />
     <Compile Include="UserForms\Adapter.cs" />
     <Compile Include="Cellular\Automaton1D.cs" />
     <Compile Include="Cellular\Automaton2D.cs" />

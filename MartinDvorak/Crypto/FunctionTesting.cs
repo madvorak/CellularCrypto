@@ -7,6 +7,13 @@ namespace Crypto
 {
     class FunctionTesting
     {
+        /// <summary>
+        /// "Pointer" to a distance function which can be used to determine
+        /// how much different two BitArrays of the same length are.
+        /// </summary>
+        /// <param name="u">First vector.</param>
+        /// <param name="v">Second vector.</param>
+        /// <returns>Number between 0 and 1.</returns>
         public delegate double DistanceDelegate(BitArray u, BitArray v);
         private DistanceDelegate distanceFunction;
 
@@ -22,6 +29,12 @@ namespace Crypto
             }
         }
 
+        /// <summary>
+        /// Calculates the Hamming distance of two BitArrays of the same length.
+        /// </summary>
+        /// <param name="u">First vector.</param>
+        /// <param name="v">Second vector.</param>
+        /// <returns>Number between 0 and 1.</returns>
         public static double HammingDistance(BitArray u, BitArray v)
         {
             if (u.Length != v.Length)
@@ -40,12 +53,14 @@ namespace Crypto
         }
 
         /// <summary>
-        /// Sources: https://en.wikipedia.org/wiki/Levenshtein_distance ,
+        /// Calculates the Levenshtein distance of two BitArrays of the same length.
+        /// Sources: 
+        /// https://en.wikipedia.org/wiki/Levenshtein_distance ,
         /// https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#C.23
         /// </summary>
-        /// <param name="u"></param>
-        /// <param name="v"></param>
-        /// <returns></returns>
+        /// <param name="u">First vector.</param>
+        /// <param name="v">Second vector.</param>
+        /// <returns>Number between 0 and 1.</returns>
         public static double LevensteinDistance(BitArray u, BitArray v)
         {
             if (u.Length != v.Length)
@@ -84,7 +99,7 @@ namespace Crypto
         }
 
         /// <summary>
-        /// 
+        /// Tests how much the output changes (on average) when the input changes in a single bit.
         /// </summary>
         /// <param name="algorithm">The (key stretching) algorithm to test.</param>
         /// <param name="ratio"></param>
@@ -122,7 +137,7 @@ namespace Crypto
         }
 
         /// <summary>
-        /// 
+        /// Tests average distance between two random results.
         /// </summary>
         /// <param name="algorithm">The (key stretching) algorithm to test.</param>
         /// <param name="ratio"></param>
@@ -245,13 +260,9 @@ namespace Crypto
             return largestRadius;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="algorithm">The (key stretching) algorithm to test.</param>
-        /// <param name="ratio"></param>
-        /// <returns>Value between 0 (worst) and 1 (good).</returns>
-        public double TestRandomSequences(IKeyExtender algorithm, int ratio)
+        private delegate double RandomnessDelegate(BitArray b); 
+
+        private double rateRandomSequences(IKeyExtender algorithm, int ratio, RandomnessDelegate method)
         {
             const int length = 500;
             const int count = 5;
@@ -260,9 +271,47 @@ namespace Crypto
             {
                 try
                 {
-                    sum += RandomnessTesting.RateSequence(algorithm.ExtendKey(Utilities.RandomBitArr(length), length * ratio));
+                    sum += method.Invoke(algorithm.ExtendKey(Utilities.RandomBitArr(length), length * ratio));
                 }
                 catch (CannotGenerateException) { }
+            }
+            return sum / count;
+        }
+
+        /// <summary>
+        /// Tests how much a random output resembles a pseudo-random binary sequence.
+        /// </summary>
+        /// <param name="algorithm">The (key stretching) algorithm to test.</param>
+        /// <param name="ratio"></param>
+        /// <returns>Value between 0 (worst) and 1 (good).</returns>
+        public double TestRandomSequences(IKeyExtender algorithm, int ratio)
+        {
+            return rateRandomSequences(algorithm, ratio, RandomnessTesting.RateSequence);
+        }
+
+        public double TestRandomEntropy(IKeyExtender algorithm, int ratio)
+        {
+            return rateRandomSequences(algorithm, ratio, b => RandomnessTesting.EntropyTest(b, 16));
+        }
+
+        public double TestRandomCompression(IKeyExtender algorithm, int ratio)
+        {
+            return rateRandomSequences(algorithm, ratio, RandomnessTesting.CompressionTest);
+        }
+
+        private double rateSystematicSequences(IKeyExtender algorithm, int ratio, RandomnessDelegate method)
+        {
+            const int length = 10;
+            double sum = 0;
+            int count = 0;
+            foreach (BitArray b in new Utilities.AllBinarySequences(length))
+            {
+                try
+                {
+                    sum += method.Invoke(algorithm.ExtendKey(b, length * ratio));
+                }
+                catch (CannotGenerateException) { }
+                count++;
             }
             return sum / count;
         }
@@ -272,22 +321,20 @@ namespace Crypto
         /// </summary>
         /// <param name="algorithm">The (key stretching) algorithm to test.</param>
         /// <param name="ratio"></param>
-        /// <returns>Value between 0 (works) and 1 (good).</returns>
+        /// <returns>Value between 0 (worst) and 1 (good).</returns>
         public double TestSystematicSequences(IKeyExtender algorithm, int ratio)
         {
-            const int length = 10;
-            double sum = 0;
-            int count = 0;
-            foreach (BitArray b in new Utilities.AllBinarySequences(length))
-            {
-                try
-                {
-                    sum += RandomnessTesting.RateSequence(algorithm.ExtendKey(b, length * ratio));
-                }
-                catch (CannotGenerateException) { }
-                count++;
-            }
-            return sum / count;
+            return rateSystematicSequences(algorithm, ratio, RandomnessTesting.RateSequence);
+        }
+
+        public double TestSystematicEntropy(IKeyExtender algorithm, int ratio)
+        {
+            return rateSystematicSequences(algorithm, ratio, b => RandomnessTesting.EntropyTest(b, 10));
+        }
+
+        public double TestSystematicCompression(IKeyExtender algorithm, int ratio)
+        {
+            return rateSystematicSequences(algorithm, ratio, RandomnessTesting.CompressionTest);
         }
     }
 }

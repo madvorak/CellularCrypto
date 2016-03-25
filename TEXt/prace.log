@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  23 MAR 2016 18:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  25 MAR 2016 20:39
 entering extended mode
 **./prace.tex
 (prace.tex
@@ -799,7 +799,7 @@ LaTeX Info: Redefining \nameref on input line 126.
  (titulka.tex
 Package hyperref Info: Option `pageanchor' set `false' on input line 6.
 
-<logo.pdf, id=90, 371.3875pt x 366.36874pt>
+<logo.pdf, id=94, 371.3875pt x 366.36874pt>
 File: logo.pdf Graphic file (type pdf)
  <use logo.pdf>
 Package pdftex.def Info: logo.pdf used on input line 24.
@@ -878,13 +878,13 @@ Overfull \hbox (27.52419pt too wide) in paragraph at lines 56--56
  []
 
 
-Overfull \hbox (41.23239pt too wide) in paragraph at lines 56--56
- [][][][]\IL2/cmr/m/n/12 LargestBallExactly |
+Overfull \hbox (3.14528pt too wide) in paragraph at lines 56--56
+ [][][][]\IL2/cmr/m/n/12 BallExactly |
  []
 
 
-Overfull \hbox (33.56024pt too wide) in paragraph at lines 56--56
- [][][][]\IL2/cmr/m/n/12 LargestBallAprox |
+Overfull \hbox (2.00084pt too wide) in paragraph at lines 56--56
+ [][][][]\IL2/cmr/m/n/12 BallApprox |
  []
 
 [7]) [8]
@@ -892,14 +892,74 @@ Overfull \hbox (33.56024pt too wide) in paragraph at lines 56--56
 
  (kap03.tex
 Kapitola 3.
-) [9
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 12--12
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 12--12
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 12--12
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 19--19
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 19--19
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 19--19
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+[9
 
 
 
-] [10]
+]
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 37--37
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 37--37
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 37--37
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+[10] [11]
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 52--52
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 52--52
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 52--52
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+) [12]
 \openout2 = `zaver.aux'.
 
- (zaver.tex) [11
+ (zaver.tex) [13
 
 
 
@@ -908,25 +968,25 @@ Kapitola 3.
 
  (literatura.tex
 No file prace.bbl.
-) [12
+) [14
 
 
 ] (prace.lof)
 \tf@lof=\write7
 \openout7 = `prace.lof'.
 
- [13
+ [15
 
 
 ] (prace.lot)
 \tf@lot=\write8
 \openout8 = `prace.lot'.
 
- [14
+ [16
 
-] [15
+] [17
 
-] [16
+] [18
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
@@ -935,22 +995,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
 (uvod.aux) (kap01.aux) (kap02.aux) (kap03.aux) (zaver.aux) (literatura.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 168.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 168.
-
-
-Package rerunfilecheck Warning: File `prace.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `prace.out':
-(rerunfilecheck)             Before: 7BA568B1A270F7A0FB91FD60963EFBBD;3339
-(rerunfilecheck)             After:  70D3E92EC4EDF2F8203E0B2DFF472091;3445.
+Package rerunfilecheck Info: File `prace.out' has not changed.
+(rerunfilecheck)             Checksum: 70D3E92EC4EDF2F8203E0B2DFF472091;3445.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 168.
  ) 
 Here is how much of TeX's memory you used:
- 22251 strings out of 493634
- 395021 string characters out of 3141311
- 452016 words of memory out of 3000000
- 25166 multiletter control sequences out of 15000+200000
+ 22257 strings out of 493634
+ 395093 string characters out of 3141311
+ 451525 words of memory out of 3000000
+ 25170 multiletter control sequences out of 15000+200000
  22759 words of font info for 72 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,7n,86p,812b,810s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -965,9 +1018,9 @@ pData/Roaming/MiKTeX/2.9/fonts/type1/public/cs/csbx12.pfb><C:/Users/Martin/AppD
 ata/Roaming/MiKTeX/2.9/fonts/type1/public/cs/csr12.pfb><C:/Users/Martin/AppData
 /Roaming/MiKTeX/2.9/fonts/type1/public/cs/csr17.pfb><C:/Users/Martin/AppData/Ro
 aming/MiKTeX/2.9/fonts/type1/public/cs/cssl12.pfb>
-Output written on prace.pdf (20 pages, 307851 bytes).
+Output written on prace.pdf (22 pages, 313403 bytes).
 PDF statistics:
- 262 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
- 198 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 272 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 500000)
+ 200 words of extra memory for PDF output out of 10000 (max. 10000000)
 

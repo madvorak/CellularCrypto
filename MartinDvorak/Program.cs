@@ -13,10 +13,11 @@ class Program
     static void Main(string[] args)
     {
         rnd = new Random();
-        FunctionTestTest.RunTest();
+        MainTests.RunTest();
         GeneticTest.RunTest();
         Adapter.DisplayForm();
         //Crypto.SearchSGA.SearchForGoodExtenders();
+        FunctionTestTest.RunTest();
         AutomataTest.RunTest();
         TotalisticTernaryTest.RunTest();
         UtilityTest.RunTest();

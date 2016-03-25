@@ -4,11 +4,39 @@
 
 Bylo vytvoøeno nìokolik rùznıch algoritmù na protahování klíèù vyuívajících celulární automaty. Je moné si zvláš zvolit algoritmus (pøípadnì nìkteré z nich lze parametrizovat) a zvláš do nìj vloit libovolnı binární celulární automat. Nìkteré z agoritmù pøímo generují dlouhı klíè zadané délky. Jiné vdy prodlouí klíè na dvojnásobek a obecné nataení realizují iterací tohoto postupu.
 
-Kromì opravdovıch algoritmù byly vytvoøeny ještì dva falešné algoritmy pro úèely testování. Jeden z nich jen kopíruje kratší klíè dokola. Druhı generuje pseudonáhodnout posloupnost bez ohledu na vstup.
+Kromì opravdovıch algoritmù byly vytvoøeny ještì dva falešné algoritmy pro úèely testování. Jeden z nich jen kopíruje kratší klíè dokola. Druhı generuje pseudonáhodnout posloupnost bez ohledu na vstup, co je podvod.
+
+Takto ošklivì vypadá vısledek pro kopírování:
+
+\begin{tikzpicture}[label distance=.15cm]
+  \tkzKiviatDiagram[radial=5, lattice=5, gap=1, step=5]{Entropy, Compression, AveDistance, BitChange, LargestBall}
+   \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20](0.659, 0.022, 0.997, 0.020, 0.125)
+\end{tikzpicture}
+
+Takto krásnì vypadá vısledek získanı podvodem:
+
+\begin{tikzpicture}[label distance=.15cm]
+  \tkzKiviatDiagram[radial=5, lattice=5, gap=1, step=5]{Entropy, Compression, AveDistance, BitChange, LargestBall}
+   \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20](0.984, 0.993, 1.000, 1.000, 0.775)
+\end{tikzpicture}
 
 \section{linear}
 
 Nejjednodušší zpùsob, jak natáhnout klíè na dvojnásobek. Tento algoritmus pouije vstup jako poèáteèní konfiguraci celulárního automatu. Pak udìlá krok a uloí jeho stav do první poloviny dlouhého klíèe (postupnì ze všech bunìk). Pak udìlá druhı krok a naète druhou polovinu dlouhého klíèe.
+
+Takto vypadá vısledek pro lineární generátor s vyuitím elementárního automatu èíslo 90:
+
+%\begin{tikzpicture}[label distance=.15cm]
+%  \tkzKiviatDiagram[radial=6, lattice=5, gap=1, step=5]{Entropy, Compression, BitChange, AverageDistance, LargestBallExactly, LargestBallAprox}
+%   \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20](0.9, 0.8, 0.95, 0.7, 0.62, 0.6)
+%\end{tikzpicture}
+
+Takto vypadá vısledek pro lineární generátor s vyuitím elementárního automatu èíslo 30:
+
+\begin{tikzpicture}[label distance=.15cm]
+  \tkzKiviatDiagram[radial=5, lattice=5, gap=1, step=5]{Entropy, Compression, AveDistance, BitChange, LargestBall}
+   \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20](0.894, 0.172, 0.995, 0.085, 0.493)
+\end{tikzpicture}
 
 \section{quadratic}
 
@@ -18,18 +46,9 @@ Tento algoritmus natahuje klíè na dvojnásobek zpùsobem, kterı je mnohem lepší, a
 
 Tento algoritmus se tváøí jako kompromis, ale blíí se spíše první (lineární variantì). Algoritmus je parametrizován poètem øad $p$, ze kterıch má dlouhı klíè generovat, a údajem $q$, kolik krokù navíc má automat vdy provést mezi generováním vyuívanıch stavù. Pokud se spustí s parametry $p=2$, $q=0$, potom generuje totonı klíè jako lineární algoritmus. Jeho èasová sloitost je lineární ve velikosti vstupu a ještì lineární v souèinu $p(q+1)$.
 
+Automat èíslo 30 s parametry $p=10$, $q=1$ dává tento pìtiúhelník:
+
 \begin{tikzpicture}[label distance=.15cm]
-  \tkzKiviatDiagram[radial=5]{Poissons,Legumes,Viande,Lait,Pain}
-   \tkzKiviatLine[thick,
-                 color=red,
-                 mark=ball,
-                 ball color=red,
-                 mark size=4pt,opacity=.2, 
-                 fill=red!20](5,9,6,8,4)
-  \tkzKiviatLine[thick,
-                 color=blue,
-                 mark=ball,
-                 mark size=4pt,
-                 fill=blue!20,
-                 opacity=.5](4,6,6,4,3)   
- \end{tikzpicture}
+  \tkzKiviatDiagram[radial=5, lattice=5, gap=1, step=5]{Entropy, Compression, AveDistance, BitChange, LargestBall}
+   \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20](0.977, 0.985, 0.999, 0.744, 0.463)
+\end{tikzpicture}
