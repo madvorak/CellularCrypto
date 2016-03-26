@@ -26,7 +26,7 @@ namespace Testing
             }
             Console.WriteLine();
 
-            KeyExtenderGenetic sga = new KeyExtenderGenetic();
+            KeyExtenderGenetic sga = new KeyExtenderGenetic(true);
             BitArray geneticRes = sga.ExtendKey(input, length);
             Console.WriteLine("KeyExtenderGenetic: {0}", RandomnessTesting.RateSequence(geneticRes));
             Console.WriteLine(sga.getInfoAboutWinner());

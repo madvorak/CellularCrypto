@@ -28,7 +28,10 @@
         /// <param name="times">How many times <c>Step()</c> should be called.</param>
         public void Step(uint times)
         {
-            for (int i = 0; i < times; i++) Step();         //the method Step() must increase "time" counter on its own
+            for (int i = 0; i < times; i++)
+            {
+                Step();         //the method Step() must increase "time" counter on its own
+            }
         }
 
         /// <summary>

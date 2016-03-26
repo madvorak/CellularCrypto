@@ -52,12 +52,30 @@ namespace Crypto
         }
 
         private const int popSize = 200;
-        private const int iterations = 300;
+        private const int iterations = 100;
         private const double breedProb = 0.3;
         private const double mutProb = 0.8;
 
+        private readonly IPrimitives primitives;
         private int rounds;
         private Individual savedBest;
+
+        public KeyExtenderGenetic()
+        {
+            primitives = Primitives.Instance;
+        }
+
+        public KeyExtenderGenetic(bool usePreGenerated, string path = @"c:\Martin\MFF\_baka\xtenderSearch\")
+        {
+            if (usePreGenerated)
+            {
+                primitives = new GoodPrimitives(path);
+            }
+            else
+            {
+                primitives = Primitives.Instance;
+            }
+        }
 
         /// <summary>
         /// Runs a Simple Genetic Algorithm to find the best serie of extenders.
@@ -77,7 +95,7 @@ namespace Crypto
                 population[i] = new Individual(rounds);
                 for (int j = 0; j < rounds; j++)
                 {
-                    population[i].genome[j] = Primitives.GetRandomExtender(rng);
+                    population[i].genome[j] = primitives.GetRandomExtender(rng);
                 }
                 if (population[i].RunToRate(shortKey) > bestSoFar.fitness)
                 {
@@ -155,14 +173,37 @@ namespace Crypto
         }
 
         /// <summary>
-        /// Static class that keeps extenders and automata that can be used to double the key in any step.
+        /// Interface for classes that keeps extenders and automata that can be used to double the key in any step.
         /// </summary>
-        private static class Primitives
+        private interface IPrimitives
         {
-            private static List<IBinaryCA> automata;
-            private static List<KeyExtenderAbstractD> extenders;
+            /// <summary>
+            /// Gives a random key extender (from the list) with already assigned CA.
+            /// </summary>
+            /// <param name="r">Random number generator to be used.</param>
+            /// <returns>Key extender.</returns>
+            KeyExtenderAbstractD GetRandomExtender(Random r);
+        }
+        
+        private class Primitives : IPrimitives
+        {
+            private List<IBinaryCA> automata;
+            private List<KeyExtenderAbstractD> extenders;
+            private static Primitives instance;
 
-            static Primitives()
+            public static Primitives Instance
+            {
+                get
+                {
+                    if (instance == null)
+                    {
+                        instance = new Primitives();
+                    }
+                    return instance;
+                }
+            }
+
+            private Primitives()
             {
                 automata = new List<IBinaryCA>();
                 for (int i = 0; i < 256; i++)
@@ -190,14 +231,24 @@ namespace Crypto
                 }
             }
 
-            /// <summary>
-            /// Gives a random key extender (from the list) with already assigned CA.
-            /// </summary>
-            /// <param name="r">Random number generator to be used.</param>
-            /// <returns>KeyExtender.</returns>
-            public static KeyExtenderAbstractD GetRandomExtender(Random r)
+            public KeyExtenderAbstractD GetRandomExtender(Random r)
             {
                 return extenders[r.Next(extenders.Count)];
+            }
+        }
+
+        private class GoodPrimitives : IPrimitives
+        {
+            private List<KeyExtenderAbstractD> goodExtenders;
+
+            public GoodPrimitives(string path)
+            {
+                goodExtenders = Factory.GatherSuccessfulExtenders(path);
+            }
+
+            public KeyExtenderAbstractD GetRandomExtender(Random r)
+            {
+                return goodExtenders[r.Next(goodExtenders.Count)];
             }
         }
 
@@ -228,7 +279,7 @@ namespace Crypto
 
         private void mutate(Individual ind, Random r)
         {
-            ind.genome[r.Next(ind.genome.Length)] = Primitives.GetRandomExtender(r);
+            ind.genome[r.Next(ind.genome.Length)] = primitives.GetRandomExtender(r);
         }
 
         /// <summary>
