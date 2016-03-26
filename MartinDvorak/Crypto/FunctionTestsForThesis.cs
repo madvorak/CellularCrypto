@@ -6,16 +6,26 @@ namespace Crypto
     {
         private FunctionTesting tester;
 
+        /// <summary>
+        /// If you use this constructor, you are able to inject Levenshtein Distance.
+        /// </summary>
         public FunctionTestsForThesis(FunctionTesting functionTesting)
         {
             tester = functionTesting;
         }
 
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
         public FunctionTestsForThesis()
         {
             tester = new FunctionTesting();
         }
 
+        /// <summary>
+        /// Rescales 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
+        /// Onto:    0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0
+        /// </summary>
         private double rescale(double value)
         {
             if (value < 0.5)

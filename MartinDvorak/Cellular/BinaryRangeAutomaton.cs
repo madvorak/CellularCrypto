@@ -75,14 +75,25 @@ namespace Cellular
         {
             BitArray newState = new BitArray(size);
 
-            for (int i = 0; i < size; i++)
+            uint bin = 0;
+            for (int j = 0; j <= range; j++)
             {
-                uint bin = 0;
-                for (int j = i - range; j <= i + range; j++)       //can be optimized to only one reading of state
+                bin *= 2;
+                if (getValueAt(j))
                 {
-                    bin *= 2;
-                    // depending on the ref in VMT, this behaves as either bounded or cyclic implementation
-                    if (getValueAt(j)) bin++;
+                    bin++;
+                }
+            }
+            newState[0] = rule[bin];
+            uint mask = (uint)(1 << (2 * range + 1)) - 1;
+
+            for (int i = 1; i < size; i++)
+            {
+                bin *= 2;
+                bin &= mask;
+                if (getValueAt(i + range))
+                {
+                    bin++;
                 }
                 newState[i] = rule[bin];
             }

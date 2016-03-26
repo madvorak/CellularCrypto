@@ -13,8 +13,8 @@ class Program
     static void Main(string[] args)
     {
         rnd = new Random();
-        MainTests.RunTest();
         GeneticTest.RunTest();
+        MainTests.RunTest();
         Adapter.DisplayForm();
         //Crypto.SearchSGA.SearchForGoodExtenders();
         FunctionTestTest.RunTest();
