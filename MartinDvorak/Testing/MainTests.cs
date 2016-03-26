@@ -16,7 +16,7 @@ namespace Testing
             Console.WriteLine("KeyExtenderCheating:");
             Console.WriteLine(evaluator.CalculateAndPrintResults(new KeyExtenderCheating()));
 
-            const int ruleNo = 30;
+            const int ruleNo = 90;
             IBinaryCA automaton = new ElementaryFastAutomaton(ruleNo, 1);
 
             Console.WriteLine($"KeyExtenderSimpleLinear using rule No. {ruleNo}:");
@@ -30,10 +30,10 @@ namespace Testing
             Console.WriteLine($"KeyExtenderUncertain using rule No. {ruleNo}:");
             Console.WriteLine(evaluator.CalculateAndPrintResults(new KeyExtenderUncertain(automaton)));
 
-            /*Console.WriteLine($"KeyExtenderSimpleQuadratic using rule No. {ruleNo}:");
-            Console.WriteLine(evaluator.CalculateAndPrintResults(new KeyExtenderSimpleQuadratic(automaton)));*/
+            Console.WriteLine($"KeyExtenderSimpleQuadratic using rule No. {ruleNo}:");
+            Console.WriteLine(evaluator.CalculateAndPrintResults(new KeyExtenderSimpleQuadratic(automaton)));
 
-            automaton = new GameOfLife(1, 1);
+            /*automaton = new GameOfLife(1, 1);
 
             Console.WriteLine("KeyExtenderSimpleLinear using Game of Life:");
             Console.WriteLine(evaluator.CalculateAndPrintResults(new KeyExtenderSimpleLinear(automaton)));
@@ -45,7 +45,7 @@ namespace Testing
             Console.WriteLine(evaluator.CalculateAndPrintResults(new KeyExtenderUncertain(automaton)));
 
             Console.WriteLine("KeyExtenderSimpleQuadratic using rule Game of Life:");
-            Console.WriteLine(evaluator.CalculateAndPrintResults(new KeyExtenderSimpleQuadratic(automaton)));
+            Console.WriteLine(evaluator.CalculateAndPrintResults(new KeyExtenderSimpleQuadratic(automaton)));*/
 
             Console.WriteLine();
             Console.ReadKey();

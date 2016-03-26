@@ -207,10 +207,17 @@ namespace Cellular
             return RandomBitArr(length, Program.rnd);
         }
 
+        /// <summary>
+        /// Class for enumerating all binary sequences of a given length. Starting from 00...00, ending at 11...11.
+        /// </summary>
         public class AllBinarySequences : IEnumerable<BitArray>
         {
             private int length;
 
+            /// <summary>
+            /// Constructor. The amount of generated sequences will be 2 ^ <c>sequenceLength</c>.
+            /// </summary>
+            /// <param name="sequenceLength"></param>
             public AllBinarySequences(int sequenceLength)
             {
                 length = sequenceLength;

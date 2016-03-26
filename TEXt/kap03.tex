@@ -8,15 +8,25 @@ Kromì opravdových algoritmù byly vytvoøeny ještì dva falešné algoritmy pro úèely
 
 Takto ošklivì vypadá výsledek pro kopírování:
 
-\begin{tikzpicture}[label distance=.15cm]
-  \tkzKiviatDiagram[radial=5, lattice=5, gap=1, step=5]{Entropy, Compression, AveDistance, BitChange, LargestBall}
-   \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20](0.659, 0.022, 0.997, 0.020, 0.125)
-\end{tikzpicture}
+%\begin{tikzpicture}[label distance=.15cm]
+%  \tkzKiviatDiagram[radial=5, lattice=4, gap=1, step=4]{Entropy, Compression, AveDistance, BitChange, LargestBall}
+%   \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20](0.659, 0.022, 0.997, 0.020, 0.125)
+%\end{tikzpicture}
+
+\newcommand{\radar}[1]{\begin{tikzpicture}[label distance=.15cm]
+  \tkzKiviatDiagram[radial=5, lattice=4, gap=1, step=4]{Entropy, Compression, AveDistance, BitChange, LargestBall}
+   \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20]({#1})
+\end{tikzpicture}}
+
+%\radar{0.659, 0.022, 0.997, 0.020, 0.125}
+
+\newcommand{\qw}[1]{\uv{({#1})}}
+\qw{0.659, 0.022, 0.997, 0.020, 0.125}
 
 Takto krásnì vypadá výsledek získaný podvodem:
 
 \begin{tikzpicture}[label distance=.15cm]
-  \tkzKiviatDiagram[radial=5, lattice=5, gap=1, step=5]{Entropy, Compression, AveDistance, BitChange, LargestBall}
+  \tkzKiviatDiagram[radial=5, lattice=4, gap=1, step=4]{Entropy, Compression, AveDistance, BitChange, LargestBall}
    \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20](0.984, 0.993, 1.000, 1.000, 0.775)
 \end{tikzpicture}
 
@@ -26,15 +36,15 @@ Nejjednodušší zpùsob, jak natáhnout klíè na dvojnásobek. Tento algoritmus použij
 
 Takto vypadá výsledek pro lineární generátor s využitím elementárního automatu èíslo 90:
 
-%\begin{tikzpicture}[label distance=.15cm]
-%  \tkzKiviatDiagram[radial=6, lattice=5, gap=1, step=5]{Entropy, Compression, BitChange, AverageDistance, LargestBallExactly, LargestBallAprox}
-%   \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20](0.9, 0.8, 0.95, 0.7, 0.62, 0.6)
-%\end{tikzpicture}
+\begin{tikzpicture}[label distance=.15cm]
+  \tkzKiviatDiagram[radial=5, lattice=4, gap=1, step=4]{Entropy, Compression, AveDistance, BitChange, LargestBall}
+   \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20](0.904, 0.183, 0.999, 0.062, 0.788)
+\end{tikzpicture}
 
 Takto vypadá výsledek pro lineární generátor s využitím elementárního automatu èíslo 30:
 
 \begin{tikzpicture}[label distance=.15cm]
-  \tkzKiviatDiagram[radial=5, lattice=5, gap=1, step=5]{Entropy, Compression, AveDistance, BitChange, LargestBall}
+  \tkzKiviatDiagram[radial=5, lattice=4, gap=1, step=4]{Entropy, Compression, AveDistance, BitChange, LargestBall}
    \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20](0.894, 0.172, 0.995, 0.085, 0.493)
 \end{tikzpicture}
 
@@ -46,9 +56,16 @@ Tento algoritmus natahuje klíè na dvojnásobek zpùsobem, který je mnohem lepší, a
 
 Tento algoritmus se tváøí jako kompromis, ale blíží se spíše první (lineární variantì). Algoritmus je parametrizován poètem øad $p$, ze kterých má dlouhý klíè generovat, a údajem $q$, kolik krokù navíc má automat vždy provést mezi generováním využívaných stavù. Pokud se spustí s parametry $p=2$, $q=0$, potom generuje totožný klíè jako lineární algoritmus. Jeho èasová složitost je lineární ve velikosti vstupu a ještì lineární v souèinu $p(q+1)$.
 
+Automat èíslo 90 s parametry $p=10$, $q=1$ dává tento pìtiúhelník:
+
+\begin{tikzpicture}[label distance=.15cm]
+  \tkzKiviatDiagram[radial=5, lattice=4, gap=1, step=4]{Entropy, Compression, AveDistance, BitChange, LargestBall}
+   \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20](0.983, 0.993, 1.000, 0.519, 0.775)
+\end{tikzpicture}
+
 Automat èíslo 30 s parametry $p=10$, $q=1$ dává tento pìtiúhelník:
 
 \begin{tikzpicture}[label distance=.15cm]
-  \tkzKiviatDiagram[radial=5, lattice=5, gap=1, step=5]{Entropy, Compression, AveDistance, BitChange, LargestBall}
+  \tkzKiviatDiagram[radial=5, lattice=4, gap=1, step=4]{Entropy, Compression, AveDistance, BitChange, LargestBall}
    \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20](0.977, 0.985, 0.999, 0.744, 0.463)
 \end{tikzpicture}

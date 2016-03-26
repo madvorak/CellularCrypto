@@ -11,6 +11,11 @@ namespace Crypto
             tester = functionTesting;
         }
 
+        public FunctionTestsForThesis()
+        {
+            tester = new FunctionTesting();
+        }
+
         private double rescale(double value)
         {
             if (value < 0.5)

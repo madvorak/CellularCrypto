@@ -14,7 +14,7 @@ namespace Crypto
         /// <param name="u">First vector.</param>
         /// <param name="v">Second vector.</param>
         /// <returns>Number between 0 and 1.</returns>
-        public delegate double DistanceDelegate(BitArray u, BitArray v);
+        private delegate double DistanceDelegate(BitArray u, BitArray v);
         private DistanceDelegate distanceFunction;
 
         public FunctionTesting(bool useLevenshteinDistance = false)

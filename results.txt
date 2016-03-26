@@ -220,3 +220,60 @@ KeyExtenderUncertain using using Game of Life:
    TestAverageDistance: 0,000
    TestBitChange      : 0,194
    TestLargestBall    : -1,100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KeyExtenderCopy:
+   TestEntropy        : 0,658
+   TestCompression    : 0,022
+   TestAverageDistance: 0,999
+   TestBitChange      : 0,020
+   TestLargestBall    : 0,150
+
+KeyExtenderCheating:
+   TestEntropy        : 0,984
+   TestCompression    : 0,993
+   TestAverageDistance: 0,999
+   TestBitChange      : 0,998
+   TestLargestBall    : 0,619
+
+KeyExtenderSimpleLinear using rule No. 90:
+   TestEntropy        : 0,904
+   TestCompression    : 0,183
+   TestAverageDistance: 0,999
+   TestBitChange      : 0,062
+   TestLargestBall    : 0,788
+
+KeyExtenderInterlaced(10, 0) using rule No. 90:
+   TestEntropy        : 0,983
+   TestCompression    : 0,993
+   TestAverageDistance: 1,000
+   TestBitChange      : 0,519
+   TestLargestBall    : 0,775
+
+KeyExtenderUncertain using rule No. 90:
+   TestEntropy        : 0,909
+   TestCompression    : 0,513
+   TestAverageDistance: 1,000
+   TestBitChange      : 0,879
+   TestLargestBall    : 0,631
+
+KeyExtenderSimpleQuadratic using rule No. 90:
+   TestEntropy        : 0,683
+   TestCompression    : 0,277
+   TestAverageDistance: 0,512
+   TestBitChange      : 0,249
+   TestLargestBall    : -0,219
