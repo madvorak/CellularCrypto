@@ -26,9 +26,15 @@ namespace Testing
             }
             Console.WriteLine();
 
-            KeyExtenderGenetic sga = new KeyExtenderGenetic(true);
+            KeyExtenderGenetic sga = new KeyExtenderGenetic(false);
             BitArray geneticRes = sga.ExtendKey(input, length);
-            Console.WriteLine("KeyExtenderGenetic: {0}", RandomnessTesting.RateSequence(geneticRes));
+            Console.WriteLine("KeyExtenderGenetic with naive primitives: {0}", RandomnessTesting.RateSequence(geneticRes));
+            Console.WriteLine(sga.getInfoAboutWinner());
+            Console.WriteLine();
+
+            sga = new KeyExtenderGenetic(true);
+            geneticRes = sga.ExtendKey(input, length);
+            Console.WriteLine("KeyExtenderGenetic with pre-generated primitives: {0}", RandomnessTesting.RateSequence(geneticRes));
             Console.WriteLine(sga.getInfoAboutWinner());
             Console.WriteLine();
 
