@@ -163,7 +163,7 @@ KeyExtenderSimpleQuadratic using rule Game of Life:
 
 
 
-
+No. 30: chaotický
 
 KeyExtenderCopy:
    TestEntropy        : 0,658
@@ -234,7 +234,7 @@ KeyExtenderUncertain using using Game of Life:
 
 
 
-
+No. 90: fraktální
 
 KeyExtenderCopy:
    TestEntropy        : 0,658
@@ -277,3 +277,72 @@ KeyExtenderSimpleQuadratic using rule No. 90:
    TestAverageDistance: 0,512
    TestBitChange      : 0,249
    TestLargestBall    : -0,219
+
+
+
+
+
+
+
+
+
+
+
+
+No. 220: úplnì jednolitý
+
+KeyExtenderCopy:
+   TestEntropy        : 0,659
+   TestCompression    : 0,022
+   TestAverageDistance: 0,998
+   TestBitChange      : 0,020
+   TestLargestBall    : 0,150
+
+KeyExtenderCheating:
+   TestEntropy        : 0,984
+   TestCompression    : 0,993
+   TestAverageDistance: 0,999
+   TestBitChange      : 0,999
+   TestLargestBall    : 0,619
+
+KeyExtenderSimpleLinear using rule No. 220:
+   TestEntropy        : 0,548
+   TestCompression    : 0,024
+   TestAverageDistance: 0,771
+   TestBitChange      : 0,022
+   TestLargestBall    : 0,075
+
+KeyExtenderInterlaced(10, 0) using rule No. 220:
+   TestEntropy        : 0,220
+   TestCompression    : 0,006
+   TestAverageDistance: 0,540
+   TestBitChange      : 0,022
+   TestLargestBall    : 0,063
+
+KeyExtenderUncertain using rule No. 220:
+   TestEntropy        : 0,000
+   TestCompression    : 0,000
+   TestAverageDistance: 0,000
+   TestBitChange      : 0,000
+   TestLargestBall    : -1,425
+
+KeyExtenderSimpleQuadratic using rule No. 220:
+   TestEntropy        : 0,000
+   TestCompression    : -0,001
+   TestAverageDistance: 0,653
+   TestBitChange      : 0,020
+   TestLargestBall    : 0,000
+
+
+
+
+
+
+
+
+
+
+
+
+
+No. 94: jednolitý

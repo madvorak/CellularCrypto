@@ -51,10 +51,12 @@ Tøída Crypto.FunctionTesting obsahuje následující metody. Podle nastavení v kons
 \section{Grafické znázornìní}
 
 Výsledky jednotlivých algoritmù ve výše uvedených testech budeme znázoròovat na diagramech jako je tento:
-
-\begin{tikzpicture}[label distance=.15cm]
-  \tkzKiviatDiagram[radial=6, lattice=5, gap=1, step=5]{Entropy,Compression,BitChange,AverageDistance,BallExactly,BallApprox}
-   \tkzKiviatLine[thick, color=red, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=red!20](0.9, 0.8, 0.95, 0.7, 0.62, 0.6)
- \end{tikzpicture}
+ 
+\newcommand{\radar}[5]{\begin{tikzpicture}[label distance=.15cm]
+ \tkzKiviatDiagram[radial=5, lattice=4, gap=1, step=4]{Entropy, Compression, AveDistance, BitChange, LargestBall}
+  \tkzKiviatLine[thick, color=blue, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=blue!20]({#1}, {#2}, {#3}, {#4}, {#5})
+\end{tikzpicture}}
+ 
+\radar{0.9}{0.8}{0.95}{0.7}{0.62}
 
 Pro diagramy jsou hodnoty pøeškálovány. S výjimkou testù nejvìtších koulí, kde neznáme optimální hodnotu, je škálování takové, aby optimální hodnota byla 1. Tedy napøíklad když TestBitChange vrátí hodnotu $x$, pak je do diagramu zobrazeno $\min\{2x, 2(1-x)\}$, aby optimum (zanesené jako hodnota 1) byl výsledek 0,5 a odchylky na obì strany \uv{stejnì vážné}.
