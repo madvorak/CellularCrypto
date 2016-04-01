@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  1 APR 2016 10:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  1 APR 2016 12:57
 entering extended mode
 **./prace.tex
 (prace.tex
@@ -799,7 +799,7 @@ LaTeX Info: Redefining \nameref on input line 126.
  (titulka.tex
 Package hyperref Info: Option `pageanchor' set `false' on input line 6.
 
-<logo.pdf, id=94, 371.3875pt x 366.36874pt>
+<logo.pdf, id=98, 371.3875pt x 366.36874pt>
 File: logo.pdf Graphic file (type pdf)
  <use logo.pdf>
 Package pdftex.def Info: logo.pdf used on input line 24.
@@ -868,25 +868,40 @@ Kapitola 2.
 
 
 ] [6]
-Overfull \hbox (8.50215pt too wide) in paragraph at lines 60--60
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 64--64
  [][][][]\IL2/cmr/m/n/12 Compression |
  []
 
 
-Overfull \hbox (5.98274pt too wide) in paragraph at lines 60--60
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 64--64
  [][][][]\IL2/cmr/m/n/12 AveDistance |
  []
 
 
-Overfull \hbox (1.90501pt too wide) in paragraph at lines 60--60
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 64--64
  [][][][]\IL2/cmr/m/n/12 LargestBall |
  []
 
-[7]) [8]
+) [7] [8]
 \openout2 = `kap03.aux'.
 
  (kap03.tex
 Kapitola 3.
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 11--11
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 11--11
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 11--11
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
 
 Overfull \hbox (8.50215pt too wide) in paragraph at lines 13--13
  [][][][]\IL2/cmr/m/n/12 Compression |
@@ -903,25 +918,51 @@ Overfull \hbox (1.90501pt too wide) in paragraph at lines 13--13
  []
 
 
-Overfull \hbox (8.50215pt too wide) in paragraph at lines 17--17
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 19--19
  [][][][]\IL2/cmr/m/n/12 Compression |
  []
 
 
-Overfull \hbox (5.98274pt too wide) in paragraph at lines 17--17
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 19--19
  [][][][]\IL2/cmr/m/n/12 AveDistance |
  []
 
 
-Overfull \hbox (1.90501pt too wide) in paragraph at lines 17--17
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 19--19
  [][][][]\IL2/cmr/m/n/12 LargestBall |
  []
 
-[9
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 21--21
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
 
 
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 21--21
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
 
-]
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 21--21
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 23--23
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 23--23
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 23--23
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+
 Overfull \hbox (8.50215pt too wide) in paragraph at lines 25--25
  [][][][]\IL2/cmr/m/n/12 Compression |
  []
@@ -936,22 +977,82 @@ Overfull \hbox (1.90501pt too wide) in paragraph at lines 25--25
  [][][][]\IL2/cmr/m/n/12 LargestBall |
  []
 
-[10]
-Overfull \hbox (8.50215pt too wide) in paragraph at lines 29--29
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 27--27
  [][][][]\IL2/cmr/m/n/12 Compression |
  []
 
 
-Overfull \hbox (5.98274pt too wide) in paragraph at lines 29--29
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 27--27
  [][][][]\IL2/cmr/m/n/12 AveDistance |
  []
 
 
-Overfull \hbox (1.90501pt too wide) in paragraph at lines 29--29
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 27--27
  [][][][]\IL2/cmr/m/n/12 LargestBall |
  []
 
-[11]
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 33--33
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 33--33
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 33--33
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 35--35
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 35--35
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 35--35
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 37--37
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 37--37
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 37--37
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 39--39
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 39--39
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 39--39
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+
 Overfull \hbox (8.50215pt too wide) in paragraph at lines 41--41
  [][][][]\IL2/cmr/m/n/12 Compression |
  []
@@ -967,24 +1068,163 @@ Overfull \hbox (1.90501pt too wide) in paragraph at lines 41--41
  []
 
 
-Overfull \hbox (8.50215pt too wide) in paragraph at lines 45--45
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 47--47
  [][][][]\IL2/cmr/m/n/12 Compression |
  []
 
 
-Overfull \hbox (5.98274pt too wide) in paragraph at lines 45--45
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 47--47
  [][][][]\IL2/cmr/m/n/12 AveDistance |
  []
 
 
-Overfull \hbox (1.90501pt too wide) in paragraph at lines 45--45
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 47--47
  [][][][]\IL2/cmr/m/n/12 LargestBall |
  []
 
-) [12] [13]
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 49--49
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 49--49
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 49--49
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 51--51
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 51--51
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 51--51
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 53--53
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 53--53
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 53--53
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 55--55
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 55--55
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 55--55
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+[9
+
+
+
+] [10] [11] [12] [13] [14] [15] [16] [17]
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 61--61
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 61--61
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 61--61
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 63--63
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 63--63
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 63--63
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 65--65
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 65--65
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 65--65
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 67--67
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 67--67
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 67--67
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 69--69
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 69--69
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 69--69
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+) [18] [19] [20] [21]
 \openout2 = `zaver.aux'.
 
- (zaver.tex) [14
+ (zaver.tex) [22
 
 
 
@@ -993,25 +1233,25 @@ Overfull \hbox (1.90501pt too wide) in paragraph at lines 45--45
 
  (literatura.tex
 No file prace.bbl.
-) [15
+) [23
 
 
 ] (prace.lof)
 \tf@lof=\write7
 \openout7 = `prace.lof'.
 
- [16
+ [24
 
 
 ] (prace.lot)
 \tf@lot=\write8
 \openout8 = `prace.lot'.
 
- [17
+ [25
 
-] [18
+] [26
 
-] [19
+] [27
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
@@ -1021,17 +1261,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 168.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 168.
 Package rerunfilecheck Info: File `prace.out' has not changed.
-(rerunfilecheck)             Checksum: 70D3E92EC4EDF2F8203E0B2DFF472091;3445.
+(rerunfilecheck)             Checksum: 4CD1F2B83AF88A75C94ECC9E78C1A22A;3826.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 168.
  ) 
 Here is how much of TeX's memory you used:
- 22238 strings out of 493634
- 394617 string characters out of 3141311
- 453216 words of memory out of 3000000
- 25150 multiletter control sequences out of 15000+200000
+ 22346 strings out of 493634
+ 396053 string characters out of 3141311
+ 615135 words of memory out of 3000000
+ 25226 multiletter control sequences out of 15000+200000
  22759 words of font info for 72 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 62i,6n,91p,812b,810s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,8n,93p,812b,916s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
@@ -1043,9 +1283,9 @@ pData/Roaming/MiKTeX/2.9/fonts/type1/public/cs/csbx12.pfb><C:/Users/Martin/AppD
 ata/Roaming/MiKTeX/2.9/fonts/type1/public/cs/csr12.pfb><C:/Users/Martin/AppData
 /Roaming/MiKTeX/2.9/fonts/type1/public/cs/csr17.pfb><C:/Users/Martin/AppData/Ro
 aming/MiKTeX/2.9/fonts/type1/public/cs/cssl12.pfb>
-Output written on prace.pdf (23 pages, 316523 bytes).
+Output written on prace.pdf (31 pages, 348460 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
- 46 named destinations out of 1000 (max. 500000)
- 200 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 371 PDF objects out of 1000 (max. 8388607)
+ 78 named destinations out of 1000 (max. 500000)
+ 208 words of extra memory for PDF output out of 10000 (max. 10000000)
 

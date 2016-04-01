@@ -16,7 +16,7 @@ namespace Testing
             Console.WriteLine("KeyExtenderCheating:");
             Console.WriteLine(evaluator.CalculateAndPrintResults(new KeyExtenderCheating()));
 
-            const int ruleNo = 94;
+            const int ruleNo = 30;
             IBinaryCA automaton = new ElementaryFastAutomaton(ruleNo, 1);
 
             Console.WriteLine($"KeyExtenderSimpleLinear using rule No. {ruleNo}:");

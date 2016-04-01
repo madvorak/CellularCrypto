@@ -182,8 +182,8 @@ KeyExtenderCheating:
 KeyExtenderSimpleLinear using rule No. 30:
    TestEntropy        : 0,894
    TestCompression    : 0,172
-   TestAverageDistance: 0,995
-   TestBitChange      : 0,085
+   TestAverageDistance: 0,997
+   TestBitChange      : 0,084
    TestLargestBall    : 0,463
 
 KeyExtenderInterlaced(10, 0) using rule No. 30:
@@ -196,9 +196,9 @@ KeyExtenderInterlaced(10, 0) using rule No. 30:
 KeyExtenderUncertain using rule No. 30:
    TestEntropy        : 0,473
    TestCompression    : 0,481
-   TestAverageDistance: 0,993
-   TestBitChange      : 0,908
-   TestLargestBall    : 0,294
+   TestAverageDistance: 0,992
+   TestBitChange      : 0,900
+   TestLargestBall    : 0,300
 
 KeyExtenderSimpleLinear using Game of Life:
    TestEntropy        : 0,502
@@ -213,6 +213,13 @@ KeyExtenderInterlaced(10, 0) using Game of Life:
    TestAverageDistance: 0,365
    TestBitChange      : 0,281
    TestLargestBall    : 0,181
+
+KeyExtenderSimpleQuadratic using rule No. 30:
+   TestEntropy        : 0,983
+   TestCompression    : 0,993
+   TestAverageDistance: 1,000
+   TestBitChange      : 0,856
+   TestLargestBall    : 0,631
 
 KeyExtenderUncertain using using Game of Life:
    TestEntropy        : 0,113
@@ -346,3 +353,98 @@ KeyExtenderSimpleQuadratic using rule No. 220:
 
 
 No. 94: jednolitý
+
+KeyExtenderCopy:
+   TestEntropy        : 0,658
+   TestCompression    : 0,022
+   TestAverageDistance: 0,997
+   TestBitChange      : 0,020
+   TestLargestBall    : 0,150
+
+KeyExtenderCheating:
+   TestEntropy        : 0,984
+   TestCompression    : 0,993
+   TestAverageDistance: 0,999
+   TestBitChange      : 0,999
+   TestLargestBall    : 0,631
+
+KeyExtenderSimpleLinear using rule No. 94:
+   TestEntropy        : 0,608
+   TestCompression    : 0,079
+   TestAverageDistance: 0,978
+   TestBitChange      : 0,062
+   TestLargestBall    : 0,450
+
+KeyExtenderInterlaced(10, 0) using rule No. 94:
+   TestEntropy        : 0,641
+   TestCompression    : 0,513
+   TestAverageDistance: 0,971
+   TestBitChange      : 0,376
+   TestLargestBall    : 0,425
+
+KeyExtenderUncertain using rule No. 94:
+   TestEntropy        : 0,490
+   TestCompression    : 0,063
+   TestAverageDistance: 0,000
+   TestBitChange      : 0,858
+   TestLargestBall    : 0,294
+
+KeyExtenderSimpleQuadratic using rule No. 94:
+   TestEntropy        : 0,043
+   TestCompression    : 0,005
+   TestAverageDistance: 0,972
+   TestBitChange      : 0,046
+   TestLargestBall    : 0,350
+
+
+
+
+
+
+
+
+
+
+No. 110: Turing-complete
+
+KeyExtenderCopy:
+   TestEntropy        : 0,659
+   TestCompression    : 0,022
+   TestAverageDistance: 1,000
+   TestBitChange      : 0,020
+   TestLargestBall    : 0,138
+
+KeyExtenderCheating:
+   TestEntropy        : 0,984
+   TestCompression    : 0,993
+   TestAverageDistance: 0,999
+   TestBitChange      : 0,997
+   TestLargestBall    : 0,631
+
+KeyExtenderSimpleLinear using rule No. 110:
+   TestEntropy        : 0,857
+   TestCompression    : 0,174
+   TestAverageDistance: 0,995
+   TestBitChange      : 0,076
+   TestLargestBall    : 0,438
+
+KeyExtenderInterlaced(10, 0) using rule No. 110:
+   TestEntropy        : 0,972
+   TestCompression    : 0,986
+   TestAverageDistance: 0,990
+   TestBitChange      : 0,653
+   TestLargestBall    : 0,463
+
+KeyExtenderUncertain using rule No. 110:
+   TestEntropy        : 0,621
+   TestCompression    : 0,449
+   TestAverageDistance: 1,000
+   TestBitChange      : 0,914
+   TestLargestBall    : 0,294
+
+KeyExtenderSimpleQuadratic using rule No. 110:
+   TestEntropy        : 0,634
+   TestCompression    : 0,096
+   TestAverageDistance: 0,988
+   TestBitChange      : 0,835
+   TestLargestBall    : 0,450
