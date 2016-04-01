@@ -1,0 +1,93 @@
+\hypertarget{class_crypto_1_1_randomness_testing}{}\section{Crypto.\+Randomness\+Testing Class Reference}
+\label{class_crypto_1_1_randomness_testing}\index{Crypto.\+Randomness\+Testing@{Crypto.\+Randomness\+Testing}}
+
+
+Static class that contains some tests of randomness for binary sequences.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{class_crypto_1_1_randomness_testing_a86ef256c8a7c87df3fdbbf5673465cb0}{Entropy\+Test} (Bit\+Array \hyperlink{jquery_8js_a2fa551895933fae935a0a6b87282241d}{b}, byte length\+Limit)
+\begin{DoxyCompactList}\small\item\em Calculates the Shannon entropy of the Bit\+Array. \end{DoxyCompactList}\item 
+static double \hyperlink{class_crypto_1_1_randomness_testing_af903b13649b40d4895243f51c62341cc}{Compression\+Test} (Bit\+Array \hyperlink{jquery_8js_a2fa551895933fae935a0a6b87282241d}{b})
+\begin{DoxyCompactList}\small\item\em Tests how much the Bit\+Array can be compressed using gzip. \end{DoxyCompactList}\item 
+static double \hyperlink{class_crypto_1_1_randomness_testing_a34e225189cd735e8cfa82f6ab3b7d97f}{Rate\+Sequence} (Bit\+Array sequence)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Static class that contains some tests of randomness for binary sequences. 
+
+
+
+Definition at line 11 of file Randomness\+Testing.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_crypto_1_1_randomness_testing_af903b13649b40d4895243f51c62341cc}{}\index{Crypto\+::\+Randomness\+Testing@{Crypto\+::\+Randomness\+Testing}!Compression\+Test@{Compression\+Test}}
+\index{Compression\+Test@{Compression\+Test}!Crypto\+::\+Randomness\+Testing@{Crypto\+::\+Randomness\+Testing}}
+\subsubsection[{Compression\+Test(\+Bit\+Array b)}]{\setlength{\rightskip}{0pt plus 5cm}static double Crypto.\+Randomness\+Testing.\+Compression\+Test (
+\begin{DoxyParamCaption}
+\item[{Bit\+Array}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_crypto_1_1_randomness_testing_af903b13649b40d4895243f51c62341cc}
+
+
+Tests how much the Bit\+Array can be compressed using gzip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Vector to rate.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ratio between new and old size.
+\end{DoxyReturn}
+
+
+Definition at line 69 of file Randomness\+Testing.\+cs.
+
+\hypertarget{class_crypto_1_1_randomness_testing_a86ef256c8a7c87df3fdbbf5673465cb0}{}\index{Crypto\+::\+Randomness\+Testing@{Crypto\+::\+Randomness\+Testing}!Entropy\+Test@{Entropy\+Test}}
+\index{Entropy\+Test@{Entropy\+Test}!Crypto\+::\+Randomness\+Testing@{Crypto\+::\+Randomness\+Testing}}
+\subsubsection[{Entropy\+Test(\+Bit\+Array b, byte length\+Limit)}]{\setlength{\rightskip}{0pt plus 5cm}static double Crypto.\+Randomness\+Testing.\+Entropy\+Test (
+\begin{DoxyParamCaption}
+\item[{Bit\+Array}]{b, }
+\item[{byte}]{length\+Limit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_crypto_1_1_randomness_testing_a86ef256c8a7c87df3fdbbf5673465cb0}
+
+
+Calculates the Shannon entropy of the Bit\+Array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Vector to rate.\\
+\hline
+{\em length\+Limit} & Blocks of size from 1 to {\ttfamily length\+Limit} will be counted.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number between 0 and 1. Only values very close to 1 are good.
+\end{DoxyReturn}
+
+
+Definition at line 19 of file Randomness\+Testing.\+cs.
+
+\hypertarget{class_crypto_1_1_randomness_testing_a34e225189cd735e8cfa82f6ab3b7d97f}{}\index{Crypto\+::\+Randomness\+Testing@{Crypto\+::\+Randomness\+Testing}!Rate\+Sequence@{Rate\+Sequence}}
+\index{Rate\+Sequence@{Rate\+Sequence}!Crypto\+::\+Randomness\+Testing@{Crypto\+::\+Randomness\+Testing}}
+\subsubsection[{Rate\+Sequence(\+Bit\+Array sequence)}]{\setlength{\rightskip}{0pt plus 5cm}static double Crypto.\+Randomness\+Testing.\+Rate\+Sequence (
+\begin{DoxyParamCaption}
+\item[{Bit\+Array}]{sequence}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_crypto_1_1_randomness_testing_a34e225189cd735e8cfa82f6ab3b7d97f}
+
+
+Definition at line 82 of file Randomness\+Testing.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Martin/\+M\+F\+F/\+\_\+baka/\+Martin\+Dvorak/\+Crypto/\hyperlink{_randomness_testing_8cs}{Randomness\+Testing.\+cs}\end{DoxyCompactItemize}

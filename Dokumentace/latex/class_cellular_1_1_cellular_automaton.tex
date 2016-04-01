@@ -1,0 +1,147 @@
+\hypertarget{class_cellular_1_1_cellular_automaton}{}\section{Cellular.\+Cellular\+Automaton Class Reference}
+\label{class_cellular_1_1_cellular_automaton}\index{Cellular.\+Cellular\+Automaton@{Cellular.\+Cellular\+Automaton}}
+
+
+The top class of the C\+A hierarchy. Every constructor should follow this logical order when considering its parametres\+: specification of the type (usually not needed), rule, size, initial state / rng.  
+
+
+Inheritance diagram for Cellular.\+Cellular\+Automaton\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.500000cm]{class_cellular_1_1_cellular_automaton}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Step} ()
+\begin{DoxyCompactList}\small\item\em Performs one step applying the specific rule for creating a new state. \end{DoxyCompactList}\item 
+uint \hyperlink{class_cellular_1_1_cellular_automaton_a340d1faea1300db9183b4b4368d4f838}{Get\+Time} ()
+\begin{DoxyCompactList}\small\item\em Only returns how many steps have been done. \end{DoxyCompactList}\item 
+void \hyperlink{class_cellular_1_1_cellular_automaton_ad4948be8db73c5e052e2c5e59ac85ad8}{Step} (uint times)
+\begin{DoxyCompactList}\small\item\em Performs the step n times. \end{DoxyCompactList}\item 
+abstract object \hyperlink{class_cellular_1_1_cellular_automaton_affd487b397cdbbbb1982815bbcd8e7d3}{Clone} ()
+\begin{DoxyCompactList}\small\item\em Creates an appropriate copy of the C\+A. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. \end{DoxyCompactList}\item 
+abstract string \hyperlink{class_cellular_1_1_cellular_automaton_abe4b92fd405530c8a08cc07a3a19fff4}{Tell\+Type} ()
+\begin{DoxyCompactList}\small\item\em Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint \hyperlink{class_cellular_1_1_cellular_automaton_a6eaa8a9840fbc4c875d4e7d5a14e5f70}{time} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The top class of the C\+A hierarchy. Every constructor should follow this logical order when considering its parametres\+: specification of the type (usually not needed), rule, size, initial state / rng. 
+
+
+
+Definition at line 7 of file Cellular\+Automaton.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cellular_1_1_cellular_automaton_affd487b397cdbbbb1982815bbcd8e7d3}{}\index{Cellular\+::\+Cellular\+Automaton@{Cellular\+::\+Cellular\+Automaton}!Clone@{Clone}}
+\index{Clone@{Clone}!Cellular\+::\+Cellular\+Automaton@{Cellular\+::\+Cellular\+Automaton}}
+\subsubsection[{Clone()}]{\setlength{\rightskip}{0pt plus 5cm}abstract object Cellular.\+Cellular\+Automaton.\+Clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_cellular_1_1_cellular_automaton_affd487b397cdbbbb1982815bbcd8e7d3}
+
+
+Creates an appropriate copy of the C\+A. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. 
+
+\begin{DoxyReturn}{Returns}
+A copy of the {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton}{Cellular\+Automaton}} as an {\ttfamily Object}
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_cellular_1_1_totalistic2_d_automaton_ae78cf4c3f8245adf64ec9a173330804f}{Cellular.\+Totalistic2\+D\+Automaton}, \hyperlink{class_cellular_1_1_elementary_fast_automaton_a98bbdcade0ac93dd0fbc96ba253c2978}{Cellular.\+Elementary\+Fast\+Automaton}, \hyperlink{class_cellular_1_1_binary_range_automaton_a12f010562e04785e0a7efb113302687e}{Cellular.\+Binary\+Range\+Automaton}, \hyperlink{class_cellular_1_1_elementary_automaton_ada4ddee98167e8f4f4b6dea1f7563b47}{Cellular.\+Elementary\+Automaton}, \hyperlink{class_cellular_1_1_binary_range_cyclic_automaton_a2361fe82802e372b24b8bec6a6135278}{Cellular.\+Binary\+Range\+Cyclic\+Automaton}, \hyperlink{class_cellular_1_1_nary_totalistic_automaton_a13f16113915ecec451fc4764a32044f9}{Cellular.\+Nary\+Totalistic\+Automaton}, and \hyperlink{class_cellular_1_1_nary_totalistic_cyclic_automaton_aa8d5a7d77a6dfc5f6e4fae6ba1c6cfd0}{Cellular.\+Nary\+Totalistic\+Cyclic\+Automaton}.
+
+\hypertarget{class_cellular_1_1_cellular_automaton_a340d1faea1300db9183b4b4368d4f838}{}\index{Cellular\+::\+Cellular\+Automaton@{Cellular\+::\+Cellular\+Automaton}!Get\+Time@{Get\+Time}}
+\index{Get\+Time@{Get\+Time}!Cellular\+::\+Cellular\+Automaton@{Cellular\+::\+Cellular\+Automaton}}
+\subsubsection[{Get\+Time()}]{\setlength{\rightskip}{0pt plus 5cm}uint Cellular.\+Cellular\+Automaton.\+Get\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_cellular_automaton_a340d1faea1300db9183b4b4368d4f838}
+
+
+Only returns how many steps have been done. 
+
+\begin{DoxyReturn}{Returns}
+Number of executed steps.
+\end{DoxyReturn}
+
+
+Definition at line 20 of file Cellular\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{}\index{Cellular\+::\+Cellular\+Automaton@{Cellular\+::\+Cellular\+Automaton}!Step@{Step}}
+\index{Step@{Step}!Cellular\+::\+Cellular\+Automaton@{Cellular\+::\+Cellular\+Automaton}}
+\subsubsection[{Step()}]{\setlength{\rightskip}{0pt plus 5cm}abstract void Cellular.\+Cellular\+Automaton.\+Step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}
+
+
+Performs one step applying the specific rule for creating a new state. 
+
+
+
+Implemented in \hyperlink{class_cellular_1_1_elementary_automaton_adae7c322e4c7cd00cd0534a23d1abfa4}{Cellular.\+Elementary\+Automaton}, \hyperlink{class_cellular_1_1_binary_range_automaton_ade1f5b831b9676f04f835c33d245b9e2}{Cellular.\+Binary\+Range\+Automaton}, \hyperlink{class_cellular_1_1_elementary_fast_automaton_aa877bef8b8242c58e190a884d18f3b5f}{Cellular.\+Elementary\+Fast\+Automaton}, \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a7f85cac5420f67a936cbd4cef33c4abc}{Cellular.\+Totalistic2\+D\+Automaton}, and \hyperlink{class_cellular_1_1_nary_totalistic_automaton_ad90769a438ab94b46d4750a571782056}{Cellular.\+Nary\+Totalistic\+Automaton}.
+
+\hypertarget{class_cellular_1_1_cellular_automaton_ad4948be8db73c5e052e2c5e59ac85ad8}{}\index{Cellular\+::\+Cellular\+Automaton@{Cellular\+::\+Cellular\+Automaton}!Step@{Step}}
+\index{Step@{Step}!Cellular\+::\+Cellular\+Automaton@{Cellular\+::\+Cellular\+Automaton}}
+\subsubsection[{Step(uint times)}]{\setlength{\rightskip}{0pt plus 5cm}void Cellular.\+Cellular\+Automaton.\+Step (
+\begin{DoxyParamCaption}
+\item[{uint}]{times}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_cellular_automaton_ad4948be8db73c5e052e2c5e59ac85ad8}
+
+
+Performs the step n times. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em times} & How many times {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Step()}} should be called.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file Cellular\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_cellular_automaton_abe4b92fd405530c8a08cc07a3a19fff4}{}\index{Cellular\+::\+Cellular\+Automaton@{Cellular\+::\+Cellular\+Automaton}!Tell\+Type@{Tell\+Type}}
+\index{Tell\+Type@{Tell\+Type}!Cellular\+::\+Cellular\+Automaton@{Cellular\+::\+Cellular\+Automaton}}
+\subsubsection[{Tell\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}abstract string Cellular.\+Cellular\+Automaton.\+Tell\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_cellular_1_1_cellular_automaton_abe4b92fd405530c8a08cc07a3a19fff4}
+
+
+Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. 
+
+\begin{DoxyReturn}{Returns}
+Type of the C\+A as a string.
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_cellular_1_1_totalistic2_d_automaton_aa009c674cd109fa70173e9893f6d3b09}{Cellular.\+Totalistic2\+D\+Automaton}, \hyperlink{class_cellular_1_1_binary_range_automaton_afad205eb4fea51efd63b063f96bfda5c}{Cellular.\+Binary\+Range\+Automaton}, \hyperlink{class_cellular_1_1_elementary_automaton_a812677139d560e2c600226361b785995}{Cellular.\+Elementary\+Automaton}, \hyperlink{class_cellular_1_1_binary_range_cyclic_automaton_a75754d1c54550e1f29a9282647947cb8}{Cellular.\+Binary\+Range\+Cyclic\+Automaton}, \hyperlink{class_cellular_1_1_nary_totalistic_automaton_aa691c532a55638c7e3d0c125a4244773}{Cellular.\+Nary\+Totalistic\+Automaton}, \hyperlink{class_cellular_1_1_game_of_life_a9a8627c06f5cd9c4f0e99d3e78582c62}{Cellular.\+Game\+Of\+Life}, and \hyperlink{class_cellular_1_1_nary_totalistic_cyclic_automaton_ac5c39cfb72386e3ab6132ab420091ae9}{Cellular.\+Nary\+Totalistic\+Cyclic\+Automaton}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_cellular_1_1_cellular_automaton_a6eaa8a9840fbc4c875d4e7d5a14e5f70}{}\index{Cellular\+::\+Cellular\+Automaton@{Cellular\+::\+Cellular\+Automaton}!time@{time}}
+\index{time@{time}!Cellular\+::\+Cellular\+Automaton@{Cellular\+::\+Cellular\+Automaton}}
+\subsubsection[{time}]{\setlength{\rightskip}{0pt plus 5cm}uint Cellular.\+Cellular\+Automaton.\+time = 0\hspace{0.3cm}{\ttfamily [protected]}}\label{class_cellular_1_1_cellular_automaton_a6eaa8a9840fbc4c875d4e7d5a14e5f70}
+
+
+Definition at line 9 of file Cellular\+Automaton.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Martin/\+M\+F\+F/\+\_\+baka/\+Martin\+Dvorak/\+Cellular/\hyperlink{_cellular_automaton_8cs}{Cellular\+Automaton.\+cs}\end{DoxyCompactItemize}

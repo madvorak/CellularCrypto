@@ -5,6 +5,9 @@ using Cellular;
 
 namespace Crypto
 {
+    /// <summary>
+    /// Class for testing properties of key extending algorithms.
+    /// </summary>
     class FunctionTesting
     {
         /// <summary>

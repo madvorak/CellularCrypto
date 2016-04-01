@@ -1,0 +1,39 @@
+\hypertarget{namespace_crypto}{}\section{Crypto Namespace Reference}
+\label{namespace_crypto}\index{Crypto@{Crypto}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_crypto_1_1_cannot_generate_exception}{Cannot\+Generate\+Exception}
+\begin{DoxyCompactList}\small\item\em Custom exception that any key extender can throw. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_export}{Export}
+\begin{DoxyCompactList}\small\item\em Public static class that gives access to our cryptographical tools. Can be used from any assembly. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_factory}{Factory}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_crypto_1_1_factory}{Factory} class containing methods for building cellular automata and key extenders from textual description. Sometimes used together with {\ttfamily Cellular\+Automaton.\+Tell\+Type()} resp. {\ttfamily I\+Binary\+C\+A.\+Tell\+Type()} method as a replacement for missing serialization / deserialization features. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_function_testing}{Function\+Testing}
+\begin{DoxyCompactList}\small\item\em Class for testing properties of key extending algorithms. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_function_tests_for_thesis}{Function\+Tests\+For\+Thesis}
+\begin{DoxyCompactList}\small\item\em Wrapper for class {\ttfamily \hyperlink{class_crypto_1_1_function_testing}{Function\+Testing}}. It generates results in the form, which is suitable for my thesis. \end{DoxyCompactList}\item 
+interface \hyperlink{interface_crypto_1_1_i_key_extender}{I\+Key\+Extender}
+\begin{DoxyCompactList}\small\item\em Interface for all algorithms that can perform key stretching. Can be used from any assembly. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_key_extender_abstract_d}{Key\+Extender\+Abstract\+D}
+\begin{DoxyCompactList}\small\item\em Abstract class for all key extenders that implement \hyperlink{class_crypto_1_1_key_extender_abstract_d_ae403b92e9038b9c0bc7a21885e24ffc7}{Double\+Key()}. Method \hyperlink{class_crypto_1_1_key_extender_abstract_d_a3ec7fa96f391d840043eff0c8409d130}{Extend\+Key()} is provided (iterates \hyperlink{class_crypto_1_1_key_extender_abstract_d_ae403b92e9038b9c0bc7a21885e24ffc7}{Double\+Key()} method until we get a desired length). \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_key_extender_abstract_n}{Key\+Extender\+Abstract\+N}
+\begin{DoxyCompactList}\small\item\em Abstract class for all key extenders that implement \hyperlink{class_crypto_1_1_key_extender_abstract_n_a9df4156ad0a84730f87119e5a25cf1ef}{Extend\+Key()}. Method \hyperlink{class_crypto_1_1_key_extender_abstract_n_a57e9a8247ebde9e639c16107c2961d10}{Double\+Key()} simply calls \hyperlink{class_crypto_1_1_key_extender_abstract_n_a9df4156ad0a84730f87119e5a25cf1ef}{Extend\+Key()}. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_key_extender_cheating}{Key\+Extender\+Cheating}
+\begin{DoxyCompactList}\small\item\em Fake key extender which only generates random long key independently of the short key. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_key_extender_copy}{Key\+Extender\+Copy}
+\begin{DoxyCompactList}\small\item\em Stupid key extender which only copies the input (repeatedly). \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_key_extender_genetic}{Key\+Extender\+Genetic}
+\begin{DoxyCompactList}\small\item\em Algorithms which runs a genetic algorithm to find the best sequence of extenders for each key. Generating the long key may take a very long time. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_key_extender_interlaced}{Key\+Extender\+Interlaced}
+\begin{DoxyCompactList}\small\item\em Different linear algorithm, which uses specified number of steps of the underlying C\+A. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_key_extender_simple_linear}{Key\+Extender\+Simple\+Linear}
+\begin{DoxyCompactList}\small\item\em Simple algorithm, which uses only two steps of the underlying C\+A. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_key_extender_simple_quadratic}{Key\+Extender\+Simple\+Quadratic}
+\begin{DoxyCompactList}\small\item\em Simple algorithm, which calls one step of the underlying C\+A for every bit to be generated. Generating the long key may take a very long time. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_key_extender_uncertain}{Key\+Extender\+Uncertain}
+\begin{DoxyCompactList}\small\item\em Intelligent key extender that equalizes frequencies of 0 and 1, which may be different in the underlying C\+A. However it is not guaranteed that the long key will be generated. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_randomness_testing}{Randomness\+Testing}
+\begin{DoxyCompactList}\small\item\em Static class that contains some tests of randomness for binary sequences. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_search_s_g_a}{Search\+S\+G\+A}
+\begin{DoxyCompactList}\small\item\em Static class that can be used to pre-\/generate good key extenders for the genetic algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,5 +1,4 @@
 
-
 %%% Zpùsoby protahování klíèù
 
 \chapter{Zpùsoby protahování klíèù}
@@ -26,6 +25,11 @@ Nejjednodušší zpùsob, jak natáhnout klíè na dvojnásobek. Tento algoritmus použij
 
 \radar{0.857}{0.174}{0.995}{0.076}{0.438}{KeyExtenderSimpleLinear na automat 110}{L110}
 
+%00010010111111001100100010011110
+\radar{0.873}{0.184}{0.997}{0.115}{0.463}{KeyExtenderSimpleLinear na cyklický automat s 2-okolím}{Lwide}
+
+\radar{0.872}{0.183}{0.996}{0.117}{0.450}{KeyExtenderSimpleLinear na cyklický automat s 2-okolím}{Lcycl}
+
 \section{KeyExtenderSimpleQuadratic}
 
 Tento algoritmus natahuje klíè na dvojnásobek zpùsobem, který je mnohem lepší, ale mnohem pomalejší. Nejprve vytvoøí celulární automat, který je dva a pùl krát širší, než délka krátkého klíèe. Ten krátký klíè uloží do jeho prostøedních bunìk. Tedy klíè délky $n$ se uloží do stavu automatu s $2,5n$ buòkami a to od $0,75n$ po $1,75n$. Pak automat udìlá $2n$ kromù. Výstup se ète z prostøední buòky (1 bit po každém kroku automatu). Je to zpùsob, o kterém Stephen Wolfram ukázal, že generuje pseudonáhodné posloupnosti, které pøi volbì správného celulárního automatu splòují všechna mìøítka náhodnosti. Jeho návrh používal nekoneènou plochu, ale protože nám staèí natažení na $2n$, tak plocha o šíøce $2,5n$ funguje stejnì, jako kdyby se automat mohl rozpínat do nekoneèna.
@@ -39,6 +43,10 @@ Tento algoritmus natahuje klíè na dvojnásobek zpùsobem, který je mnohem lepší, a
 \radar{0.983}{0.993}{1.000}{0.856}{0.631}{KeyExtenderSimpleQuadratic na automat 30}{Q30}
 
 \radar{0.634}{0.096}{0.988}{0.835}{0.450}{KeyExtenderSimpleQuadratic na automat 110}{Q110}
+
+\radar{0.789}{0.684}{0.799}{0.797}{0.400}{KeyExtenderSimpleQuadratic na omezený automat s 2-okolím}{Qwide}
+
+\radar{0.789}{0.679}{0.818}{0.736}{0.400}{KeyExtenderSimpleQuadratic na cyklický automat s 2-okolím}{Qcycl}
 
 \section{KeyExtenderInterlaced}
 
@@ -54,6 +62,10 @@ Tento algoritmus se tváøí jako kompromis, ale blíží se spíše první (lineární var
 
 \radar{0.972}{0.986}{0.990}{0.653}{0.463}{KeyExtenderInterlaced(10, 0) na automat 110}{I110}
 
+\radar{0.971}{0.980}{0.998}{0.862}{0.463}{KeyExtenderInterlaced(10, 0) na omezený automat s 2-okolím}{Iwide}
+
+\radar{0.971}{0.980}{0.999}{0.881}{0.463}{KeyExtenderInterlaced(10, 0) na cyklický automat s 2-okolím}{Icycl}
+
 \section{KeyExtenderUncertain}
 
 Tento algoritmus øeší èastou neøest, kterou vykazují celulární automaty -- rùzný poèet 0 a 1. Algoritmus zase využívá celý stav automatu. Jsou èteny vždy dvojice bitù, pøíèemž dvojice 00 a dvojice 11 jsou zahazovány. Vždy, když algoritmus narazí na dvojici 01, tak pošle na výstup 0. A za každou dvojici 10 pošle na výstup 1. Poèet krokù automatu, který bude algoritmus muset provést, není pøedem známý.
@@ -67,3 +79,7 @@ Tento algoritmus øeší èastou neøest, kterou vykazují celulární automaty -- rùzný
 \radar{0.473}{0.481}{0.992}{0.900}{0.300}{KeyExtenderUncertain na automat 30}{U30}
 
 \radar{0.621}{0.449}{1.000}{0.914}{0.294}{KeyExtenderUncertain na automat 110}{U110}
+
+\radar{0.615}{0.481}{1.000}{0.943}{0.294}{KeyExtenderUncertain na omezený automat s 2-okolím}{Uwide}
+
+\radar{0.615}{0.482}{0.999}{0.943}{0.319}{KeyExtenderUncertain na cyklický automat s 2-okolím}{Ucycl}

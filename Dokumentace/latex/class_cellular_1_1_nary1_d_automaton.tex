@@ -1,0 +1,121 @@
+\hypertarget{class_cellular_1_1_nary1_d_automaton}{}\section{Cellular.\+Nary1\+D\+Automaton Class Reference}
+\label{class_cellular_1_1_nary1_d_automaton}\index{Cellular.\+Nary1\+D\+Automaton@{Cellular.\+Nary1\+D\+Automaton}}
+
+
+Abstract class for general 1\+D N-\/ary automata.  
+
+
+Inheritance diagram for Cellular.\+Nary1\+D\+Automaton\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_cellular_1_1_nary1_d_automaton}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cellular_1_1_nary1_d_automaton_a9b38ab16780bc9fb347f714bdd8f1295}{Nary1\+D\+Automaton} (int number\+Of\+States, int\mbox{[}$\,$\mbox{]} initial\+State)
+\item 
+\hyperlink{class_cellular_1_1_nary1_d_automaton_ad9678852ba9ef44a300f2d272757d482}{Nary1\+D\+Automaton} (int number\+Of\+States, int \hyperlink{class_cellular_1_1_automaton1_d_a915129ccf0f1e7092844c99ce6a28e5b}{size}, Random rnd)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{class_cellular_1_1_nary1_d_automaton_adfd39915b66667efeeb9b16f154b9b6b}{get\+Value\+At} (int index)
+\begin{DoxyCompactList}\small\item\em This method simplifies boundary conditions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_cellular_1_1_nary1_d_automaton_a1e499082e289666a6eb3d523d367ac1f}{N}
+\item 
+int\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_nary1_d_automaton_a563eb68c941321814d9261d68eed63f3}{state}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class for general 1\+D N-\/ary automata. 
+
+
+
+Definition at line 8 of file Nary1\+D\+Automaton.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_cellular_1_1_nary1_d_automaton_a9b38ab16780bc9fb347f714bdd8f1295}{}\index{Cellular\+::\+Nary1\+D\+Automaton@{Cellular\+::\+Nary1\+D\+Automaton}!Nary1\+D\+Automaton@{Nary1\+D\+Automaton}}
+\index{Nary1\+D\+Automaton@{Nary1\+D\+Automaton}!Cellular\+::\+Nary1\+D\+Automaton@{Cellular\+::\+Nary1\+D\+Automaton}}
+\subsubsection[{Nary1\+D\+Automaton(int number\+Of\+States, int[] initial\+State)}]{\setlength{\rightskip}{0pt plus 5cm}Cellular.\+Nary1\+D\+Automaton.\+Nary1\+D\+Automaton (
+\begin{DoxyParamCaption}
+\item[{int}]{number\+Of\+States, }
+\item[{int\mbox{[}$\,$\mbox{]}}]{initial\+State}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_nary1_d_automaton_a9b38ab16780bc9fb347f714bdd8f1295}
+
+
+Definition at line 13 of file Nary1\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_nary1_d_automaton_ad9678852ba9ef44a300f2d272757d482}{}\index{Cellular\+::\+Nary1\+D\+Automaton@{Cellular\+::\+Nary1\+D\+Automaton}!Nary1\+D\+Automaton@{Nary1\+D\+Automaton}}
+\index{Nary1\+D\+Automaton@{Nary1\+D\+Automaton}!Cellular\+::\+Nary1\+D\+Automaton@{Cellular\+::\+Nary1\+D\+Automaton}}
+\subsubsection[{Nary1\+D\+Automaton(int number\+Of\+States, int size, Random rnd)}]{\setlength{\rightskip}{0pt plus 5cm}Cellular.\+Nary1\+D\+Automaton.\+Nary1\+D\+Automaton (
+\begin{DoxyParamCaption}
+\item[{int}]{number\+Of\+States, }
+\item[{int}]{size, }
+\item[{Random}]{rnd}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_nary1_d_automaton_ad9678852ba9ef44a300f2d272757d482}
+
+
+Definition at line 20 of file Nary1\+D\+Automaton.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cellular_1_1_nary1_d_automaton_adfd39915b66667efeeb9b16f154b9b6b}{}\index{Cellular\+::\+Nary1\+D\+Automaton@{Cellular\+::\+Nary1\+D\+Automaton}!get\+Value\+At@{get\+Value\+At}}
+\index{get\+Value\+At@{get\+Value\+At}!Cellular\+::\+Nary1\+D\+Automaton@{Cellular\+::\+Nary1\+D\+Automaton}}
+\subsubsection[{get\+Value\+At(int index)}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Cellular.\+Nary1\+D\+Automaton.\+get\+Value\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_cellular_1_1_nary1_d_automaton_adfd39915b66667efeeb9b16f154b9b6b}
+
+
+This method simplifies boundary conditions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Zero-\/based index (which value is required).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value from 0 to N-\/1.
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_cellular_1_1_nary_totalistic_cyclic_automaton_a422dbcbd3e3cd3efdccc21724e7c6b01}{Cellular.\+Nary\+Totalistic\+Cyclic\+Automaton}.
+
+
+
+Definition at line 35 of file Nary1\+D\+Automaton.\+cs.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_cellular_1_1_nary1_d_automaton_a1e499082e289666a6eb3d523d367ac1f}{}\index{Cellular\+::\+Nary1\+D\+Automaton@{Cellular\+::\+Nary1\+D\+Automaton}!N@{N}}
+\index{N@{N}!Cellular\+::\+Nary1\+D\+Automaton@{Cellular\+::\+Nary1\+D\+Automaton}}
+\subsubsection[{N}]{\setlength{\rightskip}{0pt plus 5cm}int Cellular.\+Nary1\+D\+Automaton.\+N\hspace{0.3cm}{\ttfamily [protected]}}\label{class_cellular_1_1_nary1_d_automaton_a1e499082e289666a6eb3d523d367ac1f}
+
+
+Definition at line 10 of file Nary1\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_nary1_d_automaton_a563eb68c941321814d9261d68eed63f3}{}\index{Cellular\+::\+Nary1\+D\+Automaton@{Cellular\+::\+Nary1\+D\+Automaton}!state@{state}}
+\index{state@{state}!Cellular\+::\+Nary1\+D\+Automaton@{Cellular\+::\+Nary1\+D\+Automaton}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}int \mbox{[}$\,$\mbox{]} Cellular.\+Nary1\+D\+Automaton.\+state\hspace{0.3cm}{\ttfamily [protected]}}\label{class_cellular_1_1_nary1_d_automaton_a563eb68c941321814d9261d68eed63f3}
+
+
+Definition at line 11 of file Nary1\+D\+Automaton.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Martin/\+M\+F\+F/\+\_\+baka/\+Martin\+Dvorak/\+Cellular/\hyperlink{_nary1_d_automaton_8cs}{Nary1\+D\+Automaton.\+cs}\end{DoxyCompactItemize}

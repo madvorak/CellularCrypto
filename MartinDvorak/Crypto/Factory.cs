@@ -5,46 +5,55 @@ using Cellular;
 
 namespace Crypto
 {
-    class Factory
+    /// <summary>
+    /// Factory class containing methods for building cellular automata and key extenders from textual description.
+    /// Sometimes used together with <c>CellularAutomaton.TellType()</c> resp. <c>IBinaryCA.TellType()</c> method
+    /// as a replacement for missing serialization / deserialization features.
+    /// </summary>
+    static class Factory
     {
-        public static KeyExtenderAbstractD CreateExtender(string description)
+        public static IBinaryCA CreateAutomaton(string description)
         {
-            string[] parts = description.Split(new string[] { " using " }, StringSplitOptions.None);
-
-            IBinaryCA automaton = null;
-            if (parts[1].StartsWith("Basic"))
+            if (description.StartsWith("Basic"))
             {
-                byte number = byte.Parse(parts[1].Split(' ')[3]);
-                automaton = new ElementaryFastAutomaton(number, 1);
+                byte number = byte.Parse(description.Split(' ')[3]);
+                return new ElementaryFastAutomaton(number, 1);
             }
-            else if (parts[1].StartsWith("Binary"))
+            else if (description.StartsWith("Binary"))
             {
-                string ruleString = parts[1].Split(' ')[4];
+                string ruleString = description.Split(' ')[4];
                 bool[] rule = new bool[32];
                 for (int i = 0; i < 32; i++)
                 {
                     rule[i] = ruleString[i] == '1';
                 }
-                automaton = new BinaryRangeAutomaton(2, rule, 1);
+                return new BinaryRangeAutomaton(2, rule, 1);
             }
-            else if (parts[1].StartsWith("Cyclic"))
+            else if (description.StartsWith("Cyclic"))
             {
-                string ruleString = parts[1].Split(' ')[5];
+                string ruleString = description.Split(' ')[5];
                 bool[] rule = new bool[32];
                 for (int i = 0; i < 32; i++)
                 {
                     rule[i] = ruleString[i] == '1';
                 }
-                automaton = new BinaryRangeAutomaton(2, rule, 1);
+                return new BinaryRangeAutomaton(2, rule, 1);
             }
-            else if (parts[1].StartsWith("Totalistic"))
+            else if (description.StartsWith("Totalistic"))
             {
-                automaton = new GameOfLife(1, 1);
+                return new GameOfLife(1, 1);
             }
             else
             {
                 throw new ArgumentException("Wrong format!");
             }
+        }
+
+        public static KeyExtenderAbstractD CreateExtender(string description)
+        {
+            string[] parts = description.Split(new string[] { " using " }, StringSplitOptions.None);
+
+            IBinaryCA automaton = CreateAutomaton(parts[1]);
 
             if (parts[0].StartsWith("SimpleLinear"))
             {
@@ -65,6 +74,13 @@ namespace Crypto
             }
         }
 
+        /// <summary>
+        /// Gathers successful key extenders from all files in given directory.
+        /// </summary>
+        /// <param name="directory">The directory with ".xca" files.</param>
+        /// <returns>
+        /// List of (fully build) key extenders that were successful during previous runs of the genetic algorithm.
+        /// </returns>
         public static List<KeyExtenderAbstractD> GatherSuccessfulExtenders(string directory)
         {
             List<KeyExtenderAbstractD> collection = new List<KeyExtenderAbstractD>();

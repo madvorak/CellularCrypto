@@ -1,0 +1,132 @@
+\hypertarget{class_cellular_1_1_nary_totalistic_cyclic_automaton}{}\section{Cellular.\+Nary\+Totalistic\+Cyclic\+Automaton Class Reference}
+\label{class_cellular_1_1_nary_totalistic_cyclic_automaton}\index{Cellular.\+Nary\+Totalistic\+Cyclic\+Automaton@{Cellular.\+Nary\+Totalistic\+Cyclic\+Automaton}}
+
+
+Class representing any N-\/ary one-\/dimensional automaton with a totalistic rule -\/ cyclic variant. The new state of each cell depends on the sum of its current state and the current state of adjecent cells.  
+
+
+Inheritance diagram for Cellular.\+Nary\+Totalistic\+Cyclic\+Automaton\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_cellular_1_1_nary_totalistic_cyclic_automaton}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cellular_1_1_nary_totalistic_cyclic_automaton_a4616b10ffadcaef7a2d21b47976844af}{Nary\+Totalistic\+Cyclic\+Automaton} (int number\+Of\+States, int\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_nary_totalistic_automaton_a878c767c6823bd8ed8dc0f7d2ccb1fd2}{rule}, int\mbox{[}$\,$\mbox{]} initial\+State)
+\item 
+override object \hyperlink{class_cellular_1_1_nary_totalistic_cyclic_automaton_aa8d5a7d77a6dfc5f6e4fae6ba1c6cfd0}{Clone} ()
+\begin{DoxyCompactList}\small\item\em Creates an appropriate copy of the C\+A. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. \end{DoxyCompactList}\item 
+override string \hyperlink{class_cellular_1_1_nary_totalistic_cyclic_automaton_ac5c39cfb72386e3ab6132ab420091ae9}{Tell\+Type} ()
+\begin{DoxyCompactList}\small\item\em Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override int \hyperlink{class_cellular_1_1_nary_totalistic_cyclic_automaton_a422dbcbd3e3cd3efdccc21724e7c6b01}{get\+Value\+At} (int index)
+\begin{DoxyCompactList}\small\item\em This method simplifies boundary conditions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class representing any N-\/ary one-\/dimensional automaton with a totalistic rule -\/ cyclic variant. The new state of each cell depends on the sum of its current state and the current state of adjecent cells. 
+
+
+
+Definition at line 7 of file Nary\+Totalistic\+Cyclic\+Automaton.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_cellular_1_1_nary_totalistic_cyclic_automaton_a4616b10ffadcaef7a2d21b47976844af}{}\index{Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton}!Nary\+Totalistic\+Cyclic\+Automaton@{Nary\+Totalistic\+Cyclic\+Automaton}}
+\index{Nary\+Totalistic\+Cyclic\+Automaton@{Nary\+Totalistic\+Cyclic\+Automaton}!Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton}}
+\subsubsection[{Nary\+Totalistic\+Cyclic\+Automaton(int number\+Of\+States, int[] rule, int[] initial\+State)}]{\setlength{\rightskip}{0pt plus 5cm}Cellular.\+Nary\+Totalistic\+Cyclic\+Automaton.\+Nary\+Totalistic\+Cyclic\+Automaton (
+\begin{DoxyParamCaption}
+\item[{int}]{number\+Of\+States, }
+\item[{int\mbox{[}$\,$\mbox{]}}]{rule, }
+\item[{int\mbox{[}$\,$\mbox{]}}]{initial\+State}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_nary_totalistic_cyclic_automaton_a4616b10ffadcaef7a2d21b47976844af}
+
+
+Definition at line 9 of file Nary\+Totalistic\+Cyclic\+Automaton.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cellular_1_1_nary_totalistic_cyclic_automaton_aa8d5a7d77a6dfc5f6e4fae6ba1c6cfd0}{}\index{Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton}!Clone@{Clone}}
+\index{Clone@{Clone}!Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton}}
+\subsubsection[{Clone()}]{\setlength{\rightskip}{0pt plus 5cm}override object Cellular.\+Nary\+Totalistic\+Cyclic\+Automaton.\+Clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_cellular_1_1_nary_totalistic_cyclic_automaton_aa8d5a7d77a6dfc5f6e4fae6ba1c6cfd0}
+
+
+Creates an appropriate copy of the C\+A. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. 
+
+\begin{DoxyReturn}{Returns}
+A copy of the {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton}{Cellular\+Automaton}} as an {\ttfamily Object}
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_cellular_1_1_nary_totalistic_automaton_a13f16113915ecec451fc4764a32044f9}{Cellular.\+Nary\+Totalistic\+Automaton}.
+
+
+
+Definition at line 20 of file Nary\+Totalistic\+Cyclic\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_nary_totalistic_cyclic_automaton_a422dbcbd3e3cd3efdccc21724e7c6b01}{}\index{Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton}!get\+Value\+At@{get\+Value\+At}}
+\index{get\+Value\+At@{get\+Value\+At}!Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton}}
+\subsubsection[{get\+Value\+At(int index)}]{\setlength{\rightskip}{0pt plus 5cm}override int Cellular.\+Nary\+Totalistic\+Cyclic\+Automaton.\+get\+Value\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_cellular_1_1_nary_totalistic_cyclic_automaton_a422dbcbd3e3cd3efdccc21724e7c6b01}
+
+
+This method simplifies boundary conditions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Zero-\/based index (which value is required).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value from 0 to N-\/1.
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_cellular_1_1_nary1_d_automaton_adfd39915b66667efeeb9b16f154b9b6b}{Cellular.\+Nary1\+D\+Automaton}.
+
+
+
+Definition at line 11 of file Nary\+Totalistic\+Cyclic\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_nary_totalistic_cyclic_automaton_ac5c39cfb72386e3ab6132ab420091ae9}{}\index{Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton}!Tell\+Type@{Tell\+Type}}
+\index{Tell\+Type@{Tell\+Type}!Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Cyclic\+Automaton}}
+\subsubsection[{Tell\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}override string Cellular.\+Nary\+Totalistic\+Cyclic\+Automaton.\+Tell\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_cellular_1_1_nary_totalistic_cyclic_automaton_ac5c39cfb72386e3ab6132ab420091ae9}
+
+
+Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. 
+
+\begin{DoxyReturn}{Returns}
+Type of the C\+A as a string.
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_cellular_1_1_nary_totalistic_automaton_aa691c532a55638c7e3d0c125a4244773}{Cellular.\+Nary\+Totalistic\+Automaton}.
+
+
+
+Definition at line 25 of file Nary\+Totalistic\+Cyclic\+Automaton.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Martin/\+M\+F\+F/\+\_\+baka/\+Martin\+Dvorak/\+Cellular/\hyperlink{_nary_totalistic_cyclic_automaton_8cs}{Nary\+Totalistic\+Cyclic\+Automaton.\+cs}\end{DoxyCompactItemize}

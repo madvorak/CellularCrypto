@@ -2,6 +2,9 @@
 
 namespace Crypto
 {
+    /// <summary>
+    /// Wrapper for class <c>FunctionTesting</c>. It generates results in the form, which is suitable for my thesis.
+    /// </summary>
     class FunctionTestsForThesis
     {
         private FunctionTesting tester;

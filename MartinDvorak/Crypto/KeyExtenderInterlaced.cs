@@ -4,6 +4,9 @@ using Cellular;
 
 namespace Crypto
 {
+    /// <summary>
+    /// Different linear algorithm, which uses specified number of steps of the underlying CA.
+    /// </summary>
     class KeyExtenderInterlaced : KeyExtenderAbstractD
     {
         private readonly IBinaryCA ca;

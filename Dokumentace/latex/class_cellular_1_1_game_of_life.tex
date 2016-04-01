@@ -1,0 +1,112 @@
+\hypertarget{class_cellular_1_1_game_of_life}{}\section{Cellular.\+Game\+Of\+Life Class Reference}
+\label{class_cellular_1_1_game_of_life}\index{Cellular.\+Game\+Of\+Life@{Cellular.\+Game\+Of\+Life}}
+
+
+Class representing the classic Conway\textquotesingle{}s Game of Life automaton.  
+
+
+Inheritance diagram for Cellular.\+Game\+Of\+Life\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{class_cellular_1_1_game_of_life}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cellular_1_1_game_of_life_afbc466540254767b2a93c45bdabf1da1}{Game\+Of\+Life} (int \hyperlink{class_cellular_1_1_automaton2_d_a1e9e5ec637c747a859c346839c90d174}{width}, int height)
+\begin{DoxyCompactList}\small\item\em Creates a new Game of Life with a random initial state. \end{DoxyCompactList}\item 
+\hyperlink{class_cellular_1_1_game_of_life_a13f744fc251176cf889b908bda8805c9}{Game\+Of\+Life} (Bit\+Array\mbox{[}$\,$\mbox{]} initial\+State)
+\begin{DoxyCompactList}\small\item\em Creates a new Game of Life with givin initial state. \end{DoxyCompactList}\item 
+override string \hyperlink{class_cellular_1_1_game_of_life_a9a8627c06f5cd9c4f0e99d3e78582c62}{Tell\+Type} ()
+\begin{DoxyCompactList}\small\item\em Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class representing the classic Conway\textquotesingle{}s Game of Life automaton. 
+
+
+
+Definition at line 9 of file Game\+Of\+Life.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_cellular_1_1_game_of_life_afbc466540254767b2a93c45bdabf1da1}{}\index{Cellular\+::\+Game\+Of\+Life@{Cellular\+::\+Game\+Of\+Life}!Game\+Of\+Life@{Game\+Of\+Life}}
+\index{Game\+Of\+Life@{Game\+Of\+Life}!Cellular\+::\+Game\+Of\+Life@{Cellular\+::\+Game\+Of\+Life}}
+\subsubsection[{Game\+Of\+Life(int width, int height)}]{\setlength{\rightskip}{0pt plus 5cm}Cellular.\+Game\+Of\+Life.\+Game\+Of\+Life (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_game_of_life_afbc466540254767b2a93c45bdabf1da1}
+
+
+Creates a new Game of Life with a random initial state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the new C\+A (length of rows).\\
+\hline
+{\em height} & The height of the new C\+A (number of rows).\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file Game\+Of\+Life.\+cs.
+
+\hypertarget{class_cellular_1_1_game_of_life_a13f744fc251176cf889b908bda8805c9}{}\index{Cellular\+::\+Game\+Of\+Life@{Cellular\+::\+Game\+Of\+Life}!Game\+Of\+Life@{Game\+Of\+Life}}
+\index{Game\+Of\+Life@{Game\+Of\+Life}!Cellular\+::\+Game\+Of\+Life@{Cellular\+::\+Game\+Of\+Life}}
+\subsubsection[{Game\+Of\+Life(\+Bit\+Array[] initial\+State)}]{\setlength{\rightskip}{0pt plus 5cm}Cellular.\+Game\+Of\+Life.\+Game\+Of\+Life (
+\begin{DoxyParamCaption}
+\item[{Bit\+Array\mbox{[}$\,$\mbox{]}}]{initial\+State}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_game_of_life_a13f744fc251176cf889b908bda8805c9}
+
+
+Creates a new Game of Life with givin initial state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+State} & An array of {\ttfamily Bit\+Array}s describing the initial state of the C\+A. This also determines the size (width, height) of the new C\+A.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file Game\+Of\+Life.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cellular_1_1_game_of_life_a9a8627c06f5cd9c4f0e99d3e78582c62}{}\index{Cellular\+::\+Game\+Of\+Life@{Cellular\+::\+Game\+Of\+Life}!Tell\+Type@{Tell\+Type}}
+\index{Tell\+Type@{Tell\+Type}!Cellular\+::\+Game\+Of\+Life@{Cellular\+::\+Game\+Of\+Life}}
+\subsubsection[{Tell\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}override string Cellular.\+Game\+Of\+Life.\+Tell\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_game_of_life_a9a8627c06f5cd9c4f0e99d3e78582c62}
+
+
+Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. 
+
+\begin{DoxyReturn}{Returns}
+The same string as calling 
+\begin{DoxyCode}
+CellularAutomaton.TellType();
+\end{DoxyCode}
+.
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_cellular_1_1_i_binary_c_a_aa67feabf5d1513aa74076d255c661948}{Cellular.\+I\+Binary\+C\+A}.
+
+
+
+Definition at line 34 of file Game\+Of\+Life.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Martin/\+M\+F\+F/\+\_\+baka/\+Martin\+Dvorak/\+Cellular/\hyperlink{_game_of_life_8cs}{Game\+Of\+Life.\+cs}\end{DoxyCompactItemize}

@@ -1,0 +1,39 @@
+\hypertarget{namespace_cellular}{}\section{Cellular Namespace Reference}
+\label{namespace_cellular}\index{Cellular@{Cellular}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_cellular_1_1_automaton1_d}{Automaton1\+D}
+\begin{DoxyCompactList}\small\item\em Abstract class for all 1\+D automata (binary \& others). \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_automaton2_d}{Automaton2\+D}
+\begin{DoxyCompactList}\small\item\em Abstract class for all 2\+D automata. When indexing, (\char`\"{}height first\char`\"{}) the distance from the top comes before the distance from the left border. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_binary1_d_automaton}{Binary1\+D\+Automaton}
+\begin{DoxyCompactList}\small\item\em Class containing base-\/constructors for all binary 1\+D automata and implementation of the {\ttfamily \hyperlink{interface_cellular_1_1_i_binary_c_a}{I\+Binary\+C\+A}} interface. The state is kept in a {\ttfamily Bit\+Array}. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_binary2_d_automaton}{Binary2\+D\+Automaton}
+\begin{DoxyCompactList}\small\item\em Class containing base-\/constructors for all binary 2\+D automata and implementation of the {\ttfamily \hyperlink{interface_cellular_1_1_i_binary_c_a}{I\+Binary\+C\+A}} interface. The state is kept in an array of {\ttfamily Bit\+Array}s reprezenting rows. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_binary_range_automaton}{Binary\+Range\+Automaton}
+\begin{DoxyCompactList}\small\item\em Class representing any binary 1\+D automaton with symmetric scope. The automaton has firmly set borders. Referencing a cell beyond borders acts as referencing a dead cell. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_binary_range_cyclic_automaton}{Binary\+Range\+Cyclic\+Automaton}
+\begin{DoxyCompactList}\small\item\em Class representing any binary 1\+D automaton with symmetric scope. The automaton is cyclic -\/ its edges are connected. Therefore, all positions are equivalent. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_cellular_automaton}{Cellular\+Automaton}
+\begin{DoxyCompactList}\small\item\em The top class of the C\+A hierarchy. Every constructor should follow this logical order when considering its parametres\+: specification of the type (usually not needed), rule, size, initial state / rng. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_elementary_automaton}{Elementary\+Automaton}
+\begin{DoxyCompactList}\small\item\em Class representing 256 elementary C\+A with firmly set borders. This specific implementation calculates every bit separately. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_elementary_fast_automaton}{Elementary\+Fast\+Automaton}
+\begin{DoxyCompactList}\small\item\em Class representing 256 elementary C\+A with firmly set borders. This specific implementation maps 10 cells onto 8 cells at once, so it should be faster a little. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_game_of_life}{Game\+Of\+Life}
+\begin{DoxyCompactList}\small\item\em Class representing the classic Conway\textquotesingle{}s Game of Life automaton. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_game_of_life_interactive}{Game\+Of\+Life\+Interactive}
+\begin{DoxyCompactList}\small\item\em Class representing Conway\textquotesingle{}s Game of Life automaton for interactive use (e.\+g. in Winforms). \end{DoxyCompactList}\item 
+interface \hyperlink{interface_cellular_1_1_i_binary_c_a}{I\+Binary\+C\+A}
+\begin{DoxyCompactList}\small\item\em Common interface for all binary cellular automata. Most work with C\+A is done through this interface. Only subclasses of {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton}{Cellular\+Automaton}} are supposed to implement this interface. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_nary1_d_automaton}{Nary1\+D\+Automaton}
+\begin{DoxyCompactList}\small\item\em Abstract class for general 1\+D N-\/ary automata. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_nary_totalistic_automaton}{Nary\+Totalistic\+Automaton}
+\begin{DoxyCompactList}\small\item\em Class representing any n-\/ary one-\/dimensional automaton with a totalistic rule -\/ bordered variant. The new state of each cell depends on the sum of its current state and the current state of adjecent cells. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_nary_totalistic_cyclic_automaton}{Nary\+Totalistic\+Cyclic\+Automaton}
+\begin{DoxyCompactList}\small\item\em Class representing any N-\/ary one-\/dimensional automaton with a totalistic rule -\/ cyclic variant. The new state of each cell depends on the sum of its current state and the current state of adjecent cells. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_totalistic2_d_automaton}{Totalistic2\+D\+Automaton}
+\begin{DoxyCompactList}\small\item\em Class representing a totalistic 2\+D automaton that uses Moore Neighborhood. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_utilities}{Utilities}
+\begin{DoxyCompactList}\small\item\em Static class packing a group of utilities for working with C\+A. \end{DoxyCompactList}\end{DoxyCompactItemize}

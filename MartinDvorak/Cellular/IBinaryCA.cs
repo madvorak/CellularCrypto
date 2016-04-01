@@ -53,5 +53,11 @@ namespace Cellular
         /// <param name="newInstanceState">Initial state of the new (returned) instance.</param>
         /// <returns>New binary CA with identical behaviour, but newly given initial state.</returns>
         IBinaryCA CloneTemplate(BitArray newInstanceState);
+
+        /// <summary>
+        /// Announces the runtime type of the CA including info about its rule. It serves for debugging purposes.
+        /// </summary>
+        /// <returns>The same string as calling <code>CellularAutomaton.TellType();</code>.</returns>
+        string TellType();
     }
 }

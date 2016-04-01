@@ -2,6 +2,9 @@
 
 namespace UserForms
 {
+    /// <summary>
+    /// Static class that allows to display an interactive window from a console application.
+    /// </summary>
     static class Adapter
     {
         public static void DisplayForm()

@@ -1,0 +1,197 @@
+\hypertarget{class_cellular_1_1_nary_totalistic_automaton}{}\section{Cellular.\+Nary\+Totalistic\+Automaton Class Reference}
+\label{class_cellular_1_1_nary_totalistic_automaton}\index{Cellular.\+Nary\+Totalistic\+Automaton@{Cellular.\+Nary\+Totalistic\+Automaton}}
+
+
+Class representing any n-\/ary one-\/dimensional automaton with a totalistic rule -\/ bordered variant. The new state of each cell depends on the sum of its current state and the current state of adjecent cells.  
+
+
+Inheritance diagram for Cellular.\+Nary\+Totalistic\+Automaton\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_cellular_1_1_nary_totalistic_automaton}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cellular_1_1_nary_totalistic_automaton_aafe92ae99ccbb3591b128d6e720227f6}{Nary\+Totalistic\+Automaton} (int number\+Of\+States, int\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_nary_totalistic_automaton_a878c767c6823bd8ed8dc0f7d2ccb1fd2}{rule}, int\mbox{[}$\,$\mbox{]} initial\+State)
+\begin{DoxyCompactList}\small\item\em Creates a new totalistic N-\/ary automaton with given rule and initial state. \end{DoxyCompactList}\item 
+override void \hyperlink{class_cellular_1_1_nary_totalistic_automaton_ad90769a438ab94b46d4750a571782056}{Step} ()
+\begin{DoxyCompactList}\small\item\em Performs one step applying the specific rule for creating a new state. \end{DoxyCompactList}\item 
+override object \hyperlink{class_cellular_1_1_nary_totalistic_automaton_a13f16113915ecec451fc4764a32044f9}{Clone} ()
+\begin{DoxyCompactList}\small\item\em Creates an appropriate copy of the C\+A. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. \end{DoxyCompactList}\item 
+override string \hyperlink{class_cellular_1_1_nary_totalistic_automaton_aa691c532a55638c7e3d0c125a4244773}{Tell\+Type} ()
+\begin{DoxyCompactList}\small\item\em Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. \end{DoxyCompactList}\item 
+string \hyperlink{class_cellular_1_1_nary_totalistic_automaton_a239c8e21ae35741c4baadb96be21cec9}{Print\+Ternary} ()
+\begin{DoxyCompactList}\small\item\em Converts the inner state into a well-\/printable string. This method works best for ternary (N=3) automata. \end{DoxyCompactList}\item 
+string \hyperlink{class_cellular_1_1_nary_totalistic_automaton_aa9d5e154d625d8a8884221df45766145}{Print\+Quinary} ()
+\begin{DoxyCompactList}\small\item\em Converts the inner state into a well-\/printable string. This method works best for quinary (N=5) automata. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_nary_totalistic_automaton_a878c767c6823bd8ed8dc0f7d2ccb1fd2}{rule}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class representing any n-\/ary one-\/dimensional automaton with a totalistic rule -\/ bordered variant. The new state of each cell depends on the sum of its current state and the current state of adjecent cells. 
+
+
+
+Definition at line 9 of file Nary\+Totalistic\+Automaton.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_cellular_1_1_nary_totalistic_automaton_aafe92ae99ccbb3591b128d6e720227f6}{}\index{Cellular\+::\+Nary\+Totalistic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Automaton}!Nary\+Totalistic\+Automaton@{Nary\+Totalistic\+Automaton}}
+\index{Nary\+Totalistic\+Automaton@{Nary\+Totalistic\+Automaton}!Cellular\+::\+Nary\+Totalistic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Automaton}}
+\subsubsection[{Nary\+Totalistic\+Automaton(int number\+Of\+States, int[] rule, int[] initial\+State)}]{\setlength{\rightskip}{0pt plus 5cm}Cellular.\+Nary\+Totalistic\+Automaton.\+Nary\+Totalistic\+Automaton (
+\begin{DoxyParamCaption}
+\item[{int}]{number\+Of\+States, }
+\item[{int\mbox{[}$\,$\mbox{]}}]{rule, }
+\item[{int\mbox{[}$\,$\mbox{]}}]{initial\+State}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_nary_totalistic_automaton_aafe92ae99ccbb3591b128d6e720227f6}
+
+
+Creates a new totalistic N-\/ary automaton with given rule and initial state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number\+Of\+States} & The N.\\
+\hline
+{\em rule} & Array representing the rule for creating a new state. Value in rule\mbox{[}0\mbox{]} determines what happens to a white (0/dead) cell with white immediate neighbours. Value in rule\mbox{[}3$\ast$(N-\/1)\mbox{]} determines what happens to a black (max\+Val) cell with black immediate neighbours.\\
+\hline
+{\em initial\+State} & An integer array describing the initial state of the C\+A. This also determines the size of the new C\+A.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file Nary\+Totalistic\+Automaton.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cellular_1_1_nary_totalistic_automaton_a13f16113915ecec451fc4764a32044f9}{}\index{Cellular\+::\+Nary\+Totalistic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Automaton}!Clone@{Clone}}
+\index{Clone@{Clone}!Cellular\+::\+Nary\+Totalistic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Automaton}}
+\subsubsection[{Clone()}]{\setlength{\rightskip}{0pt plus 5cm}override object Cellular.\+Nary\+Totalistic\+Automaton.\+Clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_cellular_1_1_nary_totalistic_automaton_a13f16113915ecec451fc4764a32044f9}
+
+
+Creates an appropriate copy of the C\+A. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. 
+
+\begin{DoxyReturn}{Returns}
+A copy of the {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton}{Cellular\+Automaton}} as an {\ttfamily Object}
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_cellular_1_1_cellular_automaton_affd487b397cdbbbb1982815bbcd8e7d3}{Cellular.\+Cellular\+Automaton}.
+
+
+
+Reimplemented in \hyperlink{class_cellular_1_1_nary_totalistic_cyclic_automaton_aa8d5a7d77a6dfc5f6e4fae6ba1c6cfd0}{Cellular.\+Nary\+Totalistic\+Cyclic\+Automaton}.
+
+
+
+Definition at line 37 of file Nary\+Totalistic\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_nary_totalistic_automaton_aa9d5e154d625d8a8884221df45766145}{}\index{Cellular\+::\+Nary\+Totalistic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Automaton}!Print\+Quinary@{Print\+Quinary}}
+\index{Print\+Quinary@{Print\+Quinary}!Cellular\+::\+Nary\+Totalistic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Automaton}}
+\subsubsection[{Print\+Quinary()}]{\setlength{\rightskip}{0pt plus 5cm}string Cellular.\+Nary\+Totalistic\+Automaton.\+Print\+Quinary (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_nary_totalistic_automaton_aa9d5e154d625d8a8884221df45766145}
+
+
+Converts the inner state into a well-\/printable string. This method works best for quinary (N=5) automata. 
+
+\begin{DoxyReturn}{Returns}
+String consisting of different shades of rectangles. All values 4+ are represented by a full rectangle.
+\end{DoxyReturn}
+
+
+Definition at line 70 of file Nary\+Totalistic\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_nary_totalistic_automaton_a239c8e21ae35741c4baadb96be21cec9}{}\index{Cellular\+::\+Nary\+Totalistic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Automaton}!Print\+Ternary@{Print\+Ternary}}
+\index{Print\+Ternary@{Print\+Ternary}!Cellular\+::\+Nary\+Totalistic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Automaton}}
+\subsubsection[{Print\+Ternary()}]{\setlength{\rightskip}{0pt plus 5cm}string Cellular.\+Nary\+Totalistic\+Automaton.\+Print\+Ternary (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_nary_totalistic_automaton_a239c8e21ae35741c4baadb96be21cec9}
+
+
+Converts the inner state into a well-\/printable string. This method works best for ternary (N=3) automata. 
+
+\begin{DoxyReturn}{Returns}
+String consisting of different shades of rectangles. All values 2+ are represented by a full rectangle.
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Nary\+Totalistic\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_nary_totalistic_automaton_ad90769a438ab94b46d4750a571782056}{}\index{Cellular\+::\+Nary\+Totalistic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Automaton}!Step@{Step}}
+\index{Step@{Step}!Cellular\+::\+Nary\+Totalistic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Automaton}}
+\subsubsection[{Step()}]{\setlength{\rightskip}{0pt plus 5cm}override void Cellular.\+Nary\+Totalistic\+Automaton.\+Step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_cellular_1_1_nary_totalistic_automaton_ad90769a438ab94b46d4750a571782056}
+
+
+Performs one step applying the specific rule for creating a new state. 
+
+
+
+Implements \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Cellular.\+Cellular\+Automaton}.
+
+
+
+Definition at line 27 of file Nary\+Totalistic\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_nary_totalistic_automaton_aa691c532a55638c7e3d0c125a4244773}{}\index{Cellular\+::\+Nary\+Totalistic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Automaton}!Tell\+Type@{Tell\+Type}}
+\index{Tell\+Type@{Tell\+Type}!Cellular\+::\+Nary\+Totalistic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Automaton}}
+\subsubsection[{Tell\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}override string Cellular.\+Nary\+Totalistic\+Automaton.\+Tell\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_cellular_1_1_nary_totalistic_automaton_aa691c532a55638c7e3d0c125a4244773}
+
+
+Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. 
+
+\begin{DoxyReturn}{Returns}
+Type of the C\+A as a string.
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_cellular_1_1_cellular_automaton_abe4b92fd405530c8a08cc07a3a19fff4}{Cellular.\+Cellular\+Automaton}.
+
+
+
+Reimplemented in \hyperlink{class_cellular_1_1_nary_totalistic_cyclic_automaton_ac5c39cfb72386e3ab6132ab420091ae9}{Cellular.\+Nary\+Totalistic\+Cyclic\+Automaton}.
+
+
+
+Definition at line 42 of file Nary\+Totalistic\+Automaton.\+cs.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_cellular_1_1_nary_totalistic_automaton_a878c767c6823bd8ed8dc0f7d2ccb1fd2}{}\index{Cellular\+::\+Nary\+Totalistic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Automaton}!rule@{rule}}
+\index{rule@{rule}!Cellular\+::\+Nary\+Totalistic\+Automaton@{Cellular\+::\+Nary\+Totalistic\+Automaton}}
+\subsubsection[{rule}]{\setlength{\rightskip}{0pt plus 5cm}int \mbox{[}$\,$\mbox{]} Cellular.\+Nary\+Totalistic\+Automaton.\+rule\hspace{0.3cm}{\ttfamily [protected]}}\label{class_cellular_1_1_nary_totalistic_automaton_a878c767c6823bd8ed8dc0f7d2ccb1fd2}
+
+
+Definition at line 11 of file Nary\+Totalistic\+Automaton.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Martin/\+M\+F\+F/\+\_\+baka/\+Martin\+Dvorak/\+Cellular/\hyperlink{_nary_totalistic_automaton_8cs}{Nary\+Totalistic\+Automaton.\+cs}\end{DoxyCompactItemize}

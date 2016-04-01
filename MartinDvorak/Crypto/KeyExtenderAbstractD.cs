@@ -3,7 +3,8 @@
 namespace Crypto
 {
     /// <summary>
-    /// Abstract class for all key extenders that implement DoubleKey(). Method ExtendKey() is provided.
+    /// Abstract class for all key extenders that implement DoubleKey().
+    /// Method ExtendKey() is provided (iterates DoubleKey() method until we get a desired length).
     /// </summary>
     abstract class KeyExtenderAbstractD : IKeyExtender
     {

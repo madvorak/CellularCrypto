@@ -7,7 +7,7 @@ namespace Testing
     /// <summary>
     /// Demonstration of the implemented tests of randomness, especially the entropy test.
     /// </summary>
-    class RandomTestTest
+    static class RandomTestTest
     {
         private static void TestBitArray(BitArray b)
         {

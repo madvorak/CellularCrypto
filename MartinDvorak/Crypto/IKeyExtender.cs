@@ -3,7 +3,7 @@
 namespace Crypto
 {
     /// <summary>
-    /// Interface for all algorithms that can perform key stretching.
+    /// Interface for all algorithms that can perform key stretching. Can be used from any assembly.
     /// </summary>
     public interface IKeyExtender
     {

@@ -5,6 +5,9 @@ using Cellular;
 
 namespace Crypto
 {
+    /// <summary>
+    /// Static class that can be used to pre-generate good key extenders for the genetic algorithm.
+    /// </summary>
     static class SearchSGA
     {
         /// <summary>

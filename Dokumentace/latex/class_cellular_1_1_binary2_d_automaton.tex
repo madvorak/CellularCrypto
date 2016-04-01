@@ -1,0 +1,155 @@
+\hypertarget{class_cellular_1_1_binary2_d_automaton}{}\section{Cellular.\+Binary2\+D\+Automaton Class Reference}
+\label{class_cellular_1_1_binary2_d_automaton}\index{Cellular.\+Binary2\+D\+Automaton@{Cellular.\+Binary2\+D\+Automaton}}
+
+
+Class containing base-\/constructors for all binary 2\+D automata and implementation of the {\ttfamily \hyperlink{interface_cellular_1_1_i_binary_c_a}{I\+Binary\+C\+A}} interface. The state is kept in an array of {\ttfamily Bit\+Array}s reprezenting rows.  
+
+
+Inheritance diagram for Cellular.\+Binary2\+D\+Automaton\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{class_cellular_1_1_binary2_d_automaton}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cellular_1_1_binary2_d_automaton_a6956aa8cc05e4d00c116d8cc5e8528d4}{Binary2\+D\+Automaton} (int \hyperlink{class_cellular_1_1_automaton2_d_a1e9e5ec637c747a859c346839c90d174}{width}, int height)
+\begin{DoxyCompactList}\small\item\em Creates a new {\ttfamily \hyperlink{class_cellular_1_1_binary2_d_automaton}{Binary2\+D\+Automaton}} of given size with one living cell in the middle, the rest is dead. \end{DoxyCompactList}\item 
+\hyperlink{class_cellular_1_1_binary2_d_automaton_ab2bdc13f759e29b0efe84995c74e5006}{Binary2\+D\+Automaton} (Bit\+Array\mbox{[}$\,$\mbox{]} initial\+State)
+\begin{DoxyCompactList}\small\item\em Creates a new {\ttfamily \hyperlink{class_cellular_1_1_binary2_d_automaton}{Binary2\+D\+Automaton}} of given initial state. \end{DoxyCompactList}\item 
+\hyperlink{class_cellular_1_1_binary2_d_automaton_a465d87aeab9f265595e942e46308f75f}{Binary2\+D\+Automaton} (int \hyperlink{class_cellular_1_1_automaton2_d_a1e9e5ec637c747a859c346839c90d174}{width}, int height, Random rnd)
+\begin{DoxyCompactList}\small\item\em Creates a new {\ttfamily \hyperlink{class_cellular_1_1_binary2_d_automaton}{Binary2\+D\+Automaton}} of given size with a random initial state. \end{DoxyCompactList}\item 
+override int \hyperlink{class_cellular_1_1_binary2_d_automaton_af0b06d58b66367dbeb712f2c4237ff54}{Get\+Hash\+Code} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract \hyperlink{interface_cellular_1_1_i_binary_c_a}{I\+Binary\+C\+A} \hyperlink{class_cellular_1_1_binary2_d_automaton_ad2d31668c7b8f8e959575e03b995273f}{clone\+Template} (Bit\+Array\mbox{[}$\,$\mbox{]} new\+Instance\+State)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Bit\+Array\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_binary2_d_automaton_abac140afbe1d9263ef35aa596c181407}{state}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class containing base-\/constructors for all binary 2\+D automata and implementation of the {\ttfamily \hyperlink{interface_cellular_1_1_i_binary_c_a}{I\+Binary\+C\+A}} interface. The state is kept in an array of {\ttfamily Bit\+Array}s reprezenting rows. 
+
+
+
+Definition at line 11 of file Binary2\+D\+Automaton.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_cellular_1_1_binary2_d_automaton_a6956aa8cc05e4d00c116d8cc5e8528d4}{}\index{Cellular\+::\+Binary2\+D\+Automaton@{Cellular\+::\+Binary2\+D\+Automaton}!Binary2\+D\+Automaton@{Binary2\+D\+Automaton}}
+\index{Binary2\+D\+Automaton@{Binary2\+D\+Automaton}!Cellular\+::\+Binary2\+D\+Automaton@{Cellular\+::\+Binary2\+D\+Automaton}}
+\subsubsection[{Binary2\+D\+Automaton(int width, int height)}]{\setlength{\rightskip}{0pt plus 5cm}Cellular.\+Binary2\+D\+Automaton.\+Binary2\+D\+Automaton (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_binary2_d_automaton_a6956aa8cc05e4d00c116d8cc5e8528d4}
+
+
+Creates a new {\ttfamily \hyperlink{class_cellular_1_1_binary2_d_automaton}{Binary2\+D\+Automaton}} of given size with one living cell in the middle, the rest is dead. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the new C\+A (length of rows).\\
+\hline
+{\em height} & The height of the new C\+A (number of rows).\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file Binary2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_binary2_d_automaton_ab2bdc13f759e29b0efe84995c74e5006}{}\index{Cellular\+::\+Binary2\+D\+Automaton@{Cellular\+::\+Binary2\+D\+Automaton}!Binary2\+D\+Automaton@{Binary2\+D\+Automaton}}
+\index{Binary2\+D\+Automaton@{Binary2\+D\+Automaton}!Cellular\+::\+Binary2\+D\+Automaton@{Cellular\+::\+Binary2\+D\+Automaton}}
+\subsubsection[{Binary2\+D\+Automaton(\+Bit\+Array[] initial\+State)}]{\setlength{\rightskip}{0pt plus 5cm}Cellular.\+Binary2\+D\+Automaton.\+Binary2\+D\+Automaton (
+\begin{DoxyParamCaption}
+\item[{Bit\+Array\mbox{[}$\,$\mbox{]}}]{initial\+State}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_binary2_d_automaton_ab2bdc13f759e29b0efe84995c74e5006}
+
+
+Creates a new {\ttfamily \hyperlink{class_cellular_1_1_binary2_d_automaton}{Binary2\+D\+Automaton}} of given initial state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+State} & An array of {\ttfamily Bit\+Array}s describing the initial state of the C\+A. This also determines the size (width, height) of the new C\+A.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file Binary2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_binary2_d_automaton_a465d87aeab9f265595e942e46308f75f}{}\index{Cellular\+::\+Binary2\+D\+Automaton@{Cellular\+::\+Binary2\+D\+Automaton}!Binary2\+D\+Automaton@{Binary2\+D\+Automaton}}
+\index{Binary2\+D\+Automaton@{Binary2\+D\+Automaton}!Cellular\+::\+Binary2\+D\+Automaton@{Cellular\+::\+Binary2\+D\+Automaton}}
+\subsubsection[{Binary2\+D\+Automaton(int width, int height, Random rnd)}]{\setlength{\rightskip}{0pt plus 5cm}Cellular.\+Binary2\+D\+Automaton.\+Binary2\+D\+Automaton (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{Random}]{rnd}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_binary2_d_automaton_a465d87aeab9f265595e942e46308f75f}
+
+
+Creates a new {\ttfamily \hyperlink{class_cellular_1_1_binary2_d_automaton}{Binary2\+D\+Automaton}} of given size with a random initial state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the new C\+A (length of rows).\\
+\hline
+{\em height} & The height of the new C\+A (number of rows).\\
+\hline
+{\em rnd} & Pseudo\+R\+N\+G instance that will be used to generate the original state.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file Binary2\+D\+Automaton.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cellular_1_1_binary2_d_automaton_ad2d31668c7b8f8e959575e03b995273f}{}\index{Cellular\+::\+Binary2\+D\+Automaton@{Cellular\+::\+Binary2\+D\+Automaton}!clone\+Template@{clone\+Template}}
+\index{clone\+Template@{clone\+Template}!Cellular\+::\+Binary2\+D\+Automaton@{Cellular\+::\+Binary2\+D\+Automaton}}
+\subsubsection[{clone\+Template(\+Bit\+Array[] new\+Instance\+State)}]{\setlength{\rightskip}{0pt plus 5cm}abstract {\bf I\+Binary\+C\+A} Cellular.\+Binary2\+D\+Automaton.\+clone\+Template (
+\begin{DoxyParamCaption}
+\item[{Bit\+Array\mbox{[}$\,$\mbox{]}}]{new\+Instance\+State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_cellular_1_1_binary2_d_automaton_ad2d31668c7b8f8e959575e03b995273f}
+
+
+Implemented in \hyperlink{class_cellular_1_1_totalistic2_d_automaton_ad5cc3f46a556aa1b1c99bdfa92f5ba1d}{Cellular.\+Totalistic2\+D\+Automaton}.
+
+\hypertarget{class_cellular_1_1_binary2_d_automaton_af0b06d58b66367dbeb712f2c4237ff54}{}\index{Cellular\+::\+Binary2\+D\+Automaton@{Cellular\+::\+Binary2\+D\+Automaton}!Get\+Hash\+Code@{Get\+Hash\+Code}}
+\index{Get\+Hash\+Code@{Get\+Hash\+Code}!Cellular\+::\+Binary2\+D\+Automaton@{Cellular\+::\+Binary2\+D\+Automaton}}
+\subsubsection[{Get\+Hash\+Code()}]{\setlength{\rightskip}{0pt plus 5cm}override int Cellular.\+Binary2\+D\+Automaton.\+Get\+Hash\+Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_binary2_d_automaton_af0b06d58b66367dbeb712f2c4237ff54}
+
+
+Definition at line 155 of file Binary2\+D\+Automaton.\+cs.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_cellular_1_1_binary2_d_automaton_abac140afbe1d9263ef35aa596c181407}{}\index{Cellular\+::\+Binary2\+D\+Automaton@{Cellular\+::\+Binary2\+D\+Automaton}!state@{state}}
+\index{state@{state}!Cellular\+::\+Binary2\+D\+Automaton@{Cellular\+::\+Binary2\+D\+Automaton}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}Bit\+Array \mbox{[}$\,$\mbox{]} Cellular.\+Binary2\+D\+Automaton.\+state\hspace{0.3cm}{\ttfamily [protected]}}\label{class_cellular_1_1_binary2_d_automaton_abac140afbe1d9263ef35aa596c181407}
+
+
+Definition at line 13 of file Binary2\+D\+Automaton.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Martin/\+M\+F\+F/\+\_\+baka/\+Martin\+Dvorak/\+Cellular/\hyperlink{_binary2_d_automaton_8cs}{Binary2\+D\+Automaton.\+cs}\end{DoxyCompactItemize}

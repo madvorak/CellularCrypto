@@ -1,0 +1,206 @@
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton}{}\section{Cellular.\+Totalistic2\+D\+Automaton Class Reference}
+\label{class_cellular_1_1_totalistic2_d_automaton}\index{Cellular.\+Totalistic2\+D\+Automaton@{Cellular.\+Totalistic2\+D\+Automaton}}
+
+
+Class representing a totalistic 2\+D automaton that uses Moore Neighborhood.  
+
+
+Inheritance diagram for Cellular.\+Totalistic2\+D\+Automaton\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{class_cellular_1_1_totalistic2_d_automaton}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cellular_1_1_totalistic2_d_automaton_a0a2cfd3f0c13cae481d0278630c71a0e}{Totalistic2\+D\+Automaton} (bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a4752e3402c58243f7f342e21ddad3b05}{rule\+Live}, bool\mbox{[}$\,$\mbox{]} rule\+Dead, int \hyperlink{class_cellular_1_1_automaton2_d_a1e9e5ec637c747a859c346839c90d174}{width}, int height, Random rnd)
+\begin{DoxyCompactList}\small\item\em Creates a new totalistic 2\+D automaton of given ruleset with given initial state. \end{DoxyCompactList}\item 
+\hyperlink{class_cellular_1_1_totalistic2_d_automaton_a3a58155945c0ef836c06e5a568afe1a0}{Totalistic2\+D\+Automaton} (bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a4752e3402c58243f7f342e21ddad3b05}{rule\+Live}, bool\mbox{[}$\,$\mbox{]} rule\+Dead, Bit\+Array\mbox{[}$\,$\mbox{]} initial\+State)
+\begin{DoxyCompactList}\small\item\em Creates a new totalistic 2\+D automaton of given ruleset with given initial state. \end{DoxyCompactList}\item 
+override void \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a7f85cac5420f67a936cbd4cef33c4abc}{Step} ()
+\begin{DoxyCompactList}\small\item\em Performs one step of the cellular automaton. Always calls \end{DoxyCompactList}\item 
+override object \hyperlink{class_cellular_1_1_totalistic2_d_automaton_ae78cf4c3f8245adf64ec9a173330804f}{Clone} ()
+\begin{DoxyCompactList}\small\item\em Creates an appropriate copy of the C\+A. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. \end{DoxyCompactList}\item 
+override string \hyperlink{class_cellular_1_1_totalistic2_d_automaton_aa009c674cd109fa70173e9893f6d3b09}{Tell\+Type} ()
+\begin{DoxyCompactList}\small\item\em Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override \hyperlink{interface_cellular_1_1_i_binary_c_a}{I\+Binary\+C\+A} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_ad5cc3f46a556aa1b1c99bdfa92f5ba1d}{clone\+Template} (Bit\+Array\mbox{[}$\,$\mbox{]} new\+Instance\+State)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a4752e3402c58243f7f342e21ddad3b05}{rule\+Live}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing a totalistic 2\+D automaton that uses Moore Neighborhood. 
+
+
+
+Definition at line 9 of file Totalistic2\+D\+Automaton.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a0a2cfd3f0c13cae481d0278630c71a0e}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Totalistic2\+D\+Automaton@{Totalistic2\+D\+Automaton}}
+\index{Totalistic2\+D\+Automaton@{Totalistic2\+D\+Automaton}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{Totalistic2\+D\+Automaton(bool[] rule\+Live, bool[] rule\+Dead, int width, int height, Random rnd)}]{\setlength{\rightskip}{0pt plus 5cm}Cellular.\+Totalistic2\+D\+Automaton.\+Totalistic2\+D\+Automaton (
+\begin{DoxyParamCaption}
+\item[{bool\mbox{[}$\,$\mbox{]}}]{rule\+Live, }
+\item[{bool\mbox{[}$\,$\mbox{]}}]{rule\+Dead, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{Random}]{rnd}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_totalistic2_d_automaton_a0a2cfd3f0c13cae481d0278630c71a0e}
+
+
+Creates a new totalistic 2\+D automaton of given ruleset with given initial state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rule\+Live} & Array that must contain 9 logical values. The value in {\ttfamily rule\+Live\mbox{[}i\mbox{]}} says what happens to a living cell when it has exactly i neighbours alive.\\
+\hline
+{\em rule\+Dead} & Array that must contain 9 logical values. The value in {\ttfamily rule\+Dead\mbox{[}i\mbox{]}} says what happens to a dead cell when it has exactly i neighbours alive.\\
+\hline
+{\em width} & The width of the new C\+A (length of rows).\\
+\hline
+{\em height} & The height of the new C\+A (number of rows).\\
+\hline
+{\em rnd} & Pseudo\+R\+N\+G instance that will be used to generate the original state.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a3a58155945c0ef836c06e5a568afe1a0}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Totalistic2\+D\+Automaton@{Totalistic2\+D\+Automaton}}
+\index{Totalistic2\+D\+Automaton@{Totalistic2\+D\+Automaton}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{Totalistic2\+D\+Automaton(bool[] rule\+Live, bool[] rule\+Dead, Bit\+Array[] initial\+State)}]{\setlength{\rightskip}{0pt plus 5cm}Cellular.\+Totalistic2\+D\+Automaton.\+Totalistic2\+D\+Automaton (
+\begin{DoxyParamCaption}
+\item[{bool\mbox{[}$\,$\mbox{]}}]{rule\+Live, }
+\item[{bool\mbox{[}$\,$\mbox{]}}]{rule\+Dead, }
+\item[{Bit\+Array\mbox{[}$\,$\mbox{]}}]{initial\+State}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_totalistic2_d_automaton_a3a58155945c0ef836c06e5a568afe1a0}
+
+
+Creates a new totalistic 2\+D automaton of given ruleset with given initial state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rule\+Live} & Array that must contain 9 logical values. The value in {\ttfamily rule\+Live\mbox{[}i\mbox{]}} says what happens to a living cell when it has exactly i neighbours alive.\\
+\hline
+{\em rule\+Dead} & Array that must contain 9 logical values. The value in {\ttfamily rule\+Dead\mbox{[}i\mbox{]}} says what happens to a dead cell when it has exactly i neighbours alive.\\
+\hline
+{\em initial\+State} & An array of {\ttfamily Bit\+Array}s describing the initial state of the C\+A. This also determines the size (width, height) of the new C\+A.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file Totalistic2\+D\+Automaton.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_ae78cf4c3f8245adf64ec9a173330804f}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Clone@{Clone}}
+\index{Clone@{Clone}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{Clone()}]{\setlength{\rightskip}{0pt plus 5cm}override object Cellular.\+Totalistic2\+D\+Automaton.\+Clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_cellular_1_1_totalistic2_d_automaton_ae78cf4c3f8245adf64ec9a173330804f}
+
+
+Creates an appropriate copy of the C\+A. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. 
+
+\begin{DoxyReturn}{Returns}
+A copy of the {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton}{Cellular\+Automaton}} as an {\ttfamily Object}
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_cellular_1_1_cellular_automaton_affd487b397cdbbbb1982815bbcd8e7d3}{Cellular.\+Cellular\+Automaton}.
+
+
+
+Definition at line 202 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_ad5cc3f46a556aa1b1c99bdfa92f5ba1d}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!clone\+Template@{clone\+Template}}
+\index{clone\+Template@{clone\+Template}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{clone\+Template(\+Bit\+Array[] new\+Instance\+State)}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf I\+Binary\+C\+A} Cellular.\+Totalistic2\+D\+Automaton.\+clone\+Template (
+\begin{DoxyParamCaption}
+\item[{Bit\+Array\mbox{[}$\,$\mbox{]}}]{new\+Instance\+State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_cellular_1_1_totalistic2_d_automaton_ad5cc3f46a556aa1b1c99bdfa92f5ba1d}
+
+
+Implements \hyperlink{class_cellular_1_1_binary2_d_automaton_ad2d31668c7b8f8e959575e03b995273f}{Cellular.\+Binary2\+D\+Automaton}.
+
+
+
+Definition at line 207 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a7f85cac5420f67a936cbd4cef33c4abc}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Step@{Step}}
+\index{Step@{Step}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{Step()}]{\setlength{\rightskip}{0pt plus 5cm}override void Cellular.\+Totalistic2\+D\+Automaton.\+Step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_totalistic2_d_automaton_a7f85cac5420f67a936cbd4cef33c4abc}
+
+
+Performs one step of the cellular automaton. Always calls 
+
+{\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Cellular\+Automaton.\+Step()};}. 
+
+Implements \hyperlink{interface_cellular_1_1_i_binary_c_a_a6a04c7374538c49df07efa176e0dd3c3}{Cellular.\+I\+Binary\+C\+A}.
+
+
+
+Definition at line 52 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_aa009c674cd109fa70173e9893f6d3b09}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Tell\+Type@{Tell\+Type}}
+\index{Tell\+Type@{Tell\+Type}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{Tell\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}override string Cellular.\+Totalistic2\+D\+Automaton.\+Tell\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_totalistic2_d_automaton_aa009c674cd109fa70173e9893f6d3b09}
+
+
+Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. 
+
+\begin{DoxyReturn}{Returns}
+The same string as calling 
+\begin{DoxyCode}
+CellularAutomaton.TellType();
+\end{DoxyCode}
+.
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_cellular_1_1_i_binary_c_a_aa67feabf5d1513aa74076d255c661948}{Cellular.\+I\+Binary\+C\+A}.
+
+
+
+Definition at line 212 of file Totalistic2\+D\+Automaton.\+cs.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a4752e3402c58243f7f342e21ddad3b05}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!rule\+Live@{rule\+Live}}
+\index{rule\+Live@{rule\+Live}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{rule\+Live}]{\setlength{\rightskip}{0pt plus 5cm}bool \mbox{[}$\,$\mbox{]} Cellular.\+Totalistic2\+D\+Automaton.\+rule\+Live\hspace{0.3cm}{\ttfamily [protected]}}\label{class_cellular_1_1_totalistic2_d_automaton_a4752e3402c58243f7f342e21ddad3b05}
+
+
+Definition at line 11 of file Totalistic2\+D\+Automaton.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Martin/\+M\+F\+F/\+\_\+baka/\+Martin\+Dvorak/\+Cellular/\hyperlink{_totalistic2_d_automaton_8cs}{Totalistic2\+D\+Automaton.\+cs}\end{DoxyCompactItemize}

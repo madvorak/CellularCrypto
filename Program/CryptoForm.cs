@@ -8,6 +8,9 @@ using Crypto;
 
 namespace Program
 {
+    /// <summary>
+    /// Windows application for users who want to encrypt their data using a cellular automata based algorithm.
+    /// </summary>
     public partial class CryptoForm : Form
     {
         private IKeyExtender xtend;

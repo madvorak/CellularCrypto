@@ -1,0 +1,94 @@
+\hypertarget{class_crypto_1_1_key_extender_abstract_n}{}\section{Crypto.\+Key\+Extender\+Abstract\+N Class Reference}
+\label{class_crypto_1_1_key_extender_abstract_n}\index{Crypto.\+Key\+Extender\+Abstract\+N@{Crypto.\+Key\+Extender\+Abstract\+N}}
+
+
+Abstract class for all key extenders that implement \hyperlink{class_crypto_1_1_key_extender_abstract_n_a9df4156ad0a84730f87119e5a25cf1ef}{Extend\+Key()}. Method \hyperlink{class_crypto_1_1_key_extender_abstract_n_a57e9a8247ebde9e639c16107c2961d10}{Double\+Key()} simply calls \hyperlink{class_crypto_1_1_key_extender_abstract_n_a9df4156ad0a84730f87119e5a25cf1ef}{Extend\+Key()}.  
+
+
+Inheritance diagram for Crypto.\+Key\+Extender\+Abstract\+N\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.947368cm]{class_crypto_1_1_key_extender_abstract_n}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Bit\+Array \hyperlink{class_crypto_1_1_key_extender_abstract_n_a57e9a8247ebde9e639c16107c2961d10}{Double\+Key} (Bit\+Array short\+Key)
+\begin{DoxyCompactList}\small\item\em Generates a longer key from a short key. \end{DoxyCompactList}\item 
+abstract Bit\+Array \hyperlink{class_crypto_1_1_key_extender_abstract_n_a9df4156ad0a84730f87119e5a25cf1ef}{Extend\+Key} (Bit\+Array short\+Key, int target\+Length)
+\begin{DoxyCompactList}\small\item\em Generates a longer key from a short key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class for all key extenders that implement \hyperlink{class_crypto_1_1_key_extender_abstract_n_a9df4156ad0a84730f87119e5a25cf1ef}{Extend\+Key()}. Method \hyperlink{class_crypto_1_1_key_extender_abstract_n_a57e9a8247ebde9e639c16107c2961d10}{Double\+Key()} simply calls \hyperlink{class_crypto_1_1_key_extender_abstract_n_a9df4156ad0a84730f87119e5a25cf1ef}{Extend\+Key()}. 
+
+
+
+Definition at line 8 of file Key\+Extender\+Abstract\+N.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_crypto_1_1_key_extender_abstract_n_a57e9a8247ebde9e639c16107c2961d10}{}\index{Crypto\+::\+Key\+Extender\+Abstract\+N@{Crypto\+::\+Key\+Extender\+Abstract\+N}!Double\+Key@{Double\+Key}}
+\index{Double\+Key@{Double\+Key}!Crypto\+::\+Key\+Extender\+Abstract\+N@{Crypto\+::\+Key\+Extender\+Abstract\+N}}
+\subsubsection[{Double\+Key(\+Bit\+Array short\+Key)}]{\setlength{\rightskip}{0pt plus 5cm}Bit\+Array Crypto.\+Key\+Extender\+Abstract\+N.\+Double\+Key (
+\begin{DoxyParamCaption}
+\item[{Bit\+Array}]{short\+Key}
+\end{DoxyParamCaption}
+)}\label{class_crypto_1_1_key_extender_abstract_n_a57e9a8247ebde9e639c16107c2961d10}
+
+
+Generates a longer key from a short key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em short\+Key} & Short key to be stretched (doubled).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Long key (twice longer than input).
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_crypto_1_1_i_key_extender_a946f0bf735d90050a4ba5335ca920fd1}{Crypto.\+I\+Key\+Extender}.
+
+
+
+Definition at line 10 of file Key\+Extender\+Abstract\+N.\+cs.
+
+\hypertarget{class_crypto_1_1_key_extender_abstract_n_a9df4156ad0a84730f87119e5a25cf1ef}{}\index{Crypto\+::\+Key\+Extender\+Abstract\+N@{Crypto\+::\+Key\+Extender\+Abstract\+N}!Extend\+Key@{Extend\+Key}}
+\index{Extend\+Key@{Extend\+Key}!Crypto\+::\+Key\+Extender\+Abstract\+N@{Crypto\+::\+Key\+Extender\+Abstract\+N}}
+\subsubsection[{Extend\+Key(\+Bit\+Array short\+Key, int target\+Length)}]{\setlength{\rightskip}{0pt plus 5cm}abstract Bit\+Array Crypto.\+Key\+Extender\+Abstract\+N.\+Extend\+Key (
+\begin{DoxyParamCaption}
+\item[{Bit\+Array}]{short\+Key, }
+\item[{int}]{target\+Length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_crypto_1_1_key_extender_abstract_n_a9df4156ad0a84730f87119e5a25cf1ef}
+
+
+Generates a longer key from a short key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em short\+Key} & Short key to be stretched (multiplied).\\
+\hline
+{\em target\+Length} & How many bits should the resulting long key have?\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Long key (of specified length).
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_crypto_1_1_i_key_extender_a0412d4d5b8d41546f9d6d126d3b4519f}{Crypto.\+I\+Key\+Extender}.
+
+
+
+Implemented in \hyperlink{class_crypto_1_1_key_extender_uncertain_a2955df98d2f4831576b12aa9c5ec609d}{Crypto.\+Key\+Extender\+Uncertain}, and \hyperlink{class_crypto_1_1_key_extender_cheating_a8018900fc6f660f83cb7cd23d52b60a3}{Crypto.\+Key\+Extender\+Cheating}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Martin/\+M\+F\+F/\+\_\+baka/\+Martin\+Dvorak/\+Crypto/\hyperlink{_key_extender_abstract_n_8cs}{Key\+Extender\+Abstract\+N.\+cs}\end{DoxyCompactItemize}
