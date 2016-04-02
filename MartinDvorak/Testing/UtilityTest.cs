@@ -29,7 +29,7 @@ namespace Testing
             long time;
             CellularAutomaton basicCA = new ElementaryAutomaton(125, 10);
             Console.WriteLine("Period of length {0} at iteration {1} ", Utilities.PeriodLengthFast(basicCA, long.MaxValue, out time), time);
-            IBinaryCA conway = new GameOfLife(60, 50);
+            IBinaryCA conway = Totalistic2DAutomaton.CreateGameOfLife(60, 50);
             Console.WriteLine("Period of length {0} at iteration {1} ", Utilities.PeriodLengthFast((CellularAutomaton)conway, long.MaxValue, out time), time);
             IBinaryCA basicCA_ = new ElementaryAutomaton(125, 10);
             Console.WriteLine("Period of length {0} at iteration {1} ", Utilities.PeriodLengthSlow(basicCA_, long.MaxValue, out time), time);

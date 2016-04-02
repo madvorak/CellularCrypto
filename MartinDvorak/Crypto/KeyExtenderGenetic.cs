@@ -216,9 +216,9 @@ namespace Crypto
                     automata.Add(new BinaryRangeAutomaton(2, Utilities.RandomBoolArr(32), 1));
                     automata.Add(new BinaryRangeCyclicAutomaton(2, Utilities.RandomBoolArr(32), 1));
                 }
-                automata.Add(new GameOfLife(1, 1));
-                automata.Add(new ReplicatorUniverse(1, 1));
-                automata.Add(new AmoebaUniverse(1, 1));
+                automata.Add(Totalistic2DAutomaton.CreateGameOfLife(1, 1));
+                automata.Add(Totalistic2DAutomaton.CreateAmoebaUniverse(1, 1));
+                automata.Add(Totalistic2DAutomaton.CreateReplicatorUniverse(1, 1));
 
                 extenders = new List<KeyExtenderAbstractD>();
                 foreach (IBinaryCA aut in automata)

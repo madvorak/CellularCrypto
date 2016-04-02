@@ -62,8 +62,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cellular\AmoebaUniverse.cs" />
-    <Compile Include="Cellular\ReplicatorUniverse.cs" />
     <Compile Include="Crypto\CannotGenerateException.cs" />
     <Compile Include="Crypto\Export.cs" />
     <Compile Include="Crypto\Factory.cs" />
@@ -93,10 +91,9 @@
     <Compile Include="Cellular\Binary2DAutomaton.cs" />
     <Compile Include="Cellular\BinaryRangeCyclicAutomaton.cs" />
     <Compile Include="Cellular\BinaryRangeAutomaton.cs" />
-    <Compile Include="Cellular\GameOfLifeInteractive.cs" />
+    <Compile Include="Cellular\Totalistic2DAutomatonInteractive.cs" />
     <Compile Include="Cellular\IBinaryCA.cs" />
     <Compile Include="Cellular\CellularAutomaton.cs" />
-    <Compile Include="Cellular\GameOfLife.cs" />
     <Compile Include="Cellular\Nary1DAutomaton.cs" />
     <Compile Include="Cellular\NaryTotalisticAutomaton.cs" />
     <Compile Include="Cellular\NaryTotalisticCyclicAutomaton.cs" />

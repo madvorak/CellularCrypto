@@ -5,21 +5,33 @@ namespace Cellular
     /// <summary>
     /// Class representing Conway's Game of Life automaton for interactive use (e.g. in Winforms).
     /// </summary>
-    class GameOfLifeInteractive : GameOfLife
+    class Totalistic2DAutomatonInteractive : Totalistic2DAutomaton
     {
+        public Totalistic2DAutomatonInteractive(bool[] ruleLive, bool[] ruleDead, int width, int height)
+            : base(ruleLive, ruleDead, width, height) {}
+
+        public Totalistic2DAutomatonInteractive(bool[] ruleLive, bool[] ruleDead, BitArray[] initialState)
+            : base(ruleLive, ruleDead, initialState) {}
+
         /// <summary>
         /// Creates a new interactive Game of Life with a random initial state.
         /// </summary>
         /// <param name="width">The width of the new CA (length of rows).</param>
         /// <param name="height">The height of the new CA (number of rows).</param>
-        public GameOfLifeInteractive(int width, int height) : base(width, height) {}
+        public static Totalistic2DAutomatonInteractive CreateGameOfLifeInteractive(int width, int height)
+        {
+            return new Totalistic2DAutomatonInteractive(liveGameOfLife, deadGameOfLife, width, height);
+        }
 
         /// <summary>
         /// Creates a new interactive Game of Life with givin initial state.
         /// </summary>
         /// <param name="initialState">An array of <c>BitArray</c>s describing the initial state of the CA.
         /// This also determines the size (width, height) of the new CA.</param>
-        public GameOfLifeInteractive(BitArray[] initialState) : base(initialState) {}
+        public static Totalistic2DAutomatonInteractive CreateGameOfLifeInteractive(BitArray[] initialState)
+        {
+            return new Totalistic2DAutomatonInteractive(liveGameOfLife, deadGameOfLife, initialState);
+        }
 
         /// <summary>
         /// Tells one bit of the CA, specified by 2D coordinates.

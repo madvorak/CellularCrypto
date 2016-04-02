@@ -36,20 +36,6 @@ namespace Testing
             /*Console.WriteLine($"KeyExtenderSimpleQuadratic using rule No. {ruleNo}:");
             runTestsOneAlgorithm(new KeyExtenderSimpleQuadratic(automaton));*/
 
-            automaton = new GameOfLife(1, 1);
-
-            Console.WriteLine("KeyExtenderSimpleLinear using Game of Life:");
-            runTestsOneAlgorithm(new KeyExtenderSimpleLinear(automaton));
-
-            Console.WriteLine($"KeyExtenderInterlaced({rows}, {skips}) using Game of Life:");
-            runTestsOneAlgorithm(new KeyExtenderInterlaced(automaton, rows, skips));
-
-            Console.WriteLine("KeyExtenderUncertain using using Game of Life:");
-            runTestsOneAlgorithm(new KeyExtenderUncertain(automaton));
-
-            Console.WriteLine("KeyExtenderSimpleQuadratic using rule Game of Life:");
-            runTestsOneAlgorithm(new KeyExtenderSimpleQuadratic(automaton));
-
             Console.WriteLine();
             Console.ReadKey();
         }

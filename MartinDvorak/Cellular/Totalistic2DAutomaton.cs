@@ -9,6 +9,7 @@ namespace Cellular
     class Totalistic2DAutomaton : Binary2DAutomaton
     {
         protected bool[] ruleLive, ruleDead;
+        private string specialDescription;
 
         /// <summary>
         /// Creates a new totalistic 2D automaton of given ruleset with given initial state.
@@ -20,9 +21,11 @@ namespace Cellular
         /// <param name="width">The width of the new CA (length of rows).</param>
         /// <param name="height">The height of the new CA (number of rows).</param>
         /// <param name="rnd">PseudoRNG instance that will be used to generate the original state.</param>
-        public Totalistic2DAutomaton(bool[] ruleLive, bool[] ruleDead, int width, int height, Random rnd) : base(width, height, rnd)
+        public Totalistic2DAutomaton(bool[] ruleLive, bool[] ruleDead, int width, int height, string specificName = null)
+            : base(width, height, Program.rnd)
         {
             init(ruleLive, ruleDead);
+            specialDescription = specificName;
         }
 
         /// <summary>
@@ -34,9 +37,11 @@ namespace Cellular
         /// The value in <c>ruleDead[i]</c> says what happens to a dead cell when it has exactly i neighbours alive.</param>
         /// <param name="initialState">An array of <c>BitArray</c>s describing the initial state of the CA.
         /// This also determines the size (width, height) of the new CA.</param>
-        public Totalistic2DAutomaton(bool[] ruleLive, bool[] ruleDead, BitArray[] initialState) : base(initialState)
+        public Totalistic2DAutomaton(bool[] ruleLive, bool[] ruleDead, BitArray[] initialState, string specificName = null)
+            : base(initialState)
         {
             init(ruleLive, ruleDead);
+            specialDescription = specificName;
         }
 
         private void init(bool[] rulesForLive, bool[] rulesForDead)
@@ -47,6 +52,51 @@ namespace Cellular
             }
             ruleLive = rulesForLive;
             ruleDead = rulesForDead;
+        }
+
+        protected static readonly bool[] liveGameOfLife = { false, false, true, true, false, false, false, false, false };
+                              //number of neighbours alive:   0      1      2     3     4      5      6      7      8
+        protected static readonly bool[] deadGameOfLife = { false, false, false, true, false, false, false, false, false };
+        protected const string descrGameOfLife = "Game of Life";
+
+        public static Totalistic2DAutomaton CreateGameOfLife(int width, int height)
+        {
+            return new Totalistic2DAutomaton(liveGameOfLife, deadGameOfLife, width, height, descrGameOfLife);
+        }
+
+        public static Totalistic2DAutomaton CreateGameOfLife(BitArray[] initialState)
+        {
+            return new Totalistic2DAutomaton(liveGameOfLife, deadGameOfLife, initialState, descrGameOfLife);
+        }
+
+        protected static readonly bool[] liveAmoebaUniverse = { false, true, false, true, false, true, false, false, true };
+                                  //number of neighbours alive:   0      1      2     3     4      5     6      7      8
+        protected static readonly bool[] deadAmoebaUniverse = { false, false, false, true, false, true, false, true, false };
+        protected const string descrAmoebaUniverse = "Amoeba Universe";
+
+        public static Totalistic2DAutomaton CreateAmoebaUniverse(int width, int height)
+        {
+            return new Totalistic2DAutomaton(liveAmoebaUniverse, deadAmoebaUniverse, width, height, descrAmoebaUniverse);
+        }
+
+        public static Totalistic2DAutomaton CreateAmoebaUniverse(BitArray[] initialState)
+        {
+            return new Totalistic2DAutomaton(liveAmoebaUniverse, deadAmoebaUniverse, initialState, descrAmoebaUniverse);
+        }
+
+        protected static readonly bool[] liveReplicatorUniverse = { false, true, false, true, false, true, false, true, false };
+                                      //number of neighbours alive:   0     1      2     3      4     5      6     7      8
+        protected static readonly bool[] deadReplicatorUniverse = { false, true, false, true, false, true, false, true, false };
+        protected const string descrReplicatorUniverse = "Replicator Universe";
+
+        public static Totalistic2DAutomaton CreateReplicatorUniverse(int width, int height)
+        {
+            return new Totalistic2DAutomaton(liveReplicatorUniverse, deadReplicatorUniverse, width, height, descrReplicatorUniverse);
+        }
+
+        public static Totalistic2DAutomaton CreateReplicatorUniverse(BitArray[] initialState)
+        {
+            return new Totalistic2DAutomaton(liveReplicatorUniverse, deadReplicatorUniverse, initialState, descrReplicatorUniverse);
         }
 
         public override void Step()
@@ -211,7 +261,14 @@ namespace Cellular
 
         public override string TellType()
         {
-            return "Totalistic 2D automaton";
+            if (specialDescription == null)
+            {
+                return "Totalistic 2D automaton";
+            }
+            else
+            {
+                return specialDescription;
+            }
         }
     }
 }

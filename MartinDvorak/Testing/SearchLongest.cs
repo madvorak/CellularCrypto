@@ -50,7 +50,7 @@ namespace Testing
                 CAperiods.Add(caL);
             }
 
-            CellularAutomaton conway = (CellularAutomaton)((IBinaryCA)(new GameOfLife(SIZEsqrt, SIZEsqrt))).CloneTemplate(input);
+            CellularAutomaton conway = (CellularAutomaton)((IBinaryCA)(Totalistic2DAutomaton.CreateGameOfLife(SIZEsqrt, SIZEsqrt))).CloneTemplate(input);
             var conwayL = new CAwithLength(conway, Utilities.PeriodLengthFast(conway));
             CAperiods.Add(conwayL);
 

@@ -41,19 +41,19 @@ namespace Crypto
             }
             else if (description.StartsWith("Totalistic"))
             {
-                return new GameOfLife(1, 1);
+                return Totalistic2DAutomaton.CreateGameOfLife(1, 1);
             }
             else if (description.StartsWith("Game"))
             {
-                return new GameOfLife(1, 1);
+                return Totalistic2DAutomaton.CreateGameOfLife(1, 1);
             }
             else if (description.StartsWith("Amoeba"))
             {
-                return new AmoebaUniverse(1, 1);
+                return Totalistic2DAutomaton.CreateAmoebaUniverse(1, 1);
             }
             else if (description.StartsWith("Replicator"))
             {
-                return new ReplicatorUniverse(1, 1);
+                return Totalistic2DAutomaton.CreateReplicatorUniverse(1, 1);
             }
             else
             {

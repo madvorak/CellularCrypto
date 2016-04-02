@@ -16,7 +16,7 @@ namespace UserForms
         private const int columnCount = 52;
         private const int linesCount = 30;
 
-        private GameOfLifeInteractive gol;
+        private Totalistic2DAutomatonInteractive gol;
         private Panel[,] matrix;
         HashSet<int> visited;
 
@@ -27,7 +27,7 @@ namespace UserForms
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
-            gol = new GameOfLifeInteractive(columnCount, linesCount);
+            gol = Totalistic2DAutomatonInteractive.CreateGameOfLifeInteractive(columnCount, linesCount);
             visited = new HashSet<int>();
             int topCorner = 55;
             int leftCorner = 10;
@@ -147,7 +147,7 @@ namespace UserForms
             if (comboBox1.SelectedItem == comboBox1.Items[1])
             {
                 //random initial state
-                gol = new GameOfLifeInteractive(columnCount, linesCount);
+                gol = Totalistic2DAutomatonInteractive.CreateGameOfLifeInteractive(columnCount, linesCount);
             }
             else
             {
@@ -206,7 +206,7 @@ namespace UserForms
                     initial[linesCount / 2][columnCount / 2 + 2] = false;
                 }
 
-                gol = new GameOfLifeInteractive(initial);
+                gol = Totalistic2DAutomatonInteractive.CreateGameOfLifeInteractive(initial);
             }
             visited = new HashSet<int>();
             label1.Visible = false;
