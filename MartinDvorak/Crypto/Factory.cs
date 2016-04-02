@@ -43,6 +43,18 @@ namespace Crypto
             {
                 return new GameOfLife(1, 1);
             }
+            else if (description.StartsWith("Game"))
+            {
+                return new GameOfLife(1, 1);
+            }
+            else if (description.StartsWith("Amoeba"))
+            {
+                return new AmoebaUniverse(1, 1);
+            }
+            else if (description.StartsWith("Replicator"))
+            {
+                return new ReplicatorUniverse(1, 1);
+            }
             else
             {
                 throw new ArgumentException("Wrong format!");

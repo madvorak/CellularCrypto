@@ -62,6 +62,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cellular\AmoebaUniverse.cs" />
+    <Compile Include="Cellular\ReplicatorUniverse.cs" />
     <Compile Include="Crypto\CannotGenerateException.cs" />
     <Compile Include="Crypto\Export.cs" />
     <Compile Include="Crypto\Factory.cs" />

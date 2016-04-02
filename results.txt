@@ -554,3 +554,37 @@ KeyExtenderSimpleQuadratic using Binary automaton with rule 00010010111111001100
    TestBitChange      : 0,736
    TestLargestBall    : 0,400
 
+
+
+
+
+
+Amoeba (1358/357):
+
+KeyExtenderCopy:
+   TestEntropy        : 0,658
+   TestCompression    : 0,022
+   TestAverageDistance: 0,999
+   TestBitChange      : 0,020
+   TestLargestBall    : 0,150
+
+KeyExtenderCheating:
+   TestEntropy        : 0,984
+   TestCompression    : 0,993
+   TestAverageDistance: 1,000
+   TestBitChange      : 0,998
+   TestLargestBall    : 0,619
+
+KeyExtenderSimpleLinear using Amoeba Universe:
+   TestEntropy        : 0,791
+   TestCompression    : 0,811
+   TestAverageDistance: 0,975
+   TestBitChange      : 0,883
+   TestLargestBall    : 0,450
+
+KeyExtenderInterlaced(10, 0) using Amoeba Universe:
+   TestEntropy        : 0,520
+   TestCompression    : 0,528
+   TestAverageDistance: 0,924
+   TestBitChange      : 0,804
+   TestLargestBall    : 0,231

@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 
 namespace Cellular
 {
     /// <summary>
-    /// Class representing the classic Conway's Game of Life automaton.
+    /// Class representing the classic Conway's Game of Life (2D Moore neighborhood automaton 23/3).
     /// </summary>
     class GameOfLife : Totalistic2DAutomaton
     {

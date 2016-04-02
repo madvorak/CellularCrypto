@@ -52,9 +52,10 @@ namespace Crypto
         }
 
         private const int popSize = 200;
-        private const int iterations = 100;
-        private const double breedProb = 0.3;
-        private const double mutProb = 0.8;
+        private const int iterations = 300;
+        private const double breedProb = 0.2;
+        private const double mutProb = 0.9;
+        private const double pressure = 0.6;    //value 0.6 gives 80% chance picking the better
 
         private readonly IPrimitives primitives;
         private int rounds;
@@ -114,7 +115,7 @@ namespace Crypto
                 {
                     a = population[rng.Next(popSize)];
                     b = population[rng.Next(popSize)];
-                    if (a.fitness > b.fitness && rng.NextDouble() < 0.8)    //gives 90% chance picking the better
+                    if (a.fitness > b.fitness && rng.NextDouble() < pressure)
                     {
                         nextGeneration[j] = a;
                     }
@@ -216,7 +217,8 @@ namespace Crypto
                     automata.Add(new BinaryRangeCyclicAutomaton(2, Utilities.RandomBoolArr(32), 1));
                 }
                 automata.Add(new GameOfLife(1, 1));
-                automata.Add(new GameOfLife(1, 1));
+                automata.Add(new ReplicatorUniverse(1, 1));
+                automata.Add(new AmoebaUniverse(1, 1));
 
                 extenders = new List<KeyExtenderAbstractD>();
                 foreach (IBinaryCA aut in automata)

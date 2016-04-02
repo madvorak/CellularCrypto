@@ -15,8 +15,8 @@ class Program
         rnd = new Random();
         MainTests.RunTest();
         GeneticTest.RunTest();
-        FactoryTest.RunTest();
         Adapter.DisplayForm();
+        FactoryTest.RunTest();
         //Crypto.SearchSGA.SearchForGoodExtenders();
         FunctionTestTest.RunTest();
         AutomataTest.RunTest();
