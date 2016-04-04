@@ -3,7 +3,8 @@
 namespace Cellular
 {
     /// <summary>
-    /// Class representing Conway's Game of Life automaton for interactive use (e.g. in Winforms).
+    /// Class representing a totalistic 2D automaton that uses Moore Neighborhood with enhanced functionalities.
+    /// For instance, this can be used as Conway's Game of Life automaton for interactive use (e.g. in Winforms).
     /// </summary>
     class Totalistic2DAutomatonInteractive : Totalistic2DAutomaton
     {
@@ -31,6 +32,11 @@ namespace Cellular
         public static Totalistic2DAutomatonInteractive CreateGameOfLifeInteractive(BitArray[] initialState)
         {
             return new Totalistic2DAutomatonInteractive(liveGameOfLife, deadGameOfLife, initialState);
+        }
+
+        public static Totalistic2DAutomatonInteractive CreateReplicatorUniverseInteractive(BitArray[] initialState)
+        {
+            return new Totalistic2DAutomatonInteractive(liveReplicatorUniverse, deadReplicatorUniverse, initialState);
         }
 
         /// <summary>

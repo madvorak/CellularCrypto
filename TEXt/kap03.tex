@@ -13,7 +13,9 @@ Kromì opravdovıch algoritmù byly vytvoøeny ještì dva falešné algoritmy pro úèely
 
 \section{KeyExtenderSimpleLinear}
 
-Nejjednodušší zpùsob, jak natáhnout klíè na dvojnásobek. Tento algoritmus pouije vstup jako poèáteèní konfiguraci celulárního automatu. Pak udìlá krok a uloí jeho stav do první poloviny dlouhého klíèe (postupnì ze všech bunìk). Pak udìlá druhı krok a naète druhou polovinu dlouhého klíèe. Kombinace jednoduchého algoritmu a automatu s jednoduchım chováním vede pochopitelnì ke špatnım vısledkùm (viz obrázek \ref{L220}). Ovšem vısledky automatu, kterı na vstupu s jedinou jednièkou generuje fraktály, není tak špatnı (viz obrázek \ref{L90}).
+Nejjednodušší zpùsob, jak natáhnout klíè na dvojnásobek. Tento algoritmus pouije vstup jako poèáteèní konfiguraci celulárního automatu. Pak udìlá krok a uloí jeho stav do první poloviny dlouhého klíèe (postupnì ze všech bunìk). Pak udìlá druhı krok a naète druhou polovinu dlouhého klíèe.
+
+Kombinace jednoduchého algoritmu a automatu s jednoduchım chováním vede pochopitelnì ke špatnım vısledkùm (viz obrázek \ref{L220}). Ovšem vısledky automatu, kterı na vstupu s jedinou jednièkou generuje fraktály, není tak špatnı (viz obrázek \ref{L90}). Pøíjemnım pøekvapením je ovšem vısledek 2D automatu Amoeba Universe (viz \ref{Lamoe}).
 
 \radar{0.548}{0.024}{0.771}{0.022}{0.075}{KeyExtenderSimpleLinear na automat 220}{L220}
 
@@ -26,13 +28,17 @@ Nejjednodušší zpùsob, jak natáhnout klíè na dvojnásobek. Tento algoritmus pouij
 \radar{0.857}{0.174}{0.995}{0.076}{0.438}{KeyExtenderSimpleLinear na automat 110}{L110}
 
 %00010010111111001100100010011110
-\radar{0.873}{0.184}{0.997}{0.115}{0.463}{KeyExtenderSimpleLinear na cyklickı automat s 2-okolím}{Lwide}
+\radar{0.873}{0.184}{0.997}{0.115}{0.463}{KeyExtenderSimpleLinear na omezenı automat s 2-okolím}{Lwide}
 
 \radar{0.872}{0.183}{0.996}{0.117}{0.450}{KeyExtenderSimpleLinear na cyklickı automat s 2-okolím}{Lcycl}
+
+\radar{0.791}{0.811}{0.975}{0.883}{0.450}{KeyExtenderSimpleLinear na Amoeba Universe}{Lamoe}
 
 \section{KeyExtenderSimpleQuadratic}
 
 Tento algoritmus natahuje klíè na dvojnásobek zpùsobem, kterı je mnohem lepší, ale mnohem pomalejší. Nejprve vytvoøí celulární automat, kterı je dva a pùl krát širší, ne délka krátkého klíèe. Ten krátkı klíè uloí do jeho prostøedních bunìk. Tedy klíè délky $n$ se uloí do stavu automatu s $2,5n$ buòkami a to od $0,75n$ po $1,75n$. Pak automat udìlá $2n$ kromù. Vıstup se ète z prostøední buòky (1 bit po kadém kroku automatu). Je to zpùsob, o kterém Stephen Wolfram ukázal, e generuje pseudonáhodné posloupnosti, které pøi volbì správného celulárního automatu splòují všechna mìøítka náhodnosti. Jeho návrh pouíval nekoneènou plochu, ale protoe nám staèí nataení na $2n$, tak plocha o šíøce $2,5n$ funguje stejnì, jako kdyby se automat mohl rozpínat do nekoneèna.
+
+Vidíme, e pouitı automatù s monotónním chováním vede k pøíšernì špatnım vısledkùm (napøíklad viz \ref{Q220}). Fraktálnì na tom také nejsou dobøe (tøeba viz \ref{Q90}), ale automat èíslo 30, kterı vykazuje pseudonáhodné chování, dává opravdu vynikající vısledek (viz \ref{Q30}). Pouití náhodného (i kdy jinak kvalitnì zvoleného) automatu s 2-okolím vede jen k prùmìrnému vısledku (jako tøeba na obrázku \ref{Qwide}).
 
 \radar{0.000}{0.000}{0.653}{0.020}{0.000}{KeyExtenderSimpleQuadratic na automat 220}{Q220}
 
@@ -52,6 +58,8 @@ Tento algoritmus natahuje klíè na dvojnásobek zpùsobem, kterı je mnohem lepší, a
 
 Tento algoritmus se tváøí jako kompromis, ale blíí se spíše první (lineární variantì). Algoritmus je parametrizován poètem øad $p$, ze kterıch má dlouhı klíè generovat, a údajem $q$, kolik krokù navíc má automat vdy provést mezi generováním vyuívanıch stavù. Pokud se spustí s parametry $p=2$, $q=0$, potom generuje totonı klíè jako lineární algoritmus. Jeho èasová sloitost je lineární ve velikosti vstupu a ještì lineární v souèinu $p(q+1)$.
 
+Ve srovnání s KeyExtenderSimpleLinear vede prokládání u nìkterıch automatù ke znatelnému zlepšení chování (napøíklad viz \ref{I110}), u jinıch k vıraznému zhoršení chování (napøíklad viz \ref{Iamoe}).
+
 \radar{0.220}{0.006}{0.540}{0.022}{0.063}{KeyExtenderInterlaced(10, 0) na automat 220}{I220}
 
 \radar{0.641}{0.513}{0.971}{0.376}{0.425}{KeyExtenderInterlaced(10, 0) na automat 94}{I94}
@@ -66,9 +74,13 @@ Tento algoritmus se tváøí jako kompromis, ale blíí se spíše první (lineární var
 
 \radar{0.971}{0.980}{0.999}{0.881}{0.463}{KeyExtenderInterlaced(10, 0) na cyklickı automat s 2-okolím}{Icycl}
 
+\radar{0.520}{0.528}{0.924}{0.804}{0.231}{KeyExtenderInterlaced(10, 0) na Amoeba Universe}{Iamoe}
+
 \section{KeyExtenderUncertain}
 
-Tento algoritmus øeší èastou neøest, kterou vykazují celulární automaty -- rùznı poèet 0 a 1. Algoritmus zase vyuívá celı stav automatu. Jsou èteny vdy dvojice bitù, pøíèem dvojice 00 a dvojice 11 jsou zahazovány. Vdy, kdy algoritmus narazí na dvojici 01, tak pošle na vıstup 0. A za kadou dvojici 10 pošle na vıstup 1. Poèet krokù automatu, kterı bude algoritmus muset provést, není pøedem známı.
+Tento algoritmus øeší èastou neøest, kterou vykazují celulární automaty -- rùznı poèet 0 a 1. Algoritmus zase vyuívá celı stav automatu. Jsou èteny vdy dvojice bitù, pøíèem dvojice 00 a dvojice 11 jsou zahazovány. Vdy, kdy algoritmus narazí na dvojici 01, tak pošle na vıstup 0. A za kadou dvojici 10 pošle na vıstup 1. Poèet krokù automatu, kterı bude algoritmus muset provést, není pøedem známı. Pokud se automat zasekne ve stavu, ze kterého není úniku (napøíklad samé nuly u mnoha druhù automatù, nebo také støídání 001100110011..001100 u elementárního automatu, kterı pouívá jako pøechodovou funkci majorantu buòky a jejich tìsnıch sousedù), je vyhozena vıjimka. Pøípady, kdy se generování dlouhého klíèe nepodaøilo dokonèit, jsou zaøazeny do vısledkù s hodnout 0 u všech testù.
+
+Tento netradièní zpùsob ètení hodnot vedl v pár pøípadech k dobrému chování (tøeba na obrázku \ref{U90}).
 
 \radar{0.000}{0.000}{0.000}{0.000}{0.000}{KeyExtenderUncertain na automat 220}{U220}
 
@@ -83,3 +95,16 @@ Tento algoritmus øeší èastou neøest, kterou vykazují celulární automaty -- rùznı
 \radar{0.615}{0.481}{1.000}{0.943}{0.294}{KeyExtenderUncertain na omezenı automat s 2-okolím}{Uwide}
 
 \radar{0.615}{0.482}{0.999}{0.943}{0.319}{KeyExtenderUncertain na cyklickı automat s 2-okolím}{Ucycl}
+
+\section{KeyExtenderGenetic}
+
+Nejkomplikovanìjší algoritmus, kterı tato práce obsahuje. Jako u mnoha jinıch algoritmù i zde se klíè postupnì natahuje na dvojnásobek, ne dosáhne dostateèné délky, ale kadı krok mùe pouívat jinı druh automatu a jinı dílèí algoritmus. Ke zjištìní správné posloupnosti tìchto natahovaèù je pouit genetickı algoritmus. Ten tuto posloupnost optimalizuje vdy pro jeden konkrétní vstup.
+
+Na zaèátku je vygenerována náhodná populace, kde jedinci jsou sekvence natahovaèù (sekvence je dlouhá $\lceil \log_2 {\frac{novaDelka}{puvodniDelka}} \rceil$), iniciálnì vygenerovaná náhodnì. Pak je provedena øada iterací, která se skládá z turnajové selekce a genetickıch operátorù. Na konci iterace je celá pùvodní populace nahrazena novou populací. Nejlepší jedinec z prùbìhu bìhu celého algoritmu je zapamatován a lze k nìmu pøistoupit i po dokonèení generování dlouhé sekvence.
+
+Jsou pouity dva genetické operátory. Prvním je jednoduché køíení (One-point crossover) a druhım je náhodná mutace (vımìna právì jednoho natahovaèe v sekvenci za náhodnı). Pravdìpodobnost køíení a pravdìpodobnost mutace je dána konstantou v kódu, kterou se klidnì cite volní zmìnit. Stejnì tak lze zmìnit velikost populace, poèet iterací a selekèní tlak.
+
+Zbıvá urèit, co má bıt tím náhodnım tahahovaèem... Program obsahuje dvì varianty tohoto: vnitøní tøídy Primitives a GoodPrimitives, které obì implementují vnitøní rozhraní IPrimitives. Tøída Primitives je implementována jako singleton. Pøi prvním vytvoøení se nejprve vygeneruje seznam binárních CA, které mohou bıt pouity. Do seznamu je zaøazeno všech 256 elementárních CA, dále 3 druhy 2D totalistickıch CA (Game of Life, Amoeba Universe a Replicator Universe) a k tomu 200 kusù náhodnì vygenerovanıch 1D automatù s pøechodovou funkcí vyuívající buòku, její sousedy a sousedy sousedù (z toho 100 je na omezeném høišti a dalších 100 na zacykleném høišti). Dílèí algoritmy pro jednotlivé kroky jsou vybírány jen z tìch, které mají lineární èasovou sloitost. S kadım z vıše uvedenıch binárních CA je vytvoøen 1 KeyExtenderSimpleLinear a 6 rùznıch KeyExtenderInterlaced.
+
+Tøída GoodPrimitives funguje jinak. Nejprve jsou vygenerována data o úspìšnıch natahovaèích a pouitıch automatech bìhem èetnıch bìhù genetického algoritmu s vyuitím tøídy Primitives. Za tímto úèelem byl mnohokrát spuštìn genetickı algoritmus na náhodné klíèe o velikosti 100, které natahoval na velikost 25000. Z kadého bìhu genetického algoritmu byla uloena ta vítìzná sekvence do souboru. Celkem ten experiment bìel pøes 100 hodin. Teï je moné vytvoøit instanci tøídy GoodPrimitives, která naète tyto natahovaèe s jejich automaty z urèené sloky a pak poskytuje právì takto získané natahovaèe.
+
