@@ -1,0 +1,23 @@
+\chapter{Nástin architektury}
+
+Tato kapitola je urèitým doplnìk k vývojové dokumentaci, která byla vytvoøena programem Doxywizard z dokumentaèních komentáøù. Nesnaží se nahradit ètení této dokumentace ani pøeètení ostatních kapitol této práce, ve kterých jsou podrobnìji vysvìtleny ty klíèové èásti programu.
+
+V rámci jedné Solution ve Visual Studiu byly vytvoøeny dva projekty. Projekt se jménem MartinDvorak, který mìl pùvodnì být jedinou èástí aplikace a mìl jasnì identifikovat tuto práci pøi jejím elektronickém odevzdávání, obsahuje veškerou logiku popisovanou v textu práci. Pomocí tohoto projektu byly provádìny veškeré experimenty. Jako druhý vznikl malý projekt se jménem Program. Ten využívá nástroje vytvoøené v prvním projektu a kompiluje se na WinForms aplikaci, kterou mohou uživatelé použít k zašifrování svých souborù.
+
+\section{MartinDvorak}
+
+\subsection{Cellular}
+
+Sem bude pøelita dokumentace k roèníkovému projektu.
+
+\subsection{Crypto}
+
+Tento namespace jednak obsahuje natahovaèe klíèù (popsané v následující kapitole) a potom testy (popsané v pøedchozí kapitole). Asi  zde vysvìtlit Factory.
+
+\subsection{Testing}
+
+Nejedná se o žádné Unit testy, ale o pomìrnì chaotickou hromadu metod, které umožòují zkoušet rùzné èásti programu.
+
+\section{Program}
+
+Okenní aplikace, umožòuje šifrovat a dešifrovat, volba vstupního a výstupního souboru, bere si IKeyExtender stanovený v projektu MartinDvorak, hešuje heslo, používá salt (a o ten je zvìtšen šifrovací soubor). Heslo a salt spoleènì urèují poèáteèní stav celulárního automatu. Vygenerovaným dlouhým klíèem se pak pøeXORuje celý soubor. Jednoduché jako facka (jenom jedna tøída).

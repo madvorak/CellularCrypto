@@ -3,7 +3,7 @@
 
 \chapter{Zpùsoby protahování klíèù}
 
-Bylo vytvoøeno nìokolik rùznıch algoritmù na protahování klíèù vyuívajících celulární automaty. Je moné si zvláš zvolit algoritmus (pøípadnì nìkteré z nich lze parametrizovat) a zvláš do nìj vloit libovolnı binární celulární automat. Nìkteré z agoritmù pøímo generují dlouhı klíè zadané délky. Jiné vdy prodlouí klíè na dvojnásobek a obecné nataení realizují iterací tohoto postupu.
+Bylo vytvoøeno nìokolik rùznıch algoritmù na protahování klíèù vyuívajících celulární automaty. Je moné si zvláš zvolit algoritmus (instanci tøídy implementující rozhraní IKeyExtender) a zvláš do nìj vloit libovolnı binární celulární automat (instanci tøídy implementující rozhraní IBinaryCA). Nìkteré z agoritmù pøímo generují dlouhı klíè zadané délky -- ty dìdí od abstraktní tøídy KeyExtenderAbstractN. Jiné algoritmy vdy prodlouí klíè na dvojnásobek a obecné nataení realizují iterací tohoto postupu -- ty jsou odvozené od abstraktní tøídy KeyExtenderAbstractD.
 
 Kromì opravdovıch algoritmù byly vytvoøeny ještì dva falešné algoritmy pro úèely testování. Jeden z nich jen kopíruje kratší klíè dokola. Jeho vısledek znázoròuje obrázek \ref{copy}. Druhı generuje pseudonáhodnout posloupnost bez ohledu na vstup, co je podvod. Jak hezky vypadá vısledek podvodného generátoru, si mùete prohlédnout na obrázku \ref{cheat}.
 

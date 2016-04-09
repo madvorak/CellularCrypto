@@ -48,7 +48,11 @@ Tøída Crypto.FunctionTesting obsahuje následující metody. Podle nastavení v kons
 \item TestLargestBallApprox(IKeyExtender algorithm) : Testuje to samé, ale používá delší vstupy, které už nezvládá vyzkoušet všechny, takže je sampluje náhodnì.
 \end{itemize}
 
-\section{Grafické znázornìní}
+\subsection{Použití testù}
+
+Všechny doposud zmínìné testy jsou obaleny ve tøídì Crypto.FunctionTestsForThesis, kde jsou výsledky tìchto testù transformovány zpùsobem, který zaruèí, že vyšší výsledek je lepší. S výjimkou testù maximálních koulí, které jsou realizovány v této tøídì trochu jinak, platí, že nejhorší hodnota je 0 a nejlepší hodnota je 1.
+
+\subsection{Grafické znázornìní}
 
 Výsledky jednotlivých algoritmù ve výše uvedených testech budeme znázoròovat na diagramech jako je tento:
  

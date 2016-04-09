@@ -11,7 +11,7 @@ namespace Cellular
         /// <summary>
         /// Tells the size of the CA.
         /// </summary>
-        /// <returns>Number of bits.</returns>
+        /// <returns>Number of cells/bits.</returns>
         int GetSize();
 
         /// <summary>
