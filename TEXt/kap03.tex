@@ -3,19 +3,47 @@
 
 \chapter{Zpùsoby protahování klíèù}
 
-Bylo vytvoøeno nìokolik rùznıch algoritmù na protahování klíèù vyuívajících celulární automaty. Je moné si zvláš zvolit algoritmus (instanci tøídy implementující rozhraní IKeyExtender) a zvláš do nìj vloit libovolnı binární celulární automat (instanci tøídy implementující rozhraní IBinaryCA). Nìkteré z agoritmù pøímo generují dlouhı klíè zadané délky -- ty dìdí od abstraktní tøídy KeyExtenderAbstractN. Jiné algoritmy vdy prodlouí klíè na dvojnásobek a obecné nataení realizují iterací tohoto postupu -- ty jsou odvozené od abstraktní tøídy KeyExtenderAbstractD.
+Ji bìhem práce na roèníkovém projektu byla vytvoøena øada rùznıch celulárních automatù (potomci abstraktní tøídy CellularAutomaton), viz vıše. Vìtšina z nich je binárních (tj. kadá buòka mùe nabıvat jen dvou rùznıch stavù) a ty zároveò implementují rozhraní IBinaryCA, které vynucuje vìtšinu pro nás uiteènıch metod.
 
-Kromì opravdovıch algoritmù byly vytvoøeny ještì dva falešné algoritmy pro úèely testování. Jeden z nich jen kopíruje kratší klíè dokola. Jeho vısledek znázoròuje obrázek \ref{copy}. Druhı generuje pseudonáhodnout posloupnost bez ohledu na vstup, co je podvod. Jak hezky vypadá vısledek podvodného generátoru, si mùete prohlédnout na obrázku \ref{cheat}.
+V rámci bakaláøské práce byly vytvoøeny algoritmy na protahování klíèù, které binární celulární automaty vyuívají. Všechny tyto algoritmy implementují rozhraní IKeyExtender. Toto rozhraní obsahuje metodu DoubleKey pro vytvoøení klíèe s pøesnì dvojnásobnou délkou a metodu ExtendKey pro nataení klíèe na libovolnou zadanou délku. Vstupy i vıstupy musí bıt typu BitArray, co je pole logickıch hodnot, které však v 1 bytu ukládá 8 hodnot (narozdíl od bool[ ]).
+
+Pøi vytváøení instancí tøíd implementující IKeyExtender se skrze konstruktor vkládá dovnitø libovolná implementace IBinaryCA. To umoòuje zvolit si zvláš druh automatu, kterı urèuje fungování pøechodové funkce, a zvláš protahovací algoritmus, kterı urèuje zpùsob ètení hodnot z automatu a jejich vyuití. Jedná se tedy o techniku \uv{Inversion of control}. To se hodí, abychom mohli snadno zkoušet všechny moné zpùsoby protahování klíèù.
+
+Nìkteré z algoritmù pøímo generují dlouhı klíè zadané délky -- ty dìdí od abstraktní tøídy KeyExtenderAbstractN. Tato tøída pøekládá volání DoubleKey na volání ExtendKey a potomci této tøídy implementují pouze ExtendKey. Jiné algoritmy vdy prodlouí klíè na dvojnásobek a obecné nataení realizují iterací tohoto postupu -- ty jsou odvozené od abstraktní tøídy KeyExtenderAbstractD. Ta realizuje metodu ExtendKey pomocí logaritmického poètu volání DoubleKey a oøezává vısledek na správnou velikost. Potomci této tøídy implementují ji pouze DoubleKey.
+
+Kromì opravdovıch algoritmù byly vytvoøeny ještì dva falešné algoritmy pro úèely demonstrace, nakolik jsou kritické naše testovací metody. KeyExtenderCopy jen kopíruje kratší klíè dokola. Jeho vısledek znázoròuje obrázek \ref{copy}. KeyExtenderCheating vylosuje pseudonáhodnout posloupnost bez ohledu na vstup. Jak hezky vypadá vısledek podvodného generátoru, si mùete prohlédnout na obrázku \ref{cheat}.
 
 \radar{0.659}{0.022}{0.997}{0.020}{0.125}{KeyExtenderCopy}{copy}
 
 \radar{0.984}{0.993}{1.000}{1.000}{0.775}{KeyExtenderCheating}{cheat}
 
+\section{KeyExtenderQuadratic}
+
+Stephen Wolfram popisuje (viz W02, strana 30), e kdy se pouije elementární automat èíslo 30 na pole obsahující jednu 1 uprostøed (jinak samé 0) a sleduje se, jak se mìní prostøední buòka v èase (podobnì jako na obrázku \ref{ca30}), tak její vıvoj je perfektní pseudonáhodnou posloupností (splòující všechny testy pseudonáhodnosti, které vyzkoušel). To nás vede k otázce, jestli by z jinıch poèáteèních stavù vznikly jiné kvalitní pseudonáhodné posloupnosti. Wolfram ukazuje (viz strana 251), e kdy na na pseudonáhodném vstupu (poèáteèním stavu) automatu 30 zmìní jedinı bit, tak se zmìna propaguje dolù a doprava, ale doleva se témìø nepropaguje. To zøejmì nebude platit zcela obecnì, protoe tøeba pro zmìnu samıch 0 na jednu 1 dojde ke zmìnì, která se šíøí do všech stran maximální rychlostí. Jeví se proto jako pravdìpodobné, e vıvoj prostøední buòky automatu 30 je ovlivnìn postupnì všemi buòkami nalevo a minimálnì nìkterımi buòkami napravo.
+
+A teï u k vlastnímu algoritmu:  Nejprve je vytvoøen celulární automat, kterı je dva a pùl krát širší, ne délka krátkého klíèe. Ten krátkı klíè uloí do jeho prostøedních bunìk. Tedy klíè délky $n$ se uloí do stavu automatu s $2,5n$ buòkami a to od $0,75n$ po $1,75n$. Pak automat udìlá $2n$ kromù. Vıstup se ète z prostøední buòky (1 bit po kadém kroku automatu). Pùvodní návrh pouíval nekoneènou plochu, ale protoe nám staèí nataení na $2n$, tak plocha o šíøce $2,5n$ funguje stejnì, jako kdyby se automat mohl rozpínat do nekoneèna (efekt okraje se u nestaèí promítnout do stavu prostøední buòky).
+
+Vidíme, e pouití automatù s monotónním chováním vede k pøíšernì špatnım vısledkùm (napøíklad viz \ref{Q220}). Automaty s fraktálním chováním na tom také nejsou dobøe (tøeba viz \ref{Q90}), ale automat èíslo 30, kterı vykazuje pseudonáhodné chování, dává opravdu vynikající vısledek (viz \ref{Q30}). Pouití náhodného (i kdy jinak kvalitnì zvoleného) automatu s 2-okolím vede jen k prùmìrnému vısledku (jako tøeba na obrázku \ref{Qwide}). Celkovì mùeme dospìt k závìru, e chování algoritmu pro správnì zvolené automaty (napøíklad ten 30) je velmi uspokojivé, ale jeho kvadratická èasová sloitost ho èiní nepouitelnım pro šifrování delších souborù (aby vznikl dostateènı one-time pad pro zašifrování 1MB velkého souboru, tak bychom museli provést 8 milionù krokù automatu, co pøedstavuje $1,6 \cdot 10^{14}$ vyvolání pøechodové funkce, co by na dnešních procesorech trvalo øádovì jeden den).
+
+\radar{0.000}{0.000}{0.653}{0.020}{0.000}{KeyExtenderSimpleQuadratic na automat 220}{Q220}
+
+\radar{0.043}{0.005}{0.972}{0.046}{0.350}{KeyExtenderSimpleQuadratic na automat 94}{Q94}
+
+\radar{0.683}{0.277}{0.512}{0.249}{0.000}{KeyExtenderSimpleQuadratic na automat 90}{Q90}
+
+\radar{0.983}{0.993}{1.000}{0.856}{0.631}{KeyExtenderSimpleQuadratic na automat 30}{Q30}
+
+\radar{0.634}{0.096}{0.988}{0.835}{0.450}{KeyExtenderSimpleQuadratic na automat 110}{Q110}
+
+\radar{0.789}{0.684}{0.799}{0.797}{0.400}{KeyExtenderSimpleQuadratic na omezenı automat s 2-okolím}{Qwide}
+
+\radar{0.789}{0.679}{0.818}{0.736}{0.400}{KeyExtenderSimpleQuadratic na cyklickı automat s 2-okolím}{Qcycl}
+
 \section{KeyExtenderSimpleLinear}
 
-Nejjednodušší zpùsob, jak natáhnout klíè na dvojnásobek. Tento algoritmus pouije vstup jako poèáteèní konfiguraci celulárního automatu. Pak udìlá krok a uloí jeho stav do první poloviny dlouhého klíèe (postupnì ze všech bunìk). Pak udìlá druhı krok a naète druhou polovinu dlouhého klíèe.
+Nejjednodušší zpùsob, jak natáhnout klíè na dvojnásobek. Tento algoritmus pouije vstup jako poèáteèní konfiguraci celulárního automatu. Pak udìlá krok a uloí jeho stav do první poloviny dlouhého klíèe (postupnì ze všech bunìk). Pak udìlá druhı krok a naète druhou polovinu dlouhého klíèe. Od tohoto algoritmu nemùeme èekat moc krásné chování. Napøíklad pøi jeho aplikaci s elementárním automatem za úèelem nataením klíèe na dvojnásobek dochází k tomu, e kdy zmìníme 1 bit na vstupu, nemùe se zmìnit více ne 8 bitù na vıstupu (a konkrétní podoba této zmìny je urèena jen 9 sousedními buòkami v pùvodním stavu). Pro 2D automaty nebo automaty vyuívající v pøechodové funkci vìtší okolí budou sice tato èísla vyšší, ale stále to budou nìjaké konstanty, které nezávisí na velikosti klíèe.
 
-Kombinace jednoduchého algoritmu a automatu s jednoduchım chováním vede pochopitelnì ke špatnım vısledkùm (viz obrázek \ref{L220}). Ovšem vısledky automatu, kterı na vstupu s jedinou jednièkou generuje fraktály, není tak špatnı (viz obrázek \ref{L90}). Pøíjemnım pøekvapením je ovšem vısledek 2D automatu Amoeba Universe (viz \ref{Lamoe}).
+Kombinace jednoduchého algoritmu a automatu s jednoduchım chováním vede pochopitelnì ke špatnım vısledkùm (viz obrázek \ref{L220}). Ovšem vısledky automatu, kterı na vstupu s jedinou jednièkou generuje fraktály, není tak špatnı (viz obrázek \ref{L90}). Pøíjemnım pøekvapením je ovšem vısledek 2D automatu Amoeba Universe (viz \ref{Lamoe}), kterı v testu komprese dosahuje vısledku pøes 0,8 (zatímco 1D automaty nepøesáhly hodnotu 0,2).
 
 \radar{0.548}{0.024}{0.771}{0.022}{0.075}{KeyExtenderSimpleLinear na automat 220}{L220}
 
@@ -34,25 +62,7 @@ Kombinace jednoduchého algoritmu a automatu s jednoduchım chováním vede pochopit
 
 \radar{0.791}{0.811}{0.975}{0.883}{0.450}{KeyExtenderSimpleLinear na Amoeba Universe}{Lamoe}
 
-\section{KeyExtenderSimpleQuadratic}
 
-Tento algoritmus natahuje klíè na dvojnásobek zpùsobem, kterı je mnohem lepší, ale mnohem pomalejší. Nejprve vytvoøí celulární automat, kterı je dva a pùl krát širší, ne délka krátkého klíèe. Ten krátkı klíè uloí do jeho prostøedních bunìk. Tedy klíè délky $n$ se uloí do stavu automatu s $2,5n$ buòkami a to od $0,75n$ po $1,75n$. Pak automat udìlá $2n$ kromù. Vıstup se ète z prostøední buòky (1 bit po kadém kroku automatu). Je to zpùsob, o kterém Stephen Wolfram ukázal, e generuje pseudonáhodné posloupnosti, které pøi volbì správného celulárního automatu splòují všechna mìøítka náhodnosti. Jeho návrh pouíval nekoneènou plochu, ale protoe nám staèí nataení na $2n$, tak plocha o šíøce $2,5n$ funguje stejnì, jako kdyby se automat mohl rozpínat do nekoneèna.
-
-Vidíme, e pouitı automatù s monotónním chováním vede k pøíšernì špatnım vısledkùm (napøíklad viz \ref{Q220}). Fraktálnì na tom také nejsou dobøe (tøeba viz \ref{Q90}), ale automat èíslo 30, kterı vykazuje pseudonáhodné chování, dává opravdu vynikající vısledek (viz \ref{Q30}). Pouití náhodného (i kdy jinak kvalitnì zvoleného) automatu s 2-okolím vede jen k prùmìrnému vısledku (jako tøeba na obrázku \ref{Qwide}).
-
-\radar{0.000}{0.000}{0.653}{0.020}{0.000}{KeyExtenderSimpleQuadratic na automat 220}{Q220}
-
-\radar{0.043}{0.005}{0.972}{0.046}{0.350}{KeyExtenderSimpleQuadratic na automat 94}{Q94}
-
-\radar{0.683}{0.277}{0.512}{0.249}{0.000}{KeyExtenderSimpleQuadratic na automat 90}{Q90}
-
-\radar{0.983}{0.993}{1.000}{0.856}{0.631}{KeyExtenderSimpleQuadratic na automat 30}{Q30}
-
-\radar{0.634}{0.096}{0.988}{0.835}{0.450}{KeyExtenderSimpleQuadratic na automat 110}{Q110}
-
-\radar{0.789}{0.684}{0.799}{0.797}{0.400}{KeyExtenderSimpleQuadratic na omezenı automat s 2-okolím}{Qwide}
-
-\radar{0.789}{0.679}{0.818}{0.736}{0.400}{KeyExtenderSimpleQuadratic na cyklickı automat s 2-okolím}{Qcycl}
 
 \section{KeyExtenderInterlaced}
 

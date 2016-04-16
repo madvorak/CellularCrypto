@@ -10,15 +10,29 @@ Pøed zašifrováním zprávy se èasto provádí její \textsl{komprese}. To má za násle
 
 \section{Nìkolik ukázek}
 
-bla bla bla
+Jedinou zcela nerozluštitelnou šifrovací metodou je Vernamova šifra. V binární podobì tato šifra vypadá tak, že se použije one-time pad, což je sekvence náhodných bitù, kterou vlastní obì strany. Odesílatel provede operaci plaintext XOR one-time pad a pøíjemce provede operaci ciphertext XOR one-time pad, címž dostane zpìt plaintext. Problém je, že one-time pad musí být stejnì dlouhý jako plaintext a nelze ho použít opakovanì. Kvùli tomu se Vernamova šifra používá jen pro kritické aplikace, pøed kterými se mohou komunikující strany fyzicky setkat a pøedat si one-time pad.
 
-V této práci se budeme vìnovat vytvoøení algoritmu na protahování klíèù (anglicky key stretching). Cílem je z krátkého klíèe (který lze napøíklad v krátkém èase pøenést pomocí RSA) vygenerovat dlouhý klíè (kterým lze pøeXORovat celý soubor). Je to tedy podobný úkol jako naprogramovat \textsl{Key Stream Generator}, akorát my budeme dopøedu vìdìt cílenou délku výsledného klíèe. 
+V této práci se budeme vìnovat vytvoøení algoritmu na protahování klíèù (anglicky key stretching). Cílem je z krátkého klíèe (který lze napøíklad v krátkém èase pøenést pomocí RSA) vygenerovat dlouhý klíè (onen one-time pad, kterým lze pøeXORovat celý soubor). Je to tedy podobný úkol jako naprogramovat \textsl{Key Stream Generator}, akorát my budeme dopøedu vìdìt cílenou délku výsledného klíèe.
 
 Jako Key Stream Generator se dá použít napøíklad mnoho blokových šifer. U blokových šifer záleží na módu operace. Pøi \textsl{Cipher Block Chaining} (CBC, PCBC) èi \textsl{Cipher Feedback} (CFB) módu zašifrování druhé èásti plaintextu záleží na výsledku zašifrování první èásti, tudíž to není Key Stream Generator. Ale pøi zapojení jako tøeba \textsl{Counter} (CTR) vzniká proud bitù bez znalosti plaintextu, takže získáme Key Stream Generator. Dobrým pøíklalem je tøeba AES-CTR.
 
+\section{Pseudonáhodné generátory}
+
+Jako velmi jednoduchý Key Stream Generator by se dal použít nìjaký z generátorù pseudonáhodných èísel. Narozdíl od \uv{opravdových} generátorù náhodných èísel, které používají nìjaký fyzikální zdroj náhody (tøeba radioaktivní rozpad), jsou hodnoty vytváøené generátorem pseudonáhodných èísel deterministicky urèeny poèáteèní hodnotou (tzv. seed), která mùže být zvolena na základì krátkého klíèe.
+
+Typickým pøíkladem mùže být lineární kongruenèní generátor pseudonáhodných èísel (LCG). Ten je charakterizován rozsahem hodnot $m$, koeficientem $a$, inkrementem $c$ a poèáteèní hodnotou $X_0$. LCG provádí krok podle vzorce:
+$$X_{n+1} = (aX_n + c) \mod m$$
+a mají dlouhou periodu. Podmínky pro to, aby LCG mìl periodu délky $m$ (tj. vystøídal všechny možné hodnoty), jsou následující:
+\begin{itemize}
+\item $c$ a $m$ jsou nesoudìlná èísla
+\item $a-1$ je dìlitelné všemi prvoèiniteli $m$
+\item pokud je $m$ dìlitelné 4, je i $a-1$ dìlitelné 4
+\end{itemize}
+Tøetí pravidlo je velice dùležité, protože s ohledem na výkon programu na reálných procesorech se obvykle volí m v hodnotì mocniny dvou.
+
 \section{Testy}
 
-Je pøíliš obtížné ukázat o šifrovacím algoritmu, že je doopravdy kvalitní. Jako záruka kvality se proto v praxi používá spíše jeho zveøejnìní na nìkolik let, aby ho mìli šanci oponovat nejlepší odborníci. Pokud se ani po nìkolika letech neukáže jeho slabina, je šifrovací algoritmus považován za dost dobrý. Naštìstí alespoò ty velmi špatnì šifrovací algoritmy je možné rychle rozpoznat statistickými testy. Na to se zamìøíme v této práci.
+Je pøíliš obtížné ukázat o šifrovacím algoritmu, že je doopravdy kvalitní. Jako záruka kvality se proto v praxi používá spíše jeho zveøejnìní na nìkolik let, aby ho mìli šanci oponovat nejlepší odborníci. Pokud se ani po nìkolika letech neukáže jeho slabina, je šifrovací algoritmus považován za dost dobrý. Naštìstí alespoò ty velmi špatné šifrovací algoritmy je možné rychle rozpoznat statistickými testy. Na to se zamìøíme v této práci.
 
 \subsection{Testy na úrovni jednotlivých výstupù}
 
@@ -36,9 +50,9 @@ Skuteènost, že výstupem algoritmu je pseudonáhodná posloupnost èísel, je jistì d
 
 Budeme zde zkoumat vlastnosti algoritmù jako vlastnosti celého zobrazení z krátkých klíèù do dlouhých klíèù. Protože si budeme èasto klást otázky typu \uv{Jak moc se liší výstup A od výstupu B?}, tak by bylo vhodné zavést nìjaké hodnocení, ideálnì s vlastností metriky. Porovnávat budeme vždy jen výstupy stejné délky. Oblíbenými metrikami pro øetìzce jsou \textsl{Hammingova vzdálenost} a \textsl{Levenshteinova vzdálenost}. Hamming mìøí poèet pozic, na kterých se øetìzce liší. Levenshtein mìøí minimální poèet potøebných zmìn k tomu, abychom z jednoho øetìzce dostali ten druhý. Jako zmìnu je možné provést zámìnu znaku, smazání znaku, nebo dopsání znaku na libovolné místo.
 
-Hammingova vzdálenost je triviálnì horním odhadem na Levenshteinovu vzdálenost. V pøípadì náhodných binárních øetìzcù je jejich hodnota obèas stejná, ale nìkdy mùžu být Levenshtein výraznì nižší. Napøíklad když zrotujeme øetìzec o jednu pozici, tak Levenshtein dává vzdálenost 2, zatímco Hamming mùže dát hodnì vysoké èíslo (až délka øetìzce). Významná pro nás bude rychlost výpoètu. Hammingovu vzdálenost lze triviálnì urèit v lineárním èase, ale výpoèet Levenshteinovy vzdálenosti zabere èas kvadratický. Že to rychleji nejde, se nelze divit, protože Levenshtein vlastnì spouští prohledávání prostoru editací. Díky dynamickému programování to lze provést alespoò v tom kvadratickém èase.
+Hammingova vzdálenost je triviálnì horním odhadem na Levenshteinovu vzdálenost. V pøípadì náhodných binárních øetìzcù je jejich hodnota obèas stejná, ale nìkdy mùže být Levenshtein výraznì nižší. Napøíklad když zrotujeme øetìzec o jednu pozici, tak Levenshtein dává vzdálenost 2, zatímco Hamming mùže dát hodnì vysoké èíslo (až délka øetìzce). Významná pro nás bude rychlost výpoètu. Hammingovu vzdálenost lze triviálnì urèit v lineárním èase, ale výpoèet Levenshteinovy vzdálenosti zabere èas kvadratický. Že to rychleji nejde, se nelze divit, protože Levenshtein vlastnì spouští prohledávání prostoru editací. Díky dynamickému programování to lze provést alespoò v tom kvadratickém èase.
 
-Program ještì obì vzdálenosti vydìlí délkou øetìzce, aby výsledky mìly hodnotu v rozmezí 0 (shodné øetìzce) až 1 (napøíklad øetìzec samých nul porovnán se øetìzcem samých jednièek). Støední hodnota pro dvojici náhodných binárních posloupností je u Hamminga triviálnì 0,5. Nesrovnatelnì tìžší je odhadnout støední hodnotu Levenshteinovy vzdálenosti. Posloupnost støedních hodnot Levenshteina se vzrùstající délkou vstupu roste jako subaditivní posloupnost. Relativní hodnota proto mùže pro delší vstupy pouze klesat. Limitní hodnotu se zdá být pøíliš tìžké odhadnout, ale orientaèní experimenty i diskuze na internetu naznaèují, že mùžeme poèítat s hodnotou  kolem 0,29.
+Program ještì obì vzdálenosti vydìlí délkou øetìzce, aby výsledky mìly hodnotu v rozmezí 0 (shodné øetìzce) až 1 (napøíklad øetìzec samých nul porovnán se øetìzcem samých jednièek). Støední hodnota pro dvojici náhodných binárních posloupností je u Hamminga triviálnì 0,5. Nesrovnatelnì tìžší je odhadnout støední hodnotu Levenshteinovy vzdálenosti. Posloupnost støedních hodnot Levenshteina se vzrùstající délkou vstupu roste jako subaditivní posloupnost. Relativní hodnota proto mùže pro delší vstupy pouze klesat. Limitní hodnotu se zdá být pøíliš tìžké odhadnout, ale orientaèní experimenty i diskuze na internetu naznaèují, že mùžeme poèítat s hodnotou kolem 0,29.
 
 Tøída Crypto.FunctionTesting obsahuje následující metody. Podle nastavení v konstruktoru mohou všechny testy používat buï Hammingovu, nebo Levensteinovu vzdálenost. Dále uvádìno podle Hamminga.
 \begin{itemize}
@@ -67,4 +81,5 @@ Výsledky jednotlivých algoritmù ve výše uvedených testech budeme znázoròovat na 
  
 \radar{0.9}{0.55}{0.95}{0.7}{0.52}{Ukázkový radar chart}{label}
 
-Pro diagramy jsou hodnoty pøeškálovány. S výjimkou testù nejvìtších koulí, kde neznáme optimální hodnotu, je škálování takové, aby optimální hodnota byla 1. Tedy napøíklad když TestBitChange vrátí hodnotu $x$, pak je do diagramu zobrazeno $\min\{2x, 2(1-x)\}$, aby optimum (zanesené jako hodnota 1) byl výsledek 0,5 a odchylky na obì strany \uv{stejnì vážné}.
+Pro diagramy jsou hodnoty pøeškálovány. S výjimkou testù nejvìtších koulí, kde neznáme optimální hodnotu, je škálování takové, aby optimální hodnota byla 1. Tedy napøíklad když TestBitChange vrátí hodnotu $x$, pak je do diagramu zobrazeno 
+$$\min\{2x, 2(1-x)\}$$, aby optimum (zanesené jako hodnota 1) byl výsledek 0,5 a odchylky na obì strany \uv{stejnì vážné}.

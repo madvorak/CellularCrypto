@@ -12,6 +12,11 @@ namespace Crypto
     /// </summary>
     static class Factory
     {
+        /// <summary>
+        /// Creates a single binary CA from a description.
+        /// </summary>
+        /// <param name="description">Descrition of the CA - output from <c>TellType()</c>.</param>
+        /// <returns></returns>
         public static IBinaryCA CreateAutomaton(string description)
         {
             if (description.StartsWith("Basic"))
@@ -61,6 +66,11 @@ namespace Crypto
             }
         }
 
+        /// <summary>
+        /// Creates a key extender together with its CA from one description.
+        /// </summary>
+        /// <param name="description">Description of the key extender - output from <c>GetInfo()</c>.</param>
+        /// <returns>Object implementing IKeyExtender and KeyExtenderAbstractD.</returns>
         public static KeyExtenderAbstractD CreateExtender(string description)
         {
             string[] parts = description.Split(new string[] { " using " }, StringSplitOptions.None);
@@ -91,7 +101,7 @@ namespace Crypto
         /// </summary>
         /// <param name="directory">The directory with ".xca" files.</param>
         /// <returns>
-        /// List of (fully build) key extenders that were successful during previous runs of the genetic algorithm.
+        /// List of (fully built) key extenders that were successful during previous runs of the genetic algorithm.
         /// </returns>
         public static List<KeyExtenderAbstractD> GatherSuccessfulExtenders(string directory)
         {
