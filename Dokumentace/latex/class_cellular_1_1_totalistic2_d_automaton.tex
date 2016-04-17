@@ -8,15 +8,15 @@ Class representing a totalistic 2\+D automaton that uses Moore Neighborhood.
 Inheritance diagram for Cellular.\+Totalistic2\+D\+Automaton\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=6.000000cm]{class_cellular_1_1_totalistic2_d_automaton}
+\includegraphics[height=5.000000cm]{class_cellular_1_1_totalistic2_d_automaton}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_cellular_1_1_totalistic2_d_automaton_a0a2cfd3f0c13cae481d0278630c71a0e}{Totalistic2\+D\+Automaton} (bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a4752e3402c58243f7f342e21ddad3b05}{rule\+Live}, bool\mbox{[}$\,$\mbox{]} rule\+Dead, int \hyperlink{class_cellular_1_1_automaton2_d_a1e9e5ec637c747a859c346839c90d174}{width}, int height, Random rnd)
+\hyperlink{class_cellular_1_1_totalistic2_d_automaton_a4c7a751baa03c7caf2040d07bb772e91}{Totalistic2\+D\+Automaton} (bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a4752e3402c58243f7f342e21ddad3b05}{rule\+Live}, bool\mbox{[}$\,$\mbox{]} rule\+Dead, int \hyperlink{class_cellular_1_1_automaton2_d_a1e9e5ec637c747a859c346839c90d174}{width}, int height, string specific\+Name=null)
 \begin{DoxyCompactList}\small\item\em Creates a new totalistic 2\+D automaton of given ruleset with given initial state. \end{DoxyCompactList}\item 
-\hyperlink{class_cellular_1_1_totalistic2_d_automaton_a3a58155945c0ef836c06e5a568afe1a0}{Totalistic2\+D\+Automaton} (bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a4752e3402c58243f7f342e21ddad3b05}{rule\+Live}, bool\mbox{[}$\,$\mbox{]} rule\+Dead, Bit\+Array\mbox{[}$\,$\mbox{]} initial\+State)
+\hyperlink{class_cellular_1_1_totalistic2_d_automaton_a706f4c765a54fef6003e6e208a073a1c}{Totalistic2\+D\+Automaton} (bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a4752e3402c58243f7f342e21ddad3b05}{rule\+Live}, bool\mbox{[}$\,$\mbox{]} rule\+Dead, Bit\+Array\mbox{[}$\,$\mbox{]} \hyperlink{all__1_8js_ae8b87ff4be2ae1dd5267342795263360}{initial\+State}, string specific\+Name=null)
 \begin{DoxyCompactList}\small\item\em Creates a new totalistic 2\+D automaton of given ruleset with given initial state. \end{DoxyCompactList}\item 
 override void \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a7f85cac5420f67a936cbd4cef33c4abc}{Step} ()
 \begin{DoxyCompactList}\small\item\em Performs one step of the cellular automaton. Always calls \end{DoxyCompactList}\item 
@@ -24,6 +24,21 @@ override object \hyperlink{class_cellular_1_1_totalistic2_d_automaton_ae78cf4c3f
 \begin{DoxyCompactList}\small\item\em Creates an appropriate copy of the C\+A. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. \end{DoxyCompactList}\item 
 override string \hyperlink{class_cellular_1_1_totalistic2_d_automaton_aa009c674cd109fa70173e9893f6d3b09}{Tell\+Type} ()
 \begin{DoxyCompactList}\small\item\em Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_cellular_1_1_totalistic2_d_automaton}{Totalistic2\+D\+Automaton} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a76eeb87d529b320437eebbf664acf013}{Create\+Game\+Of\+Life} (int \hyperlink{class_cellular_1_1_automaton2_d_a1e9e5ec637c747a859c346839c90d174}{width}, int height)
+\item 
+static \hyperlink{class_cellular_1_1_totalistic2_d_automaton}{Totalistic2\+D\+Automaton} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_aa8227b8be752f1c0e19f5cc6d605a011}{Create\+Game\+Of\+Life} (Bit\+Array\mbox{[}$\,$\mbox{]} \hyperlink{all__1_8js_ae8b87ff4be2ae1dd5267342795263360}{initial\+State})
+\item 
+static \hyperlink{class_cellular_1_1_totalistic2_d_automaton}{Totalistic2\+D\+Automaton} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a79ed2d655e37829d26a9eed7974e726f}{Create\+Amoeba\+Universe} (int \hyperlink{class_cellular_1_1_automaton2_d_a1e9e5ec637c747a859c346839c90d174}{width}, int height)
+\item 
+static \hyperlink{class_cellular_1_1_totalistic2_d_automaton}{Totalistic2\+D\+Automaton} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a34a59a60c4a12e0b7904b37666385512}{Create\+Amoeba\+Universe} (Bit\+Array\mbox{[}$\,$\mbox{]} \hyperlink{all__1_8js_ae8b87ff4be2ae1dd5267342795263360}{initial\+State})
+\item 
+static \hyperlink{class_cellular_1_1_totalistic2_d_automaton}{Totalistic2\+D\+Automaton} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a9f5a2308bc2b17ee7a9c779608e505ba}{Create\+Replicator\+Universe} (int \hyperlink{class_cellular_1_1_automaton2_d_a1e9e5ec637c747a859c346839c90d174}{width}, int height)
+\item 
+static \hyperlink{class_cellular_1_1_totalistic2_d_automaton}{Totalistic2\+D\+Automaton} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a0d8bbe04fcb603d8ff614864e39c386d}{Create\+Replicator\+Universe} (Bit\+Array\mbox{[}$\,$\mbox{]} \hyperlink{all__1_8js_ae8b87ff4be2ae1dd5267342795263360}{initial\+State})
+\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -33,6 +48,27 @@ override \hyperlink{interface_cellular_1_1_i_binary_c_a}{I\+Binary\+C\+A} \hyper
 \begin{DoxyCompactItemize}
 \item 
 bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a4752e3402c58243f7f342e21ddad3b05}{rule\+Live}
+\item 
+const string \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a925e29c85ea53754a86864aa9b2e27f9}{descr\+Game\+Of\+Life} = \char`\"{}Game of Life\char`\"{}
+\item 
+const string \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a0acaeddabe1e121966d99d9144eb3220}{descr\+Amoeba\+Universe} = \char`\"{}Amoeba Universe\char`\"{}
+\item 
+const string \hyperlink{class_cellular_1_1_totalistic2_d_automaton_ab93b5f3ae4587498fcccab5a77992ab9}{descr\+Replicator\+Universe} = \char`\"{}Replicator Universe\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a4633d221a98d2f36cc876f5a08c61f1e}{live\+Game\+Of\+Life} = \{ false, false, true, true, false, false, false, false, false \}
+\item 
+static readonly bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_aa4888d1ead2dfcdb1c90c79485aed255}{dead\+Game\+Of\+Life} = \{ false, false, false, true, false, false, false, false, false \}
+\item 
+static readonly bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a69f67fbf81c8a2c5a3700c4f9b55c596}{live\+Amoeba\+Universe} = \{ false, true, false, true, false, true, false, false, true \}
+\item 
+static readonly bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a5b2dd1d361797410beda7ea765b40c31}{dead\+Amoeba\+Universe} = \{ false, false, false, true, false, true, false, true, false \}
+\item 
+static readonly bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_abb59a96261e32abc500ce4c7db88cdd6}{live\+Replicator\+Universe} = \{ false, true, false, true, false, true, false, true, false \}
+\item 
+static readonly bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a195a2bf20843bbc0980979ef889170d3}{dead\+Replicator\+Universe} = \{ false, true, false, true, false, true, false, true, false \}
 \end{DoxyCompactItemize}
 
 
@@ -46,17 +82,17 @@ Definition at line 9 of file Totalistic2\+D\+Automaton.\+cs.
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a0a2cfd3f0c13cae481d0278630c71a0e}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Totalistic2\+D\+Automaton@{Totalistic2\+D\+Automaton}}
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a4c7a751baa03c7caf2040d07bb772e91}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Totalistic2\+D\+Automaton@{Totalistic2\+D\+Automaton}}
 \index{Totalistic2\+D\+Automaton@{Totalistic2\+D\+Automaton}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
-\subsubsection[{Totalistic2\+D\+Automaton(bool[] rule\+Live, bool[] rule\+Dead, int width, int height, Random rnd)}]{\setlength{\rightskip}{0pt plus 5cm}Cellular.\+Totalistic2\+D\+Automaton.\+Totalistic2\+D\+Automaton (
+\subsubsection[{Totalistic2\+D\+Automaton(bool[] rule\+Live, bool[] rule\+Dead, int width, int height, string specific\+Name=null)}]{\setlength{\rightskip}{0pt plus 5cm}Cellular.\+Totalistic2\+D\+Automaton.\+Totalistic2\+D\+Automaton (
 \begin{DoxyParamCaption}
 \item[{bool\mbox{[}$\,$\mbox{]}}]{rule\+Live, }
 \item[{bool\mbox{[}$\,$\mbox{]}}]{rule\+Dead, }
 \item[{int}]{width, }
 \item[{int}]{height, }
-\item[{Random}]{rnd}
+\item[{string}]{specific\+Name = {\ttfamily null}}
 \end{DoxyParamCaption}
-)}\label{class_cellular_1_1_totalistic2_d_automaton_a0a2cfd3f0c13cae481d0278630c71a0e}
+)}\label{class_cellular_1_1_totalistic2_d_automaton_a4c7a751baa03c7caf2040d07bb772e91}
 
 
 Creates a new totalistic 2\+D automaton of given ruleset with given initial state. 
@@ -76,17 +112,18 @@ Creates a new totalistic 2\+D automaton of given ruleset with given initial stat
 \end{DoxyParams}
 
 
-Definition at line 23 of file Totalistic2\+D\+Automaton.\+cs.
+Definition at line 24 of file Totalistic2\+D\+Automaton.\+cs.
 
-\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a3a58155945c0ef836c06e5a568afe1a0}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Totalistic2\+D\+Automaton@{Totalistic2\+D\+Automaton}}
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a706f4c765a54fef6003e6e208a073a1c}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Totalistic2\+D\+Automaton@{Totalistic2\+D\+Automaton}}
 \index{Totalistic2\+D\+Automaton@{Totalistic2\+D\+Automaton}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
-\subsubsection[{Totalistic2\+D\+Automaton(bool[] rule\+Live, bool[] rule\+Dead, Bit\+Array[] initial\+State)}]{\setlength{\rightskip}{0pt plus 5cm}Cellular.\+Totalistic2\+D\+Automaton.\+Totalistic2\+D\+Automaton (
+\subsubsection[{Totalistic2\+D\+Automaton(bool[] rule\+Live, bool[] rule\+Dead, Bit\+Array[] initial\+State, string specific\+Name=null)}]{\setlength{\rightskip}{0pt plus 5cm}Cellular.\+Totalistic2\+D\+Automaton.\+Totalistic2\+D\+Automaton (
 \begin{DoxyParamCaption}
 \item[{bool\mbox{[}$\,$\mbox{]}}]{rule\+Live, }
 \item[{bool\mbox{[}$\,$\mbox{]}}]{rule\+Dead, }
-\item[{Bit\+Array\mbox{[}$\,$\mbox{]}}]{initial\+State}
+\item[{Bit\+Array\mbox{[}$\,$\mbox{]}}]{initial\+State, }
+\item[{string}]{specific\+Name = {\ttfamily null}}
 \end{DoxyParamCaption}
-)}\label{class_cellular_1_1_totalistic2_d_automaton_a3a58155945c0ef836c06e5a568afe1a0}
+)}\label{class_cellular_1_1_totalistic2_d_automaton_a706f4c765a54fef6003e6e208a073a1c}
 
 
 Creates a new totalistic 2\+D automaton of given ruleset with given initial state. 
@@ -102,7 +139,7 @@ Creates a new totalistic 2\+D automaton of given ruleset with given initial stat
 \end{DoxyParams}
 
 
-Definition at line 37 of file Totalistic2\+D\+Automaton.\+cs.
+Definition at line 40 of file Totalistic2\+D\+Automaton.\+cs.
 
 
 
@@ -127,7 +164,7 @@ Implements \hyperlink{class_cellular_1_1_cellular_automaton_affd487b397cdbbbb198
 
 
 
-Definition at line 202 of file Totalistic2\+D\+Automaton.\+cs.
+Definition at line 252 of file Totalistic2\+D\+Automaton.\+cs.
 
 \hypertarget{class_cellular_1_1_totalistic2_d_automaton_ad5cc3f46a556aa1b1c99bdfa92f5ba1d}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!clone\+Template@{clone\+Template}}
 \index{clone\+Template@{clone\+Template}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
@@ -142,7 +179,76 @@ Implements \hyperlink{class_cellular_1_1_binary2_d_automaton_ad2d31668c7b8f8e959
 
 
 
-Definition at line 207 of file Totalistic2\+D\+Automaton.\+cs.
+Definition at line 257 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a79ed2d655e37829d26a9eed7974e726f}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Create\+Amoeba\+Universe@{Create\+Amoeba\+Universe}}
+\index{Create\+Amoeba\+Universe@{Create\+Amoeba\+Universe}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{Create\+Amoeba\+Universe(int width, int height)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Totalistic2\+D\+Automaton} Cellular.\+Totalistic2\+D\+Automaton.\+Create\+Amoeba\+Universe (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_cellular_1_1_totalistic2_d_automaton_a79ed2d655e37829d26a9eed7974e726f}
+
+
+Definition at line 77 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a34a59a60c4a12e0b7904b37666385512}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Create\+Amoeba\+Universe@{Create\+Amoeba\+Universe}}
+\index{Create\+Amoeba\+Universe@{Create\+Amoeba\+Universe}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{Create\+Amoeba\+Universe(\+Bit\+Array[] initial\+State)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Totalistic2\+D\+Automaton} Cellular.\+Totalistic2\+D\+Automaton.\+Create\+Amoeba\+Universe (
+\begin{DoxyParamCaption}
+\item[{Bit\+Array\mbox{[}$\,$\mbox{]}}]{initial\+State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_cellular_1_1_totalistic2_d_automaton_a34a59a60c4a12e0b7904b37666385512}
+
+
+Definition at line 82 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a76eeb87d529b320437eebbf664acf013}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Create\+Game\+Of\+Life@{Create\+Game\+Of\+Life}}
+\index{Create\+Game\+Of\+Life@{Create\+Game\+Of\+Life}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{Create\+Game\+Of\+Life(int width, int height)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Totalistic2\+D\+Automaton} Cellular.\+Totalistic2\+D\+Automaton.\+Create\+Game\+Of\+Life (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_cellular_1_1_totalistic2_d_automaton_a76eeb87d529b320437eebbf664acf013}
+
+
+Definition at line 62 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_aa8227b8be752f1c0e19f5cc6d605a011}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Create\+Game\+Of\+Life@{Create\+Game\+Of\+Life}}
+\index{Create\+Game\+Of\+Life@{Create\+Game\+Of\+Life}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{Create\+Game\+Of\+Life(\+Bit\+Array[] initial\+State)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Totalistic2\+D\+Automaton} Cellular.\+Totalistic2\+D\+Automaton.\+Create\+Game\+Of\+Life (
+\begin{DoxyParamCaption}
+\item[{Bit\+Array\mbox{[}$\,$\mbox{]}}]{initial\+State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_cellular_1_1_totalistic2_d_automaton_aa8227b8be752f1c0e19f5cc6d605a011}
+
+
+Definition at line 67 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a9f5a2308bc2b17ee7a9c779608e505ba}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Create\+Replicator\+Universe@{Create\+Replicator\+Universe}}
+\index{Create\+Replicator\+Universe@{Create\+Replicator\+Universe}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{Create\+Replicator\+Universe(int width, int height)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Totalistic2\+D\+Automaton} Cellular.\+Totalistic2\+D\+Automaton.\+Create\+Replicator\+Universe (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_cellular_1_1_totalistic2_d_automaton_a9f5a2308bc2b17ee7a9c779608e505ba}
+
+
+Definition at line 92 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a0d8bbe04fcb603d8ff614864e39c386d}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Create\+Replicator\+Universe@{Create\+Replicator\+Universe}}
+\index{Create\+Replicator\+Universe@{Create\+Replicator\+Universe}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{Create\+Replicator\+Universe(\+Bit\+Array[] initial\+State)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Totalistic2\+D\+Automaton} Cellular.\+Totalistic2\+D\+Automaton.\+Create\+Replicator\+Universe (
+\begin{DoxyParamCaption}
+\item[{Bit\+Array\mbox{[}$\,$\mbox{]}}]{initial\+State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_cellular_1_1_totalistic2_d_automaton_a0d8bbe04fcb603d8ff614864e39c386d}
+
+
+Definition at line 97 of file Totalistic2\+D\+Automaton.\+cs.
 
 \hypertarget{class_cellular_1_1_totalistic2_d_automaton_a7f85cac5420f67a936cbd4cef33c4abc}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Step@{Step}}
 \index{Step@{Step}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
@@ -161,7 +267,7 @@ Implements \hyperlink{interface_cellular_1_1_i_binary_c_a_a6a04c7374538c49df07ef
 
 
 
-Definition at line 52 of file Totalistic2\+D\+Automaton.\+cs.
+Definition at line 102 of file Totalistic2\+D\+Automaton.\+cs.
 
 \hypertarget{class_cellular_1_1_totalistic2_d_automaton_aa009c674cd109fa70173e9893f6d3b09}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!Tell\+Type@{Tell\+Type}}
 \index{Tell\+Type@{Tell\+Type}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
@@ -187,11 +293,74 @@ Implements \hyperlink{interface_cellular_1_1_i_binary_c_a_aa67feabf5d1513aa74076
 
 
 
-Definition at line 212 of file Totalistic2\+D\+Automaton.\+cs.
+Definition at line 262 of file Totalistic2\+D\+Automaton.\+cs.
 
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a5b2dd1d361797410beda7ea765b40c31}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!dead\+Amoeba\+Universe@{dead\+Amoeba\+Universe}}
+\index{dead\+Amoeba\+Universe@{dead\+Amoeba\+Universe}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{dead\+Amoeba\+Universe}]{\setlength{\rightskip}{0pt plus 5cm}readonly bool \mbox{[}$\,$\mbox{]} Cellular.\+Totalistic2\+D\+Automaton.\+dead\+Amoeba\+Universe = \{ false, false, false, true, false, true, false, true, false \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_cellular_1_1_totalistic2_d_automaton_a5b2dd1d361797410beda7ea765b40c31}
+
+
+Definition at line 74 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_aa4888d1ead2dfcdb1c90c79485aed255}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!dead\+Game\+Of\+Life@{dead\+Game\+Of\+Life}}
+\index{dead\+Game\+Of\+Life@{dead\+Game\+Of\+Life}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{dead\+Game\+Of\+Life}]{\setlength{\rightskip}{0pt plus 5cm}readonly bool \mbox{[}$\,$\mbox{]} Cellular.\+Totalistic2\+D\+Automaton.\+dead\+Game\+Of\+Life = \{ false, false, false, true, false, false, false, false, false \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_cellular_1_1_totalistic2_d_automaton_aa4888d1ead2dfcdb1c90c79485aed255}
+
+
+Definition at line 59 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a195a2bf20843bbc0980979ef889170d3}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!dead\+Replicator\+Universe@{dead\+Replicator\+Universe}}
+\index{dead\+Replicator\+Universe@{dead\+Replicator\+Universe}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{dead\+Replicator\+Universe}]{\setlength{\rightskip}{0pt plus 5cm}readonly bool \mbox{[}$\,$\mbox{]} Cellular.\+Totalistic2\+D\+Automaton.\+dead\+Replicator\+Universe = \{ false, true, false, true, false, true, false, true, false \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_cellular_1_1_totalistic2_d_automaton_a195a2bf20843bbc0980979ef889170d3}
+
+
+Definition at line 89 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a0acaeddabe1e121966d99d9144eb3220}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!descr\+Amoeba\+Universe@{descr\+Amoeba\+Universe}}
+\index{descr\+Amoeba\+Universe@{descr\+Amoeba\+Universe}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{descr\+Amoeba\+Universe}]{\setlength{\rightskip}{0pt plus 5cm}const string Cellular.\+Totalistic2\+D\+Automaton.\+descr\+Amoeba\+Universe = \char`\"{}Amoeba Universe\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_cellular_1_1_totalistic2_d_automaton_a0acaeddabe1e121966d99d9144eb3220}
+
+
+Definition at line 75 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a925e29c85ea53754a86864aa9b2e27f9}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!descr\+Game\+Of\+Life@{descr\+Game\+Of\+Life}}
+\index{descr\+Game\+Of\+Life@{descr\+Game\+Of\+Life}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{descr\+Game\+Of\+Life}]{\setlength{\rightskip}{0pt plus 5cm}const string Cellular.\+Totalistic2\+D\+Automaton.\+descr\+Game\+Of\+Life = \char`\"{}Game of Life\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_cellular_1_1_totalistic2_d_automaton_a925e29c85ea53754a86864aa9b2e27f9}
+
+
+Definition at line 60 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_ab93b5f3ae4587498fcccab5a77992ab9}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!descr\+Replicator\+Universe@{descr\+Replicator\+Universe}}
+\index{descr\+Replicator\+Universe@{descr\+Replicator\+Universe}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{descr\+Replicator\+Universe}]{\setlength{\rightskip}{0pt plus 5cm}const string Cellular.\+Totalistic2\+D\+Automaton.\+descr\+Replicator\+Universe = \char`\"{}Replicator Universe\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_cellular_1_1_totalistic2_d_automaton_ab93b5f3ae4587498fcccab5a77992ab9}
+
+
+Definition at line 90 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a69f67fbf81c8a2c5a3700c4f9b55c596}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!live\+Amoeba\+Universe@{live\+Amoeba\+Universe}}
+\index{live\+Amoeba\+Universe@{live\+Amoeba\+Universe}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{live\+Amoeba\+Universe}]{\setlength{\rightskip}{0pt plus 5cm}readonly bool \mbox{[}$\,$\mbox{]} Cellular.\+Totalistic2\+D\+Automaton.\+live\+Amoeba\+Universe = \{ false, true, false, true, false, true, false, false, true \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_cellular_1_1_totalistic2_d_automaton_a69f67fbf81c8a2c5a3700c4f9b55c596}
+
+
+Definition at line 72 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_a4633d221a98d2f36cc876f5a08c61f1e}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!live\+Game\+Of\+Life@{live\+Game\+Of\+Life}}
+\index{live\+Game\+Of\+Life@{live\+Game\+Of\+Life}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{live\+Game\+Of\+Life}]{\setlength{\rightskip}{0pt plus 5cm}readonly bool \mbox{[}$\,$\mbox{]} Cellular.\+Totalistic2\+D\+Automaton.\+live\+Game\+Of\+Life = \{ false, false, true, true, false, false, false, false, false \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_cellular_1_1_totalistic2_d_automaton_a4633d221a98d2f36cc876f5a08c61f1e}
+
+
+Definition at line 57 of file Totalistic2\+D\+Automaton.\+cs.
+
+\hypertarget{class_cellular_1_1_totalistic2_d_automaton_abb59a96261e32abc500ce4c7db88cdd6}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!live\+Replicator\+Universe@{live\+Replicator\+Universe}}
+\index{live\+Replicator\+Universe@{live\+Replicator\+Universe}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
+\subsubsection[{live\+Replicator\+Universe}]{\setlength{\rightskip}{0pt plus 5cm}readonly bool \mbox{[}$\,$\mbox{]} Cellular.\+Totalistic2\+D\+Automaton.\+live\+Replicator\+Universe = \{ false, true, false, true, false, true, false, true, false \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_cellular_1_1_totalistic2_d_automaton_abb59a96261e32abc500ce4c7db88cdd6}
+
+
+Definition at line 87 of file Totalistic2\+D\+Automaton.\+cs.
+
 \hypertarget{class_cellular_1_1_totalistic2_d_automaton_a4752e3402c58243f7f342e21ddad3b05}{}\index{Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}!rule\+Live@{rule\+Live}}
 \index{rule\+Live@{rule\+Live}!Cellular\+::\+Totalistic2\+D\+Automaton@{Cellular\+::\+Totalistic2\+D\+Automaton}}
 \subsubsection[{rule\+Live}]{\setlength{\rightskip}{0pt plus 5cm}bool \mbox{[}$\,$\mbox{]} Cellular.\+Totalistic2\+D\+Automaton.\+rule\+Live\hspace{0.3cm}{\ttfamily [protected]}}\label{class_cellular_1_1_totalistic2_d_automaton_a4752e3402c58243f7f342e21ddad3b05}

@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 125.000000
+%%BoundingBox: 0 0 500 99.601594
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,12 +19,12 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 4.000000 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 5.020000 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 6 def
+/rows 5 def
 /cols 4 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
@@ -186,8 +186,7 @@ boxfont setfont
 (Cellular.BinaryRangeCyclicAutomaton) cw
 (Cellular.ElementaryFastAutomaton) cw
 (Cellular.NaryTotalisticCyclicAutomaton) cw
-(Cellular.GameOfLife) cw
-(Cellular.GameOfLifeInteractive) cw
+(Cellular.Totalistic2DAutomatonInteractive) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
 /yspacing boxheight disty add def
@@ -199,60 +198,43 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (Cellular.CellularAutomaton) 2.120000 5.000000 box
- (Cellular.Automaton1D) 1.250000 4.000000 box
- (Cellular.Automaton2D) 3.000000 4.000000 box
- (Cellular.Binary1DAutomaton) 0.500000 3.000000 box
- (Cellular.Nary1DAutomaton) 2.000000 3.000000 box
- (Cellular.Binary2DAutomaton) 3.000000 3.000000 box
- (Cellular.BinaryRangeAutomaton) 0.000000 2.000000 box
- (Cellular.ElementaryAutomaton) 1.000000 2.000000 box
- (Cellular.NaryTotalisticAutomaton) 2.000000 2.000000 box
- (Cellular.Totalistic2DAutomaton) 3.000000 2.000000 box
- (Cellular.BinaryRangeCyclicAutomaton) 0.000000 1.000000 box
- (Cellular.ElementaryFastAutomaton) 1.000000 1.000000 box
- (Cellular.NaryTotalisticCyclicAutomaton) 2.000000 1.000000 box
- (Cellular.GameOfLife) 3.000000 1.000000 box
- (Cellular.GameOfLifeInteractive) 3.000000 0.000000 box
+ (Cellular.CellularAutomaton) 2.120000 4.000000 box
+ (Cellular.Automaton1D) 1.250000 3.000000 box
+ (Cellular.Automaton2D) 3.000000 3.000000 box
+ (Cellular.Binary1DAutomaton) 0.500000 2.000000 box
+ (Cellular.Nary1DAutomaton) 2.000000 2.000000 box
+ (Cellular.Binary2DAutomaton) 3.000000 2.000000 box
+ (Cellular.BinaryRangeAutomaton) 0.000000 1.000000 box
+ (Cellular.ElementaryAutomaton) 1.000000 1.000000 box
+ (Cellular.NaryTotalisticAutomaton) 2.000000 1.000000 box
+ (Cellular.Totalistic2DAutomaton) 3.000000 1.000000 box
+ (Cellular.BinaryRangeCyclicAutomaton) 0.000000 0.000000 box
+ (Cellular.ElementaryFastAutomaton) 1.000000 0.000000 box
+ (Cellular.NaryTotalisticCyclicAutomaton) 2.000000 0.000000 box
+ (Cellular.Totalistic2DAutomatonInteractive) 3.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-1 2.120000 4.250000 out
+1 2.120000 3.250000 out
 solid
-1.250000 3.000000 5.000000 conn
+1.250000 3.000000 4.000000 conn
 solid
-0 1.250000 4.750000 in
+0 1.250000 3.750000 in
 solid
-1 1.250000 3.250000 out
+1 1.250000 2.250000 out
 solid
-0.500000 2.000000 4.000000 conn
-solid
-0 3.000000 4.750000 in
-solid
-1 3.000000 3.250000 out
-solid
-0 0.500000 3.750000 in
-solid
-1 0.500000 2.250000 out
-solid
-0.000000 1.000000 3.000000 conn
-solid
-0 2.000000 3.750000 in
-solid
-1 2.000000 2.250000 out
+0.500000 2.000000 3.000000 conn
 solid
 0 3.000000 3.750000 in
 solid
 1 3.000000 2.250000 out
 solid
-0 0.000000 2.750000 in
+0 0.500000 2.750000 in
 solid
-1 0.000000 1.250000 out
+1 0.500000 1.250000 out
 solid
-0 1.000000 2.750000 in
-solid
-1 1.000000 1.250000 out
+0.000000 1.000000 2.000000 conn
 solid
 0 2.000000 2.750000 in
 solid
@@ -264,12 +246,24 @@ solid
 solid
 0 0.000000 1.750000 in
 solid
+1 0.000000 0.250000 out
+solid
 0 1.000000 1.750000 in
 solid
+1 1.000000 0.250000 out
+solid
 0 2.000000 1.750000 in
+solid
+1 2.000000 0.250000 out
 solid
 0 3.000000 1.750000 in
 solid
 1 3.000000 0.250000 out
+solid
+0 0.000000 0.750000 in
+solid
+0 1.000000 0.750000 in
+solid
+0 2.000000 0.750000 in
 solid
 0 3.000000 0.750000 in

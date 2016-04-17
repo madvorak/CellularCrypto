@@ -101,8 +101,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:abe3a27bbc69843d3c912605709b75715"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="interface_cellular_1_1_i_binary_c_a.html">IBinaryCA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_crypto_1_1_factory.html#abe3a27bbc69843d3c912605709b75715">CreateAutomaton</a> (string description)</td></tr>
+<tr class="memdesc:abe3a27bbc69843d3c912605709b75715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a single binary CA from a description.  <a href="#abe3a27bbc69843d3c912605709b75715">More...</a><br /></td></tr>
 <tr class="separator:abe3a27bbc69843d3c912605709b75715"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec31ee8205c68b93aa3581aa4d8486d0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_crypto_1_1_key_extender_abstract_d.html">KeyExtenderAbstractD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_crypto_1_1_factory.html#aec31ee8205c68b93aa3581aa4d8486d0">CreateExtender</a> (string description)</td></tr>
+<tr class="memdesc:aec31ee8205c68b93aa3581aa4d8486d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a key extender together with its CA from one description.  <a href="#aec31ee8205c68b93aa3581aa4d8486d0">More...</a><br /></td></tr>
 <tr class="separator:aec31ee8205c68b93aa3581aa4d8486d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd5015e25ff66c3cf46bab4d67e60ce5"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_crypto_1_1_key_extender_abstract_d.html">KeyExtenderAbstractD</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_crypto_1_1_factory.html#abd5015e25ff66c3cf46bab4d67e60ce5">GatherSuccessfulExtenders</a> (string directory)</td></tr>
 <tr class="memdesc:abd5015e25ff66c3cf46bab4d67e60ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gathers successful key extenders from all files in given directory.  <a href="#abd5015e25ff66c3cf46bab4d67e60ce5">More...</a><br /></td></tr>
@@ -135,7 +137,16 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_factory_8cs_source.html#l00015">15</a> of file <a class="el" href="_factory_8cs_source.html">Factory.cs</a>.</p>
+<p>Creates a single binary CA from a description. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">description</td><td>Descrition of the CA - output from <code>TellType()</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Definition at line <a class="el" href="_factory_8cs_source.html#l00020">20</a> of file <a class="el" href="_factory_8cs_source.html">Factory.cs</a>.</p>
 
 </div>
 </div>
@@ -161,7 +172,16 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_factory_8cs_source.html#l00052">52</a> of file <a class="el" href="_factory_8cs_source.html">Factory.cs</a>.</p>
+<p>Creates a key extender together with its CA from one description. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">description</td><td>Description of the key extender - output from <code>GetInfo()</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Object implementing <a class="el" href="interface_crypto_1_1_i_key_extender.html" title="Interface for all algorithms that can perform key stretching. Can be used from any assembly...">IKeyExtender</a> and <a class="el" href="class_crypto_1_1_key_extender_abstract_d.html" title="Abstract class for all key extenders that implement DoubleKey(). Method ExtendKey() is provided (iter...">KeyExtenderAbstractD</a>.</dd></dl>
+
+<p>Definition at line <a class="el" href="_factory_8cs_source.html#l00074">74</a> of file <a class="el" href="_factory_8cs_source.html">Factory.cs</a>.</p>
 
 </div>
 </div>
@@ -194,9 +214,9 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>List of (fully build) key extenders that were successful during previous runs of the genetic algorithm. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>List of (fully built) key extenders that were successful during previous runs of the genetic algorithm. </dd></dl>
 
-<p>Definition at line <a class="el" href="_factory_8cs_source.html#l00084">84</a> of file <a class="el" href="_factory_8cs_source.html">Factory.cs</a>.</p>
+<p>Definition at line <a class="el" href="_factory_8cs_source.html#l00106">106</a> of file <a class="el" href="_factory_8cs_source.html">Factory.cs</a>.</p>
 
 </div>
 </div>

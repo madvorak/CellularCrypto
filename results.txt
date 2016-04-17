@@ -588,3 +588,6 @@ KeyExtenderInterlaced(10, 0) using Amoeba Universe:
    TestAverageDistance: 0,924
    TestBitChange      : 0,804
    TestLargestBall    : 0,231
+
+
+TODO: pøemìøit KeyExtenderUncertain po zmìnì!

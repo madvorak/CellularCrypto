@@ -66,7 +66,7 @@ Kombinace jednoduchého algoritmu a automatu s jednoduchým chováním vede pochopit
 
 \section{KeyExtenderInterlaced}
 
-Tento algoritmus se tváøí jako kompromis, ale blíží se spíše první (lineární variantì). Algoritmus je parametrizován poètem øad $p$, ze kterých má dlouhý klíè generovat, a údajem $q$, kolik krokù navíc má automat vždy provést mezi generováním využívaných stavù. Pokud se spustí s parametry $p=2$, $q=0$, potom generuje totožný klíè jako lineární algoritmus. Jeho èasová složitost je lineární ve velikosti vstupu a ještì lineární v souèinu $p(q+1)$.
+Tento algoritmus se tváøí jako kompromis, ale blíží se spíše variantì KeyExtenderSimpleLinear. Algoritmus je parametrizován poètem øad $p$, ze kterých má dlouhý klíè generovat, a údajem $q$, kolik krokù navíc má automat vždy provést mezi generováním využívaných stavù. Pokud se spustí s parametry $p=2$, $q=0$, potom generuje totožný klíè jako lineární algoritmus. Jeho èasová složitost je lineární ve velikosti vstupu a ještì lineární v souèinu $p(q+1)$.
 
 Ve srovnání s KeyExtenderSimpleLinear vede prokládání u nìkterých automatù ke znatelnému zlepšení chování (napøíklad viz \ref{I110}), u jiných k výraznému zhoršení chování (napøíklad viz \ref{Iamoe}).
 
@@ -88,9 +88,11 @@ Ve srovnání s KeyExtenderSimpleLinear vede prokládání u nìkterých automatù ke zn
 
 \section{KeyExtenderUncertain}
 
-Tento algoritmus øeší èastou neøest, kterou vykazují celulární automaty -- rùzný poèet 0 a 1. Algoritmus zase využívá celý stav automatu. Jsou èteny vždy dvojice bitù, pøíèemž dvojice 00 a dvojice 11 jsou zahazovány. Vždy, když algoritmus narazí na dvojici 01, tak pošle na výstup 0. A za každou dvojici 10 pošle na výstup 1. Poèet krokù automatu, který bude algoritmus muset provést, není pøedem známý. Pokud se automat zasekne ve stavu, ze kterého není úniku (napøíklad samé nuly u mnoha druhù automatù, nebo také støídání 001100110011..001100 u elementárního automatu, který používá jako pøechodovou funkci majorantu buòky a jejich tìsných sousedù), je vyhozena výjimka. Pøípady, kdy se generování dlouhého klíèe nepodaøilo dokonèit, jsou zaøazeny do výsledkù s hodnout 0 u všech testù.
+Tento algoritmus øeší èastou neøest (prohøešek proti pseudonáhodnosti), kterou vykazují celulární automaty -- rùzný poèet 0 a 1. Algoritmus zase využívá celý stav automatu. Jsou èteny vždy dvojice bitù, pøíèemž dvojice 00 a dvojice 11 jsou zahazovány. Vždy, když algoritmus narazí na dvojici 01, tak pošle na výstup 0. A za každou dvojici 10 pošle na výstup 1. Poèet krokù automatu, který bude algoritmus muset provést, není pøedem známý. Pokud se automat zasekne ve stavu, ze kterého není úniku (napøíklad samé nuly u mnoha druhù automatù, nebo také støídání 001100110011..001100 u elementárního automatu, který používá jako pøechodovou funkci majorantu buòky a jejich tìsných sousedù), je vyhozena výjimka. Pøípady, kdy se generování dlouhého klíèe nepodaøilo dokonèit, jsou zaøazeny do výsledkù s hodnout 0 u všech testù.
 
-Tento netradièní zpùsob ètení hodnot vedl v pár pøípadech k dobrému chování (tøeba na obrázku \ref{U90}).
+Oèekávali jsme, že tento postup zvýší entropii výstupù, protože více vyrovná èetnost 0 a 1. Samozøejmì to nemùže fungovat vždy, protože napøíklad elementární automat èíslo 90 mùže dojít do stavu, který obsahuje dlouhý úsek pravidelného støídání 010101..0101, který se pøetvoøí na souvislý úsek samých nul. A taky jsme se trochu obávali, že se program \uv{zasekne}, když bude pøíliš malá èást automatu \uv{živá} pro generování bitù na výstup, ale bude dlouho trvat, než automat dospìje do koneèného nemìnného stavu.
+
+Z výsledkù se dozvídáme, že tento netradièní zpùsob ètení hodnot vedl v pár pøípadech k dobrému chování (tøeba na obrázku \ref{U90}). Vìtšinou ale špatnì dopadal test entropie (hùøe než u KeyExtenderSimpleLinear).
 
 \radar{0.000}{0.000}{0.000}{0.000}{0.000}{KeyExtenderUncertain na automat 220}{U220}
 

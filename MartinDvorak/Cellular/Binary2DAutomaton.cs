@@ -93,7 +93,10 @@ namespace Cellular
             {
                 for (int j = 0; j < width; j++)
                 {
-                    if (state[i][j]) packed[index / 32] |= 1u << (31 - index % 32);          // index = i * width + j
+                    if (state[i][j])
+                    {
+                        packed[index / 32] |= 1u << (31 - index % 32);          // index = i * width + j
+                    }
                     index++;
                 }
             }

@@ -22,13 +22,20 @@ Jako velmi jednoduchý Key Stream Generator by se dal použít nìjaký z generátorù 
 
 Typickým pøíkladem mùže být lineární kongruenèní generátor pseudonáhodných èísel (LCG). Ten je charakterizován rozsahem hodnot $m$, koeficientem $a$, inkrementem $c$ a poèáteèní hodnotou $X_0$. LCG provádí krok podle vzorce:
 $$X_{n+1} = (aX_n + c) \mod m$$
-a mají dlouhou periodu. Podmínky pro to, aby LCG mìl periodu délky $m$ (tj. vystøídal všechny možné hodnoty), jsou následující:
+a mají dlouhou periodu. Podmínky pro to, aby LCG mìl periodu délky $m$ (tj. vystøídal všechny možné hodnoty), jsou následující (viz Knuth):
 \begin{itemize}
 \item $c$ a $m$ jsou nesoudìlná èísla
 \item $a-1$ je dìlitelné všemi prvoèiniteli $m$
 \item pokud je $m$ dìlitelné 4, je i $a-1$ dìlitelné 4
 \end{itemize}
-Tøetí pravidlo je velice dùležité, protože s ohledem na výkon programu na reálných procesorech se obvykle volí m v hodnotì mocniny dvou.
+Tøetí pravidlo je velice dùležité, protože s ohledem na výkon programu na reálných procesorech se obvykle volí m v hodnotì mocniny dvou\footnote{Bìžnì se používá nastavení, kde rozsah je mocnina dvou $m = 2^n$ (kde n je èíslo od 24 do 64), $c=1$, $a$ libovolné takové, že $a \equiv 1 (\mod 4)$}.
+
+Jako pseudonáhodnou posloupnost není dobré použít pøímo hodnoty $X_i$. Problém je zejména vidìt tehdy, když $m = 2^n$. Pak se lze podívat na posledních $d$ bitù èísel $X_i$, oznaème je $Y_i = X_i \mod 2^d$. Ty tvoøí posloupnost s kratší periodou. Její pøedpis lze napsat stejným zpùsobem, jako pøedpis pro LCG:
+$$Y_{n+1} = (qY_n+r) \mod 2^d$$, kde $q = a \mod 2^d$, $r = c \mod 2^d$.
+
+Øešením je použití jen nìkolika poèáteèních bitù z každého $X_i$. Pokud by se na výstup posílala celá hodnota $X_i$, byla by èást bitù snadno pøedvídatelná. Napøíklad každý $m$-tý bit výstupu by pravidelnì støídal 0 a 1.
+
+Existují i jiné generátory pseudonáhodných èísel, které jsou vhodnìjší pro kryptografické úèely. Ve skuteènosti není skoro žádný rozdíl mezi Key Stream Generator a genetárorem pseudonáhodných èísel. Odlišuje je jen to, že generátory pseudonáhodných èísel používají seed menší velikosti, kdežto Key Stream Generator lze inicializovat klíèem vìtší velikosti.
 
 \section{Testy}
 

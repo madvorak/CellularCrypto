@@ -3,7 +3,7 @@ var searchData=
   ['searchbox',['SearchBox',['../search_8js.html#a52066106482f8136aa9e0ec859e8188f',1,'search.js']]],
   ['searchforgoodextenders',['SearchForGoodExtenders',['../class_crypto_1_1_search_s_g_a.html#a5c735e0bfccfc7d2fb91fd772be42ae7',1,'Crypto::SearchSGA']]],
   ['searchresults',['SearchResults',['../search_8js.html#a9189b9f7a32b6bc78240f40348f7fe03',1,'search.js']]],
-  ['setcell',['SetCell',['../class_cellular_1_1_game_of_life_interactive.html#ab1de892e87ba532605402c4e8472495c',1,'Cellular::GameOfLifeInteractive']]],
+  ['setcell',['SetCell',['../class_cellular_1_1_totalistic2_d_automaton_interactive.html#ac4a82e29bbfbd30b2e32d7a0b03535b5',1,'Cellular::Totalistic2DAutomatonInteractive']]],
   ['setclassattr',['setClassAttr',['../search_8js.html#a499422fc054a5278ae32801ec0082c56',1,'search.js']]],
   ['setkeyactions',['setKeyActions',['../search_8js.html#a98192fa2929bb8e4b0a890a4909ab9b2',1,'search.js']]],
   ['stateasstring',['StateAsString',['../interface_cellular_1_1_i_binary_c_a.html#ab70ebcefac0ca22dd06661f3316a6c2e',1,'Cellular::IBinaryCA']]],

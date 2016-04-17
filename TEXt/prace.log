@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  16 APR 2016 21:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  17 APR 2016 09:56
 entering extended mode
 **./prace.tex
 (prace.tex
@@ -901,26 +901,26 @@ Kapitola 2.
 
 
 ] [9] [10]
-Overfull \hbox (8.50215pt too wide) in paragraph at lines 82--82
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 89--89
  [][][][]\IL2/cmr/m/n/12 Compression |
  []
 
 
-Overfull \hbox (5.98274pt too wide) in paragraph at lines 82--82
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 89--89
  [][][][]\IL2/cmr/m/n/12 AveDistance |
  []
 
 
-Overfull \hbox (1.90501pt too wide) in paragraph at lines 82--82
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 89--89
  [][][][]\IL2/cmr/m/n/12 LargestBall |
  []
 
-) [11]
+) [11] [12]
 \openout2 = `kapArch.aux'.
 
  (kapArch.tex
 Kapitola 3.
-) [12
+) [13
 
 
 
@@ -959,11 +959,11 @@ Overfull \hbox (1.90501pt too wide) in paragraph at lines 18--18
  [][][][]\IL2/cmr/m/n/12 LargestBall |
  []
 
-[13
+[14
 
 
 
-] [14]
+] [15]
 Overfull \hbox (8.50215pt too wide) in paragraph at lines 28--28
  [][][][]\IL2/cmr/m/n/12 Compression |
  []
@@ -1068,7 +1068,7 @@ Overfull \hbox (1.90501pt too wide) in paragraph at lines 40--40
  [][][][]\IL2/cmr/m/n/12 LargestBall |
  []
 
-[15] [16] [17] [18]
+[16] [17] [18] [19]
 Overfull \hbox (8.50215pt too wide) in paragraph at lines 48--48
  [][][][]\IL2/cmr/m/n/12 Compression |
  []
@@ -1308,22 +1308,7 @@ Overfull \hbox (1.90501pt too wide) in paragraph at lines 87--87
  [][][][]\IL2/cmr/m/n/12 LargestBall |
  []
 
-[19] [20] [21] [22] [23] [24] [25] [26]
-Overfull \hbox (8.50215pt too wide) in paragraph at lines 95--95
- [][][][]\IL2/cmr/m/n/12 Compression |
- []
-
-
-Overfull \hbox (5.98274pt too wide) in paragraph at lines 95--95
- [][][][]\IL2/cmr/m/n/12 AveDistance |
- []
-
-
-Overfull \hbox (1.90501pt too wide) in paragraph at lines 95--95
- [][][][]\IL2/cmr/m/n/12 LargestBall |
- []
-
-
+[20] [21] [22] [23] [24] [25] [26] [27]
 Overfull \hbox (8.50215pt too wide) in paragraph at lines 97--97
  [][][][]\IL2/cmr/m/n/12 Compression |
  []
@@ -1413,10 +1398,25 @@ Overfull \hbox (1.90501pt too wide) in paragraph at lines 107--107
  [][][][]\IL2/cmr/m/n/12 LargestBall |
  []
 
-[27] [28] [29] [30] [31]) [32]
+
+Overfull \hbox (8.50215pt too wide) in paragraph at lines 109--109
+ [][][][]\IL2/cmr/m/n/12 Compression |
+ []
+
+
+Overfull \hbox (5.98274pt too wide) in paragraph at lines 109--109
+ [][][][]\IL2/cmr/m/n/12 AveDistance |
+ []
+
+
+Overfull \hbox (1.90501pt too wide) in paragraph at lines 109--109
+ [][][][]\IL2/cmr/m/n/12 LargestBall |
+ []
+
+[28] [29] [30] [31] [32]) [33]
 \openout2 = `zaver.aux'.
 
- (zaver.tex) [33
+ (zaver.tex) [34
 
 
 
@@ -1431,25 +1431,25 @@ Overfull \hbox (37.98117pt too wide) in paragraph at lines 25--26
 erage-levenshtein-distance-|
  []
 
-) [34
+) [35
 
 
 ] (prace.lof)
 \tf@lof=\write7
 \openout7 = `prace.lof'.
 
- [35
+ [36
 
 
 ] (prace.lot)
 \tf@lot=\write8
 \openout8 = `prace.lot'.
 
- [36
-
-] [37
+ [37
 
 ] [38
+
+] [39
 
 ]
 
@@ -1466,27 +1466,33 @@ Package rerunfilecheck Info: File `prace.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 168.
  ) 
 Here is how much of TeX's memory you used:
- 22472 strings out of 493634
- 397647 string characters out of 3141311
- 605175 words of memory out of 3000000
- 25304 multiletter control sequences out of 15000+200000
- 22759 words of font info for 72 fonts, out of 3000000 for 9000
+ 22491 strings out of 493634
+ 397823 string characters out of 3141311
+ 605287 words of memory out of 3000000
+ 25313 multiletter control sequences out of 15000+200000
+ 26027 words of font info for 81 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,8n,93p,1001b,916s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Martin/Ap
-pData/Roaming/MiKTeX/2.9/fonts/type1/public/cs/csbx12.pfb><C:/Users/Martin/AppD
-ata/Roaming/MiKTeX/2.9/fonts/type1/public/cs/csr12.pfb><C:/Users/Martin/AppData
-/Roaming/MiKTeX/2.9/fonts/type1/public/cs/csr17.pfb><C:/Users/Martin/AppData/Ro
-aming/MiKTeX/2.9/fonts/type1/public/cs/cssl12.pfb>
-Output written on prace.pdf (42 pages, 409621 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Martin/AppData/Ro
+aming/MiKTeX/2.9/fonts/type1/public/cs/csbx12.pfb><C:/Users/Martin/AppData/Roam
+ing/MiKTeX/2.9/fonts/type1/public/cs/csr10.pfb><C:/Users/Martin/AppData/Roaming
+/MiKTeX/2.9/fonts/type1/public/cs/csr12.pfb><C:/Users/Martin/AppData/Roaming/Mi
+KTeX/2.9/fonts/type1/public/cs/csr17.pfb><C:/Users/Martin/AppData/Roaming/MiKTe
+X/2.9/fonts/type1/public/cs/csr7.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.
+9/fonts/type1/public/cs/csr8.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fo
+nts/type1/public/cs/cssl12.pfb>
+Output written on prace.pdf (43 pages, 454433 bytes).
 PDF statistics:
- 519 PDF objects out of 1000 (max. 8388607)
- 113 named destinations out of 1000 (max. 500000)
+ 551 PDF objects out of 1000 (max. 8388607)
+ 115 named destinations out of 1000 (max. 500000)
  305 words of extra memory for PDF output out of 10000 (max. 10000000)
 

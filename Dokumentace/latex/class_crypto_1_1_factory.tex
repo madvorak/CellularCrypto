@@ -9,9 +9,9 @@
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{interface_cellular_1_1_i_binary_c_a}{I\+Binary\+C\+A} \hyperlink{class_crypto_1_1_factory_abe3a27bbc69843d3c912605709b75715}{Create\+Automaton} (string description)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a single binary C\+A from a description. \end{DoxyCompactList}\item 
 static \hyperlink{class_crypto_1_1_key_extender_abstract_d}{Key\+Extender\+Abstract\+D} \hyperlink{class_crypto_1_1_factory_aec31ee8205c68b93aa3581aa4d8486d0}{Create\+Extender} (string description)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a key extender together with its C\+A from one description. \end{DoxyCompactList}\item 
 static List$<$ \hyperlink{class_crypto_1_1_key_extender_abstract_d}{Key\+Extender\+Abstract\+D} $>$ \hyperlink{class_crypto_1_1_factory_abd5015e25ff66c3cf46bab4d67e60ce5}{Gather\+Successful\+Extenders} (string directory)
 \begin{DoxyCompactList}\small\item\em Gathers successful key extenders from all files in given directory. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -35,7 +35,19 @@ Definition at line 13 of file Factory.\+cs.
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_crypto_1_1_factory_abe3a27bbc69843d3c912605709b75715}
 
 
-Definition at line 15 of file Factory.\+cs.
+Creates a single binary C\+A from a description. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em description} & Descrition of the C\+A -\/ output from {\ttfamily Tell\+Type()}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 20 of file Factory.\+cs.
 
 \hypertarget{class_crypto_1_1_factory_aec31ee8205c68b93aa3581aa4d8486d0}{}\index{Crypto\+::\+Factory@{Crypto\+::\+Factory}!Create\+Extender@{Create\+Extender}}
 \index{Create\+Extender@{Create\+Extender}!Crypto\+::\+Factory@{Crypto\+::\+Factory}}
@@ -46,7 +58,19 @@ Definition at line 15 of file Factory.\+cs.
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_crypto_1_1_factory_aec31ee8205c68b93aa3581aa4d8486d0}
 
 
-Definition at line 52 of file Factory.\+cs.
+Creates a key extender together with its C\+A from one description. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em description} & Description of the key extender -\/ output from {\ttfamily Get\+Info()}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Object implementing \hyperlink{interface_crypto_1_1_i_key_extender}{I\+Key\+Extender} and \hyperlink{class_crypto_1_1_key_extender_abstract_d}{Key\+Extender\+Abstract\+D}.
+\end{DoxyReturn}
+
+
+Definition at line 74 of file Factory.\+cs.
 
 \hypertarget{class_crypto_1_1_factory_abd5015e25ff66c3cf46bab4d67e60ce5}{}\index{Crypto\+::\+Factory@{Crypto\+::\+Factory}!Gather\+Successful\+Extenders@{Gather\+Successful\+Extenders}}
 \index{Gather\+Successful\+Extenders@{Gather\+Successful\+Extenders}!Crypto\+::\+Factory@{Crypto\+::\+Factory}}
@@ -65,11 +89,11 @@ Gathers successful key extenders from all files in given directory.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-List of (fully build) key extenders that were successful during previous runs of the genetic algorithm. 
+List of (fully built) key extenders that were successful during previous runs of the genetic algorithm. 
 \end{DoxyReturn}
 
 
-Definition at line 84 of file Factory.\+cs.
+Definition at line 106 of file Factory.\+cs.
 
 
 
