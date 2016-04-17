@@ -135,7 +135,7 @@ namespace Cellular
                 if (state[i - 1][1]) liveNeig++;
                 if (state[i][1]) liveNeig++;
                 if (state[i + 1][1]) liveNeig++;
-                if (state[i][0])                                //left corner
+                if (state[i][0])                                //left edge
                 {
                     newState[i][0] = ruleLive[liveNeig];
                 }
@@ -150,7 +150,7 @@ namespace Cellular
                 if (state[i - 1][width - 2]) liveNeig++;
                 if (state[i][width - 2]) liveNeig++;
                 if (state[i + 1][width - 2]) liveNeig++;
-                if (state[i][width - 1])                        //right corner
+                if (state[i][width - 1])                        //right edge
                 {
                     newState[i][width - 1] = ruleLive[liveNeig];
                 }
@@ -168,7 +168,7 @@ namespace Cellular
                 if (state[1][j - 1]) liveNeig++;
                 if (state[1][j]) liveNeig++;
                 if (state[1][j + 1]) liveNeig++;
-                if (state[0][j])                                //top corner
+                if (state[0][j])                                //top edge
                 {
                     newState[0][j] = ruleLive[liveNeig];
                 }
@@ -183,7 +183,7 @@ namespace Cellular
                 if (state[height - 2][j - 1]) liveNeig++;
                 if (state[height - 2][j]) liveNeig++;
                 if (state[height - 2][j + 1]) liveNeig++;
-                if (state[height - 1][j])                       //bottom corner
+                if (state[height - 1][j])                       //bottom edge
                 {
                     newState[height - 1][j] = ruleLive[liveNeig];
                 }

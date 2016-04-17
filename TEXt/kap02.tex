@@ -28,7 +28,7 @@ a mají dlouhou periodu. Podmínky pro to, aby LCG mìl periodu délky $m$ (tj. vyst
 \item $a-1$ je dìlitelné všemi prvoèiniteli $m$
 \item pokud je $m$ dìlitelné 4, je i $a-1$ dìlitelné 4
 \end{itemize}
-Tøetí pravidlo je velice dùležité, protože s ohledem na výkon programu na reálných procesorech se obvykle volí m v hodnotì mocniny dvou\footnote{Bìžnì se používá nastavení, kde rozsah je mocnina dvou $m = 2^n$ (kde n je èíslo od 24 do 64), $c=1$, $a$ libovolné takové, že $a \equiv 1 (\mod 4)$}.
+Tøetí pravidlo je velice dùležité, protože s ohledem na výkon programu na reálných procesorech se obvykle volí m v hodnotì mocniny dvou\footnote{Bìžnì se používá nastavení, kde rozsah je mocnina dvou ($m = 2^n$, kde n je èíslo od 24 do 64), $c=1$, $a$ libovolné takové, že $1 \equiv a \mod 4$}.
 
 Jako pseudonáhodnou posloupnost není dobré použít pøímo hodnoty $X_i$. Problém je zejména vidìt tehdy, když $m = 2^n$. Pak se lze podívat na posledních $d$ bitù èísel $X_i$, oznaème je $Y_i = X_i \mod 2^d$. Ty tvoøí posloupnost s kratší periodou. Její pøedpis lze napsat stejným zpùsobem, jako pøedpis pro LCG:
 $$Y_{n+1} = (qY_n+r) \mod 2^d$$, kde $q = a \mod 2^d$, $r = c \mod 2^d$.
