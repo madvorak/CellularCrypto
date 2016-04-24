@@ -1,0 +1,10 @@
+0,996071782547699
+
+Interlaced(4, 1) using Basic Automaton No. 30
+Interlaced(4, 0) using Basic Automaton No. 230
+Interlaced(10, 1) using Basic Automaton No. 41
+SimpleLinear using Binary automaton with rule 01111111101001111110110101110110
+Interlaced(10, 1) using Binary automaton with rule 10010000000110101011110001110011
+Interlaced(10, 9) using Cyclic Binary automaton with rule 11110011011000001101101011101100
+Interlaced(10, 9) using Binary automaton with rule 11010100010010011111100100001010
+Interlaced(10, 9) using Basic Automaton No. 149

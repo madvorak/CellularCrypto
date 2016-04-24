@@ -45,7 +45,18 @@ $$f:\{0,..,(s-1)(o+1)\} \rightarrow \{0,..,s-1\}$$
 
 \section{Dvourozmìrné celulární automaty}
 
-V oblasti 2D celulárních automatù se pouívají hlavnì totalistické automaty, protoe vytváøení jinıch typù pravidel by bylo pøíliš sloité. Typickıch pøíkladem totalistického 2D automatu je Game Of Life. To je dvourozmìrnı automat nad binární abecedou pouívající 8-okolí, kterı se øídí pravidlem, e ivá buòka pøeívá, pokud má 2 a 3 ivé sousedy (jinak umírá), zatímco mrtvá buòka obije, pokud má právì 3 ivé sousedy. Game Of Life se stal zdrojem  mnoha rùznıch høíèek. Nicménì pro úèely šifrování se nezdá bıt moc uiteènı, protoe nejde dostateènì parametrizovat.
+V oblasti 2D celulárních automatù se pouívají hlavnì totalistické automaty, protoe vytváøení jinıch typù pravidel by bylo pøíliš sloité. Typickıch pøíkladem totalistického 2D automatu je Game Of Life. To je dvourozmìrnı automat nad binární abecedou pouívající 8-okolí, kterı se øídí pravidlem, e ivá buòka pøeívá, pokud má 2 a 3 ivé sousedy (jinak umírá), zatímco mrtvá buòka obije, pokud má právì 3 ivé sousedy. Game Of Life se stal zdrojem  mnoha rùznıch høíèek. Nicménì pro úèely šifrování se nezdá bıt moc uiteènı, protoe se chová pøíliš \uv{pravidelnì} a po mnoha provedenıch krocích mívá velké oblasti bez jakékoliv ivé buòky.
+
+Lepší jsou pro nás CA, která se chovají více \uv{chaoticky}. Mezi totalistickımi 2D automaty je to napøíklad automat jménem Amoeba Universe, v nìm ivá buòka pøeívá, má-li 1, 3, 5 èi 8 ivıch sousedù a mrtvá buòka obije, pokud má 3, 5, èi 7 ivıch sousedù. Na sledování èlovìkem vıvoj tohoto automatu není nic zajímavého (na rozdíl od Game Of Life), ale statistické vlastnosti se ukázaly bıt slušné.
+
+\begin{figure}
+\centering
+\includegraphics[width=80mm, height=80mm]{replicator.png}
+\caption{Replicator Universe po 8 krocích}
+\label{replicator}
+\end{figure}
+
+Poslední dvourozmìrnı automat, kterı lze v programu získat pøímo pod urèitım jménem, je Replicator Universe. Ten má veselé pravidlo, které zapomíná pùvodní stav buòky a její novı stav je 1, pokud má 1, 3, 5 èi 7 ivıch sousedù. V této práci je uveden jen pro zajímavost. Jakákoliv poèáteèní konfigurace je toti po urèitém poètu krokù zkopírovaná do všech 8 smìrù od poèátku (jako tøeba ta, co je na obrázku \ref{replicator}). A proè se tak vùbec chová? Jeho pøechodová funkce je vlastnì XOR sousedù a je to tak lineární zobrazení nad $\mathbb{Z}_2$. Proto i po jakémkoliv poètu krokù tento CA stále definuje lineární zobrazení mezi poèáteèním stavem a novım stavem. Díky linearitì mùeme prozkoumat zvláš, jaké všechny buòky budou ovlivnìny jednou ivou buòkou. Vısledek pak vznikne XORováním tìchto vısledkù pro všechny ivé buòky na vstupu (jako kdyby se kadá buòka vstupu vyvíjela zcela samostatnì). Pøi hraní s jedinou ivou buòkou na vstupu je u snadnìjší nahlédnout, proè vdy po provedení $2^n$ krokù je ivá buòka nakopírována do všech 8 stran s velkımi mezerami od jiné (všechny ve vzdálenosti $n$ od poèáteèního místa, a u \uv{rovnì} èi \uv{šikmo}).
 
 \section{Implementace celulárních automatù}
 

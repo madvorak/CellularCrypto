@@ -1,33 +1,41 @@
 \select@language {czech}
-\contentsline {chapter}{\'Uvod}{2}{chapter*.2}
-\contentsline {chapter}{\numberline {1}Celul\'arn\IeC {\'\i } automaty}{3}{chapter.1}
-\contentsline {section}{\numberline {1.1}Co jsou to celul\'arn\IeC {\'\i } automaty}{3}{section.1.1}
-\contentsline {section}{\numberline {1.2}Element\'arn\IeC {\'\i } celul\'arn\IeC {\'\i } automaty}{3}{section.1.2}
-\contentsline {section}{\numberline {1.3}Jin\'e 1D celul\'arn\IeC {\'\i } automaty}{6}{section.1.3}
-\contentsline {section}{\numberline {1.4}Dvourozm\v ern\'e celul\'arn\IeC {\'\i } automaty}{6}{section.1.4}
-\contentsline {section}{\numberline {1.5}Implementace celul\'arn\IeC {\'\i }ch automat\r u}{7}{section.1.5}
-\contentsline {chapter}{\numberline {2}\v Sifrov\'an\IeC {\'\i }}{8}{chapter.2}
-\contentsline {section}{\numberline {2.1}N\v ekolik uk\'azek}{8}{section.2.1}
-\contentsline {section}{\numberline {2.2}Pseudon\'ahodn\'e gener\'atory}{8}{section.2.2}
-\contentsline {section}{\numberline {2.3}Testy}{9}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Testy na \'urovni jednotliv\'ych v\'ystup\r u}{10}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Testy na \'urovni cel\'eho zobrazen\IeC {\'\i }}{10}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Pou\v zit\IeC {\'\i } test\r u}{11}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Grafick\'e zn\'azorn\v en\IeC {\'\i }}{11}{subsection.2.3.4}
-\contentsline {chapter}{\numberline {3}N\'astin architektury}{13}{chapter.3}
-\contentsline {section}{\numberline {3.1}MartinDvorak}{13}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Cellular}{13}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Crypto}{13}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Testing}{13}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Program}{13}{section.3.2}
-\contentsline {chapter}{\numberline {4}Zp\r usoby protahov\'an\IeC {\'\i } kl\IeC {\'\i }\v c\r u}{14}{chapter.4}
-\contentsline {section}{\numberline {4.1}KeyExtenderQuadratic}{14}{section.4.1}
-\contentsline {section}{\numberline {4.2}KeyExtenderSimpleLinear}{16}{section.4.2}
-\contentsline {section}{\numberline {4.3}KeyExtenderInterlaced}{20}{section.4.3}
-\contentsline {section}{\numberline {4.4}KeyExtenderUncertain}{28}{section.4.4}
-\contentsline {section}{\numberline {4.5}KeyExtenderGenetic}{32}{section.4.5}
-\contentsline {chapter}{Z\'av\v er}{34}{chapter*.3}
-\contentsline {chapter}{Seznam obr\'azk\r {u}}{36}{chapter*.4}
-\contentsline {chapter}{Seznam tabulek}{37}{chapter*.5}
-\contentsline {chapter}{Seznam pou\v zit\'ych zkratek}{38}{chapter*.6}
-\contentsline {chapter}{P\v r\IeC {\'\i }lohy}{39}{chapter*.7}
+\contentsline {chapter}{\'Uvod}{3}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Celul\'arn\IeC {\'\i } automaty}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}Co jsou to celul\'arn\IeC {\'\i } automaty}{4}{section.1.1}
+\contentsline {section}{\numberline {1.2}Element\'arn\IeC {\'\i } celul\'arn\IeC {\'\i } automaty}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Jin\'e 1D celul\'arn\IeC {\'\i } automaty}{7}{section.1.3}
+\contentsline {section}{\numberline {1.4}Dvourozm\v ern\'e celul\'arn\IeC {\'\i } automaty}{7}{section.1.4}
+\contentsline {section}{\numberline {1.5}Implementace celul\'arn\IeC {\'\i }ch automat\r u}{8}{section.1.5}
+\contentsline {chapter}{\numberline {2}\v Sifrov\'an\IeC {\'\i }}{10}{chapter.2}
+\contentsline {section}{\numberline {2.1}Z\'akladn\IeC {\'\i } pojmy}{10}{section.2.1}
+\contentsline {section}{\numberline {2.2}Z\'akladn\IeC {\'\i } v\'ychodiska}{10}{section.2.2}
+\contentsline {section}{\numberline {2.3}O co n\'am jde}{10}{section.2.3}
+\contentsline {section}{\numberline {2.4}Pseudon\'ahodn\'e gener\'atory}{10}{section.2.4}
+\contentsline {section}{\numberline {2.5}Blokov\'e \v sifry}{11}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Opera\v cn\IeC {\'\i } mody}{12}{subsection.2.5.1}
+\contentsline {section}{\numberline {2.6}\'Utoky na \v sifry}{17}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Rozd\v elen\IeC {\'\i } podle povolen\'ych prost\v redk\r u}{17}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}P\v r\IeC {\'\i }klady \'utok\r u}{17}{subsection.2.6.2}
+\contentsline {section}{\numberline {2.7}Testy}{17}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Testy na \'urovni jednotliv\'ych v\'ystup\r u}{17}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Testy na \'urovni cel\'eho zobrazen\IeC {\'\i }}{17}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Pou\v zit\IeC {\'\i } test\r u}{19}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {2.7.4}Grafick\'e zn\'azorn\v en\IeC {\'\i }}{19}{subsection.2.7.4}
+\contentsline {chapter}{\numberline {3}N\'astin architektury}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}MartinDvorak}{20}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Cellular}{20}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Crypto}{20}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Testing}{20}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Program}{20}{section.3.2}
+\contentsline {chapter}{\numberline {4}Zp\r usoby protahov\'an\IeC {\'\i } kl\IeC {\'\i }\v c\r u}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}KeyExtenderQuadratic}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}KeyExtenderSimpleLinear}{23}{section.4.2}
+\contentsline {section}{\numberline {4.3}KeyExtenderInterlaced}{27}{section.4.3}
+\contentsline {section}{\numberline {4.4}KeyExtenderUncertain}{32}{section.4.4}
+\contentsline {section}{\numberline {4.5}KeyExtenderGenetic}{36}{section.4.5}
+\contentsline {chapter}{\numberline {5}Dal\v s\IeC {\'\i } mo\v znosti \v sifrov\'an\IeC {\'\i }}{42}{chapter.5}
+\contentsline {chapter}{Z\'av\v er}{43}{chapter*.3}
+\contentsline {chapter}{Seznam obr\'azk\r {u}}{44}{chapter*.4}
+\contentsline {chapter}{Seznam tabulek}{46}{chapter*.5}
+\contentsline {chapter}{Seznam pou\v zit\'ych zkratek}{47}{chapter*.6}
+\contentsline {chapter}{P\v r\IeC {\'\i }lohy}{48}{chapter*.7}

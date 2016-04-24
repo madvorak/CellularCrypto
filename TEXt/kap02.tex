@@ -2,23 +2,27 @@
 
 \chapter{Šifrování}
 
+\section{Základní pojmy}
+
 Vìda zabıvající se šifrováním se nazıvá \textsl{kryptografie}. Lámáním šifer se zase zabıvá  \textsl{kryptoanalıza}. Úkolem šifrování je uchovat a pøedat tajnou zprávu tak, aby ji mohl pøeèíst ten, pro koho je urèena, ale u nikdo jinı. Dále se nìkdy za cíl dává ovìøitelnost autora zprávy.
 
 Pùvodní èitelná zpráva se nazıvá \textsl{plaintext}. Data po zašifrování se nazıvají \textsl{ciphertext}. Pro pøevod plaintextu na ciphertext je potøeba pouít šifrovací algoritmus. Ten by mìl zároveò bıt schopen pøevézt ciphertext zpìt na plaintext (tzv. dešifrování). Protoe fungování šifrovacího algoritmu se velmi snadno vyzradí, zásadní roli hraje \textsl{šifrovací klíè}. Pokud se jedná o \textsl{symetrickou kryptografii}, tak stejnı klíè slouí i k dešifrování. V pøípadì \textsl{asymetrické kryptografie} se pouívají dva rùzné klíèe. Šifrovací resp. dešifrovací klíèe v asymetrické kryptografii se s ohledem na jejich pouití nazıvají jako \textsl{veøejnı} resp. \textsl{tajnı} klíè.
 
+\section{Základní vıchodiska}
+
 Pøed zašifrováním zprávy se èasto provádí její \textsl{komprese}. To má za následek nejen úsporu pøenosového pásma a mnoství práce (èasu) šifrovacího algoritmu, ale velkou vıhodou je dosaení vıraznì rovnomìrnìjšího pravdìpodobnostního rozdìlení na prostoru plaintextù, co vıraznì komplikuje kryptoanalızu.
 
-\section{Nìkolik ukázek}
+Jedinou zcela neprolomitelnou šifrovací metodou je Vernamova šifra. V binární podobì tato šifra vypadá tak, e se pouije one-time pad, co je sekvence náhodnıch bitù, kterou vlastní obì strany. Odesílatel provede operaci plaintext XOR one-time pad a pøíjemce provede operaci ciphertext XOR one-time pad, cím dostane zpìt plaintext. Problém je, e one-time pad musí bıt stejnì dlouhı jako plaintext a nelze ho pouít opakovanì. Kvùli tomu se Vernamova šifra pouívá jen pro kritické aplikace, pøed kterımi se mohou komunikující strany fyzicky setkat a pøedat si one-time pad.
 
-Jedinou zcela nerozluštitelnou šifrovací metodou je Vernamova šifra. V binární podobì tato šifra vypadá tak, e se pouije one-time pad, co je sekvence náhodnıch bitù, kterou vlastní obì strany. Odesílatel provede operaci plaintext XOR one-time pad a pøíjemce provede operaci ciphertext XOR one-time pad, cím dostane zpìt plaintext. Problém je, e one-time pad musí bıt stejnì dlouhı jako plaintext a nelze ho pouít opakovanì. Kvùli tomu se Vernamova šifra pouívá jen pro kritické aplikace, pøed kterımi se mohou komunikující strany fyzicky setkat a pøedat si one-time pad.
+\section{O co nám jde}
 
-V této práci se budeme vìnovat vytvoøení algoritmu na protahování klíèù (anglicky key stretching). Cílem je z krátkého klíèe (kterı lze napøíklad v krátkém èase pøenést pomocí RSA) vygenerovat dlouhı klíè (onen one-time pad, kterım lze pøeXORovat celı soubor). Je to tedy podobnı úkol jako naprogramovat \textsl{Key Stream Generator}, akorát my budeme dopøedu vìdìt cílenou délku vısledného klíèe.
+V této práci se budeme vìnovat vytvoøení algoritmu na protahování klíèù (anglicky key stretching). Cílem je z krátkého klíèe (kterı lze napøíklad v krátkém èase pøenést pomocí RSA) vygenerovat dlouhı klíè (one-time pad, kterım lze pøeXORovat celı soubor). Je to tedy podobnı úkol jako naprogramovat \textsl{Keystream Generator}, akorát my budeme dopøedu vìdìt cílenou délku vısledného klíèe.
 
-Jako Key Stream Generator se dá pouít napøíklad mnoho blokovıch šifer. U blokovıch šifer záleí na módu operace. Pøi \textsl{Cipher Block Chaining} (CBC, PCBC) èi \textsl{Cipher Feedback} (CFB) módu zašifrování druhé èásti plaintextu záleí na vısledku zašifrování první èásti, tudí to není Key Stream Generator. Ale pøi zapojení jako tøeba \textsl{Counter} (CTR) vzniká proud bitù bez znalosti plaintextu, take získáme Key Stream Generator. Dobrım pøíklalem je tøeba AES-CTR.
+%Jako Key Stream Generator se dá pouít napøíklad mnoho blokovıch šifer. U blokovıch šifer záleí na módu operace. Pøi \textsl{Cipher Block Chaining} (CBC, PCBC) èi \textsl{Cipher Feedback} (CFB) módu zašifrování druhé èásti plaintextu záleí na vısledku zašifrování první èásti, tudí to není Key Stream Generator. Ale pøi zapojení jako tøeba \textsl{Counter} (CTR) vzniká proud bitù bez znalosti plaintextu, take získáme Key Stream Generator. Dobrım pøíklalem je tøeba AES-CTR.
 
 \section{Pseudonáhodné generátory}
 
-Jako velmi jednoduchı Key Stream Generator by se dal pouít nìjakı z generátorù pseudonáhodnıch èísel. Narozdíl od \uv{opravdovıch} generátorù náhodnıch èísel, které pouívají nìjakı fyzikální zdroj náhody (tøeba radioaktivní rozpad), jsou hodnoty vytváøené generátorem pseudonáhodnıch èísel deterministicky urèeny poèáteèní hodnotou (tzv. seed), která mùe bıt zvolena na základì krátkého klíèe.
+Jako velmi jednoduchı Keystream Generator by se dal pouít nìjakı z generátorù pseudonáhodnıch èísel. Narozdíl od \uv{opravdovıch} generátorù náhodnıch èísel, které pouívají nìjakı fyzikální zdroj náhody (tøeba radioaktivní rozpad), jsou hodnoty vytváøené generátorem pseudonáhodnıch èísel deterministicky urèeny poèáteèní hodnotou (tzv. seed), která mùe bıt zvolena na základì krátkého klíèe.
 
 Typickım pøíkladem mùe bıt lineární kongruenèní generátor pseudonáhodnıch èísel (LCG). Ten je charakterizován rozsahem hodnot $m$, koeficientem $a$, inkrementem $c$ a poèáteèní hodnotou $X_0$. LCG provádí krok podle vzorce:
 $$X_{n+1} = (aX_n + c) \mod m$$
@@ -35,7 +39,66 @@ $$Y_{n+1} = (qY_n+r) \mod 2^d$$, kde $q = a \mod 2^d$, $r = c \mod 2^d$.
 
 Øešením je pouití jen nìkolika poèáteèních bitù z kadého $X_i$. Pokud by se na vıstup posílala celá hodnota $X_i$, byla by èást bitù snadno pøedvídatelná. Napøíklad kadı $m$-tı bit vıstupu by pravidelnì støídal 0 a 1.
 
-Existují i jiné generátory pseudonáhodnıch èísel, které jsou vhodnìjší pro kryptografické úèely. Ve skuteènosti není skoro ádnı rozdíl mezi Key Stream Generator a genetárorem pseudonáhodnıch èísel. Odlišuje je jen to, e generátory pseudonáhodnıch èísel pouívají seed menší velikosti, kdeto Key Stream Generator lze inicializovat klíèem vìtší velikosti.
+Existují i jiné generátory pseudonáhodnıch èísel, které jsou vhodnìjší pro kryptografické úèely. Ve skuteènosti není skoro ádnı rozdíl mezi Keystream Generator a genetárorem pseudonáhodnıch èísel. Odlišuje je jen to, e generátory pseudonáhodnıch èísel pouívají seed menší velikosti, kdeto Keystream Generator lze inicializovat klíèem vìtší velikosti.
+
+\section{Blokové šifry}
+
+Blokové šifry jsou klasickım zpùsobem symetrické kryptografie, které se dnes pouívají ve vìtšinì kryptosystémù. Spoleènım znakem blokovıch šifer je, e s vyuitím šifrovacího klíèe transformují vstup pevné velikosti na vıstup stejné velikosti (jde o bloky bitù, jejich velikost je urèena ji pøi návrhu šifry). Aby bylo moné z plaintextu opìt získat ciphertext (bloková šifra definuje, jak se stejnım klíèem provést obì zobrazení), musí bıt pro kadou hodnotu klíèe toto zobrazení bijekce mezi vstupy a vıstupy. Plaintext se rozdìlí na bloky dané velikosti, kadı z nich se zašifruje a bloky ciphertextu se zøetìzí za sebou (není potøeba jejich explicitní oddìlování). Velikost bloku mùe bıt napøíklad 128 bitù. Klíè mùe bıt vìtší i menší.
+
+Difuze vyjadøuje, kolik bitù bitù na vstupu mùe ovlivnit jeden bit na vıstupu. Konfuze vyjadøuje, jak sloitı tento vztah je. Difuze je obvykle dosahováno permutováním bitù. Konfuze se obvykle dosahuje pomocí nelineárních substitucí. Mnoho blokovıch cifer je zaloeno na tom, e opakovanì provádí støídavì substituci a permutaci (staèí jednoduchá transpozice). 
+
+\subsection{Operaèní mody}
+
+Existuje nìkolik operaèních modu blokovıch šifer. Ty popisují, jakım zpùsobem je bloková šifra zapojená pøi šifrování celé zprávy.
+
+\newcommand{\bcmoop}[2]{
+\begin{figure}
+\centering
+\includegraphics[width=150mm, height=50mm]{#1#2.png}
+\caption{#1 #2}
+\label{#1#2}
+\end{figure}}
+
+\bcmoop{ECB}{encryption}
+\bcmoop{ECB}{decryption}
+
+Nejjednodušším modem je ECB (Electronic CodeBook). Ten šifruje kadı blok plaintextu pøímou aplikací blokové šifry bez jakékoliv návaznosti na ostatní bloky (zašifrování je na obrázku \ref{ECBencryption}, rozšifrování je na obrázku \ref{ECBdecryption}). Bezpeènost tohoto modu je dost slabá, protoe kdykoliv obsahuje plaintext dvojici stejnıch blokù, jsou jim odpovídající èásti ciphertextu také shodné (take po zašifrování je napøíklad moné lidskım okem rozpoznávat tvary v bitmapovıch obrázcích, které obsahují jednobarevné plochy).
+
+\bcmoop{CBC}{encryption}
+\bcmoop{CBC}{decryption}
+
+Lepším modem je CBC (Cipher Block Chaining). Zde je kadı blok plaintextu pøed zašifrováním XORován s pøedchozím blokem ciphertextu (zašifrování je na obrázku \ref{CBCencryption}, rozšifrování je na obrázku \ref{CBCdecryption}). První plaintext je XORován s inicalizaèním vektorem. Pøi ponechání stejného plaintextu a stejného klíèe se zmìnou inicializaèního vektoru mìní celı ciphertext, co útoèníkovı komplikuje rozpoznání, kdy jsou odeslány 2 stejné zprávy. CBC má vıraznì lepší vlastnosti ne ECB, ale to neznamená, e bychom mohli pouit libovolnou blokovou šifru. Kdybychom jako blokovou šifru zvolili pouhı XOR mezi plaintextem a šifrovacím klíèem, tak by pøi CBC zapojení došlo k tomu, e kadı druhı blok zprávy by vùbec nebyl ovlivnìn klíèem (byl by to jen plaintext XOR inicializaèní vektor). Ale pøi vyuití vhodné blokové šifry (mající vysokou difuzi a konfuzi) jsou vısledky velmi dobré. Nevıhodou této metody je, e se zašifrování nedá paralelizovat (ale rozšifrování lze).
+
+\bcmoop{PCBC}{encryption}
+\bcmoop{PCBC}{decryption}
+
+Podobnım modem je PCBC (Propagating Cipher Block Chaining). Zde se do vıpoètu následující bloku neposílá jen ciphertext, ale i plaintext (zašifrování je na obrázku \ref{PCBCencryption}, rozšifrování je na obrázku \ref{PCBCdecryption}). Nejsou mi známy ádné vıhody této metody ve srovnání s CBC.
+
+\bcmoop{OFB}{encryption}
+\bcmoop{OFB}{decryption}
+
+A teï se dostáváme ke dvìma metodám, které umoòují pouít blokovou šifru jako proudovou šifru (opakovaná aplikace blokové šifry vytváøí Keystream Generator), protoe se XOR s plaintextem aplikuje zvláš a je moné ho provést a po všech vyvolání blokové šifry.
+
+První z nich je OFB (Output Feedback). OFB nejprve pouije blokovou šifru k tomu, aby zašifrovala inicializaèní vektor pomocí klíèe. Vısledek je jednak poslán ven a dále je poslán na vstup blokové šifry. Tento blok je zase zašifrován pomocí stejného klíèe a vısledek je poslán opìt jak na vıstup, tak do další blokové šifry. Postup si lze prohlédnout na obrázku \ref{OFBencryption}. Dá se øíci, e OFB posílá na vıstup Keystream, kterı se skládá z øady $f(x), f(f(x)), f(f(f(x))), f(f(f(f(x)))), f(f(f(f(f(x))))),~...$, kde $x$ je inicializaèní vektor a funkce $f$ je ji zobrazení s konkrétním klíèem. Rozšifrování je triviální obdobou tohoto postupu. Není k nìmu potøeba ádné inverzní zobrazení. Vıstup blokové šifry se XORuje s ciphertextem a vznikne plaintext (viz obrázek \ref{OFBdecryption}). Je zøejmé, e zašifrování ani rozšifrování nelze pøi OFB paralelizovat.
+
+Jako poslední si ukáeme mod CTR (Counter). Na vstup blokové šifry jdou data, která se pokadé o 1 zmìní. Vıstup blokové šifry (keystream) je pak XORován s plaintextem resp. ciphertextem (viz obrázky \ref{CTRencryption} a \ref{CTRdecryption}). CTR se mùe podobat ECB v tom ohledu, e lze kadı blok plaintextu je šifrován samostatnì a proto je opìt moné paralelizovat jak zašifrování, tak rozšifrování. Nicménì zde jsou jednotlivé bloky plaintextu zašifrovány jinak, i kdyby byly všechny bloky plaintextu stejné. Bezpeèností aplikace se proto CTR blíí spíše OFB. Counter posílá na vıstup keystream, kterı se skládá poustupnì z øady $f(x \oplus n), f(x \oplus (n+1)), f(x \oplus (n+2)), ...$, kde $n$ je \uv{nonce}. To je èíslo zvolené pro šifrování jedné konkrétní zprávy, které musí bıt pøiloeno k ciphertextu pro umonìní rozšifrování zprávy. Cílem je naopakovat znovu stejnı keystream pøi ponechání stejného klíèe (hraje tedy stejnou roli jako inicializaèní vektor u pøedchozích modù).
+
+\bcmoop{CTR}{encryption}
+\bcmoop{CTR}{decryption}
+
+\section{Útoky na šifry}
+
+bla
+
+\subsection{Rozdìlení podle povolenıch prostøedkù}
+
+ciphertext-only attack
+known plaintext attack
+chosen plaintext attack
+
+\subsection{Pøíklady útokù}
+
+Ukáeme si nìkolik jednodušších pøíkladù kryptoanalytickıch útokù.
 
 \section{Testy}
 
@@ -75,7 +138,7 @@ Všechny doposud zmínìné testy jsou obaleny ve tøídì Crypto.FunctionTestsForThesi
 
 \subsection{Grafické znázornìní}
 
-Vısledky jednotlivıch algoritmù ve vıše uvedenıch testech budeme znázoròovat na diagramech jako je tento:
+Vısledky jednotlivıch algoritmù ve vıše uvedenıch testech budeme znázoròovat na diagramech jako je ten na obrázku \ref{ukazka}.
  
 \newcommand{\radar}[7]{\begin{figure}
 \begin{tikzpicture}[label distance=.15cm]
@@ -86,7 +149,7 @@ Vısledky jednotlivıch algoritmù ve vıše uvedenıch testech budeme znázoròovat na 
 \label{#7}
 \end{figure}}
  
-\radar{0.9}{0.55}{0.95}{0.7}{0.52}{Ukázkovı radar chart}{label}
+\radar{0.9}{0.55}{0.95}{0.7}{0.52}{Ukázkovı radar chart}{ukazka}
 
 Pro diagramy jsou hodnoty pøeškálovány. S vıjimkou testù nejvìtších koulí, kde neznáme optimální hodnotu, je škálování takové, aby optimální hodnota byla 1. Tedy napøíklad kdy TestBitChange vrátí hodnotu $x$, pak je do diagramu zobrazeno 
 $$\min\{2x, 2(1-x)\}$$, aby optimum (zanesené jako hodnota 1) byl vısledek 0,5 a odchylky na obì strany \uv{stejnì váné}.
