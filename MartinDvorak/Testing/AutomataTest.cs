@@ -3,6 +3,9 @@ using Cellular;
 
 namespace Testing
 {
+    /// <summary>
+    /// This test lets the user choose an elementary CA and prints its evolution from a single live cell.
+    /// </summary>
     static class AutomataTest
     {
         public static void RunTest()

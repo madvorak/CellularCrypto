@@ -3,6 +3,9 @@ using Crypto;
 
 namespace Testing
 {
+    /// <summary>
+    /// This test demonstrates how <c>Crypto.Factory</c> works.
+    /// </summary>
     static class FactoryTest
     {
         public static void RunTest()

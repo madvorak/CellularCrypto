@@ -68,7 +68,7 @@ namespace Crypto
                 innerCA.Step();
                 position = 0;
                 size = originalSize;
-                visitedStates = new Dictionary<int, List<uint[]>>();
+                visitedStates = new Dictionary<int, List<uint[]>>();    // Lookup<int, uint[]> could be used instead
             }
 
             public bool GetNext()

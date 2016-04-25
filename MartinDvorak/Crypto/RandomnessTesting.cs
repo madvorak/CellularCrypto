@@ -6,7 +6,8 @@ using System.IO.Compression;
 namespace Crypto
 {
     /// <summary>
-    /// Static class that contains some tests of randomness for binary sequences.
+    /// Static class that contains some tests of randomness for binary sequences. The tests operate on BitArray.
+    /// Use <c>Cellular.Utilities.UintArrToBitArr(uint[] input)</c> to convert to BitArray if needed.
     /// </summary>
     static class RandomnessTesting
     {
@@ -79,6 +80,12 @@ namespace Crypto
             return (double)(compressedSize - 30) / length;
         }
 
+        /// <summary>
+        /// Rates how much the BitArray is pseudorandom.
+        /// Return the average between <c>CompressionTest(b)</c> and <c>EntropyTest(b, 10).</c>
+        /// </summary>
+        /// <param name="sequence">Vector to rate.</param>
+        /// <returns>Number between 0 and 1. Only values very close to 1 are good.</returns>
         public static double RateSequence(BitArray sequence)
         {
             byte lengthLimit = 10;

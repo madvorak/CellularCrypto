@@ -121,7 +121,7 @@ namespace Cellular
         public static long PeriodLengthSlow(IBinaryCA CA, long limit, out long time)
         {
             IBinaryCA ca = CA.CloneEverything();
-            var dict = new Dictionary<int, List<Element>>();
+            var dict = new Dictionary<int, List<Element>>();  // Lookup<int, Element> could be used instead
 
             for (long i = 0; i < limit; i++)
             {

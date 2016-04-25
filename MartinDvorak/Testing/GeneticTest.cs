@@ -5,6 +5,9 @@ using Crypto;
 
 namespace Testing
 {
+    /// <summary>
+    /// This test allows us to compare the results of SGA with those of simpler methods.
+    /// </summary>
     static class GeneticTest
     {
         public static void RunTest()

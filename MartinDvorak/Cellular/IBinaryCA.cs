@@ -36,14 +36,14 @@ namespace Cellular
         bool GetValueAt(int index);
 
         /// <summary>
-        /// Performs one step of the cellular automaton. Always calls <code>CellularAutomaton.Step();</code>.
+        /// Performs one step of the cellular automaton. Always calls <c>CellularAutomaton.Step()</c>.
         /// </summary>
         void Step();
 
         /// <summary>
         /// Clones the underlying CA including its state at the moment.
         /// </summary>
-        /// <returns>Identical copy. The result is the same as when calling <code>CellularAutomaton.Clone();</code>,
+        /// <returns>Identical copy. The result is the same as when calling <c>CellularAutomaton.Clone()</c>,
         /// only its type is <c>IBinaryCA</c> (which is useful).</returns>
         IBinaryCA CloneEverything();
 
@@ -57,7 +57,7 @@ namespace Cellular
         /// <summary>
         /// Announces the runtime type of the CA including info about its rule. It serves for debugging purposes.
         /// </summary>
-        /// <returns>The same string as calling <code>CellularAutomaton.TellType();</code>.</returns>
+        /// <returns>The same string as calling <c>CellularAutomaton.TellType()</c>.</returns>
         string TellType();
     }
 }
