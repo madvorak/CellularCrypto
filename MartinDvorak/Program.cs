@@ -13,6 +13,8 @@ class Program
     static void Main(string[] args)
     {
         rnd = new Random();
+        ReversibleTest.RunTest();
+        //Console.WriteLine((new Crypto.FunctionTestsForThesis()).CalculateAndPrintResults(new Crypto.KeyExtenderBlockAes()));
         MainTests.RunTest();
         GeneticTest.RunTest();
         Adapter.DisplayForm();

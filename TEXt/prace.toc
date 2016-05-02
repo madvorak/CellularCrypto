@@ -29,8 +29,8 @@
 \contentsline {section}{\numberline {3.2}Program}{20}{section.3.2}
 \contentsline {chapter}{\numberline {4}Zp\r usoby protahov\'an\IeC {\'\i } kl\IeC {\'\i }\v c\r u}{21}{chapter.4}
 \contentsline {section}{\numberline {4.1}KeyExtenderQuadratic}{21}{section.4.1}
-\contentsline {section}{\numberline {4.2}KeyExtenderSimpleLinear}{23}{section.4.2}
-\contentsline {section}{\numberline {4.3}KeyExtenderInterlaced}{27}{section.4.3}
+\contentsline {section}{\numberline {4.2}KeyExtenderSimpleLinear}{27}{section.4.2}
+\contentsline {section}{\numberline {4.3}KeyExtenderInterlaced}{31}{section.4.3}
 \contentsline {section}{\numberline {4.4}KeyExtenderUncertain}{32}{section.4.4}
 \contentsline {section}{\numberline {4.5}KeyExtenderGenetic}{36}{section.4.5}
 \contentsline {chapter}{\numberline {5}Dal\v s\IeC {\'\i } mo\v znosti \v sifrov\'an\IeC {\'\i }}{42}{chapter.5}

@@ -57,5 +57,10 @@ namespace Cellular
         {
             return "Cyclic " + base.TellType();
         }
+
+        public ReversibleAutomaton ConvertToReversible(BitArray previousState)
+        {
+            return new ReversibleAutomaton(range, rule, previousState, state);
+        }
     }
 }
