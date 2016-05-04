@@ -62,6 +62,43 @@ namespace CryptographyUnitTests
             }
         }
 
+        public void test04poz()
+        {
+            const string password = "518";
+            byte[] data = new byte[] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+            byte[] result = encryptDecryptReturn(data, password);
+            for (int i = 0; i < data.Length; i++)
+            {
+                Assert.AreEqual(data[i], result[i]);
+            }
+        }
+
+        public void test04neg()
+        {
+            const string password = "518";
+            byte[] data = new byte[] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+            MemoryStream input = new MemoryStream(data);
+            MemoryStream encrypted = new MemoryStream();
+            cryptoProvider.Encrypt(input, encrypted, password);
+            for (int i = 0; i < 1000; i++)
+            {
+                if (i == 518) continue;
+                encrypted.Position = 0;
+                MemoryStream decrypted = new MemoryStream();
+                cryptoProvider.Decrypt(encrypted, decrypted, i.ToString());
+                bool equal = true;
+                for (int j = 0; j < data.Length; j++)
+                {
+                    if (data[j] != decrypted.GetBuffer()[j])
+                    {
+                        equal = false;
+                        break;
+                    }
+                }
+                Assert.IsFalse(equal);
+            }
+        }
+
         public void testBig()
         {
             const string password = "asdf#&!!<><>0XYZ";

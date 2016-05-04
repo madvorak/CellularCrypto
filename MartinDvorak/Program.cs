@@ -13,7 +13,6 @@ class Program
     static void Main(string[] args)
     {
         rnd = new Random();
-        ReversibleTest.RunTest();
         MainTests.RunTest();
         GeneticTest.RunTest();
         Adapter.DisplayForm();

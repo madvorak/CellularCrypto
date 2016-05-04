@@ -36,6 +36,18 @@ namespace CryptographyUnitTests
         }
 
         [TestMethod]
+        public void test04pozR()
+        {
+            common.test04poz();
+        }
+
+        [TestMethod]
+        public void test04negR()
+        {
+            common.test04neg();
+        }
+
+        [TestMethod]
         public void testBigR()
         {
             common.testBig();
