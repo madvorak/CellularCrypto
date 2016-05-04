@@ -3,7 +3,8 @@
 namespace Crypto
 {
     /// <summary>
-    /// Public static class that gives access to our cryptographical tools. Can be used from any assembly.
+    /// Public static class that gives access to our cryptographical tools.
+    /// This class is made to be used from any assembly.
     /// </summary>
     public static class Export
     {

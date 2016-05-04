@@ -3,6 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CryptographyUnitTests
 {
+    /// <summary>
+    /// This class contains unit tests of encryption using CA-based key extenders.
+    /// </summary>
     [TestClass]
     public class EncrypterStreamCAtests
     {
@@ -24,6 +27,18 @@ namespace CryptographyUnitTests
         public void test02S()
         {
             common.test02();
+        }
+
+        [TestMethod]
+        public void test03S()
+        {
+            common.test03();
+        }
+
+        [TestMethod]
+        public void testBigS()
+        {
+            common.testBig();
         }
     }
 }

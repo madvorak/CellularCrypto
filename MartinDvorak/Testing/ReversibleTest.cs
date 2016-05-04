@@ -43,8 +43,3 @@ namespace Testing
         }
     }   
 }
-
-/*
-                                    ████
-                    █       █         █
-                    */

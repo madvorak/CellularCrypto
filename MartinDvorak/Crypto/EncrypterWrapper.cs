@@ -7,8 +7,10 @@ using System.Security.Cryptography;
 namespace Crypto
 {
     /// <summary>
-    /// This class provides encryption and decryption in a convenient way.
+    /// Public class that provides encryption and decryption of data streams in a convenient way.
+    /// This class wraps any <c>IEncrypter</c> implementation.
     /// </summary>
+    /// <remarks>Maybe rename to "Encryption provider".</remarks>
     public class EncrypterWrapper
     {
         private IEncrypter encrypter;
@@ -16,6 +18,10 @@ namespace Crypto
         private RandomNumberGenerator secureRandom;
         private const int saltLength = 16;
 
+        /// <summary>
+        /// Creates a new <c>EncrypterWrapper</c>.
+        /// </summary>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to be used.</param>
         public EncrypterWrapper(IEncrypter encryptionAlgorithm)
         {
             encrypter = encryptionAlgorithm;
@@ -23,6 +29,14 @@ namespace Crypto
             secureRandom = new RNGCryptoServiceProvider();
         }
 
+        /// <summary>
+        /// Encrypts a stream using a given cryptography key.
+        /// </summary>
+        /// <param name="inputStream">Input stream (plaintext).</param>
+        /// <param name="outputStream">Output strean (ciphertext will be written here).</param>
+        /// <param name="key">Encryption key.</param>
+        /// <param name="salt">The salt is only written at the beginning of the output stream. 
+        /// This method uses only the key for encrypting (salt should have been applied earlier).</param>
         public void Encrypt(Stream inputStream, Stream outputStream, BitArray key, byte[] salt)
         {
             if (salt.Length != saltLength)
@@ -43,11 +57,11 @@ namespace Crypto
         }
 
         /// <summary>
-        /// 
+        /// Encrypts a stream using a given cryptography key.
         /// </summary>
-        /// <param name="inputStream"></param>
-        /// <param name="outputStream"></param>
-        /// <param name="key"></param>
+        /// <param name="inputStream">Input stream (plaintext).</param>
+        /// <param name="outputStream">Output strean (ciphertext will be written here).</param>
+        /// <param name="key">Encryption key.</param>
         /// <param name="salt">The salt is only written at the beginning of the output stream. 
         /// This method uses only the key for encrypting (salt should have been applied earlier).</param>
         public void Encrypt(Stream inputStream, Stream outputStream, byte[] key, byte[] salt)
@@ -56,17 +70,24 @@ namespace Crypto
         }
 
         /// <summary>
-        /// This method uses password and salt to create the encryption key.
+        /// Encrypts a stream. This method uses password and salt to create the encryption key.
         /// </summary>
-        /// <param name="inputStream"></param>
-        /// <param name="outputStream"></param>
-        /// <param name="password"></param>
+        /// <param name="inputStream">Input stream (plaintext).</param>
+        /// <param name="outputStream">Output strean (ciphertext will be written here).</param>
+        /// <param name="password">Password from user.</param>
         /// <param name="salt">Salt to create the key (will be written to the output stream, too).</param>
         public void Encrypt(Stream inputStream, Stream outputStream, string password, byte[] salt)
         {
             Encrypt(inputStream, outputStream, calculateHash(password, salt), salt);
         }
 
+        /// <summary>
+        /// Encrypts a stream using a given password.
+        /// Salt is generated randomly and written at the beginning of the output stream.
+        /// </summary>
+        /// <param name="inputStream">Input stream (plaintext).</param>
+        /// <param name="outputStream">Output strean (ciphertext will be written here).</param>
+        /// <param name="password">Password from user.</param>
         public void Encrypt(Stream inputStream, Stream outputStream, string password)
         {
             byte[] salt = new byte[saltLength];
@@ -74,6 +95,12 @@ namespace Crypto
             Encrypt(inputStream, outputStream, password, salt);
         }
 
+        /// <summary>
+        /// Decrypts a stream using a password. Salt is read from the beginning of the stream.
+        /// </summary>
+        /// <param name="inputStream">Input stream (ciphertext).</param>
+        /// <param name="outputStream">Output strean (plaintext will be written here).</param>
+        /// <param name="password">Password from user.</param>
         public void Decrypt(Stream inputStream, Stream outputStream, string password)
         {
             byte[] buffer = new byte[inputStream.Length - saltLength];

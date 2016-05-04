@@ -3,6 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CryptographyUnitTests
 {
+    /// <summary>
+    /// This class contains unit tests of encryption using reversible CA.
+    /// </summary>
     [TestClass]
     public class EncrypterReversibleCAtests
     {
@@ -24,6 +27,18 @@ namespace CryptographyUnitTests
         public void test02R()
         {
             common.test02();
+        }
+
+        [TestMethod]
+        public void test03R()
+        {
+            common.test03();
+        }
+
+        [TestMethod]
+        public void testBigR()
+        {
+            common.testBig();
         }
     }
 }

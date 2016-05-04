@@ -5,3 +5,25 @@ Kromì protahování klíèù by šlo využít celulární automaty v kryptografii i jinak.
 Kromì toho, že mezi elementárními celulárními automaty se nachází nìkolik dvojic, které dìlají navzájem inverzní zobrazení, lze reverzibilní CA generovat i více systematicky (viz Joel, strana 68).
 
 A možná by tohle šlo dìlat i jako asymetrická kryptografie. Chtìlo by to nìjakou tøídu reverzibilních CA (s jiným pravidlem tam a jiným pravidlem zpìt) takovou, že by se snadno rychle vygenerovat dvojice (pravidlo, obrácené pravidlo), ale k zadanému pravidlu by se tìžko generovalo to obrácené pravidlo. Zde by jedno pøechodové pravidlo bylo veøejným klíèem a druhé tajným klíèem. Asi by to bylo hodnì náchylné na known-plaintext attack, ale stejnì by to mohlo být hezké ...
+
+\section{Øešení}
+
+Uvedená symetrická varianta šifrování s využitím reverzibilních celulárních automatù byla implementována i v této práci. Reverzibilní CA je naprogramován ve tøídì Cellular.ReversibleAutomaton a jedná se o jednorozmìrný binární CA s pravidlem zahrnujícím $r$ sousedù na každou stranu a zacykleným okrajem. Tento automat si kromì souèasnìho stavu pamatuje i pøedchozí stav a svùj krok poèítá takto:
+$$x_i(t+1) = f(x_{i-r}(t), ... , x_{i-1}(t), x_i(t), x_{i+1}(t), ... , x_{i+r}(t))  \oplus x_i(t-1)$$
+Šifrovací algoritmus na nìm založený je pak ve tøídì Crypto.EncrypterReversibleCA. Šifrování probíhá tak, že algoritmus vytvoøí nový reverzibilní CA, jehož pøechodová funkce je urèena šifrovacím klíèem, který musí mít délku $2^{2r+1}$ (takže napøíklad 32, 128, 512, 2048, ...).
+
+\begin{figure}
+\centering
+\includegraphics[width=75mm, height=70mm]{r60_tam.png}
+\caption{Vývoj automatu R60}
+\label{rtam}
+\end{figure}
+
+První polovina plaintextu urèuje pøedchozí stav CA a druhá polovina souèasný stav CA. Pak je proveden daný poèet krokù (pøíklad vývoje v èase z jednoduchého zadání je na obrázku \ref{rtam}). Koncový stav je použit jako první polovina ciphertextu a pøedchozí stav jako druhá polovina ciphertextu. Tak je zpùsobena symetrie. Když je teï vytvoøen nový automat se stejnými pravidly, tak umístìním první poloviny ciphertextu jako pøedchozí stav a druhé poloviny ciphertextu jako aktuální stav vzniká automat, který jde \uv{pozpátku v èase} (ale prochází zcela identickými stavy) jako automat, který byl použit na zašifrování (vývoj obráceného automatu odpovídajícímu pøedchozímu automatu je na obrázku \ref{rzpet}). Pro provedení daného poètu krokù je možné opìt pøeèíst plaintext z posledních dvou stavù.
+
+\begin{figure}
+\centering
+\includegraphics[width=75mm, height=160mm]{r60_zpet.png}
+\caption{Vývoj automatu R60 zpátky}
+\label{rzpet}
+\end{figure}

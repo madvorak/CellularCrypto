@@ -2,10 +2,17 @@
 
 namespace Crypto
 {
+    /// <summary>
+    /// Class for symmetric cryptogryphy performed by extending key using CA.
+    /// </summary>
     class EncrypterStreamCA : IEncrypter
     {
         private IKeyExtender xtender;
 
+        /// <summary>
+        /// Creates a new <c>EncrypterStreamCA</c>.
+        /// </summary>
+        /// <param name="keyExtender">Key extending algorithms to be used. (CA is inside)</param>
         public EncrypterStreamCA(IKeyExtender keyExtender)
         {
             xtender = keyExtender;

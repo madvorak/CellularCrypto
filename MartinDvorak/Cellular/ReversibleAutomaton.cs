@@ -5,7 +5,8 @@ namespace Cellular
 {
     /// <summary>
     /// Class representing any binary 1D automaton with any symmetric rule which is made reversible.
-    /// This is very inefficient (possibly throwaway) implementation.
+    /// This is very inefficient (possibly throwaway) implementation,
+    /// because it reuses <c>BinaryRangeCyclicAutomaton</c> for every step.
     /// </summary>
     class ReversibleAutomaton : Binary1DAutomaton
     {
@@ -13,6 +14,15 @@ namespace Cellular
         private bool[] rule;
         private BitArray prevState;
 
+        /// <summary>
+        /// Creates a new <c>ReversibleAutomaton</c>.
+        /// </summary>
+        /// <param name="range">How many cells on each side from the center determine the next state of the cell.</param>
+        /// <param name="rule">Array representing the rule for creating a new state. 
+        /// Description of combination with the previous state is not included.</param>
+        /// <param name="previousState">A <c>BitArray</c> describing the "previous" (not really) state of the CA
+        /// (needed to calculate the next state).</param>
+        /// <param name="currentState">A <c>BitArray</c> describing the current state of the CA.</param>
         public ReversibleAutomaton(byte range, bool[] rule, BitArray previousState, BitArray currentState) 
             : base(currentState)
         {
@@ -26,6 +36,15 @@ namespace Cellular
             state = currentState;
         }
 
+        /// <summary>
+        /// Creates a new <c>ReversibleAutomaton</c>.
+        /// </summary>
+        /// <param name="range">How many cells on each side from the center determine the next state of the cell.</param>
+        /// <param name="rule">Array representing the rule for creating a new state. 
+        /// Description of combination with the previous state is not included.</param>
+        /// <param name="previousState">A <c>BitArray</c> describing the "previous" (not really) state of the CA
+        /// (needed to calculate the next state).</param>
+        /// <param name="currentState">A <c>BitArray</c> describing the current state of the CA.</param>
         public ReversibleAutomaton(byte range, BitArray rule, BitArray previousState, BitArray currentState)
             : this(range, Utilities.BitArrToBoolArr(rule), previousState, currentState)
         { }
@@ -41,6 +60,7 @@ namespace Cellular
             }
             prevState = state;
             state = newState;
+            time++;
         }
 
         public override string TellType()

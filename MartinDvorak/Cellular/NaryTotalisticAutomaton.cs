@@ -32,6 +32,7 @@ namespace Cellular
                 newState[i] = rule[getValueAt(i - 1) + getValueAt(i) + getValueAt(i + 1)];
             }
             state = newState;
+            time++;
         }
 
         public override object Clone()

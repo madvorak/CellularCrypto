@@ -4,10 +4,18 @@ using Cellular;
 
 namespace Crypto
 {
+    /// <summary>
+    /// Class for symmetric cryptography performed by a reversible CA.
+    /// </summary>
     class EncrypterReversibleCA : IEncrypter
     {
         private int stepCount;
 
+        /// <summary>
+        /// Creates a new <c>EncrypterReversibleCA</c>.
+        /// </summary>
+        /// <param name="stepsToPerform">How many steps of the CA should be performed
+        /// during every encryption / decryption.</param>
         public EncrypterReversibleCA(int stepsToPerform)
         {
             if (stepsToPerform < 2)
