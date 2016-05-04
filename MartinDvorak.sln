@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MartinDvorak", "MartinDvora
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "Program\Program.csproj", "{98E4FA4F-F377-4DD0-ADFC-46F9B64E0369}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptographyUnitTests", "CryptographyUnitTests\CryptographyUnitTests.csproj", "{54D06E93-6CC5-44E9-BF21-414F8D42B4F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{98E4FA4F-F377-4DD0-ADFC-46F9B64E0369}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98E4FA4F-F377-4DD0-ADFC-46F9B64E0369}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98E4FA4F-F377-4DD0-ADFC-46F9B64E0369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54D06E93-6CC5-44E9-BF21-414F8D42B4F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54D06E93-6CC5-44E9-BF21-414F8D42B4F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54D06E93-6CC5-44E9-BF21-414F8D42B4F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54D06E93-6CC5-44E9-BF21-414F8D42B4F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

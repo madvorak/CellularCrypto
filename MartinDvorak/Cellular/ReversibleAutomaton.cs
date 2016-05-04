@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 namespace Cellular
 {
@@ -15,11 +16,19 @@ namespace Cellular
         public ReversibleAutomaton(byte range, bool[] rule, BitArray previousState, BitArray currentState) 
             : base(currentState)
         {
+            if (rule.Length != (1 << (2 * range + 1)))
+            {
+                throw new ArgumentException("Wrong size of the array describing the rule.");
+            }
             this.range = range;
             this.rule = rule;
             prevState = previousState;
             state = currentState;
         }
+
+        public ReversibleAutomaton(byte range, BitArray rule, BitArray previousState, BitArray currentState)
+            : this(range, Utilities.BitArrToBoolArr(rule), previousState, currentState)
+        { }
 
         public override void Step()
         {

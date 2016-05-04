@@ -56,6 +56,16 @@ namespace Cellular
             return output;
         }
 
+        public static bool[] BitArrToBoolArr(BitArray bitArray)
+        {
+            bool[] array = new bool[bitArray.Length];
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = bitArray[i];
+            }
+            return array;
+        }
+
         /// <summary>
         /// Calculates a period (number of steps between repetitions) of a CA.
         /// This method is fast, but unreliable! It gives only the lower estimate (because of hashing).
@@ -217,7 +227,7 @@ namespace Cellular
             /// <summary>
             /// Constructor. The amount of generated sequences will be 2 ^ <c>sequenceLength</c>.
             /// </summary>
-            /// <param name="sequenceLength"></param>
+            /// <param name="sequenceLength">Number of bits that every output will have.</param>
             public AllBinarySequences(int sequenceLength)
             {
                 length = sequenceLength;

@@ -64,10 +64,14 @@
   <ItemGroup>
     <Compile Include="Cellular\ReversibleAutomaton.cs" />
     <Compile Include="Crypto\CannotGenerateException.cs" />
+    <Compile Include="Crypto\EncrypterStreamCA.cs" />
+    <Compile Include="Crypto\EncrypterWrapper.cs" />
+    <Compile Include="Crypto\EncrypterReversibleCA.cs" />
     <Compile Include="Crypto\Export.cs" />
     <Compile Include="Crypto\Factory.cs" />
     <Compile Include="Crypto\FunctionTesting.cs" />
     <Compile Include="Crypto\FunctionTestsForThesis.cs" />
+    <Compile Include="Crypto\IEncrypter.cs" />
     <Compile Include="Crypto\IKeyExtender.cs" />
     <Compile Include="Crypto\KeyExtenderAbstractD.cs" />
     <Compile Include="Crypto\KeyExtenderAbstractN.cs" />

@@ -9,12 +9,10 @@ class Program
     /// <summary>
     /// Entry point of the experimental program. Feel free to change the order of actions, only initialize the RNG first of all.
     /// </summary>
-    /// <param name="args"></param>
+    /// <param name="args">No arguments are used.</param>
     static void Main(string[] args)
     {
         rnd = new Random();
-        ReversibleTest.RunTest();
-        //Console.WriteLine((new Crypto.FunctionTestsForThesis()).CalculateAndPrintResults(new Crypto.KeyExtenderBlockAes()));
         MainTests.RunTest();
         GeneticTest.RunTest();
         Adapter.DisplayForm();
@@ -22,6 +20,7 @@ class Program
         //Crypto.SearchSGA.SearchForGoodExtenders();
         FunctionTestTest.RunTest();
         AutomataTest.RunTest();
+        ReversibleTest.RunTest();
         TotalisticTernaryTest.RunTest();
         UtilityTest.RunTest();
         RandomTestTest.RunTest();
