@@ -2,26 +2,66 @@
 \label{class_crypto_1_1_export}\index{Crypto.\+Export@{Crypto.\+Export}}
 
 
-Public static class that gives access to our cryptographical tools. Can be used from any assembly.  
+Public static class that gives access to our cryptographical tools. This class is made to be used from any assembly.  
 
 
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{interface_crypto_1_1_i_key_extender}{I\+Key\+Extender} \hyperlink{class_crypto_1_1_export_a32a0f5d57f02adbe05c8b9c6ca2d30fe}{Get\+Key\+Extender} ()
-\begin{DoxyCompactList}\small\item\em Exports a key extender for use by any external program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Exports a key extender for use by any external program. \end{DoxyCompactList}\item 
+static \hyperlink{class_crypto_1_1_encrypter_wrapper}{Encrypter\+Wrapper} \hyperlink{class_crypto_1_1_export_afbdd82980115f75656284bfc1cedaf71}{Get\+Encrypter\+Stream\+C\+A} ()
+\begin{DoxyCompactList}\small\item\em Exports a ready-\/to-\/use encrypter/decrypter for use by any external program. This uses C\+A-\/based key extender inside. \end{DoxyCompactList}\item 
+static \hyperlink{class_crypto_1_1_encrypter_wrapper}{Encrypter\+Wrapper} \hyperlink{class_crypto_1_1_export_a724346aca326fe3f8725eb7c7c3a4390}{Get\+Encrypter\+Reversible\+C\+A} ()
+\begin{DoxyCompactList}\small\item\em Exports a ready-\/to-\/use encrypter/decrypter for use by any external program. This uses a reversible C\+A inside. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Public static class that gives access to our cryptographical tools. Can be used from any assembly. 
+Public static class that gives access to our cryptographical tools. This class is made to be used from any assembly. 
 
 
 
-Definition at line 8 of file Export.\+cs.
+Definition at line 9 of file Export.\+cs.
 
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_crypto_1_1_export_a724346aca326fe3f8725eb7c7c3a4390}{}\index{Crypto\+::\+Export@{Crypto\+::\+Export}!Get\+Encrypter\+Reversible\+C\+A@{Get\+Encrypter\+Reversible\+C\+A}}
+\index{Get\+Encrypter\+Reversible\+C\+A@{Get\+Encrypter\+Reversible\+C\+A}!Crypto\+::\+Export@{Crypto\+::\+Export}}
+\subsubsection[{Get\+Encrypter\+Reversible\+C\+A()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Encrypter\+Wrapper} Crypto.\+Export.\+Get\+Encrypter\+Reversible\+C\+A (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_crypto_1_1_export_a724346aca326fe3f8725eb7c7c3a4390}
+
+
+Exports a ready-\/to-\/use encrypter/decrypter for use by any external program. This uses a reversible C\+A inside. 
+
+\begin{DoxyReturn}{Returns}
+Encrypter and decrypter.
+\end{DoxyReturn}
+
+
+Definition at line 42 of file Export.\+cs.
+
+\hypertarget{class_crypto_1_1_export_afbdd82980115f75656284bfc1cedaf71}{}\index{Crypto\+::\+Export@{Crypto\+::\+Export}!Get\+Encrypter\+Stream\+C\+A@{Get\+Encrypter\+Stream\+C\+A}}
+\index{Get\+Encrypter\+Stream\+C\+A@{Get\+Encrypter\+Stream\+C\+A}!Crypto\+::\+Export@{Crypto\+::\+Export}}
+\subsubsection[{Get\+Encrypter\+Stream\+C\+A()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Encrypter\+Wrapper} Crypto.\+Export.\+Get\+Encrypter\+Stream\+C\+A (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_crypto_1_1_export_afbdd82980115f75656284bfc1cedaf71}
+
+
+Exports a ready-\/to-\/use encrypter/decrypter for use by any external program. This uses C\+A-\/based key extender inside. 
+
+\begin{DoxyReturn}{Returns}
+Encrypter and decrypter.
+\end{DoxyReturn}
+
+
+Definition at line 32 of file Export.\+cs.
+
 \hypertarget{class_crypto_1_1_export_a32a0f5d57f02adbe05c8b9c6ca2d30fe}{}\index{Crypto\+::\+Export@{Crypto\+::\+Export}!Get\+Key\+Extender@{Get\+Key\+Extender}}
 \index{Get\+Key\+Extender@{Get\+Key\+Extender}!Crypto\+::\+Export@{Crypto\+::\+Export}}
 \subsubsection[{Get\+Key\+Extender()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf I\+Key\+Extender} Crypto.\+Export.\+Get\+Key\+Extender (
@@ -38,7 +78,7 @@ Key extender.
 \end{DoxyReturn}
 
 
-Definition at line 14 of file Export.\+cs.
+Definition at line 22 of file Export.\+cs.
 
 
 

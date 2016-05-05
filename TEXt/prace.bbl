@@ -1,0 +1,22 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Schiff(2008)]{Schiff08}
+{\sc Schiff, J.~L.} (2008).
+\newblock \emph{Cellular Automata}.
+\newblock First edition.­. John Wiley and Sons, Inc., Hoboken, New Jersey,
+  Corporate Headquarters, 111 River Street, Hoboken, NJ 07030-5774.
+\newblock ISBN 978-0-470-16879-0.
+
+\bibitem[Wolfram(2002)]{W02}
+{\sc Wolfram, S.} (2002).
+\newblock \emph{A New Kind of Science}.
+\newblock First edition. Third printing.­. Wolfram Media, Inc., 100 Trade
+  Center Drive, Champaign, IL 61820, USA.
+\newblock ISBN I-57955-008-8.
+
+\end{thebibliography}

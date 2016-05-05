@@ -19,7 +19,7 @@ Inheritance diagram for Cellular.\+Totalistic2\+D\+Automaton\+:\begin{figure}[H]
 \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a706f4c765a54fef6003e6e208a073a1c}{Totalistic2\+D\+Automaton} (bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a4752e3402c58243f7f342e21ddad3b05}{rule\+Live}, bool\mbox{[}$\,$\mbox{]} rule\+Dead, Bit\+Array\mbox{[}$\,$\mbox{]} \hyperlink{all__1_8js_ae8b87ff4be2ae1dd5267342795263360}{initial\+State}, string specific\+Name=null)
 \begin{DoxyCompactList}\small\item\em Creates a new totalistic 2\+D automaton of given ruleset with given initial state. \end{DoxyCompactList}\item 
 override void \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a7f85cac5420f67a936cbd4cef33c4abc}{Step} ()
-\begin{DoxyCompactList}\small\item\em Performs one step of the cellular automaton. Always calls \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Performs one step of the cellular automaton. Always calls {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Cellular\+Automaton.\+Step()}}. \end{DoxyCompactList}\item 
 override object \hyperlink{class_cellular_1_1_totalistic2_d_automaton_ae78cf4c3f8245adf64ec9a173330804f}{Clone} ()
 \begin{DoxyCompactList}\small\item\em Creates an appropriate copy of the C\+A. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. \end{DoxyCompactList}\item 
 override string \hyperlink{class_cellular_1_1_totalistic2_d_automaton_aa009c674cd109fa70173e9893f6d3b09}{Tell\+Type} ()
@@ -259,9 +259,9 @@ Definition at line 97 of file Totalistic2\+D\+Automaton.\+cs.
 )}\label{class_cellular_1_1_totalistic2_d_automaton_a7f85cac5420f67a936cbd4cef33c4abc}
 
 
-Performs one step of the cellular automaton. Always calls 
+Performs one step of the cellular automaton. Always calls {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Cellular\+Automaton.\+Step()}}. 
 
-{\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Cellular\+Automaton.\+Step()};}. 
+
 
 Implements \hyperlink{interface_cellular_1_1_i_binary_c_a_a6a04c7374538c49df07efa176e0dd3c3}{Cellular.\+I\+Binary\+C\+A}.
 
@@ -281,11 +281,7 @@ Definition at line 102 of file Totalistic2\+D\+Automaton.\+cs.
 Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. 
 
 \begin{DoxyReturn}{Returns}
-The same string as calling 
-\begin{DoxyCode}
-CellularAutomaton.TellType();
-\end{DoxyCode}
-.
+The same string as calling {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_abe4b92fd405530c8a08cc07a3a19fff4}{Cellular\+Automaton.\+Tell\+Type()}}.
 \end{DoxyReturn}
 
 

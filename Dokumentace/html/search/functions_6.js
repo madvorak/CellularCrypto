@@ -2,6 +2,8 @@ var searchData=
 [
   ['gathersuccessfulextenders',['GatherSuccessfulExtenders',['../class_crypto_1_1_factory.html#abd5015e25ff66c3cf46bab4d67e60ce5',1,'Crypto::Factory']]],
   ['getcell',['GetCell',['../class_cellular_1_1_totalistic2_d_automaton_interactive.html#a85abf32bca9b632561e8b9d081743c1c',1,'Cellular::Totalistic2DAutomatonInteractive']]],
+  ['getencrypterreversibleca',['GetEncrypterReversibleCA',['../class_crypto_1_1_export.html#a724346aca326fe3f8725eb7c7c3a4390',1,'Crypto::Export']]],
+  ['getencrypterstreamca',['GetEncrypterStreamCA',['../class_crypto_1_1_export.html#afbdd82980115f75656284bfc1cedaf71',1,'Crypto::Export']]],
   ['gethashcode',['GetHashCode',['../class_cellular_1_1_binary1_d_automaton.html#add2d1cf0d8d25af3ac4af819be2561b9',1,'Cellular.Binary1DAutomaton.GetHashCode()'],['../class_cellular_1_1_binary2_d_automaton.html#af0b06d58b66367dbeb712f2c4237ff54',1,'Cellular.Binary2DAutomaton.GetHashCode()'],['../class_cellular_1_1_elementary_automaton.html#abaa1bb77264571ec245155f079fe1ff0',1,'Cellular.ElementaryAutomaton.GetHashCode()']]],
   ['getkeyextender',['GetKeyExtender',['../class_crypto_1_1_export.html#a32a0f5d57f02adbe05c8b9c6ca2d30fe',1,'Crypto::Export']]],
   ['getpacked',['GetPacked',['../interface_cellular_1_1_i_binary_c_a.html#a62f943d92c7aedd121f99940ff12c63e',1,'Cellular::IBinaryCA']]],

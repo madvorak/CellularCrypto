@@ -25,7 +25,7 @@ Inheritance diagram for Cellular.\+Elementary\+Automaton\+:\begin{figure}[H]
 \hyperlink{class_cellular_1_1_elementary_automaton_a64849d809eb4962cb09b5263f3227457}{Elementary\+Automaton} (byte rule\+No, int \hyperlink{class_cellular_1_1_automaton1_d_a915129ccf0f1e7092844c99ce6a28e5b}{size}, Random rnd)
 \begin{DoxyCompactList}\small\item\em Creates a new basic C\+A. \end{DoxyCompactList}\item 
 override void \hyperlink{class_cellular_1_1_elementary_automaton_adae7c322e4c7cd00cd0534a23d1abfa4}{Step} ()
-\begin{DoxyCompactList}\small\item\em Performs one step of the cellular automaton. Always calls \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Performs one step of the cellular automaton. Always calls {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Cellular\+Automaton.\+Step()}}. \end{DoxyCompactList}\item 
 override int \hyperlink{class_cellular_1_1_elementary_automaton_abaa1bb77264571ec245155f079fe1ff0}{Get\+Hash\+Code} ()
 \item 
 override object \hyperlink{class_cellular_1_1_elementary_automaton_ada4ddee98167e8f4f4b6dea1f7563b47}{Clone} ()
@@ -284,9 +284,9 @@ Definition at line 63 of file Elementary\+Automaton.\+cs.
 )}\label{class_cellular_1_1_elementary_automaton_adae7c322e4c7cd00cd0534a23d1abfa4}
 
 
-Performs one step of the cellular automaton. Always calls 
+Performs one step of the cellular automaton. Always calls {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Cellular\+Automaton.\+Step()}}. 
 
-{\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Cellular\+Automaton.\+Step()};}. 
+
 
 Implements \hyperlink{interface_cellular_1_1_i_binary_c_a_a6a04c7374538c49df07efa176e0dd3c3}{Cellular.\+I\+Binary\+C\+A}.
 
@@ -306,11 +306,7 @@ Definition at line 83 of file Elementary\+Automaton.\+cs.
 Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. 
 
 \begin{DoxyReturn}{Returns}
-The same string as calling 
-\begin{DoxyCode}
-CellularAutomaton.TellType();
-\end{DoxyCode}
-.
+The same string as calling {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_abe4b92fd405530c8a08cc07a3a19fff4}{Cellular\+Automaton.\+Tell\+Type()}}.
 \end{DoxyReturn}
 
 

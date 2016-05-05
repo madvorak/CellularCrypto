@@ -126,6 +126,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a75754d1c54550e1f29a9282647947cb8"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cellular_1_1_binary_range_cyclic_automaton.html#a75754d1c54550e1f29a9282647947cb8">TellType</a> ()</td></tr>
 <tr class="memdesc:a75754d1c54550e1f29a9282647947cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Announces the runtime type of the CA including info about its rule. It serves for debugging purposes.  <a href="#a75754d1c54550e1f29a9282647947cb8">More...</a><br /></td></tr>
 <tr class="separator:a75754d1c54550e1f29a9282647947cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68dc88c2cb78aaaf6246ebf6f058fbb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_cellular_1_1_reversible_automaton.html">ReversibleAutomaton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cellular_1_1_binary_range_cyclic_automaton.html#a68dc88c2cb78aaaf6246ebf6f058fbb9">ConvertToReversible</a> (BitArray previousState)</td></tr>
+<tr class="separator:a68dc88c2cb78aaaf6246ebf6f058fbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_cellular_1_1_binary_range_automaton"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cellular_1_1_binary_range_automaton')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cellular_1_1_binary_range_automaton.html">Cellular.BinaryRangeAutomaton</a></td></tr>
 <tr class="memitem:a3b165a9e98e516bf7e9bdb8bb2fe16a7 inherit pub_methods_class_cellular_1_1_binary_range_automaton"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cellular_1_1_binary_range_automaton.html#a3b165a9e98e516bf7e9bdb8bb2fe16a7">BinaryRangeAutomaton</a> (byte scope, bool[] <a class="el" href="class_cellular_1_1_binary_range_automaton.html#a4dda99c3151599c8ef12d08d7472144c">rule</a>, int <a class="el" href="class_cellular_1_1_automaton1_d.html#a915129ccf0f1e7092844c99ce6a28e5b">size</a>)</td></tr>
 <tr class="memdesc:a3b165a9e98e516bf7e9bdb8bb2fe16a7 inherit pub_methods_class_cellular_1_1_binary_range_automaton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new CA of a general rule with 000...00100...000 as its initial state.  <a href="#a3b165a9e98e516bf7e9bdb8bb2fe16a7">More...</a><br /></td></tr>
@@ -134,7 +136,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a704950c30ff58c587c8a717f9f2c839b inherit pub_methods_class_cellular_1_1_binary_range_automaton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new CA of a general rule with defined inital state.  <a href="#a704950c30ff58c587c8a717f9f2c839b">More...</a><br /></td></tr>
 <tr class="separator:a704950c30ff58c587c8a717f9f2c839b inherit pub_methods_class_cellular_1_1_binary_range_automaton"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade1f5b831b9676f04f835c33d245b9e2 inherit pub_methods_class_cellular_1_1_binary_range_automaton"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cellular_1_1_binary_range_automaton.html#ade1f5b831b9676f04f835c33d245b9e2">Step</a> ()</td></tr>
-<tr class="memdesc:ade1f5b831b9676f04f835c33d245b9e2 inherit pub_methods_class_cellular_1_1_binary_range_automaton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs one step of the cellular automaton. Always calls  <a href="#ade1f5b831b9676f04f835c33d245b9e2">More...</a><br /></td></tr>
+<tr class="memdesc:ade1f5b831b9676f04f835c33d245b9e2 inherit pub_methods_class_cellular_1_1_binary_range_automaton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs one step of the cellular automaton. Always calls <code><a class="el" href="class_cellular_1_1_cellular_automaton.html#aa70848d58015575974bc875ac5a89ae7" title="Performs one step applying the specific rule for creating a new state. ">CellularAutomaton.Step()</a></code>.  <a href="#ade1f5b831b9676f04f835c33d245b9e2">More...</a><br /></td></tr>
 <tr class="separator:ade1f5b831b9676f04f835c33d245b9e2 inherit pub_methods_class_cellular_1_1_binary_range_automaton"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afad205eb4fea51efd63b063f96bfda5c inherit pub_methods_class_cellular_1_1_binary_range_automaton"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cellular_1_1_binary_range_automaton.html#afad205eb4fea51efd63b063f96bfda5c">TellType</a> ()</td></tr>
 <tr class="memdesc:afad205eb4fea51efd63b063f96bfda5c inherit pub_methods_class_cellular_1_1_binary_range_automaton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Announces the runtime type of the CA including info about its rule. It serves for debugging purposes.  <a href="#afad205eb4fea51efd63b063f96bfda5c">More...</a><br /></td></tr>
@@ -336,6 +338,24 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a68dc88c2cb78aaaf6246ebf6f058fbb9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_cellular_1_1_reversible_automaton.html">ReversibleAutomaton</a> Cellular.BinaryRangeCyclicAutomaton.ConvertToReversible </td>
+          <td>(</td>
+          <td class="paramtype">BitArray&#160;</td>
+          <td class="paramname"><em>previousState</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_binary_range_cyclic_automaton_8cs_source.html#l00061">61</a> of file <a class="el" href="_binary_range_cyclic_automaton_8cs_source.html">BinaryRangeCyclicAutomaton.cs</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a0e4d7dd11fda253300ee9fc8adbc4d33"></a>
 <div class="memitem">
 <div class="memproto">
@@ -387,8 +407,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Announces the runtime type of the CA including info about its rule. It serves for debugging purposes. </p>
-<dl class="section return"><dt>Returns</dt><dd>The same string as calling <div class="fragment"><div class="line">CellularAutomaton.TellType();</div>
-</div><!-- fragment -->.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The same string as calling <code><a class="el" href="class_cellular_1_1_cellular_automaton.html#abe4b92fd405530c8a08cc07a3a19fff4" title="Announces the runtime type of the CA including info about its rule. It serves for debugging purposes...">CellularAutomaton.TellType()</a></code>.</dd></dl>
 
 <p>Implements <a class="el" href="interface_cellular_1_1_i_binary_c_a.html#aa67feabf5d1513aa74076d255c661948">Cellular.IBinaryCA</a>.</p>
 

@@ -5,14 +5,22 @@
 \item 
 class \hyperlink{class_crypto_1_1_cannot_generate_exception}{Cannot\+Generate\+Exception}
 \begin{DoxyCompactList}\small\item\em Custom exception that any key extender can throw. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_encrypter_reversible_c_a}{Encrypter\+Reversible\+C\+A}
+\begin{DoxyCompactList}\small\item\em Class for symmetric cryptography performed by a reversible C\+A. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_encrypter_stream_c_a}{Encrypter\+Stream\+C\+A}
+\begin{DoxyCompactList}\small\item\em Class for symmetric cryptogryphy performed by extending key using C\+A. \end{DoxyCompactList}\item 
+class \hyperlink{class_crypto_1_1_encrypter_wrapper}{Encrypter\+Wrapper}
+\begin{DoxyCompactList}\small\item\em Public class that provides encryption and decryption of data streams in a convenient way. This class wraps any {\ttfamily \hyperlink{interface_crypto_1_1_i_encrypter}{I\+Encrypter}} implementation. \end{DoxyCompactList}\item 
 class \hyperlink{class_crypto_1_1_export}{Export}
-\begin{DoxyCompactList}\small\item\em Public static class that gives access to our cryptographical tools. Can be used from any assembly. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Public static class that gives access to our cryptographical tools. This class is made to be used from any assembly. \end{DoxyCompactList}\item 
 class \hyperlink{class_crypto_1_1_factory}{Factory}
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_crypto_1_1_factory}{Factory} class containing methods for building cellular automata and key extenders from textual description. Sometimes used together with {\ttfamily Cellular\+Automaton.\+Tell\+Type()} resp. {\ttfamily I\+Binary\+C\+A.\+Tell\+Type()} method as a replacement for missing serialization / deserialization features. \end{DoxyCompactList}\item 
 class \hyperlink{class_crypto_1_1_function_testing}{Function\+Testing}
 \begin{DoxyCompactList}\small\item\em Class for testing properties of key extending algorithms. \end{DoxyCompactList}\item 
 class \hyperlink{class_crypto_1_1_function_tests_for_thesis}{Function\+Tests\+For\+Thesis}
 \begin{DoxyCompactList}\small\item\em Wrapper for class {\ttfamily \hyperlink{class_crypto_1_1_function_testing}{Function\+Testing}}. It generates results in the form, which is suitable for my thesis. \end{DoxyCompactList}\item 
+interface \hyperlink{interface_crypto_1_1_i_encrypter}{I\+Encrypter}
+\begin{DoxyCompactList}\small\item\em Interface for all symmetric cryptography algorithms. \end{DoxyCompactList}\item 
 interface \hyperlink{interface_crypto_1_1_i_key_extender}{I\+Key\+Extender}
 \begin{DoxyCompactList}\small\item\em Interface for all algorithms that can perform key stretching. Can be used from any assembly. \end{DoxyCompactList}\item 
 class \hyperlink{class_crypto_1_1_key_extender_abstract_d}{Key\+Extender\+Abstract\+D}
@@ -34,6 +42,6 @@ class \hyperlink{class_crypto_1_1_key_extender_simple_quadratic}{Key\+Extender\+
 class \hyperlink{class_crypto_1_1_key_extender_uncertain}{Key\+Extender\+Uncertain}
 \begin{DoxyCompactList}\small\item\em Intelligent key extender that equalizes frequencies of 0 and 1, which may be different in the underlying C\+A. However it is not guaranteed that the long key will be generated. \end{DoxyCompactList}\item 
 class \hyperlink{class_crypto_1_1_randomness_testing}{Randomness\+Testing}
-\begin{DoxyCompactList}\small\item\em Static class that contains some tests of randomness for binary sequences. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Static class that contains some tests of randomness for binary sequences. The tests operate on Bit\+Array. Use {\ttfamily \hyperlink{class_cellular_1_1_utilities_a3e6d6ebde1b445f03d3c0b1a9c0274e6}{Cellular.\+Utilities.\+Uint\+Arr\+To\+Bit\+Arr(uint\mbox{[}$\,$\mbox{]} input)}} to convert to Bit\+Array if needed. \end{DoxyCompactList}\item 
 class \hyperlink{class_crypto_1_1_search_s_g_a}{Search\+S\+G\+A}
 \begin{DoxyCompactList}\small\item\em Static class that can be used to pre-\/generate good key extenders for the genetic algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}

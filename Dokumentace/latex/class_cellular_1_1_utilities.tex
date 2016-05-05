@@ -17,6 +17,8 @@ static bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_utilities_a6f1fcc0
 \begin{DoxyCompactList}\small\item\em Converts an array of {\ttfamily System.\+U\+Int32} into an array of {\ttfamily System.\+Boolean}. The input is treated as M\+S\+B-\/first. \end{DoxyCompactList}\item 
 static Bit\+Array \hyperlink{class_cellular_1_1_utilities_a3e6d6ebde1b445f03d3c0b1a9c0274e6}{Uint\+Arr\+To\+Bit\+Arr} (uint\mbox{[}$\,$\mbox{]} input)
 \begin{DoxyCompactList}\small\item\em Converts an array of {\ttfamily System.\+U\+Int32} into an array of {\ttfamily System.\+Collections.\+Bit\+Array}. The input is treated as M\+S\+B-\/first. \end{DoxyCompactList}\item 
+static bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_utilities_a1c47a345afd4e991876f6ae6c4723591}{Bit\+Arr\+To\+Bool\+Arr} (Bit\+Array bit\+Array)
+\item 
 static long \hyperlink{class_cellular_1_1_utilities_a8ebd90cf7f8d6ce2235d26f9feeddfae}{Period\+Length\+Fast} (\hyperlink{class_cellular_1_1_cellular_automaton}{Cellular\+Automaton} C\+A, long limit, out long time)
 \begin{DoxyCompactList}\small\item\em Calculates a period (number of steps between repetitions) of a C\+A. This method is fast, but unreliable! It gives only the lower estimate (because of hashing). \end{DoxyCompactList}\item 
 static long \hyperlink{class_cellular_1_1_utilities_a7a43545f264bf30884c8486a14fb4f43}{Period\+Length\+Fast} (\hyperlink{class_cellular_1_1_cellular_automaton}{Cellular\+Automaton} C\+A)
@@ -43,6 +45,17 @@ Definition at line 11 of file Utilities.\+cs.
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_cellular_1_1_utilities_a1c47a345afd4e991876f6ae6c4723591}{}\index{Cellular\+::\+Utilities@{Cellular\+::\+Utilities}!Bit\+Arr\+To\+Bool\+Arr@{Bit\+Arr\+To\+Bool\+Arr}}
+\index{Bit\+Arr\+To\+Bool\+Arr@{Bit\+Arr\+To\+Bool\+Arr}!Cellular\+::\+Utilities@{Cellular\+::\+Utilities}}
+\subsubsection[{Bit\+Arr\+To\+Bool\+Arr(\+Bit\+Array bit\+Array)}]{\setlength{\rightskip}{0pt plus 5cm}static bool \mbox{[}$\,$\mbox{]} Cellular.\+Utilities.\+Bit\+Arr\+To\+Bool\+Arr (
+\begin{DoxyParamCaption}
+\item[{Bit\+Array}]{bit\+Array}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_cellular_1_1_utilities_a1c47a345afd4e991876f6ae6c4723591}
+
+
+Definition at line 59 of file Utilities.\+cs.
+
 \hypertarget{class_cellular_1_1_utilities_a8ebd90cf7f8d6ce2235d26f9feeddfae}{}\index{Cellular\+::\+Utilities@{Cellular\+::\+Utilities}!Period\+Length\+Fast@{Period\+Length\+Fast}}
 \index{Period\+Length\+Fast@{Period\+Length\+Fast}!Cellular\+::\+Utilities@{Cellular\+::\+Utilities}}
 \subsubsection[{Period\+Length\+Fast(\+Cellular\+Automaton C\+A, long limit, out long time)}]{\setlength{\rightskip}{0pt plus 5cm}static long Cellular.\+Utilities.\+Period\+Length\+Fast (
@@ -70,7 +83,7 @@ If a period is found within the limit, it returns the length of the period. Othe
 \end{DoxyReturn}
 
 
-Definition at line 69 of file Utilities.\+cs.
+Definition at line 79 of file Utilities.\+cs.
 
 \hypertarget{class_cellular_1_1_utilities_a7a43545f264bf30884c8486a14fb4f43}{}\index{Cellular\+::\+Utilities@{Cellular\+::\+Utilities}!Period\+Length\+Fast@{Period\+Length\+Fast}}
 \index{Period\+Length\+Fast@{Period\+Length\+Fast}!Cellular\+::\+Utilities@{Cellular\+::\+Utilities}}
@@ -93,7 +106,7 @@ If a period is found within 2$^\wedge$30 steps, it returns the length of the per
 \end{DoxyReturn}
 
 
-Definition at line 96 of file Utilities.\+cs.
+Definition at line 106 of file Utilities.\+cs.
 
 \hypertarget{class_cellular_1_1_utilities_aa0b71d2f39b127f7078a35263adbfd55}{}\index{Cellular\+::\+Utilities@{Cellular\+::\+Utilities}!Period\+Length\+Slow@{Period\+Length\+Slow}}
 \index{Period\+Length\+Slow@{Period\+Length\+Slow}!Cellular\+::\+Utilities@{Cellular\+::\+Utilities}}
@@ -122,7 +135,7 @@ If a period is found within the limit, it returns the length of the period. Othe
 \end{DoxyReturn}
 
 
-Definition at line 121 of file Utilities.\+cs.
+Definition at line 131 of file Utilities.\+cs.
 
 \hypertarget{class_cellular_1_1_utilities_a887bbf207bece7f1bfa93d3d3fab547d}{}\index{Cellular\+::\+Utilities@{Cellular\+::\+Utilities}!Random\+Bit\+Arr@{Random\+Bit\+Arr}}
 \index{Random\+Bit\+Arr@{Random\+Bit\+Arr}!Cellular\+::\+Utilities@{Cellular\+::\+Utilities}}
@@ -148,7 +161,7 @@ Random array.
 \end{DoxyReturn}
 
 
-Definition at line 189 of file Utilities.\+cs.
+Definition at line 199 of file Utilities.\+cs.
 
 \hypertarget{class_cellular_1_1_utilities_a9cf5e2901915830e230c8affacfcec18}{}\index{Cellular\+::\+Utilities@{Cellular\+::\+Utilities}!Random\+Bit\+Arr@{Random\+Bit\+Arr}}
 \index{Random\+Bit\+Arr@{Random\+Bit\+Arr}!Cellular\+::\+Utilities@{Cellular\+::\+Utilities}}
@@ -171,7 +184,7 @@ Random array.
 \end{DoxyReturn}
 
 
-Definition at line 205 of file Utilities.\+cs.
+Definition at line 215 of file Utilities.\+cs.
 
 \hypertarget{class_cellular_1_1_utilities_a3f20fa274e0db626d4052fe233f7a00f}{}\index{Cellular\+::\+Utilities@{Cellular\+::\+Utilities}!Random\+Bool\+Arr@{Random\+Bool\+Arr}}
 \index{Random\+Bool\+Arr@{Random\+Bool\+Arr}!Cellular\+::\+Utilities@{Cellular\+::\+Utilities}}
@@ -197,7 +210,7 @@ Random array.
 \end{DoxyReturn}
 
 
-Definition at line 162 of file Utilities.\+cs.
+Definition at line 172 of file Utilities.\+cs.
 
 \hypertarget{class_cellular_1_1_utilities_a069e9224bbd6f305d17e38d6290424cd}{}\index{Cellular\+::\+Utilities@{Cellular\+::\+Utilities}!Random\+Bool\+Arr@{Random\+Bool\+Arr}}
 \index{Random\+Bool\+Arr@{Random\+Bool\+Arr}!Cellular\+::\+Utilities@{Cellular\+::\+Utilities}}
@@ -220,7 +233,7 @@ Random array.
 \end{DoxyReturn}
 
 
-Definition at line 178 of file Utilities.\+cs.
+Definition at line 188 of file Utilities.\+cs.
 
 \hypertarget{class_cellular_1_1_utilities_a3e6d6ebde1b445f03d3c0b1a9c0274e6}{}\index{Cellular\+::\+Utilities@{Cellular\+::\+Utilities}!Uint\+Arr\+To\+Bit\+Arr@{Uint\+Arr\+To\+Bit\+Arr}}
 \index{Uint\+Arr\+To\+Bit\+Arr@{Uint\+Arr\+To\+Bit\+Arr}!Cellular\+::\+Utilities@{Cellular\+::\+Utilities}}

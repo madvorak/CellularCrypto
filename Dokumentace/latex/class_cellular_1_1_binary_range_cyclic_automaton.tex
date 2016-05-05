@@ -21,7 +21,9 @@ Inheritance diagram for Cellular.\+Binary\+Range\+Cyclic\+Automaton\+:\begin{fig
 override object \hyperlink{class_cellular_1_1_binary_range_cyclic_automaton_a2361fe82802e372b24b8bec6a6135278}{Clone} ()
 \begin{DoxyCompactList}\small\item\em Creates an appropriate copy of the C\+A. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. \end{DoxyCompactList}\item 
 override string \hyperlink{class_cellular_1_1_binary_range_cyclic_automaton_a75754d1c54550e1f29a9282647947cb8}{Tell\+Type} ()
-\begin{DoxyCompactList}\small\item\em Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. \end{DoxyCompactList}\item 
+\hyperlink{class_cellular_1_1_reversible_automaton}{Reversible\+Automaton} \hyperlink{class_cellular_1_1_binary_range_cyclic_automaton_a68dc88c2cb78aaaf6246ebf6f058fbb9}{Convert\+To\+Reversible} (Bit\+Array previous\+State)
+\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -134,6 +136,17 @@ Reimplemented from \hyperlink{class_cellular_1_1_binary_range_automaton_a75d9e1f
 
 Definition at line 51 of file Binary\+Range\+Cyclic\+Automaton.\+cs.
 
+\hypertarget{class_cellular_1_1_binary_range_cyclic_automaton_a68dc88c2cb78aaaf6246ebf6f058fbb9}{}\index{Cellular\+::\+Binary\+Range\+Cyclic\+Automaton@{Cellular\+::\+Binary\+Range\+Cyclic\+Automaton}!Convert\+To\+Reversible@{Convert\+To\+Reversible}}
+\index{Convert\+To\+Reversible@{Convert\+To\+Reversible}!Cellular\+::\+Binary\+Range\+Cyclic\+Automaton@{Cellular\+::\+Binary\+Range\+Cyclic\+Automaton}}
+\subsubsection[{Convert\+To\+Reversible(\+Bit\+Array previous\+State)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reversible\+Automaton} Cellular.\+Binary\+Range\+Cyclic\+Automaton.\+Convert\+To\+Reversible (
+\begin{DoxyParamCaption}
+\item[{Bit\+Array}]{previous\+State}
+\end{DoxyParamCaption}
+)}\label{class_cellular_1_1_binary_range_cyclic_automaton_a68dc88c2cb78aaaf6246ebf6f058fbb9}
+
+
+Definition at line 61 of file Binary\+Range\+Cyclic\+Automaton.\+cs.
+
 \hypertarget{class_cellular_1_1_binary_range_cyclic_automaton_a0e4d7dd11fda253300ee9fc8adbc4d33}{}\index{Cellular\+::\+Binary\+Range\+Cyclic\+Automaton@{Cellular\+::\+Binary\+Range\+Cyclic\+Automaton}!get\+Value\+At@{get\+Value\+At}}
 \index{get\+Value\+At@{get\+Value\+At}!Cellular\+::\+Binary\+Range\+Cyclic\+Automaton@{Cellular\+::\+Binary\+Range\+Cyclic\+Automaton}}
 \subsubsection[{get\+Value\+At(int index)}]{\setlength{\rightskip}{0pt plus 5cm}override bool Cellular.\+Binary\+Range\+Cyclic\+Automaton.\+get\+Value\+At (
@@ -173,11 +186,7 @@ Definition at line 34 of file Binary\+Range\+Cyclic\+Automaton.\+cs.
 Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. 
 
 \begin{DoxyReturn}{Returns}
-The same string as calling 
-\begin{DoxyCode}
-CellularAutomaton.TellType();
-\end{DoxyCode}
-.
+The same string as calling {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_abe4b92fd405530c8a08cc07a3a19fff4}{Cellular\+Automaton.\+Tell\+Type()}}.
 \end{DoxyReturn}
 
 

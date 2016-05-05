@@ -19,7 +19,7 @@ Inheritance diagram for Cellular.\+Binary\+Range\+Automaton\+:\begin{figure}[H]
 \hyperlink{class_cellular_1_1_binary_range_automaton_a704950c30ff58c587c8a717f9f2c839b}{Binary\+Range\+Automaton} (byte scope, bool\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_binary_range_automaton_a4dda99c3151599c8ef12d08d7472144c}{rule}, Bit\+Array \hyperlink{all__1_8js_ae8b87ff4be2ae1dd5267342795263360}{initial\+State})
 \begin{DoxyCompactList}\small\item\em Creates a new C\+A of a general rule with defined inital state. \end{DoxyCompactList}\item 
 override void \hyperlink{class_cellular_1_1_binary_range_automaton_ade1f5b831b9676f04f835c33d245b9e2}{Step} ()
-\begin{DoxyCompactList}\small\item\em Performs one step of the cellular automaton. Always calls \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Performs one step of the cellular automaton. Always calls {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Cellular\+Automaton.\+Step()}}. \end{DoxyCompactList}\item 
 override object \hyperlink{class_cellular_1_1_binary_range_automaton_a12f010562e04785e0a7efb113302687e}{Clone} ()
 \begin{DoxyCompactList}\small\item\em Creates an appropriate copy of the C\+A. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. \end{DoxyCompactList}\item 
 override string \hyperlink{class_cellular_1_1_binary_range_automaton_afad205eb4fea51efd63b063f96bfda5c}{Tell\+Type} ()
@@ -186,9 +186,9 @@ Definition at line 62 of file Binary\+Range\+Automaton.\+cs.
 )}\label{class_cellular_1_1_binary_range_automaton_ade1f5b831b9676f04f835c33d245b9e2}
 
 
-Performs one step of the cellular automaton. Always calls 
+Performs one step of the cellular automaton. Always calls {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Cellular\+Automaton.\+Step()}}. 
 
-{\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Cellular\+Automaton.\+Step()};}. 
+
 
 Implements \hyperlink{interface_cellular_1_1_i_binary_c_a_a6a04c7374538c49df07efa176e0dd3c3}{Cellular.\+I\+Binary\+C\+A}.
 
@@ -208,11 +208,7 @@ Definition at line 74 of file Binary\+Range\+Automaton.\+cs.
 Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. 
 
 \begin{DoxyReturn}{Returns}
-The same string as calling 
-\begin{DoxyCode}
-CellularAutomaton.TellType();
-\end{DoxyCode}
-.
+The same string as calling {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_abe4b92fd405530c8a08cc07a3a19fff4}{Cellular\+Automaton.\+Tell\+Type()}}.
 \end{DoxyReturn}
 
 

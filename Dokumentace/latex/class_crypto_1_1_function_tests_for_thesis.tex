@@ -13,17 +13,17 @@ Wrapper for class {\ttfamily \hyperlink{class_crypto_1_1_function_testing}{Funct
 \hyperlink{class_crypto_1_1_function_tests_for_thesis_a5111eb586e377ffc77887854a97a6e12}{Function\+Tests\+For\+Thesis} ()
 \begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 double \hyperlink{class_crypto_1_1_function_tests_for_thesis_ac1f19a5222e2ea9dd548115f5d27d625}{Test\+Bit\+Change} (\hyperlink{interface_crypto_1_1_i_key_extender}{I\+Key\+Extender} algorithm)
-\item 
+\begin{DoxyCompactList}\small\item\em Tests how much the output changes (on average) when the input changes in a single bit. \end{DoxyCompactList}\item 
 double \hyperlink{class_crypto_1_1_function_tests_for_thesis_aa4c816a858cf43da9d4483b6b681b7e9}{Test\+Average\+Distance} (\hyperlink{interface_crypto_1_1_i_key_extender}{I\+Key\+Extender} algorithm)
-\item 
+\begin{DoxyCompactList}\small\item\em Tests average distance between two random results. \end{DoxyCompactList}\item 
 double \hyperlink{class_crypto_1_1_function_tests_for_thesis_af91fad42f0f9f07c9856159e8a77efcf}{Test\+Largest\+Ball} (\hyperlink{interface_crypto_1_1_i_key_extender}{I\+Key\+Extender} algorithm)
-\item 
+\begin{DoxyCompactList}\small\item\em Estimates the size of the largest ball that can be put into the space of long (output) keys without containing any key. \end{DoxyCompactList}\item 
 double \hyperlink{class_crypto_1_1_function_tests_for_thesis_a286fefd74161e48ca2bc1d1c84134f74}{Test\+Entropy} (\hyperlink{interface_crypto_1_1_i_key_extender}{I\+Key\+Extender} algorithm)
-\item 
+\begin{DoxyCompactList}\small\item\em Estimates the average Shannon entropy of an output. \end{DoxyCompactList}\item 
 double \hyperlink{class_crypto_1_1_function_tests_for_thesis_aa8d949ca13be79e8f42b441dbf2faf11}{Test\+Compression} (\hyperlink{interface_crypto_1_1_i_key_extender}{I\+Key\+Extender} algorithm)
-\item 
+\begin{DoxyCompactList}\small\item\em Tests how much an output can be compressed (on average). Optimal compression level gzip is used. Estimates the upper bound of Kolmogorov complexity. \end{DoxyCompactList}\item 
 string \hyperlink{class_crypto_1_1_function_tests_for_thesis_ae61b66d865e06140e6b6b58d14e0790e}{Calculate\+And\+Print\+Results} (\hyperlink{interface_crypto_1_1_i_key_extender}{I\+Key\+Extender} algorithm)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Runs all customized tests (Entropy, Compression, Average\+Distance, Bit\+Change, Largest\+Ball) on one algorithm and prints the results. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -78,7 +78,19 @@ Definition at line 23 of file Function\+Tests\+For\+Thesis.\+cs.
 )}\label{class_crypto_1_1_function_tests_for_thesis_ae61b66d865e06140e6b6b58d14e0790e}
 
 
-Definition at line 74 of file Function\+Tests\+For\+Thesis.\+cs.
+Runs all customized tests (Entropy, Compression, Average\+Distance, Bit\+Change, Largest\+Ball) on one algorithm and prints the results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algorithm} & The (key stretching) algorithm to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Results on 5 text lines.
+\end{DoxyReturn}
+
+
+Definition at line 107 of file Function\+Tests\+For\+Thesis.\+cs.
 
 \hypertarget{class_crypto_1_1_function_tests_for_thesis_aa4c816a858cf43da9d4483b6b681b7e9}{}\index{Crypto\+::\+Function\+Tests\+For\+Thesis@{Crypto\+::\+Function\+Tests\+For\+Thesis}!Test\+Average\+Distance@{Test\+Average\+Distance}}
 \index{Test\+Average\+Distance@{Test\+Average\+Distance}!Crypto\+::\+Function\+Tests\+For\+Thesis@{Crypto\+::\+Function\+Tests\+For\+Thesis}}
@@ -89,7 +101,19 @@ Definition at line 74 of file Function\+Tests\+For\+Thesis.\+cs.
 )}\label{class_crypto_1_1_function_tests_for_thesis_aa4c816a858cf43da9d4483b6b681b7e9}
 
 
-Definition at line 50 of file Function\+Tests\+For\+Thesis.\+cs.
+Tests average distance between two random results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algorithm} & The (key stretching) algorithm to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value between 0 (worst) and 1 (good).
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Function\+Tests\+For\+Thesis.\+cs.
 
 \hypertarget{class_crypto_1_1_function_tests_for_thesis_ac1f19a5222e2ea9dd548115f5d27d625}{}\index{Crypto\+::\+Function\+Tests\+For\+Thesis@{Crypto\+::\+Function\+Tests\+For\+Thesis}!Test\+Bit\+Change@{Test\+Bit\+Change}}
 \index{Test\+Bit\+Change@{Test\+Bit\+Change}!Crypto\+::\+Function\+Tests\+For\+Thesis@{Crypto\+::\+Function\+Tests\+For\+Thesis}}
@@ -100,7 +124,19 @@ Definition at line 50 of file Function\+Tests\+For\+Thesis.\+cs.
 )}\label{class_crypto_1_1_function_tests_for_thesis_ac1f19a5222e2ea9dd548115f5d27d625}
 
 
-Definition at line 44 of file Function\+Tests\+For\+Thesis.\+cs.
+Tests how much the output changes (on average) when the input changes in a single bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algorithm} & The (key stretching) algorithm to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value between 0 (worst) and 1 (good).
+\end{DoxyReturn}
+
+
+Definition at line 49 of file Function\+Tests\+For\+Thesis.\+cs.
 
 \hypertarget{class_crypto_1_1_function_tests_for_thesis_aa8d949ca13be79e8f42b441dbf2faf11}{}\index{Crypto\+::\+Function\+Tests\+For\+Thesis@{Crypto\+::\+Function\+Tests\+For\+Thesis}!Test\+Compression@{Test\+Compression}}
 \index{Test\+Compression@{Test\+Compression}!Crypto\+::\+Function\+Tests\+For\+Thesis@{Crypto\+::\+Function\+Tests\+For\+Thesis}}
@@ -111,7 +147,19 @@ Definition at line 44 of file Function\+Tests\+For\+Thesis.\+cs.
 )}\label{class_crypto_1_1_function_tests_for_thesis_aa8d949ca13be79e8f42b441dbf2faf11}
 
 
-Definition at line 68 of file Function\+Tests\+For\+Thesis.\+cs.
+Tests how much an output can be compressed (on average). Optimal compression level gzip is used. Estimates the upper bound of Kolmogorov complexity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algorithm} & The (key stretching) algorithm to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value between 0 (worst) and 1 (good).
+\end{DoxyReturn}
+
+
+Definition at line 95 of file Function\+Tests\+For\+Thesis.\+cs.
 
 \hypertarget{class_crypto_1_1_function_tests_for_thesis_a286fefd74161e48ca2bc1d1c84134f74}{}\index{Crypto\+::\+Function\+Tests\+For\+Thesis@{Crypto\+::\+Function\+Tests\+For\+Thesis}!Test\+Entropy@{Test\+Entropy}}
 \index{Test\+Entropy@{Test\+Entropy}!Crypto\+::\+Function\+Tests\+For\+Thesis@{Crypto\+::\+Function\+Tests\+For\+Thesis}}
@@ -122,7 +170,19 @@ Definition at line 68 of file Function\+Tests\+For\+Thesis.\+cs.
 )}\label{class_crypto_1_1_function_tests_for_thesis_a286fefd74161e48ca2bc1d1c84134f74}
 
 
-Definition at line 62 of file Function\+Tests\+For\+Thesis.\+cs.
+Estimates the average Shannon entropy of an output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algorithm} & The (key stretching) algorithm to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value between 0 (worst) and 1 (good).
+\end{DoxyReturn}
+
+
+Definition at line 83 of file Function\+Tests\+For\+Thesis.\+cs.
 
 \hypertarget{class_crypto_1_1_function_tests_for_thesis_af91fad42f0f9f07c9856159e8a77efcf}{}\index{Crypto\+::\+Function\+Tests\+For\+Thesis@{Crypto\+::\+Function\+Tests\+For\+Thesis}!Test\+Largest\+Ball@{Test\+Largest\+Ball}}
 \index{Test\+Largest\+Ball@{Test\+Largest\+Ball}!Crypto\+::\+Function\+Tests\+For\+Thesis@{Crypto\+::\+Function\+Tests\+For\+Thesis}}
@@ -133,7 +193,19 @@ Definition at line 62 of file Function\+Tests\+For\+Thesis.\+cs.
 )}\label{class_crypto_1_1_function_tests_for_thesis_af91fad42f0f9f07c9856159e8a77efcf}
 
 
-Definition at line 56 of file Function\+Tests\+For\+Thesis.\+cs.
+Estimates the size of the largest ball that can be put into the space of long (output) keys without containing any key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algorithm} & The (key stretching) algorithm to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value between 0 (worst) and 1 (good).
+\end{DoxyReturn}
+
+
+Definition at line 72 of file Function\+Tests\+For\+Thesis.\+cs.
 
 
 

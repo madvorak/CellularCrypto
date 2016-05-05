@@ -122,7 +122,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a704950c30ff58c587c8a717f9f2c839b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new CA of a general rule with defined inital state.  <a href="#a704950c30ff58c587c8a717f9f2c839b">More...</a><br /></td></tr>
 <tr class="separator:a704950c30ff58c587c8a717f9f2c839b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade1f5b831b9676f04f835c33d245b9e2"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cellular_1_1_binary_range_automaton.html#ade1f5b831b9676f04f835c33d245b9e2">Step</a> ()</td></tr>
-<tr class="memdesc:ade1f5b831b9676f04f835c33d245b9e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs one step of the cellular automaton. Always calls  <a href="#ade1f5b831b9676f04f835c33d245b9e2">More...</a><br /></td></tr>
+<tr class="memdesc:ade1f5b831b9676f04f835c33d245b9e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs one step of the cellular automaton. Always calls <code><a class="el" href="class_cellular_1_1_cellular_automaton.html#aa70848d58015575974bc875ac5a89ae7" title="Performs one step applying the specific rule for creating a new state. ">CellularAutomaton.Step()</a></code>.  <a href="#ade1f5b831b9676f04f835c33d245b9e2">More...</a><br /></td></tr>
 <tr class="separator:ade1f5b831b9676f04f835c33d245b9e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12f010562e04785e0a7efb113302687e"><td class="memItemLeft" align="right" valign="top">override object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cellular_1_1_binary_range_automaton.html#a12f010562e04785e0a7efb113302687e">Clone</a> ()</td></tr>
 <tr class="memdesc:a12f010562e04785e0a7efb113302687e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an appropriate copy of the CA. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0.  <a href="#a12f010562e04785e0a7efb113302687e">More...</a><br /></td></tr>
@@ -380,8 +380,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Performs one step of the cellular automaton. Always calls </p>
-<p><code><a class="el" href="class_cellular_1_1_cellular_automaton.html#aa70848d58015575974bc875ac5a89ae7" title="Performs one step applying the specific rule for creating a new state. ">CellularAutomaton.Step()</a>;</code>. </p>
+<p>Performs one step of the cellular automaton. Always calls <code><a class="el" href="class_cellular_1_1_cellular_automaton.html#aa70848d58015575974bc875ac5a89ae7" title="Performs one step applying the specific rule for creating a new state. ">CellularAutomaton.Step()</a></code>. </p>
 
 <p>Implements <a class="el" href="interface_cellular_1_1_i_binary_c_a.html#a6a04c7374538c49df07efa176e0dd3c3">Cellular.IBinaryCA</a>.</p>
 
@@ -403,8 +402,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Announces the runtime type of the CA including info about its rule. It serves for debugging purposes. </p>
-<dl class="section return"><dt>Returns</dt><dd>The same string as calling <div class="fragment"><div class="line">CellularAutomaton.TellType();</div>
-</div><!-- fragment -->.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The same string as calling <code><a class="el" href="class_cellular_1_1_cellular_automaton.html#abe4b92fd405530c8a08cc07a3a19fff4" title="Announces the runtime type of the CA including info about its rule. It serves for debugging purposes...">CellularAutomaton.TellType()</a></code>.</dd></dl>
 
 <p>Implements <a class="el" href="interface_cellular_1_1_i_binary_c_a.html#aa67feabf5d1513aa74076d255c661948">Cellular.IBinaryCA</a>.</p>
 

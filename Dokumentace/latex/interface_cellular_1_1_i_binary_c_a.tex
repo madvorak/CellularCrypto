@@ -8,7 +8,7 @@ Common interface for all binary cellular automata. Most work with C\+A is done t
 Inheritance diagram for Cellular.\+I\+Binary\+C\+A\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.974767cm]{interface_cellular_1_1_i_binary_c_a}
+\includegraphics[height=2.231076cm]{interface_cellular_1_1_i_binary_c_a}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -23,7 +23,7 @@ uint\mbox{[}$\,$\mbox{]} \hyperlink{interface_cellular_1_1_i_binary_c_a_a62f943d
 bool \hyperlink{interface_cellular_1_1_i_binary_c_a_a809b66186b663b64d85db59237693b52}{Get\+Value\+At} (int index)
 \begin{DoxyCompactList}\small\item\em Tells the specified bit of the C\+A. \end{DoxyCompactList}\item 
 void \hyperlink{interface_cellular_1_1_i_binary_c_a_a6a04c7374538c49df07efa176e0dd3c3}{Step} ()
-\begin{DoxyCompactList}\small\item\em Performs one step of the cellular automaton. Always calls \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Performs one step of the cellular automaton. Always calls {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Cellular\+Automaton.\+Step()}}. \end{DoxyCompactList}\item 
 \hyperlink{interface_cellular_1_1_i_binary_c_a}{I\+Binary\+C\+A} \hyperlink{interface_cellular_1_1_i_binary_c_a_a0d5610129c1f7aee62d6521ba8268cf9}{Clone\+Everything} ()
 \begin{DoxyCompactList}\small\item\em Clones the underlying C\+A including its state at the moment. \end{DoxyCompactList}\item 
 \hyperlink{interface_cellular_1_1_i_binary_c_a}{I\+Binary\+C\+A} \hyperlink{interface_cellular_1_1_i_binary_c_a_a1adc2170335c41093d2da999523896ec}{Clone\+Template} (Bit\+Array new\+Instance\+State)
@@ -54,11 +54,7 @@ Definition at line 9 of file I\+Binary\+C\+A.\+cs.
 Clones the underlying C\+A including its state at the moment. 
 
 \begin{DoxyReturn}{Returns}
-Identical copy. The result is the same as when calling 
-\begin{DoxyCode}
-CellularAutomaton.Clone();
-\end{DoxyCode}
-, only its type is {\ttfamily \hyperlink{interface_cellular_1_1_i_binary_c_a}{I\+Binary\+C\+A}} (which is useful).
+Identical copy. The result is the same as when calling {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_affd487b397cdbbbb1982815bbcd8e7d3}{Cellular\+Automaton.\+Clone()}}, only its type is {\ttfamily \hyperlink{interface_cellular_1_1_i_binary_c_a}{I\+Binary\+C\+A}} (which is useful).
 \end{DoxyReturn}
 \hypertarget{interface_cellular_1_1_i_binary_c_a_a1adc2170335c41093d2da999523896ec}{}\index{Cellular\+::\+I\+Binary\+C\+A@{Cellular\+::\+I\+Binary\+C\+A}!Clone\+Template@{Clone\+Template}}
 \index{Clone\+Template@{Clone\+Template}!Cellular\+::\+I\+Binary\+C\+A@{Cellular\+::\+I\+Binary\+C\+A}}
@@ -151,11 +147,11 @@ State of the C\+A as a string.
 )}\label{interface_cellular_1_1_i_binary_c_a_a6a04c7374538c49df07efa176e0dd3c3}
 
 
-Performs one step of the cellular automaton. Always calls 
+Performs one step of the cellular automaton. Always calls {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Cellular\+Automaton.\+Step()}}. 
 
-{\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_aa70848d58015575974bc875ac5a89ae7}{Cellular\+Automaton.\+Step()};}. 
 
-Implemented in \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a7f85cac5420f67a936cbd4cef33c4abc}{Cellular.\+Totalistic2\+D\+Automaton}, \hyperlink{class_cellular_1_1_elementary_automaton_adae7c322e4c7cd00cd0534a23d1abfa4}{Cellular.\+Elementary\+Automaton}, \hyperlink{class_cellular_1_1_binary_range_automaton_ade1f5b831b9676f04f835c33d245b9e2}{Cellular.\+Binary\+Range\+Automaton}, and \hyperlink{class_cellular_1_1_elementary_fast_automaton_aa877bef8b8242c58e190a884d18f3b5f}{Cellular.\+Elementary\+Fast\+Automaton}.
+
+Implemented in \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a7f85cac5420f67a936cbd4cef33c4abc}{Cellular.\+Totalistic2\+D\+Automaton}, \hyperlink{class_cellular_1_1_elementary_automaton_adae7c322e4c7cd00cd0534a23d1abfa4}{Cellular.\+Elementary\+Automaton}, \hyperlink{class_cellular_1_1_binary_range_automaton_ade1f5b831b9676f04f835c33d245b9e2}{Cellular.\+Binary\+Range\+Automaton}, \hyperlink{class_cellular_1_1_elementary_fast_automaton_aa877bef8b8242c58e190a884d18f3b5f}{Cellular.\+Elementary\+Fast\+Automaton}, and \hyperlink{class_cellular_1_1_reversible_automaton_ae931cb64ab215ba1d1c1019a3f289b6d}{Cellular.\+Reversible\+Automaton}.
 
 \hypertarget{interface_cellular_1_1_i_binary_c_a_aa67feabf5d1513aa74076d255c661948}{}\index{Cellular\+::\+I\+Binary\+C\+A@{Cellular\+::\+I\+Binary\+C\+A}!Tell\+Type@{Tell\+Type}}
 \index{Tell\+Type@{Tell\+Type}!Cellular\+::\+I\+Binary\+C\+A@{Cellular\+::\+I\+Binary\+C\+A}}
@@ -169,15 +165,11 @@ Implemented in \hyperlink{class_cellular_1_1_totalistic2_d_automaton_a7f85cac542
 Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. 
 
 \begin{DoxyReturn}{Returns}
-The same string as calling 
-\begin{DoxyCode}
-CellularAutomaton.TellType();
-\end{DoxyCode}
-.
+The same string as calling {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton_abe4b92fd405530c8a08cc07a3a19fff4}{Cellular\+Automaton.\+Tell\+Type()}}.
 \end{DoxyReturn}
 
 
-Implemented in \hyperlink{class_cellular_1_1_totalistic2_d_automaton_aa009c674cd109fa70173e9893f6d3b09}{Cellular.\+Totalistic2\+D\+Automaton}, \hyperlink{class_cellular_1_1_binary_range_automaton_afad205eb4fea51efd63b063f96bfda5c}{Cellular.\+Binary\+Range\+Automaton}, \hyperlink{class_cellular_1_1_elementary_automaton_a812677139d560e2c600226361b785995}{Cellular.\+Elementary\+Automaton}, and \hyperlink{class_cellular_1_1_binary_range_cyclic_automaton_a75754d1c54550e1f29a9282647947cb8}{Cellular.\+Binary\+Range\+Cyclic\+Automaton}.
+Implemented in \hyperlink{class_cellular_1_1_totalistic2_d_automaton_aa009c674cd109fa70173e9893f6d3b09}{Cellular.\+Totalistic2\+D\+Automaton}, \hyperlink{class_cellular_1_1_binary_range_automaton_afad205eb4fea51efd63b063f96bfda5c}{Cellular.\+Binary\+Range\+Automaton}, \hyperlink{class_cellular_1_1_elementary_automaton_a812677139d560e2c600226361b785995}{Cellular.\+Elementary\+Automaton}, \hyperlink{class_cellular_1_1_reversible_automaton_ae394a104b5fe5a550c6c378fea92c355}{Cellular.\+Reversible\+Automaton}, and \hyperlink{class_cellular_1_1_binary_range_cyclic_automaton_a75754d1c54550e1f29a9282647947cb8}{Cellular.\+Binary\+Range\+Cyclic\+Automaton}.
 
 
 

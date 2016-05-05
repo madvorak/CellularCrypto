@@ -2,7 +2,7 @@
 \label{class_crypto_1_1_randomness_testing}\index{Crypto.\+Randomness\+Testing@{Crypto.\+Randomness\+Testing}}
 
 
-Static class that contains some tests of randomness for binary sequences.  
+Static class that contains some tests of randomness for binary sequences. The tests operate on Bit\+Array. Use {\ttfamily \hyperlink{class_cellular_1_1_utilities_a3e6d6ebde1b445f03d3c0b1a9c0274e6}{Cellular.\+Utilities.\+Uint\+Arr\+To\+Bit\+Arr(uint\mbox{[}$\,$\mbox{]} input)}} to convert to Bit\+Array if needed.  
 
 
 \subsection*{Static Public Member Functions}
@@ -13,15 +13,15 @@ static double \hyperlink{class_crypto_1_1_randomness_testing_a86ef256c8a7c87df3f
 static double \hyperlink{class_crypto_1_1_randomness_testing_af903b13649b40d4895243f51c62341cc}{Compression\+Test} (Bit\+Array \hyperlink{jquery_8js_a2fa551895933fae935a0a6b87282241d}{b})
 \begin{DoxyCompactList}\small\item\em Tests how much the Bit\+Array can be compressed using gzip. \end{DoxyCompactList}\item 
 static double \hyperlink{class_crypto_1_1_randomness_testing_a34e225189cd735e8cfa82f6ab3b7d97f}{Rate\+Sequence} (Bit\+Array sequence)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Rates how much the Bit\+Array is pseudorandom. Return the average between {\ttfamily Compression\+Test(b)} and {\ttfamily Entropy\+Test(b, 10).} \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Static class that contains some tests of randomness for binary sequences. 
+Static class that contains some tests of randomness for binary sequences. The tests operate on Bit\+Array. Use {\ttfamily \hyperlink{class_cellular_1_1_utilities_a3e6d6ebde1b445f03d3c0b1a9c0274e6}{Cellular.\+Utilities.\+Uint\+Arr\+To\+Bit\+Arr(uint\mbox{[}$\,$\mbox{]} input)}} to convert to Bit\+Array if needed. 
 
 
 
-Definition at line 11 of file Randomness\+Testing.\+cs.
+Definition at line 12 of file Randomness\+Testing.\+cs.
 
 
 
@@ -47,7 +47,7 @@ Ratio between new and old size.
 \end{DoxyReturn}
 
 
-Definition at line 69 of file Randomness\+Testing.\+cs.
+Definition at line 70 of file Randomness\+Testing.\+cs.
 
 \hypertarget{class_crypto_1_1_randomness_testing_a86ef256c8a7c87df3fdbbf5673465cb0}{}\index{Crypto\+::\+Randomness\+Testing@{Crypto\+::\+Randomness\+Testing}!Entropy\+Test@{Entropy\+Test}}
 \index{Entropy\+Test@{Entropy\+Test}!Crypto\+::\+Randomness\+Testing@{Crypto\+::\+Randomness\+Testing}}
@@ -73,7 +73,7 @@ Number between 0 and 1. Only values very close to 1 are good.
 \end{DoxyReturn}
 
 
-Definition at line 19 of file Randomness\+Testing.\+cs.
+Definition at line 20 of file Randomness\+Testing.\+cs.
 
 \hypertarget{class_crypto_1_1_randomness_testing_a34e225189cd735e8cfa82f6ab3b7d97f}{}\index{Crypto\+::\+Randomness\+Testing@{Crypto\+::\+Randomness\+Testing}!Rate\+Sequence@{Rate\+Sequence}}
 \index{Rate\+Sequence@{Rate\+Sequence}!Crypto\+::\+Randomness\+Testing@{Crypto\+::\+Randomness\+Testing}}
@@ -84,7 +84,19 @@ Definition at line 19 of file Randomness\+Testing.\+cs.
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_crypto_1_1_randomness_testing_a34e225189cd735e8cfa82f6ab3b7d97f}
 
 
-Definition at line 82 of file Randomness\+Testing.\+cs.
+Rates how much the Bit\+Array is pseudorandom. Return the average between {\ttfamily Compression\+Test(b)} and {\ttfamily Entropy\+Test(b, 10).} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequence} & Vector to rate.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number between 0 and 1. Only values very close to 1 are good.
+\end{DoxyReturn}
+
+
+Definition at line 89 of file Randomness\+Testing.\+cs.
 
 
 

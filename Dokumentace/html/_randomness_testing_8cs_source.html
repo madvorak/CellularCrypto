@@ -96,80 +96,80 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_crypto.html">Crypto</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_crypto_1_1_randomness_testing.html">   11</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_crypto_1_1_randomness_testing.html">RandomnessTesting</a></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_crypto_1_1_randomness_testing.html#a86ef256c8a7c87df3fdbbf5673465cb0">   19</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="class_crypto_1_1_randomness_testing.html#a86ef256c8a7c87df3fdbbf5673465cb0">EntropyTest</a>(BitArray <a class="code" href="jquery_8js.html#aa4026ad5544b958e54ce5e106fa1c805">b</a>, byte lengthLimit)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordtype">double</span> score = 0;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordtype">double</span> maxScore = 0;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">for</span> (byte length = 1; length &lt;= lengthLimit; length++)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="keywordtype">int</span> seqPossible = 1 &lt;&lt; length;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="keywordtype">int</span> sampleCount = b.Length / length;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keywordtype">int</span>[] frequencies = <span class="keyword">new</span> <span class="keywordtype">int</span>[seqPossible];</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordtype">int</span>[] optimal = <span class="keyword">new</span> <span class="keywordtype">int</span>[seqPossible];</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordtype">int</span> optInd = 0;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; seqPossible; j++)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    frequencies[j] = 0;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    optimal[j] = 0;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; sampleCount; j++)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    <span class="keywordtype">int</span> index = 0;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="jquery_8js.html#ab26645c014aa005ecedef329ecf58c99">k</a> = 0; <a class="code" href="jquery_8js.html#ab26645c014aa005ecedef329ecf58c99">k</a> &lt; length; <a class="code" href="jquery_8js.html#ab26645c014aa005ecedef329ecf58c99">k</a>++)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        index *= 2;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                        <span class="keywordflow">if</span> (b[j * length + <a class="code" href="jquery_8js.html#ab26645c014aa005ecedef329ecf58c99">k</a>]) index++;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    frequencies[index]++;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    optimal[optInd++]++;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    <span class="keywordflow">if</span> (optInd == seqPossible) optInd = 0;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; seqPossible; j++)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    <span class="keywordtype">double</span> freq = (double)frequencies[j] / sampleCount;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    <span class="keywordflow">if</span> (freq &gt; 0)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                        score += freq * Math.Log(1 / freq, 2) / length;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    freq = (double)optimal[j] / sampleCount;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    <span class="keywordflow">if</span> (freq &gt; 0)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                        maxScore += freq * Math.Log(1 / freq, 2) / length;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">return</span> score / maxScore;   <span class="comment">//weighted average of entropies for block from 1 to lengthLimit; actual vs maximal</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_crypto_1_1_randomness_testing.html#af903b13649b40d4895243f51c62341cc">   69</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="class_crypto_1_1_randomness_testing.html#af903b13649b40d4895243f51c62341cc">CompressionTest</a>(BitArray <a class="code" href="jquery_8js.html#aa4026ad5544b958e54ce5e106fa1c805">b</a>)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordtype">int</span> length = (int)Math.Ceiling((<span class="keywordtype">double</span>)b.Length / 8);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            byte[] array = <span class="keyword">new</span> byte[length];</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            b.CopyTo(array, 0);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            var ms = <span class="keyword">new</span> MemoryStream();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            Stream gzip = <span class="keyword">new</span> GZipStream(ms, CompressionLevel.Optimal);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            gzip.Write(array, 0, length);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            gzip.Dispose();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordtype">int</span> compressedSize = ms.ToArray().Length;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">return</span> (<span class="keywordtype">double</span>)(compressedSize - 30) / length;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_crypto_1_1_randomness_testing.html#a34e225189cd735e8cfa82f6ab3b7d97f">   82</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="class_crypto_1_1_randomness_testing.html#a34e225189cd735e8cfa82f6ab3b7d97f">RateSequence</a>(BitArray sequence)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            byte lengthLimit = 10;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordtype">double</span> entropyResult = <a class="code" href="class_crypto_1_1_randomness_testing.html#a86ef256c8a7c87df3fdbbf5673465cb0">EntropyTest</a>(sequence, lengthLimit);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordtype">double</span> compressionResult = <a class="code" href="class_crypto_1_1_randomness_testing.html#af903b13649b40d4895243f51c62341cc">CompressionTest</a>(sequence);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">return</span> (entropyResult + compressionResult) / 2;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_crypto_1_1_randomness_testing.html">   12</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_crypto_1_1_randomness_testing.html">RandomnessTesting</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_crypto_1_1_randomness_testing.html#a86ef256c8a7c87df3fdbbf5673465cb0">   20</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="class_crypto_1_1_randomness_testing.html#a86ef256c8a7c87df3fdbbf5673465cb0">EntropyTest</a>(BitArray <a class="code" href="jquery_8js.html#aa4026ad5544b958e54ce5e106fa1c805">b</a>, byte lengthLimit)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordtype">double</span> score = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordtype">double</span> maxScore = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">for</span> (byte length = 1; length &lt;= lengthLimit; length++)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="keywordtype">int</span> seqPossible = 1 &lt;&lt; length;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keywordtype">int</span> sampleCount = b.Length / length;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordtype">int</span>[] frequencies = <span class="keyword">new</span> <span class="keywordtype">int</span>[seqPossible];</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordtype">int</span>[] optimal = <span class="keyword">new</span> <span class="keywordtype">int</span>[seqPossible];</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordtype">int</span> optInd = 0;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; seqPossible; j++)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    frequencies[j] = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    optimal[j] = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; sampleCount; j++)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <span class="keywordtype">int</span> index = 0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="jquery_8js.html#ab26645c014aa005ecedef329ecf58c99">k</a> = 0; <a class="code" href="jquery_8js.html#ab26645c014aa005ecedef329ecf58c99">k</a> &lt; length; <a class="code" href="jquery_8js.html#ab26645c014aa005ecedef329ecf58c99">k</a>++)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                        index *= 2;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                        <span class="keywordflow">if</span> (b[j * length + <a class="code" href="jquery_8js.html#ab26645c014aa005ecedef329ecf58c99">k</a>]) index++;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    frequencies[index]++;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    optimal[optInd++]++;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    <span class="keywordflow">if</span> (optInd == seqPossible) optInd = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; seqPossible; j++)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    <span class="keywordtype">double</span> freq = (double)frequencies[j] / sampleCount;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    <span class="keywordflow">if</span> (freq &gt; 0)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                        score += freq * Math.Log(1 / freq, 2) / length;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    freq = (double)optimal[j] / sampleCount;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    <span class="keywordflow">if</span> (freq &gt; 0)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                        maxScore += freq * Math.Log(1 / freq, 2) / length;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">return</span> score / maxScore;   <span class="comment">//weighted average of entropies for block from 1 to lengthLimit; actual vs maximal</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_crypto_1_1_randomness_testing.html#af903b13649b40d4895243f51c62341cc">   70</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="class_crypto_1_1_randomness_testing.html#af903b13649b40d4895243f51c62341cc">CompressionTest</a>(BitArray <a class="code" href="jquery_8js.html#aa4026ad5544b958e54ce5e106fa1c805">b</a>)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordtype">int</span> length = (int)Math.Ceiling((<span class="keywordtype">double</span>)b.Length / 8);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            byte[] array = <span class="keyword">new</span> byte[length];</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            b.CopyTo(array, 0);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            var ms = <span class="keyword">new</span> MemoryStream();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            Stream gzip = <span class="keyword">new</span> GZipStream(ms, CompressionLevel.Optimal);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            gzip.Write(array, 0, length);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            gzip.Dispose();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordtype">int</span> compressedSize = ms.ToArray().Length;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span> (<span class="keywordtype">double</span>)(compressedSize - 30) / length;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_crypto_1_1_randomness_testing.html#a34e225189cd735e8cfa82f6ab3b7d97f">   89</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="class_crypto_1_1_randomness_testing.html#a34e225189cd735e8cfa82f6ab3b7d97f">RateSequence</a>(BitArray sequence)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            byte lengthLimit = 10;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordtype">double</span> entropyResult = <a class="code" href="class_crypto_1_1_randomness_testing.html#a86ef256c8a7c87df3fdbbf5673465cb0">EntropyTest</a>(sequence, lengthLimit);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordtype">double</span> compressionResult = <a class="code" href="class_crypto_1_1_randomness_testing.html#af903b13649b40d4895243f51c62341cc">CompressionTest</a>(sequence);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">return</span> (entropyResult + compressionResult) / 2;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
 <div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
-<div class="ttc" id="class_crypto_1_1_randomness_testing_html_af903b13649b40d4895243f51c62341cc"><div class="ttname"><a href="class_crypto_1_1_randomness_testing.html#af903b13649b40d4895243f51c62341cc">Crypto.RandomnessTesting.CompressionTest</a></div><div class="ttdeci">static double CompressionTest(BitArray b)</div><div class="ttdoc">Tests how much the BitArray can be compressed using gzip. </div><div class="ttdef"><b>Definition:</b> <a href="_randomness_testing_8cs_source.html#l00069">RandomnessTesting.cs:69</a></div></div>
-<div class="ttc" id="class_crypto_1_1_randomness_testing_html_a34e225189cd735e8cfa82f6ab3b7d97f"><div class="ttname"><a href="class_crypto_1_1_randomness_testing.html#a34e225189cd735e8cfa82f6ab3b7d97f">Crypto.RandomnessTesting.RateSequence</a></div><div class="ttdeci">static double RateSequence(BitArray sequence)</div><div class="ttdef"><b>Definition:</b> <a href="_randomness_testing_8cs_source.html#l00082">RandomnessTesting.cs:82</a></div></div>
-<div class="ttc" id="class_crypto_1_1_randomness_testing_html_a86ef256c8a7c87df3fdbbf5673465cb0"><div class="ttname"><a href="class_crypto_1_1_randomness_testing.html#a86ef256c8a7c87df3fdbbf5673465cb0">Crypto.RandomnessTesting.EntropyTest</a></div><div class="ttdeci">static double EntropyTest(BitArray b, byte lengthLimit)</div><div class="ttdoc">Calculates the Shannon entropy of the BitArray. </div><div class="ttdef"><b>Definition:</b> <a href="_randomness_testing_8cs_source.html#l00019">RandomnessTesting.cs:19</a></div></div>
-<div class="ttc" id="class_crypto_1_1_randomness_testing_html"><div class="ttname"><a href="class_crypto_1_1_randomness_testing.html">Crypto.RandomnessTesting</a></div><div class="ttdoc">Static class that contains some tests of randomness for binary sequences. </div><div class="ttdef"><b>Definition:</b> <a href="_randomness_testing_8cs_source.html#l00011">RandomnessTesting.cs:11</a></div></div>
+<div class="ttc" id="class_crypto_1_1_randomness_testing_html_af903b13649b40d4895243f51c62341cc"><div class="ttname"><a href="class_crypto_1_1_randomness_testing.html#af903b13649b40d4895243f51c62341cc">Crypto.RandomnessTesting.CompressionTest</a></div><div class="ttdeci">static double CompressionTest(BitArray b)</div><div class="ttdoc">Tests how much the BitArray can be compressed using gzip. </div><div class="ttdef"><b>Definition:</b> <a href="_randomness_testing_8cs_source.html#l00070">RandomnessTesting.cs:70</a></div></div>
+<div class="ttc" id="class_crypto_1_1_randomness_testing_html_a34e225189cd735e8cfa82f6ab3b7d97f"><div class="ttname"><a href="class_crypto_1_1_randomness_testing.html#a34e225189cd735e8cfa82f6ab3b7d97f">Crypto.RandomnessTesting.RateSequence</a></div><div class="ttdeci">static double RateSequence(BitArray sequence)</div><div class="ttdoc">Rates how much the BitArray is pseudorandom. Return the average between CompressionTest(b) and Entrop...</div><div class="ttdef"><b>Definition:</b> <a href="_randomness_testing_8cs_source.html#l00089">RandomnessTesting.cs:89</a></div></div>
+<div class="ttc" id="class_crypto_1_1_randomness_testing_html_a86ef256c8a7c87df3fdbbf5673465cb0"><div class="ttname"><a href="class_crypto_1_1_randomness_testing.html#a86ef256c8a7c87df3fdbbf5673465cb0">Crypto.RandomnessTesting.EntropyTest</a></div><div class="ttdeci">static double EntropyTest(BitArray b, byte lengthLimit)</div><div class="ttdoc">Calculates the Shannon entropy of the BitArray. </div><div class="ttdef"><b>Definition:</b> <a href="_randomness_testing_8cs_source.html#l00020">RandomnessTesting.cs:20</a></div></div>
+<div class="ttc" id="class_crypto_1_1_randomness_testing_html"><div class="ttname"><a href="class_crypto_1_1_randomness_testing.html">Crypto.RandomnessTesting</a></div><div class="ttdoc">Static class that contains some tests of randomness for binary sequences. The tests operate on BitArr...</div><div class="ttdef"><b>Definition:</b> <a href="_randomness_testing_8cs_source.html#l00012">RandomnessTesting.cs:12</a></div></div>
 <div class="ttc" id="jquery_8js_html_aa4026ad5544b958e54ce5e106fa1c805"><div class="ttname"><a href="jquery_8js.html#aa4026ad5544b958e54ce5e106fa1c805">b</a></div><div class="ttdeci">var b</div><div class="ttdef"><b>Definition:</b> <a href="jquery_8js_source.html#l00016">jquery.js:16</a></div></div>
 <div class="ttc" id="jquery_8js_html_ab26645c014aa005ecedef329ecf58c99"><div class="ttname"><a href="jquery_8js.html#ab26645c014aa005ecedef329ecf58c99">k</a></div><div class="ttdeci">var k</div><div class="ttdef"><b>Definition:</b> <a href="jquery_8js_source.html#l00023">jquery.js:23</a></div></div>
 <div class="ttc" id="namespace_crypto_html"><div class="ttname"><a href="namespace_crypto.html">Crypto</a></div><div class="ttdef"><b>Definition:</b> <a href="_cannot_generate_exception_8cs_source.html#l00003">CannotGenerateException.cs:3</a></div></div>

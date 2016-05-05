@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Public static class that gives access to our cryptographical tools. Can be used from any assembly.  
+<p>Public static class that gives access to our cryptographical tools. This class is made to be used from any assembly.  
  <a href="class_crypto_1_1_export.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -103,12 +103,74 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a32a0f5d57f02adbe05c8b9c6ca2d30fe"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="interface_crypto_1_1_i_key_extender.html">IKeyExtender</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_crypto_1_1_export.html#a32a0f5d57f02adbe05c8b9c6ca2d30fe">GetKeyExtender</a> ()</td></tr>
 <tr class="memdesc:a32a0f5d57f02adbe05c8b9c6ca2d30fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports a key extender for use by any external program.  <a href="#a32a0f5d57f02adbe05c8b9c6ca2d30fe">More...</a><br /></td></tr>
 <tr class="separator:a32a0f5d57f02adbe05c8b9c6ca2d30fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbdd82980115f75656284bfc1cedaf71"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_crypto_1_1_encrypter_wrapper.html">EncrypterWrapper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_crypto_1_1_export.html#afbdd82980115f75656284bfc1cedaf71">GetEncrypterStreamCA</a> ()</td></tr>
+<tr class="memdesc:afbdd82980115f75656284bfc1cedaf71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports a ready-to-use encrypter/decrypter for use by any external program. This uses CA-based key extender inside.  <a href="#afbdd82980115f75656284bfc1cedaf71">More...</a><br /></td></tr>
+<tr class="separator:afbdd82980115f75656284bfc1cedaf71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a724346aca326fe3f8725eb7c7c3a4390"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_crypto_1_1_encrypter_wrapper.html">EncrypterWrapper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_crypto_1_1_export.html#a724346aca326fe3f8725eb7c7c3a4390">GetEncrypterReversibleCA</a> ()</td></tr>
+<tr class="memdesc:a724346aca326fe3f8725eb7c7c3a4390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports a ready-to-use encrypter/decrypter for use by any external program. This uses a reversible CA inside.  <a href="#a724346aca326fe3f8725eb7c7c3a4390">More...</a><br /></td></tr>
+<tr class="separator:a724346aca326fe3f8725eb7c7c3a4390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Public static class that gives access to our cryptographical tools. Can be used from any assembly. </p>
+<div class="textblock"><p>Public static class that gives access to our cryptographical tools. This class is made to be used from any assembly. </p>
 
-<p>Definition at line <a class="el" href="_export_8cs_source.html#l00008">8</a> of file <a class="el" href="_export_8cs_source.html">Export.cs</a>.</p>
+<p>Definition at line <a class="el" href="_export_8cs_source.html#l00009">9</a> of file <a class="el" href="_export_8cs_source.html">Export.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a724346aca326fe3f8725eb7c7c3a4390"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_crypto_1_1_encrypter_wrapper.html">EncrypterWrapper</a> Crypto.Export.GetEncrypterReversibleCA </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Exports a ready-to-use encrypter/decrypter for use by any external program. This uses a reversible CA inside. </p>
+<dl class="section return"><dt>Returns</dt><dd>Encrypter and decrypter.</dd></dl>
+
+<p>Definition at line <a class="el" href="_export_8cs_source.html#l00042">42</a> of file <a class="el" href="_export_8cs_source.html">Export.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afbdd82980115f75656284bfc1cedaf71"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_crypto_1_1_encrypter_wrapper.html">EncrypterWrapper</a> Crypto.Export.GetEncrypterStreamCA </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Exports a ready-to-use encrypter/decrypter for use by any external program. This uses CA-based key extender inside. </p>
+<dl class="section return"><dt>Returns</dt><dd>Encrypter and decrypter.</dd></dl>
+
+<p>Definition at line <a class="el" href="_export_8cs_source.html#l00032">32</a> of file <a class="el" href="_export_8cs_source.html">Export.cs</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a32a0f5d57f02adbe05c8b9c6ca2d30fe"></a>
 <div class="memitem">
 <div class="memproto">
@@ -133,7 +195,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Exports a key extender for use by any external program. </p>
 <dl class="section return"><dt>Returns</dt><dd>Key extender.</dd></dl>
 
-<p>Definition at line <a class="el" href="_export_8cs_source.html#l00014">14</a> of file <a class="el" href="_export_8cs_source.html">Export.cs</a>.</p>
+<p>Definition at line <a class="el" href="_export_8cs_source.html#l00022">22</a> of file <a class="el" href="_export_8cs_source.html">Export.cs</a>.</p>
 
 </div>
 </div>
