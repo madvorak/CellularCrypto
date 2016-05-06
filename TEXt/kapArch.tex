@@ -2,19 +2,71 @@
 
 Tato kapitola je urèitım doplòkem k vıvojové dokumentaci, která byla vytvoøena programem Doxywizard z dokumentaèních komentáøù. Nesnaí se nahradit ètení této dokumentace ani pøeètení ostatních kapitol této práce, ve kterıch jsou podrobnìji vysvìtleny ty klíèové èásti programu.
 
-V rámci jedné Solution ve Visual Studiu byly vytvoøeny tøi projekty. Projekt se jménem MartinDvorak, kterı mìl pùvodnì bıt jedinou èástí aplikace a mìl jasnì identifikovat tuto práci pøi jejím elektronickém odevzdávání, obsahuje veškerou logiku popisovanou v textu práci. Pomocí tohoto projektu byly provádìny veškeré experimenty. Jako druhı vznikl malı projekt se jménem Program. Ten vyuívá nástroje vytvoøené v prvním projektu a kompiluje se na WinForms aplikaci, kterou mohou uivatelé pouít k zašifrování svıch souborù. Tøetí je Unit-test projekt se jménem CryptographyUnitTests. Ten testuje, e šifrování funguje správnì (rozšifrování je inverzním zobrazením).
+Celı zdrojovı kód se nachází v repozitáøi na adrese: 
 
-\section{MartinDvorak}
+\noindent https://madv.visualstudio.com/DefaultCollection/\_git/Cellular\%20Cryptography\#\_a=contents 
 
-\subsection{Cellular}
+V rámci jedné Solution ve Visual Studiu byly vytvoøeny tøi projekty. Projekt se jménem MartinDvorak, kterı mìl pùvodnì bıt jedinou èástí aplikace a mìl jasnì identifikovat tuto práci pøi jejím elektronickém odevzdávání, obsahuje veškerou logiku popisovanou v textu práci. Pomocí tohoto projektu byly provádìny veškeré experimenty. Obsahuje 3 jmenné prostory: Cellular, Crypto a Testing.
 
-Sem by mohla bıt pøelita dokumentace k roèníkovému projektu.
+Jako druhı vznikl malı projekt se jménem Program. Ten vyuívá nástroje vytvoøené v prvním projektu a kompiluje se na WinForms aplikaci, kterou mohou uivatelé pouít k zašifrování svıch souborù. Tøetí je Unit-test projekt se jménem CryptographyUnitTests. Ten testuje, e šifrování funguje správnì (rozšifrování je inverzním zobrazením).
 
-\subsection{Crypto}
+Práce neobsahuje ádné závislosti na externích knihovnách. Ke spuštìní staèí mít nainstalován .NET framework verze 4.5 (èi vyšší), kterı je automatickou souèástí operaèního systému Windows 8 (èi novìjší).
+
+Pøi vıvoji byl kladen dùraz na propojování objektù skrze rozhraní. Stìejní trojice rozhraní je uvedena na obrázku \ref{diagramif}.
+
+\begin{figure}
+\centering
+\includegraphics[width=106mm, height=60mm]{diagramIF.png}
+\caption{Hlavní rozhraní v naší práci}
+\label{diagramif}
+\end{figure}
+
+\section{Cellular}
+
+\subsection{Abstraktní tøída CellularAutomaton}
+
+Vršek hierarchie všech celulárních automatù. Je tu jediná spoleèná datová poloka pro všechny druhy automatù – time. Je to diskrétní èas zaèínající na 0, kterı udává, kolik krokù vıpoètu ji probìhlo. Tento údaj oznamuje metoda GetTime. Dále je tu abstraktní metoda Step, která záleí na konkrétním typu automatu. Kromì zavolání Step bez parametru je moné zavolat Step s uvedením poètu, které tolikrát zavolá metodu Step. Poloku time musí updatovat metoda Step sama o sobì. Dále jsou tu abstraktní metody Clone a TellType.
+
+CellularAutomaton má dva pøímé následníky: abstraktní tøídy Automaton1D a Automaton2D. Protoe ještì nevíme nic o konkrétním typu automatu, není tu ádná nová poloka kromì velikosti. Konkrétnì, Automaton1D má jedinou poloku size, Automaton2D má dvojici poloek width, height. Viditelnost mají protected, tudí k nim nikdo nemùu pøistupovat zvenèí pøímo.
+
+\subsection{Koncept tøídní hierarchie}
+
+Balíèek Cellular je navret tak, aby slouil nejen ke konkrétnímu šifrovacímu algoritmu, ale aby mohl pøijít jinı èlovìk a hrát si s celulárními automaty (a u za úèelem poznávání, nebo za úèelem generování dat pro další aplikace). Proto byla pøi implementaci snaha, aby kromì vıstupu pro poèítaè existovaly i „grafické vıstupy“ pro debugging a sledování chování automatù. Pro snadnìjší práci je obèas naimplementován i takovı typ CA, kterı se speciálním pøípadem nìjakého obecnìjšího typu CA. Pøíkladem mùe bıt imlementace elementární 256 automatù, které staèí zadat jejich èíslem (podle Stephena Wolframa). Snaha o rozšíøitelnost se projevila rùznımi „mezitøídami“ mezi úplnì abstraktním automatem (kterı nic nespecifikuje) a konkrétní implementací konkrétního typu automatù.
+
+\begin{figure}
+\centering
+\includegraphics[width=150mm, height=80mm]{diagramCA.png}
+\caption{Diagram hierarchie celulárních automatù}
+\label{diagramca}
+\end{figure}
+
+Tìištìm práce jsou binární automaty, protoe jsou jejich vıstupy snadno zpracovatelné a protoe je jejich chování dostateènì komplexní a rozmanité, aby dokázaly nasimulovat jakıkoliv druh automatu. Nicménì byly ve velmi omezené míøe implementovány i jiné ne binární automaty.
+
+Abstraktní OOP pøístup pøirozenì vede k \uv{diamond inheritance problem} napøíklad mezi ètveøicí abstraktních tøíd: úplnì obecnı CA, obecnı jednorozmìrnı CA, jakıkoliv binární CA a jednorozmìrnı binární CA. Protoe C\# nepodporuje vícenásobnou dìdiènost, bylo vytvoøeno rozhraní IBinaryCA, které implementují všechny binární celulární automaty. Takovı poèin má jisté vıhody i nevıhody. Vıhodou je, e IBinaryCA je u ze sémantiky rozhraním. I kdyby byl abstraktní tøídou, nemá vlastní datové poloky ani vlastní implementaci metod, take je pouití interfacu vhodné. Nevıhodou interfacu je, e není moné vynutit, aby rozhraní IBinaryCA implementovaly pouze podtøídy CellularAutomaton, take není moné C\# \uv{nauèit} e IBinaryCA leí v hierarchii pod CellularAutomaton.
+
+\subsection{Ukládání stavu celulárního automatu}
+
+Pùvodní implementace jednorozmìrnıch binárních CA ukládala stav jako bool[~] a pro dvojrozmìrné byl datovım typem bool[,]. Ji brzy bylo jasné, e to byla dost špatná volba a na vıbìr byly dvì lepší alternativy:
+\begin{itemize}
+\item BitArray – buòka zabírá jen jeden bit, zatímco pøi pouití System.Boolean buòka zabírala celı byte. Pøístup k datùm je stejnı – pøes index. Akorát u dvojrozmìrnıch automatù je pouit typ BitArray[~], ke kterému se pøistupuje jako state[i][j] místo pùvodního state[i,j] a je potøeba zavolat vìtší mnoství konstruktorù.
+\item byte[~] obsahující jen hodnoty 0 a 1 - stejná velikost jako pøi pouití bool[~], ale není potøeba pouívat podmínky na hodnotu pro dosazení do aritmetickıch operací (zisk indexu do pole popisujícího pøechodovou funkci èi pouhé sèítání hodnot sousedních bunìk u totalistickıch pravidel).
+\end{itemize}
+
+Nakonec byla zvolena první varianta, protoe pøi pouití CA na prodluování šifrovacích klíèù mùe bıt velikost automatu v posledních krocích vıpoètu opravdu velká. A nechceme pro šifrování souboru o velikosti 1 GB spotøebovat pøes 8 GB pamìti.
+
+Pro N-ární automaty byl zvolen ponìkud nehospodárnı int[]. To mùe bıt do budoucna zmìnìno, pokud se bude intenzivnìji pracovat i s jinımi ne binárními automaty.
+
+Datové poloky ukládající stav byly navrené jako immutable. Take napøíklad není problém dávat do konstruktorù pole s iniciálním stavem (pøedávané vdy referencí) bez kopírování. Kdykoliv se provádí krok CA, je vytvoøen novı vnitøní stav a po probìhnutí vıpoètu je nahrazen ukazatel na tento stav.
+
+\subsection{Optimalizace vıpoètu elementárních automatù}
+
+Pøi bìzném vıpoètu nového stavu (ElementaryAutomaton) se musí vdy podle stavu 3 bunìk rozhodnout stav 1 nové buòky. To je mírnì neefektivní. Kdykoliv se vyskytne ve stavu elementárního automatu stejnı blok, novı stav tìch bunìk v dalším kroku, kromì buòky úplnì vlevo a buòky úplnì vpravo, je vdy stejnı. Proto by se mohl uspoøit èas vıpoètu (hlavnì sníením poètu podmínìnıch skokù pøi vykonávání), kdyby se celé bloky zobrazovaly na celé bloky podle nìjaké pøedgenerované lookup table. Tato optimalizace byla naimplementována v tøídì ElementaryFastAutomaton, kde bylo zvoleno mapování vdy 10 bunìk na novıch 8 bunìk. Starší implementace ElementaryFastAutomaton provedla stejnı vıpoèet za 62\% èasu, co potøeboval  ElementaryAutomaton. Novìjší a lepší implementace ElementaryFastAutomaton se dostala na 48\%. Pro zajímavost: vyvolání úplnì stejného vıpoètu pomocí obecnìjší tøídy BinaryRangeAutomaton trvalo 110\% èasu co obyèejnı ElementaryAutomaton. Take celkovı pomìr v efektivitì mezi tou nejspecializovanìjší a tou nejménì specifickou tøídou (která je ale stále ještì binárním CA) pro simulace základních 256 CA je asi 2,3x.
+
+\section{Crypto}
 
 Tento namespace jednak obsahuje natahovaèe klíèù (popsané v následující kapitole) a potom testy (popsané v pøedchozí kapitole). Moná zmínit Factory. Natahovaèe klíèù implementují rozhraní IKeyExtender. Tøída EncrypterStreamCA umí pouít libovolnou implementaci IKeyExtender k šifrování pole bitù. Nad tou je ještì vybudovaná abstrakce v podobì rozhraní IEncrypter, které obecnì poskytuje pøístup k libovolnému symetrického kryptografickému algoritmu. Rozhraní IEncrypter ještì implementuje tøída EncrypterReversibleCA, která realizuje šifrování alternativním zpùsobem (viz poslední kapitola). Nad implementacemi rozhraní IEncrypter je ještì vybudována spoleèná obalová vrstva v podobì tøídy EncrypterWrapper. Ta umoòuje šifrovat pøímo Streamy dat a zároveò umoòuje kromì šifrovacího klíèe pouít kombinaci uivatelského hesla a náhodného saltu, co bude pouito v praktické aplikaci. Tøída Export poskytuje pøístup k vìcem, co mají bıt pouitelné i z jiné assembly a provádí veškerou instanciaci interních tøíd, které ji není moné ovládat pøímo z vnìjšku.
 
-\subsection{Testing}
+\section{Testing}
 
 Nejedná se o ádné Unit testy, ale o pomìrnì chaotickou hromadu metod, které umoòují zkoušet rùzné èásti programu. Lze si hrát s vizualizací nìjakıch automatù.
 

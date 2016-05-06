@@ -22,23 +22,26 @@
 \contentsline {subsection}{\numberline {2.7.3}Pou\v zit\IeC {\'\i } test\r u}{19}{subsection.2.7.3}
 \contentsline {subsection}{\numberline {2.7.4}Grafick\'e zn\'azorn\v en\IeC {\'\i }}{19}{subsection.2.7.4}
 \contentsline {chapter}{\numberline {3}N\'astin architektury}{20}{chapter.3}
-\contentsline {section}{\numberline {3.1}MartinDvorak}{20}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Cellular}{20}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Crypto}{20}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Testing}{20}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Program}{21}{section.3.2}
-\contentsline {section}{\numberline {3.3}CryptographyUnitTests}{21}{section.3.3}
-\contentsline {chapter}{\numberline {4}Zp\r usoby protahov\'an\IeC {\'\i } kl\IeC {\'\i }\v c\r u pomoc\IeC {\'\i } celul\'arn\IeC {\'\i }ch automat\r u}{22}{chapter.4}
-\contentsline {section}{\numberline {4.1}KeyExtenderQuadratic}{22}{section.4.1}
-\contentsline {section}{\numberline {4.2}KeyExtenderSimpleLinear}{24}{section.4.2}
-\contentsline {section}{\numberline {4.3}KeyExtenderInterlaced}{28}{section.4.3}
-\contentsline {section}{\numberline {4.4}KeyExtenderUncertain}{37}{section.4.4}
-\contentsline {section}{\numberline {4.5}KeyExtenderGenetic}{41}{section.4.5}
-\contentsline {chapter}{\numberline {5}Dal\v s\IeC {\'\i } mo\v znosti \v sifrov\'an\IeC {\'\i }}{43}{chapter.5}
-\contentsline {section}{\numberline {5.1}\v Re\v sen\IeC {\'\i }}{43}{section.5.1}
-\contentsline {chapter}{Z\'av\v er}{46}{chapter*.3}
-\contentsline {chapter}{Seznam pou\v zit\'e literatury}{47}{chapter*.4}
-\contentsline {chapter}{Seznam obr\'azk\r {u}}{48}{chapter*.5}
-\contentsline {chapter}{Seznam tabulek}{50}{chapter*.6}
-\contentsline {chapter}{Seznam pou\v zit\'ych zkratek}{51}{chapter*.7}
-\contentsline {chapter}{P\v r\IeC {\'\i }lohy}{52}{chapter*.8}
+\contentsline {section}{\numberline {3.1}Cellular}{20}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Abstraktn\IeC {\'\i } t\v r\IeC {\'\i }da CellularAutomaton}{20}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Koncept t\v r\IeC {\'\i }dn\IeC {\'\i } hierarchie}{21}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Ukl\'ad\'an\IeC {\'\i } stavu celul\'arn\IeC {\'\i }ho automatu}{22}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Optimalizace v\'ypo\v ctu element\'arn\IeC {\'\i }ch automat\r u}{22}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Crypto}{23}{section.3.2}
+\contentsline {section}{\numberline {3.3}Testing}{23}{section.3.3}
+\contentsline {section}{\numberline {3.4}Program}{23}{section.3.4}
+\contentsline {section}{\numberline {3.5}CryptographyUnitTests}{23}{section.3.5}
+\contentsline {chapter}{\numberline {4}Protahov\'an\IeC {\'\i } kl\IeC {\'\i }\v c\r u pomoc\IeC {\'\i } celul\'arn\IeC {\'\i }ch automat\r u}{24}{chapter.4}
+\contentsline {section}{\numberline {4.1}KeyExtenderQuadratic}{26}{section.4.1}
+\contentsline {section}{\numberline {4.2}KeyExtenderSimpleLinear}{27}{section.4.2}
+\contentsline {section}{\numberline {4.3}KeyExtenderInterlaced}{31}{section.4.3}
+\contentsline {section}{\numberline {4.4}KeyExtenderUncertain}{36}{section.4.4}
+\contentsline {section}{\numberline {4.5}KeyExtenderGenetic}{40}{section.4.5}
+\contentsline {chapter}{\numberline {5}Dal\v s\IeC {\'\i } mo\v znosti \v sifrov\'an\IeC {\'\i }}{46}{chapter.5}
+\contentsline {section}{\numberline {5.1}\v Re\v sen\IeC {\'\i }}{46}{section.5.1}
+\contentsline {chapter}{Z\'av\v er}{49}{chapter*.3}
+\contentsline {chapter}{Seznam pou\v zit\'e literatury}{50}{chapter*.4}
+\contentsline {chapter}{Seznam obr\'azk\r {u}}{51}{chapter*.5}
+\contentsline {chapter}{Seznam tabulek}{53}{chapter*.6}
+\contentsline {chapter}{Seznam pou\v zit\'ych zkratek}{54}{chapter*.7}
+\contentsline {chapter}{P\v r\IeC {\'\i }lohy}{55}{chapter*.8}

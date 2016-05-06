@@ -1,15 +1,29 @@
 
 %%% Zpùsoby protahování klíèù
 
-\chapter{Zpùsoby protahování klíèù pomocí celulárních automatù}
+\chapter{Protahování klíèù pomocí celulárních automatù}
 
 V rámci práce na roèníkovém projektu byla vytvoøena øada rùznıch celulárních automatù (potomci abstraktní tøídy CellularAutomaton), viz vıše. Vìtšina z nich je binárních (tj. kadá buòka mùe nabıvat jen dvou rùznıch stavù) a ty zároveò implementují rozhraní IBinaryCA, které vynucuje vìtšinu pro nás uiteènıch metod.
 
-V rámci bakaláøské práce byly vytvoøeny algoritmy na protahování klíèù, které binární celulární automaty vyuívají. Všechny tyto algoritmy implementují rozhraní IKeyExtender. Toto rozhraní obsahuje metodu DoubleKey pro vytvoøení klíèe s pøesnì dvojnásobnou délkou a metodu ExtendKey pro nataení klíèe na libovolnou zadanou délku. Vstupy i vıstupy musí bıt typu BitArray, co je pole logickıch hodnot, které však v 1 bytu ukládá 8 hodnot (narozdíl od bool[ ]).
+V rámci bakaláøské práce byly vytvoøeny algoritmy na protahování klíèù, které binární celulární automaty vyuívají. Všechny tyto algoritmy implementují rozhraní IKeyExtender. Toto rozhraní obsahuje metodu DoubleKey pro vytvoøení klíèe s pøesnì dvojnásobnou délkou a metodu ExtendKey pro nataení klíèe na libovolnou zadanou délku. Vstupy i vıstupy musí bıt typu BitArray, co je pole logickıch hodnot, které však v 1 bytu ukládá 8 hodnot (narozdíl od bool[~]).
 
 Pøi vytváøení instancí tøíd implementující IKeyExtender se skrze konstruktor vkládá dovnitø libovolná implementace IBinaryCA. To umoòuje zvolit si zvláš druh automatu, kterı urèuje fungování pøechodové funkce, a zvláš protahovací algoritmus, kterı urèuje zpùsob ètení hodnot z automatu a jejich vyuití. Jedná se tedy o techniku \uv{Inversion of control}. To se hodí, abychom mohli snadno zkoušet všechny moné zpùsoby protahování klíèù. Pokud je dovnitø algoritmu vloen 2D automat, pak se stejnì indexuje jednorozmìrnì (pøi ètení hodnot ze stavu je opravdu jedno, jak funguje automat).
 
-Nìkteré z algoritmù pøímo generují dlouhı klíè zadané délky -- ty dìdí od abstraktní tøídy KeyExtenderAbstractN. Tato tøída pøekládá volání DoubleKey na volání ExtendKey a potomci této tøídy implementují pouze ExtendKey. Jiné algoritmy vdy prodlouí klíè na dvojnásobek a obecné nataení realizují iterací tohoto postupu -- ty jsou odvozené od abstraktní tøídy KeyExtenderAbstractD. Ta realizuje metodu ExtendKey pomocí logaritmického poètu volání DoubleKey a oøezává vısledek na správnou velikost. Potomci této tøídy implementují ji pouze DoubleKey.
+\begin{figure}
+\centering
+\includegraphics[width=107mm, height=39mm]{diagramKEAN.png}
+\caption{KeyExtenderAbstractN}
+\label{kean}
+\end{figure}
+
+Nìkteré z algoritmù pøímo generují dlouhı klíè zadané délky -- ty dìdí od abstraktní tøídy KeyExtenderAbstractN (viz \ref{kean}). Tato tøída pøekládá volání DoubleKey na volání ExtendKey a potomci této tøídy implementují pouze ExtendKey. Jiné algoritmy vdy prodlouí klíè na dvojnásobek a obecné nataení realizují iterací tohoto postupu -- ty jsou odvozené od abstraktní tøídy KeyExtenderAbstractD (viz \ref{kead}). Ta realizuje metodu ExtendKey pomocí logaritmického poètu volání DoubleKey a oøezává vısledek na správnou velikost. Potomci této tøídy implementují ji pouze DoubleKey.
+
+\begin{figure}
+\centering
+\includegraphics[width=144mm, height=39mm]{diagramKEAD.png}
+\caption{KeyExtenderAbstractD}
+\label{kead}
+\end{figure}
 
 Kromì opravdovıch algoritmù byly vytvoøeny ještì dva falešné algoritmy pro úèely demonstrace, nakolik jsou kritické naše testovací metody. KeyExtenderCopy jen kopíruje kratší klíè dokola. Jeho vısledek znázoròuje obrázek \ref{copy}. KeyExtenderCheating vylosuje pseudonáhodnout posloupnost bez ohledu na vstup. Jak hezky vypadá vısledek podvodného generátoru, si mùete prohlédnout na obrázku \ref{cheat}.
 

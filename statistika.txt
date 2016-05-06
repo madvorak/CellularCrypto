@@ -1,0 +1,19 @@
+Skladba bakaláøské práce (implementaèní èást):
+1 solution
+3 projects
+6 namespaces
+53 classes + 4 nested classes
+3 interfaces + 1 nested interface
+
+
+Cellular : 1746
+Crypto: 1738
+Testing: 581
+CryptographyUnitTests: 230
+CryptoForm.cs: 61
+Demoform + Adapter: 239
+
+Celkem backend: 3484
+Celkem frontend: 300
+Celkem testy: 811
+Celkem øádkù: 4595
