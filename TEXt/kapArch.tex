@@ -1,23 +1,27 @@
 \chapter{Nástin architektury}
 
-Tato kapitola je urèitým doplnìk k vývojové dokumentaci, která byla vytvoøena programem Doxywizard z dokumentaèních komentáøù. Nesnaží se nahradit ètení této dokumentace ani pøeètení ostatních kapitol této práce, ve kterých jsou podrobnìji vysvìtleny ty klíèové èásti programu.
+Tato kapitola je urèitým doplòkem k vývojové dokumentaci, která byla vytvoøena programem Doxywizard z dokumentaèních komentáøù. Nesnaží se nahradit ètení této dokumentace ani pøeètení ostatních kapitol této práce, ve kterých jsou podrobnìji vysvìtleny ty klíèové èásti programu.
 
-V rámci jedné Solution ve Visual Studiu byly vytvoøeny dva projekty. Projekt se jménem MartinDvorak, který mìl pùvodnì být jedinou èástí aplikace a mìl jasnì identifikovat tuto práci pøi jejím elektronickém odevzdávání, obsahuje veškerou logiku popisovanou v textu práci. Pomocí tohoto projektu byly provádìny veškeré experimenty. Jako druhý vznikl malý projekt se jménem Program. Ten využívá nástroje vytvoøené v prvním projektu a kompiluje se na WinForms aplikaci, kterou mohou uživatelé použít k zašifrování svých souborù.
+V rámci jedné Solution ve Visual Studiu byly vytvoøeny tøi projekty. Projekt se jménem MartinDvorak, který mìl pùvodnì být jedinou èástí aplikace a mìl jasnì identifikovat tuto práci pøi jejím elektronickém odevzdávání, obsahuje veškerou logiku popisovanou v textu práci. Pomocí tohoto projektu byly provádìny veškeré experimenty. Jako druhý vznikl malý projekt se jménem Program. Ten využívá nástroje vytvoøené v prvním projektu a kompiluje se na WinForms aplikaci, kterou mohou uživatelé použít k zašifrování svých souborù. Tøetí je Unit-test projekt se jménem CryptographyUnitTests. Ten testuje, že šifrování funguje správnì (rozšifrování je inverzním zobrazením).
 
 \section{MartinDvorak}
 
 \subsection{Cellular}
 
-Sem bude pøelita dokumentace k roèníkovému projektu.
+Sem by mohla být pøelita dokumentace k roèníkovému projektu.
 
 \subsection{Crypto}
 
-Tento namespace jednak obsahuje natahovaèe klíèù (popsané v následující kapitole) a potom testy (popsané v pøedchozí kapitole). Asi  zde vysvìtlit Factory.
+Tento namespace jednak obsahuje natahovaèe klíèù (popsané v následující kapitole) a potom testy (popsané v pøedchozí kapitole). Možná zmínit Factory. Natahovaèe klíèù implementují rozhraní IKeyExtender. Tøída EncrypterStreamCA umí použít libovolnou implementaci IKeyExtender k šifrování pole bitù. Nad tou je ještì vybudovaná abstrakce v podobì rozhraní IEncrypter, které obecnì poskytuje pøístup k libovolnému symetrického kryptografickému algoritmu. Rozhraní IEncrypter ještì implementuje tøída EncrypterReversibleCA, která realizuje šifrování alternativním zpùsobem (viz poslední kapitola). Nad implementacemi rozhraní IEncrypter je ještì vybudována spoleèná obalová vrstva v podobì tøídy EncrypterWrapper. Ta umožòuje šifrovat pøímo Streamy dat a zároveò umožòuje kromì šifrovacího klíèe použít kombinaci uživatelského hesla a náhodného saltu, což bude použito v praktické aplikaci. Tøída Export poskytuje pøístup k vìcem, co mají být použitelné i z jiné assembly a provádí veškerou instanciaci interních tøíd, které již není možné ovládat pøímo z vnìjšku.
 
 \subsection{Testing}
 
-Nejedná se o žádné Unit testy, ale o pomìrnì chaotickou hromadu metod, které umožòují zkoušet rùzné èásti programu.
+Nejedná se o žádné Unit testy, ale o pomìrnì chaotickou hromadu metod, které umožòují zkoušet rùzné èásti programu. Lze si hrát s vizualizací nìjakých automatù.
 
 \section{Program}
 
-Okenní aplikace, umožòuje šifrovat a dešifrovat, volba vstupního a výstupního souboru, bere si IKeyExtender stanovený v projektu MartinDvorak, hešuje heslo, používá salt (a o ten je zvìtšen šifrovací soubor). Heslo a salt spoleènì urèují poèáteèní stav celulárního automatu. Vygenerovaným dlouhým klíèem se pak pøeXORuje celý soubor. Jednoduché jako facka (jenom jedna tøída).
+Okenní aplikace, umožòuje šifrovat a dešifrovat. V podstatì realizuje jen volbu vstupního a výstupního souboru. O zbytek se stará projekt MartinDvorak.
+
+\section{CryptographyUnitTests}
+
+Testuje šifrovací algoritmy skrze veøejnou tøídu Crypto poskytnutou ve dvou verzích tøídou Export.
