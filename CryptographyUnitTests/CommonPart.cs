@@ -11,9 +11,9 @@ namespace CryptographyUnitTests
     /// </summary>
     class CommonPart
     {
-        private EncrypterWrapper cryptoProvider;
+        private EncryptionProvider cryptoProvider;
 
-        public CommonPart(EncrypterWrapper encryptionAlgorithm)
+        public CommonPart(EncryptionProvider encryptionAlgorithm)
         {
             cryptoProvider = encryptionAlgorithm;
         }

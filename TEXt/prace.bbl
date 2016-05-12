@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,10 +11,18 @@
 \newblock URL
   \url{http://mathoverflow.net/questions/128903/expected-edit-distance?rq=1}.
 
+\bibitem[Knuth(1981)]{Knuth}
+{\sc Knuth, D.~E.} (1981).
+\newblock \emph{The Art of Computer Programming, Volume 2: Seminumerical
+  Algorithms}.
+\newblock 2nd edition. Addison-Wesley Pub (Sd), 75 Arlington Street, Suite 300,
+  Boston, Massachusetts.
+\newblock ISBN 978-0201038224.
+
 \bibitem[Schiff(2008)]{Schiff08}
 {\sc Schiff, J.~L.} (2008).
 \newblock \emph{Cellular Automata}.
-\newblock First edition.­. John Wiley and Sons, Inc., Hoboken, New Jersey,
+\newblock First edition. John Wiley and Sons, Inc., Hoboken, New Jersey,
   Corporate Headquarters, 111 River Street, Hoboken, NJ 07030-5774.
 \newblock ISBN 978-0-470-16879-0.
 
@@ -31,8 +39,8 @@
 \bibitem[Wolfram(2002)]{W02}
 {\sc Wolfram, S.} (2002).
 \newblock \emph{A New Kind of Science}.
-\newblock First edition. Third printing.­. Wolfram Media, Inc., 100 Trade
-  Center Drive, Champaign, IL 61820, USA.
+\newblock First edition. Third printing. Wolfram Media, Inc., 100 Trade Center
+  Drive, Champaign, IL 61820, USA.
 \newblock ISBN I-57955-008-8.
 
 \end{thebibliography}

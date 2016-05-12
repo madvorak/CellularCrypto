@@ -10,7 +10,7 @@ namespace Program
     /// </summary>
     public partial class CryptoForm : Form
     {
-        private EncrypterWrapper crypto;
+        private EncryptionProvider crypto;
 
         public CryptoForm()
         {

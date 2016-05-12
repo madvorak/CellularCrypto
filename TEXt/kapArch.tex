@@ -8,11 +8,11 @@ Celý zdrojový kód se nachází v repozitáøi na adrese:
 
 V rámci jedné Solution ve Visual Studiu byly vytvoøeny tøi projekty. Projekt se jménem MartinDvorak, který mìl pùvodnì být jedinou èástí aplikace a mìl jasnì identifikovat tuto práci pøi jejím elektronickém odevzdávání, obsahuje veškerou logiku popisovanou v textu práci. Pomocí tohoto projektu byly provádìny veškeré experimenty. Obsahuje 3 jmenné prostory: Cellular, Crypto a Testing.
 
-Jako druhý vznikl malý projekt se jménem Program. Ten využívá nástroje vytvoøené v prvním projektu a kompiluje se na WinForms aplikaci, kterou mohou uživatelé použít k zašifrování svých souborù. Tøetí je Unit-test projekt se jménem CryptographyUnitTests. Ten testuje, že šifrování funguje správnì (rozšifrování je inverzním zobrazením).
+Jako druhý vznikl malý projekt se jménem Program. Ten využívá nástroje vytvoøené v prvním projektu a kompiluje se na WinForms aplikaci, kterou mohou uživatelé použít k zašifrování svých souborù. Tøetí je testovací projekt se jménem CryptographyUnitTests. Ten testuje, že šifrování funguje správnì (rozšifrování je inverzním zobrazením).
 
-Práce neobsahuje žádné závislosti na externích knihovnách. Ke spuštìní staèí mít nainstalován .NET framework verze 4.5 (èi vyšší), který je automatickou souèástí operaèního systému Windows 8 (èi novìjší).
+Práce neobsahuje žádné závislosti na externích knihovnách. Ke spuštìní staèí mít nainstalován .NET framework verze 4.5 (èi vyšší), který je automatickou souèástí operaèního systému Windows 8 (èi novìjší), ale mùže se nacházet i na starších verzích (já ho mám na Windows 7).
 
-Pøi vývoji byl kladen dùraz na propojování objektù skrze rozhraní. Stìžejní trojice rozhraní je uvedena na obrázku \ref{diagramif}.
+Pøi vývoji byl kladen dùraz na propojování objektù skrze rozhraní. Stìžejní trojice rozhraní je uvedena na obrázku \ref{diagramif}. Kromì pøehlednosti a znovupoužitelnosti kódu (která byla potøeba pro provádìní experimentù, jež ještì nebyly známy v prùbìhu implementace) byla vìnována také pozornost vysokému výkonu.
 
 \begin{figure}
 \centering
@@ -27,7 +27,7 @@ Pøi vývoji byl kladen dùraz na propojování objektù skrze rozhraní. Stìžejní troj
 
 Vršek hierarchie všech celulárních automatù. Je tu jediná spoleèná datová položka pro všechny druhy automatù – time. Je to diskrétní èas zaèínající na 0, který udává, kolik krokù výpoètu již probìhlo. Tento údaj oznamuje metoda GetTime. Dále je tu abstraktní metoda Step, která záleží na konkrétním typu automatu. Kromì zavolání Step bez parametru je možné zavolat Step s uvedením poètu, které tolikrát zavolá metodu Step. Položku time musí updatovat metoda Step sama o sobì. Dále jsou tu abstraktní metody Clone a TellType.
 
-CellularAutomaton má dva pøímé následníky: abstraktní tøídy Automaton1D a Automaton2D. Protože ještì nevíme nic o konkrétním typu automatu, není tu žádná nová položka kromì velikosti. Konkrétnì, Automaton1D má jedinou položku size, Automaton2D má dvojici položek width, height. Viditelnost mají protected, tudíž k nim nikdo nemùžu pøistupovat zvenèí pøímo.
+CellularAutomaton má dva pøímé následníky: abstraktní tøídy Automaton1D a Automaton2D (viz obrázek \ref{diagramca}). Protože ještì nevíme nic o konkrétním typu automatu, není tu žádná nová položka kromì velikosti. Konkrétnì, Automaton1D má jedinou položku size, Automaton2D má dvojici položek width, height. Viditelnost mají protected, tudíž k nim nikdo nemùžu pøistupovat zvenèí pøímo.
 
 \subsection{Koncept tøídní hierarchie}
 
@@ -64,7 +64,7 @@ Pøi bìzném výpoètu nového stavu (ElementaryAutomaton) se musí vždy podle stavu 3
 
 \section{Crypto}
 
-Tento namespace jednak obsahuje natahovaèe klíèù (popsané v následující kapitole) a potom testy (popsané v pøedchozí kapitole). Možná zmínit Factory. Natahovaèe klíèù implementují rozhraní IKeyExtender. Tøída EncrypterStreamCA umí použít libovolnou implementaci IKeyExtender k šifrování pole bitù. Nad tou je ještì vybudovaná abstrakce v podobì rozhraní IEncrypter, které obecnì poskytuje pøístup k libovolnému symetrického kryptografickému algoritmu. Rozhraní IEncrypter ještì implementuje tøída EncrypterReversibleCA, která realizuje šifrování alternativním zpùsobem (viz poslední kapitola). Nad implementacemi rozhraní IEncrypter je ještì vybudována spoleèná obalová vrstva v podobì tøídy EncrypterWrapper. Ta umožòuje šifrovat pøímo Streamy dat a zároveò umožòuje kromì šifrovacího klíèe použít kombinaci uživatelského hesla a náhodného saltu, což bude použito v praktické aplikaci. Tøída Export poskytuje pøístup k vìcem, co mají být použitelné i z jiné assembly a provádí veškerou instanciaci interních tøíd, které již není možné ovládat pøímo z vnìjšku.
+Tento namespace jednak obsahuje natahovaèe klíèù (popsané v následující kapitole) a potom testy (popsané v pøedchozí kapitole). Možná zmínit Factory. Natahovaèe klíèù implementují rozhraní IKeyExtender. Tøída EncrypterStreamCA umí použít libovolnou implementaci IKeyExtender k šifrování pole bitù. Nad tou je ještì vybudovaná abstrakce v podobì rozhraní IEncrypter, které obecnì poskytuje pøístup k libovolnému symetrického kryptografickému algoritmu. Rozhraní IEncrypter ještì implementuje tøída EncrypterReversibleCA, která realizuje šifrování alternativním zpùsobem (viz poslední kapitola). Nad implementacemi rozhraní IEncrypter je ještì vybudována spoleèná obalová vrstva v podobì tøídy EncryptionProvider. Ta umožòuje šifrovat pøímo Streamy dat a zároveò umožòuje kromì šifrovacího klíèe použít kombinaci uživatelského hesla a náhodného saltu, což bude použito v praktické aplikaci. Tøída Export poskytuje pøístup k vìcem, co mají být použitelné i z jiné assembly a provádí veškerou instanciaci interních tøíd, které již není možné ovládat pøímo z vnìjšku.
 
 \section{Testing}
 
@@ -76,4 +76,4 @@ Okenní aplikace, umožòuje šifrovat a dešifrovat. V podstatì realizuje jen volbu 
 
 \section{CryptographyUnitTests}
 
-Testuje šifrovací algoritmy skrze veøejnou tøídu Crypto poskytnutou ve dvou verzích tøídou Export.
+Testuje šifrovací algoritmy skrze veøejnou tøídu EncryptionProvider poskytnutou ve dvou verzích tøídou Export.

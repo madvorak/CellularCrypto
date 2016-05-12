@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  12 MAY 2016 12:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  12 MAY 2016 21:01
 entering extended mode
 **C:/Martin/MFF/_baka/TEXt/prace.tex
 (C:/Martin/MFF/_baka/TEXt/prace.tex
@@ -936,25 +936,25 @@ Kapitola 2.
 
 
 
-] [11] <ECBencryption.png, id=365, 752.8125pt x 251.43938pt>
+] [11] <ECBencryption.png, id=368, 752.8125pt x 251.43938pt>
 File: ECBencryption.png Graphic file (type png)
 
 <use ECBencryption.png>
 Package pdftex.def Info: ECBencryption.png used on input line 60.
 (pdftex.def)             Requested size: 426.79869pt x 142.263pt.
- <ECBdecryption.png, id=366, 752.0597pt x 254.45062pt>
+ <ECBdecryption.png, id=369, 752.0597pt x 254.45062pt>
 File: ECBdecryption.png Graphic file (type png)
 
 <use ECBdecryption.png>
 Package pdftex.def Info: ECBdecryption.png used on input line 61.
 (pdftex.def)             Requested size: 426.7965pt x 142.27007pt.
- <CBCencryption.png, id=369, 752.0597pt x 262.73157pt>
+ <CBCencryption.png, id=372, 752.0597pt x 262.73157pt>
 File: CBCencryption.png Graphic file (type png)
 
 <use CBCencryption.png>
 Package pdftex.def Info: CBCencryption.png used on input line 65.
 (pdftex.def)             Requested size: 426.7965pt x 142.2698pt.
- <CBCdecryption.png, id=370, 752.8125pt x 258.21469pt>
+ <CBCdecryption.png, id=373, 752.8125pt x 258.21469pt>
 File: CBCdecryption.png Graphic file (type png)
 
 <use CBCdecryption.png>
@@ -962,26 +962,26 @@ Package pdftex.def Info: CBCdecryption.png used on input line 66.
 (pdftex.def)             Requested size: 426.79869pt x 142.26672pt.
  [12 <./ECBencryption.png (PNG copy)> <./ECBdecryption.png (PNG copy)>] [13 <./
 CBCencryption.png (PNG copy)> <./CBCdecryption.png (PNG copy)>] <PCBCencryption
-.png, id=386, 751.30687pt x 258.9675pt>
+.png, id=389, 751.30687pt x 258.9675pt>
 File: PCBCencryption.png Graphic file (type png)
 
 <use PCBCencryption.png>
 Package pdftex.def Info: PCBCencryption.png used on input line 70.
 (pdftex.def)             Requested size: 426.79343pt x 142.27054pt.
 
-<PCBCdecryption.png, id=387, 752.0597pt x 255.20343pt>
+<PCBCdecryption.png, id=390, 752.0597pt x 255.20343pt>
 File: PCBCdecryption.png Graphic file (type png)
 
 <use PCBCdecryption.png>
 Package pdftex.def Info: PCBCdecryption.png used on input line 71.
 (pdftex.def)             Requested size: 426.7965pt x 142.27042pt.
- <OFBencryption.png, id=390, 750.55406pt x 259.7203pt>
+ <OFBencryption.png, id=393, 750.55406pt x 259.7203pt>
 File: OFBencryption.png Graphic file (type png)
 
 <use OFBencryption.png>
 Package pdftex.def Info: OFBencryption.png used on input line 75.
 (pdftex.def)             Requested size: 426.80098pt x 142.26404pt.
- <OFBdecryption.png, id=391, 752.8125pt x 259.7203pt>
+ <OFBdecryption.png, id=394, 752.8125pt x 259.7203pt>
 File: OFBdecryption.png Graphic file (type png)
 
 <use OFBdecryption.png>
@@ -989,13 +989,13 @@ Package pdftex.def Info: OFBdecryption.png used on input line 76.
 (pdftex.def)             Requested size: 426.79869pt x 142.26404pt.
  [14 <./PCBCencryption.png (PNG copy)> <./PCBCdecryption.png (PNG copy)>] [15 <
 ./OFBencryption.png (PNG copy)> <./OFBdecryption.png (PNG copy)>] <CTRencryptio
-n.png, id=409, 752.0597pt x 254.45062pt>
+n.png, id=412, 752.0597pt x 254.45062pt>
 File: CTRencryption.png Graphic file (type png)
 
 <use CTRencryption.png>
 Package pdftex.def Info: CTRencryption.png used on input line 84.
 (pdftex.def)             Requested size: 426.7965pt x 142.27007pt.
- <CTRdecryption.png, id=410, 751.30687pt x 255.95625pt>
+ <CTRdecryption.png, id=413, 751.30687pt x 255.95625pt>
 File: CTRdecryption.png Graphic file (type png)
 
 <use CTRdecryption.png>
@@ -1013,7 +1013,7 @@ Overfull \hbox (35.70091pt too wide) in paragraph at lines 7--8
 20Cryptography#[]a=contents |
  []
 
-<diagramIF.png, id=440, 583.17876pt x 300.12125pt>
+<diagramIF.png, id=444, 583.17876pt x 300.12125pt>
 File: diagramIF.png Graphic file (type png)
  <use diagramIF.png>
 Package pdftex.def Info: diagramIF.png used on input line 19.
@@ -1022,62 +1022,63 @@ Package pdftex.def Info: diagramIF.png used on input line 19.
 
 
 
- <./diagramIF.png (PNG copy)>] <diagramCA.png, id=446, 1125.20375pt x 640.3925p
+ <./diagramIF.png (PNG copy)>] <diagramCA.png, id=451, 1125.20375pt x 640.3925p
 t>
 File: diagramCA.png Graphic file (type png)
 
 <use diagramCA.png>
 Package pdftex.def Info: diagramCA.png used on input line 38.
 (pdftex.def)             Requested size: 426.79208pt x 227.61942pt.
- [21 <./diagramCA.png (PNG copy)>] [22]) [23]
+ [21] [22 <./diagramCA.png (PNG copy)>]) [23] [24]
 \openout2 = `kap03.aux'.
 
- (kap03.tex
+
+(kap03.tex
 Kapitola 4.
-<diagramKEAN.png, id=461, 716.6775pt x 258.9675pt>
+<diagramKEAN.png, id=470, 716.6775pt x 258.9675pt>
 File: diagramKEAN.png Graphic file (type png)
  <use diagramKEAN.png>
 Package pdftex.def Info: diagramKEAN.png used on input line 14.
 (pdftex.def)             Requested size: 304.44722pt x 110.96658pt.
 
-<diagramKEAD.png, id=464, 966.61125pt x 262.9825pt>
+<diagramKEAD.png, id=473, 966.61125pt x 262.9825pt>
 File: diagramKEAD.png Graphic file (type png)
  <use diagramKEAD.png>
 Package pdftex.def Info: diagramKEAD.png used on input line 23.
 (pdftex.def)             Requested size: 409.72028pt x 110.96552pt.
 
-[24
+[25
 
 
 
- <./diagramKEAN.png (PNG copy)>] [25 <./diagramKEAD.png (PNG copy)>]
-[26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40]
-[41] [42] [43] [44]) [45]
+ <./diagramKEAN.png (PNG copy)>] [26 <./diagramKEAD.png (PNG copy)>]
+[27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41]
+[42] [43] [44] [45]) [46]
 \openout2 = `kapDalsi.aux'.
 
  (kapDalsi.tex
 Kapitola 5.
-<r60_tam.png, id=612, 322.20375pt x 299.1175pt>
+<r60_tam.png, id=621, 322.20375pt x 299.1175pt>
 File: r60_tam.png Graphic file (type png)
  <use r60_tam.png>
 Package pdftex.def Info: r60_tam.png used on input line 17.
 (pdftex.def)             Requested size: 213.40242pt x 199.17079pt.
 
-<r60_zpet.png, id=615, 322.20375pt x 685.56125pt>
+<r60_zpet.png, id=624, 322.20375pt x 685.56125pt>
 File: r60_zpet.png Graphic file (type png)
  <use r60_zpet.png>
 Package pdftex.def Info: r60_zpet.png used on input line 26.
 (pdftex.def)             Requested size: 213.40242pt x 455.2544pt.
-) [46
+) [47
 
 
 
 ]
-[47 <./r60_tam.png (PNG copy)>] [48 <./r60_zpet.png (PNG copy)>]
+[48 <./r60_tam.png (PNG copy)>] [49 <./r60_zpet.png (PNG copy)>]
 \openout2 = `zaver.aux'.
 
  (zaver.tex)
-[49
+[50
 
 
 
@@ -1091,26 +1092,26 @@ LaTeX Font Info:    Try loading font information for IL2+cmtt on input line 12.
 (C:\Users\Martin\AppData\Roaming\MiKTeX\2.9\tex\cslatex\base\il2cmtt.fd
 File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
 )))
-[50
+[51
 
 
 
-] (prace.lof [51
+] (prace.lof [52
 
 
 ])
 \tf@lof=\write7
 \openout7 = `prace.lof'.
 
- [52] (prace.lot)
+ [53] (prace.lot)
 \tf@lot=\write8
 \openout8 = `prace.lot'.
 
- [53
-
-] [54
+ [54
 
 ] [55
+
+] [56
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
@@ -1125,38 +1126,39 @@ Package rerunfilecheck Info: File `prace.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
  ) 
 Here is how much of TeX's memory you used:
- 22739 strings out of 493634
- 401916 string characters out of 3141311
- 523429 words of memory out of 3000000
- 25469 multiletter control sequences out of 15000+200000
+ 22744 strings out of 493634
+ 401972 string characters out of 3141311
+ 523453 words of memory out of 3000000
+ 25472 multiletter control sequences out of 15000+200000
  27501 words of font info for 84 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,8n,93p,2263b,916s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Martin/AppData/Roamin
-g/MiKTeX/2.9/fonts/type1/public/cs/csbx12.pfb><C:/Users/Martin/AppData/Roaming/
-MiKTeX/2.9/fonts/type1/public/cs/cscsc10.pfb><C:/Users/Martin/AppData/Roaming/M
-iKTeX/2.9/fonts/type1/public/cs/csr10.pfb><C:/Users/Martin/AppData/Roaming/MiKT
-eX/2.9/fonts/type1/public/cs/csr12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/
-2.9/fonts/type1/public/cs/csr17.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9
-/fonts/type1/public/cs/csr7.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fon
-ts/type1/public/cs/csr8.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fonts/t
-ype1/public/cs/cssl12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fonts/typ
-e1/public/cs/csti12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fonts/type1
-/public/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
-fonts/symbols/msbm10.pfb>
-Output written on prace.pdf (59 pages, 980028 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Martin/AppData/Roaming/
+MiKTeX/2.9/fonts/type1/public/cs/csbx12.pfb><C:/Users/Martin/AppData/Roaming/Mi
+KTeX/2.9/fonts/type1/public/cs/cscsc10.pfb><C:/Users/Martin/AppData/Roaming/MiK
+TeX/2.9/fonts/type1/public/cs/csr10.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX
+/2.9/fonts/type1/public/cs/csr12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.
+9/fonts/type1/public/cs/csr17.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/f
+onts/type1/public/cs/csr7.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fonts
+/type1/public/cs/csr8.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fonts/typ
+e1/public/cs/cssl12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fonts/type1
+/public/cs/csti12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fonts/type1/p
+ublic/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/symbols/msbm10.pfb>
+Output written on prace.pdf (60 pages, 992139 bytes).
 PDF statistics:
- 828 PDF objects out of 1000 (max. 8388607)
- 169 named destinations out of 1000 (max. 500000)
+ 840 PDF objects out of 1000 (max. 8388607)
+ 171 named destinations out of 1000 (max. 500000)
  527 words of extra memory for PDF output out of 10000 (max. 10000000)
 

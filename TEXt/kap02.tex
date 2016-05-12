@@ -24,7 +24,7 @@ Jako velmi jednoduchý Keystream Generator by se dal použít nìjaký z generátorù p
 
 Typickým pøíkladem mùže být lineární kongruenèní generátor pseudonáhodných èísel (LCG - Linear Congruential Generator). Ten je charakterizován rozsahem hodnot $m$, koeficientem $a$, inkrementem $c$ a poèáteèní hodnotou $X_0$. LCG provádí krok podle vzorce:
 $$X_{n+1} = (aX_n + c) \mod m$$
-Pro to, aby byl generátor pseudonáhodných èísel kvalitní, je potøeba, aby výstupy nemìly zjevné lineární vztahy mezi sebou a mìly dlouhou periodu. Podmínky pro to, aby LCG mìl periodu délky $m$ (tj. vystøídal všechny možné hodnoty), jsou následující (viz Knuth):
+Pro to, aby byl generátor pseudonáhodných èísel kvalitní, je potøeba, aby výstupy nemìly zjevné lineární vztahy mezi sebou a mìly dlouhou periodu. Podmínky pro to, aby LCG mìl periodu délky $m$ (tj. vystøídal všechny možné hodnoty), jsou následující (viz \citep{Knuth}):
 \begin{itemize}
 \item $c$ a $m$ jsou nesoudìlná èísla
 \item $a-1$ je dìlitelné všemi prvoèiniteli $m$
@@ -109,6 +109,7 @@ Pro kryptografii je potøeba, aby dlouhé klíèe mìly vlastnosti pseudonáhodných po
 Tøída Crypto.RandomnessTesting obsahuje následující metody.
 \begin{itemize}
 \item EntropyTest(BitArray b, byte lengthLimit) : Testuje entropii blokù o velikosti od 1 po lengthLimit. Jde o sledování frekvence jednotlivých blokù. V náhodné posloupnosti by mìly být všechny bloky stejné délky pøibližnì stejnì èasté. Pro krátké posloupnosti (zde pod 10 tisíc bitù) samozøejmì není možné, aby se všechny bloky (zde délky 10) vyskytly, takže jsou všechny výsledky porovnány s maximálním možným výsledkem. Výstupem je vážený prùmìr, kde mají testy entropií všech délek výsledky v rozsahu 0 až 1. Optimální hodnota je 1.
+$$\sum_{i=1}^{n} p_i \cdot \log_2{\frac{1}{p_i}} = -\sum_{i=1}^{n} p_i \cdot \log_2{p_i}$$
 \item CompressionTest(BitArray b) : Zkusí data zkomprimovat pomocí programu gzip s optimální úrovní komprese a vrátí pomìr mezi novou a pùvodní velikostí. O posloupnostech, které lze zkomprimovat, je známo, že nejsou dokonale náhodné. Konkrétnì velikost dat po kompresi je horním odhadem na Kolmogorovskou složitost. Optimální hodnota je 1.
 \end{itemize}
 

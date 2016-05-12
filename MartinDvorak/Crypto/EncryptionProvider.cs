@@ -11,7 +11,7 @@ namespace Crypto
     /// This class wraps any <c>IEncrypter</c> implementation.
     /// </summary>
     /// <remarks>Maybe rename to "Encryption provider".</remarks>
-    public class EncrypterWrapper
+    public class EncryptionProvider
     {
         private IEncrypter encrypter;
         private HashAlgorithm hashFunction;
@@ -22,7 +22,7 @@ namespace Crypto
         /// Creates a new <c>EncrypterWrapper</c>.
         /// </summary>
         /// <param name="encryptionAlgorithm">Encryption algorithm to be used.</param>
-        public EncrypterWrapper(IEncrypter encryptionAlgorithm)
+        public EncryptionProvider(IEncrypter encryptionAlgorithm)
         {
             encrypter = encryptionAlgorithm;
             hashFunction = new MD5Cng();

@@ -29,9 +29,9 @@ namespace Crypto
         /// This uses CA-based key extender inside.
         /// </summary>
         /// <returns>Encrypter and decrypter.</returns>
-        public static EncrypterWrapper GetEncrypterStreamCA()
+        public static EncryptionProvider GetEncrypterStreamCA()
         {
-            return new EncrypterWrapper(new EncrypterStreamCA(favouriteExtender));
+            return new EncryptionProvider(new EncrypterStreamCA(favouriteExtender));
         }
 
         /// <summary>
@@ -39,9 +39,9 @@ namespace Crypto
         /// This uses a reversible CA inside.
         /// </summary>
         /// <returns>Encrypter and decrypter.</returns>
-        public static EncrypterWrapper GetEncrypterReversibleCA()
+        public static EncryptionProvider GetEncrypterReversibleCA()
         {
-            return new EncrypterWrapper(new EncrypterReversibleCA(1000));
+            return new EncryptionProvider(new EncrypterReversibleCA(1000));
         }
     }
 }

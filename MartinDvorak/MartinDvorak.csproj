@@ -65,7 +65,7 @@
     <Compile Include="Cellular\ReversibleAutomaton.cs" />
     <Compile Include="Crypto\CannotGenerateException.cs" />
     <Compile Include="Crypto\EncrypterStreamCA.cs" />
-    <Compile Include="Crypto\EncrypterWrapper.cs" />
+    <Compile Include="Crypto\EncryptionProvider.cs" />
     <Compile Include="Crypto\EncrypterReversibleCA.cs" />
     <Compile Include="Crypto\Export.cs" />
     <Compile Include="Crypto\Factory.cs" />
