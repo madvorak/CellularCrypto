@@ -4,7 +4,7 @@
 
 \section{Základní pojmy}
 
-Vìda zabıvající se šifrováním se nazıvá \textsl{kryptografie}. Lámáním šifer se zase zabıvá  \textsl{kryptoanalıza}. Úkolem šifrování je uchovat a pøedat tajnou zprávu tak, aby ji mohl pøeèíst ten, pro koho je urèena, ale u nikdo jinı. Dále se nìkdy za cíl dává ovìøitelnost autora zprávy.
+Úkolem šifrování je uchovat a pøedat tajnou zprávu tak, aby ji mohl pøeèíst ten, pro koho je urèena, ale u nikdo jinı. Dále se nìkdy za cíl dává ovìøitelnost autora zprávy. Vìda zabıvající se šifrováním se nazıvá \textsl{kryptografie}. Lámáním šifer se zase zabıvá  \textsl{kryptoanalıza}.
 
 Pùvodní èitelná zpráva se nazıvá \textsl{plaintext}. Data po zašifrování se nazıvají \textsl{ciphertext}. Pro pøevod plaintextu na ciphertext je potøeba pouít šifrovací algoritmus. Ten by mìl zároveò bıt schopen pøevézt ciphertext zpìt na plaintext (tzv. dešifrování). Protoe fungování šifrovacího algoritmu se velmi snadno vyzradí, zásadní roli hraje \textsl{šifrovací klíè}. Pokud se jedná o \textsl{symetrickou kryptografii}, tak stejnı klíè slouí i k dešifrování. V pøípadì \textsl{asymetrické kryptografie} se pouívají dva rùzné klíèe. Šifrovací resp. dešifrovací klíèe v~asymetrické kryptografii se s ohledem na jejich pouití nazıvají jako \textsl{veøejnı} resp. \textsl{tajnı} klíè.
 
@@ -24,7 +24,7 @@ Jako velmi jednoduchı Keystream Generator by se dal pouít nìjakı z generátorù p
 
 Typickım pøíkladem mùe bıt lineární kongruenèní generátor pseudonáhodnıch èísel (LCG - Linear Congruential Generator). Ten je charakterizován rozsahem hodnot $m$, koeficientem $a$, inkrementem $c$ a poèáteèní hodnotou $X_0$. LCG provádí krok podle vzorce:
 $$X_{n+1} = (aX_n + c) \mod m$$
-a mají dlouhou periodu. Podmínky pro to, aby LCG mìl periodu délky $m$ (tj. vystøídal všechny moné hodnoty), jsou následující (viz Knuth):
+Pro to, aby byl generátor pseudonáhodnıch èísel kvalitní, je potøeba, aby vıstupy nemìly zjevné lineární vztahy mezi sebou a mìly dlouhou periodu. Podmínky pro to, aby LCG mìl periodu délky $m$ (tj. vystøídal všechny moné hodnoty), jsou následující (viz Knuth):
 \begin{itemize}
 \item $c$ a $m$ jsou nesoudìlná èísla
 \item $a-1$ je dìlitelné všemi prvoèiniteli $m$
@@ -37,7 +37,7 @@ $$Y_{n+1} = (qY_n+r) \mod 2^d$$, kde $q = a \mod 2^d$, $r = c \mod 2^d$.
 
 Øešením je pouití jen nìkolika poèáteèních bitù z kadého $X_i$. Pokud by se na vıstup posílala celá hodnota $X_i$, byla by èást bitù snadno pøedvídatelná. Napøíklad kadı $m$-tı bit vıstupu by pravidelnì støídal 0 a 1.
 
-Existují i jiné generátory pseudonáhodnıch èísel, které jsou vhodnìjší pro kryptografické úèely. Ve skuteènosti není skoro ádnı rozdíl mezi Keystream Generator a genetárorem pseudonáhodnıch èísel. Odlišuje je jen to, e generátory pseudonáhodnıch èísel pouívají seed menší velikosti, kdeto Keystream Generator lze inicializovat klíèem vìtší velikosti.
+Existují i jiné generátory pseudonáhodnıch èísel, které jsou vhodnìjší pro kryptografické úèely. Ve skuteènosti není skoro ádnı rozdíl mezi Keystream Generator a genetárorem pseudonáhodnıch èísel. Odlišuje je jen to, e generátory pseudonáhodnıch èísel pouívají seed menší velikosti, kdeto Keystream Generator lze inicializovat klíèem vìtší velikosti a taky udruje \uv{sloitejší} vnitøní stav.
 
 \section{Blokové šifry}
 
@@ -75,7 +75,7 @@ Podobnım modem je PCBC (Propagating Cipher Block Chaining). Zde se do vıpoètu ná
 \bcmoop{OFB}{encryption}
 \bcmoop{OFB}{decryption}
 
-A teï se dostáváme ke dvìma metodám, které umoòují pouít blokovou šifru jako proudovou šifru (opakovaná aplikace blokové šifry vytváøí Keystream Generator), protoe se XOR s plaintextem aplikuje zvláš a je moné ho provést a po všech vyvolání blokové šifry.
+A teï se dostáváme ke dvìma metodám, které umoòují pouít blokovou šifru jako Keystream Generator, protoe se XOR s plaintextem aplikuje zvláš a je moné ho provést a po všech vyvolání blokové šifry.
 
 První z nich je OFB (Output Feedback). OFB nejprve pouije blokovou šifru k tomu, aby zašifrovala inicializaèní vektor pomocí klíèe. Vısledek je jednak poslán ven a dále je poslán na vstup blokové šifry. Tento blok je zase zašifrován pomocí stejného klíèe a vısledek je poslán opìt jak na vıstup, tak do další blokové šifry. Postup si lze prohlédnout na obrázku \ref{OFBencryption}. Dá se øíci, e OFB posílá na vıstup Keystream, kterı se skládá z øady $f(x), f(f(x)), f(f(f(x))), f(f(f(f(x)))), f(f(f(f(f(x))))),~...$, kde $x$ je inicializaèní vektor a funkce $f$ je ji zobrazení s konkrétním klíèem. Rozšifrování je triviální obdobou tohoto postupu. Není k nìmu potøeba ádné inverzní zobrazení. Vıstup blokové šifry se XORuje s ciphertextem a vznikne plaintext (viz obrázek \ref{OFBdecryption}). Je zøejmé, e zašifrování ani rozšifrování nelze pøi OFB paralelizovat.
 
@@ -120,7 +120,7 @@ Budeme zde zkoumat vlastnosti algoritmù jako vlastnosti celého zobrazení z krátk
 
 Hammingova vzdálenost je triviálnì horním odhadem na Levenshteinovu vzdálenost. V pøípadì náhodnıch binárních øetìzcù je jejich hodnota obèas stejná, ale nìkdy mùe bıt Levenshtein vıraznì niší. Napøíklad kdy zrotujeme øetìzec o jednu pozici, tak Levenshtein dává vzdálenost 2, zatímco Hamming mùe dát hodnì vysoké èíslo (a délka øetìzce). Vıznamná pro nás bude rychlost vıpoètu. Hammingovu vzdálenost lze triviálnì urèit v lineárním èase, ale vıpoèet Levenshteinovy vzdálenosti zabere èas kvadratickı. e to rychleji nejde, se nelze divit, protoe Levenshtein vlastnì spouští prohledávání prostoru editací. Díky dynamickému programování to lze provést alespoò v tom kvadratickém èase.
 
-Program ještì obì vzdálenosti vydìlí délkou øetìzce, aby vısledky mìly hodnotu v rozmezí 0 (shodné øetìzce) a 1 (napøíklad øetìzec samıch nul porovnán se øetìzcem samıch jednièek). Støední hodnota pro dvojici náhodnıch binárních posloupností je u Hamminga triviálnì 0,5. Nesrovnatelnì tìší je odhadnout støední hodnotu Levenshteinovy vzdálenosti. Posloupnost støedních hodnot Levenshteina se vzrùstající délkou vstupu roste jako subaditivní posloupnost. Relativní hodnota proto mùe pro delší vstupy pouze klesat. Limitní hodnotu se zdá bıt pøíliš tìké odhadnout, ale orientaèní experimenty i diskuze na internetu naznaèují, e mùeme poèítat s hodnotou kolem 0,29.
+Program ještì obì vzdálenosti vydìlí délkou øetìzce, aby vısledky mìly hodnotu v rozmezí 0 (shodné øetìzce) a 1 (napøíklad øetìzec samıch nul porovnán se øetìzcem samıch jednièek). Støední hodnota pro dvojici náhodnıch binárních posloupností je u Hamminga triviálnì 0,5. Nesrovnatelnì tìší je odhadnout støední hodnotu Levenshteinovy vzdálenosti. Posloupnost støedních hodnot Levenshteina se vzrùstající délkou vstupu roste jako subaditivní posloupnost \footnote{Posloupnost $x_i$ se nazıvá subaditivní, pokud $\forall n,m \in \N :x_{n+m}\leq x_n+x_m$}. Relativní hodnota proto mùe pro delší vstupy pouze klesat. Limitní hodnotu se zdá bıt pøíliš tìké odhadnout, ale orientaèní experimenty i diskuze na internetu naznaèují, e mùeme poèítat s hodnotou kolem 0,29 \citep{EDist}.
 
 Tøída Crypto.FunctionTesting obsahuje následující metody. Podle nastavení v konstruktoru mohou všechny testy pouívat buï Hammingovu, nebo Levensteinovu vzdálenost. Dále uvádìno podle Hamminga.
 \begin{itemize}

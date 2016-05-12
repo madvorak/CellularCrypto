@@ -1,8 +1,9 @@
 ﻿namespace Cellular
 {
     /// <summary>
-    /// The top class of the CA hierarchy. Every constructor should follow this logical order when considering its parametres:
-    /// specification of the type (usually not needed), rule, size, initial state / rng.
+    /// The top class of the CA hierarchy.
+    /// Every constructor should follow this logical order when considering its parametres:
+    /// 1) specification of the type (usually not needed), 2) rule, 3) initial state / size (& rng).
     /// </summary>
     abstract class CellularAutomaton
     {
@@ -38,11 +39,11 @@
         /// Creates an appropriate copy of the CA. Its type and the specific rule are always preserved. 
         /// However, the time (number of steps executed on the specific instance) is set back to 0.
         /// </summary>
-        /// <returns>A copy of the <c>CellularAutomaton</c> as an <c>Object</c></returns>
+        /// <returns>A copy of the <c>CellularAutomaton</c> as <c>System.Object</c></returns>
         public abstract object Clone();
 
         /// <summary>
-        /// Announces the runtime type of the CA including info about its rule. It serves for debugging purposes.
+        /// Announces the runtime type of the CA including info about its rule.
         /// </summary>
         /// <returns>Type of the CA as a string.</returns>
         public abstract string TellType();
