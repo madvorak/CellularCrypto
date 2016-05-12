@@ -17,7 +17,6 @@ class Program
         GeneticTest.RunTest();
         Adapter.DisplayForm();
         FactoryTest.RunTest();
-        //Crypto.SearchSGA.SearchForGoodExtenders();
         FunctionTestTest.RunTest();
         AutomataTest.RunTest();
         ReversibleTest.RunTest();

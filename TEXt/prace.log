@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  12 MAY 2016 12:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  12 MAY 2016 12:55
 entering extended mode
 **C:/Martin/MFF/_baka/TEXt/prace.tex
 (C:/Martin/MFF/_baka/TEXt/prace.tex
@@ -1127,7 +1127,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
 Here is how much of TeX's memory you used:
  22739 strings out of 493634
  401916 string characters out of 3141311
- 523312 words of memory out of 3000000
+ 523429 words of memory out of 3000000
  25469 multiletter control sequences out of 15000+200000
  27501 words of font info for 84 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -1154,7 +1154,7 @@ ype1/public/cs/cssl12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fonts/typ
 e1/public/cs/csti12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fonts/type1
 /public/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb>
-Output written on prace.pdf (59 pages, 979794 bytes).
+Output written on prace.pdf (59 pages, 980028 bytes).
 PDF statistics:
  828 PDF objects out of 1000 (max. 8388607)
  169 named destinations out of 1000 (max. 500000)
