@@ -1,6 +1,8 @@
 \chapter{Nástin architektury}
 
-Tato kapitola je urèitým doplòkem k vývojové dokumentaci, která byla vytvoøena programem Doxywizard z dokumentaèních komentáøù. Nesnaží se nahradit ètení této dokumentace ani pøeètení ostatních kapitol této práce, ve kterých jsou podrobnìji vysvìtleny ty klíèové èásti programu.
+Tato kapitola je urèitým doplòkem k vývojové dokumentaci, která byla vytvoøena z dokumentaèních komentáøù. Tato kapitola se nesnaží nahradit ètení vývojové dokumentace ani pøeètení ostatních kapitol této práce, ve kterých jsou podrobnìji vysvìtleny klíèové èásti programu.
+
+\section{Úvod k návrhu}
 
 Celý zdrojový kód se nachází v repozitáøi na adrese: 
 
@@ -12,7 +14,9 @@ Jako druhý vznikl malý projekt se jménem Program. Ten využívá nástroje vytvoøené
 
 Práce neobsahuje žádné závislosti na externích knihovnách. Ke spuštìní staèí mít nainstalován .NET framework verze 4.5 (èi vyšší), který je automatickou souèástí operaèního systému Windows 8 (èi novìjší), ale mùže se nacházet i na starších verzích (já ho mám na Windows 7).
 
-Pøi vývoji byl kladen dùraz na propojování objektù skrze rozhraní. Stìžejní trojice rozhraní je uvedena na obrázku \ref{diagramif}. Kromì pøehlednosti a znovupoužitelnosti kódu (která byla potøeba pro provádìní experimentù, jež ještì nebyly známy v prùbìhu implementace) byla vìnována také pozornost vysokému výkonu.
+Pøi vývoji byl kladen dùraz na znovupoužitelnost kódu. To bylo dùležité, protože v prùbìhu programování ještì nebylo jasné, jakým zpùsobem se bude využívat který automat èi algoritmus. Znovupoužitelnost je dosahována pomocí kvalitního návrhu, vìtšího množství variant konstruktorù a propojování objektù prostøednictvím rozhraní. Stìžejní trojice rozhraní je uvedena na obrázku \ref{diagramif} Dále byla vìnována pozornost vysokému výkonu.
+
+Dùležitá je také pøehlednost zdrojového kódu. Proto byly ke všem tøídám a ke všem jejím vìøejným metodám (a obèas i tìm ostatním) psány XML komentáøe podle zvyklostí programátorù v C\# a práce ve Visual Studiu. Z nich byla také vygenerována vývojáøská dokumentace v HTML.
 
 \begin{figure}
 \centering
@@ -64,7 +68,11 @@ Pøi bìzném výpoètu nového stavu (ElementaryAutomaton) se musí vždy podle stavu 3
 
 \section{Crypto}
 
-Tento namespace jednak obsahuje natahovaèe klíèù (popsané v následující kapitole) a potom testy (popsané v pøedchozí kapitole). Možná zmínit Factory. Natahovaèe klíèù implementují rozhraní IKeyExtender. Tøída EncrypterStreamCA umí použít libovolnou implementaci IKeyExtender k šifrování pole bitù. Nad tou je ještì vybudovaná abstrakce v podobì rozhraní IEncrypter, které obecnì poskytuje pøístup k libovolnému symetrického kryptografickému algoritmu. Rozhraní IEncrypter ještì implementuje tøída EncrypterReversibleCA, která realizuje šifrování alternativním zpùsobem (viz poslední kapitola). Nad implementacemi rozhraní IEncrypter je ještì vybudována spoleèná obalová vrstva v podobì tøídy EncryptionProvider. Ta umožòuje šifrovat pøímo Streamy dat a zároveò umožòuje kromì šifrovacího klíèe použít kombinaci uživatelského hesla a náhodného saltu, což bude použito v praktické aplikaci. Tøída Export poskytuje pøístup k vìcem, co mají být použitelné i z jiné assembly a provádí veškerou instanciaci interních tøíd, které již není možné ovládat pøímo z vnìjšku.
+Tento namespace jednak obsahuje natahovaèe klíèù (popsané v následující kapitole) a potom testy (popsané v pøedchozí kapitole). Také se tu nachází statická tøída Factory, která nahrazuje možnost deserializace CA a vìtších objektù, které je obsahují.
+
+Natahovaèe klíèù implementují rozhraní IKeyExtender. Tøída EncrypterStreamCA umí použít libovolnou implementaci IKeyExtender k šifrování pole bitù. Nad tou je ještì vybudovaná abstrakce v podobì rozhraní IEncrypter, které obecnì poskytuje pøístup k libovolnému symetrického kryptografickému algoritmu. Rozhraní IEncrypter ještì implementuje tøída EncrypterReversibleCA, která realizuje šifrování alternativním zpùsobem (viz poslední kapitola). Nad implementacemi rozhraní IEncrypter je ještì vybudována spoleèná obalová vrstva v podobì tøídy EncryptionProvider. Ta umožòuje šifrovat pøímo Streamy dat a zároveò umožòuje kromì šifrovacího klíèe použít kombinaci uživatelského hesla a náhodného saltu, což bude použito v praktické aplikaci.
+
+Statická tøída Export poskytuje pøístup k vìcem, co mají být použitelné i z jiné assembly a provádí veškerou instanciaci interních tøíd, které již není možné ovládat pøímo z vnìjšku. Napøíklad poskytuje jednu konkrétní implementaci IKeyExtender, do níž je vložen elementární automat èíslo 30 (ve zrychlené variantì). Z vnìjšku není možné vynutit jinou variantu. Dále poskytuje pøístup ke tøídì EncryptionProvider (jsou tu dvì varianty pro dva rùzné vložené šifrovací algoritmy).
 
 \section{Testing}
 

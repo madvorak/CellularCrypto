@@ -108,8 +108,9 @@ Pro kryptografii je potøeba, aby dlouhé klíèe mìly vlastnosti pseudonáhodnıch po
 
 Tøída Crypto.RandomnessTesting obsahuje následující metody.
 \begin{itemize}
-\item EntropyTest(BitArray b, byte lengthLimit) : Testuje entropii blokù o velikosti od 1 po lengthLimit. Jde o sledování frekvence jednotlivıch blokù. V náhodné posloupnosti by mìly bıt všechny bloky stejné délky pøiblinì stejnì èasté. Pro krátké posloupnosti (zde pod 10 tisíc bitù) samozøejmì není moné, aby se všechny bloky (zde délky 10) vyskytly, take jsou všechny vısledky porovnány s maximálním monım vısledkem. Vıstupem je váenı prùmìr, kde mají testy entropií všech délek vısledky v rozsahu 0 a 1. Optimální hodnota je 1.
+\item EntropyTest(BitArray b, byte lengthLimit) : Testuje entropii blokù o velikosti od 1 po lengthLimit. Jde o sledování frekvence jednotlivıch blokù. V náhodné posloupnosti by mìly bıt všechny bloky stejné délky pøiblinì stejnì èasté. Vzorec pro vıpoèet entropie blokù jedné konkrétní délky, kde $p_i$ oznaèuje pravdìpodobnostii (zde relativní èetnosti) vıskytu jednotlivıch blokù, zní:
 $$\sum_{i=1}^{n} p_i \cdot \log_2{\frac{1}{p_i}} = -\sum_{i=1}^{n} p_i \cdot \log_2{p_i}$$
+Pro krátké posloupnosti (zde pod 10 tisíc bitù) samozøejmì není moné, aby se všechny bloky (zde délky 10) vyskytly, take jsou všechny vısledky porovnány s maximálním monım vısledkem. Vıstupem je váenı prùmìr, kde mají testy entropií všech délek vısledky v rozsahu 0 a 1. Optimální hodnota je 1.
 \item CompressionTest(BitArray b) : Zkusí data zkomprimovat pomocí programu gzip s optimální úrovní komprese a vrátí pomìr mezi novou a pùvodní velikostí. O posloupnostech, které lze zkomprimovat, je známo, e nejsou dokonale náhodné. Konkrétnì velikost dat po kompresi je horním odhadem na Kolmogorovskou sloitost. Optimální hodnota je 1.
 \end{itemize}
 
@@ -125,8 +126,10 @@ Program ještì obì vzdálenosti vydìlí délkou øetìzce, aby vısledky mìly hodnotu v
 
 Tøída Crypto.FunctionTesting obsahuje následující metody. Podle nastavení v konstruktoru mohou všechny testy pouívat buï Hammingovu, nebo Levensteinovu vzdálenost. Dále uvádìno podle Hamminga.
 \begin{itemize}
-\item TestBitChange(IKeyExtender algorithm, int ratio) : Testuje, jak velká èást bitù vıstupu se zmìní pøi zmìnì jednoho bitu vstupu. Metoda sampluje náhodné vstupy a pro kadı z nich zkouší zmìnit zvláš všechny bity. Optimální hodnota je 0,5.
 \item TestAverageDistance(IKeyExtender algorithm, int ratio) : Testuje prùmìrnou vzdálenost vıstupù pøíslušející dvìma rùznım náhodnì zvolenım vstupùm. Optimální hodnota je 0,5.
+\item TestBitChange(IKeyExtender algorithm, int ratio) : Testuje, jak velká èást bitù vıstupu se zmìní pøi zmìnì jednoho bitu vstupu. Metoda sampluje náhodné vstupy a pro kadı z nich zkouší zmìnit zvláš všechny bity. Optimální hodnota je 0,5.
+
+TestBitChange je z praktického hlediska pøísnìjší ne TestAverageDistance. Pøestoe pro naše algoritmy lze TestAverageDistance chápat jako horní odhad vısledku TestBitChange, lze teoreticky vymyslet i zobrazení, které v TestBitChange dopadne dobøe, ale v TestAverageDistance sele. Napøíklad kdy všem vstupùm se sudou paritou pøiøadíme vısledek ze samıch nul (000...0) a všechny vstupy s lichou paritou zobrazíme na pravidelné støídání hodnot nula a jedna (010101...01), tak TestBitChange dosáhne optimálního vısledku 0,5, zatímco TestAverageDistance vykáe velmi podezøelou hodnotu 0,25.
 \item TestLargestBallExactly(IKeyExtender algorithm) : Testuje, jaká nejvìtší koule se dá vmìstnat do prostoru vıstupù tak, aby neobsahovala ádnı vygenerovatelnı dlouhı klíè. Zkouší úplnì všechny vstupy na malém prostoru a ty natahuje na dvojnásobek. Motivací je, e pokud zobrazení nazaplòuje prostor dostateènì rovnomìrnì, pak to rozpoznáme tak, e se do prostoru vejde velká koule.
 \item TestLargestBallApprox(IKeyExtender algorithm) : Testuje to samé, ale pouívá delší vstupy, které u nezvládá vyzkoušet všechny, take je sampluje náhodnì.
 \end{itemize}
