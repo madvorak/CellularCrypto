@@ -22,7 +22,7 @@ namespace Crypto
             if (description.StartsWith("Basic"))
             {
                 byte number = byte.Parse(description.Split(' ')[3]);
-                return new ElementaryFastAutomaton(number, 1);
+                return new ElementaryAutomatonFast(number, 1);
             }
             else if (description.StartsWith("Binary"))
             {

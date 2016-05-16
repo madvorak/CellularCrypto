@@ -12,7 +12,7 @@ namespace Crypto
 
         static Export()
         {
-            favouriteExtender = new KeyExtenderInterlaced(new ElementaryFastAutomaton(), 10, 0);
+            favouriteExtender = new KeyExtenderInterlaced(new ElementaryAutomatonFast(), 10, 0);
         }
 
         /// <summary>

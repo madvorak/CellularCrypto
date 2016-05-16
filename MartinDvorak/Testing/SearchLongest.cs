@@ -45,7 +45,7 @@ namespace Testing
 
             for (int i = 0; i < 256; i++)
             {
-                ca = new ElementaryFastAutomaton((byte)i, input);
+                ca = new ElementaryAutomatonFast((byte)i, input);
                 var caL = new CAwithLength(ca, Utilities.PeriodLengthFast(ca));
                 CAperiods.Add(caL);
             }

@@ -62,6 +62,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cellular\ElementaryAutomatonFaster.cs" />
+    <Compile Include="Cellular\ElementaryAutomatonFasterParallel.cs" />
     <Compile Include="Cellular\ReversibleAutomaton.cs" />
     <Compile Include="Crypto\CannotGenerateException.cs" />
     <Compile Include="Crypto\EncrypterStreamCA.cs" />
@@ -92,7 +94,7 @@
     <Compile Include="Cellular\Automaton1D.cs" />
     <Compile Include="Cellular\Automaton2D.cs" />
     <Compile Include="Cellular\ElementaryAutomaton.cs" />
-    <Compile Include="Cellular\ElementaryFastAutomaton.cs" />
+    <Compile Include="Cellular\ElementaryAutomatonFast.cs" />
     <Compile Include="Cellular\Binary1DAutomaton.cs" />
     <Compile Include="Cellular\Binary2DAutomaton.cs" />
     <Compile Include="Cellular\BinaryRangeCyclicAutomaton.cs" />
@@ -125,7 +127,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

@@ -209,7 +209,7 @@ namespace Crypto
                 automata = new List<IBinaryCA>();
                 for (int i = 0; i < 256; i++)
                 {
-                    automata.Add(new ElementaryFastAutomaton((byte)i, 1));
+                    automata.Add(new ElementaryAutomatonFast((byte)i, 1));
                 }
                 for (int i = 0; i < 100; i++)
                 {

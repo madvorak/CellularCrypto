@@ -14,7 +14,7 @@ namespace Testing
         {
             BitArray input = Utilities.RandomBitArr(8);
             const int length = 500;
-            IBinaryCA aut = new ElementaryFastAutomaton();
+            IBinaryCA aut = new ElementaryAutomatonFast();
             double result;
             double bestRes;
 

@@ -7,15 +7,15 @@ namespace Cellular
     /// Class representing 256 elementary CA with firmly set borders.
     /// This specific implementation maps 10 cells onto 8 cells at once, so it should be faster a little.
     /// </summary>
-    class ElementaryFastAutomaton : ElementaryAutomaton
+    class ElementaryAutomatonFast : ElementaryAutomaton
     {
-        private bool[][] lookupT;
+        protected bool[][] lookupT;
 
         /// <summary>
         /// Creates a new basic CA of size 100 with 000...00100...000 as its initial state (faster variant).
         /// The new CA will use rule No.30 : asymmetric, pseudo-chaotic behaviour.
         /// </summary>
-        public ElementaryFastAutomaton(): base() 
+        public ElementaryAutomatonFast(): base() 
         {
             fillDictionary();
         }
@@ -25,7 +25,7 @@ namespace Cellular
         /// The new CA will use rule No.30 : asymmetric, pseudo-chaotic behaviour.
         /// </summary>
         /// <param name="size">The size of the new CA.</param>
-        public ElementaryFastAutomaton(int size) : base(30, size) 
+        public ElementaryAutomatonFast(int size) : base(30, size) 
         {
             fillDictionary();
         }
@@ -35,7 +35,7 @@ namespace Cellular
         /// </summary>
         /// <param name="ruleNo">The code of the elementary rule (from 0 to 255).</param>
         /// <param name="size">The size of the new CA.</param>
-        public ElementaryFastAutomaton(byte ruleNo, int size) : base(ruleNo, size)  
+        public ElementaryAutomatonFast(byte ruleNo, int size) : base(ruleNo, size)  
         {
             fillDictionary();
         }
@@ -46,7 +46,7 @@ namespace Cellular
         /// <param name="ruleNo">The code of the elementary rule (from 0 to 255).</param>
         /// <param name="initialState">A <c>BitArray</c> describing the initial state of the CA.
         /// This also determines the size of the new CA.</param>
-        public ElementaryFastAutomaton(byte ruleNo, BitArray initialState) : base(ruleNo, initialState)  
+        public ElementaryAutomatonFast(byte ruleNo, BitArray initialState) : base(ruleNo, initialState)  
         {
             fillDictionary();
         }
@@ -57,7 +57,7 @@ namespace Cellular
         /// <param name="ruleNo">The code of the elementary rule (from 0 to 255).</param>
         /// <param name="size">The size of the new CA.</param>
         /// <param name="rnd">PseudoRNG instance that will be used to generate the original state.</param>
-        public ElementaryFastAutomaton(byte ruleNo, int size, Random rnd) : base(ruleNo, size, rnd)  
+        public ElementaryAutomatonFast(byte ruleNo, int size, Random rnd) : base(ruleNo, size, rnd)  
         {
             fillDictionary();
         }
@@ -78,9 +78,10 @@ namespace Cellular
                     old10 *= 2;
                     if (state[j]) old10++;
                 }
+                bool[] lookupLine = lookupT[old10];
                 for (int j = 0; j < 8; j++)
                 {
-                    newState[i + j] = lookupT[old10][j];
+                    newState[i + j] = lookupLine[j];
                 }
                 i += 8;
             }
@@ -118,12 +119,12 @@ namespace Cellular
 
         public override object Clone()
         {
-            return new ElementaryFastAutomaton(ruleNumber, state);
+            return new ElementaryAutomatonFast(ruleNumber, state);
         }
 
         protected override IBinaryCA cloneTemplate(BitArray newInstanceState)
         {
-            return new ElementaryFastAutomaton(ruleNumber, newInstanceState);
+            return new ElementaryAutomatonFast(ruleNumber, newInstanceState);
         }
     }
 }

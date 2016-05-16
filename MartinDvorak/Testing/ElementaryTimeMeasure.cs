@@ -9,9 +9,9 @@ namespace Testing
     /// </summary>
     static class ElementaryTimeMeasure
     {
-        private const int autSize = 1005;
-        private const int stepsCount = 9000;
-        private const byte elCode = 35;
+        private const int autSize = 5000;
+        private const int stepsCount = 10000;
+        private const byte elCode = 110;
 
         public static void RunTest()
         {
@@ -23,23 +23,41 @@ namespace Testing
             elAut.Step(stepsCount);
             stopwatch.Stop();
             Console.WriteLine(((IBinaryCA)elAut).StateAsString().Substring(500, 50));
-            Console.WriteLine("ElementaryAutomaton: {0} ms", stopwatch.ElapsedMilliseconds); // 319 ms
+            Console.WriteLine("ElementaryAutomaton: {0} ms", stopwatch.ElapsedMilliseconds);
 
             stopwatch.Reset();
             stopwatch.Start();
-            ElementaryFastAutomaton elFast = new ElementaryFastAutomaton(elCode, autSize);
+            ElementaryAutomatonFast elFast = new ElementaryAutomatonFast(elCode, autSize);
             elFast.Step(stepsCount);
             stopwatch.Stop();
             Console.WriteLine(((IBinaryCA)elFast).StateAsString().Substring(500, 50));
-            Console.WriteLine("ElementaryFastAutomaton: {0} ms", stopwatch.ElapsedMilliseconds); // was 199 ms, now 152 ms
+            Console.WriteLine("ElementaryFastAutomaton: {0} ms", stopwatch.ElapsedMilliseconds);
 
             stopwatch.Reset();
             stopwatch.Start();
-            BinaryRangeAutomaton range = new ElementaryAutomaton(elCode, autSize).ConvertToRangeN(); // 350 ms
+            ElementaryAutomatonFaster elFaster = new ElementaryAutomatonFaster(elCode, autSize);
+            elFaster.Step(stepsCount);
+            stopwatch.Stop();
+            Console.WriteLine(((IBinaryCA)elFaster).StateAsString().Substring(500, 50));
+            Console.WriteLine("ElementaryFasterAutomaton: {0} ms", stopwatch.ElapsedMilliseconds);
+
+            stopwatch.Reset();
+            stopwatch.Start();
+            ElementaryAutomatonFasterParallel elParallel = new ElementaryAutomatonFasterParallel(elCode, autSize);
+            elParallel.Step(stepsCount);
+            stopwatch.Stop();
+            Console.WriteLine(((IBinaryCA)elParallel).StateAsString().Substring(500, 50));
+            Console.WriteLine("ElementaryAutomatonFastParallel: {0} ms", stopwatch.ElapsedMilliseconds);
+
+            stopwatch.Reset();
+            stopwatch.Start();
+            BinaryRangeAutomaton range = new ElementaryAutomaton(elCode, autSize).ConvertToRangeN();
             range.Step(stepsCount);
             stopwatch.Stop();
             Console.WriteLine(((IBinaryCA)range).StateAsString().Substring(500, 50));
             Console.WriteLine("BinaryRangeAutomaton: {0} ms\n", stopwatch.ElapsedMilliseconds);
+
+            RunTest(); // TODO delete recursion
         }
     }
 }
