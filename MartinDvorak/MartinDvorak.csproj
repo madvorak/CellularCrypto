@@ -63,7 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cellular\ElementaryAutomatonFaster.cs" />
-    <Compile Include="Cellular\ElementaryAutomatonFasterParallel.cs" />
+    <Compile Include="Cellular\ElementaryAutomatonFastest.cs" />
     <Compile Include="Cellular\ReversibleAutomaton.cs" />
     <Compile Include="Crypto\CannotGenerateException.cs" />
     <Compile Include="Crypto\EncrypterStreamCA.cs" />

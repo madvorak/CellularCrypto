@@ -2,6 +2,10 @@
 
 namespace Cellular
 {
+    /// <summary>
+    /// Class representing 256 elementary CA with firmly set borders.
+    /// This specific implementation reads every state only once, so it should be even faster.
+    /// </summary>
     class ElementaryAutomatonFaster : ElementaryAutomaton
     {
         protected bool[] rule1D;
@@ -30,7 +34,8 @@ namespace Cellular
         public override void Step()
         {
             BitArray newState = new BitArray(size);
-
+            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+            sw.Start();
             int foo = state[0] ? 1 : 0;
             for (int i = 0; i < size - 1; i++)
             {
@@ -39,6 +44,8 @@ namespace Cellular
                 newState[i] = rule1D[foo];
             }
             newState[size - 1] = rule1D[(foo << 1) & 7];
+            sw.Stop();
+            System.Console.WriteLine(sw.ElapsedMilliseconds);
 
             state = newState;
             time++;

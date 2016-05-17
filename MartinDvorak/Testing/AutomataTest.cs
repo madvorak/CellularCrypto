@@ -15,15 +15,12 @@ namespace Testing
             byte number = byte.Parse(Console.ReadLine());
             demoCA = new ElementaryAutomaton(number, Console.WindowWidth - 1);
             Console.WriteLine(demoCA.StateAsString());
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 35; i++)
             {
                 demoCA.Step();
                 Console.WriteLine(demoCA.StateAsString());
             }
-            Console.ReadKey();
-            Console.WriteLine("Hash " + demoCA.GetHashCode());
 
-            Console.WriteLine();
             Console.ReadKey();
             Console.WriteLine();
         }
