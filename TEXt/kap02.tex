@@ -86,13 +86,19 @@ Jako poslední si ukážeme mod CTR (Counter). Na vstup blokové šifry jdou data, kt
 
 \section{Útoky na šifry}
 
-bla
+Kvalita šifrování musí být posuzována v kontextu možných útokù. Pokaždé budeme pøedpokládat, že útoèník nezná tajný klíè (jinak by dokázal vše), ale že dùkladnì rozumí šifrovacímu algoritmu (viz Kerkhoffùv princip).
 
 \subsection{Rozdìlení podle povolených prostøedkù}
 
-ciphertext-only attack
-known plaintext attack
-chosen plaintext attack
+V knize \citep{Crypt} jsou útoky na šifry rozdìleny následujícím zpùsobem:
+
+Nejslabším typem útoku je \textsl{ciphertext-only attack}. Pøi nìm má útoèník možnost vidìt pouze ciphertexty. Pokud nìjaký šifrovací algoritmus snad dává možnost rozluštit plaintext pouze pøi znalosti cipthertextu, je to zcela nepoužitelný algoritmus.
+
+O mnoho silnìjší útok se nazývá \textsl{known-plaintext attack}. Pøi nìm má útoèník k dispozici dvojice ciphertext-plaintext. Na základì nasbíraných informací se snaží rozluštit jiný ciphertext. Musíme poèítat, že dvojici ciphertext-plaintext mùže v praxi útoèník pomìrnì snadno zístat. Napøíklad mùže útoèník uhodnout, jaká zpráva je odesílána, protože je to zjevné z délky zprávy a širšího kontextu. Nebo mùže odesílatel zbyteènì použít šifrovací mechanismus i v pøípadì pøenosu zprávy, která ve skuteènosti není tajná. Útoèník v danou chvíli mùže tøeba vidìt odesílateli danou zprávu pøes rameno a hned získá dvojici ciphertext-plaintext. A nakonec obèas i znalosti èásti plaintextu mùžu být prostøedkem k útoku. Známou èástí plaintextu mùže být napøíklad hlavièka nìjakého standardního souboru, padding, nebo automaticky vygenerovaný podpis na konci emailu.
+
+Ještì silnìjším útokem je \textsl{chosen-plaintext attack}. Pøi nìm si mùže útoèník sám urèit, jaká zpráva má být zašifrována a obdržet k ní odpovídající ciphertext. Jeho cílem je zase buï pøímo odvodit šifrovací klíè, nebo jiným zpùsobem získat možnost rozluštit ostatní ciphertexty.
+
+Posledním zesílením prostøedkù k útoku je \textsl{adaptivaly-chosen-plaintext attack}. Pøi nìm mùže útoèník nejen analyzovat dvojice plaintext-ciphertext, ale na základì jejich znalosti volit nové zprávy k zašifrování a získávat další dvojice plaintext-ciphertext, dokud nebude mít dostatek informací.
 
 \subsection{Pøíklady útokù}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  15 MAY 2016 19:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  18 MAY 2016 15:03
 entering extended mode
 **C:/Martin/MFF/_baka/TEXt/prace.tex
 (C:/Martin/MFF/_baka/TEXt/prace.tex
@@ -1013,7 +1013,7 @@ Overfull \hbox (35.70091pt too wide) in paragraph at lines 9--10
 20Cryptography#[]a=contents |
  []
 
-<diagramIF.png, id=453, 583.17876pt x 300.12125pt>
+<diagramIF.png, id=456, 583.17876pt x 300.12125pt>
 File: diagramIF.png Graphic file (type png)
  <use diagramIF.png>
 Package pdftex.def Info: diagramIF.png used on input line 23.
@@ -1023,7 +1023,7 @@ Package pdftex.def Info: diagramIF.png used on input line 23.
 
 
 ]
-<diagramCA.png, id=461, 1125.20375pt x 640.3925pt>
+<diagramCA.png, id=464, 1125.20375pt x 640.3925pt>
 File: diagramCA.png Graphic file (type png)
  <use diagramCA.png>
 Package pdftex.def Info: diagramCA.png used on input line 42.
@@ -1034,13 +1034,13 @@ Package pdftex.def Info: diagramCA.png used on input line 42.
 
 (kap03.tex
 Kapitola 4.
-<diagramKEAN.png, id=479, 716.6775pt x 258.9675pt>
+<diagramKEAN.png, id=482, 716.6775pt x 258.9675pt>
 File: diagramKEAN.png Graphic file (type png)
  <use diagramKEAN.png>
 Package pdftex.def Info: diagramKEAN.png used on input line 14.
 (pdftex.def)             Requested size: 304.44722pt x 110.96658pt.
 
-<diagramKEAD.png, id=482, 966.61125pt x 262.9825pt>
+<diagramKEAD.png, id=485, 966.61125pt x 262.9825pt>
 File: diagramKEAD.png Graphic file (type png)
  <use diagramKEAD.png>
 Package pdftex.def Info: diagramKEAD.png used on input line 23.
@@ -1057,13 +1057,13 @@ Package pdftex.def Info: diagramKEAD.png used on input line 23.
 
  (kapDalsi.tex
 Kapitola 5.
-<r60_tam.png, id=630, 322.20375pt x 299.1175pt>
+<r60_tam.png, id=633, 322.20375pt x 299.1175pt>
 File: r60_tam.png Graphic file (type png)
  <use r60_tam.png>
 Package pdftex.def Info: r60_tam.png used on input line 17.
 (pdftex.def)             Requested size: 213.40242pt x 199.17079pt.
 
-<r60_zpet.png, id=633, 322.20375pt x 685.56125pt>
+<r60_zpet.png, id=636, 322.20375pt x 685.56125pt>
 File: r60_zpet.png Graphic file (type png)
  <use r60_zpet.png>
 Package pdftex.def Info: r60_zpet.png used on input line 26.
@@ -1125,10 +1125,10 @@ Package rerunfilecheck Info: File `prace.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
  ) 
 Here is how much of TeX's memory you used:
- 22747 strings out of 493634
- 402003 string characters out of 3141311
- 523453 words of memory out of 3000000
- 25473 multiletter control sequences out of 15000+200000
+ 22751 strings out of 493634
+ 402052 string characters out of 3141311
+ 523482 words of memory out of 3000000
+ 25476 multiletter control sequences out of 15000+200000
  27501 words of font info for 84 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,8n,93p,2263b,916s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1155,9 +1155,9 @@ e1/public/cs/cssl12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fonts/type1
 /public/cs/csti12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fonts/type1/p
 ublic/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on prace.pdf (61 pages, 995575 bytes).
+Output written on prace.pdf (61 pages, 999031 bytes).
 PDF statistics:
- 850 PDF objects out of 1000 (max. 8388607)
- 173 named destinations out of 1000 (max. 500000)
+ 853 PDF objects out of 1000 (max. 8388607)
+ 174 named destinations out of 1000 (max. 500000)
  535 words of extra memory for PDF output out of 10000 (max. 10000000)
 

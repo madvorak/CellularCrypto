@@ -12,7 +12,7 @@ namespace Cellular
         protected bool[][] lookupT;
 
         /// <summary>
-        /// Creates a new basic CA of size 100 with 000...00100...000 as its initial state (faster variant).
+        /// Creates a new basic CA of size 100 with 000...00100...000 as its initial state (fast variant).
         /// The new CA will use rule No.30 : asymmetric, pseudo-chaotic behaviour.
         /// </summary>
         public ElementaryAutomatonFast(): base() 
@@ -21,7 +21,7 @@ namespace Cellular
         }
 
         /// <summary>
-        /// Creates a new basic CA with 000...00100...000 as its initial state (faster variant).
+        /// Creates a new basic CA with 000...00100...000 as its initial state (fast variant).
         /// The new CA will use rule No.30 : asymmetric, pseudo-chaotic behaviour.
         /// </summary>
         /// <param name="size">The size of the new CA.</param>
@@ -31,7 +31,7 @@ namespace Cellular
         }
 
         /// <summary>
-        /// Creates a new basic CA with given rule and 000...00100...000 as its initial state (faster variant).
+        /// Creates a new basic CA with given rule and 000...00100...000 as its initial state (fast variant).
         /// </summary>
         /// <param name="ruleNo">The code of the elementary rule (from 0 to 255).</param>
         /// <param name="size">The size of the new CA.</param>
@@ -41,7 +41,7 @@ namespace Cellular
         }
 
         /// <summary>
-        /// Creates a new basic CA with given rule and initial state (faster variant).
+        /// Creates a new basic CA with given rule and initial state (fast variant).
         /// </summary>
         /// <param name="ruleNo">The code of the elementary rule (from 0 to 255).</param>
         /// <param name="initialState">A <c>BitArray</c> describing the initial state of the CA.
