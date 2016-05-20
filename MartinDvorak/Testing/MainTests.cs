@@ -15,17 +15,14 @@ namespace Testing
         /// </summary>
         public static void RunTest()
         {
-            FunctionTestsForThesis evaluator = new FunctionTestsForThesis();
-
+            FunctionTestsForThesis evaluator = new FunctionTestsForThesis(new FunctionTesting(false));
+            
             Console.WriteLine("KeyExtenderCopy:");
             Console.WriteLine(evaluator.CalculateAndPrintResults(new KeyExtenderCopy()));
 
             Console.WriteLine("KeyExtenderCheating:");
             Console.WriteLine(evaluator.CalculateAndPrintResults(new KeyExtenderCheating()));
-
-            /*const int ruleNo = 30;
-            IBinaryCA automaton = new ElementaryFastAutomaton(ruleNo, 1);*/
-
+            
             IBinaryCA automaton = Factory.CreateAutomaton(File.ReadAllText("ca.txt"));
 
             Console.WriteLine($"KeyExtenderSimpleLinear using {automaton.TellType()}:");

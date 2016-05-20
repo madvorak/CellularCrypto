@@ -8,6 +8,7 @@ namespace Crypto
     class FunctionTestsForThesis
     {
         private FunctionTesting tester;
+        private double mean;
 
         /// <summary>
         /// If you use this constructor, you are able to inject Levenshtein Distance.
@@ -15,6 +16,14 @@ namespace Crypto
         public FunctionTestsForThesis(FunctionTesting functionTesting)
         {
             tester = functionTesting;
+            if (tester.isLevenshteinInside())
+            {
+                mean = 0.29;
+            }
+            else
+            {
+                mean = 0.5;
+            }
         }
 
         /// <summary>
@@ -31,13 +40,13 @@ namespace Crypto
         /// </summary>
         private double rescale(double value)
         {
-            if (value < 0.5)
+            if (value <= mean)
             {
-                return 2 * value;
+                return value / mean;
             }
             else
             {
-                return 2 * (1 - value);
+                return (1 - value) / (1 - mean);
             }
         }
 

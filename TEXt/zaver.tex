@@ -1,2 +1,21 @@
 \chapter*{Závìr}
 \addcontentsline{toc}{chapter}{Závìr}
+
+Nejlépe dopadl algoritmus, který jsme uvažovali hned jako první možnost:
+KeyExtenderSimpleQuadratic using rule No. 30:
+   TestEntropy        : 0,983
+   TestCompression    : 0,993
+   TestAverageDistance: 1,000
+   TestBitChange      : 0,856
+   TestLargestBall    : 0,631
+Jeho nevýhodou ale je kvadratická èasová složitost.
+
+Z algoritmù s lineární èasovou složitostí dopadl nejlépe: 
+KeyExtenderInterlaced(10, 0) using Cyclic Binary automaton with rule 00010010111111001100100010011110:
+   TestEntropy        : 0,975
+   TestCompression    : 0,984
+   TestAverageDistance: 1,000
+   TestBitChange      : 0,863
+   TestLargestBall    : 0,463
+   
+Závìrem je, že žádný z našich šifrovacích algoritmù není natolik kvalitní, abychom ho mohli používat pro kritické bezpeènostní aplikace.

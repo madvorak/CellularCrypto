@@ -1,18 +1,3 @@
-Výkon elementárních automatù o velikosti 2^24 bunìk pøi provedení 10 krokù výpoètu (mìøeno na pravidle èíslo 30):
-
-ElementaryAutomaton: 5049 ms
-ElementaryAutomatonFast: 4332 ms
-ElementaryAutomatonFaster: 2427 ms
-ElementaryAutomatonParallel: 3789 ms
-BinaryRangeAutomaton: 2559 ms
-
-
-
-
-
-
-
-
 No. 30: chaotický
 
 KeyExtenderCopy:
@@ -44,11 +29,11 @@ KeyExtenderInterlaced(10, 0) using rule No. 30:
    TestLargestBall    : 0,463
 
 KeyExtenderUncertain using rule No. 30:
-   TestEntropy        : 0,473
-   TestCompression    : 0,481
-   TestAverageDistance: 0,992
-   TestBitChange      : 0,900
-   TestLargestBall    : 0,300
+   TestEntropy        : 0,479
+   TestCompression    : 0,487
+   TestAverageDistance: 1,000
+   TestBitChange      : 0,903
+   TestLargestBall    : 0,631
 
 KeyExtenderSimpleLinear using Game of Life:
    TestEntropy        : 0,502
@@ -70,13 +55,6 @@ KeyExtenderSimpleQuadratic using rule No. 30:
    TestAverageDistance: 1,000
    TestBitChange      : 0,856
    TestLargestBall    : 0,631
-
-KeyExtenderUncertain using using Game of Life:
-   TestEntropy        : 0,113
-   TestCompression    : 0,043
-   TestAverageDistance: 0,000
-   TestBitChange      : 0,194
-   TestLargestBall    : -1,100
 
 
 
@@ -122,10 +100,10 @@ KeyExtenderInterlaced(10, 0) using rule No. 90:
    TestLargestBall    : 0,775
 
 KeyExtenderUncertain using rule No. 90:
-   TestEntropy        : 0,909
-   TestCompression    : 0,513
-   TestAverageDistance: 1,000
-   TestBitChange      : 0,879
+   TestEntropy        : 0,494
+   TestCompression    : 0,499
+   TestAverageDistance: 0,999
+   TestBitChange      : 0,881
    TestLargestBall    : 0,631
 
 KeyExtenderSimpleQuadratic using rule No. 90:
@@ -181,7 +159,7 @@ KeyExtenderUncertain using rule No. 220:
    TestCompression    : 0,000
    TestAverageDistance: 0,000
    TestBitChange      : 0,000
-   TestLargestBall    : -1,425
+   TestLargestBall    : 0,319
 
 KeyExtenderSimpleQuadratic using rule No. 220:
    TestEntropy        : 0,000
@@ -233,11 +211,11 @@ KeyExtenderInterlaced(10, 0) using rule No. 94:
    TestLargestBall    : 0,425
 
 KeyExtenderUncertain using rule No. 94:
-   TestEntropy        : 0,490
-   TestCompression    : 0,063
+   TestEntropy        : 0,000
+   TestCompression    : 0,000
    TestAverageDistance: 0,000
-   TestBitChange      : 0,858
-   TestLargestBall    : 0,294
+   TestBitChange      : 0,086
+   TestLargestBall    : 0,475
 
 KeyExtenderSimpleQuadratic using rule No. 94:
    TestEntropy        : 0,043
@@ -286,11 +264,11 @@ KeyExtenderInterlaced(10, 0) using rule No. 110:
    TestLargestBall    : 0,463
 
 KeyExtenderUncertain using rule No. 110:
-   TestEntropy        : 0,621
-   TestCompression    : 0,449
+   TestEntropy        : 0,459
+   TestCompression    : 0,456
    TestAverageDistance: 1,000
-   TestBitChange      : 0,914
-   TestLargestBall    : 0,294
+   TestBitChange      : 0,948
+   TestLargestBall    : 0,463
 
 KeyExtenderSimpleQuadratic using rule No. 110:
    TestEntropy        : 0,634
@@ -340,11 +318,11 @@ KeyExtenderInterlaced(10, 0) using Binary automaton with rule 000100101111110011
 
 KeyExtenderUncertain using Binary automaton with rule 00010010111111001100100010
 011110:
-   TestEntropy        : 0,615
-   TestCompression    : 0,482
-   TestAverageDistance: 0,998
-   TestBitChange      : 0,940
-   TestLargestBall    : 0,306
+   TestEntropy        : 0,474
+   TestCompression    : 0,483
+   TestAverageDistance: 0,999
+   TestBitChange      : 0,964
+   TestLargestBall    : 0,463
 
 KeyExtenderSimpleQuadratic using Binary automaton with rule 00010010111111001100
 100010011110:
@@ -363,48 +341,50 @@ KeyExtenderSimpleQuadratic using Binary automaton with rule 00010010111111001100
 Cyklický automat s 2-okolím:
 
 KeyExtenderCopy:
-   TestEntropy        : 0,659
+   TestEntropy        : 0,658
    TestCompression    : 0,022
-   TestAverageDistance: 0,997
+   TestAverageDistance: 0,999
    TestBitChange      : 0,020
-   TestLargestBall    : 0,163
+   TestLargestBall    : 0,138
 
 KeyExtenderCheating:
    TestEntropy        : 0,984
    TestCompression    : 0,993
-   TestAverageDistance: 0,999
-   TestBitChange      : 0,999
+   TestAverageDistance: 0,998
+   TestBitChange      : 0,996
    TestLargestBall    : 0,619
 
-KeyExtenderSimpleLinear using Binary automaton with rule 00010010111111001100100010011110:
+KeyExtenderSimpleLinear using Cyclic Binary automaton with rule 0001001011111100
+1100100010011110:
    TestEntropy        : 0,872
    TestCompression    : 0,183
-   TestAverageDistance: 0,996
-   TestBitChange      : 0,117
-   TestLargestBall    : 0,450
-
-KeyExtenderInterlaced(10, 0) using Binary automaton with rule 00010010111111001100100010011110:
-   TestEntropy        : 0,971
-   TestCompression    : 0,980
-   TestAverageDistance: 0,999
-   TestBitChange      : 0,881
+   TestAverageDistance: 0,997
+   TestBitChange      : 0,113
    TestLargestBall    : 0,463
 
-KeyExtenderUncertain using Binary automaton with rule 00010010111111001100100010011110:
-   TestEntropy        : 0,615
-   TestCompression    : 0,482
-   TestAverageDistance: 0,999
-   TestBitChange      : 0,943
-   TestLargestBall    : 0,319
+KeyExtenderInterlaced(10, 0) using Cyclic Binary automaton with rule 00010010111
+111001100100010011110:
+   TestEntropy        : 0,975
+   TestCompression    : 0,984
+   TestAverageDistance: 1,000
+   TestBitChange      : 0,863
+   TestLargestBall    : 0,463
 
-KeyExtenderSimpleQuadratic using Binary automaton with rule 00010010111111001100100010011110:
-   TestEntropy        : 0,789
-   TestCompression    : 0,679
-   TestAverageDistance: 0,818
-   TestBitChange      : 0,736
-   TestLargestBall    : 0,400
+KeyExtenderUncertain using Cyclic Binary automaton with rule 0001001011111100110
+0100010011110:
+   TestEntropy        : 0,475
+   TestCompression    : 0,484
+   TestAverageDistance: 0,997
+   TestBitChange      : 0,955
+   TestLargestBall    : 0,475
 
-
+KeyExtenderSimpleQuadratic using Cyclic Binary automaton with rule 0001001011111
+1001100100010011110:
+   TestEntropy        : 0,787
+   TestCompression    : 0,678
+   TestAverageDistance: 0,808
+   TestBitChange      : 0,802
+   TestLargestBall    : 0,375
 
 
 
@@ -439,5 +419,9 @@ KeyExtenderInterlaced(10, 0) using Amoeba Universe:
    TestBitChange      : 0,804
    TestLargestBall    : 0,231
 
-
-TODO: pøemìøit KeyExtenderUncertain po zmìnì!
+KeyExtenderUncertain using Amoeba Universe:
+   TestEntropy        : 0,000
+   TestCompression    : 0,000
+   TestAverageDistance: 0,000
+   TestBitChange      : 0,207
+   TestLargestBall    : -0,150

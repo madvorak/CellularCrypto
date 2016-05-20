@@ -1,0 +1,142 @@
+No. 30: chaotický
+
+KeyExtenderCopy:
+   TestEntropy        : 0,659
+   TestCompression    : 0,022
+   TestAverageDistance: 0,999
+   TestBitChange      : 0,034
+   TestLargestBall    : 0,525
+
+KeyExtenderCheating:
+   TestEntropy        : 0,984
+   TestCompression    : 0,993
+   TestAverageDistance: 0,990
+   TestBitChange      : 0,988
+   TestLargestBall    : 1,138
+
+KeyExtenderSimpleLinear using Basic Automaton No. 30:
+   TestEntropy        : 0,895
+   TestCompression    : 0,172
+   TestAverageDistance: 0,995
+   TestBitChange      : 0,123
+   TestLargestBall    : 0,981
+
+KeyExtenderInterlaced(10, 0) using Basic Automaton No. 30:
+   TestEntropy        : 0,977
+   TestCompression    : 0,985
+   TestAverageDistance: 0,991
+   TestBitChange      : 0,927
+   TestLargestBall    : 0,838
+
+KeyExtenderUncertain using Basic Automaton No. 30:
+   TestEntropy        : 0,476
+   TestCompression    : 0,489
+   TestAverageDistance: 0,993
+   TestBitChange      : 0,440
+   TestLargestBall    : 1,150
+
+KeyExtenderSimpleQuadratic using Basic Automaton No. 30:
+   TestEntropy        : 0,983
+   TestCompression    : 0,993
+   TestAverageDistance: 0,991
+   TestBitChange      : 0,976
+   TestLargestBall    : 0,981
+
+
+
+No. 90 fraktální:
+
+KeyExtenderSimpleLinear using Basic Automaton No. 90:
+   TestEntropy        : 0,904
+   TestCompression    : 0,183
+   TestAverageDistance: 0,995
+   TestBitChange      : 0,105
+   TestLargestBall    : 1,150
+
+KeyExtenderInterlaced(10, 0) using Basic Automaton No. 90:
+   TestEntropy        : 0,984
+   TestCompression    : 0,993
+   TestAverageDistance: 0,991
+   TestBitChange      : 0,748
+   TestLargestBall    : 1,150
+
+KeyExtenderUncertain using Basic Automaton No. 90:
+   TestEntropy        : 0,494
+   TestCompression    : 0,499
+   TestAverageDistance: 0,992
+   TestBitChange      : 0,405
+   TestLargestBall    : 0,969
+
+KeyExtenderSimpleQuadratic using Basic Automaton No. 90:
+   TestEntropy        : 0,683
+   TestCompression    : 0,277
+   TestAverageDistance: 0,574
+   TestBitChange      : 0,403
+   TestLargestBall    : 0,006
+
+
+
+
+No. 110: Turing-complete:
+
+KeyExtenderSimpleLinear using Basic Automaton No. 110:
+   TestEntropy        : 0,858
+   TestCompression    : 0,175
+   TestAverageDistance: 0,976
+   TestBitChange      : 0,121
+   TestLargestBall    : 0,931
+
+KeyExtenderInterlaced(10, 0) using Basic Automaton No. 110:
+   TestEntropy        : 0,972
+   TestCompression    : 0,986
+   TestAverageDistance: 0,998
+   TestBitChange      : 0,861
+   TestLargestBall    : 0,956
+
+KeyExtenderUncertain using Basic Automaton No. 110:
+   TestEntropy        : 0,453
+   TestCompression    : 0,456
+   TestAverageDistance: 0,994
+   TestBitChange      : 0,405
+   TestLargestBall    : 0,994
+
+KeyExtenderSimpleQuadratic using Basic Automaton No. 110:
+   TestEntropy        : 0,635
+   TestCompression    : 0,092
+   TestAverageDistance: 0,769
+   TestBitChange      : 0,697
+   TestLargestBall    : 0,813
+
+
+
+
+
+2D automat Amoeba Universe:
+
+KeyExtenderSimpleLinear using Amoeba Universe:
+   TestEntropy        : 0,791
+   TestCompression    : 0,811
+   TestAverageDistance: 0,992
+   TestBitChange      : 0,991
+   TestLargestBall    : 0,813
+
+KeyExtenderInterlaced(10, 0) using Amoeba Universe:
+   TestEntropy        : 0,520
+   TestCompression    : 0,528
+   TestAverageDistance: 0,967
+   TestBitChange      : 0,928
+   TestLargestBall    : 0,750
+
+KeyExtenderUncertain using Amoeba Universe:
+   TestEntropy        : 0,000
+   TestCompression    : 0,000
+   TestAverageDistance: 0,000
+   TestBitChange      : 0,099
+   TestLargestBall    : 0,213
+
+KeyExtenderSimpleQuadratic using Amoeba Universe:
+   TestEntropy        : 0,000
+   TestCompression    : -0,001
+   TestAverageDistance: 0,158
+   TestBitChange      : 0,008
+   TestLargestBall    : 0,481

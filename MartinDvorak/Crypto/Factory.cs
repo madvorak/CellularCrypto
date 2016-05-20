@@ -42,7 +42,7 @@ namespace Crypto
                 {
                     rule[i] = ruleString[i] == '1';
                 }
-                return new BinaryRangeAutomaton(2, rule, 1);
+                return new BinaryRangeCyclicAutomaton(2, rule, 1);
             }
             else if (description.StartsWith("Totalistic"))
             {

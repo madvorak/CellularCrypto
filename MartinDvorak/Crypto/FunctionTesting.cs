@@ -20,6 +20,11 @@ namespace Crypto
         private delegate double DistanceDelegate(BitArray u, BitArray v);
         private DistanceDelegate distanceFunction;
 
+        /// <summary>
+        /// Creates a new instance of FunctionTesting.
+        /// </summary>
+        /// <param name="useLevenshteinDistance">Should it use Levenshtein distance instead of Hamming distance?
+        /// Note that Levenshtein distance is much slower to calculate. Default is Hamming distance.</param>
         public FunctionTesting(bool useLevenshteinDistance = false)
         {
             if (useLevenshteinDistance)
@@ -99,6 +104,11 @@ namespace Crypto
             }
 
             return (double)d[upper, upper] / upper;
+        }
+
+        public bool isLevenshteinInside()
+        {
+            return (distanceFunction == LevensteinDistance);
         }
 
         /// <summary>

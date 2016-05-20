@@ -15,10 +15,10 @@ class Program
         //Crypto.Export.GetEncrypterStreamCA().Encrypt(new System.IO.FileStream(@"c:\Martin\stuff\John_Beak_Sigh.png", System.IO.FileMode.Open),
         //    new System.IO.FileStream(@"c:\Martin\stuff\John_Beak.cry", System.IO.FileMode.CreateNew), "heslo");
         rnd = new Random();
-        ElementaryImplementationsTest.RunTest();
-        ElementaryTimeMeasure.RunTest();
         MainTests.RunTest();
         GeneticTest.RunTest();
+        ElementaryImplementationsTest.RunTest();
+        ElementaryTimeMeasure.RunTest();
         Adapter.DisplayForm();
         FactoryTest.RunTest();
         FunctionTestTest.RunTest();

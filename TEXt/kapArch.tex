@@ -86,7 +86,7 @@ Nejedná se o žádné Unit testy, ale o pomìrnì chaotickou hromadu metod, které umo
 
 Okenní aplikace, umožòuje šifrovat a dešifrovat. V podstatì realizuje jen volbu vstupního a výstupního souboru. O zbytek se stará projekt MartinDvorak. 
 
-Nejvìtší možná velikost šifrovaného souboru je 128MB. Dùvodem je, že pro vìtší velikost by již bylo potøeba použít BitArray o velikosti 256MB a protože se velikost zadává v poètu bitù a argument je typu int, bylo by potøeba vložit hodnotu $2^{31}$, ale nejvyšší hodnota intu je $2^{31}-1$. I kdyby nebylo nutné použít kontruktor se zadáním pøesného poètu bitù (ale bral by tøeba poèet bytù), tak tím by int mohl sloužit ještì k indexaci bitù v poli o velikosti pøesnì 256MB, ale ne vìtšího.
+Nejvìtší možná velikost šifrovaného souboru je 128MB. Dùvodem je, že pro vìtší velikost by již bylo potøeba použít BitArray o velikosti 256MB a protože se velikost zadává v poètu bitù a argument je typu int, bylo by potøeba vložit hodnotu $2^{31}$, ale nejvyšší hodnota intu je $2^{31}-1$. I kdyby nebylo nutné použít konstruktor se zadáním pøesného poètu bitù (ale bral by tøeba poèet bytù), tak tím by int mohl sloužit ještì k indexaci bitù v poli o velikosti pøesnì 256MB, ale ne vìtšího.
 
 Limit by mohl být zvýšen, pokud bychom vytvoøili vlastní implementaci BitArray, která by pro urèení velikosti a indexaci používala typ uint, nebo ještì lépe long. Nicménì by to asi nebylo velmi užiteèné rozšíøení, protože už šifrování souboru o velikosti 256MB trvá nìkolik minut.
 
