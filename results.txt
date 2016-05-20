@@ -4,7 +4,7 @@ ElementaryAutomaton: 5049 ms
 ElementaryAutomatonFast: 4332 ms
 ElementaryAutomatonFaster: 2427 ms
 ElementaryAutomatonParallel: 3789 ms
-BinaryRangeAutomaton: 2494 ms
+BinaryRangeAutomaton: 2559 ms
 
 
 

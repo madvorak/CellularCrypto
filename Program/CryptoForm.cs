@@ -29,11 +29,13 @@ namespace Program
             {
                 if (saveDialog.ShowDialog() == DialogResult.OK)
                 {
+                    Text = "In progress...";
                     Stream input = openDialog.OpenFile();
                     Stream output = saveDialog.OpenFile();
                     crypto.Encrypt(input, output, textBoxPassword.Text);
                     input.Dispose();
                     output.Dispose();
+                    Text = "Done";
                 }
             }
         }

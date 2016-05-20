@@ -39,14 +39,14 @@ Balíèek Cellular je navržet tak, aby sloužil nejen ke konkrétnímu šifrovacímu al
 
 \begin{figure}
 \centering
-\includegraphics[width=150mm, height=80mm]{diagramCA.png}
+\includegraphics[width=155mm, height=80mm]{diagramCA.png}
 \caption{Diagram hierarchie celulárních automatù}
 \label{diagramca}
 \end{figure}
 
 Tìžištìm práce jsou binární automaty, protože jsou jejich výstupy snadno zpracovatelné a protože je jejich chování dostateènì komplexní a rozmanité, aby dokázaly nasimulovat jakýkoliv druh automatu. Nicménì byly ve velmi omezené míøe implementovány i jiné než binární automaty.
 
-Abstraktní OOP pøístup pøirozenì vede k \uv{diamond inheritance problem} napøíklad mezi ètveøicí abstraktních tøíd: úplnì obecný CA, obecný jednorozmìrný CA, jakýkoliv binární CA a jednorozmìrný binární CA. Protože C\# nepodporuje vícenásobnou dìdiènost, bylo vytvoøeno rozhraní IBinaryCA, které implementují všechny binární celulární automaty. Takový poèin má jisté výhody i nevýhody. Výhodou je, že IBinaryCA je už ze sémantiky rozhraním. I kdyby byl abstraktní tøídou, nemá vlastní datové položky ani vlastní implementaci metod, takže je použití interfacu vhodné. Nevýhodou interfacu je, že není možné vynutit, aby rozhraní IBinaryCA implementovaly pouze podtøídy CellularAutomaton, takže není možné C\# \uv{nauèit} že IBinaryCA leží v hierarchii pod CellularAutomaton.
+Abstraktní OOP pøístup pøirozenì vede k \uv{diamond inheritance problem} napøíklad mezi ètveøicí abstraktních tøíd: úplnì obecný CA, obecný jednorozmìrný CA, jakýkoliv binární CA a jednorozmìrný binární CA. Protože C\# nepodporuje vícenásobnou dìdiènost, bylo vytvoøeno rozhraní IBinaryCA, které implementují všechny binární celulární automaty. Takový poèin má jisté výhody i nevýhody. Výhodou je, že IBinaryCA je už ze sémantiky rozhraním. I kdyby byl abstraktní tøídou, nemá vlastní datové položky ani vlastní implementaci metod, takže je použití interfacu vhodné. Nevýhodou interfacu je to, že není možné vynutit, aby rozhraní IBinaryCA implementovaly pouze podtøídy CellularAutomaton.
 
 \subsection{Ukládání stavu celulárního automatu}
 
@@ -64,7 +64,11 @@ Datové položky ukládající stav byly navržené jako immutable. Takže napøíklad nen
 
 \subsection{Optimalizace výpoètu elementárních automatù}
 
-Pøi bìzném výpoètu nového stavu (ElementaryAutomaton) se musí vždy podle stavu 3 bunìk rozhodnout stav 1 nové buòky. To je mírnì neefektivní. Kdykoliv se vyskytne ve stavu elementárního automatu stejný blok, nový stav tìch bunìk v dalším kroku, kromì buòky úplnì vlevo a buòky úplnì vpravo, je vždy stejný. Proto by se mohl uspoøit èas výpoètu (hlavnì snížením poètu podmínìných skokù pøi vykonávání), kdyby se celé bloky zobrazovaly na celé bloky podle nìjaké pøedgenerované lookup table. Tato optimalizace byla naimplementována v tøídì ElementaryFastAutomaton, kde bylo zvoleno mapování vždy 10 bunìk na nových 8 bunìk. Starší implementace ElementaryFastAutomaton provedla stejný výpoèet za 62\% èasu, co potøeboval  ElementaryAutomaton. Novìjší a lepší implementace ElementaryFastAutomaton se dostala na 48\%. Pro zajímavost: vyvolání úplnì stejného výpoètu pomocí obecnìjší tøídy BinaryRangeAutomaton trvalo 110\% èasu co obyèejný ElementaryAutomaton. Takže celkový pomìr v efektivitì mezi tou nejspecializovanìjší a tou nejménì specifickou tøídou (která je ale stále ještì binárním CA) pro simulace základních 256 CA je asi 2,3x.
+Pøi výpoètu nového stavu ve tøídì ElementaryAutomaton se musí vždy podle stavu 3 bunìk rozhodnout stav 1 nové buòky (a nový stav se získává z trojrozmìrného pole o velikost 2x2x2). To je neefektivní, protože poèet ètení stavu je zde tøikrát vìtší než poèet vytváøených stavù. Kdykoliv se vyskytne ve stavu elementárního automatu stejný blok, nový stav tìch bunìk v dalším kroku, kromì buòky úplnì vlevo a buòky úplnì vpravo, je vždy stejný. Proto by se mohl uspoøit èas výpoètu (hlavnì snížením poètu podmínìných skokù pøi vykonávání), kdyby se celé bloky zobrazovaly na celé bloky podle nìjaké pøedgenerované lookup tabulky. Tato optimalizace byla naimplementována v tøídì ElementaryAutomatonFast, kde bylo zvoleno mapování vždy 10 bunìk na nových 8 bunìk. Na konci práce na roèníkovém projektu byla knihovna v tomto stavu: 256 elementární CA mohly simulovat tøi rùzné tøídy, pøièemž ElementaryAutomatonFast to dìlal nejrychleji, ElementaryAutomaton støednì rychle a BinaryRangeAutomaton nejpomaleji.
+
+Bìhem programování bakaláøské práce byla vìtšina èasu vìnována ostatním jmenným prostorùm, ale v posledních mìsících došlo i na optimalizaci výpoètu celulárních automatù. Protože BinaryRangeAutomaton provádìl k urèení stavu každé nové buòky $1+2r$ ètení pøedchozích stavù, kde $r$ je poèet používaných bunìk na každou stranu, byla zvolena jiná implementace. Nyní jsou právì pøeètené buòky uloženy v èíselné promìnné (kterou lze indexovat do pole popisujícího pravidlo) a pøi pøesunu na novou buòku je èíselná hodnota pouze zdvojnásobena (s oøíznutím na správnou velikost, aby se zahodila buòka úplnì vlevo) a pøièten stav buòky úplnì vpravo. Nová implementace BinaryRangeAutomaton byla natolik rychlá, že dokonce porazila ElementaryAutomatonFast pøi simulaci elementárních automatù. Tím jsme se pouèili pro vytvoøení ještì lepší implementace elementárních CA, která také ète každou buòku jen jednou, prùbìžný stav uchovává v èíselné promìnné a indexuje do jednorozmìrného pole popisujícího pravidlo (rychlost nové implementace BinaryRangeAutomaton totiž ukázala, že je to rychlejší než lookup tabulka). Tato implementace by mìla kombinovat výhodu nové implementace BinaryRangeAutomaton s výhodou specifické implementace na pøedem známou velikost pravidla.
+
+Byla tak vytvoøena tøída ElementaryAutomatonFaster a pak ještì její paralelní implementace ve tøídì ElementaryAutomatonParallel. Pøi mìøení výkonu jsme zjistili, že ve srovnání s výpoètem pomocí tøídy ElementaryAutomaton dosáhla implementace ElementaryAutomatonFast 86\% èasu, ElementaryAutomatonFaster dosáhl pouhých 48\% èasu, ElementaryAutomatonParallel to mìl za 75\% èasu s BinaryRangeAutomaton za 51\% èasu. Neefektivita paralelní implementace byla zklamáním. Pro malé velikosti automatu se jistì nevyplatí kvùli režii spouštìní vláken a pro velké velikosti automatu je pravdìpodobnì problém s paralelním ètením velkého množství dat z pamìti (a souèasným zápisem).
 
 \section{Crypto}
 
@@ -80,7 +84,11 @@ Nejedná se o žádné Unit testy, ale o pomìrnì chaotickou hromadu metod, které umo
 
 \section{Program}
 
-Okenní aplikace, umožòuje šifrovat a dešifrovat. V podstatì realizuje jen volbu vstupního a výstupního souboru. O zbytek se stará projekt MartinDvorak.
+Okenní aplikace, umožòuje šifrovat a dešifrovat. V podstatì realizuje jen volbu vstupního a výstupního souboru. O zbytek se stará projekt MartinDvorak. 
+
+Nejvìtší možná velikost šifrovaného souboru je 128MB. Dùvodem je, že pro vìtší velikost by již bylo potøeba použít BitArray o velikosti 256MB a protože se velikost zadává v poètu bitù a argument je typu int, bylo by potøeba vložit hodnotu $2^{31}$, ale nejvyšší hodnota intu je $2^{31}-1$. I kdyby nebylo nutné použít kontruktor se zadáním pøesného poètu bitù (ale bral by tøeba poèet bytù), tak tím by int mohl sloužit ještì k indexaci bitù v poli o velikosti pøesnì 256MB, ale ne vìtšího.
+
+Limit by mohl být zvýšen, pokud bychom vytvoøili vlastní implementaci BitArray, která by pro urèení velikosti a indexaci používala typ uint, nebo ještì lépe long. Nicménì by to asi nebylo velmi užiteèné rozšíøení, protože už šifrování souboru o velikosti 256MB trvá nìkolik minut.
 
 \section{CryptographyUnitTests}
 
