@@ -19,7 +19,7 @@ namespace Crypto
         private const int saltLength = 16;
 
         /// <summary>
-        /// Creates a new <c>EncrypterWrapper</c>.
+        /// Creates a new <c>EncryptionProvider</c>.
         /// </summary>
         /// <param name="encryptionAlgorithm">Encryption algorithm to be used.</param>
         public EncryptionProvider(IEncrypter encryptionAlgorithm)
@@ -32,7 +32,7 @@ namespace Crypto
         /// <summary>
         /// Encrypts a stream using a given cryptography key.
         /// </summary>
-        /// <param name="inputStream">Input stream (plaintext).</param>
+        /// <param name="inputStream">Input stream (contains plaintext).</param>
         /// <param name="outputStream">Output strean (ciphertext will be written here).</param>
         /// <param name="key">Encryption key.</param>
         /// <param name="salt">The salt is only written at the beginning of the output stream. 
@@ -48,18 +48,16 @@ namespace Crypto
             inputStream.Read(buffer, 0, buffer.Length);
             BitArray plaintext = new BitArray(buffer);
             BitArray ciphertext = encrypter.Encrypt(plaintext, key);
-            //inputStream.Dispose();
 
             outputStream.Write(salt, 0, salt.Length);
             ciphertext.CopyTo(buffer, 0);
             outputStream.Write(buffer, 0, buffer.Length);
-            //outputStream.Dispose();
         }
 
         /// <summary>
         /// Encrypts a stream using a given cryptography key.
         /// </summary>
-        /// <param name="inputStream">Input stream (plaintext).</param>
+        /// <param name="inputStream">Input stream (contains plaintext).</param>
         /// <param name="outputStream">Output strean (ciphertext will be written here).</param>
         /// <param name="key">Encryption key.</param>
         /// <param name="salt">The salt is only written at the beginning of the output stream. 
@@ -72,7 +70,7 @@ namespace Crypto
         /// <summary>
         /// Encrypts a stream. This method uses password and salt to create the encryption key.
         /// </summary>
-        /// <param name="inputStream">Input stream (plaintext).</param>
+        /// <param name="inputStream">Input stream (contains plaintext).</param>
         /// <param name="outputStream">Output strean (ciphertext will be written here).</param>
         /// <param name="password">Password from user.</param>
         /// <param name="salt">Salt to create the key (will be written to the output stream, too).</param>
@@ -85,7 +83,7 @@ namespace Crypto
         /// Encrypts a stream using a given password.
         /// Salt is generated randomly and written at the beginning of the output stream.
         /// </summary>
-        /// <param name="inputStream">Input stream (plaintext).</param>
+        /// <param name="inputStream">Input stream (contains plaintext).</param>
         /// <param name="outputStream">Output strean (ciphertext will be written here).</param>
         /// <param name="password">Password from user.</param>
         public void Encrypt(Stream inputStream, Stream outputStream, string password)
@@ -98,7 +96,7 @@ namespace Crypto
         /// <summary>
         /// Decrypts a stream using a password. Salt is read from the beginning of the stream.
         /// </summary>
-        /// <param name="inputStream">Input stream (ciphertext).</param>
+        /// <param name="inputStream">Input stream (contains ciphertext).</param>
         /// <param name="outputStream">Output strean (plaintext will be written here).</param>
         /// <param name="password">Password from user.</param>
         public void Decrypt(Stream inputStream, Stream outputStream, string password)
@@ -109,13 +107,11 @@ namespace Crypto
             BitArray key = new BitArray(calculateHash(password, salt));
 
             inputStream.Read(buffer, 0, buffer.Length);
-            //inputStream.Dispose();
             BitArray ciphertext = new BitArray(buffer);
             BitArray plaintext = encrypter.Encrypt(ciphertext, key);
 
             plaintext.CopyTo(buffer, 0);
             outputStream.Write(buffer, 0, buffer.Length);
-            //outputStream.Dispose();
         }
 
         /// <summary>

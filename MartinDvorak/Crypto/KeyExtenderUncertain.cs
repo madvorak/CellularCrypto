@@ -101,7 +101,7 @@ namespace Crypto
 
                     innerCA.Step();
                     position = 1;
-                    return innerCA.GetValueAt(position + padding);
+                    return innerCA.GetValueAt(padding);
                 }
             }
         }
