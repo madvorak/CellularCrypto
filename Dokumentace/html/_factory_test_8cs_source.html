@@ -62,7 +62,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -100,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keywordflow">foreach</span> (<a class="code" href="class_crypto_1_1_key_extender_abstract_d.html">KeyExtenderAbstractD</a> kead <span class="keywordflow">in</span> <a class="code" href="class_crypto_1_1_factory.html">Factory</a>.<a class="code" href="class_crypto_1_1_factory.html#abd5015e25ff66c3cf46bab4d67e60ce5">GatherSuccessfulExtenders</a>(<span class="stringliteral">@&quot;c:\Martin\MFF\_baka\xtenderSearch\&quot;</span>))</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                Console.WriteLine(kead.GetInfo());</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                Console.WriteLine(kead.<a class="code" href="class_crypto_1_1_key_extender_abstract_d.html#a954261bd6f533ad7745beac9ce89dd6e">GetInfo</a>());</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            }</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        }</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
@@ -108,6 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_crypto_1_1_factory_html"><div class="ttname"><a href="class_crypto_1_1_factory.html">Crypto.Factory</a></div><div class="ttdoc">Factory class containing methods for building cellular automata and key extenders from textual descri...</div><div class="ttdef"><b>Definition:</b> <a href="_factory_8cs_source.html#l00013">Factory.cs:13</a></div></div>
 <div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
 <div class="ttc" id="class_crypto_1_1_key_extender_abstract_d_html"><div class="ttname"><a href="class_crypto_1_1_key_extender_abstract_d.html">Crypto.KeyExtenderAbstractD</a></div><div class="ttdoc">Abstract class for all key extenders that implement DoubleKey(). Method ExtendKey() is provided (iter...</div><div class="ttdef"><b>Definition:</b> <a href="_key_extender_abstract_d_8cs_source.html#l00009">KeyExtenderAbstractD.cs:9</a></div></div>
+<div class="ttc" id="class_crypto_1_1_key_extender_abstract_d_html_a954261bd6f533ad7745beac9ce89dd6e"><div class="ttname"><a href="class_crypto_1_1_key_extender_abstract_d.html#a954261bd6f533ad7745beac9ce89dd6e">Crypto.KeyExtenderAbstractD.GetInfo</a></div><div class="ttdeci">abstract string GetInfo()</div></div>
 <div class="ttc" id="class_testing_1_1_factory_test_html"><div class="ttname"><a href="class_testing_1_1_factory_test.html">Testing.FactoryTest</a></div><div class="ttdoc">This test demonstrates how Crypto.Factory works. </div><div class="ttdef"><b>Definition:</b> <a href="_factory_test_8cs_source.html#l00009">FactoryTest.cs:9</a></div></div>
 <div class="ttc" id="class_crypto_1_1_factory_html_abd5015e25ff66c3cf46bab4d67e60ce5"><div class="ttname"><a href="class_crypto_1_1_factory.html#abd5015e25ff66c3cf46bab4d67e60ce5">Crypto.Factory.GatherSuccessfulExtenders</a></div><div class="ttdeci">static List&lt; KeyExtenderAbstractD &gt; GatherSuccessfulExtenders(string directory)</div><div class="ttdoc">Gathers successful key extenders from all files in given directory. </div><div class="ttdef"><b>Definition:</b> <a href="_factory_8cs_source.html#l00106">Factory.cs:106</a></div></div>
 <div class="ttc" id="namespace_testing_html"><div class="ttname"><a href="namespace_testing.html">Testing</a></div><div class="ttdef"><b>Definition:</b> <a href="_automata_test_8cs_source.html#l00004">AutomataTest.cs:4</a></div></div>

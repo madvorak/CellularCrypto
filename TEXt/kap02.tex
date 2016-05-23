@@ -2,17 +2,21 @@
 
 \chapter{Šifrování}
 
+Lidé už v dávných dobách chtìli tajit nìkteré informace pøed lidmi, pro nìž nejsou urèeny, a pøitom je doruèit lidem, kteøí se je mají dozvìdìt. Pùvodnì se k tìmto úèelùm používala takzvaná \textsl{staganografie}, tedy utajení samotné existence zprávy. Panovník napøíklad nechal oholit hlavu jednomu ze svých sluhù, zprávu napsal na jeho temeno a po obnovení vlasù poslal sluhu na místo doruèení. Na druhé stranì opìt oholili hlavu sluhy a pøeèetli si tajnou zprávu. Další zpùsob steganografie je psaní zprávy neviditelným inkoustem, který se stává èitelným po zahøátí média. Nyní lze staganografii realizovat napøíklad tak, že se binárnì zakódovaná zpráva uloží do nejménì významných bitù obrázku v poèítaèi. Okem není možno rozpoznat žádnou zmìnu, ale se znalostí toho, že se v urèitém obrázku nachází tajná zpráva, lze poèítaèovým program onu zprávu zase snadno zobrazit. To už je pomìrnì rychlý postup.
+
+V dnešní dobì ovšem steganografie nestaèí. Lidstvo musí pracovat s èím dál vìtším množstvím dùvìrných a tajných informací a pøi tomto množství utajování zpráv se steganografické postupy stanou velmi rychle \uv{profláklé} a tím neúèinné. Proto jsou intenzivnì studovány rùzné možnosti šifrování tajných zpráv, s jejichž využití je zpráva skryta i pøed útoèníkem, který má pøesnou informaci o tom, kde se zpráva nachází.
+
 \section{Základní pojmy}
 
 Úkolem šifrování je uchovat a pøedat tajnou zprávu tak, aby ji mohl pøeèíst ten, pro koho je urèena, ale už nikdo jiný. Dále se nìkdy za cíl dává ovìøitelnost autora zprávy. Vìda zabývající se šifrováním se nazývá \textsl{kryptografie}. Lámáním šifer se zase zabývá  \textsl{kryptoanalýza}.
 
-Pùvodní èitelná zpráva se nazývá \textsl{plaintext}. Data po zašifrování se nazývají \textsl{ciphertext}. Pro pøevod plaintextu na ciphertext je potøeba použít šifrovací algoritmus. Ten by mìl zároveò být schopen pøevézt ciphertext zpìt na plaintext (tzv. dešifrování). Protože fungování šifrovacího algoritmu se velmi snadno vyzradí, zásadní roli hraje \textsl{šifrovací klíè}. Pokud se jedná o \textsl{symetrickou kryptografii}, tak stejný klíè slouží i k dešifrování. V pøípadì \textsl{asymetrické kryptografie} se používají dva rùzné klíèe. Šifrovací resp. dešifrovací klíèe v~asymetrické kryptografii se s ohledem na jejich použití nazývají jako \textsl{veøejný} resp. \textsl{tajný} klíè.
+Pùvodní èitelná zpráva se nazývá \textsl{plaintext}. Data po zašifrování se nazývají \textsl{ciphertext}. Pro pøevod plaintextu na ciphertext je potøeba použít šifrovací algoritmus. Ten by mìl zároveò být schopen pøevézt ciphertext zpìt na plaintext (tzv. dešifrování). Protože fungování šifrovacího algoritmu se velmi snadno vyzradí, zásadní roli hraje \textsl{šifrovací klíè}, což je další informace nutná k šifrování. Pokud se jedná o \textsl{symetrickou kryptografii}, tak stejný klíè slouží i k dešifrování. V pøípadì \textsl{asymetrické kryptografie} se používají dva rùzné klíèe. Šifrovací resp. dešifrovací klíèe v~asymetrické kryptografii se s ohledem na jejich použití nazývají jako \textsl{veøejný} resp. \textsl{tajný} klíè.
 
 \section{Základní východiska}
 
 Pøed zašifrováním zprávy se èasto provádí její \textsl{komprese}. To má za následek nejen úsporu pøenosového pásma a množství práce (èasu) šifrovacího algoritmu, ale velkou výhodou je dosažení výraznì rovnomìrnìjšího pravdìpodobnostního rozdìlení na prostoru plaintextù, což výraznì komplikuje kryptoanalýzu.
 
-Jedinou zcela neprolomitelnou šifrovací metodou je Vernamova šifra. V binární podobì tato šifra vypadá tak, že se použije one-time pad, což je sekvence náhodných bitù, kterou vlastní obì strany. Odesílatel provede operaci plaintext XOR one-time pad a pøíjemce provede operaci ciphertext XOR one-time pad, èímž dostane zpìt plaintext. Problém je, že one-time pad musí být stejnì dlouhý jako plaintext a nelze ho použít opakovanì. Kvùli tomu se Vernamova šifra používá jen pro kritické aplikace, pøed kterými se mohou komunikující strany fyzicky setkat a pøedat si one-time pad.
+Jedinou zcela neprolomitelnou šifrovací metodou je Vernamova šifra. V binární podobì tato šifra vypadá tak, že se použije one-time pad, což je sekvence náhodných bitù, kterou vlastní obì strany. Odesílatel provede operaci plaintext XOR one-time pad a pøíjemce provede operaci ciphertext XOR one-time pad, èímž dostane zpìt plaintext. Problém je, že one-time pad musí být stejnì dlouhý jako plaintext a nelze ho použít opakovanì. Kvùli tomu se Vernamova šifra používá jen pro kritické aplikace, pøed kterými se mohou komunikující strany fyzicky setkat a pøedat si one-time pad. To znemožòuje její použití pro bìžnou internetovou komunikaci.
 
 \section{O co nám jde}
 
@@ -24,7 +28,7 @@ Jako velmi jednoduchý Keystream Generator by se dal použít nìjaký z generátorù p
 
 Typickým pøíkladem mùže být lineární kongruenèní generátor pseudonáhodných èísel (LCG - Linear Congruential Generator). Ten je charakterizován rozsahem hodnot $m$, koeficientem $a$, inkrementem $c$ a poèáteèní hodnotou $X_0$. LCG provádí krok podle vzorce:
 $$X_{n+1} = (aX_n + c) \mod m$$
-Pro to, aby byl generátor pseudonáhodných èísel kvalitní, je potøeba, aby výstupy nemìly zjevné lineární vztahy mezi sebou a mìly dlouhou periodu. Podmínky pro to, aby LCG mìl periodu délky $m$ (tj. vystøídal všechny možné hodnoty), jsou následující (viz \citep{Knuth}):
+Pro to, aby byl generátor pseudonáhodných èísel kvalitní, je potøeba, aby výstupy nemìly zjevné lineární vztahy mezi sebou a mìly dlouhou periodu. Podmínky pro to, aby LCG mìl periodu délky $m$ (tj. vystøídal všechny možné hodnoty), jsou následující, viz \citep{Knuth}:
 \begin{itemize}
 \item $c$ a $m$ jsou nesoudìlná èísla
 \item $a-1$ je dìlitelné všemi prvoèiniteli $m$
@@ -98,7 +102,9 @@ O mnoho silnìjší útok se nazývá \textsl{known-plaintext attack}. Pøi nìm má útoè
 
 Ještì silnìjším útokem je \textsl{chosen-plaintext attack}. Pøi nìm si mùže útoèník sám urèit, jaká zpráva má být zašifrována a obdržet k ní odpovídající ciphertext. Jeho cílem je zase buï pøímo odvodit šifrovací klíè, nebo jiným zpùsobem získat možnost rozluštit ostatní ciphertexty.
 
-Posledním zesílením prostøedkù k útoku je \textsl{adaptivaly-chosen-plaintext attack}. Pøi nìm mùže útoèník nejen analyzovat dvojice plaintext-ciphertext, ale na základì jejich znalosti volit nové zprávy k zašifrování a získávat další dvojice plaintext-ciphertext, dokud nebude mít dostatek informací.
+Posledním zesílením prostøedkù k útoku je \textsl{adaptively-chosen-plaintext attack}. Pøi nìm mùže útoèník nejen analyzovat dvojice plaintext-ciphertext, ale na základì jejich znalosti volit nové zprávy k zašifrování a získávat další dvojice plaintext-ciphertext, dokud nebude mít dostatek informací.
+
+Útoky typu adaptively-chosen-plaintext attack lze chápat jako útoky s možností neomezeného pøístupu k šifrovacímu zaøízení, uvnitø kterého se nachází šifrovací klíè (ale není vidìt navenek). Podobným zpùsobem lze teoreticky uvažovat také útoky s pøístupem k dešifrovacímu zaøízení, tedy že si útoèník mùže libovolnì volit ciphertexty a dostává k nim pøíslušející plaintexty. Kategorii takových útokù bychom mohli nazval jako \textsl{adaptively-chosen-ciphertext attack}.
 
 \subsection{Pøíklady útokù}
 

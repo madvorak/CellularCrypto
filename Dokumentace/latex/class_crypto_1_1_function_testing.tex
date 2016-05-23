@@ -9,6 +9,8 @@ Class for testing properties of key extending algorithms.
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_crypto_1_1_function_testing_aa62a4223204dece41f9cc6fac9882834}{Function\+Testing} (bool use\+Levenshtein\+Distance=false)
+\begin{DoxyCompactList}\small\item\em Creates a new instance of \hyperlink{class_crypto_1_1_function_testing}{Function\+Testing}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_crypto_1_1_function_testing_a3b4709eaa8b6f2a1a6c4fdb63eb46462}{is\+Levenshtein\+Inside} ()
 \item 
 double \hyperlink{class_crypto_1_1_function_testing_a4b3e7a81134c8e7337cf1b682f0be528}{Test\+Bit\+Change} (\hyperlink{interface_crypto_1_1_i_key_extender}{I\+Key\+Extender} algorithm, int ratio)
 \begin{DoxyCompactList}\small\item\em Tests how much the output changes (on average) when the input changes in a single bit. \end{DoxyCompactList}\item 
@@ -58,7 +60,16 @@ Definition at line 11 of file Function\+Testing.\+cs.
 )}\label{class_crypto_1_1_function_testing_aa62a4223204dece41f9cc6fac9882834}
 
 
-Definition at line 23 of file Function\+Testing.\+cs.
+Creates a new instance of \hyperlink{class_crypto_1_1_function_testing}{Function\+Testing}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em use\+Levenshtein\+Distance} & Should it use Levenshtein distance instead of Hamming distance? Note that Levenshtein distance is much slower to calculate. Default is Hamming distance.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file Function\+Testing.\+cs.
 
 
 
@@ -87,7 +98,18 @@ Number between 0 and 1.
 \end{DoxyReturn}
 
 
-Definition at line 41 of file Function\+Testing.\+cs.
+Definition at line 46 of file Function\+Testing.\+cs.
+
+\hypertarget{class_crypto_1_1_function_testing_a3b4709eaa8b6f2a1a6c4fdb63eb46462}{}\index{Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}!is\+Levenshtein\+Inside@{is\+Levenshtein\+Inside}}
+\index{is\+Levenshtein\+Inside@{is\+Levenshtein\+Inside}!Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}}
+\subsubsection[{is\+Levenshtein\+Inside()}]{\setlength{\rightskip}{0pt plus 5cm}bool Crypto.\+Function\+Testing.\+is\+Levenshtein\+Inside (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_crypto_1_1_function_testing_a3b4709eaa8b6f2a1a6c4fdb63eb46462}
+
+
+Definition at line 109 of file Function\+Testing.\+cs.
 
 \hypertarget{class_crypto_1_1_function_testing_a88a16df256e6d63d43fbbb3b5c644f29}{}\index{Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}!Levenstein\+Distance@{Levenstein\+Distance}}
 \index{Levenstein\+Distance@{Levenstein\+Distance}!Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}}
@@ -113,7 +135,7 @@ Number between 0 and 1.
 \end{DoxyReturn}
 
 
-Definition at line 67 of file Function\+Testing.\+cs.
+Definition at line 72 of file Function\+Testing.\+cs.
 
 \hypertarget{class_crypto_1_1_function_testing_a847341d3b4a2f0e8ff155bc55ab3484f}{}\index{Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}!Test\+Average\+Distance@{Test\+Average\+Distance}}
 \index{Test\+Average\+Distance@{Test\+Average\+Distance}!Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}}
@@ -139,7 +161,7 @@ Value between 0 and 1. Both extrema are very bad, good result is 1/2.
 \end{DoxyReturn}
 
 
-Definition at line 148 of file Function\+Testing.\+cs.
+Definition at line 158 of file Function\+Testing.\+cs.
 
 \hypertarget{class_crypto_1_1_function_testing_a4b3e7a81134c8e7337cf1b682f0be528}{}\index{Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}!Test\+Bit\+Change@{Test\+Bit\+Change}}
 \index{Test\+Bit\+Change@{Test\+Bit\+Change}!Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}}
@@ -165,7 +187,7 @@ Value between 0 and 1. Both extrema are very bad, good result is 1/2.
 \end{DoxyReturn}
 
 
-Definition at line 110 of file Function\+Testing.\+cs.
+Definition at line 120 of file Function\+Testing.\+cs.
 
 \hypertarget{class_crypto_1_1_function_testing_a937d2b136d13f2bc57ca3c03778c763e}{}\index{Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}!Test\+Largest\+Ball\+Approx@{Test\+Largest\+Ball\+Approx}}
 \index{Test\+Largest\+Ball\+Approx@{Test\+Largest\+Ball\+Approx}!Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}}
@@ -176,7 +198,7 @@ Definition at line 110 of file Function\+Testing.\+cs.
 )}\label{class_crypto_1_1_function_testing_a937d2b136d13f2bc57ca3c03778c763e}
 
 
-Definition at line 225 of file Function\+Testing.\+cs.
+Definition at line 235 of file Function\+Testing.\+cs.
 
 \hypertarget{class_crypto_1_1_function_testing_a11e504dfb7c6771eeb863f86a47a256d}{}\index{Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}!Test\+Largest\+Ball\+Exactly@{Test\+Largest\+Ball\+Exactly}}
 \index{Test\+Largest\+Ball\+Exactly@{Test\+Largest\+Ball\+Exactly}!Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}}
@@ -187,7 +209,7 @@ Definition at line 225 of file Function\+Testing.\+cs.
 )}\label{class_crypto_1_1_function_testing_a11e504dfb7c6771eeb863f86a47a256d}
 
 
-Definition at line 187 of file Function\+Testing.\+cs.
+Definition at line 197 of file Function\+Testing.\+cs.
 
 \hypertarget{class_crypto_1_1_function_testing_a29540726fa140a1cf1d2b637af553233}{}\index{Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}!Test\+Random\+Compression@{Test\+Random\+Compression}}
 \index{Test\+Random\+Compression@{Test\+Random\+Compression}!Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}}
@@ -199,7 +221,7 @@ Definition at line 187 of file Function\+Testing.\+cs.
 )}\label{class_crypto_1_1_function_testing_a29540726fa140a1cf1d2b637af553233}
 
 
-Definition at line 300 of file Function\+Testing.\+cs.
+Definition at line 310 of file Function\+Testing.\+cs.
 
 \hypertarget{class_crypto_1_1_function_testing_a9a647990f55860fb5c1703e4734a78e3}{}\index{Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}!Test\+Random\+Entropy@{Test\+Random\+Entropy}}
 \index{Test\+Random\+Entropy@{Test\+Random\+Entropy}!Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}}
@@ -211,7 +233,7 @@ Definition at line 300 of file Function\+Testing.\+cs.
 )}\label{class_crypto_1_1_function_testing_a9a647990f55860fb5c1703e4734a78e3}
 
 
-Definition at line 295 of file Function\+Testing.\+cs.
+Definition at line 305 of file Function\+Testing.\+cs.
 
 \hypertarget{class_crypto_1_1_function_testing_acf3f02d42487bc168ce29e431ced28f6}{}\index{Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}!Test\+Random\+Sequences@{Test\+Random\+Sequences}}
 \index{Test\+Random\+Sequences@{Test\+Random\+Sequences}!Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}}
@@ -237,7 +259,7 @@ Value between 0 (worst) and 1 (good).
 \end{DoxyReturn}
 
 
-Definition at line 290 of file Function\+Testing.\+cs.
+Definition at line 300 of file Function\+Testing.\+cs.
 
 \hypertarget{class_crypto_1_1_function_testing_a3e1bedf80b820d257984dbae03d0e0e1}{}\index{Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}!Test\+Systematic\+Compression@{Test\+Systematic\+Compression}}
 \index{Test\+Systematic\+Compression@{Test\+Systematic\+Compression}!Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}}
@@ -249,7 +271,7 @@ Definition at line 290 of file Function\+Testing.\+cs.
 )}\label{class_crypto_1_1_function_testing_a3e1bedf80b820d257984dbae03d0e0e1}
 
 
-Definition at line 338 of file Function\+Testing.\+cs.
+Definition at line 348 of file Function\+Testing.\+cs.
 
 \hypertarget{class_crypto_1_1_function_testing_a38ff139e200ca760a150fd23f9b8c754}{}\index{Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}!Test\+Systematic\+Entropy@{Test\+Systematic\+Entropy}}
 \index{Test\+Systematic\+Entropy@{Test\+Systematic\+Entropy}!Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}}
@@ -261,7 +283,7 @@ Definition at line 338 of file Function\+Testing.\+cs.
 )}\label{class_crypto_1_1_function_testing_a38ff139e200ca760a150fd23f9b8c754}
 
 
-Definition at line 333 of file Function\+Testing.\+cs.
+Definition at line 343 of file Function\+Testing.\+cs.
 
 \hypertarget{class_crypto_1_1_function_testing_a082771a8c25d3ac4b29906cbd73fb584}{}\index{Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}!Test\+Systematic\+Sequences@{Test\+Systematic\+Sequences}}
 \index{Test\+Systematic\+Sequences@{Test\+Systematic\+Sequences}!Crypto\+::\+Function\+Testing@{Crypto\+::\+Function\+Testing}}
@@ -287,7 +309,7 @@ Value between 0 (worst) and 1 (good).
 \end{DoxyReturn}
 
 
-Definition at line 328 of file Function\+Testing.\+cs.
+Definition at line 338 of file Function\+Testing.\+cs.
 
 
 

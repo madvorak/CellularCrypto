@@ -62,7 +62,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -124,7 +123,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> longKey;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">internal</span> <span class="keyword">override</span> <span class="keywordtype">string</span> GetInfo()</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_crypto_1_1_key_extender_simple_quadratic.html#a4a399b40cd1893acf4cc8531771657a0">   40</a></span>&#160;        <span class="keyword">internal</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code" href="class_crypto_1_1_key_extender_simple_quadratic.html#a4a399b40cd1893acf4cc8531771657a0">GetInfo</a>()</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">return</span> $<span class="stringliteral">&quot;SimpleQuadratic using {((CellularAutomaton)ca).TellType()}&quot;</span>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
@@ -136,6 +135,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_crypto_1_1_key_extender_abstract_d_html"><div class="ttname"><a href="class_crypto_1_1_key_extender_abstract_d.html">Crypto.KeyExtenderAbstractD</a></div><div class="ttdoc">Abstract class for all key extenders that implement DoubleKey(). Method ExtendKey() is provided (iter...</div><div class="ttdef"><b>Definition:</b> <a href="_key_extender_abstract_d_8cs_source.html#l00009">KeyExtenderAbstractD.cs:9</a></div></div>
 <div class="ttc" id="interface_cellular_1_1_i_binary_c_a_html"><div class="ttname"><a href="interface_cellular_1_1_i_binary_c_a.html">Cellular.IBinaryCA</a></div><div class="ttdoc">Common interface for all binary cellular automata. Most work with CA is done through this interface...</div><div class="ttdef"><b>Definition:</b> <a href="_i_binary_c_a_8cs_source.html#l00009">IBinaryCA.cs:9</a></div></div>
 <div class="ttc" id="class_crypto_1_1_key_extender_simple_quadratic_html_a0bba7646011678850879c0685d18b379"><div class="ttname"><a href="class_crypto_1_1_key_extender_simple_quadratic.html#a0bba7646011678850879c0685d18b379">Crypto.KeyExtenderSimpleQuadratic.DoubleKey</a></div><div class="ttdeci">override BitArray DoubleKey(BitArray shortKey)</div><div class="ttdoc">Generates a longer key from a short key. </div><div class="ttdef"><b>Definition:</b> <a href="_key_extender_simple_quadratic_8cs_source.html#l00019">KeyExtenderSimpleQuadratic.cs:19</a></div></div>
+<div class="ttc" id="class_crypto_1_1_key_extender_simple_quadratic_html_a4a399b40cd1893acf4cc8531771657a0"><div class="ttname"><a href="class_crypto_1_1_key_extender_simple_quadratic.html#a4a399b40cd1893acf4cc8531771657a0">Crypto.KeyExtenderSimpleQuadratic.GetInfo</a></div><div class="ttdeci">override string GetInfo()</div><div class="ttdef"><b>Definition:</b> <a href="_key_extender_simple_quadratic_8cs_source.html#l00040">KeyExtenderSimpleQuadratic.cs:40</a></div></div>
 <div class="ttc" id="interface_cellular_1_1_i_binary_c_a_html_a0d5610129c1f7aee62d6521ba8268cf9"><div class="ttname"><a href="interface_cellular_1_1_i_binary_c_a.html#a0d5610129c1f7aee62d6521ba8268cf9">Cellular.IBinaryCA.CloneEverything</a></div><div class="ttdeci">IBinaryCA CloneEverything()</div><div class="ttdoc">Clones the underlying CA including its state at the moment. </div></div>
 <div class="ttc" id="namespace_cellular_html"><div class="ttname"><a href="namespace_cellular.html">Cellular</a></div><div class="ttdef"><b>Definition:</b> <a href="_automaton1_d_8cs_source.html#l00001">Automaton1D.cs:1</a></div></div>
 <div class="ttc" id="interface_cellular_1_1_i_binary_c_a_html_a6a04c7374538c49df07efa176e0dd3c3"><div class="ttname"><a href="interface_cellular_1_1_i_binary_c_a.html#a6a04c7374538c49df07efa176e0dd3c3">Cellular.IBinaryCA.Step</a></div><div class="ttdeci">void Step()</div><div class="ttdoc">Performs one step of the cellular automaton. Always calls CellularAutomaton.Step(). </div></div>

@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['indexsectionlabels',['indexSectionLabels',['../searchdata_8js.html#a529972e449c82dc118cbbd3bcf50c44d',1,'searchdata.js']]],
-  ['indexsectionnames',['indexSectionNames',['../searchdata_8js.html#a77149ceed055c6c6ce40973b5bdc19ad',1,'searchdata.js']]],
-  ['indexsectionswithcontent',['indexSectionsWithContent',['../searchdata_8js.html#a6250af3c9b54dee6efc5f55f40c78126',1,'searchdata.js']]],
-  ['initialstate',['initialState',['../all__1_8js.html#ae8b87ff4be2ae1dd5267342795263360',1,'all_1.js']]]
+  ['size',['size',['../class_cellular_1_1_automaton1_d.html#a915129ccf0f1e7092844c99ce6a28e5b',1,'Cellular::Automaton1D']]],
+  ['state',['state',['../class_cellular_1_1_binary1_d_automaton.html#a5614d8d37b2511f69d8ae1a8ff0d8d73',1,'Cellular.Binary1DAutomaton.state()'],['../class_cellular_1_1_binary2_d_automaton.html#abac140afbe1d9263ef35aa596c181407',1,'Cellular.Binary2DAutomaton.state()'],['../class_cellular_1_1_nary1_d_automaton.html#a563eb68c941321814d9261d68eed63f3',1,'Cellular.Nary1DAutomaton.state()']]]
 ];

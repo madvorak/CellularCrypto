@@ -62,7 +62,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -103,20 +102,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            byte number = byte.Parse(Console.ReadLine());</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            demoCA = <span class="keyword">new</span> <a class="code" href="class_cellular_1_1_elementary_automaton.html">ElementaryAutomaton</a>(number, Console.WindowWidth - 1);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            Console.WriteLine(demoCA.<a class="code" href="interface_cellular_1_1_i_binary_c_a.html#ab70ebcefac0ca22dd06661f3316a6c2e">StateAsString</a>());</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 30; i++)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 35; i++)</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                demoCA.<a class="code" href="interface_cellular_1_1_i_binary_c_a.html#a6a04c7374538c49df07efa176e0dd3c3">Step</a>();</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                Console.WriteLine(demoCA.<a class="code" href="interface_cellular_1_1_i_binary_c_a.html#ab70ebcefac0ca22dd06661f3316a6c2e">StateAsString</a>());</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            Console.ReadKey();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            Console.WriteLine(<span class="stringliteral">&quot;Hash &quot;</span> + demoCA.GetHashCode());</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            Console.WriteLine();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            Console.ReadKey();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            Console.WriteLine();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            Console.ReadKey();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            Console.WriteLine();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
 <div class="ttc" id="class_cellular_1_1_elementary_automaton_html"><div class="ttname"><a href="class_cellular_1_1_elementary_automaton.html">Cellular.ElementaryAutomaton</a></div><div class="ttdoc">Class representing 256 elementary CA with firmly set borders. This specific implementation calculates...</div><div class="ttdef"><b>Definition:</b> <a href="_elementary_automaton_8cs_source.html#l00010">ElementaryAutomaton.cs:10</a></div></div>
 <div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
 <div class="ttc" id="class_testing_1_1_automata_test_html"><div class="ttname"><a href="class_testing_1_1_automata_test.html">Testing.AutomataTest</a></div><div class="ttdoc">This test lets the user choose an elementary CA and prints its evolution from a single live cell...</div><div class="ttdef"><b>Definition:</b> <a href="_automata_test_8cs_source.html#l00009">AutomataTest.cs:9</a></div></div>

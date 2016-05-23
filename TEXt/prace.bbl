@@ -27,17 +27,19 @@
   Boston, Massachusetts, USA.
 \newblock ISBN 978-0201038224.
 
+\bibitem[Nagel a~kol.(2010)Nagel, Evjen, Glynn, Watson a Skinner]{Csharp}
+{\sc Nagel, C., Evjen, B., Glynn, J., Watson, K. {\rm a} Skinner, M.} (2010).
+\newblock \emph{Professional C\# 4 and .NET 4}.
+\newblock First edition. Wiley Publishing, Inc., 10475 Crosspoint Boulevard,
+  Indianapolis, IN 46256, USA.
+\newblock ISBN 978-0-470-50225-9.
+
 \bibitem[Schiff(2008)]{Schiff08}
 {\sc Schiff, J.~L.} (2008).
 \newblock \emph{Cellular Automata}.
 \newblock First edition. John Wiley and Sons, Inc., Hoboken, New Jersey, USA,
   Corporate Headquarters, 111 River Street, Hoboken, NJ 07030-5774.
 \newblock ISBN 978-0-470-16879-0.
-
-\bibitem[Vlastimil~Klíma(2003)]{Klima}
-{\sc Vlastimil~Klíma, R.} (2003).
-\newblock Blokové šifry.
-\newblock \emph{MFF výukový materiál}, {\bf 0}\penalty0 (0), \penalty0 0.
 
 \bibitem[Wojtowicz(2001)]{MCELL}
 {\sc Wojtowicz, M.} (2001).

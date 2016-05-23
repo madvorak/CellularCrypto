@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['b',['b',['../jquery_8js.html#aa4026ad5544b958e54ce5e106fa1c805',1,'b():&#160;jquery.js'],['../jquery_8js.html#a2fa551895933fae935a0a6b87282241d',1,'b(function(){if(!b.support.reliableMarginRight){b.cssHooks.marginRight={get:function(bw, bv){var e;b.swap(bw,{display:&quot;inline-block&quot;}, function(){if(bv){e=Z(bw,&quot;margin-right&quot;,&quot;marginRight&quot;)}else{e=bw.style.marginRight}});return e}}}}):&#160;jquery.js']]],
-  ['bb',['bb',['../jquery_8js.html#a1d6558865876e1c8cca029fce41a4bdb',1,'jquery.js']]],
   ['binary1dautomaton',['Binary1DAutomaton',['../class_cellular_1_1_binary1_d_automaton.html',1,'Cellular']]],
   ['binary1dautomaton',['Binary1DAutomaton',['../class_cellular_1_1_binary1_d_automaton.html#a430f4985d036b8e48bfc785fe57b2bd1',1,'Cellular.Binary1DAutomaton.Binary1DAutomaton(int size)'],['../class_cellular_1_1_binary1_d_automaton.html#a5c20fa6b3f7ffdd92187d216929099d4',1,'Cellular.Binary1DAutomaton.Binary1DAutomaton(BitArray initialState)'],['../class_cellular_1_1_binary1_d_automaton.html#af4e1fb39b1b0dad8c3ab648c7ba0ba8c',1,'Cellular.Binary1DAutomaton.Binary1DAutomaton(int size, Random rnd)']]],
   ['binary1dautomaton_2ecs',['Binary1DAutomaton.cs',['../_binary1_d_automaton_8cs.html',1,'']]],
@@ -16,7 +14,5 @@ var searchData=
   ['binaryrangecyclicautomaton_2ecs',['BinaryRangeCyclicAutomaton.cs',['../_binary_range_cyclic_automaton_8cs.html',1,'']]],
   ['binaryrangentest',['BinaryRangeNTest',['../class_testing_1_1_binary_range_n_test.html',1,'Testing']]],
   ['binaryrangentest_2ecs',['BinaryRangeNTest.cs',['../_binary_range_n_test_8cs.html',1,'']]],
-  ['bitarrtoboolarr',['BitArrToBoolArr',['../class_cellular_1_1_utilities.html#a1c47a345afd4e991876f6ae6c4723591',1,'Cellular::Utilities']]],
-  ['bq',['bq',['../jquery_8js.html#af6ee77c71b2c89bdb365145ac5ad1219',1,'jquery.js']]],
-  ['bs',['bs',['../jquery_8js.html#ae77642f8ef73fb9c20c2a737d956acda',1,'jquery.js']]]
+  ['bitarrtoboolarr',['BitArrToBoolArr',['../class_cellular_1_1_utilities.html#a1c47a345afd4e991876f6ae6c4723591',1,'Cellular::Utilities']]]
 ];

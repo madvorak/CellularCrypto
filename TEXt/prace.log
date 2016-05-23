@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  20 MAY 2016 23:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  23 MAY 2016 15:58
 entering extended mode
-**./prace.tex
-(prace.tex
+**C:/Martin/MFF/_baka/TEXt/prace.tex
+(C:/Martin/MFF/_baka/TEXt/prace.tex
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
@@ -940,52 +940,52 @@ Kapitola 2.
 File: ECBencryption.png Graphic file (type png)
 
 <use ECBencryption.png>
-Package pdftex.def Info: ECBencryption.png used on input line 60.
+Package pdftex.def Info: ECBencryption.png used on input line 64.
 (pdftex.def)             Requested size: 426.79869pt x 142.263pt.
  <ECBdecryption.png, id=377, 752.0597pt x 254.45062pt>
 File: ECBdecryption.png Graphic file (type png)
 
 <use ECBdecryption.png>
-Package pdftex.def Info: ECBdecryption.png used on input line 61.
+Package pdftex.def Info: ECBdecryption.png used on input line 65.
 (pdftex.def)             Requested size: 426.7965pt x 142.27007pt.
  <CBCencryption.png, id=380, 752.0597pt x 262.73157pt>
 File: CBCencryption.png Graphic file (type png)
 
 <use CBCencryption.png>
-Package pdftex.def Info: CBCencryption.png used on input line 65.
+Package pdftex.def Info: CBCencryption.png used on input line 69.
 (pdftex.def)             Requested size: 426.7965pt x 142.2698pt.
  <CBCdecryption.png, id=381, 752.8125pt x 258.21469pt>
 File: CBCdecryption.png Graphic file (type png)
 
 <use CBCdecryption.png>
-Package pdftex.def Info: CBCdecryption.png used on input line 66.
+Package pdftex.def Info: CBCdecryption.png used on input line 70.
 (pdftex.def)             Requested size: 426.79869pt x 142.26672pt.
- [12 <./ECBencryption.png (PNG copy)> <./ECBdecryption.png (PNG copy)>] [13 <./
+ [12 <./ECBencryption.png (PNG copy)>] [13 <./ECBdecryption.png (PNG copy)> <./
 CBCencryption.png (PNG copy)> <./CBCdecryption.png (PNG copy)>] <PCBCencryption
 .png, id=396, 751.30687pt x 258.9675pt>
 File: PCBCencryption.png Graphic file (type png)
 
 <use PCBCencryption.png>
-Package pdftex.def Info: PCBCencryption.png used on input line 70.
+Package pdftex.def Info: PCBCencryption.png used on input line 74.
 (pdftex.def)             Requested size: 426.79343pt x 142.27054pt.
 
 <PCBCdecryption.png, id=397, 752.0597pt x 255.20343pt>
 File: PCBCdecryption.png Graphic file (type png)
 
 <use PCBCdecryption.png>
-Package pdftex.def Info: PCBCdecryption.png used on input line 71.
+Package pdftex.def Info: PCBCdecryption.png used on input line 75.
 (pdftex.def)             Requested size: 426.7965pt x 142.27042pt.
  <OFBencryption.png, id=400, 750.55406pt x 259.7203pt>
 File: OFBencryption.png Graphic file (type png)
 
 <use OFBencryption.png>
-Package pdftex.def Info: OFBencryption.png used on input line 75.
+Package pdftex.def Info: OFBencryption.png used on input line 79.
 (pdftex.def)             Requested size: 426.80098pt x 142.26404pt.
  <OFBdecryption.png, id=401, 752.8125pt x 259.7203pt>
 File: OFBdecryption.png Graphic file (type png)
 
 <use OFBdecryption.png>
-Package pdftex.def Info: OFBdecryption.png used on input line 76.
+Package pdftex.def Info: OFBdecryption.png used on input line 80.
 (pdftex.def)             Requested size: 426.79869pt x 142.26404pt.
  [14 <./PCBCencryption.png (PNG copy)> <./PCBCdecryption.png (PNG copy)>] [15 <
 ./OFBencryption.png (PNG copy)> <./OFBdecryption.png (PNG copy)>] <CTRencryptio
@@ -993,13 +993,13 @@ n.png, id=419, 752.0597pt x 254.45062pt>
 File: CTRencryption.png Graphic file (type png)
 
 <use CTRencryption.png>
-Package pdftex.def Info: CTRencryption.png used on input line 84.
+Package pdftex.def Info: CTRencryption.png used on input line 88.
 (pdftex.def)             Requested size: 426.7965pt x 142.27007pt.
  <CTRdecryption.png, id=420, 751.30687pt x 255.95625pt>
 File: CTRdecryption.png Graphic file (type png)
 
 <use CTRdecryption.png>
-Package pdftex.def Info: CTRdecryption.png used on input line 85.
+Package pdftex.def Info: CTRdecryption.png used on input line 89.
 (pdftex.def)             Requested size: 426.79343pt x 142.26439pt.
  [16 <./CTRencryption.png (PNG copy)> <./CTRdecryption.png (PNG copy)>] [17] [1
 8] [19]) [20]
@@ -1126,13 +1126,13 @@ Package rerunfilecheck Info: File `prace.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
  ) 
 Here is how much of TeX's memory you used:
- 22751 strings out of 493634
- 401980 string characters out of 3141311
- 523491 words of memory out of 3000000
+ 22752 strings out of 493634
+ 402059 string characters out of 3141311
+ 523521 words of memory out of 3000000
  25476 multiletter control sequences out of 15000+200000
  27501 words of font info for 84 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 62i,8n,93p,2240b,916s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,8n,93p,2263b,916s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
@@ -1156,7 +1156,7 @@ e1/public/cs/cssl12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fonts/type1
 /public/cs/csti12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fonts/type1/p
 ublic/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on prace.pdf (61 pages, 999454 bytes).
+Output written on prace.pdf (61 pages, 1000672 bytes).
 PDF statistics:
  857 PDF objects out of 1000 (max. 8388607)
  175 named destinations out of 1000 (max. 500000)

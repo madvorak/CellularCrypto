@@ -62,7 +62,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -125,7 +124,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; columnCount; j++)</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    Panel <a class="code" href="jquery_8js.html#a2335e57f79b6acfb6de59c235dc8a83e">p</a> = <span class="keyword">new</span> Panel();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    Panel p = <span class="keyword">new</span> Panel();</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    p.SetBounds(leftCorner + (j * p_width), topCorner + (i * p_height), p_width, p_height);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    <span class="keywordflow">if</span> (gol.<a class="code" href="class_cellular_1_1_totalistic2_d_automaton_interactive.html#a85abf32bca9b632561e8b9d081743c1c">GetCell</a>(i, j))</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    {</div>
@@ -140,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    p.Show();</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    p.Tag = <span class="keyword">new</span> Tuple&lt;int, int&gt;(i, j);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    p.Click += panel_Click;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    matrix[i, j] = <a class="code" href="jquery_8js.html#a2335e57f79b6acfb6de59c235dc8a83e">p</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    matrix[i, j] = p;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            btnDisplay.Enabled = <span class="keyword">false</span>;</div>
@@ -296,7 +295,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;}</div>
 <div class="ttc" id="class_cellular_1_1_totalistic2_d_automaton_interactive_html_a792284dafc8b94ba368d9009f868cec0"><div class="ttname"><a href="class_cellular_1_1_totalistic2_d_automaton_interactive.html#a792284dafc8b94ba368d9009f868cec0">Cellular.Totalistic2DAutomatonInteractive.FlipCell</a></div><div class="ttdeci">void FlipCell(int row, int column)</div><div class="ttdoc">Inverts the specified cell. </div><div class="ttdef"><b>Definition:</b> <a href="_totalistic2_d_automaton_interactive_8cs_source.html#l00073">Totalistic2DAutomatonInteractive.cs:73</a></div></div>
-<div class="ttc" id="jquery_8js_html_a2335e57f79b6acfb6de59c235dc8a83e"><div class="ttname"><a href="jquery_8js.html#a2335e57f79b6acfb6de59c235dc8a83e">p</a></div><div class="ttdeci">function p(by, bw, bv)</div><div class="ttdef"><b>Definition:</b> <a href="jquery_8js_source.html#l00023">jquery.js:23</a></div></div>
 <div class="ttc" id="class_user_forms_1_1_demo_form_html"><div class="ttname"><a href="class_user_forms_1_1_demo_form.html">UserForms.DemoForm</a></div><div class="ttdoc">Interactive visual demo of the Game of Life on a rectangular playground. This is not a platform for p...</div><div class="ttdef"><b>Definition:</b> <a href="_demo_form_8cs_source.html#l00014">DemoForm.cs:14</a></div></div>
 <div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
 <div class="ttc" id="class_user_forms_1_1_demo_form_html_a9ef677039850f5ac014ad27d1aa95160"><div class="ttname"><a href="class_user_forms_1_1_demo_form.html#a9ef677039850f5ac014ad27d1aa95160">UserForms.DemoForm.DemoForm</a></div><div class="ttdeci">DemoForm()</div><div class="ttdef"><b>Definition:</b> <a href="_demo_form_8cs_source.html#l00023">DemoForm.cs:23</a></div></div>

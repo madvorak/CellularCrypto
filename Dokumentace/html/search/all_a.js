@@ -1,27 +1,9 @@
 var searchData=
 [
-  ['k',['k',['../jquery_8js.html#ab26645c014aa005ecedef329ecf58c99',1,'jquery.js']]],
-  ['keyextenderabstractd',['KeyExtenderAbstractD',['../class_crypto_1_1_key_extender_abstract_d.html',1,'Crypto']]],
-  ['keyextenderabstractd_2ecs',['KeyExtenderAbstractD.cs',['../_key_extender_abstract_d_8cs.html',1,'']]],
-  ['keyextenderabstractn',['KeyExtenderAbstractN',['../class_crypto_1_1_key_extender_abstract_n.html',1,'Crypto']]],
-  ['keyextenderabstractn_2ecs',['KeyExtenderAbstractN.cs',['../_key_extender_abstract_n_8cs.html',1,'']]],
-  ['keyextendercheating',['KeyExtenderCheating',['../class_crypto_1_1_key_extender_cheating.html',1,'Crypto']]],
-  ['keyextendercheating_2ecs',['KeyExtenderCheating.cs',['../_key_extender_cheating_8cs.html',1,'']]],
-  ['keyextendercopy',['KeyExtenderCopy',['../class_crypto_1_1_key_extender_copy.html',1,'Crypto']]],
-  ['keyextendercopy_2ecs',['KeyExtenderCopy.cs',['../_key_extender_copy_8cs.html',1,'']]],
-  ['keyextendergenetic',['KeyExtenderGenetic',['../class_crypto_1_1_key_extender_genetic.html#a60bbe95f9ec44c270006a901acf199e5',1,'Crypto::KeyExtenderGenetic']]],
-  ['keyextendergenetic',['KeyExtenderGenetic',['../class_crypto_1_1_key_extender_genetic.html',1,'Crypto']]],
-  ['keyextendergenetic_2ecs',['KeyExtenderGenetic.cs',['../_key_extender_genetic_8cs.html',1,'']]],
-  ['keyextenderinterlaced',['KeyExtenderInterlaced',['../class_crypto_1_1_key_extender_interlaced.html#a00ed5af7a686d03b60fa8c3607c27d6b',1,'Crypto::KeyExtenderInterlaced']]],
-  ['keyextenderinterlaced',['KeyExtenderInterlaced',['../class_crypto_1_1_key_extender_interlaced.html',1,'Crypto']]],
-  ['keyextenderinterlaced_2ecs',['KeyExtenderInterlaced.cs',['../_key_extender_interlaced_8cs.html',1,'']]],
-  ['keyextendersimplelinear',['KeyExtenderSimpleLinear',['../class_crypto_1_1_key_extender_simple_linear.html#a318ebefc5ef25570e751b21c071fba06',1,'Crypto::KeyExtenderSimpleLinear']]],
-  ['keyextendersimplelinear',['KeyExtenderSimpleLinear',['../class_crypto_1_1_key_extender_simple_linear.html',1,'Crypto']]],
-  ['keyextendersimplelinear_2ecs',['KeyExtenderSimpleLinear.cs',['../_key_extender_simple_linear_8cs.html',1,'']]],
-  ['keyextendersimplequadratic',['KeyExtenderSimpleQuadratic',['../class_crypto_1_1_key_extender_simple_quadratic.html',1,'Crypto']]],
-  ['keyextendersimplequadratic',['KeyExtenderSimpleQuadratic',['../class_crypto_1_1_key_extender_simple_quadratic.html#a2090b48093409cd09a18c56ac7ec7826',1,'Crypto::KeyExtenderSimpleQuadratic']]],
-  ['keyextendersimplequadratic_2ecs',['KeyExtenderSimpleQuadratic.cs',['../_key_extender_simple_quadratic_8cs.html',1,'']]],
-  ['keyextenderuncertain',['KeyExtenderUncertain',['../class_crypto_1_1_key_extender_uncertain.html',1,'Crypto']]],
-  ['keyextenderuncertain',['KeyExtenderUncertain',['../class_crypto_1_1_key_extender_uncertain.html#aace64d24b92154a9e01002ee13e0b891',1,'Crypto::KeyExtenderUncertain']]],
-  ['keyextenderuncertain_2ecs',['KeyExtenderUncertain.cs',['../_key_extender_uncertain_8cs.html',1,'']]]
+  ['levensteindistance',['LevensteinDistance',['../class_crypto_1_1_function_testing.html#a88a16df256e6d63d43fbbb3b5c644f29',1,'Crypto::FunctionTesting']]],
+  ['liveamoebauniverse',['liveAmoebaUniverse',['../class_cellular_1_1_totalistic2_d_automaton.html#a69f67fbf81c8a2c5a3700c4f9b55c596',1,'Cellular::Totalistic2DAutomaton']]],
+  ['livegameoflife',['liveGameOfLife',['../class_cellular_1_1_totalistic2_d_automaton.html#a4633d221a98d2f36cc876f5a08c61f1e',1,'Cellular::Totalistic2DAutomaton']]],
+  ['livereplicatoruniverse',['liveReplicatorUniverse',['../class_cellular_1_1_totalistic2_d_automaton.html#abb59a96261e32abc500ce4c7db88cdd6',1,'Cellular::Totalistic2DAutomaton']]],
+  ['longestperiod',['LongestPeriod',['../class_testing_1_1_search_longest.html#ab0c6b6cb67d56bd5d739b41bd71590ee',1,'Testing::SearchLongest']]],
+  ['lookupt',['lookupT',['../class_cellular_1_1_elementary_automaton_fast.html#a775d51c35b62cecd91c5f3842001faf0',1,'Cellular::ElementaryAutomatonFast']]]
 ];

@@ -62,7 +62,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -140,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keyword">private</span> <a class="code" href="interface_cellular_1_1_i_binary_c_a.html">IBinaryCA</a> innerCA;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keyword">private</span> <span class="keywordtype">int</span> position;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="all__1_8js.html#adc67f3cba7c43380c89e203ab205f14f">size</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keyword">private</span> <span class="keywordtype">int</span> size;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keyword">private</span> Dictionary&lt;int, List&lt;uint[]&gt;&gt; visitedStates;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keyword">public</span> InnerGenerator(<a class="code" href="interface_cellular_1_1_i_binary_c_a.html">IBinaryCA</a> generatorCA, <span class="keywordtype">int</span> originalSize)</div>
@@ -182,7 +181,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    innerCA.<a class="code" href="interface_cellular_1_1_i_binary_c_a.html#a6a04c7374538c49df07efa176e0dd3c3">Step</a>();</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    position = 1;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    <span class="keywordflow">return</span> innerCA.<a class="code" href="interface_cellular_1_1_i_binary_c_a.html#a809b66186b663b64d85db59237693b52">GetValueAt</a>(position + padding);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    <span class="keywordflow">return</span> innerCA.<a class="code" href="interface_cellular_1_1_i_binary_c_a.html#a809b66186b663b64d85db59237693b52">GetValueAt</a>(padding);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                }</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            }</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
@@ -191,7 +190,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_crypto_1_1_key_extender_abstract_n_html"><div class="ttname"><a href="class_crypto_1_1_key_extender_abstract_n.html">Crypto.KeyExtenderAbstractN</a></div><div class="ttdoc">Abstract class for all key extenders that implement ExtendKey(). Method DoubleKey() simply calls Exte...</div><div class="ttdef"><b>Definition:</b> <a href="_key_extender_abstract_n_8cs_source.html#l00008">KeyExtenderAbstractN.cs:8</a></div></div>
 <div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
 <div class="ttc" id="class_crypto_1_1_key_extender_uncertain_html"><div class="ttname"><a href="class_crypto_1_1_key_extender_uncertain.html">Crypto.KeyExtenderUncertain</a></div><div class="ttdoc">Intelligent key extender that equalizes frequencies of 0 and 1, which may be different in the underly...</div><div class="ttdef"><b>Definition:</b> <a href="_key_extender_uncertain_8cs_source.html#l00012">KeyExtenderUncertain.cs:12</a></div></div>
-<div class="ttc" id="all__1_8js_html_adc67f3cba7c43380c89e203ab205f14f"><div class="ttname"><a href="all__1_8js.html#adc67f3cba7c43380c89e203ab205f14f">size</a></div><div class="ttdeci">jquery int size</div><div class="ttdef"><b>Definition:</b> <a href="all__1_8js_source.html#l00003">all_1.js:3</a></div></div>
 <div class="ttc" id="interface_cellular_1_1_i_binary_c_a_html_a62f943d92c7aedd121f99940ff12c63e"><div class="ttname"><a href="interface_cellular_1_1_i_binary_c_a.html#a62f943d92c7aedd121f99940ff12c63e">Cellular.IBinaryCA.GetPacked</a></div><div class="ttdeci">uint[] GetPacked()</div><div class="ttdoc">Converts the inner state of the CA into an array of System.UInt32. So every 32 cells are saved into o...</div></div>
 <div class="ttc" id="interface_cellular_1_1_i_binary_c_a_html"><div class="ttname"><a href="interface_cellular_1_1_i_binary_c_a.html">Cellular.IBinaryCA</a></div><div class="ttdoc">Common interface for all binary cellular automata. Most work with CA is done through this interface...</div><div class="ttdef"><b>Definition:</b> <a href="_i_binary_c_a_8cs_source.html#l00009">IBinaryCA.cs:9</a></div></div>
 <div class="ttc" id="interface_cellular_1_1_i_binary_c_a_html_a0d5610129c1f7aee62d6521ba8268cf9"><div class="ttname"><a href="interface_cellular_1_1_i_binary_c_a.html#a0d5610129c1f7aee62d6521ba8268cf9">Cellular.IBinaryCA.CloneEverything</a></div><div class="ttdeci">IBinaryCA CloneEverything()</div><div class="ttdoc">Clones the underlying CA including its state at the moment. </div></div>

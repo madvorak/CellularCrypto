@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['b',['b',['../jquery_8js.html#aa4026ad5544b958e54ce5e106fa1c805',1,'jquery.js']]],
-  ['bb',['bb',['../jquery_8js.html#a1d6558865876e1c8cca029fce41a4bdb',1,'jquery.js']]],
-  ['bq',['bq',['../jquery_8js.html#af6ee77c71b2c89bdb365145ac5ad1219',1,'jquery.js']]],
-  ['bs',['bs',['../jquery_8js.html#ae77642f8ef73fb9c20c2a737d956acda',1,'jquery.js']]]
+  ['liveamoebauniverse',['liveAmoebaUniverse',['../class_cellular_1_1_totalistic2_d_automaton.html#a69f67fbf81c8a2c5a3700c4f9b55c596',1,'Cellular::Totalistic2DAutomaton']]],
+  ['livegameoflife',['liveGameOfLife',['../class_cellular_1_1_totalistic2_d_automaton.html#a4633d221a98d2f36cc876f5a08c61f1e',1,'Cellular::Totalistic2DAutomaton']]],
+  ['livereplicatoruniverse',['liveReplicatorUniverse',['../class_cellular_1_1_totalistic2_d_automaton.html#abb59a96261e32abc500ce4c7db88cdd6',1,'Cellular::Totalistic2DAutomaton']]],
+  ['lookupt',['lookupT',['../class_cellular_1_1_elementary_automaton_fast.html#a775d51c35b62cecd91c5f3842001faf0',1,'Cellular::ElementaryAutomatonFast']]]
 ];

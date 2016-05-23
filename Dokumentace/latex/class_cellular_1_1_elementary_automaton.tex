@@ -8,7 +8,7 @@ Class representing 256 elementary C\+A with firmly set borders. This specific im
 Inheritance diagram for Cellular.\+Elementary\+Automaton\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=5.000000cm]{class_cellular_1_1_elementary_automaton}
+\includegraphics[height=6.000000cm]{class_cellular_1_1_elementary_automaton}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -20,7 +20,7 @@ Inheritance diagram for Cellular.\+Elementary\+Automaton\+:\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em Creates a new basic C\+A with 000...00100...000 as its initial state. The new C\+A will use rule No.\+30 \+: asymmetric, pseudo-\/chaotic behaviour. \end{DoxyCompactList}\item 
 \hyperlink{class_cellular_1_1_elementary_automaton_aa8326e685de0a177a5125625280fdde1}{Elementary\+Automaton} (byte rule\+No, int \hyperlink{class_cellular_1_1_automaton1_d_a915129ccf0f1e7092844c99ce6a28e5b}{size})
 \begin{DoxyCompactList}\small\item\em Creates a new basic C\+A with given rule and 000...00100...000 as its initial state. \end{DoxyCompactList}\item 
-\hyperlink{class_cellular_1_1_elementary_automaton_aa5d649a5cc42560eede2ac3c96199f7b}{Elementary\+Automaton} (byte rule\+No, Bit\+Array \hyperlink{all__1_8js_ae8b87ff4be2ae1dd5267342795263360}{initial\+State})
+\hyperlink{class_cellular_1_1_elementary_automaton_aa5d649a5cc42560eede2ac3c96199f7b}{Elementary\+Automaton} (byte rule\+No, Bit\+Array initial\+State)
 \begin{DoxyCompactList}\small\item\em Creates a new basic C\+A with given rule and initial state. \end{DoxyCompactList}\item 
 \hyperlink{class_cellular_1_1_elementary_automaton_a64849d809eb4962cb09b5263f3227457}{Elementary\+Automaton} (byte rule\+No, int \hyperlink{class_cellular_1_1_automaton1_d_a915129ccf0f1e7092844c99ce6a28e5b}{size}, Random rnd)
 \begin{DoxyCompactList}\small\item\em Creates a new basic C\+A. \end{DoxyCompactList}\item 
@@ -184,7 +184,7 @@ Definition at line 57 of file Elementary\+Automaton.\+cs.
 Creates an appropriate copy of the C\+A. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. 
 
 \begin{DoxyReturn}{Returns}
-A copy of the {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton}{Cellular\+Automaton}} as an {\ttfamily Object}
+A copy of the {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton}{Cellular\+Automaton}} as {\ttfamily System.\+Object}
 \end{DoxyReturn}
 
 
@@ -192,7 +192,7 @@ Implements \hyperlink{class_cellular_1_1_cellular_automaton_affd487b397cdbbbb198
 
 
 
-Reimplemented in \hyperlink{class_cellular_1_1_elementary_fast_automaton_a98bbdcade0ac93dd0fbc96ba253c2978}{Cellular.\+Elementary\+Fast\+Automaton}.
+Reimplemented in \hyperlink{class_cellular_1_1_elementary_automaton_parallel_acab752769899cc6a5757d4426dcbbe98}{Cellular.\+Elementary\+Automaton\+Parallel}, \hyperlink{class_cellular_1_1_elementary_automaton_fast_aab801961aaba914c425c92079844c7ba}{Cellular.\+Elementary\+Automaton\+Fast}, and \hyperlink{class_cellular_1_1_elementary_automaton_faster_ad7364d3a51b79b7c14df46a99f746d7f}{Cellular.\+Elementary\+Automaton\+Faster}.
 
 
 
@@ -211,7 +211,7 @@ Implements \hyperlink{class_cellular_1_1_binary1_d_automaton_a38ac5ae077c5d31356
 
 
 
-Reimplemented in \hyperlink{class_cellular_1_1_elementary_fast_automaton_a95b5abc22d134cb9640b56a0a70c1454}{Cellular.\+Elementary\+Fast\+Automaton}.
+Reimplemented in \hyperlink{class_cellular_1_1_elementary_automaton_parallel_a0e211ead8fc0edd117300763bd757b13}{Cellular.\+Elementary\+Automaton\+Parallel}, \hyperlink{class_cellular_1_1_elementary_automaton_fast_aeafb2ce19eae3c716be5156b502115aa}{Cellular.\+Elementary\+Automaton\+Fast}, and \hyperlink{class_cellular_1_1_elementary_automaton_faster_a57ca5f4f41eb178e507dd8de124854ac}{Cellular.\+Elementary\+Automaton\+Faster}.
 
 
 

@@ -96,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>The top class of the CA hierarchy. Every constructor should follow this logical order when considering its parametres: specification of the type (usually not needed), rule, size, initial state / rng.  
+<p>The top class of the CA hierarchy. Every constructor should follow this logical order when considering its parametres: 1) specification of the type (usually not needed), 2) rule, 3) initial state / size (&amp; rng).  
  <a href="class_cellular_1_1_cellular_automaton.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Cellular.CellularAutomaton:</div>
@@ -104,20 +104,22 @@ Inheritance diagram for Cellular.CellularAutomaton:</div>
  <div class="center">
   <img src="class_cellular_1_1_cellular_automaton.png" usemap="#Cellular.CellularAutomaton_map" alt=""/>
   <map id="Cellular.CellularAutomaton_map" name="Cellular.CellularAutomaton_map">
-<area href="class_cellular_1_1_automaton1_d.html" title="Abstract class for all 1D automata (binary & others). " alt="Cellular.Automaton1D" shape="rect" coords="506,56,749,80"/>
-<area href="class_cellular_1_1_automaton2_d.html" title="Abstract class for all 2D automata. When indexing, ("height first") the distance from the top comes b..." alt="Cellular.Automaton2D" shape="rect" coords="1012,56,1255,80"/>
-<area href="class_cellular_1_1_binary1_d_automaton.html" title="Class containing base-constructors for all binary 1D automata and implementation of the IBinaryCA int..." alt="Cellular.Binary1DAutomaton" shape="rect" coords="253,112,496,136"/>
-<area href="class_cellular_1_1_nary1_d_automaton.html" title="Abstract class for general 1D N-ary automata. " alt="Cellular.Nary1DAutomaton" shape="rect" coords="759,112,1002,136"/>
-<area href="class_cellular_1_1_binary2_d_automaton.html" title="Class containing base-constructors for all binary 2D automata and implementation of the IBinaryCA int..." alt="Cellular.Binary2DAutomaton" shape="rect" coords="1012,112,1255,136"/>
+<area href="class_cellular_1_1_automaton1_d.html" title="Abstract class for all 1D automata (binary & others). " alt="Cellular.Automaton1D" shape="rect" coords="632,56,875,80"/>
+<area href="class_cellular_1_1_automaton2_d.html" title="Abstract class for all 2D automata. When indexing, ("height first") the distance from the top comes b..." alt="Cellular.Automaton2D" shape="rect" coords="1138,56,1381,80"/>
+<area href="class_cellular_1_1_binary1_d_automaton.html" title="Class containing base-constructors for all binary 1D automata and implementation of the IBinaryCA int..." alt="Cellular.Binary1DAutomaton" shape="rect" coords="379,112,622,136"/>
+<area href="class_cellular_1_1_nary1_d_automaton.html" title="Abstract class for general 1D N-ary automata. " alt="Cellular.Nary1DAutomaton" shape="rect" coords="885,112,1128,136"/>
+<area href="class_cellular_1_1_binary2_d_automaton.html" title="Class containing base-constructors for all binary 2D automata and implementation of the IBinaryCA int..." alt="Cellular.Binary2DAutomaton" shape="rect" coords="1138,112,1381,136"/>
 <area href="class_cellular_1_1_binary_range_automaton.html" title="Class representing any binary 1D automaton with symmetric scope. The automaton has firmly set borders..." alt="Cellular.BinaryRangeAutomaton" shape="rect" coords="0,168,243,192"/>
-<area href="class_cellular_1_1_elementary_automaton.html" title="Class representing 256 elementary CA with firmly set borders. This specific implementation calculates..." alt="Cellular.ElementaryAutomaton" shape="rect" coords="253,168,496,192"/>
-<area href="class_cellular_1_1_reversible_automaton.html" title="Class representing any binary 1D automaton with any symmetric rule which is made reversible. This is very inefficient (possibly throwaway) implementation, because it reuses BinaryRangeCyclicAutomaton for every step. " alt="Cellular.ReversibleAutomaton" shape="rect" coords="506,168,749,192"/>
-<area href="class_cellular_1_1_nary_totalistic_automaton.html" title="Class representing any n-ary one-dimensional automaton with a totalistic rule - bordered variant..." alt="Cellular.NaryTotalisticAutomaton" shape="rect" coords="759,168,1002,192"/>
-<area href="class_cellular_1_1_totalistic2_d_automaton.html" title="Class representing a totalistic 2D automaton that uses Moore Neighborhood. " alt="Cellular.Totalistic2DAutomaton" shape="rect" coords="1012,168,1255,192"/>
+<area href="class_cellular_1_1_elementary_automaton.html" title="Class representing 256 elementary CA with firmly set borders. This specific implementation calculates..." alt="Cellular.ElementaryAutomaton" shape="rect" coords="379,168,622,192"/>
+<area href="class_cellular_1_1_reversible_automaton.html" title="Class representing any binary 1D automaton with any symmetric rule which is made reversible. This is very inefficient (possibly throwaway) implementation, because it reuses BinaryRangeCyclicAutomaton for every step. " alt="Cellular.ReversibleAutomaton" shape="rect" coords="632,168,875,192"/>
+<area href="class_cellular_1_1_nary_totalistic_automaton.html" title="Class representing any n-ary one-dimensional automaton with a totalistic rule - bordered variant..." alt="Cellular.NaryTotalisticAutomaton" shape="rect" coords="885,168,1128,192"/>
+<area href="class_cellular_1_1_totalistic2_d_automaton.html" title="Class representing a totalistic 2D automaton that uses Moore Neighborhood. " alt="Cellular.Totalistic2DAutomaton" shape="rect" coords="1138,168,1381,192"/>
 <area href="class_cellular_1_1_binary_range_cyclic_automaton.html" title="Class representing any binary 1D automaton with symmetric scope. The automaton is cyclic - its edges ..." alt="Cellular.BinaryRangeCyclicAutomaton" shape="rect" coords="0,224,243,248"/>
-<area href="class_cellular_1_1_elementary_fast_automaton.html" title="Class representing 256 elementary CA with firmly set borders. This specific implementation maps 10 ce..." alt="Cellular.ElementaryFastAutomaton" shape="rect" coords="253,224,496,248"/>
-<area href="class_cellular_1_1_nary_totalistic_cyclic_automaton.html" title="Class representing any N-ary one-dimensional automaton with a totalistic rule - cyclic variant..." alt="Cellular.NaryTotalisticCyclicAutomaton" shape="rect" coords="759,224,1002,248"/>
-<area href="class_cellular_1_1_totalistic2_d_automaton_interactive.html" title="Class representing a totalistic 2D automaton that uses Moore Neighborhood with enhanced functionaliti..." alt="Cellular.Totalistic2DAutomatonInteractive" shape="rect" coords="1012,224,1255,248"/>
+<area href="class_cellular_1_1_elementary_automaton_fast.html" title="Class representing 256 elementary CA with firmly set borders. This specific implementation maps 10 ce..." alt="Cellular.ElementaryAutomatonFast" shape="rect" coords="253,224,496,248"/>
+<area href="class_cellular_1_1_elementary_automaton_faster.html" title="Class representing 256 elementary CA with firmly set borders. This specific implementation reads ever..." alt="Cellular.ElementaryAutomatonFaster" shape="rect" coords="506,224,749,248"/>
+<area href="class_cellular_1_1_nary_totalistic_cyclic_automaton.html" title="Class representing any N-ary one-dimensional automaton with a totalistic rule - cyclic variant..." alt="Cellular.NaryTotalisticCyclicAutomaton" shape="rect" coords="885,224,1128,248"/>
+<area href="class_cellular_1_1_totalistic2_d_automaton_interactive.html" title="Class representing a totalistic 2D automaton that uses Moore Neighborhood with enhanced functionaliti..." alt="Cellular.Totalistic2DAutomatonInteractive" shape="rect" coords="1138,224,1381,248"/>
+<area href="class_cellular_1_1_elementary_automaton_parallel.html" title="Class representing 256 elementary CA with firmly set borders. Parallel implementation. Unfortunately, it seems this is not the fastest implementation. For small sizes, the threading overhead is too big. For large sizes, there seems to be a performce problem with parallel memory access. " alt="Cellular.ElementaryAutomatonParallel" shape="rect" coords="506,280,749,304"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -136,7 +138,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:affd487b397cdbbbb1982815bbcd8e7d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an appropriate copy of the CA. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0.  <a href="#affd487b397cdbbbb1982815bbcd8e7d3">More...</a><br /></td></tr>
 <tr class="separator:affd487b397cdbbbb1982815bbcd8e7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe4b92fd405530c8a08cc07a3a19fff4"><td class="memItemLeft" align="right" valign="top">abstract string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cellular_1_1_cellular_automaton.html#abe4b92fd405530c8a08cc07a3a19fff4">TellType</a> ()</td></tr>
-<tr class="memdesc:abe4b92fd405530c8a08cc07a3a19fff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Announces the runtime type of the CA including info about its rule. It serves for debugging purposes.  <a href="#abe4b92fd405530c8a08cc07a3a19fff4">More...</a><br /></td></tr>
+<tr class="memdesc:abe4b92fd405530c8a08cc07a3a19fff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Announces the runtime type of the CA including info about its rule.  <a href="#abe4b92fd405530c8a08cc07a3a19fff4">More...</a><br /></td></tr>
 <tr class="separator:abe4b92fd405530c8a08cc07a3a19fff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -145,9 +147,9 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a6eaa8a9840fbc4c875d4e7d5a14e5f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The top class of the CA hierarchy. Every constructor should follow this logical order when considering its parametres: specification of the type (usually not needed), rule, size, initial state / rng. </p>
+<div class="textblock"><p>The top class of the CA hierarchy. Every constructor should follow this logical order when considering its parametres: 1) specification of the type (usually not needed), 2) rule, 3) initial state / size (&amp; rng). </p>
 
-<p>Definition at line <a class="el" href="_cellular_automaton_8cs_source.html#l00007">7</a> of file <a class="el" href="_cellular_automaton_8cs_source.html">CellularAutomaton.cs</a>.</p>
+<p>Definition at line <a class="el" href="_cellular_automaton_8cs_source.html#l00008">8</a> of file <a class="el" href="_cellular_automaton_8cs_source.html">CellularAutomaton.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="affd487b397cdbbbb1982815bbcd8e7d3"></a>
 <div class="memitem">
@@ -171,9 +173,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates an appropriate copy of the CA. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of the <code><a class="el" href="class_cellular_1_1_cellular_automaton.html" title="The top class of the CA hierarchy. Every constructor should follow this logical order when considerin...">CellularAutomaton</a></code> as an <code>Object</code></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A copy of the <code><a class="el" href="class_cellular_1_1_cellular_automaton.html" title="The top class of the CA hierarchy. Every constructor should follow this logical order when considerin...">CellularAutomaton</a></code> as <code>System.Object</code></dd></dl>
 
-<p>Implemented in <a class="el" href="class_cellular_1_1_totalistic2_d_automaton.html#ae78cf4c3f8245adf64ec9a173330804f">Cellular.Totalistic2DAutomaton</a>, <a class="el" href="class_cellular_1_1_elementary_fast_automaton.html#a98bbdcade0ac93dd0fbc96ba253c2978">Cellular.ElementaryFastAutomaton</a>, <a class="el" href="class_cellular_1_1_binary_range_automaton.html#a12f010562e04785e0a7efb113302687e">Cellular.BinaryRangeAutomaton</a>, <a class="el" href="class_cellular_1_1_elementary_automaton.html#ada4ddee98167e8f4f4b6dea1f7563b47">Cellular.ElementaryAutomaton</a>, <a class="el" href="class_cellular_1_1_reversible_automaton.html#a276aa112cccc2513c6b7c005056205fb">Cellular.ReversibleAutomaton</a>, <a class="el" href="class_cellular_1_1_binary_range_cyclic_automaton.html#a2361fe82802e372b24b8bec6a6135278">Cellular.BinaryRangeCyclicAutomaton</a>, <a class="el" href="class_cellular_1_1_nary_totalistic_automaton.html#a13f16113915ecec451fc4764a32044f9">Cellular.NaryTotalisticAutomaton</a>, and <a class="el" href="class_cellular_1_1_nary_totalistic_cyclic_automaton.html#aa8d5a7d77a6dfc5f6e4fae6ba1c6cfd0">Cellular.NaryTotalisticCyclicAutomaton</a>.</p>
+<p>Implemented in <a class="el" href="class_cellular_1_1_totalistic2_d_automaton.html#ae78cf4c3f8245adf64ec9a173330804f">Cellular.Totalistic2DAutomaton</a>, <a class="el" href="class_cellular_1_1_elementary_automaton_parallel.html#acab752769899cc6a5757d4426dcbbe98">Cellular.ElementaryAutomatonParallel</a>, <a class="el" href="class_cellular_1_1_elementary_automaton_fast.html#aab801961aaba914c425c92079844c7ba">Cellular.ElementaryAutomatonFast</a>, <a class="el" href="class_cellular_1_1_binary_range_automaton.html#a12f010562e04785e0a7efb113302687e">Cellular.BinaryRangeAutomaton</a>, <a class="el" href="class_cellular_1_1_elementary_automaton.html#ada4ddee98167e8f4f4b6dea1f7563b47">Cellular.ElementaryAutomaton</a>, <a class="el" href="class_cellular_1_1_reversible_automaton.html#a276aa112cccc2513c6b7c005056205fb">Cellular.ReversibleAutomaton</a>, <a class="el" href="class_cellular_1_1_elementary_automaton_faster.html#ad7364d3a51b79b7c14df46a99f746d7f">Cellular.ElementaryAutomatonFaster</a>, <a class="el" href="class_cellular_1_1_binary_range_cyclic_automaton.html#a2361fe82802e372b24b8bec6a6135278">Cellular.BinaryRangeCyclicAutomaton</a>, <a class="el" href="class_cellular_1_1_nary_totalistic_automaton.html#a13f16113915ecec451fc4764a32044f9">Cellular.NaryTotalisticAutomaton</a>, and <a class="el" href="class_cellular_1_1_nary_totalistic_cyclic_automaton.html#aa8d5a7d77a6dfc5f6e4fae6ba1c6cfd0">Cellular.NaryTotalisticCyclicAutomaton</a>.</p>
 
 </div>
 </div>
@@ -193,7 +195,7 @@ Protected Attributes</h2></td></tr>
 <p>Only returns how many steps have been done. </p>
 <dl class="section return"><dt>Returns</dt><dd>Number of executed steps.</dd></dl>
 
-<p>Definition at line <a class="el" href="_cellular_automaton_8cs_source.html#l00020">20</a> of file <a class="el" href="_cellular_automaton_8cs_source.html">CellularAutomaton.cs</a>.</p>
+<p>Definition at line <a class="el" href="_cellular_automaton_8cs_source.html#l00021">21</a> of file <a class="el" href="_cellular_automaton_8cs_source.html">CellularAutomaton.cs</a>.</p>
 
 </div>
 </div>
@@ -220,7 +222,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Performs one step applying the specific rule for creating a new state. </p>
 
-<p>Implemented in <a class="el" href="class_cellular_1_1_totalistic2_d_automaton.html#a7f85cac5420f67a936cbd4cef33c4abc">Cellular.Totalistic2DAutomaton</a>, <a class="el" href="class_cellular_1_1_elementary_automaton.html#adae7c322e4c7cd00cd0534a23d1abfa4">Cellular.ElementaryAutomaton</a>, <a class="el" href="class_cellular_1_1_binary_range_automaton.html#ade1f5b831b9676f04f835c33d245b9e2">Cellular.BinaryRangeAutomaton</a>, <a class="el" href="class_cellular_1_1_elementary_fast_automaton.html#aa877bef8b8242c58e190a884d18f3b5f">Cellular.ElementaryFastAutomaton</a>, <a class="el" href="class_cellular_1_1_reversible_automaton.html#ae931cb64ab215ba1d1c1019a3f289b6d">Cellular.ReversibleAutomaton</a>, and <a class="el" href="class_cellular_1_1_nary_totalistic_automaton.html#ad90769a438ab94b46d4750a571782056">Cellular.NaryTotalisticAutomaton</a>.</p>
+<p>Implemented in <a class="el" href="class_cellular_1_1_totalistic2_d_automaton.html#a7f85cac5420f67a936cbd4cef33c4abc">Cellular.Totalistic2DAutomaton</a>, <a class="el" href="class_cellular_1_1_elementary_automaton_parallel.html#a84082a382d1453376f1d5fe47cf7c11c">Cellular.ElementaryAutomatonParallel</a>, <a class="el" href="class_cellular_1_1_elementary_automaton.html#adae7c322e4c7cd00cd0534a23d1abfa4">Cellular.ElementaryAutomaton</a>, <a class="el" href="class_cellular_1_1_binary_range_automaton.html#ade1f5b831b9676f04f835c33d245b9e2">Cellular.BinaryRangeAutomaton</a>, <a class="el" href="class_cellular_1_1_elementary_automaton_fast.html#a6b635bdfd83f914a6416ec12d09bdfdf">Cellular.ElementaryAutomatonFast</a>, <a class="el" href="class_cellular_1_1_reversible_automaton.html#ae931cb64ab215ba1d1c1019a3f289b6d">Cellular.ReversibleAutomaton</a>, <a class="el" href="class_cellular_1_1_elementary_automaton_faster.html#aa24f096567fb0f98c01e91a78c320696">Cellular.ElementaryAutomatonFaster</a>, and <a class="el" href="class_cellular_1_1_nary_totalistic_automaton.html#ad90769a438ab94b46d4750a571782056">Cellular.NaryTotalisticAutomaton</a>.</p>
 
 </div>
 </div>
@@ -246,7 +248,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_cellular_automaton_8cs_source.html#l00029">29</a> of file <a class="el" href="_cellular_automaton_8cs_source.html">CellularAutomaton.cs</a>.</p>
+<p>Definition at line <a class="el" href="_cellular_automaton_8cs_source.html#l00030">30</a> of file <a class="el" href="_cellular_automaton_8cs_source.html">CellularAutomaton.cs</a>.</p>
 
 </div>
 </div>
@@ -271,7 +273,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Announces the runtime type of the CA including info about its rule. It serves for debugging purposes. </p>
+<p>Announces the runtime type of the CA including info about its rule. </p>
 <dl class="section return"><dt>Returns</dt><dd>Type of the CA as a string.</dd></dl>
 
 <p>Implemented in <a class="el" href="class_cellular_1_1_totalistic2_d_automaton.html#aa009c674cd109fa70173e9893f6d3b09">Cellular.Totalistic2DAutomaton</a>, <a class="el" href="class_cellular_1_1_binary_range_automaton.html#afad205eb4fea51efd63b063f96bfda5c">Cellular.BinaryRangeAutomaton</a>, <a class="el" href="class_cellular_1_1_elementary_automaton.html#a812677139d560e2c600226361b785995">Cellular.ElementaryAutomaton</a>, <a class="el" href="class_cellular_1_1_reversible_automaton.html#ae394a104b5fe5a550c6c378fea92c355">Cellular.ReversibleAutomaton</a>, <a class="el" href="class_cellular_1_1_binary_range_cyclic_automaton.html#a75754d1c54550e1f29a9282647947cb8">Cellular.BinaryRangeCyclicAutomaton</a>, <a class="el" href="class_cellular_1_1_nary_totalistic_automaton.html#aa691c532a55638c7e3d0c125a4244773">Cellular.NaryTotalisticAutomaton</a>, and <a class="el" href="class_cellular_1_1_nary_totalistic_cyclic_automaton.html#ac5c39cfb72386e3ab6132ab420091ae9">Cellular.NaryTotalisticCyclicAutomaton</a>.</p>
@@ -297,7 +299,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_cellular_automaton_8cs_source.html#l00009">9</a> of file <a class="el" href="_cellular_automaton_8cs_source.html">CellularAutomaton.cs</a>.</p>
+<p>Definition at line <a class="el" href="_cellular_automaton_8cs_source.html#l00010">10</a> of file <a class="el" href="_cellular_automaton_8cs_source.html">CellularAutomaton.cs</a>.</p>
 
 </div>
 </div>

@@ -31,3 +31,11 @@ ElementaryAutomatonFast: 5919 ms
 ElementaryAutomatonFaster: 3289 ms
 ElementaryAutomatonParallel: 3512 ms
 BinaryRangeAutomaton: 3535 ms
+
+Tatínkův služební notebook:
+
+ElementaryAutomaton: 6247 ms
+ElementaryAutomatonFast: 5536 ms
+ElementaryAutomatonFaster: 3323 ms
+ElementaryAutomatonParallel: 3313 ms
+BinaryRangeAutomaton: 3952 ms

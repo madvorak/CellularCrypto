@@ -32,10 +32,6 @@ var searchData=
   ['testsystematiccompression',['TestSystematicCompression',['../class_crypto_1_1_function_testing.html#a3e1bedf80b820d257984dbae03d0e0e1',1,'Crypto::FunctionTesting']]],
   ['testsystematicentropy',['TestSystematicEntropy',['../class_crypto_1_1_function_testing.html#a38ff139e200ca760a150fd23f9b8c754',1,'Crypto::FunctionTesting']]],
   ['testsystematicsequences',['TestSystematicSequences',['../class_crypto_1_1_function_testing.html#a082771a8c25d3ac4b29906cbd73fb584',1,'Crypto::FunctionTesting']]],
-  ['togglefolder',['toggleFolder',['../dynsections_8js.html#af244da4527af2d845dca04f5656376cd',1,'dynsections.js']]],
-  ['toggleinherit',['toggleInherit',['../dynsections_8js.html#ac057b640b17ff32af11ced151c9305b4',1,'dynsections.js']]],
-  ['togglelevel',['toggleLevel',['../dynsections_8js.html#a19f577cc1ba571396a85bb1f48bf4df2',1,'dynsections.js']]],
-  ['togglevisibility',['toggleVisibility',['../dynsections_8js.html#a1922c462474df7dfd18741c961d59a25',1,'dynsections.js']]],
   ['totalistic2dautomaton',['Totalistic2DAutomaton',['../class_cellular_1_1_totalistic2_d_automaton.html#a4c7a751baa03c7caf2040d07bb772e91',1,'Cellular.Totalistic2DAutomaton.Totalistic2DAutomaton(bool[] ruleLive, bool[] ruleDead, int width, int height, string specificName=null)'],['../class_cellular_1_1_totalistic2_d_automaton.html#a706f4c765a54fef6003e6e208a073a1c',1,'Cellular.Totalistic2DAutomaton.Totalistic2DAutomaton(bool[] ruleLive, bool[] ruleDead, BitArray[] initialState, string specificName=null)']]],
   ['totalistic2dautomatoninteractive',['Totalistic2DAutomatonInteractive',['../class_cellular_1_1_totalistic2_d_automaton_interactive.html#a9b9aaa167ca0cb5020210e0728c817fd',1,'Cellular.Totalistic2DAutomatonInteractive.Totalistic2DAutomatonInteractive(bool[] ruleLive, bool[] ruleDead, int width, int height)'],['../class_cellular_1_1_totalistic2_d_automaton_interactive.html#a5f1ba6e24762d3f99115e0f71e3a4c2b',1,'Cellular.Totalistic2DAutomatonInteractive.Totalistic2DAutomatonInteractive(bool[] ruleLive, bool[] ruleDead, BitArray[] initialState)']]]
 ];

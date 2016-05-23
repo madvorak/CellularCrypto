@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['ad',['aD',['../jquery_8js.html#ad223f5fba68c41c1236671ac5c5b0fcb',1,'jquery.js']]],
-  ['am',['aM',['../jquery_8js.html#a8cc6111a5def3ea889157d13fb9a9672',1,'jquery.js']]],
-  ['ap',['ap',['../jquery_8js.html#a6ddf393cc7f9a8828e197bb0d9916c44',1,'jquery.js']]],
-  ['aq',['aQ',['../jquery_8js.html#a79eb58dc6cdf0aef563d5dc1ded27df5',1,'jquery.js']]],
-  ['au',['au',['../jquery_8js.html#a4fd8ddfab07c8d7c7cae0ab0e052cad3',1,'jquery.js']]],
-  ['az',['aZ',['../jquery_8js.html#ac87125cdee1a5e57da4ef619af49bc7d',1,'jquery.js']]]
+  ['deadamoebauniverse',['deadAmoebaUniverse',['../class_cellular_1_1_totalistic2_d_automaton.html#a5b2dd1d361797410beda7ea765b40c31',1,'Cellular::Totalistic2DAutomaton']]],
+  ['deadgameoflife',['deadGameOfLife',['../class_cellular_1_1_totalistic2_d_automaton.html#aa4888d1ead2dfcdb1c90c79485aed255',1,'Cellular::Totalistic2DAutomaton']]],
+  ['deadreplicatoruniverse',['deadReplicatorUniverse',['../class_cellular_1_1_totalistic2_d_automaton.html#a195a2bf20843bbc0980979ef889170d3',1,'Cellular::Totalistic2DAutomaton']]],
+  ['descramoebauniverse',['descrAmoebaUniverse',['../class_cellular_1_1_totalistic2_d_automaton.html#a0acaeddabe1e121966d99d9144eb3220',1,'Cellular::Totalistic2DAutomaton']]],
+  ['descrgameoflife',['descrGameOfLife',['../class_cellular_1_1_totalistic2_d_automaton.html#a925e29c85ea53754a86864aa9b2e27f9',1,'Cellular::Totalistic2DAutomaton']]],
+  ['descrreplicatoruniverse',['descrReplicatorUniverse',['../class_cellular_1_1_totalistic2_d_automaton.html#ab93b5f3ae4587498fcccab5a77992ab9',1,'Cellular::Totalistic2DAutomaton']]]
 ];

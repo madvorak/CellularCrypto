@@ -62,7 +62,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -191,7 +190,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                Individual[] nextGeneration = <span class="keyword">new</span> Individual[popSize];</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                </div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <span class="comment">// selection</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                Individual a, <a class="code" href="jquery_8js.html#aa4026ad5544b958e54ce5e106fa1c805">b</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                Individual a, b;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; popSize; j++)</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                {</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    a = population[rng.Next(popSize)];</div>
@@ -202,7 +201,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    }</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                    {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                        nextGeneration[j] = <a class="code" href="jquery_8js.html#aa4026ad5544b958e54ce5e106fa1c805">b</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                        nextGeneration[j] = b;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                    }</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                }</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
@@ -282,7 +281,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                automata = <span class="keyword">new</span> List&lt;IBinaryCA&gt;();</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 256; i++)</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                {</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                    automata.Add(<span class="keyword">new</span> <a class="code" href="class_cellular_1_1_elementary_fast_automaton.html">ElementaryFastAutomaton</a>((byte)i, 1));</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                    automata.Add(<span class="keyword">new</span> <a class="code" href="class_cellular_1_1_elementary_automaton_fast.html">ElementaryAutomatonFast</a>((byte)i, 1));</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                }</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 100; i++)</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                {</div>
@@ -365,7 +364,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    }</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;}</div>
 <div class="ttc" id="class_crypto_1_1_key_extender_abstract_n_html"><div class="ttname"><a href="class_crypto_1_1_key_extender_abstract_n.html">Crypto.KeyExtenderAbstractN</a></div><div class="ttdoc">Abstract class for all key extenders that implement ExtendKey(). Method DoubleKey() simply calls Exte...</div><div class="ttdef"><b>Definition:</b> <a href="_key_extender_abstract_n_8cs_source.html#l00008">KeyExtenderAbstractN.cs:8</a></div></div>
-<div class="ttc" id="class_cellular_1_1_elementary_fast_automaton_html"><div class="ttname"><a href="class_cellular_1_1_elementary_fast_automaton.html">Cellular.ElementaryFastAutomaton</a></div><div class="ttdoc">Class representing 256 elementary CA with firmly set borders. This specific implementation maps 10 ce...</div><div class="ttdef"><b>Definition:</b> <a href="_elementary_fast_automaton_8cs_source.html#l00010">ElementaryFastAutomaton.cs:10</a></div></div>
 <div class="ttc" id="class_crypto_1_1_key_extender_abstract_d_html_ae403b92e9038b9c0bc7a21885e24ffc7"><div class="ttname"><a href="class_crypto_1_1_key_extender_abstract_d.html#ae403b92e9038b9c0bc7a21885e24ffc7">Crypto.KeyExtenderAbstractD.DoubleKey</a></div><div class="ttdeci">abstract BitArray DoubleKey(BitArray shortKey)</div><div class="ttdoc">Generates a longer key from a short key. </div></div>
 <div class="ttc" id="class_cellular_1_1_utilities_html_a3f20fa274e0db626d4052fe233f7a00f"><div class="ttname"><a href="class_cellular_1_1_utilities.html#a3f20fa274e0db626d4052fe233f7a00f">Cellular.Utilities.RandomBoolArr</a></div><div class="ttdeci">static bool[] RandomBoolArr(int length, Random rnd)</div><div class="ttdoc">Generates a random array of System.Boolean of given length. </div><div class="ttdef"><b>Definition:</b> <a href="_utilities_8cs_source.html#l00172">Utilities.cs:172</a></div></div>
 <div class="ttc" id="class_crypto_1_1_key_extender_genetic_html_a60bbe95f9ec44c270006a901acf199e5"><div class="ttname"><a href="class_crypto_1_1_key_extender_genetic.html#a60bbe95f9ec44c270006a901acf199e5">Crypto.KeyExtenderGenetic.KeyExtenderGenetic</a></div><div class="ttdeci">KeyExtenderGenetic()</div><div class="ttdef"><b>Definition:</b> <a href="_key_extender_genetic_8cs_source.html#l00064">KeyExtenderGenetic.cs:64</a></div></div>
@@ -381,7 +379,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_crypto_1_1_randomness_testing_html_a34e225189cd735e8cfa82f6ab3b7d97f"><div class="ttname"><a href="class_crypto_1_1_randomness_testing.html#a34e225189cd735e8cfa82f6ab3b7d97f">Crypto.RandomnessTesting.RateSequence</a></div><div class="ttdeci">static double RateSequence(BitArray sequence)</div><div class="ttdoc">Rates how much the BitArray is pseudorandom. Return the average between CompressionTest(b) and Entrop...</div><div class="ttdef"><b>Definition:</b> <a href="_randomness_testing_8cs_source.html#l00089">RandomnessTesting.cs:89</a></div></div>
 <div class="ttc" id="class_crypto_1_1_randomness_testing_html"><div class="ttname"><a href="class_crypto_1_1_randomness_testing.html">Crypto.RandomnessTesting</a></div><div class="ttdoc">Static class that contains some tests of randomness for binary sequences. The tests operate on BitArr...</div><div class="ttdef"><b>Definition:</b> <a href="_randomness_testing_8cs_source.html#l00012">RandomnessTesting.cs:12</a></div></div>
 <div class="ttc" id="class_crypto_1_1_key_extender_abstract_n_html_a9df4156ad0a84730f87119e5a25cf1ef"><div class="ttname"><a href="class_crypto_1_1_key_extender_abstract_n.html#a9df4156ad0a84730f87119e5a25cf1ef">Crypto.KeyExtenderAbstractN.ExtendKey</a></div><div class="ttdeci">abstract BitArray ExtendKey(BitArray shortKey, int targetLength)</div><div class="ttdoc">Generates a longer key from a short key. </div></div>
-<div class="ttc" id="jquery_8js_html_aa4026ad5544b958e54ce5e106fa1c805"><div class="ttname"><a href="jquery_8js.html#aa4026ad5544b958e54ce5e106fa1c805">b</a></div><div class="ttdeci">var b</div><div class="ttdef"><b>Definition:</b> <a href="jquery_8js_source.html#l00016">jquery.js:16</a></div></div>
+<div class="ttc" id="class_cellular_1_1_elementary_automaton_fast_html"><div class="ttname"><a href="class_cellular_1_1_elementary_automaton_fast.html">Cellular.ElementaryAutomatonFast</a></div><div class="ttdoc">Class representing 256 elementary CA with firmly set borders. This specific implementation maps 10 ce...</div><div class="ttdef"><b>Definition:</b> <a href="_elementary_automaton_fast_8cs_source.html#l00010">ElementaryAutomatonFast.cs:10</a></div></div>
 <div class="ttc" id="class_cellular_1_1_totalistic2_d_automaton_html"><div class="ttname"><a href="class_cellular_1_1_totalistic2_d_automaton.html">Cellular.Totalistic2DAutomaton</a></div><div class="ttdoc">Class representing a totalistic 2D automaton that uses Moore Neighborhood. </div><div class="ttdef"><b>Definition:</b> <a href="_totalistic2_d_automaton_8cs_source.html#l00009">Totalistic2DAutomaton.cs:9</a></div></div>
 <div class="ttc" id="class_cellular_1_1_totalistic2_d_automaton_html_a9f5a2308bc2b17ee7a9c779608e505ba"><div class="ttname"><a href="class_cellular_1_1_totalistic2_d_automaton.html#a9f5a2308bc2b17ee7a9c779608e505ba">Cellular.Totalistic2DAutomaton.CreateReplicatorUniverse</a></div><div class="ttdeci">static Totalistic2DAutomaton CreateReplicatorUniverse(int width, int height)</div><div class="ttdef"><b>Definition:</b> <a href="_totalistic2_d_automaton_8cs_source.html#l00092">Totalistic2DAutomaton.cs:92</a></div></div>
 <div class="ttc" id="class_cellular_1_1_utilities_html"><div class="ttname"><a href="class_cellular_1_1_utilities.html">Cellular.Utilities</a></div><div class="ttdoc">Static class packing a group of utilities for working with CA. </div><div class="ttdef"><b>Definition:</b> <a href="_utilities_8cs_source.html#l00011">Utilities.cs:11</a></div></div>

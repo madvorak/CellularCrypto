@@ -14,14 +14,14 @@ Inheritance diagram for Cellular.\+Nary\+Totalistic\+Automaton\+:\begin{figure}[
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_cellular_1_1_nary_totalistic_automaton_aafe92ae99ccbb3591b128d6e720227f6}{Nary\+Totalistic\+Automaton} (int number\+Of\+States, int\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_nary_totalistic_automaton_a878c767c6823bd8ed8dc0f7d2ccb1fd2}{rule}, int\mbox{[}$\,$\mbox{]} \hyperlink{all__1_8js_ae8b87ff4be2ae1dd5267342795263360}{initial\+State})
+\hyperlink{class_cellular_1_1_nary_totalistic_automaton_aafe92ae99ccbb3591b128d6e720227f6}{Nary\+Totalistic\+Automaton} (int number\+Of\+States, int\mbox{[}$\,$\mbox{]} \hyperlink{class_cellular_1_1_nary_totalistic_automaton_a878c767c6823bd8ed8dc0f7d2ccb1fd2}{rule}, int\mbox{[}$\,$\mbox{]} initial\+State)
 \begin{DoxyCompactList}\small\item\em Creates a new totalistic N-\/ary automaton with given rule and initial state. \end{DoxyCompactList}\item 
 override void \hyperlink{class_cellular_1_1_nary_totalistic_automaton_ad90769a438ab94b46d4750a571782056}{Step} ()
 \begin{DoxyCompactList}\small\item\em Performs one step applying the specific rule for creating a new state. \end{DoxyCompactList}\item 
 override object \hyperlink{class_cellular_1_1_nary_totalistic_automaton_a13f16113915ecec451fc4764a32044f9}{Clone} ()
 \begin{DoxyCompactList}\small\item\em Creates an appropriate copy of the C\+A. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. \end{DoxyCompactList}\item 
 override string \hyperlink{class_cellular_1_1_nary_totalistic_automaton_aa691c532a55638c7e3d0c125a4244773}{Tell\+Type} ()
-\begin{DoxyCompactList}\small\item\em Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Announces the runtime type of the C\+A including info about its rule. \end{DoxyCompactList}\item 
 string \hyperlink{class_cellular_1_1_nary_totalistic_automaton_a239c8e21ae35741c4baadb96be21cec9}{Print\+Ternary} ()
 \begin{DoxyCompactList}\small\item\em Converts the inner state into a well-\/printable string. This method works best for ternary (N=3) automata. \end{DoxyCompactList}\item 
 string \hyperlink{class_cellular_1_1_nary_totalistic_automaton_aa9d5e154d625d8a8884221df45766145}{Print\+Quinary} ()
@@ -85,7 +85,7 @@ Definition at line 22 of file Nary\+Totalistic\+Automaton.\+cs.
 Creates an appropriate copy of the C\+A. Its type and the specific rule are always preserved. However, the time (number of steps executed on the specific instance) is set back to 0. 
 
 \begin{DoxyReturn}{Returns}
-A copy of the {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton}{Cellular\+Automaton}} as an {\ttfamily Object}
+A copy of the {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton}{Cellular\+Automaton}} as {\ttfamily System.\+Object}
 \end{DoxyReturn}
 
 
@@ -163,7 +163,7 @@ Definition at line 27 of file Nary\+Totalistic\+Automaton.\+cs.
 )\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_cellular_1_1_nary_totalistic_automaton_aa691c532a55638c7e3d0c125a4244773}
 
 
-Announces the runtime type of the C\+A including info about its rule. It serves for debugging purposes. 
+Announces the runtime type of the C\+A including info about its rule. 
 
 \begin{DoxyReturn}{Returns}
 Type of the C\+A as a string.

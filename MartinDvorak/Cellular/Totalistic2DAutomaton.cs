@@ -12,7 +12,7 @@ namespace Cellular
         private string specialDescription;
 
         /// <summary>
-        /// Creates a new totalistic 2D automaton of given ruleset with given initial state.
+        /// Creates a new totalistic 2D automaton of given ruleset with a random initial state.
         /// </summary>
         /// <param name="ruleLive">Array that must contain 9 logical values.
         /// The value in <c>ruleLive[i]</c> says what happens to a living cell when it has exactly i neighbours alive.</param>
@@ -20,7 +20,6 @@ namespace Cellular
         /// The value in <c>ruleDead[i]</c> says what happens to a dead cell when it has exactly i neighbours alive.</param>
         /// <param name="width">The width of the new CA (length of rows).</param>
         /// <param name="height">The height of the new CA (number of rows).</param>
-        /// <param name="rnd">PseudoRNG instance that will be used to generate the original state.</param>
         public Totalistic2DAutomaton(bool[] ruleLive, bool[] ruleDead, int width, int height, string specificName = null)
             : base(width, height, Program.rnd)
         {

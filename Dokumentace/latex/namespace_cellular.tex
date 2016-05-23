@@ -16,11 +16,15 @@ class \hyperlink{class_cellular_1_1_binary_range_automaton}{Binary\+Range\+Autom
 class \hyperlink{class_cellular_1_1_binary_range_cyclic_automaton}{Binary\+Range\+Cyclic\+Automaton}
 \begin{DoxyCompactList}\small\item\em Class representing any binary 1\+D automaton with symmetric scope. The automaton is cyclic -\/ its edges are connected. Therefore, all positions are equivalent. \end{DoxyCompactList}\item 
 class \hyperlink{class_cellular_1_1_cellular_automaton}{Cellular\+Automaton}
-\begin{DoxyCompactList}\small\item\em The top class of the C\+A hierarchy. Every constructor should follow this logical order when considering its parametres\+: specification of the type (usually not needed), rule, size, initial state / rng. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The top class of the C\+A hierarchy. Every constructor should follow this logical order when considering its parametres\+: 1) specification of the type (usually not needed), 2) rule, 3) initial state / size (\& rng). \end{DoxyCompactList}\item 
 class \hyperlink{class_cellular_1_1_elementary_automaton}{Elementary\+Automaton}
 \begin{DoxyCompactList}\small\item\em Class representing 256 elementary C\+A with firmly set borders. This specific implementation calculates every bit separately. \end{DoxyCompactList}\item 
-class \hyperlink{class_cellular_1_1_elementary_fast_automaton}{Elementary\+Fast\+Automaton}
+class \hyperlink{class_cellular_1_1_elementary_automaton_fast}{Elementary\+Automaton\+Fast}
 \begin{DoxyCompactList}\small\item\em Class representing 256 elementary C\+A with firmly set borders. This specific implementation maps 10 cells onto 8 cells at once, so it should be faster a little. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_elementary_automaton_faster}{Elementary\+Automaton\+Faster}
+\begin{DoxyCompactList}\small\item\em Class representing 256 elementary C\+A with firmly set borders. This specific implementation reads every state only once, so it should be even faster. \end{DoxyCompactList}\item 
+class \hyperlink{class_cellular_1_1_elementary_automaton_parallel}{Elementary\+Automaton\+Parallel}
+\begin{DoxyCompactList}\small\item\em Class representing 256 elementary C\+A with firmly set borders. Parallel implementation. Unfortunately, it seems this is not the fastest implementation. For small sizes, the threading overhead is too big. For large sizes, there seems to be a performce problem with parallel memory access. \end{DoxyCompactList}\item 
 interface \hyperlink{interface_cellular_1_1_i_binary_c_a}{I\+Binary\+C\+A}
 \begin{DoxyCompactList}\small\item\em Common interface for all binary cellular automata. Most work with C\+A is done through this interface. Only subclasses of {\ttfamily \hyperlink{class_cellular_1_1_cellular_automaton}{Cellular\+Automaton}} are supposed to implement this interface. \end{DoxyCompactList}\item 
 class \hyperlink{class_cellular_1_1_nary1_d_automaton}{Nary1\+D\+Automaton}

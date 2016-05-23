@@ -102,7 +102,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa62a4223204dece41f9cc6fac9882834"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_crypto_1_1_function_testing.html#aa62a4223204dece41f9cc6fac9882834">FunctionTesting</a> (bool useLevenshteinDistance=false)</td></tr>
+<tr class="memdesc:aa62a4223204dece41f9cc6fac9882834"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of <a class="el" href="class_crypto_1_1_function_testing.html" title="Class for testing properties of key extending algorithms. ">FunctionTesting</a>.  <a href="#aa62a4223204dece41f9cc6fac9882834">More...</a><br /></td></tr>
 <tr class="separator:aa62a4223204dece41f9cc6fac9882834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b4709eaa8b6f2a1a6c4fdb63eb46462"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_crypto_1_1_function_testing.html#a3b4709eaa8b6f2a1a6c4fdb63eb46462">isLevenshteinInside</a> ()</td></tr>
+<tr class="separator:a3b4709eaa8b6f2a1a6c4fdb63eb46462"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b3e7a81134c8e7337cf1b682f0be528"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_crypto_1_1_function_testing.html#a4b3e7a81134c8e7337cf1b682f0be528">TestBitChange</a> (<a class="el" href="interface_crypto_1_1_i_key_extender.html">IKeyExtender</a> algorithm, int ratio)</td></tr>
 <tr class="memdesc:a4b3e7a81134c8e7337cf1b682f0be528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests how much the output changes (on average) when the input changes in a single bit.  <a href="#a4b3e7a81134c8e7337cf1b682f0be528">More...</a><br /></td></tr>
 <tr class="separator:a4b3e7a81134c8e7337cf1b682f0be528"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,7 +158,15 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00023">23</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
+<p>Creates a new instance of <a class="el" href="class_crypto_1_1_function_testing.html" title="Class for testing properties of key extending algorithms. ">FunctionTesting</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">useLevenshteinDistance</td><td>Should it use Levenshtein distance instead of Hamming distance? Note that Levenshtein distance is much slower to calculate. Default is Hamming distance.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00028">28</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
 
 </div>
 </div>
@@ -202,7 +213,24 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Number between 0 and 1.</dd></dl>
 
-<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00041">41</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
+<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00046">46</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b4709eaa8b6f2a1a6c4fdb63eb46462"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Crypto.FunctionTesting.isLevenshteinInside </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00109">109</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
 
 </div>
 </div>
@@ -248,7 +276,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Number between 0 and 1.</dd></dl>
 
-<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00067">67</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
+<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00072">72</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
 
 </div>
 </div>
@@ -286,7 +314,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Value between 0 and 1. Both extrema are very bad, good result is 1/2.</dd></dl>
 
-<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00148">148</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
+<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00158">158</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
 
 </div>
 </div>
@@ -324,7 +352,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Value between 0 and 1. Both extrema are very bad, good result is 1/2.</dd></dl>
 
-<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00110">110</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
+<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00120">120</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
 
 </div>
 </div>
@@ -342,7 +370,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00225">225</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
+<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00235">235</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
 
 </div>
 </div>
@@ -360,7 +388,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00187">187</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
+<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00197">197</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
 
 </div>
 </div>
@@ -388,7 +416,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00300">300</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
+<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00310">310</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
 
 </div>
 </div>
@@ -416,7 +444,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00295">295</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
+<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00305">305</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
 
 </div>
 </div>
@@ -454,7 +482,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Value between 0 (worst) and 1 (good).</dd></dl>
 
-<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00290">290</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
+<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00300">300</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
 
 </div>
 </div>
@@ -482,7 +510,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00338">338</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
+<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00348">348</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
 
 </div>
 </div>
@@ -510,7 +538,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00333">333</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
+<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00343">343</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
 
 </div>
 </div>
@@ -548,7 +576,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Value between 0 (worst) and 1 (good).</dd></dl>
 
-<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00328">328</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
+<p>Definition at line <a class="el" href="_function_testing_8cs_source.html#l00338">338</a> of file <a class="el" href="_function_testing_8cs_source.html">FunctionTesting.cs</a>.</p>
 
 </div>
 </div>

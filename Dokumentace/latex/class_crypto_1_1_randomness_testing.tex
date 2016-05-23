@@ -8,9 +8,9 @@ Static class that contains some tests of randomness for binary sequences. The te
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static double \hyperlink{class_crypto_1_1_randomness_testing_a86ef256c8a7c87df3fdbbf5673465cb0}{Entropy\+Test} (Bit\+Array \hyperlink{jquery_8js_a2fa551895933fae935a0a6b87282241d}{b}, byte length\+Limit)
+static double \hyperlink{class_crypto_1_1_randomness_testing_a86ef256c8a7c87df3fdbbf5673465cb0}{Entropy\+Test} (Bit\+Array b, byte length\+Limit)
 \begin{DoxyCompactList}\small\item\em Calculates the Shannon entropy of the Bit\+Array. \end{DoxyCompactList}\item 
-static double \hyperlink{class_crypto_1_1_randomness_testing_af903b13649b40d4895243f51c62341cc}{Compression\+Test} (Bit\+Array \hyperlink{jquery_8js_a2fa551895933fae935a0a6b87282241d}{b})
+static double \hyperlink{class_crypto_1_1_randomness_testing_af903b13649b40d4895243f51c62341cc}{Compression\+Test} (Bit\+Array b)
 \begin{DoxyCompactList}\small\item\em Tests how much the Bit\+Array can be compressed using gzip. \end{DoxyCompactList}\item 
 static double \hyperlink{class_crypto_1_1_randomness_testing_a34e225189cd735e8cfa82f6ab3b7d97f}{Rate\+Sequence} (Bit\+Array sequence)
 \begin{DoxyCompactList}\small\item\em Rates how much the Bit\+Array is pseudorandom. Return the average between {\ttfamily Compression\+Test(b)} and {\ttfamily Entropy\+Test(b, 10).} \end{DoxyCompactList}\end{DoxyCompactItemize}
