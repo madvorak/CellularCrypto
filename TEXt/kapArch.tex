@@ -8,9 +8,9 @@ Celý zdrojový kód se nachází v repozitáøi na adrese:
 
 \noindent https://madv.visualstudio.com/DefaultCollection/\_git/Cellular\%20Cryptography\#\_a=contents 
 
-V rámci jedné Solution ve Visual Studiu byly vytvoøeny tøi projekty. Projekt se jménem MartinDvorak, který mìl pùvodnì být jedinou èástí aplikace a mìl jasnì identifikovat tuto práci pøi jejím elektronickém odevzdávání, obsahuje veškerou logiku popisovanou v textu práci. Pomocí tohoto projektu byly provádìny veškeré experimenty. Obsahuje 3 jmenné prostory: Cellular, Crypto a Testing.
+V rámci jednoho øešení (Solution) ve Visual Studiu byly vytvoøeny tøi projekty. Projekt se jménem MartinDvorak, který mìl pùvodnì být jedinou èástí aplikace a mìl jasnì identifikovat tuto práci pøi jejím elektronickém odevzdávání, obsahuje veškerou logiku popisovanou v textu práce. Pomocí tohoto projektu byly provádìny veškeré experimenty. Obsahuje 3 jmenné prostory (Namespace): Cellular, Crypto a Testing.
 
-Jako druhý vznikl malý projekt se jménem Program. Ten využívá nástroje vytvoøené v prvním projektu a kompiluje se na WinForms aplikaci, kterou mohou uživatelé použít k zašifrování svých souborù. Tøetí je testovací projekt se jménem CryptographyUnitTests. Ten testuje, že šifrování funguje správnì (rozšifrování je inverzním zobrazením).
+Jako druhý vznikl malý projekt se jménem Program. Ten využívá nástroje vytvoøené v prvním projektu a kompiluje se na WinForms aplikaci, kterou mohou uživatelé použít k zašifrování svých souborù. Tøetí je testovací projekt se jménem CryptographyUnitTests. Ten testuje, že šifrování funguje správnì (tj. že rozšifrování je inverzním zobrazením).
 
 Práce neobsahuje žádné závislosti na externích knihovnách. Ke spuštìní staèí mít nainstalován .NET framework verze 4.5 (èi vyšší), který je automatickou souèástí operaèního systému Windows 8 (èi novìjší), ale mùže se nacházet i na starších verzích (já ho mám na Windows 7).
 
@@ -24,6 +24,8 @@ Dùležitá je také pøehlednost zdrojového kódu. Proto byly ke všem tøídám a ke vše
 \caption{Hlavní rozhraní v naší práci}
 \label{diagramif}
 \end{figure}
+
+Ve zbytku této kapitoly popíšeme jednotlivé jmenné prostory.
 
 \section{Cellular}
 
@@ -68,19 +70,19 @@ Pøi výpoètu nového stavu ve tøídì ElementaryAutomaton se musí vždy podle stavu 3
 
 Bìhem programování bakaláøské práce byla vìtšina èasu vìnována ostatním jmenným prostorùm, ale v posledních mìsících došlo i na optimalizaci výpoètu celulárních automatù. Protože BinaryRangeAutomaton provádìl k urèení stavu každé nové buòky $1+2r$ ètení pøedchozích stavù, kde $r$ je poèet používaných bunìk na každou stranu, byla zvolena jiná implementace. Nyní jsou právì pøeètené buòky uloženy v èíselné promìnné (kterou lze indexovat do pole popisujícího pravidlo) a pøi pøesunu na novou buòku je èíselná hodnota pouze zdvojnásobena (s oøíznutím na správnou velikost, aby se zahodila buòka úplnì vlevo) a pøièten stav buòky úplnì vpravo. Nová implementace BinaryRangeAutomaton byla natolik rychlá, že dokonce porazila ElementaryAutomatonFast pøi simulaci elementárních automatù. Tím jsme se pouèili pro vytvoøení ještì lepší implementace elementárních CA, která také ète každou buòku jen jednou, prùbìžný stav uchovává v èíselné promìnné a indexuje do jednorozmìrného pole popisujícího pravidlo (rychlost nové implementace BinaryRangeAutomaton totiž ukázala, že je to rychlejší než lookup tabulka). Tato implementace by mìla kombinovat výhodu nové implementace BinaryRangeAutomaton s výhodou specifické implementace na pøedem známou velikost pravidla.
 
-Byla tak vytvoøena tøída ElementaryAutomatonFaster a pak ještì její paralelní implementace ve tøídì ElementaryAutomatonParallel. Pøi mìøení výkonu jsme zjistili, že ve srovnání s výpoètem pomocí tøídy ElementaryAutomaton dosáhla implementace ElementaryAutomatonFast 86\% èasu, ElementaryAutomatonFaster dosáhl pouhých 48\% èasu, ElementaryAutomatonParallel to mìl za 75\% èasu a BinaryRangeAutomaton za pøekvapivì dobrých 51\% èasu. Neefektivita paralelní implementace byla zklamáním. Pro malé velikosti automatu se jistì nevyplatí kvùli režii spouštìní vláken a pro velké velikosti automatu je pravdìpodobnì problém s paralelním ètením velkého množství dat z pamìti (a souèasným zápisem). Pozdìji byla provedena mìøení i na jiných poèítaèích. Výsledky jsou vesmìs obdobné -- poøadí algoritmù podle rychlosti jsou stejná, akorát se obèas dostane ElementaryAutomatonParallel pøed ElementaryAutomatonFaster, jak jsme si pøi paralelizaci pøáli.
+Byla tak vytvoøena tøída ElementaryAutomatonFaster a pak ještì její paralelní implementace ve tøídì ElementaryAutomatonParallel. Pøi mìøení výkonu jsme zjistili, že ve srovnání s výpoètem pomocí tøídy ElementaryAutomaton dosáhla implementace ElementaryAutomatonFast 86\% èasu, ElementaryAutomatonFaster dosáhl dokonce 48\% èasu, ElementaryAutomatonParallel to mìl za 75\% èasu a BinaryRangeAutomaton za pøekvapivì dobrých 51\% èasu. Neefektivita paralelní implementace byla zklamáním. Pro malé velikosti automatu se jistì nevyplatí kvùli režii spouštìní vláken a pro velké velikosti automatu je pravdìpodobnì problém s paralelním ètením velkého množství dat z pamìti (a souèasným zápisem). Pozdìji byla provedena mìøení i na jiných poèítaèích. Výsledky jsou vesmìs obdobné -- poøadí algoritmù podle rychlosti jsou stejná, akorát se obèas dostane ElementaryAutomatonParallel pøed ElementaryAutomatonFaster, jak jsme si pøi paralelizaci pøáli.
 
 \section{Crypto}
 
-Tento namespace jednak obsahuje natahovaèe klíèù (popsané v následující kapitole) a potom testy (popsané v pøedchozí kapitole). Také se tu nachází statická tøída Factory, která nahrazuje možnost deserializace CA a vìtších objektù, které je obsahují.
+Tento jmenný prostor jednak obsahuje natahovaèe klíèù (popsané v následující kapitole) a potom testy (popsané v pøedchozí kapitole). Také se tu nachází statická tøída Factory, která nahrazuje možnost deserializace CA a vìtších objektù, které je obsahují.
 
 Natahovaèe klíèù implementují rozhraní IKeyExtender. Tøída EncrypterStreamCA umí použít libovolnou implementaci IKeyExtender k šifrování pole bitù. Nad tou je ještì vybudovaná abstrakce v podobì rozhraní IEncrypter, které obecnì poskytuje pøístup k libovolnému symetrického kryptografickému algoritmu. Rozhraní IEncrypter ještì implementuje tøída EncrypterReversibleCA, která realizuje šifrování alternativním zpùsobem (viz poslední kapitola). Nad implementacemi rozhraní IEncrypter je ještì vybudována spoleèná obalová vrstva v podobì tøídy EncryptionProvider. Ta umožòuje šifrovat pøímo Streamy dat a zároveò umožòuje kromì šifrovacího klíèe použít kombinaci uživatelského hesla a náhodného saltu, což bude použito v praktické aplikaci.
 
-Statická tøída Export poskytuje pøístup k vìcem, co mají být použitelné i z jiné assembly a provádí veškerou instanciaci interních tøíd, které již není možné ovládat pøímo z vnìjšku. Napøíklad poskytuje jednu konkrétní implementaci IKeyExtender, do níž je vložen elementární automat èíslo 30 (ve zrychlené variantì). Z vnìjšku není možné vynutit jinou variantu. Dále poskytuje pøístup ke tøídì EncryptionProvider (jsou tu dvì varianty pro dva rùzné vložené šifrovací algoritmy).
+Statická tøída Export poskytuje pøístup k funkcionalitì, která má být použitelná i z jiné assembly a provádí veškerou instanciaci interních tøíd, které již není možné ovládat pøímo z vnìjšku. Napøíklad poskytuje jednu konkrétní implementaci IKeyExtender, do níž je vložen elementární automat èíslo 30 (ve zrychlené variantì). Z vnìjšku není možné vynutit jinou variantu. Dále poskytuje pøístup ke tøídì EncryptionProvider (jsou tu dvì varianty pro dva rùzné vložené šifrovací algoritmy).
 
 \section{Testing}
 
-Nejedná se o žádné Unit testy, ale o pomìrnì chaotickou hromadu metod, které umožòují zkoušet rùzné èásti programu. Lze si hrát s vizualizací nìjakých automatù.
+Nejedná se toliko o jednotkové testy, jako spíše množinu pøíkladù, které zkoušejí používat rùzné èásti programu. Lze si hrát s vizualizací nìkterých automatù.
 
 \section{Program}
 
@@ -92,4 +94,4 @@ Limit by mohl být zvýšen, pokud bychom vytvoøili vlastní implementaci BitArray, 
 
 \section{CryptographyUnitTests}
 
-Testuje šifrovací algoritmy skrze veøejnou tøídu EncryptionProvider poskytnutou ve dvou verzích tøídou Export.
+Zde jsou skuteèné jednotkové testy, které testují šifrovací algoritmy skrze veøejnou tøídu EncryptionProvider poskytnutou ve dvou verzích tøídou Export.

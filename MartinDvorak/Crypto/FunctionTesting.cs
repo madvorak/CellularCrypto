@@ -292,7 +292,7 @@ namespace Crypto
         }
 
         /// <summary>
-        /// Tests how much a random output resembles a pseudo-random binary sequence.
+        /// Tests how much a random output resembles a pseudo-random binary sequence (on random samples).
         /// </summary>
         /// <param name="algorithm">The (key stretching) algorithm to test.</param>
         /// <param name="ratio"></param>
@@ -330,7 +330,8 @@ namespace Crypto
         }
 
         /// <summary>
-        /// 
+        /// Tests how much a random output resembles a pseudo-random binary sequence
+        /// (on sequences resulting from expanding all very short keys).
         /// </summary>
         /// <param name="algorithm">The (key stretching) algorithm to test.</param>
         /// <param name="ratio"></param>

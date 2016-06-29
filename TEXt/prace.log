@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  23 MAY 2016 15:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.10)  29 JUN 2016 09:48
 entering extended mode
-**C:/Martin/MFF/_baka/TEXt/prace.tex
-(C:/Martin/MFF/_baka/TEXt/prace.tex
+**./prace.tex
+(prace.tex
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
@@ -948,61 +948,90 @@ File: ECBdecryption.png Graphic file (type png)
 <use ECBdecryption.png>
 Package pdftex.def Info: ECBdecryption.png used on input line 65.
 (pdftex.def)             Requested size: 426.7965pt x 142.27007pt.
- <CBCencryption.png, id=380, 752.0597pt x 262.73157pt>
-File: CBCencryption.png Graphic file (type png)
 
-<use CBCencryption.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<CBCencryption.png, id=380, 752.0597pt x 262.73157pt>
+File: CBCencryption.png Graphic file (type png)
+ <use CBCencryption.png>
 Package pdftex.def Info: CBCencryption.png used on input line 69.
 (pdftex.def)             Requested size: 426.7965pt x 142.2698pt.
- <CBCdecryption.png, id=381, 752.8125pt x 258.21469pt>
-File: CBCdecryption.png Graphic file (type png)
 
-<use CBCdecryption.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<CBCdecryption.png, id=381, 752.8125pt x 258.21469pt>
+File: CBCdecryption.png Graphic file (type png)
+ <use CBCdecryption.png>
 Package pdftex.def Info: CBCdecryption.png used on input line 70.
 (pdftex.def)             Requested size: 426.79869pt x 142.26672pt.
- [12 <./ECBencryption.png (PNG copy)>] [13 <./ECBdecryption.png (PNG copy)> <./
-CBCencryption.png (PNG copy)> <./CBCdecryption.png (PNG copy)>] <PCBCencryption
-.png, id=396, 751.30687pt x 258.9675pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12 <./ECBencryption.png (PNG copy)>]
+<PCBCencryption.png, id=390, 751.30687pt x 258.9675pt>
 File: PCBCencryption.png Graphic file (type png)
 
 <use PCBCencryption.png>
 Package pdftex.def Info: PCBCencryption.png used on input line 74.
 (pdftex.def)             Requested size: 426.79343pt x 142.27054pt.
 
-<PCBCdecryption.png, id=397, 752.0597pt x 255.20343pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<PCBCdecryption.png, id=391, 752.0597pt x 255.20343pt>
 File: PCBCdecryption.png Graphic file (type png)
 
 <use PCBCdecryption.png>
 Package pdftex.def Info: PCBCdecryption.png used on input line 75.
 (pdftex.def)             Requested size: 426.7965pt x 142.27042pt.
- <OFBencryption.png, id=400, 750.55406pt x 259.7203pt>
-File: OFBencryption.png Graphic file (type png)
 
-<use OFBencryption.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<OFBencryption.png, id=394, 750.55406pt x 259.7203pt>
+File: OFBencryption.png Graphic file (type png)
+ <use OFBencryption.png>
 Package pdftex.def Info: OFBencryption.png used on input line 79.
 (pdftex.def)             Requested size: 426.80098pt x 142.26404pt.
- <OFBdecryption.png, id=401, 752.8125pt x 259.7203pt>
-File: OFBdecryption.png Graphic file (type png)
 
-<use OFBdecryption.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<OFBdecryption.png, id=395, 752.8125pt x 259.7203pt>
+File: OFBdecryption.png Graphic file (type png)
+ <use OFBdecryption.png>
 Package pdftex.def Info: OFBdecryption.png used on input line 80.
 (pdftex.def)             Requested size: 426.79869pt x 142.26404pt.
- [14 <./PCBCencryption.png (PNG copy)> <./PCBCdecryption.png (PNG copy)>] [15 <
-./OFBencryption.png (PNG copy)> <./OFBdecryption.png (PNG copy)>] <CTRencryptio
-n.png, id=419, 752.0597pt x 254.45062pt>
-File: CTRencryption.png Graphic file (type png)
 
-<use CTRencryption.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13 <./ECBdecryption.png (PNG copy)> <./CBCencryption.png (PNG copy)>]
+<CTRencryption.png, id=408, 752.0597pt x 254.45062pt>
+File: CTRencryption.png Graphic file (type png)
+ <use CTRencryption.png>
 Package pdftex.def Info: CTRencryption.png used on input line 88.
 (pdftex.def)             Requested size: 426.7965pt x 142.27007pt.
- <CTRdecryption.png, id=420, 751.30687pt x 255.95625pt>
-File: CTRdecryption.png Graphic file (type png)
 
-<use CTRdecryption.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<CTRdecryption.png, id=409, 751.30687pt x 255.95625pt>
+File: CTRdecryption.png Graphic file (type png)
+ <use CTRdecryption.png>
 Package pdftex.def Info: CTRdecryption.png used on input line 89.
 (pdftex.def)             Requested size: 426.79343pt x 142.26439pt.
- [16 <./CTRencryption.png (PNG copy)> <./CTRdecryption.png (PNG copy)>] [17] [1
-8] [19]) [20]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14 <./CBCdecryption.png (PNG copy)> <./PCBCencryption.png (PNG copy)>]
+[15 <./PCBCdecryption.png (PNG copy)> <./OFBencryption.png (PNG copy)>]
+[16 <./OFBdecryption.png (PNG copy)> <./CTRencryption.png (PNG copy)>] [17 <./C
+TRdecryption.png (PNG copy)>] [18] [19]) [20]
 \openout2 = `kapArch.aux'.
 
  (kapArch.tex
@@ -1026,7 +1055,7 @@ Package pdftex.def Info: diagramIF.png used on input line 23.
 <diagramCA.png, id=466, 1263.72125pt x 635.37375pt>
 File: diagramCA.png Graphic file (type png)
  <use diagramCA.png>
-Package pdftex.def Info: diagramCA.png used on input line 42.
+Package pdftex.def Info: diagramCA.png used on input line 44.
 (pdftex.def)             Requested size: 441.01712pt x 227.61945pt.
 
 [22 <./diagramIF.png (PNG copy)>] [23 <./diagramCA.png (PNG copy)>] [24])
@@ -1047,13 +1076,112 @@ File: diagramKEAD.png Graphic file (type png)
 Package pdftex.def Info: diagramKEAD.png used on input line 23.
 (pdftex.def)             Requested size: 409.72028pt x 110.96552pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [26
 
 
 
  <./diagramKEAN.png (PNG copy)>] [27 <./diagramKEAD.png (PNG copy)>]
-[28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42]
-[43] [44] [45] [46]) [47]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[28]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[29] [30]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[31]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[32] [33] [34]) [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46]
+[47]
 \openout2 = `kapDalsi.aux'.
 
  (kapDalsi.tex
@@ -1114,25 +1242,25 @@ File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
 ] [57
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 183.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 183.
  (prace.aux (titulka.aux)
 (uvod.aux) (kap01.aux) (kap02.aux) (kapArch.aux) (kap03.aux) (kapDalsi.aux)
 (zaver.aux) (literatura.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 183.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 183.
 Package rerunfilecheck Info: File `prace.out' has not changed.
 (rerunfilecheck)             Checksum: 652774AF45B63ECD172E40AE6777569D;8058.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 183.
  ) 
 Here is how much of TeX's memory you used:
- 22752 strings out of 493634
- 402059 string characters out of 3141311
- 523521 words of memory out of 3000000
+ 22751 strings out of 493634
+ 401984 string characters out of 3141311
+ 716320 words of memory out of 3000000
  25476 multiletter control sequences out of 15000+200000
  27501 words of font info for 84 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 62i,8n,93p,2263b,916s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,8n,93p,2238b,916s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
@@ -1156,7 +1284,7 @@ e1/public/cs/cssl12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fonts/type1
 /public/cs/csti12.pfb><C:/Users/Martin/AppData/Roaming/MiKTeX/2.9/fonts/type1/p
 ublic/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on prace.pdf (61 pages, 1000672 bytes).
+Output written on prace.pdf (61 pages, 1002859 bytes).
 PDF statistics:
  857 PDF objects out of 1000 (max. 8388607)
  175 named destinations out of 1000 (max. 500000)
