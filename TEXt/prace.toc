@@ -13,7 +13,7 @@
 \contentsline {section}{\numberline {2.3}O co n\'am jde}{11}{section.2.3}
 \contentsline {section}{\numberline {2.4}Pseudon\'ahodn\'e gener\'atory}{11}{section.2.4}
 \contentsline {section}{\numberline {2.5}Blokov\'e \v sifry}{12}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Opera\v cn\IeC {\'\i } mody}{12}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.1}Opera\v cn\IeC {\'\i } m\'ody}{12}{subsection.2.5.1}
 \contentsline {section}{\numberline {2.6}\'Utoky na \v sifry}{15}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}Rozd\v elen\IeC {\'\i } podle povolen\'ych prost\v redk\r u}{15}{subsection.2.6.1}
 \contentsline {subsection}{\numberline {2.6.2}P\v r\IeC {\'\i }klady \'utok\r u}{16}{subsection.2.6.2}

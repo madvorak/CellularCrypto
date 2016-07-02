@@ -13,7 +13,7 @@ Budeme uvaovat rùzné varianty CA podle následujících kritérií:
 \item Poèet dimenzí: Jsou všechny buòky v jedné øadì (1D), nebo ve ètvercové møíce (2D), èi krychlovì uspoøádané (3D)?
 \item Poèet stavù: Pro mnoho aplikací staèí pouívat binární CA, kde se kadá buòka mùe nacházet ve stavu 0, nebo ve stavu 1. Jindy se ale uvauje mnohem více stavù (napøíklad pøi zkoumání tzv. self-replicating machines).
 \item Okolí: Uvnitø CA jsou všechna pravidla lokální, co znamená e pøechodová funkce pro buòku závisí jen na stavu jejím a nìkolika bunìk v okolí. Toto okolí mùe mít rùznı poèet bunìk a rùznı tvar.
-\item Typ pravidla: Pravidlo mùe kadé uspoøádané n-tici stavu bunìk v okolí pøiøadit novı stav buòky. Nebo mùe mít pravidlo jednodušší podobu, napøíklad jen posèítat stavy bunìk v okolí a nerozlišovat rùzné lokalizace.
+\item Typ pravidla: Pravidlo mùe kadé uspoøádané n-tici stavù bunìk v okolí pøiøadit novı stav buòky. Nebo mùe mít pravidlo jednodušší podobu, napøíklad jen posèítat stavy bunìk v okolí a nerozlišovat jejich rozmístìní.
 \item Speciální údaje: Existují také varianty CA, které v buòkách ukládají navíc urèité speciální údaje. Napøíklad by nás mohl zajímat CA, ve kterém jsou nìkteré buòky zmrazeny (a nevyvíjejí se) a jiné se vyvíjejí (pøíèem podle pøechodového pravidla mohou rozmrazit sousedy èi naopak zmrazit samy sebe). Dalším speciálním údajem mùe bıt pamì. Kromì souèasného stavu mùe bıt v buòce zapamatován také její pøedchozí stav a ten mùe bıt vyuit v pøechodové funkci. Pokud se jedná o binární CA s pamìtí pøedchozího stavu, lze ho bez újmy na obecnosti odsimulovat na normálním CA bez pamìti, kterı má 4 stavy. A v pøípadì 1D automatu lze ještì tento 4-stavovı automat simulovat na binárním automatu, kterı ale pouívá vìtší okolí a více bunìk celkovì, viz \citep{W02}, strana 655. 
 \end{itemize}
 
@@ -49,7 +49,7 @@ Elementární automaty byly pøíkladem 1D binárního automatu. Ale lze uvaovat i ji
 \begin{itemize}
 \item Nemusíme se omezovat jen na tìsné sousedy.
 \item Mùeme povolit více ne 2 stavy.
-\item Vıznamnım druhem celulárních automatù jsou totalistické automaty. Nehledì na to, jak velké se pouívá okolí a kolik stavù buòky nabıvají, v totalistickıch automatech se pouze èíselnì posèítají hodnoty hodnoty buòky s celım jejím okolím a podle souètu hodnot se pøiøadí vısledná hodnota. Pøechodová funkce pro totalistickı automat s okolím velikosti $o$ a poètem stavù $s$ se tedy dá vyjádøít jako:
+\item Vıznamnım druhem celulárních automatù jsou totalistické automaty. Nehledì na to, jak velké se pouívá okolí a kolik stavù buòky nabıvají, v totalistickıch automatech se pouze èíselnì posèítají hodnoty všech bunìk v okolí (vèetnì buòky samé) a podle souètu hodnot se pøiøadí vısledná hodnota. Pøechodová funkce pro totalistickı automat s okolím velikosti $o$ a poètem stavù $s$ se tedy dá vyjádøít jako:
 $$f:\{0,..,(s-1)(o+1)\} \rightarrow \{0,..,s-1\}$$
 \end{itemize}
 

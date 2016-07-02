@@ -34,14 +34,14 @@ Pro to, aby byl generátor pseudonáhodných èísel kvalitní, je potøeba, aby výstup
 \item $a-1$ je dìlitelné všemi prvoèiniteli $m$
 \item pokud je $m$ dìlitelné 4, je i $a-1$ dìlitelné 4
 \end{itemize}
-Tøetí pravidlo je velice dùležité, protože s ohledem na výkon programu na reálných procesorech se obvykle volí $m$ v hodnotì mocniny dvou\footnote{Bìžnì se používá nastavení, kde rozsah je mocnina dvou ($m = 2^n$, kde n je èíslo od 24 do 64), $c=1$, $a$ libovolné takové, že $1 \equiv a \mod 4$}.
+Tøetí pravidlo je velice dùležité, protože s ohledem na výkon programu na reálných procesorech se obvykle volí $m$ v hodnotì mocniny dvou\footnote{Bìžnì se používá nastavení, kde rozsah je mocnina dvou ($m = 2^n$, kde $n$ je èíslo od 24 do 64), $c=1$, $a$ libovolné takové, že $1 \equiv a \mod 4$}.
 
 Jako pseudonáhodnou posloupnost není dobré použít pøímo hodnoty $X_i$. Problém je zejména vidìt tehdy, když $m = 2^n$. Pak se lze podívat na posledních $d$ bitù èísel $X_i$, oznaème je $Y_i = X_i \mod 2^d$. Ty tvoøí posloupnost s kratší periodou. Její pøedpis lze napsat stejným zpùsobem, jako pøedpis pro LCG:
 $$Y_{n+1} = (qY_n+r) \mod 2^d$$, kde $q = a \mod 2^d$, $r = c \mod 2^d$.
 
 Øešením je použití jen nìkolika poèáteèních bitù z každého $X_i$. Pokud by se na výstup posílala celá hodnota $X_i$, byla by èást bitù snadno pøedvídatelná. Napøíklad každý $m$-tý bit výstupu by pravidelnì støídal 0 a 1.
 
-Existují i jiné generátory pseudonáhodných èísel, které jsou vhodnìjší pro kryptografické úèely. Ve skuteènosti není skoro žádný rozdíl mezi Keystream Generator a genetárorem pseudonáhodných èísel. Odlišuje je jen to, že generátory pseudonáhodných èísel používají seed menší velikosti, kdežto Keystream Generator lze inicializovat klíèem vìtší velikosti a taky udržuje \uv{složitejší} vnitøní stav.
+Existují i jiné generátory pseudonáhodných èísel, které jsou vhodnìjší pro kryptografické úèely. Ve skuteènosti není skoro žádný rozdíl mezi Keystream Generator a generátorem pseudonáhodných èísel. Odlišuje je jen to, že generátory pseudonáhodných èísel používají seed menší velikosti, kdežto Keystream Generator lze inicializovat klíèem vìtší velikosti a taky udržuje \uv{složitìjší} vnitøní stav.
 
 \section{Blokové šifry}
 
@@ -49,9 +49,9 @@ Blokové šifry jsou klasickým zpùsobem symetrické kryptografie, které se dnes pou
 
 % Difuze vyjadøuje, kolik bitù na vstupu mùže ovlivnit jeden bit na výstupu. Konfuze vyjadøuje, jak složitý tento vztah je, viz \citep{Klima}. Difuze je obvykle dosahováno permutováním bitù. Konfuze se obvykle dosahuje pomocí nelineárních substitucí. Mnoho blokových cifer je založeno na tom, že opakovanì provádí støídavì substituci a permutaci (staèí jednoduchá transpozice). 
 
-\subsection{Operaèní mody}
+\subsection{Operaèní módy}
 
-Existuje nìkolik operaèních modu blokových šifer. Ty popisují, jakým zpùsobem je bloková šifra zapojená pøi šifrování celé zprávy.
+Existuje nìkolik operaèních módù blokových šifer. Ty popisují, jakým zpùsobem je bloková šifra zapojená pøi šifrování celé zprávy.
 
 \newcommand{\bcmoop}[2]{
 \begin{figure}[h]
@@ -64,7 +64,7 @@ Existuje nìkolik operaèních modu blokových šifer. Ty popisují, jakým zpùsobem je
 \bcmoop{ECB}{encryption}
 \bcmoop{ECB}{decryption}
 
-Nejjednodušším modem je ECB (Electronic CodeBook). Ten šifruje každý blok plaintextu pøímou aplikací blokové šifry bez jakékoliv návaznosti na ostatní bloky (zašifrování je na obrázku \ref{ECBencryption}, rozšifrování je na obrázku \ref{ECBdecryption}). Bezpeènost tohoto modu je dost slabá, protože kdykoliv obsahuje plaintext dvojici stejných blokù, jsou jim odpovídající èásti ciphertextu také shodné (takže po zašifrování je napøíklad možné lidským okem rozpoznávat tvary v bitmapových obrázcích, které obsahují jednobarevné plochy).
+Nejjednodušším módem je ECB (Electronic CodeBook). Ten šifruje každý blok plaintextu pøímou aplikací blokové šifry bez jakékoliv návaznosti na ostatní bloky (zašifrování je na obrázku \ref{ECBencryption}, rozšifrování je na obrázku \ref{ECBdecryption}). Bezpeènost tohoto modu je dost slabá, protože kdykoliv obsahuje plaintext dvojici stejných blokù, jsou jim odpovídající èásti ciphertextu také shodné (takže po zašifrování je napøíklad možné lidským okem rozpoznávat tvary v bitmapových obrázcích, které obsahují jednobarevné plochy).
 
 \bcmoop{CBC}{encryption}
 \bcmoop{CBC}{decryption}
@@ -74,7 +74,7 @@ Lepším módem je CBC (Cipher Block Chaining). Zde je každý blok plaintextu pøed z
 \bcmoop{PCBC}{encryption}
 \bcmoop{PCBC}{decryption}
 
-Podobným modem je PCBC (Propagating Cipher Block Chaining). Zde se do výpoètu následující bloku neposílá jen ciphertext, ale i plaintext (zašifrování je na obrázku \ref{PCBCencryption}, rozšifrování je na obrázku \ref{PCBCdecryption}). Nejsou mi známy žádné výhody této metody ve srovnání s CBC.
+Podobným módem je PCBC (Propagating Cipher Block Chaining). Zde se do výpoètu následujícího bloku neposílá jen ciphertext, ale i plaintext (zašifrování je na obrázku \ref{PCBCencryption}, rozšifrování je na obrázku \ref{PCBCdecryption}). Nejsou mi známy žádné výhody této metody ve srovnání s CBC.
 
 \bcmoop{OFB}{encryption}
 \bcmoop{OFB}{decryption}
@@ -83,7 +83,7 @@ A teï se dostáváme ke dvìma metodám, které umožòují použít blokovou šifru jako K
 
 První z nich je OFB (Output Feedback). OFB nejprve použije blokovou šifru k tomu, aby zašifrovala inicializaèní vektor pomocí klíèe. Výsledek je jednak poslán ven a dále je poslán na vstup blokové šifry. Tento blok je zase zašifrován pomocí stejného klíèe a výsledek je poslán opìt jak na výstup, tak do další blokové šifry. Postup si lze prohlédnout na obrázku \ref{OFBencryption}. Dá se øíci, že OFB posílá na výstup Keystream, který se skládá z øady $f(x), f(f(x)), f(f(f(x))), f(f(f(f(x)))), f(f(f(f(f(x))))),~...$, kde $x$ je inicializaèní vektor a funkce $f$ je již zobrazení s konkrétním klíèem. Rozšifrování je triviální obdobou tohoto postupu. Není k nìmu potøeba žádné inverzní zobrazení. Výstup blokové šifry se XORuje s ciphertextem a vznikne plaintext (viz obrázek \ref{OFBdecryption}). Je zøejmé, že zašifrování ani rozšifrování nelze pøi OFB paralelizovat.
 
-Jako poslední si ukážeme mod CTR (Counter). Na vstup blokové šifry jdou data, která se pokaždé o 1 zmìní. Výstup blokové šifry (keystream) je pak XORován s plaintextem resp. ciphertextem (viz obrázky \ref{CTRencryption} a \ref{CTRdecryption}). CTR se mùže podobat ECB v tom ohledu, že lze každý blok plaintextu je šifrován samostatnì a proto je opìt možné paralelizovat jak zašifrování, tak rozšifrování. Nicménì zde jsou jednotlivé bloky plaintextu zašifrovány jinak, i kdyby byly všechny bloky plaintextu stejné. Bezpeèností aplikace se proto CTR blíží spíše OFB. Counter posílá na výstup keystream, který se skládá poustupnì z øady $f(x \oplus n), f(x \oplus (n+1)), f(x \oplus (n+2)), ...$, kde $n$ je \uv{nonce}. To je èíslo zvolené pro šifrování jedné konkrétní zprávy, které musí být pøiloženo k ciphertextu pro umožnìní rozšifrování zprávy. Cílem je neopakovat znovu stejný keystream pøi ponechání stejného klíèe (hraje tedy stejnou roli jako inicializaèní vektor u pøedchozích modù).
+Jako poslední si ukážeme mód CTR (Counter). Na vstup blokové šifry jdou data, která se pokaždé o 1 zmìní. Výstup blokové šifry (keystream) je pak XORován s plaintextem resp. ciphertextem (viz obrázky \ref{CTRencryption} a \ref{CTRdecryption}). CTR se mùže podobat ECB v tom ohledu, že lze každý blok plaintextu je šifrován samostatnì a proto je opìt možné paralelizovat jak zašifrování, tak rozšifrování. Nicménì zde jsou jednotlivé bloky plaintextu zašifrovány jinak, i kdyby byly všechny bloky plaintextu stejné. Bezpeèností aplikace se proto CTR blíží spíše OFB. Counter posílá na výstup keystream, který se skládá poustupnì z øady $f(x \oplus n), f(x \oplus (n+1)), f(x \oplus (n+2)), ...$, kde $n$ je \uv{nonce}. To je èíslo zvolené pro šifrování jedné konkrétní zprávy, které musí být pøiloženo k ciphertextu pro umožnìní rozšifrování zprávy. Cílem je neopakovat znovu stejný keystream pøi ponechání stejného klíèe (hraje tedy stejnou roli jako inicializaèní vektor u pøedchozích modù).
 
 \bcmoop{CTR}{encryption}
 \bcmoop{CTR}{decryption}
