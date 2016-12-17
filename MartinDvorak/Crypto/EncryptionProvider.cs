@@ -10,7 +10,6 @@ namespace Crypto
     /// Public class that provides encryption and decryption of data streams in a convenient way.
     /// This class wraps any <c>IEncrypter</c> implementation.
     /// </summary>
-    /// <remarks>Maybe rename to "Encryption provider".</remarks>
     public class EncryptionProvider
     {
         private IEncrypter encrypter;
@@ -41,7 +40,7 @@ namespace Crypto
         {
             if (salt.Length != saltLength)
             {
-                throw new ArgumentException("The salt should have exactly 16 bytes!");
+                throw new ArgumentException("The salt should have exactly" + saltLength + " bytes!");
             }
 
             byte[] buffer = new byte[inputStream.Length];

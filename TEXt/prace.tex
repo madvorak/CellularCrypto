@@ -1,8 +1,8 @@
-%%% Hlavnï¿½ soubor. Zde se definujï¿½ zï¿½kladnï¿½ parametry a odkazuje se na ostatnï¿½ ï¿½ï¿½sti. %%%
+%%% Hlavn? soubor. Zde se definuj? z?kladn? parametry a odkazuje se na ostatn? ??sti. %%%
 
-%% Verze pro jednostrannï¿½ tisk:
-% Okraje: levï¿½ 40mm, pravï¿½ 25mm, hornï¿½ a dolnï¿½ 25mm
-% (ale pozor, LaTeX si sï¿½m pï¿½idï¿½vï¿½ 1in)
+%% Verze pro jednostrann? tisk:
+% Okraje: lev? 40mm, prav? 25mm, horn? a doln? 25mm
+% (ale pozor, LaTeX si s?m p?id?v? 1in)
 \documentclass[12pt,a4paper]{report}
 \setlength\textwidth{145mm}
 \setlength\textheight{247mm}
@@ -11,10 +11,10 @@
 \setlength\topmargin{0mm}
 \setlength\headsep{0mm}
 \setlength\headheight{0mm}
-% \openright zaï¿½ï¿½dï¿½, aby nï¿½sledujï¿½cï¿½ text zaï¿½ï¿½nal na pravï¿½ stranï¿½ knihy
+% \openright za??d?, aby n?sleduj?c? text za??nal na prav? stran? knihy
 \let\openright=\clearpage
 
-%% Pokud tiskneme oboustrannï¿½:
+%% Pokud tiskneme oboustrann?:
 % \documentclass[12pt,a4paper,twoside,openright]{report}
 % \setlength\textwidth{145mm}
 % \setlength\textheight{247mm}
@@ -25,76 +25,76 @@
 % \setlength\headheight{0mm}
 % \let\openright=\cleardoublepage
 
-% Pï¿½epneme na ï¿½eskou sazbu
+% P?epneme na ?eskou sazbu
 \usepackage[czech]{babel}
 \usepackage[IL2]{fontenc}
 
-%% Pouï¿½itï¿½ kï¿½dovï¿½nï¿½ znakï¿½: obvykle latin2, cp1250 nebo utf8:
+%% Pou?it? k?dov?n? znak?: obvykle latin2, cp1250 nebo utf8:
 \usepackage[cp1250]{inputenc}
 
-%%% Dalï¿½ï¿½ uï¿½iteï¿½nï¿½ balï¿½ï¿½ky (jsou souï¿½ï¿½stï¿½ bï¿½ï¿½nï¿½ch distribucï¿½ LaTeXu)
-\usepackage{amsmath}        % rozï¿½ï¿½ï¿½enï¿½ pro sazbu matematiky
-\usepackage{amsfonts}       % matematickï¿½ fonty
-\usepackage{amsthm}         % sazba vï¿½t, definic apod.
-\usepackage{bbding}         % balï¿½ï¿½ek s nejrï¿½znï¿½jï¿½ï¿½mi symboly
-			    % (ï¿½tvereï¿½ky, hvï¿½zdiï¿½ky, tuï¿½tiï¿½ky, nï¿½ï¿½tiï¿½ky, ...)
-\usepackage{bm}             % tuï¿½nï¿½ symboly (pï¿½ï¿½kaz \bm)
-\usepackage{graphicx}       % vklï¿½dï¿½nï¿½ obrï¿½zkï¿½
-\usepackage{fancyvrb}       % vylepï¿½enï¿½ prostï¿½edï¿½ pro strojovï¿½ pï¿½smo
-\usepackage{indentfirst}    % zavede odsazenï¿½ 1. odstavce kapitoly
-\usepackage{natbib}         % zajiï¿½tuje moï¿½nost odkazovat na literaturu
-			    % stylem AUTOR (ROK), resp. AUTOR [ï¿½ï¿½SLO]
-\usepackage[nottoc]{tocbibind} % zajistï¿½ pï¿½idï¿½nï¿½ seznamu literatury,
-                            % obrï¿½zkï¿½ a tabulek do obsahu
-\usepackage{icomma}         % inteligetnï¿½ ï¿½ï¿½rka v matematickï¿½m mï¿½du
-\usepackage{dcolumn}        % lepï¿½ï¿½ zarovnï¿½nï¿½ sloupcï¿½ v tabulkï¿½ch
-\usepackage{booktabs}       % lepï¿½ï¿½ vodorovnï¿½ linky v tabulkï¿½ch
-\usepackage{paralist}       % lepï¿½ï¿½ enumerate a itemize
-\usepackage[usenames]{xcolor}  % barevnï¿½ sazba
+%%% Dal?? u?ite?n? bal??ky (jsou sou??st? b??n?ch distribuc? LaTeXu)
+\usepackage{amsmath}        % roz???en? pro sazbu matematiky
+\usepackage{amsfonts}       % matematick? fonty
+\usepackage{amsthm}         % sazba v?t, definic apod.
+\usepackage{bbding}         % bal??ek s nejr?zn?j??mi symboly
+			    % (?tvere?ky, hv?zdi?ky, tu?ti?ky, n??ti?ky, ...)
+\usepackage{bm}             % tu?n? symboly (p??kaz \bm)
+\usepackage{graphicx}       % vkl?d?n? obr?zk?
+\usepackage{fancyvrb}       % vylep?en? prost?ed? pro strojov? p?smo
+\usepackage{indentfirst}    % zavede odsazen? 1. odstavce kapitoly
+\usepackage{natbib}         % zaji?tuje mo?nost odkazovat na literaturu
+			    % stylem AUTOR (ROK), resp. AUTOR [??SLO]
+\usepackage[nottoc]{tocbibind} % zajist? p?id?n? seznamu literatury,
+                            % obr?zk? a tabulek do obsahu
+\usepackage{icomma}         % inteligetn? ??rka v matematick?m m?du
+\usepackage{dcolumn}        % lep?? zarovn?n? sloupc? v tabulk?ch
+\usepackage{booktabs}       % lep?? vodorovn? linky v tabulk?ch
+\usepackage{paralist}       % lep?? enumerate a itemize
+\usepackage[usenames]{xcolor}  % barevn? sazba
 \usepackage{tkz-kiviat,numprint,fullpage}     % radar charts
 \usetikzlibrary{arrows}
 
-%%% ï¿½daje o prï¿½ci
+%%% ?daje o pr?ci
 
-% Nï¿½zev prï¿½ce v jazyce prï¿½ce (pï¿½esnï¿½ podle zadï¿½nï¿½)
+% N?zev pr?ce v jazyce pr?ce (p?esn? podle zad?n?)
 \def\NazevPrace{Využití celulárních automatù pro šifrování dat}
 
-% Nï¿½zev prï¿½ce v angliï¿½tinï¿½
+% N?zev pr?ce v angli?tin?
 \def\NazevPraceEN{Using Cellular Automata for Data Encryption}
 
-% Jmï¿½no autora
+% Jm?no autora
 \def\AutorPrace{Martin Dvoøák}
 
-% Rok odevzdï¿½nï¿½
+% Rok odevzd?n?
 \def\RokOdevzdani{2016}
 
-% Nï¿½zev katedry nebo ï¿½stavu, kde byla prï¿½ce oficiï¿½lnï¿½ zadï¿½na
-% (dle Organizaï¿½nï¿½ struktury MFF UK, pï¿½ï¿½padnï¿½ plnï¿½ nï¿½zev pracoviï¿½tï¿½ mimo MFF)
+% N?zev katedry nebo ?stavu, kde byla pr?ce ofici?ln? zad?na
+% (dle Organiza?n? struktury MFF UK, p??padn? pln? n?zev pracovi?t? mimo MFF)
 \def\Katedra{Katedra teoretické informatiky a matematické logiky}
 \def\KatedraEN{Department of Theoretical Computer Science and Mathematical Logic}
 
-% Jednï¿½ se o katedru (department) nebo o ï¿½stav (institute)?
+% Jedn? se o katedru (department) nebo o ?stav (institute)?
 \def\TypPracoviste{Katedra teoretické informatiky a matematické logiky}
 \def\TypPracovisteEN{Department of Theoretical Computer Science and Mathematical Logic}
 
-% Vedoucï¿½ prï¿½ce: Jmï¿½no a pï¿½ï¿½jmenï¿½ s~tituly
+% Vedouc? pr?ce: Jm?no a p??jmen? s~tituly
 \def\Vedouci{Mgr. Otakar Trunda}
 
-% Pracoviï¿½tï¿½ vedoucï¿½ho (opï¿½t dle Organizaï¿½nï¿½ struktury MFF)
+% Pracovi?t? vedouc?ho (op?t dle Organiza?n? struktury MFF)
 \def\KatedraVedouciho{Katedra teoretické informatiky a matematické logiky}
 \def\KatedraVedoucihoEN{Department of Theoretical Computer Science and Mathematical Logic}
 
-% Studijnï¿½ program a obor
+% Studijn? program a obor
 \def\StudijniProgram{Informatika}
 \def\StudijniObor{Obecná informatika}
 
-% Nepovinnï¿½ podï¿½kovï¿½nï¿½ (vedoucï¿½mu prï¿½ce, konzultantovi, tomu, kdo
-% zapï¿½jï¿½il software, literaturu apod.)
+% Nepovinn? pod?kov?n? (vedouc?mu pr?ce, konzultantovi, tomu, kdo
+% zap?j?il software, literaturu apod.)
 \def\Podekovani{%
 Dìkuji svému vedoucímu za ochotnou pomoc.
 }
 
-% Abstrakt (doporuï¿½enï¿½ rozsah cca 80-200 slov; nejednï¿½ se o zadï¿½nï¿½ prï¿½ce)
+% Abstrakt (doporu?en? rozsah cca 80-200 slov; nejedn? se o zad?n? pr?ce)
 \def\Abstrakt{%
 Abstrakt.
 }
@@ -102,7 +102,7 @@ Abstrakt.
 Abstract.
 }
 
-% 3 aï¿½ 5 klï¿½ï¿½ovï¿½ch slov (doporuï¿½eno), kaï¿½dï¿½ uzavï¿½eno ve sloï¿½enï¿½ch zï¿½vorkï¿½ch
+% 3 a? 5 kl??ov?ch slov (doporu?eno), ka?d? uzav?eno ve slo?en?ch z?vork?ch
 \def\KlicovaSlova{%
 {celulární automaty}, {šifrování}, {protahování klíèù}
 }
@@ -110,27 +110,27 @@ Abstract.
 {cellular automata}, {cryptography}, {key stretching}
 }
 
-%% Balï¿½ï¿½ek hyperref, kterï¿½m jdou vyrï¿½bï¿½t klikacï¿½ odkazy v PDF,
-%% ale hlavnï¿½ ho pouï¿½ï¿½vï¿½me k uloï¿½enï¿½ metadat do PDF (vï¿½etnï¿½ obsahu).
-\usepackage[pdftex,unicode]{hyperref}   % Musï¿½ bï¿½t za vï¿½emi ostatnï¿½mi balï¿½ï¿½ky
+%% Bal??ek hyperref, kter?m jdou vyr?b?t klikac? odkazy v PDF,
+%% ale hlavn? ho pou??v?me k ulo?en? metadat do PDF (v?etn? obsahu).
+\usepackage[pdftex,unicode]{hyperref}   % Mus? b?t za v?emi ostatn?mi bal??ky
 \hypersetup{breaklinks=true}
 \hypersetup{pdftitle={\NazevPrace}}
 \hypersetup{pdfauthor={\AutorPrace}}
 \hypersetup{pdfkeywords=\KlicovaSlova}
 \hypersetup{urlcolor=blue}
 
-%% Definice rï¿½znï¿½ch uï¿½iteï¿½nï¿½ch maker (viz popis uvnitï¿½ souboru)
+%% Definice r?zn?ch u?ite?n?ch maker (viz popis uvnit? souboru)
 \include{makra}
 
-%% Titulnï¿½ strana a rï¿½znï¿½ povinnï¿½ informaï¿½nï¿½ strany
+%% Tituln? strana a r?zn? povinn? informa?n? strany
 \begin{document}
 \include{titulka}
 
-%%% Strana s automaticky generovanï¿½m obsahem bakalï¿½ï¿½skï¿½ prï¿½ce
+%%% Strana s automaticky generovan?m obsahem bakal??sk? pr?ce
 
 \tableofcontents
 
-%%% Jednotlivï¿½ kapitoly prï¿½ce jsou pro pï¿½ehlednost uloï¿½eny v samostatnï¿½ch souborech
+%%% Jednotliv? kapitoly pr?ce jsou pro p?ehlednost ulo?eny v samostatn?ch souborech
 \include{uvod}
 \include{kap01}
 \include{kap02}
@@ -139,19 +139,19 @@ Abstract.
 \include{kapDalsi}
 \include{zaver}
 
-%%% Seznam pouï¿½itï¿½ literatury
+%%% Seznam pou?it? literatury
 \include{literatura}
 
-%%% Obrï¿½zky v bakalï¿½ï¿½skï¿½ prï¿½ci
-%%% (pokud jich je malï¿½ mnoï¿½stvï¿½, obvykle nenï¿½ tï¿½eba seznam uvï¿½dï¿½t)
+%%% Obr?zky v bakal??sk? pr?ci
+%%% (pokud jich je mal? mno?stv?, obvykle nen? t?eba seznam uv?d?t)
 \listoffigures
 
-%%% Tabulky v bakalï¿½ï¿½skï¿½ prï¿½ci (opï¿½t nemusï¿½ bï¿½t nutnï¿½ uvï¿½dï¿½t)
-%%% U matematickï¿½ch pracï¿½ mï¿½ï¿½e bï¿½t lepï¿½ï¿½ pï¿½emï¿½stit seznam tabulek na zaï¿½ï¿½tek prï¿½ce.
+%%% Tabulky v bakal??sk? pr?ci (op?t nemus? b?t nutn? uv?d?t)
+%%% U matematick?ch prac? m??e b?t lep?? p?em?stit seznam tabulek na za??tek pr?ce.
 \listoftables
 
-%%% Pouï¿½itï¿½ zkratky v bakalï¿½ï¿½skï¿½ prï¿½ci (opï¿½t nemusï¿½ bï¿½t nutnï¿½ uvï¿½dï¿½t)
-%%% U matematickï¿½ch pracï¿½ mï¿½ï¿½e bï¿½t lepï¿½ï¿½ pï¿½emï¿½stit seznam zkratek na zaï¿½ï¿½tek prï¿½ce.
+%%% Pou?it? zkratky v bakal??sk? pr?ci (op?t nemus? b?t nutn? uv?d?t)
+%%% U matematick?ch prac? m??e b?t lep?? p?em?stit seznam zkratek na za??tek pr?ce.
 \chapwithtoc{Seznam použitých zkratek}
 
 \begin{tabular}{ll}
@@ -161,23 +161,23 @@ RNG & Random Number Generator (generátor náhodných èísel) \\
 LCG & Linear Congruential Generator \\ & (lineární kongruenèní generátor pseudonáhodných èísel) \\
 RSA & Rivest-Shamir-Adleman (asymetrický šifrovací algoritmus) \\
 XML & eXtensible Markup Language (znaèkovací jazyk) \\
-HTML & HyperText Markup Language \\ & (jazyk pro popis obsahu webové stránky) \\
+HTML & HyperText Markup Language \\ & (jazyk pro popis obsahu webových stránky) \\
 OOP & Object-oriented programming (Objektovì orientované programování)
 \end{tabular}
 
 
 
 
-%%% Pï¿½ï¿½lohy k bakalï¿½ï¿½skï¿½ prï¿½ci, existujï¿½-li. Kaï¿½dï¿½ pï¿½ï¿½loha musï¿½ bï¿½t alespoï¿½ jednou
-%%% odkazovï¿½na z vlastnï¿½ho textu prï¿½ce. Pï¿½ï¿½lohy se ï¿½ï¿½slujï¿½.
+%%% P??lohy k bakal??sk? pr?ci, existuj?-li. Ka?d? p??loha mus? b?t alespo? jednou
+%%% odkazov?na z vlastn?ho textu pr?ce. P??lohy se ??sluj?.
 %%%
-%%% Do tiï¿½tï¿½nï¿½ verze se spï¿½ï¿½e hodï¿½ pï¿½ï¿½lohy, kterï¿½ lze ï¿½ï¿½st a prohlï¿½ï¿½et (dodateï¿½nï¿½
-%%% tabulky a grafy, rï¿½znï¿½ textovï¿½ doplï¿½ky, ukï¿½zky vï¿½stupï¿½ z poï¿½ï¿½taï¿½ovï¿½ch programï¿½,
-%%% apod.). Do elektronickï¿½ verze se hodï¿½ pï¿½ï¿½lohy, kterï¿½ budou spï¿½ï¿½e pouï¿½ï¿½vï¿½ny
-%%% v elektronickï¿½ podobï¿½ neï¿½ ï¿½teny (zdrojovï¿½ kï¿½dy programï¿½, datovï¿½ soubory,
-%%% interaktivnï¿½ grafy apod.). Elektronickï¿½ pï¿½ï¿½lohy se nahrï¿½vajï¿½ do SISu a lze
-%%% je takï¿½ do prï¿½ce vloï¿½it na CD/DVD.
-\chapwithtoc{Pøílohy}
+%%% Do ti?t?n? verze se sp??e hod? p??lohy, kter? lze ??st a prohl??et (dodate?n?
+%%% tabulky a grafy, r?zn? textov? dopl?ky, uk?zky v?stup? z po??ta?ov?ch program?,
+%%% apod.). Do elektronick? verze se hod? p??lohy, kter? budou sp??e pou??v?ny
+%%% v elektronick? podob? ne? ?teny (zdrojov? k?dy program?, datov? soubory,
+%%% interaktivn? grafy apod.). Elektronick? p??lohy se nahr?vaj? do SISu a lze
+%%% je tak? do pr?ce vlo?it na CD/DVD.
+\chapwithtoc{P??lohy}
 
 \openright
 \end{document}

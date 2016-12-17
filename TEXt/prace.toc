@@ -46,4 +46,4 @@
 \contentsline {chapter}{Seznam obr\'azk\r {u}}{53}{chapter*.6}
 \contentsline {chapter}{Seznam tabulek}{55}{chapter*.7}
 \contentsline {chapter}{Seznam pou\v zit\'ych zkratek}{56}{chapter*.8}
-\contentsline {chapter}{P\v r\IeC {\'\i }lohy}{57}{chapter*.9}
+\contentsline {chapter}{P??lohy}{57}{chapter*.9}

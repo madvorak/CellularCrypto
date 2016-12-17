@@ -9,7 +9,7 @@ namespace Crypto
     /// </summary>
     class EncrypterReversibleCA : IEncrypter
     {
-        private int stepCount;
+        private readonly int stepCount;
 
         /// <summary>
         /// Creates a new <c>EncrypterReversibleCA</c>.
