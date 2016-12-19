@@ -20,7 +20,9 @@ Jedinou známou zcela neprolomitelnou šifrovací metodou je Vernamova šifra. V bin
 
 \section{O co nám jde}
 
-V této práci se budeme vìnovat vytvoøení algoritmu na protahování klíèù (anglicky key stretching). Cílem je z krátkého klíèe (který lze napøíklad v krátkém èase pøenést pomocí RSA) vygenerovat dlouhý klíè (one-time pad, kterým lze pøeXORovat celý soubor). Je to tedy podobný úkol jako naprogramovat \textsl{Keystream Generator}, tedy program, který generuje kdykoliv opakovatelnou sekvenci bitù. Jediný rozdíl je, že my budeme dopøedu znát cílenou délku výsledného klíèe.
+V této práci se budeme vìnovat vytvoøení algoritmu na protahování klíèù (anglicky key stretching). Naším cílem je z krátkého klíèe (který lze napøíklad v krátkém èase pøenést pomocí RSA) vygenerovat dlouhý klíè (one-time pad, kterým lze pøeXORovat celý soubor). Je to tedy podobný úkol jako naprogramovat \textsl{Keystream Generator}, tedy program, který generuje kdykoliv opakovatelnou sekvenci bitù. Jediný rozdíl je, že my budeme dopøedu znát cílenou délku výsledného klíèe.
+
+Formálnì hledáme zobrazení $\{0,1\}^k \rightarrow \{0,1\}^m, m>k$, které má nìjaké dobré vlastnosti. Chtìli bychom, aby pøi znalosti èásti výstupu (obrazu náhodného vstupního líèe) nebylo možné vypoèítat zbytek výstupu (zjištìní dlouhého klíèe) žádným výraznì rychlejším zpùsobem, než vyzkoušením všech $2^k$ možných vstupù. Pokud bychom chtìli být opravdu precizní, tak bychom chtìli, každý polynomiální algoritmus, který má na vstupu libovolných $n$ bitù obrazu neznámého klíèe, nedokázal urèit žádný ze zbývajících $m-n$ bitù obrazu s pravdìpodobností vyšší než 50\%. Taková kritérie však nezvládneme ovìøit, proto budeme využívat rùzné aproximace. Naše experimenty budou ovìøovat nutné, nikoliv však postaèující podmínky pro kvalitní šifrování.
 
 \section{Pseudonáhodné generátory}
 
@@ -90,7 +92,7 @@ Jako poslední si ukážeme mód CTR (Counter). Na vstup blokové šifry jdou data, kt
 
 \section{Útoky na šifry}
 
-Kvalita šifrování musí být posuzována v kontextu možných útokù. Pokaždé budeme pøedpokládat, že útoèník nezná tajný klíè (jinak by dokázal vše), ale že dùkladnì rozumí šifrovacímu algoritmu (viz Kerckhoffùv princip).
+Kvalita šifrování musí být posuzována v kontextu možných útokù. Pokaždé budeme pøedpokládat, že útoèník nezná tajný klíè (jinak by dokázal vše), ale že dùkladnì rozumí šifrovacímu algoritmu, viz Kerckhoffùv princip \citep{Ker}.
 
 \subsection{Rozdìlení podle povolených prostøedkù}
 

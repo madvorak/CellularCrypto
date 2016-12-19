@@ -4,7 +4,7 @@
 
 \section{Co jsou to celulární automaty}
 
-Celulární automat (CA) je diskrétní model, který se skládá z pravidelné møížky bunìk. Buòky se nacházejí v urèitých stavech, pøièemž množina stavù a pravidla pro pøechod mezi stavy jsou spoleèná pro celý automat. CA se vyvíjí diskrétnì v èase (celý najednou).
+Celulární automat (CA) je diskrétní model, který se skládá z pravidelné møížky bunìk. Buòky se nacházejí v urèitých stavech, pøièemž množina stavù a pravidla pro pøechod mezi stavy jsou spoleèná pro celý automat. CA se vyvíjí diskrétnì v èase (celý najednou). Pøíklady vývoje konkrétních automatù naleznete na následujících stránkách.
 
 Specialitou CA je to, že i velmi jednoduchá sada pravidel mùže vést k velmi komplexnímu chování. Celulární automaty našly využití jako modely v biologii, chemii, fyzice, ale také tøeba jako nástroj pøi procedurálním generování terénu pro poèítaèové hry.
 
@@ -19,7 +19,7 @@ Budeme uvažovat rùzné varianty CA podle následujících kritérií:
 
 \section{Elementární celulární automaty}
 
-Wofram popisuje na poèátku své rozsáhlé práce \citep{W02} nejprve elementární celulární automaty, kterých existuje 256. Elementární CA obsahuje jednoduchou øadu bunìk (jednorozmìrnou), kde se každá buòka mùže nacházet ve 2 možných stavech. Stav 0 oznaème bílou barvou a mluvme o dané buòce jako o mrtvé. Stav 1 oznaème èervnou barvou a mluvme o dané buòce jako o živé. U elementárních CA každý nový stav každé buòky závisí pouze na jejím stavu a stavu pøímých sousedù. Pokud pøechodovou funkci nazveme $f$, èas oznaèíme $t$ a buòky automatu reprezentuje vektor x (napøíklad 5. buòka v poèáteèním stavu je reprezentovaná hodnotou $x_5(0)$), tak mùžeme pøechod formálnì zapsat jako:
+Wofram popisuje na poèátku své rozsáhlé práce \citep{W02} nejprve elementární celulární automaty, kterých existuje 256. Elementární CA obsahuje jednoduchou øadu bunìk (jednorozmìrnou), kde se každá buòka mùže nacházet ve 2 možných stavech. Stav 0 oznaème bílou barvou a mluvme o dané buòce jako o mrtvé. Stav 1 oznaème èervnou barvou a mluvme o dané buòce jako o živé. U elementárních CA každý nový stav každé buòky závisí pouze na jejím stavu a stavu pøímých sousedù. Pokud pøechodovou funkci nazveme $f$, èas (poèet uplynulých krokù) oznaèíme $t$ a buòky automatu reprezentuje vektor x (napøíklad 5. buòka v poèáteèním stavu je reprezentovaná hodnotou $x_5(0)$), tak mùžeme pøechod formálnì zapsat jako:
 $$x_i(t+1) = f(x_{i-1}(t), x_i(t), x_{i+1}(t))$$, kde
 $$f:\{0,1\}^3 \rightarrow \{0,1\} $$, tudíž existuje $2^{2^3} = 2^8 =256$ takových funkcí $f$.
 
@@ -27,7 +27,7 @@ Elementární automaty èíslujeme tak, že pravidlo zapsané jako osmice bitù (kde pr
 
 Ukážeme si teï nìkolik elementárních automatù, na které se budeme v práci odkazovat. Zakreslíme vždy jejich vývoj v èase, kde èas roste smìrem dolù, pøièemž poèáteèní konfigurace se skládá se samých nul (bílých / mrtvých bunìk) s jedinou jednièkou (èernou / živou buòkou) uprostøed. Lze si všimnout, že budeme využívat jen automaty se sudými èísly. Ty s lichými èísly totiž zobrazují (0, 0, 0) na 1 a hned v prvním kroce zaplní neomezené množství bunìk.
 
-V knize \citep{Schiff08} je na stranì 70 popsána klasifikace celulárních automatù do 4 tøíd. Pøíkladem CA s úplnì jednotvárným chováním (Class I) je elementární automat èíslo 220 (viz \ref{ca220}). Podobnì jednotvárné chování vykazuje automat èíslo 94 (viz \ref{ca94}). Zajímavìjší je automat èíslo 90, který opakuje stejné vzory (Class II) a dokonce generuje fraktální tvary (viz \ref{ca90}). Jeho pravidlo se dá popsat tak, že ignoruje souèasný stav buòky a jako nový stav buòka nastaví xor mezi stavy levého a pravého souseda. Automat èíslo 30 vykazuje chaotické (pseudonáhodné) chování (Class III, viz \ref{ca30}). A nakonec si prohlédneme automat èíslo 110 (viz \ref{ca110}), který vykazuje urèité lokální struktury, které spolu mohou složitì interagovat (Class IV).
+V knize \citep{Schiff08} je na stranì 70 popsána klasifikace celulárních automatù do 4 tøíd, inspirovaná knihou \citep{W02}. Pøíkladem CA s úplnì jednotvárným chováním (Class I) je elementární automat èíslo 220 (viz \ref{ca220}). Podobnì jednotvárné chování vykazuje automat èíslo 94 (viz \ref{ca94}). Zajímavìjší je automat èíslo 90, který opakuje stejné vzory (Class II) a dokonce generuje fraktální tvary (viz \ref{ca90}). Jeho pravidlo se dá popsat tak, že ignoruje souèasný stav buòky a jako nový stav buòka nastaví xor mezi stavy levého a pravého souseda. Automat èíslo 30 vykazuje chaotické (pseudonáhodné) chování (Class III, viz \ref{ca30}). A nakonec si prohlédneme automat èíslo 110 (viz \ref{ca110}), který vykazuje urèité lokální struktury, které spolu mohou složitì interagovat (Class IV).
 
 \newcommand{\obrazek}[1]{\begin{figure}
 \centering
@@ -55,7 +55,7 @@ $$f:\{0,..,(s-1)(o+1)\} \rightarrow \{0,..,s-1\}$$
 
 \section{Dvourozmìrné celulární automaty}
 
-Buòky taky mùžeme umístit do pravidelné dvojrozmìrné møížky, která vypadá jako ètvereèkovaný papír. V oblasti 2D celulárních automatù se používají hlavnì totalistické automaty, protože vytváøení jiných typù pravidel by bylo pøíliš složité. Typických pøíkladem totalistického 2D automatu je Game Of Life. To je dvourozmìrný automat nad binární abecedou používající 8-okolí, který se øídí pravidlem, že živá buòka pøežívá, pokud má 2 až 3 živé sousedy (jinak umírá), zatímco mrtvá buòka obžije, pokud má právì 3 živé sousedy. Game Of Life se stal zdrojem  mnoha rùzných høíèek. Nicménì pro úèely šifrování se nezdá být moc užiteèný, protože se chová pøíliš \uv{pravidelnì} a po mnoha provedených krocích mívá velké oblasti bez jakékoliv živé buòky.
+Buòky taky mùžeme umístit do pravidelné dvojrozmìrné møížky, která vypadá jako ètvereèkovaný papír. Pokud vývoj buòky závisí jen na stavu buòky tìsnì pod ní, buòky tìsnì nad ní, buòky tìsnì vpravo od ní a buòky tìsnì vlevo od ní, nazýváme takový CA jako automat se 4-okolím. Pokud pøechodová funkce využívá i diagonálnì sousedící buòky, nezýváme takový CA jako automat s 8-okolím. V oblasti 2D celulárních automatù se používají hlavnì totalistické automaty, protože reprezentování jiných typù pravidel by bylo pøíliš složité. Typických pøíkladem totalistického 2D automatu je Game Of Life. To je dvourozmìrný automat nad binární abecedou používající 8-okolí, který se øídí pravidlem, že živá buòka pøežívá, pokud má 2 až 3 živé sousedy (jinak umírá), zatímco mrtvá buòka obžije, pokud má právì 3 živé sousedy. Game Of Life se stal zdrojem  mnoha rùzných høíèek. Nicménì pro úèely šifrování se nezdá být moc užiteèný, protože se chová pøíliš \uv{pravidelnì} a po mnoha provedených krocích mívá velké oblasti bez jakékoliv živé buòky.
 
 Lepší jsou pro nás CA, která se chovají více \uv{chaoticky}. Mezi totalistickými 2D automaty je to napøíklad automat jménem Amoeba Universe \citep{MCELL}, v nìmž živá buòka pøežívá, má-li 1, 3, 5 èi 8 živých sousedù a mrtvá buòka obžije, pokud má 3, 5, èi 7 živých sousedù. Pokud se na tento automat bude dívat èlovìk, neuvidí zøejmì nic pozoruhodného (na rozdíl od Game Of Life), ale statistické vlastnosti se ukázaly být slušné.
 
