@@ -1,6 +1,8 @@
 \chapter{Další možnosti šifrování pomocí celulárních automatù}
 
-Kromì protahování klíèù by šlo využít celulární automaty v kryptografii i jinak. Tøeba posadit plaintext jako poèáteèní stav nìjakého reverzibilního CA. Šifrovacím klíèem by zde byla samotná pøechodová funkce toho automatu. Ciphertext by byl stav automatu po pár krocích. Rozšifrování by bylo snadné, ale bez znalosti pøechodové funkce by se to nedalo tipnout.
+Kromì protahování klíèù by šlo využít celulární automaty v kryptografii i jinak. Zajímavé by mohlo být využít reverzibilní CA. Automat se nazývá reverzibilní, pokud pro jakýkoliv stav celého automatu existuje právì jeden pøedchùdce. Jinými slovy: pøechodová funkce pøi aplikaci na celý CA je bijekcí mezi dvìma chronologicky následujícími konfiguracemi.
+
+Jedním nápadem je posadit plaintext jako poèáteèní stav nìjakého reverzibilního CA. Šifrovacím klíèem by zde byla samotná pøechodová funkce toho automatu. Ciphertext by byl stav automatu po pár krocích. Rozšifrování by bylo snadné, ale bez znalosti pøechodové funkce by se to nedalo uhodnout.
 
 Kromì toho, že mezi elementárními celulárními automaty se nachází nìkolik dvojic, které dìlají navzájem inverzní zobrazení, lze reverzibilní CA generovat i více systematicky, viz \citep{Schiff08}, strana 68.
 

@@ -174,7 +174,7 @@ namespace Crypto
         }
 
         /// <summary>
-        /// Interface for classes that keeps extenders and automata that can be used to double the key in any step.
+        /// Interface for class that keeps extenders and automata that can be used to double the key in any step.
         /// </summary>
         private interface IPrimitives
         {

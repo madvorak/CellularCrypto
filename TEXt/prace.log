@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.16)  19 DEC 2016 22:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.16)  25 DEC 2016 11:41
 entering extended mode
 **./prace.tex
 (prace.tex
@@ -1226,7 +1226,7 @@ Kapitola 5.
 <r60_tam.png, id=642, 322.20375pt x 299.1175pt>
 File: r60_tam.png Graphic file (type png)
  <use r60_tam.png>
-Package pdftex.def Info: r60_tam.png used on input line 17.
+Package pdftex.def Info: r60_tam.png used on input line 19.
 (pdftex.def)             Requested size: 213.40242pt x 199.17079pt.
 
 
@@ -1235,7 +1235,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <r60_zpet.png, id=645, 322.20375pt x 685.56125pt>
 File: r60_zpet.png Graphic file (type png)
  <use r60_zpet.png>
-Package pdftex.def Info: r60_zpet.png used on input line 26.
+Package pdftex.def Info: r60_zpet.png used on input line 28.
 (pdftex.def)             Requested size: 213.40242pt x 455.2544pt.
 
 
@@ -1301,7 +1301,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 183.
 Here is how much of TeX's memory you used:
  22890 strings out of 493333
  405342 string characters out of 3139167
- 721104 words of memory out of 3000000
+ 721702 words of memory out of 3000000
  25750 multiletter control sequences out of 15000+200000
  27501 words of font info for 84 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1337,7 +1337,7 @@ type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
 ls/msbm10.pfb>
-Output written on prace.pdf (61 pages, 1138598 bytes).
+Output written on prace.pdf (61 pages, 1139509 bytes).
 PDF statistics:
  1461 PDF objects out of 1728 (max. 8388607)
  175 named destinations out of 1000 (max. 500000)
