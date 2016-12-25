@@ -132,7 +132,7 @@ Pro krátké posloupnosti (zde pod 10 tisíc bitù) samozøejmì není možné, aby se vš
 
 Skuteènost, že výstupem algoritmu je pseudonáhodná posloupnost èísel, je jistì dobrá. Ale co když algoritmus všem vstupùm pøiøadí stejnou pseudonáhodnou posloupnost? Nebo jeden konkrétní bit na vstupu neovlivní výsledek? Takovou nekvalitu musí objevit druhá skupina testù.
 
-Budeme zde zkoumat vlastnosti algoritmù jako vlastnosti celého zobrazení z krátkých klíèù do dlouhých klíèù. Protože si budeme èasto klást otázky typu \uv{Jak moc se liší výstup A od výstupu B?}, tak by bylo vhodné zavést nìjaké hodnocení, ideálnì s vlastností metriky. Porovnávat budeme vždy jen výstupy stejné délky. Oblíbenými metrikami pro øetìzce jsou \textsl{Hammingova vzdálenost} a \textsl{Levenshteinova vzdálenost}. Hamming mìøí poèet pozic, na kterých se øetìzce liší. Levenshtein mìøí minimální poèet potøebných zmìn k tomu, abychom z jednoho øetìzce dostali ten druhý. Jako zmìnu je možné provést zámìnu znaku, smazání znaku, nebo dopsání znaku na libovolné místo.
+Budeme zde zkoumat vlastnosti algoritmù jako vlastnosti celého zobrazení z krátkých klíèù do dlouhých klíèù. Protože si budeme èasto klást otázky typu \uv{Jak moc se liší výstup A od výstupu B?}, tak by bylo vhodné zavést nìjaké hodnocení, ideálnì s vlastností metriky. Porovnávat budeme vždy jen výstupy stejné délky. Oblíbenými metrikami pro øetìzce jsou \textsl{Hammingova vzdálenost} a \textsl{Levenshteinova vzdálenost}. Hamming mìøí poèet pozic, na kterých se øetìzce liší. Levenshtein mìøí minimální poèet potøebných zmìn k tomu, abychom z jednoho øetìzce dostali ten druhý, viz \citep{Lev}. Jako zmìnu je možné provést zámìnu znaku, smazání znaku, nebo dopsání znaku na libovolné místo.
 
 Hammingova vzdálenost je triviálnì horním odhadem na Levenshteinovu vzdálenost. V pøípadì náhodných binárních øetìzcù je jejich hodnota obèas stejná, ale nìkdy mùže být Levenshtein výraznì nižší. Napøíklad když zrotujeme øetìzec o jednu pozici, tak Levenshtein dává vzdálenost 2, zatímco Hamming mùže dát hodnì vysoké èíslo (až délka øetìzce). Významná pro nás bude rychlost výpoètu. Hammingovu vzdálenost lze triviálnì urèit v lineárním èase, ale výpoèet Levenshteinovy vzdálenosti zabere èas kvadratický. Že to rychleji nejde, se nelze divit, protože Levenshtein vlastnì spouští prohledávání prostoru editací. Díky dynamickému programování to lze provést alespoò v tom kvadratickém èase.
 
@@ -156,7 +156,7 @@ Všechny doposud zmínìné testy jsou obaleny ve tøídì Crypto.FunctionTestsForThesi
 
 Výsledky jednotlivých algoritmù ve výše uvedených testech budeme znázoròovat na diagramech jako je ten na obrázku \ref{ukazka}.
  
-\newcommand{\radar}[7]{\begin{figure}[h]
+\newcommand{\radar}[7]{\begin{figure}[!h]
 \begin{tikzpicture}[label distance=.15cm]
  \tkzKiviatDiagram[radial=5, lattice=3, gap=1, step=3]{Entropy, Compress, AveDistan, BitChange, LargeBall}
   \tkzKiviatLine[thick, color=blue, mark=ball, ball color=red, mark size=4pt, opacity=0.2, fill=blue!20]({#1}, {#2}, {#3}, {#4}, {#5})

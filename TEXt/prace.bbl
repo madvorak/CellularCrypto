@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{9}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -19,6 +19,12 @@
   Germany.
 \newblock ISBN 3-540-42278-1.
 
+\bibitem[Kerckhoffs(1883)]{Ker}
+{\sc Kerckhoffs, A.} (1883).
+\newblock La cryptographie militaire.
+\newblock \emph{Journal des sciences militaires}, {\bf IX}\penalty0 (II),
+  \penalty0 5--38.
+
 \bibitem[Knuth(1981)]{Knuth}
 {\sc Knuth, D.~E.} (1981).
 \newblock \emph{The Art of Computer Programming, Volume 2: Seminumerical
@@ -26,6 +32,13 @@
 \newblock 2nd edition. Addison-Wesley Pub (Sd), 75 Arlington Street, Suite 300,
   Boston, Massachusetts, USA.
 \newblock ISBN 978-0201038224.
+
+\bibitem[Levenshtein(1965)]{Lev}
+{\sc Levenshtein, V.} (1965).
+\newblock Binary codes capable of correcting deletions, insertions, and
+  reversals.
+\newblock \emph{Doklady Akademii Nauk SSSR}, {\bf 163}\penalty0 (4), \penalty0
+  845–848.
 
 \bibitem[Nagel a~kol.(2010)Nagel, Evjen, Glynn, Watson a Skinner]{Csharp}
 {\sc Nagel, C., Evjen, B., Glynn, J., Watson, K. {\rm a} Skinner, M.} (2010).

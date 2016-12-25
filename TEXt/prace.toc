@@ -35,15 +35,15 @@
 \contentsline {section}{\numberline {3.6}CryptographyUnitTests}{25}{section.3.6}
 \contentsline {chapter}{\numberline {4}Protahov\'an\IeC {\'\i } kl\IeC {\'\i }\v c\r u pomoc\IeC {\'\i } celul\'arn\IeC {\'\i }ch automat\r u}{26}{chapter.4}
 \contentsline {section}{\numberline {4.1}KeyExtenderQuadratic}{27}{section.4.1}
-\contentsline {section}{\numberline {4.2}KeyExtenderSimpleLinear}{29}{section.4.2}
-\contentsline {section}{\numberline {4.3}KeyExtenderInterlaced}{30}{section.4.3}
-\contentsline {section}{\numberline {4.4}KeyExtenderUncertain}{31}{section.4.4}
-\contentsline {section}{\numberline {4.5}KeyExtenderGenetic}{33}{section.4.5}
-\contentsline {chapter}{\numberline {5}Dal\v s\IeC {\'\i } mo\v znosti \v sifrov\'an\IeC {\'\i } pomoc\IeC {\'\i } celul\'arn\IeC {\'\i }ch automat\r u}{48}{chapter.5}
-\contentsline {section}{\numberline {5.1}\v Re\v sen\IeC {\'\i }}{48}{section.5.1}
-\contentsline {chapter}{Z\'av\v er}{51}{chapter*.4}
-\contentsline {chapter}{Seznam pou\v zit\'e literatury}{52}{chapter*.5}
-\contentsline {chapter}{Seznam obr\'azk\r {u}}{53}{chapter*.6}
-\contentsline {chapter}{Seznam tabulek}{55}{chapter*.7}
-\contentsline {chapter}{Seznam pou\v zit\'ych zkratek}{56}{chapter*.8}
-\contentsline {chapter}{P\v r\IeC {\'\i }lohy}{57}{chapter*.9}
+\contentsline {section}{\numberline {4.2}KeyExtenderSimpleLinear}{32}{section.4.2}
+\contentsline {section}{\numberline {4.3}KeyExtenderInterlaced}{35}{section.4.3}
+\contentsline {section}{\numberline {4.4}KeyExtenderUncertain}{39}{section.4.4}
+\contentsline {section}{\numberline {4.5}KeyExtenderGenetic}{42}{section.4.5}
+\contentsline {chapter}{\numberline {5}Dal\v s\IeC {\'\i } mo\v znosti \v sifrov\'an\IeC {\'\i } pomoc\IeC {\'\i } celul\'arn\IeC {\'\i }ch automat\r u}{46}{chapter.5}
+\contentsline {section}{\numberline {5.1}\v Re\v sen\IeC {\'\i }}{46}{section.5.1}
+\contentsline {chapter}{Z\'av\v er}{49}{chapter*.4}
+\contentsline {chapter}{Seznam pou\v zit\'e literatury}{50}{chapter*.5}
+\contentsline {chapter}{Seznam obr\'azk\r {u}}{51}{chapter*.6}
+\contentsline {chapter}{Seznam tabulek}{53}{chapter*.7}
+\contentsline {chapter}{Seznam pou\v zit\'ych zkratek}{54}{chapter*.8}
+\contentsline {chapter}{P\v r\IeC {\'\i }lohy}{55}{chapter*.9}
