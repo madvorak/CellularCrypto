@@ -12,7 +12,7 @@ Práce neobsahuje ádné závislosti na externích knihovnách. Ke spuštìní staèí mít
 
 Pøi vıvoji byl kladen dùraz na znovupouitelnost kódu. To bylo dùleité, protoe v prùbìhu programování ještì nebylo jasné, jakım zpùsobem se bude vyuívat kterı automat èi algoritmus. Znovupouitelnost je dosahována pomocí kvalitního objektového návrhu, vìtšího mnoství variant konstruktorù a propojování objektù prostøednictvím rozhraní. Stìejní trojice rozhraní je uvedena na obrázku \ref{diagramif} Dále byla vìnována pozornost vysokému vıkonu.
 
-Dùleitá je také pøehlednost zdrojového kódu. Proto byly ke všem tøídám a ke všem jejím vìøejnım metodám (a obèas i tìm ostatním) psány XML komentáøe podle zvyklostí programátorù v C\# a práce ve Visual Studiu. Z nich byla také vygenerována vıvojáøská dokumentace v HTML.
+Dùleitá je také pøehlednost zdrojového kódu. Proto byly ke všem tøídám a ke všem jejím veøejnım metodám (a obèas i tìm ostatním) psány XML komentáøe podle zvyklostí programátorù v C\# a práce ve Visual Studiu. Z nich byla také vygenerována vıvojáøská dokumentace v HTML.
 
 \begin{figure}
 \centering
@@ -33,7 +33,7 @@ CellularAutomaton má dva pøímé následníky: abstraktní tøídy Automaton1D a Automa
 
 \subsection{Koncept tøídní hierarchie}
 
-Balíèek Cellular je navret tak, aby slouil nejen ke konkrétnímu šifrovacímu algoritmu, ale aby mohl pøijít jinı èlovìk a hrát si s celulárními automaty (a u za úèelem poznávání, nebo za úèelem generování dat pro další aplikace). Proto byla pøi implementaci snaha, aby kromì vıstupu pro poèítaè existovaly i „grafické vıstupy“ pro debugging a sledování chování automatù. Pro snadnìjší práci je obèas naimplementován i takovı typ CA, kterı se speciálním pøípadem nìjakého obecnìjšího typu CA. Pøíkladem mùe bıt imlementace elementární 256 automatù, které staèí zadat jejich èíslem (podle Stephena Wolframa). Snaha o rozšíøitelnost se projevila rùznımi „mezitøídami“ mezi úplnì abstraktním automatem (kterı nic nespecifikuje) a konkrétní implementací konkrétního typu automatù.
+Balíèek Cellular je navren tak, aby slouil nejen ke konkrétnímu šifrovacímu algoritmu, ale aby mohl pøijít jinı èlovìk a hrát si s celulárními automaty (a u za úèelem poznávání, nebo za úèelem generování dat pro další aplikace). Proto byla pøi implementaci snaha, aby kromì vıstupu pro poèítaè existovaly i „grafické vıstupy“ pro debugging a sledování chování automatù. Pro snadnìjší práci je obèas naimplementován i takovı typ CA, kterı se speciálním pøípadem nìjakého obecnìjšího typu CA. Pøíkladem mùe bıt imlementace elementárních 256 automatù, které staèí zadat jejich èíslem (podle Stephena Wolframa). Snaha o rozšiøitelnost se projevila rùznımi „mezitøídami“ mezi úplnì abstraktním automatem (kterı nic nespecifikuje) a konkrétní implementací konkrétního typu automatù.
 
 \begin{figure}
 \centering
