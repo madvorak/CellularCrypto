@@ -12,8 +12,6 @@ class Program
     /// <param name="args">No arguments are used.</param>
     static void Main(string[] args)
     {
-        //Crypto.Export.GetEncrypterStreamCA().Encrypt(new System.IO.FileStream(@"c:\Martin\stuff\John_Beak_Sigh.png", System.IO.FileMode.Open),
-        //    new System.IO.FileStream(@"c:\Martin\stuff\John_Beak.cry", System.IO.FileMode.CreateNew), "heslo");
         rnd = new Random();
         MainTests.RunTest();
         GeneticTest.RunTest();
