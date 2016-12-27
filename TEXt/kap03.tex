@@ -14,7 +14,7 @@ V rámci bakaláøské práce byly vytvoøeny algoritmy na protahování klíèù, které bi
 \label{kean}
 \end{figure}
 
-Pøi vytváøení instancí tøíd implementující IKeyExtender se skrze konstruktor vkládá dovnitø libovolná implementace IBinaryCA. To umoòuje zvolit si zvláš druh automatu, kterı urèuje fungování pøechodové funkce, a zvláš protahovací algoritmus, kterı urèuje zpùsob ètení hodnot z automatu a jejich vyuití. Jedná se tedy o techniku \uv{Inversion of control}. To se hodí, abychom mohli snadno zkoušet všechny moné zpùsoby protahování klíèù. Pokud je dovnitø algoritmu vloen 2D automat, pak se stejnì indexuje jednorozmìrnì (pøi ètení hodnot ze stavu je opravdu jedno, jak funguje automat).
+Pøi vytváøení instancí tøíd implementujících IKeyExtender se skrze konstruktor vkládá dovnitø libovolná implementace IBinaryCA. To umoòuje zvolit si zvláš druh automatu, kterı urèuje fungování pøechodové funkce, a zvláš protahovací algoritmus, kterı urèuje zpùsob ètení hodnot z automatu a jejich vyuití. Jedná se tedy o techniku \uv{Inversion of control}. To se hodí, abychom mohli snadno zkoušet všechny moné zpùsoby protahování klíèù. Pokud je dovnitø algoritmu vloen 2D automat, pak se stejnì indexuje jednorozmìrnì (pøi ètení hodnot ze stavu je opravdu jedno, jak funguje automat).
 
 \begin{figure}[!h]
 \centering

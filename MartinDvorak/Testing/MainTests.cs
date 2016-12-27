@@ -22,8 +22,16 @@ namespace Testing
 
             Console.WriteLine("KeyExtenderCheating:");
             Console.WriteLine(evaluator.CalculateAndPrintResults(new KeyExtenderCheating()));
-            
-            IBinaryCA automaton = Factory.CreateAutomaton(File.ReadAllText("ca.txt"));
+
+            IBinaryCA automaton;
+            try
+            {
+                automaton = Factory.CreateAutomaton(File.ReadAllText("ca.txt"));
+            }
+            catch
+            {
+                automaton = new ElementaryAutomaton();
+            }
 
             Console.WriteLine($"KeyExtenderSimpleLinear using {automaton.TellType()}:");
             Console.WriteLine(evaluator.CalculateAndPrintResults(new KeyExtenderSimpleLinear(automaton)));
