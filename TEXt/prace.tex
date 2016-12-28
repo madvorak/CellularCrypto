@@ -180,5 +180,25 @@ CTR & CounTeR (operaèní mód blokové šifry) \\
 %%% je tak? do pr?ce vlo?it na CD/DVD.
 \chapwithtoc{Pøílohy}
 
+Pøiložené CD obsahuje 4 složky: Documentation, Executables, Results a Solution\_VS.
+
+\section*{Solution\_VS}
+
+Složka Solution\_VS obsahuje veškeré zdrojové kódy a nastavení jako solution pro Visual Studio. Staèí otevøít soubor MartinDvorak.sln, který se nachází pøímo v adresáøi Solution\_VS a naètou se všechny tøi projekty z pøíslušných podsložek.
+
+\section*{Documentation}
+
+Složka Documentation obsahuje automaticky vygenerovanou programátorskou dokumentaci ve formátech HTML a LaTeX. Dokumentaci je možné èíst napøíklad tak, že v internetovém prohlížeèi otevøete soubor \uv{/Documentation/html/annotated.html}.
+
+\section*{Executables}
+
+Složka Executables obsahuje tøi spustitelné programy. Ke spuštìní staèí mít nainstalován .NET framework verze 4.5 (èi vyšší), který je automatickou souèástí operaèního systému Windows 8 (èi novìjší). Celou složku mùžete zkopírovat do svého poèítaèe a spustit libovolný ze tøí exe souborù. Nejsou vyžadovány žádné další knihovny. Program MartinDvorak.exe spouští demonstrace algoritmù (poèínaje srovnáním evoluèního algoritmu s jednoduššími algoritmy z práce). Program Interactive.exe umožòuje spoustit grafické okno s Game of Life a dále si nechat vykreslovat vývoj nìkterých jednoduchých CA. Aplikace Program.exe umožòuje šifrovat a dešifrovat soubory pouhým zadáním hesla, které se uživatel musí pamatovat.
+
+\section*{Results}
+
+Složka Results obsahuje výsledky vybraných testù, abyste je nemuseli spouštìt sami a èekat na jejich dobìhnutí na svém poèítaèi. Výsledky jsou zapsány v textové podobì, která je dobøe èitelná pro èlovìka. Soubor results\_Hamming.txt obsahuje výsledky testù pøi využití Hammingovy vzdálenosti. Soubor results\_Levenshtein.txt obsahuje výsledky testù pøi použití Levenshteinovy vzdálenosti. Soubor results\_Genetic.txt obsahuje srovnání výsledkù obyèejných algoritmù s výsledky evoluèního algoritmu, kde evoluèní algoritmus používá nejprve implicitní nabídku stavebních kamenù (Primitives) a poté pøedgenerovanou nabídku stavebních kamenù (GoodPrimitives).
+
+Soubor statistika.txt obsahuje pouze údaje o zdrojovém kódu (poèty øádkù a podobnì). Soubor vykon.txt obsahuje srovnání èasu bìhu 5 rùzných implementací elementárních CA namìøených na nìkolika rùzných poèítaèích. Složka xtenderSearch obsahuje výstupy z 410 bìhù evoluèního algoritmu. Jsou to právì ty, které byly použity jako vstupy GoodPrimitives pro evoluèní algoritmus.
+
 \openright
 \end{document}

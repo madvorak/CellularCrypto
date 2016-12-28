@@ -13,8 +13,8 @@ class Program
     static void Main(string[] args)
     {
         rnd = new Random();
-        MainTests.RunTest();
         GeneticTest.RunTest();
+        MainTests.RunTest();
         ElementaryImplementationsTest.RunTest();
         ElementaryTimeMeasure.RunTest();
         Adapter.DisplayForm();

@@ -66,7 +66,11 @@ namespace Crypto
             primitives = Primitives.Instance;
         }
 
-        public KeyExtenderGenetic(bool usePreGenerated, string path = @"c:\Martin\MFF\_baka\xtenderSearch\")
+#if (DEBUG)
+        public KeyExtenderGenetic(bool usePreGenerated, string path = @"..\..\..\..\Results\xtenderSearch\")
+#else
+        public KeyExtenderGenetic(bool usePreGenerated, string path = @"..\Results\xtenderSearch\")
+#endif
         {
             if (usePreGenerated)
             {
