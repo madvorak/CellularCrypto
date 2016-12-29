@@ -10,7 +10,11 @@ V dnešní dobì ovšem steganografie nestaèí. Lidstvo musí pracovat s èím dál vìtší
 
 Úkolem šifrování je uchovat a pøedat tajnou zprávu tak, aby ji mohl pøeèíst ten, pro koho je urèena, ale už nikdo jiný. Dále se nìkdy za cíl dává ovìøitelnost autora zprávy. Vìda zabývající se šifrováním se nazývá \textsl{kryptografie}. Lámáním šifer se zase zabývá  \textsl{kryptoanalýza}.
 
-Pùvodní èitelná zpráva se nazývá \textsl{plaintext}. Data po zašifrování se nazývají \textsl{ciphertext}. Pro pøevod plaintextu na ciphertext je potøeba použít šifrovací algoritmus. Ten by mìl zároveò být schopen pøevést ciphertext zpìt na plaintext (tzv. dešifrování). Protože fungování šifrovacího algoritmu se velmi snadno vyzradí, zásadní roli hraje \textsl{šifrovací klíè}, což je další informace nutná k šifrování. Pokud se jedná o \textsl{symetrickou kryptografii}, tak stejný klíè slouží i k dešifrování. V pøípadì \textsl{asymetrické kryptografie} se používají dva rùzné klíèe. Šifrovací resp. dešifrovací klíè v~asymetrické kryptografii se s ohledem na jejich použití nazývají jako \textsl{veøejný} resp. \textsl{tajný} klíè.
+Pùvodní èitelná zpráva se nazývá \textsl{plaintext}. Data po zašifrování se nazývají \textsl{ciphertext}. Pro pøevod plaintextu na ciphertext je potøeba použít šifrovací algoritmus. K nìmu musí existovat komplementární dešifrovací algoritmus, který pøevádí ciphertext zpìt na plaintext (tzv. dešifrování). Protože fungování šifrovacího algoritmu se velmi snadno vyzradí, zásadní roli hraje \textsl{šifrovací klíè}, což je další informace nutná k šifrování. Pokud se jedná o \textsl{symetrickou kryptografii}, tak stejný klíè slouží i k dešifrování. Oznaèíme-li šifrovací algoritmus $E$ a dešifrovací algoritmus $D$, pak pro každý klíè $k$ musí pro každou zprávu $p$ platit:
+$$D(E(p,k), k) = p$$
+V pøípadì \textsl{asymetrické kryptografie} se používají dva rùzné klíèe. Šifrovací resp. dešifrovací klíè v~asymetrické kryptografii se s ohledem na jejich použití nazývají jako \textsl{veøejný} resp. \textsl{tajný} klíè. Oznaèíme-li šifrovací algoritmus $E$ a dešifrovací algoritmus $D$, pak pro platnou dvojici veøejného klíèe $k_v$ a tajného klíèe $k_t$ musí pro každou zprávu $p$ platit:
+$$D(E(p,k_v), k_t) = p$$
+Dále je potøeba, aby ze znalosti $k_v$ nešel v polynomiálním èase spoèítat $k_t$. Je-li toto splnìno, pak je možné $k_v$ všem zveøejnit. Jakýkoliv uživatel mùže poslat $E(p,k_v)$, ale pouze vlastník $k_t$ bude schopen obnovit pùvodní zprávu $p$. V této práci se dále budeme zabývat jen symetrickou kryptografií.
 
 \section{Základní východiska}
 

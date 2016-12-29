@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.16)  28 DEC 2016 13:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.16)  29 DEC 2016 10:17
 entering extended mode
 **./prace.tex
 (prace.tex
@@ -964,108 +964,109 @@ Kapitola 2.
 
 
 
-] [11] <ECBencryption.png, id=380, 752.8125pt x 251.43938pt>
+] [11] <ECBencryption.png, id=379, 752.8125pt x 251.43938pt>
 File: ECBencryption.png Graphic file (type png)
 
 <use ECBencryption.png>
-Package pdftex.def Info: ECBencryption.png used on input line 66.
+Package pdftex.def Info: ECBencryption.png used on input line 70.
 (pdftex.def)             Requested size: 426.79869pt x 142.263pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<ECBdecryption.png, id=381, 752.0597pt x 254.45062pt>
+<ECBdecryption.png, id=380, 752.0597pt x 254.45062pt>
 File: ECBdecryption.png Graphic file (type png)
  <use ECBdecryption.png>
-Package pdftex.def Info: ECBdecryption.png used on input line 67.
+Package pdftex.def Info: ECBdecryption.png used on input line 71.
 (pdftex.def)             Requested size: 426.7965pt x 142.27007pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<CBCencryption.png, id=384, 752.0597pt x 262.73157pt>
+[12] <CBCencryption.png, id=396, 752.0597pt x 262.73157pt>
 File: CBCencryption.png Graphic file (type png)
- <use CBCencryption.png>
-Package pdftex.def Info: CBCencryption.png used on input line 71.
+
+<use CBCencryption.png>
+Package pdftex.def Info: CBCencryption.png used on input line 75.
 (pdftex.def)             Requested size: 426.7965pt x 142.2698pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<CBCdecryption.png, id=385, 752.8125pt x 258.21469pt>
+<CBCdecryption.png, id=397, 752.8125pt x 258.21469pt>
 File: CBCdecryption.png Graphic file (type png)
  <use CBCdecryption.png>
-Package pdftex.def Info: CBCdecryption.png used on input line 72.
+Package pdftex.def Info: CBCdecryption.png used on input line 76.
 (pdftex.def)             Requested size: 426.79869pt x 142.26672pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12] <PCBCencryption.png, id=404, 751.30687pt x 258.9675pt>
+<PCBCencryption.png, id=400, 751.30687pt x 258.9675pt>
 File: PCBCencryption.png Graphic file (type png)
 
 <use PCBCencryption.png>
-Package pdftex.def Info: PCBCencryption.png used on input line 76.
+Package pdftex.def Info: PCBCencryption.png used on input line 80.
 (pdftex.def)             Requested size: 426.79343pt x 142.27054pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<PCBCdecryption.png, id=405, 752.0597pt x 255.20343pt>
+<PCBCdecryption.png, id=401, 752.0597pt x 255.20343pt>
 File: PCBCdecryption.png Graphic file (type png)
 
 <use PCBCdecryption.png>
-Package pdftex.def Info: PCBCdecryption.png used on input line 77.
+Package pdftex.def Info: PCBCdecryption.png used on input line 81.
 (pdftex.def)             Requested size: 426.7965pt x 142.27042pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<OFBencryption.png, id=408, 750.55406pt x 259.7203pt>
+<OFBencryption.png, id=404, 750.55406pt x 259.7203pt>
 File: OFBencryption.png Graphic file (type png)
  <use OFBencryption.png>
-Package pdftex.def Info: OFBencryption.png used on input line 81.
+Package pdftex.def Info: OFBencryption.png used on input line 85.
 (pdftex.def)             Requested size: 426.80098pt x 142.26404pt.
 
+[13 <./ECBencryption.png (PNG copy)> <./ECBdecryption.png (PNG copy)>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<OFBdecryption.png, id=409, 752.8125pt x 259.7203pt>
+<OFBdecryption.png, id=415, 752.8125pt x 259.7203pt>
 File: OFBdecryption.png Graphic file (type png)
  <use OFBdecryption.png>
-Package pdftex.def Info: OFBdecryption.png used on input line 82.
+Package pdftex.def Info: OFBdecryption.png used on input line 86.
 (pdftex.def)             Requested size: 426.79869pt x 142.26404pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[13 <./ECBencryption.png (PNG copy)> <./ECBdecryption.png (PNG copy)>]
-<CTRencryption.png, id=421, 752.0597pt x 254.45062pt>
+[14 <./CBCencryption.png (PNG copy)> <./CBCdecryption.png (PNG copy)>]
+<CTRencryption.png, id=428, 752.0597pt x 254.45062pt>
 File: CTRencryption.png Graphic file (type png)
  <use CTRencryption.png>
-Package pdftex.def Info: CTRencryption.png used on input line 90.
+Package pdftex.def Info: CTRencryption.png used on input line 94.
 (pdftex.def)             Requested size: 426.7965pt x 142.27007pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<CTRdecryption.png, id=422, 751.30687pt x 255.95625pt>
+<CTRdecryption.png, id=429, 751.30687pt x 255.95625pt>
 File: CTRdecryption.png Graphic file (type png)
  <use CTRdecryption.png>
-Package pdftex.def Info: CTRdecryption.png used on input line 91.
+Package pdftex.def Info: CTRdecryption.png used on input line 95.
 (pdftex.def)             Requested size: 426.79343pt x 142.26439pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14 <./CBCencryption.png (PNG copy)> <./CBCdecryption.png (PNG copy)>] [15 <./P
-CBCencryption.png (PNG copy)> <./PCBCdecryption.png (PNG copy)>] [16 <./OFBencr
-yption.png (PNG copy)> <./OFBdecryption.png (PNG copy)>] [17 <./CTRencryption.p
-ng (PNG copy)> <./CTRdecryption.png (PNG copy)>] [18]
+[15 <./PCBCencryption.png (PNG copy)> <./PCBCdecryption.png (PNG copy)>]
+[16 <./OFBencryption.png (PNG copy)> <./OFBdecryption.png (PNG copy)>] [17 <./C
+TRencryption.png (PNG copy)> <./CTRdecryption.png (PNG copy)>] [18]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [19] [20]
+[19]) [20]
 \openout2 = `kapArch.aux'.
 
  (kapArch.tex
@@ -1127,20 +1128,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[27] [28]
+[27] [28] [29]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[29] [30] [31]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+[30] [31]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1153,10 +1148,17 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[32]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[32] [33] [34] [35]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[33] [34] [35]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1313,7 +1315,7 @@ blic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
 y10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on prace.pdf (58 pages, 1278245 bytes).
+Output written on prace.pdf (58 pages, 1280027 bytes).
 PDF statistics:
  1425 PDF objects out of 1440 (max. 8388607)
  177 named destinations out of 1000 (max. 500000)
