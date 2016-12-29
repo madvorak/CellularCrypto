@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.16)  29 DEC 2016 10:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.16)  29 DEC 2016 22:16
 entering extended mode
 **./prace.tex
 (prace.tex
@@ -1062,16 +1062,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [15 <./PCBCencryption.png (PNG copy)> <./PCBCdecryption.png (PNG copy)>]
 [16 <./OFBencryption.png (PNG copy)> <./OFBdecryption.png (PNG copy)>] [17 <./C
-TRencryption.png (PNG copy)> <./CTRdecryption.png (PNG copy)>] [18]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[19]) [20]
+TRencryption.png (PNG copy)> <./CTRdecryption.png (PNG copy)>] [18] [19])
+[20]
 \openout2 = `kapArch.aux'.
 
  (kapArch.tex
 Kapitola 3.
-<diagramIF.png, id=476, 583.17876pt x 300.12125pt>
+<diagramIF.png, id=477, 583.17876pt x 300.12125pt>
 File: diagramIF.png Graphic file (type png)
  <use diagramIF.png>
 Package pdftex.def Info: diagramIF.png used on input line 19.
@@ -1081,7 +1078,7 @@ Package pdftex.def Info: diagramIF.png used on input line 19.
 
 
 ]
-<diagramCA.png, id=484, 1263.72125pt x 635.37375pt>
+<diagramCA.png, id=485, 1263.72125pt x 635.37375pt>
 File: diagramCA.png Graphic file (type png)
  <use diagramCA.png>
 Package pdftex.def Info: diagramCA.png used on input line 40.
@@ -1093,13 +1090,13 @@ Package pdftex.def Info: diagramCA.png used on input line 40.
 
  (kap03.tex
 Kapitola 4.
-<diagramKEAN.png, id=502, 716.6775pt x 258.9675pt>
+<diagramKEAN.png, id=503, 716.6775pt x 258.9675pt>
 File: diagramKEAN.png Graphic file (type png)
  <use diagramKEAN.png>
 Package pdftex.def Info: diagramKEAN.png used on input line 12.
 (pdftex.def)             Requested size: 304.44722pt x 110.96658pt.
 
-<diagramKEAD.png, id=503, 966.61125pt x 262.9825pt>
+<diagramKEAD.png, id=504, 966.61125pt x 262.9825pt>
 File: diagramKEAD.png Graphic file (type png)
  <use diagramKEAD.png>
 Package pdftex.def Info: diagramKEAD.png used on input line 21.
@@ -1211,7 +1208,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
  (kapDalsi.tex
 Kapitola 5.
-<r60_tam.png, id=645, 322.20375pt x 299.1175pt>
+<r60_tam.png, id=646, 322.20375pt x 299.1175pt>
 File: r60_tam.png Graphic file (type png)
  <use r60_tam.png>
 Package pdftex.def Info: r60_tam.png used on input line 19.
@@ -1220,7 +1217,7 @@ Package pdftex.def Info: r60_tam.png used on input line 19.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<r60_zpet.png, id=648, 322.20375pt x 685.56125pt>
+<r60_zpet.png, id=649, 322.20375pt x 685.56125pt>
 File: r60_zpet.png Graphic file (type png)
  <use r60_zpet.png>
 Package pdftex.def Info: r60_zpet.png used on input line 28.
@@ -1306,18 +1303,19 @@ sr17.pk> <C:\Users\Martin Dvorak\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\publi
 c\csfonts\dpi864\csbx12.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
-y10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on prace.pdf (58 pages, 1280027 bytes).
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on prace.pdf (58 pages, 1292290 bytes).
 PDF statistics:
- 1425 PDF objects out of 1440 (max. 8388607)
+ 1429 PDF objects out of 1440 (max. 8388607)
  177 named destinations out of 1000 (max. 500000)
  535 words of extra memory for PDF output out of 10000 (max. 10000000)
 

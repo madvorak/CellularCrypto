@@ -148,7 +148,10 @@ Tøída Crypto.FunctionTesting obsahuje následující metody. Podle nastavení v kons
 \item TestBitChange(IKeyExtender algorithm, int ratio) : Testuje, jak velká èást bitù vıstupu se zmìní pøi zmìnì jednoho bitu vstupu. Metoda sampluje náhodné vstupy a pro kadı z nich zkouší zmìnit zvláš všechny bity. Optimální hodnota je 0,5.
 
 TestBitChange je z praktického hlediska pøísnìjší ne TestAverageDistance. Pøestoe pro naše úèely lze TestAverageDistance chápat jako horní odhad vısledku TestBitChange, lze teoreticky vymyslet i zobrazení, které v TestBitChange dopadne dobøe, ale v TestAverageDistance sele. Napøíklad kdy všem vstupùm se sudou paritou pøiøadíme vısledek ze samıch nul (000...0) a všechny vstupy s lichou paritou zobrazíme na pravidelné støídání hodnot nula a jedna (010101...01), tak TestBitChange dosáhne optimálního vısledku 0,5, zatímco TestAverageDistance vykáe velmi podezøelou hodnotu 0,25.
-\item TestLargestBallExactly(IKeyExtender algorithm) : Testuje, jaká nejvìtší koule se dá vmìstnat do prostoru vıstupù tak, aby neobsahovala ádnı vygenerovatelnı dlouhı klíè. Zkouší úplnì všechny vstupy na malém prostoru a ty natahuje na dvojnásobek. Motivací je, e pokud zobrazení nezaplòuje prostor dostateènì rovnomìrnì, pak to rozpoznáme tak, e se do prostoru vejde velká koule.
+\item TestLargestBallExactly(IKeyExtender algorithm) : Testuje, jaká nejvìtší koule se dá vmìstnat do prostoru vıstupù tak, aby neobsahovala ádnı vygenerovatelnı dlouhı klíè. Zkouší úplnì všechny vstupy na malém prostoru a ty natahuje na dvojnásobek. Motivací je, e pokud zobrazení nezaplòuje prostor dostateènì rovnomìrnì, pak to rozpoznáme tak, e se do prostoru vejde velká koule. Mìjme náš IKeyExtender $f: \{0,1\}^k \rightarrow \{0,1\}^m$, potom velikost koule se støedem v bodì $x \in \{0,1\}^m$ definujeme:
+$$r(x) = \min_{y \in \{0,1\}^k} d(x,f(y))$$
+Vısledek testu je pak dán vzorcem:
+$$L = \max_{x \in \{0,1\}^m} r(x)$$
 \item TestLargestBallApprox(IKeyExtender algorithm) : Testuje to samé, ale pouívá delší vstupy, které u nezvládá vyzkoušet všechny, take je sampluje náhodnì.
 \end{itemize}
 
