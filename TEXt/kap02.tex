@@ -2,7 +2,7 @@
 
 \chapter{Šifrování}
 
-Lidé u v dávnıch dobách chtìli tajit nìkteré informace pøed lidmi, pro nì nejsou urèeny, a pøitom je doruèit lidem, kteøí se je mají dozvìdìt. Pùvodnì se k tìmto úèelùm pouívala takzvaná \textsl{staganografie}, tedy utajení samotné existence zprávy. Panovník napøíklad nechal oholit hlavu jednomu ze svıch sluhù, zprávu napsal na jeho temeno a po obnovení vlasù poslal sluhu na místo doruèení. Na druhé stranì opìt oholili hlavu sluhy a pøeèetli si tajnou zprávu. Další zpùsob steganografie je psaní zprávy neviditelnım inkoustem, kterı se stává èitelnım po zahøátí média. Nyní lze staganografii realizovat napøíklad tak, e se binárnì zakódovaná zpráva uloí do nejménì vıznamnıch bitù obrázku v poèítaèi. Okem není mono rozpoznat ádnou zmìnu, ale se znalostí toho, e se v urèitém obrázku nachází tajná zpráva, lze poèítaèovım programem onu zprávu zase snadno zobrazit. To u je pomìrnì rychlı postup.
+Lidé u v dávnıch dobách chtìli tajit nìkteré informace pøed lidmi, pro nì nejsou urèeny, a pøitom je doruèit lidem, kteøí se je mají dozvìdìt. Pùvodnì se k~tìmto úèelùm pouívala takzvaná \textsl{staganografie}, tedy utajení samotné existence zprávy. Panovník napøíklad nechal oholit hlavu jednomu ze svıch sluhù, zprávu napsal na jeho temeno a po obnovení vlasù poslal sluhu na místo doruèení. Na druhé stranì opìt oholili hlavu sluhy a pøeèetli si tajnou zprávu. Další zpùsob steganografie je psaní zprávy neviditelnım inkoustem, kterı se stává èitelnım po zahøátí média. Nyní lze staganografii realizovat napøíklad tak, e se binárnì zakódovaná zpráva uloí do nejménì vıznamnıch bitù obrázku v poèítaèi. Okem není mono rozpoznat ádnou zmìnu, ale se znalostí toho, e se v urèitém obrázku nachází tajná zpráva, lze poèítaèovım programem onu zprávu zase snadno zobrazit. To u je pomìrnì rychlı postup.
 
 V dnešní dobì ovšem steganografie nestaèí. Lidstvo musí pracovat s èím dál vìtším mnostvím dùvìrnıch a tajnıch informací a pøi tomto mnoství utajování zpráv se steganografické postupy stanou velmi rychle \uv{profláklé} a tím neúèinné. Proto jsou intenzivnì studovány rùzné monosti šifrování tajnıch zpráv, pøi jejich vyuití je zpráva skryta i pøed útoèníkem, kterı má pøesnou informaci o tom, kde se zpráva nachází.
 
@@ -24,7 +24,7 @@ Jedinou známou zcela neprolomitelnou šifrovací metodou je Vernamova šifra. V bin
 
 \section{O co nám jde}
 
-V této práci se budeme vìnovat vytvoøení algoritmu na protahování klíèù (anglicky key stretching). Naším cílem je z krátkého klíèe (kterı lze napøíklad v krátkém èase pøenést pomocí RSA) vygenerovat dlouhı klíè (one-time pad, kterım lze pøeXORovat celı soubor). Je to tedy podobnı úkol jako naprogramovat \textsl{Keystream Generator}, tedy program, kterı generuje kdykoliv opakovatelnou sekvenci bitù. Jedinı rozdíl je, e my budeme dopøedu znát cílenou délku vısledného klíèe.
+V této práci se budeme vìnovat vytvoøení algoritmu na protahování klíèù (anglicky key stretching). Naším cílem je z krátkého klíèe (kterı lze napøíklad v~krátkém èase pøenést pomocí RSA) vygenerovat dlouhı klíè (one-time pad, kterım lze pøeXORovat celı soubor). Je to tedy podobnı úkol jako naprogramovat \textsl{Keystream Generator}, tedy program, kterı generuje kdykoliv opakovatelnou sekvenci bitù. Jedinı rozdíl je, e my budeme dopøedu znát cílenou délku vısledného klíèe.
 
 Formálnì hledáme zobrazení $\{0,1\}^k \rightarrow \{0,1\}^m, m>k$, které má nìjaké dobré vlastnosti. Chtìli bychom, aby pøi znalosti èásti vıstupu (obrazu náhodného vstupního líèe) nebylo moné vypoèítat zbytek vıstupu (zjištìní dlouhého klíèe) ádnım vıraznì rychlejším zpùsobem, ne vyzkoušením všech $2^k$ monıch vstupù. Pokud bychom chtìli bıt opravdu precizní, tak bychom chtìli, kadı polynomiální algoritmus, kterı má na vstupu libovolnıch $n$ bitù obrazu neznámého klíèe, nedokázal urèit ádnı ze zbıvajících $m-n$ bitù obrazu s pravdìpodobností vyšší ne 50\%. Taková kritéria však nezvládneme ovìøit, proto budeme vyuívat rùzné aproximace. Naše experimenty budou ovìøovat nutné, nikoliv však postaèující podmínky pro kvalitní šifrování.
 
@@ -62,7 +62,7 @@ Existuje nìkolik operaèních módù blokovıch šifer. Ty popisují, jakım zpùsobem je
 \newcommand{\bcmoop}[2]{
 \begin{figure}[h]
 \centering
-\includegraphics[width=150mm, height=50mm]{#1#2.png}
+\includegraphics[width=140mm, height=50mm]{#1#2.png}
 \caption{#1 #2}
 \label{#1#2}
 \end{figure}}
@@ -87,7 +87,7 @@ Podobnım módem je PCBC (Propagating Cipher Block Chaining). Zde se do vıpoètu ná
 
 A teï se dostáváme ke dvìma metodám, které umoòují pouít blokovou šifru jako Keystream Generator, protoe se XOR s plaintextem aplikuje zvláš a je moné ho provést a po všech vyvolání blokové šifry.
 
-První z nich je OFB (Output Feedback). OFB nejprve pouije blokovou šifru k tomu, aby zašifrovala inicializaèní vektor pomocí klíèe. Vısledek je jednak poslán ven a dále je poslán na vstup blokové šifry. Tento blok je zase zašifrován pomocí stejného klíèe a vısledek je poslán opìt jak na vıstup, tak do další blokové šifry. Postup si lze prohlédnout na obrázku \ref{OFBencryption}. Dá se øíci, e OFB posílá na vıstup Keystream, kterı se skládá z øady $f(x), f(f(x)), f(f(f(x))), f(f(f(f(x)))), f(f(f(f(f(x))))),~...$, kde $x$ je inicializaèní vektor a funkce $f$ je ji zobrazení s konkrétním klíèem. Rozšifrování je triviální obdobou tohoto postupu. Není k nìmu potøeba ádné inverzní zobrazení. Vıstup blokové šifry se XORuje s ciphertextem a vznikne plaintext (viz obrázek \ref{OFBdecryption}). Je zøejmé, e zašifrování ani rozšifrování nelze pøi OFB paralelizovat.
+První z nich je OFB (Output Feedback). OFB nejprve pouije blokovou šifru k tomu, aby zašifrovala inicializaèní vektor pomocí klíèe. Vısledek je jednak poslán ven a dále je poslán na vstup blokové šifry. Tento blok je zase zašifrován pomocí stejného klíèe a vısledek je poslán opìt jak na vıstup, tak do další blokové šifry. Postup si lze prohlédnout na obrázku \ref{OFBencryption}. Dá se øíci, e OFB posílá na vıstup Keystream, kterı se skládá z øady $f(x), f(f(x)), f(f(f(x))), f(f(f(f(x)))),~...$, kde $x$ je inicializaèní vektor a funkce $f$ je ji zobrazení s konkrétním klíèem. Rozšifrování je triviální obdobou tohoto postupu. Není k nìmu potøeba ádné inverzní zobrazení. Vıstup blokové šifry se XORuje s ciphertextem a vznikne plaintext (viz obrázek \ref{OFBdecryption}). Je zøejmé, e zašifrování ani rozšifrování nelze pøi OFB paralelizovat.
 
 Jako poslední si ukáeme mód CTR (Counter). Na vstup blokové šifry jdou data, která se pokadé o 1 zmìní. Vıstup blokové šifry (keystream) je pak XORován s plaintextem resp. ciphertextem (viz obrázky \ref{CTRencryption} a \ref{CTRdecryption}). CTR se mùe podobat ECB v tom ohledu, e lze kadı blok plaintextu je šifrován samostatnì a proto je opìt moné paralelizovat jak zašifrování, tak rozšifrování. Nicménì zde jsou jednotlivé bloky plaintextu zašifrovány jinak, i kdyby byly všechny bloky plaintextu stejné. Bezpeèností aplikace se proto CTR blíí spíše OFB. Counter posílá na vıstup keystream, kterı se skládá postupnì z øady $f(x \oplus n), f(x \oplus (n+1)), f(x \oplus (n+2)), ...$, kde $n$ je \uv{nonce}. To je èíslo zvolené pro šifrování jedné konkrétní zprávy, které musí bıt pøiloeno k ciphertextu pro umonìní rozšifrování zprávy. Cílem je neopakovat znovu stejnı keystream pøi ponechání stejného klíèe (hraje tedy stejnou roli jako inicializaèní vektor u pøedchozích modù).
 
@@ -96,25 +96,19 @@ Jako poslední si ukáeme mód CTR (Counter). Na vstup blokové šifry jdou data, kt
 
 \section{Útoky na šifry}
 
-Kvalita šifrování musí bıt posuzována v kontextu monıch útokù. Pokadé budeme pøedpokládat, e útoèník nezná tajnı klíè (jinak by dokázal vše), ale e dùkladnì rozumí šifrovacímu algoritmu, viz Kerckhoffùv princip \citep{Ker}.
-
-\subsection{Rozdìlení podle povolenıch prostøedkù}
-
-V knize \citep{Crypt} jsou útoky na šifry rozdìleny následujícím zpùsobem:
+Kvalita šifrování musí bıt posuzována v kontextu monıch útokù. Pokadé budeme pøedpokládat, e útoèník nezná tajnı klíè (jinak by dokázal vše), ale e dùkladnì rozumí šifrovacímu algoritmu, viz Kerckhoffùv princip \citep{Ker}. Ve zbytku kapitoly si rozdìlíme útoky na šifry podle prostøedkù, které má útoèník k dispozici. Vyuijeme popis z knihy \citep{Crypt}.
 
 Nejslabším typem útoku je \textsl{ciphertext-only attack}. Pøi nìm má útoèník monost vidìt pouze ciphertexty. Pokud nìjakı šifrovací algoritmus snad dává monost rozluštit plaintext pouze pøi znalosti cipthertextu, je to zcela nepouitelnı algoritmus.
 
-O mnoho silnìjší útok se nazıvá \textsl{known-plaintext attack}. Pøi nìm má útoèník k dispozici dvojice ciphertext-plaintext. Na základì nasbíranıch informací se snaí rozluštit jinı ciphertext, kterı byl zašifrovanı stejnım klíèem, jakım byly zašifrovány známé dvojice dvojice ciphertext-plaintext. Musíme poèítat, e dvojici ciphertext-plaintext mùe v praxi útoèník pomìrnì snadno získat. Napøíklad mùe útoèník uhodnout, jaká zpráva je odesílána, protoe je to zjevné z délky zprávy a širšího kontextu. Nebo mùe odesílatel zbyteènì pouít šifrovací mechanismus i v pøípadì pøenosu zprávy, která ve skuteènosti není tajná. Útoèník v danou chvíli mùe tøeba vidìt odesílateli danou zprávu pøes rameno a hned získá dvojici ciphertext-plaintext. A nakonec obèas i znalosti èásti plaintextu mùou bıt prostøedkem k útoku. Známou èástí plaintextu mùe bıt napøíklad hlavièka nìjakého standardního souboru, padding, nebo automaticky vygenerovanı podpis na konci emailu.
+O mnoho silnìjší útok se nazıvá \textsl{known-plaintext attack}. Pøi nìm má útoèník k dispozici dvojice ciphertext-plaintext. Na základì nasbíranıch informací se snaí rozluštit jinı ciphertext, kterı byl zašifrovanı stejnım klíèem, jakım byly zašifrovány známé dvojice dvojice ciphertext-plaintext. 
+
+Musíme poèítat, e dvojici ciphertext-plaintext mùe v praxi útoèník pomìrnì snadno získat. Napøíklad mùe útoèník uhodnout, jaká zpráva je odesílána, protoe je to zjevné z délky zprávy a širšího kontextu. Nebo mùe odesílatel zbyteènì pouít šifrovací mechanismus i v pøípadì pøenosu zprávy, která ve skuteènosti není tajná. Útoèník v danou chvíli mùe tøeba vidìt odesílateli danou zprávu pøes rameno a hned získá dvojici ciphertext-plaintext. A nakonec obèas i znalosti èásti plaintextu mùou bıt prostøedkem k útoku. Známou èástí plaintextu mùe bıt napøíklad hlavièka nìjakého standardního souboru, padding, nebo automaticky vygenerovanı podpis na konci emailu.
 
 Ještì silnìjším útokem je \textsl{chosen-plaintext attack}. Pøi nìm si mùe útoèník sám urèit, jaká zpráva má bıt zašifrována a obdret k ní odpovídající ciphertext. Jeho cílem je zase buï pøímo odvodit šifrovací klíè, nebo jinım zpùsobem získat monost rozluštit ostatní ciphertexty.
 
 Posledním zesílením prostøedkù k útoku je \textsl{adaptively-chosen-plaintext attack}. Pøi nìm mùe útoèník nejen analyzovat dvojice plaintext-ciphertext, ale na základì jejich znalosti volit nové zprávy k zašifrování a získávat další dvojice plaintext-ciphertext, dokud nebude mít dostatek informací.
 
 Útoky typu adaptively-chosen-plaintext attack lze chápat jako útoky s moností neomezeného pøístupu k šifrovacímu zaøízení, uvnitø kterého se nachází šifrovací klíè (ale není vidìt navenek). Podobnım zpùsobem lze teoreticky uvaovat také útoky s pøístupem k dešifrovacímu zaøízení, tedy e si útoèník mùe libovolnì volit ciphertexty a dostává k nim pøíslušející plaintexty. Kategorii takovıch útokù bychom mohli nazvat jako \textsl{adaptively-chosen-ciphertext attack}.
-
-\subsection{Pøíklady útokù}
-
-Ukáeme si nìkolik jednodušších pøíkladù kryptoanalytickıch útokù.
 
 \section{Testy}
 
@@ -144,7 +138,7 @@ Program ještì obì vzdálenosti vydìlí délkou øetìzce, aby vısledky mìly hodnotu v
 
 Tøída Crypto.FunctionTesting obsahuje následující metody. Podle nastavení v konstruktoru mohou všechny testy pouívat buï Hammingovu, nebo Levensteinovu vzdálenost. Dále uvádìno podle Hamminga.
 \begin{itemize}
-\item TestAverageDistance(IKeyExtender algorithm, int ratio) : Testuje prùmìrnou vzdálenost vıstupù pøíslušející dvìma rùznım náhodnì zvolenım vstupùm. Optimální hodnota je 0,5.
+\item TestAverageDistance(IKeyExtender algorithm, int ratio) : Testuje \\ prùmìrnou vzdálenost vıstupù pøíslušející dvìma rùznım náhodnì zvolenım vstupùm. Optimální hodnota je 0,5.
 \item TestBitChange(IKeyExtender algorithm, int ratio) : Testuje, jak velká èást bitù vıstupu se zmìní pøi zmìnì jednoho bitu vstupu. Metoda sampluje náhodné vstupy a pro kadı z nich zkouší zmìnit zvláš všechny bity. Optimální hodnota je 0,5.
 
 TestBitChange je z praktického hlediska pøísnìjší ne TestAverageDistance. Pøestoe pro naše úèely lze TestAverageDistance chápat jako horní odhad vısledku TestBitChange, lze teoreticky vymyslet i zobrazení, které v TestBitChange dopadne dobøe, ale v TestAverageDistance sele. Napøíklad kdy všem vstupùm se sudou paritou pøiøadíme vısledek ze samıch nul (000...0) a všechny vstupy s lichou paritou zobrazíme na pravidelné støídání hodnot nula a jedna (010101...01), tak TestBitChange dosáhne optimálního vısledku 0,5, zatímco TestAverageDistance vykáe velmi podezøelou hodnotu 0,25.
@@ -157,7 +151,7 @@ $$L = \max_{x \in \{0,1\}^m} r(x)$$
 
 \subsection{Pouití testù}
 
-Všechny doposud zmínìné testy jsou obaleny ve tøídì Crypto.FunctionTestsForThesis, kde jsou vısledky tìchto testù transformovány zpùsobem, kterı zaruèí, e vyšší vısledek je lepší. S vıjimkou testù maximálních koulí, které jsou realizovány v této tøídì trochu jinak, platí, e nejhorší hodnota je 0 a nejlepší hodnota je 1.
+Všechny doposud zmínìné testy jsou obaleny ve tøídì FunctionTestsForThesis, kde jsou vısledky tìchto testù transformovány zpùsobem, kterı zaruèí, e vyšší vısledek je lepší. S vıjimkou testù maximálních koulí, které jsou realizovány v~této tøídì trochu jinak, platí, e nejhorší hodnota je 0 a nejlepší hodnota je 1.
 
 \subsection{Grafické znázornìní}
 

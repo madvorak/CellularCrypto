@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.16)  29 DEC 2016 22:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.16)  1 JAN 2017 15:42
 entering extended mode
 **./prace.tex
 (prace.tex
@@ -590,32 +590,6 @@ File: tikzlibrarybackgrounds.code.tex 2013/07/18 v3.0.1a (rcs-revision 1.3)
 \pgf@layerbox@background=\box40
 \pgf@layerboxsaved@background=\box41
 ))
-("C:\Users\Martin Dvorak\AppData\Roaming\MiKTeX\2.9\tex\latex\numprint\numprint
-.sty"
-Package: numprint 2012/08/20 v1.39 Print numbers (HH)
-\c@nprt@mantissa@digitsbefore=\count131
-\c@nprt@mantissa@digitsafter=\count132
-\c@nprt@exponent@digitsbefore=\count133
-\c@nprt@exponent@digitsafter=\count134
-\nprt@digitwidth=\skip57
-\nprt@sepwidth=\skip58
-\nprt@decimalwidth=\skip59
-\nprt@blockwidth=\skip60
-\nprt@digittoks=\toks42
-\nprt@pretoks=\toks43
-\nprt@posttoks=\toks44
-\nprt@thisdigit=\count135
-\nprt@curpos=\count136
-\nprt@rndpos=\count137
-\c@nprt@digitsfirstblock=\count138
-\c@nprt@blockcnt=\count139
-\c@nprt@cntprint=\count140
- No configuration file `numprint.cfg' found.)
-("C:\Users\Martin Dvorak\AppData\Roaming\MiKTeX\2.9\tex\latex\preprint\fullpage
-.sty"
-Package: fullpage 1999/02/23 1.1 (PWD)
-\FP@margin=\skip61
-)
 ("C:\Users\Martin Dvorak\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlay
 er\tikz\libraries\tikzlibraryarrows.code.tex"
 File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
@@ -682,13 +656,13 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen177
-\Hy@linkcounter=\count141
-\Hy@pagecounter=\count142
+\Hy@linkcounter=\count131
+\Hy@pagecounter=\count132
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count143
+\Hy@SavedSpaceFactor=\count133
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -705,7 +679,7 @@ Package hyperref Info: Plain pages OFF on input line 4501.
 Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4735.
-\c@Hy@tempcnt=\count144
+\c@Hy@tempcnt=\count134
 
 ("C:\Users\Martin Dvorak\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
@@ -713,7 +687,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5088.
 \XeTeXLinkMargin=\dimen178
-\Fld@menulength=\count145
+\Fld@menulength=\count135
 \Field@Width=\dimen179
 \Fld@charsize=\dimen180
 Package hyperref Info: Hyper figures OFF on input line 6342.
@@ -725,24 +699,24 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6367.
 Package hyperref Info: PDF/A mode OFF on input line 6372.
 LaTeX Info: Redefining \ref on input line 6412.
 LaTeX Info: Redefining \pageref on input line 6416.
-\Hy@abspage=\count146
-\c@Item=\count147
-\c@Hfootnote=\count148
+\Hy@abspage=\count136
+\c@Item=\count137
+\c@Hfootnote=\count138
 )
 
 Package hyperref Message: Driver: hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
-\Fld@listcount=\count149
-\c@bookmark@seq@number=\count150
+\Fld@listcount=\count139
+\c@bookmark@seq@number=\count140
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip62
+\Hy@SectionHShift=\skip57
 )
 Package hyperref Info: Option `breaklinks' set `true' on input line 116.
 
@@ -750,45 +724,45 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 116.
 \openout2 = `makra.aux'.
 
 (makra.tex
-\c@veta=\count151
-\c@definice=\count152
+\c@veta=\count141
+\c@definice=\count142
 ) (prace.aux (titulka.aux) (uvod.aux) (kap01.aux) (kap02.aux)
 (kapArch.aux) (kap03.aux) (kapDalsi.aux) (zaver.aux) (literatura.aux))
 \openout1 = `prace.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for IL2/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for IL2/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
 
 ("C:\Users\Martin Dvorak\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.m
 kii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count153
+\scratchcounter=\count143
 \scratchdimen=\dimen181
 \scratchbox=\box42
-\nofMPsegments=\count154
-\nofMParguments=\count155
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count156
+\nofMPsegments=\count144
+\nofMParguments=\count145
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count146
 \MPscratchDim=\dimen182
-\MPnumerator=\count157
-\makeMPintoPDFobject=\count158
-\everyMPtoPDFconversion=\toks46
+\MPnumerator=\count147
+\makeMPintoPDFobject=\count148
+\everyMPtoPDFconversion=\toks43
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -804,7 +778,7 @@ G,.JBIG2,.JB2,.eps]
 )
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box43
-Package hyperref Info: Link coloring OFF on input line 126.
+Package hyperref Info: Link coloring OFF on input line 128.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -812,11 +786,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count159
+\c@section@level=\count149
 )
-LaTeX Info: Redefining \ref on input line 126.
-LaTeX Info: Redefining \pageref on input line 126.
-LaTeX Info: Redefining \nameref on input line 126.
+LaTeX Info: Redefining \ref on input line 128.
+LaTeX Info: Redefining \pageref on input line 128.
+LaTeX Info: Redefining \nameref on input line 128.
 
 (prace.out) (prace.out)
 \@outlinefile=\write5
@@ -827,7 +801,7 @@ LaTeX Info: Redefining \nameref on input line 126.
  (titulka.tex
 Package hyperref Info: Option `pageanchor' set `false' on input line 6.
 
-<logo-cs.pdf, id=194, 506.4591pt x 156.49065pt>
+<logo-cs.pdf, id=186, 506.4591pt x 156.49065pt>
 File: logo-cs.pdf Graphic file (type pdf)
  <use logo-cs.pdf>
 Package pdftex.def Info: logo-cs.pdf used on input line 10.
@@ -886,61 +860,61 @@ Kapitola 1.
 
 
 
-] <ca220.png, id=310, 555.07375pt x 361.35pt>
+] <ca220.png, id=300, 555.07375pt x 361.35pt>
 File: ca220.png Graphic file (type png)
  <use ca220.png>
 Package pdftex.def Info: ca220.png used on input line 40.
-(pdftex.def)             Requested size: 426.79826pt x 227.62413pt.
+(pdftex.def)             Requested size: 398.33997pt x 227.62413pt.
 
-<ruleicon220.png, id=311, 401.5pt x 50.1875pt>
+<ruleicon220.png, id=301, 401.5pt x 50.1875pt>
 File: ruleicon220.png Graphic file (type png)
  <use ruleicon220.png>
 Package pdftex.def Info: ruleicon220.png used on input line 40.
 (pdftex.def)             Requested size: 284.54623pt x 34.14542pt.
 
-<ca94.png, id=312, 551.05875pt x 362.35374pt>
+<ca94.png, id=302, 551.05875pt x 362.35374pt>
 File: ca94.png Graphic file (type png)
  <use ca94.png>
 Package pdftex.def Info: ca94.png used on input line 41.
-(pdftex.def)             Requested size: 426.80544pt x 227.6261pt.
+(pdftex.def)             Requested size: 398.35118pt x 227.6261pt.
 
-<ruleicon94.png, id=313, 401.5pt x 50.1875pt>
+<ruleicon94.png, id=303, 401.5pt x 50.1875pt>
 File: ruleicon94.png Graphic file (type png)
  <use ruleicon94.png>
 Package pdftex.def Info: ruleicon94.png used on input line 41.
 (pdftex.def)             Requested size: 284.54623pt x 34.14542pt.
 
-<ca90.png, id=314, 553.06625pt x 375.4025pt>
+<ca90.png, id=304, 553.06625pt x 375.4025pt>
 File: ca90.png Graphic file (type png)
  <use ca90.png>
 Package pdftex.def Info: ca90.png used on input line 42.
-(pdftex.def)             Requested size: 426.79062pt x 227.62616pt.
+(pdftex.def)             Requested size: 398.33398pt x 227.62616pt.
 
-<ruleicon90.png, id=315, 401.5pt x 50.1875pt>
+<ruleicon90.png, id=305, 401.5pt x 50.1875pt>
 File: ruleicon90.png Graphic file (type png)
  <use ruleicon90.png>
 Package pdftex.def Info: ruleicon90.png used on input line 42.
 (pdftex.def)             Requested size: 284.54623pt x 34.14542pt.
 
-<ca30.png, id=316, 557.08125pt x 374.39874pt>
+<ca30.png, id=306, 557.08125pt x 374.39874pt>
 File: ca30.png Graphic file (type png)
  <use ca30.png>
 Package pdftex.def Info: ca30.png used on input line 43.
-(pdftex.def)             Requested size: 426.8033pt x 227.6231pt.
+(pdftex.def)             Requested size: 398.34409pt x 227.6231pt.
 
-<ruleicon30.png, id=317, 401.5pt x 50.1875pt>
+<ruleicon30.png, id=307, 401.5pt x 50.1875pt>
 File: ruleicon30.png Graphic file (type png)
  <use ruleicon30.png>
 Package pdftex.def Info: ruleicon30.png used on input line 43.
 (pdftex.def)             Requested size: 284.54623pt x 34.14542pt.
 
-<ca110.png, id=318, 556.0775pt x 362.35374pt>
+<ca110.png, id=308, 556.0775pt x 362.35374pt>
 File: ca110.png Graphic file (type png)
  <use ca110.png>
 Package pdftex.def Info: ca110.png used on input line 44.
-(pdftex.def)             Requested size: 426.79793pt x 227.6261pt.
+(pdftex.def)             Requested size: 398.34756pt x 227.6261pt.
 
-<ruleicon110.png, id=319, 401.5pt x 50.1875pt>
+<ruleicon110.png, id=309, 401.5pt x 50.1875pt>
 File: ruleicon110.png Graphic file (type png)
  <use ruleicon110.png>
 Package pdftex.def Info: ruleicon110.png used on input line 44.
@@ -948,168 +922,172 @@ Package pdftex.def Info: ruleicon110.png used on input line 44.
  [5]
 [6 <./ca220.png (PNG copy)> <./ruleicon220.png> <./ca94.png (PNG copy)> <./rule
 icon94.png>] [7 <./ca90.png (PNG copy)> <./ruleicon90.png> <./ca30.png (PNG cop
-y)> <./ruleicon30.png>] <replicator.png, id=350, 251.94125pt x 249.93375pt>
+y)> <./ruleicon30.png>] <replicator.png, id=340, 251.94125pt x 249.93375pt>
 File: replicator.png Graphic file (type png)
 
 <use replicator.png>
 Package pdftex.def Info: replicator.png used on input line 64.
 (pdftex.def)             Requested size: 227.62152pt x 227.63075pt.
  [8 <./ca110.png (PNG copy)> <./ruleicon110.png>]) [9 <./replicator.png (PNG co
-py)>]
+py)>] [10]
 \openout2 = `kap02.aux'.
 
  (kap02.tex
 Kapitola 2.
-[10
-
-
-
-] [11] <ECBencryption.png, id=379, 752.8125pt x 251.43938pt>
-File: ECBencryption.png Graphic file (type png)
-
-<use ECBencryption.png>
-Package pdftex.def Info: ECBencryption.png used on input line 70.
-(pdftex.def)             Requested size: 426.79869pt x 142.263pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<ECBdecryption.png, id=380, 752.0597pt x 254.45062pt>
-File: ECBdecryption.png Graphic file (type png)
- <use ECBdecryption.png>
-Package pdftex.def Info: ECBdecryption.png used on input line 71.
-(pdftex.def)             Requested size: 426.7965pt x 142.27007pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12] <CBCencryption.png, id=396, 752.0597pt x 262.73157pt>
-File: CBCencryption.png Graphic file (type png)
-
-<use CBCencryption.png>
-Package pdftex.def Info: CBCencryption.png used on input line 75.
-(pdftex.def)             Requested size: 426.7965pt x 142.2698pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<CBCdecryption.png, id=397, 752.8125pt x 258.21469pt>
-File: CBCdecryption.png Graphic file (type png)
- <use CBCdecryption.png>
-Package pdftex.def Info: CBCdecryption.png used on input line 76.
-(pdftex.def)             Requested size: 426.79869pt x 142.26672pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<PCBCencryption.png, id=400, 751.30687pt x 258.9675pt>
-File: PCBCencryption.png Graphic file (type png)
-
-<use PCBCencryption.png>
-Package pdftex.def Info: PCBCencryption.png used on input line 80.
-(pdftex.def)             Requested size: 426.79343pt x 142.27054pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<PCBCdecryption.png, id=401, 752.0597pt x 255.20343pt>
-File: PCBCdecryption.png Graphic file (type png)
-
-<use PCBCdecryption.png>
-Package pdftex.def Info: PCBCdecryption.png used on input line 81.
-(pdftex.def)             Requested size: 426.7965pt x 142.27042pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<OFBencryption.png, id=404, 750.55406pt x 259.7203pt>
-File: OFBencryption.png Graphic file (type png)
- <use OFBencryption.png>
-Package pdftex.def Info: OFBencryption.png used on input line 85.
-(pdftex.def)             Requested size: 426.80098pt x 142.26404pt.
-
-[13 <./ECBencryption.png (PNG copy)> <./ECBdecryption.png (PNG copy)>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<OFBdecryption.png, id=415, 752.8125pt x 259.7203pt>
-File: OFBdecryption.png Graphic file (type png)
- <use OFBdecryption.png>
-Package pdftex.def Info: OFBdecryption.png used on input line 86.
-(pdftex.def)             Requested size: 426.79869pt x 142.26404pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[14 <./CBCencryption.png (PNG copy)> <./CBCdecryption.png (PNG copy)>]
-<CTRencryption.png, id=428, 752.0597pt x 254.45062pt>
-File: CTRencryption.png Graphic file (type png)
- <use CTRencryption.png>
-Package pdftex.def Info: CTRencryption.png used on input line 94.
-(pdftex.def)             Requested size: 426.7965pt x 142.27007pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<CTRdecryption.png, id=429, 751.30687pt x 255.95625pt>
-File: CTRdecryption.png Graphic file (type png)
- <use CTRdecryption.png>
-Package pdftex.def Info: CTRdecryption.png used on input line 95.
-(pdftex.def)             Requested size: 426.79343pt x 142.26439pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[15 <./PCBCencryption.png (PNG copy)> <./PCBCdecryption.png (PNG copy)>]
-[16 <./OFBencryption.png (PNG copy)> <./OFBdecryption.png (PNG copy)>] [17 <./C
-TRencryption.png (PNG copy)> <./CTRdecryption.png (PNG copy)>] [18] [19])
-[20]
-\openout2 = `kapArch.aux'.
-
- (kapArch.tex
-Kapitola 3.
-<diagramIF.png, id=477, 583.17876pt x 300.12125pt>
-File: diagramIF.png Graphic file (type png)
- <use diagramIF.png>
-Package pdftex.def Info: diagramIF.png used on input line 19.
-(pdftex.def)             Requested size: 301.60846pt x 170.72284pt.
- [21
+[11
 
 
 
 ]
-<diagramCA.png, id=485, 1263.72125pt x 635.37375pt>
+Overfull \hbox (0.88356pt too wide) in paragraph at lines 29--30
+\IL2/cmr/m/n/12 ¾ád-ným vý-raznì rych-lej¹ím zpù-so-bem, ne¾ vy-zkou-¹e-ním v¹e
+ch $\OT1/cmr/m/n/12 2[]$ \IL2/cmr/m/n/12 mo¾-ných vstupù.
+ []
+
+[12] <ECBencryption.png, id=373, 752.8125pt x 251.43938pt>
+File: ECBencryption.png Graphic file (type png)
+
+<use ECBencryption.png>
+Package pdftex.def Info: ECBencryption.png used on input line 70.
+(pdftex.def)             Requested size: 398.34544pt x 142.263pt.
+ [13]
+<ECBdecryption.png, id=386, 752.0597pt x 254.45062pt>
+File: ECBdecryption.png Graphic file (type png)
+ <use ECBdecryption.png>
+Package pdftex.def Info: ECBdecryption.png used on input line 71.
+(pdftex.def)             Requested size: 398.34875pt x 142.27007pt.
+
+<CBCencryption.png, id=389, 752.0597pt x 262.73157pt>
+File: CBCencryption.png Graphic file (type png)
+ <use CBCencryption.png>
+Package pdftex.def Info: CBCencryption.png used on input line 75.
+(pdftex.def)             Requested size: 398.34875pt x 142.2698pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<CBCdecryption.png, id=390, 752.8125pt x 258.21469pt>
+File: CBCdecryption.png Graphic file (type png)
+ <use CBCdecryption.png>
+Package pdftex.def Info: CBCdecryption.png used on input line 76.
+(pdftex.def)             Requested size: 398.34544pt x 142.26672pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<PCBCencryption.png, id=393, 751.30687pt x 258.9675pt>
+File: PCBCencryption.png Graphic file (type png)
+
+<use PCBCencryption.png>
+Package pdftex.def Info: PCBCencryption.png used on input line 80.
+(pdftex.def)             Requested size: 398.33977pt x 142.27054pt.
+ [14 <./ECBencryption.png (PNG copy)> <./ECBdecryption.png (PNG copy)>] <PCBCde
+cryption.png, id=403, 752.0597pt x 255.20343pt>
+File: PCBCdecryption.png Graphic file (type png)
+
+<use PCBCdecryption.png>
+Package pdftex.def Info: PCBCdecryption.png used on input line 81.
+(pdftex.def)             Requested size: 398.34875pt x 142.27042pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<OFBencryption.png, id=406, 750.55406pt x 259.7203pt>
+File: OFBencryption.png Graphic file (type png)
+ <use OFBencryption.png>
+Package pdftex.def Info: OFBencryption.png used on input line 85.
+(pdftex.def)             Requested size: 398.34148pt x 142.26404pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<OFBdecryption.png, id=407, 752.8125pt x 259.7203pt>
+File: OFBdecryption.png Graphic file (type png)
+ <use OFBdecryption.png>
+Package pdftex.def Info: OFBdecryption.png used on input line 86.
+(pdftex.def)             Requested size: 398.34544pt x 142.26404pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15 <./CBCencryption.png (PNG copy)> <./CBCdecryption.png (PNG copy)> <./PCBCen
+cryption.png (PNG copy)>]
+<CTRencryption.png, id=419, 752.0597pt x 254.45062pt>
+File: CTRencryption.png Graphic file (type png)
+ <use CTRencryption.png>
+Package pdftex.def Info: CTRencryption.png used on input line 94.
+(pdftex.def)             Requested size: 398.34875pt x 142.27007pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<CTRdecryption.png, id=420, 751.30687pt x 255.95625pt>
+File: CTRdecryption.png Graphic file (type png)
+ <use CTRdecryption.png>
+Package pdftex.def Info: CTRdecryption.png used on input line 95.
+(pdftex.def)             Requested size: 398.33977pt x 142.26439pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[16 <./PCBCdecryption.png (PNG copy)> <./OFBencryption.png (PNG copy)>]
+[17 <./OFBdecryption.png (PNG copy)> <./CTRencryption.png (PNG copy)>] [18 <./C
+TRdecryption.png (PNG copy)>]
+Overfull \hbox (0.92659pt too wide) in paragraph at lines 135--136
+[]\IL2/cmr/m/n/12 Hammingova vzdá-le-nost je tri-vi-álnì hor-ním od-ha-dem na L
+e-ven-sh-tei-novu vzdá-
+ []
+
+[19]
+Overfull \hbox (1.70265pt too wide) in paragraph at lines 149--150
+[]\IL2/cmr/m/n/12 TestLargestBallApprox(IKeyExtender al-go-ri-thm) : Tes-tuje t
+o samé, ale pou-
+ []
+
+[20]) [21]
+\openout2 = `kapArch.aux'.
+
+ (kapArch.tex
+Kapitola 3.
+<diagramIF.png, id=472, 583.17876pt x 300.12125pt>
+File: diagramIF.png Graphic file (type png)
+ <use diagramIF.png>
+Package pdftex.def Info: diagramIF.png used on input line 19.
+(pdftex.def)             Requested size: 301.60846pt x 170.72284pt.
+ [22
+
+
+
+]
+<diagramCA.png, id=479, 1263.72125pt x 635.37375pt>
 File: diagramCA.png Graphic file (type png)
  <use diagramCA.png>
 Package pdftex.def Info: diagramCA.png used on input line 40.
-(pdftex.def)             Requested size: 441.01712pt x 227.61945pt.
+(pdftex.def)             Requested size: 409.72113pt x 227.61945pt.
 
-[22 <./diagramIF.png (PNG copy)>] [23 <./diagramCA.png (PNG copy)>] [24])
-[25]
+[23 <./diagramIF.png (PNG copy)>] [24 <./diagramCA.png (PNG copy)>] [25]
+[26]) [27]
 \openout2 = `kap03.aux'.
 
  (kap03.tex
 Kapitola 4.
-<diagramKEAN.png, id=503, 716.6775pt x 258.9675pt>
+<diagramKEAN.png, id=502, 716.6775pt x 258.9675pt>
 File: diagramKEAN.png Graphic file (type png)
  <use diagramKEAN.png>
 Package pdftex.def Info: diagramKEAN.png used on input line 12.
 (pdftex.def)             Requested size: 304.44722pt x 110.96658pt.
 
-<diagramKEAD.png, id=504, 966.61125pt x 262.9825pt>
+<diagramKEAD.png, id=503, 966.61125pt x 262.9825pt>
 File: diagramKEAD.png Graphic file (type png)
  <use diagramKEAD.png>
 Package pdftex.def Info: diagramKEAD.png used on input line 21.
 (pdftex.def)             Requested size: 409.72028pt x 110.96552pt.
 
-[26
+[28
 
 
 
- <./diagramKEAN.png (PNG copy)> <./diagramKEAD.png (PNG copy)>]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+ <./diagramKEAN.png (PNG copy)> <./diagramKEAD.png (PNG copy)>] [29]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1122,56 +1100,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[27] [28] [29]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[30] [31]
+[30]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[32]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[33] [34] [35]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[36] [37] [38]
+[31] [32] [33]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1193,22 +1129,64 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[39] [40]
+[34] [35] [36]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[41] [42] [43] [44]) [45]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[37] [38] [39] [40]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[41] [42]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[43] [44]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (4.29825pt too wide) in paragraph at lines 143--144
+[]\IL2/cmr/m/n/12 Jsou pou-¾ity dva ge-ne-tické ope-rá-tory. Prv-ním ope-rá-to-
+rem je jed-no-du-ché køí¾ení
+ []
+
+[45] [46]) [47]
 \openout2 = `kapDalsi.aux'.
 
  (kapDalsi.tex
 Kapitola 5.
-<r60_tam.png, id=646, 322.20375pt x 299.1175pt>
+
+Overfull \hbox (12.18481pt too wide) in paragraph at lines 14--16
+\IL2/cmr/m/n/12 ©ifrovací al-go-rit-mus na nìm za-lo¾ený je pak ve tøídì Crypto
+.EncrypterReversibleCA.
+ []
+
+<r60_tam.png, id=644, 322.20375pt x 299.1175pt>
 File: r60_tam.png Graphic file (type png)
  <use r60_tam.png>
 Package pdftex.def Info: r60_tam.png used on input line 19.
@@ -1217,7 +1195,7 @@ Package pdftex.def Info: r60_tam.png used on input line 19.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<r60_zpet.png, id=649, 322.20375pt x 685.56125pt>
+<r60_zpet.png, id=647, 322.20375pt x 685.56125pt>
 File: r60_zpet.png Graphic file (type png)
  <use r60_zpet.png>
 Package pdftex.def Info: r60_zpet.png used on input line 28.
@@ -1226,15 +1204,15 @@ Package pdftex.def Info: r60_zpet.png used on input line 28.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [46
+) [48
 
 
 
-] [47 <./r60_tam.png (PNG copy)>] [48 <./r60_zpet.png (PNG copy)>]
+] [49 <./r60_tam.png (PNG copy)>] [50 <./r60_zpet.png (PNG copy)>]
 \openout2 = `zaver.aux'.
 
 
-(zaver.tex) [49
+(zaver.tex) [51
 
 
 
@@ -1248,38 +1226,60 @@ LaTeX Font Info:    Try loading font information for IL2+cmtt on input line 12.
 ("C:\Users\Martin Dvorak\AppData\Roaming\MiKTeX\2.9\tex\cslatex\base\il2cmtt.fd
 "
 File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
-))) [50
+))) [52
 
 
 
-] (prace.lof [51
+] (prace.lof
+Overfull \hbox (4.38634pt too wide) in paragraph at lines 34--34
+ [][] [][]\IL2/cmr/m/n/12 KeyExtenderSimpleQuadratic na ome-zený au-to-mat s do
+-sa-hem dvou 
+ []
 
 
-])
+Overfull \hbox (2.10164pt too wide) in paragraph at lines 35--35
+ [][] [][]\IL2/cmr/m/n/12 KeyExtenderSimpleQuadratic na cyk-lický au-to-mat s d
+o-sa-hem dvou 
+ []
+
+[53
+
+
+]
+Overfull \hbox (1.7724pt too wide) in paragraph at lines 49--49
+ [][] [][]\IL2/cmr/m/n/12 KeyExtenderInterlaced(10, 0) na ome-zený au-to-mat s 
+do-sa-hem dvou 
+ []
+
+)
 \tf@lof=\write7
 \openout7 = `prace.lof'.
 
- [52] [53
+ [54]
+Overfull \hbox (19.56973pt too wide) in paragraph at lines 155--170
+[][] 
+ []
 
-] [54
+[55
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 204.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 204.
- (prace.aux (titulka.aux) (uvod.aux)
-(kap01.aux) (kap02.aux) (kapArch.aux) (kap03.aux) (kapDalsi.aux) (zaver.aux)
-(literatura.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 204.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 204.
+] [56
+
+] [57]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 206.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 206.
+ (prace.aux (titulka.aux) (uvod.aux) (kap01.aux) (kap02.aux)
+(kapArch.aux) (kap03.aux) (kapDalsi.aux) (zaver.aux) (literatura.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 206.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 206.
 Package rerunfilecheck Info: File `prace.out' has not changed.
-(rerunfilecheck)             Checksum: D9FDF879C76B7F6CFE5B76CD3092F79C;7942.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 204.
+(rerunfilecheck)             Checksum: 69CF5A0042E74EF9ED7B8CFD01E913FF;7522.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 206.
  ) 
 Here is how much of TeX's memory you used:
- 22884 strings out of 493333
- 405266 string characters out of 3139167
- 539150 words of memory out of 3000000
- 25745 multiletter control sequences out of 15000+200000
+ 22565 strings out of 493333
+ 399858 string characters out of 3139167
+ 515181 words of memory out of 3000000
+ 25433 multiletter control sequences out of 15000+200000
  25036 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,8n,93p,2232b,916s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1287,10 +1287,10 @@ Here is how much of TeX's memory you used:
 nts\dpi600\csti12.pk> <C:\Users\Martin Dvorak\AppData\Local\MiKTeX\2.9\fonts\pk
 \ljfour\public\csfonts\dpi600\cstt12.pk> <C:\Users\Martin Dvorak\AppData\Local\
 MiKTeX\2.9\fonts\pk\ljfour\public\csfonts\dpi720\cscsc10.pk> <C:\Users\Martin D
-vorak\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\csfonts\dpi600\csr10.pk> 
-<C:\Users\Martin Dvorak\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\csfonts
-\dpi600\csr7.pk> <C:\Users\Martin Dvorak\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
-ur\public\csfonts\dpi720\csbx12.pk> <C:\Users\Martin Dvorak\AppData\Local\MiKTe
+vorak\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\csfonts\dpi720\csbx12.pk>
+ <C:\Users\Martin Dvorak\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\csfont
+s\dpi600\csr10.pk> <C:\Users\Martin Dvorak\AppData\Local\MiKTeX\2.9\fonts\pk\lj
+four\public\csfonts\dpi600\csr7.pk> <C:\Users\Martin Dvorak\AppData\Local\MiKTe
 X\2.9\fonts\pk\ljfour\public\csfonts\dpi600\csr8.pk> <C:\Users\Martin Dvorak\Ap
 pData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\csfonts\dpi600\cssl12.pk> <C:\Use
 rs\Martin Dvorak\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\csfonts\dpi600
@@ -1313,9 +1313,9 @@ onts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 r8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on prace.pdf (58 pages, 1292290 bytes).
+Output written on prace.pdf (61 pages, 1295064 bytes).
 PDF statistics:
- 1429 PDF objects out of 1440 (max. 8388607)
- 177 named destinations out of 1000 (max. 500000)
- 535 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1433 PDF objects out of 1440 (max. 8388607)
+ 178 named destinations out of 1000 (max. 500000)
+ 519 words of extra memory for PDF output out of 10000 (max. 10000000)
 

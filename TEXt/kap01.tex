@@ -31,7 +31,7 @@ V knize \citep{Schiff08} je na stranì 70 popsána klasifikace celulárních automat
 
 \newcommand{\obrazek}[1]{\begin{figure}
 \centering
-\includegraphics[width=150mm, height=80mm]{ca#1.png}
+\includegraphics[width=140mm, height=80mm]{ca#1.png}
 \includegraphics[width=100mm, height=12mm]{ruleicon#1.png}
 \caption{Elementární automat èíslo #1}
 \label{ca#1}
@@ -49,7 +49,7 @@ Elementární automaty byly pøíkladem 1D binárního automatu. Ale lze uvaovat i ji
 \begin{itemize}
 \item Nemusíme se omezovat jen na tìsné sousedy.
 \item Mùeme povolit více ne 2 stavy.
-\item Vıznamnım druhem celulárních automatù jsou totalistické automaty. Nehledì na to, jak velké se pouívá okolí a kolik stavù buòky nabıvají, v totalistickıch automatech se pouze èíselnì posèítají hodnoty všech bunìk v okolí (vèetnì buòky samé) a podle souètu hodnot se pøiøadí vısledná hodnota. Pøechodová funkce pro totalistickı automat s okolím velikosti $o$ a poètem stavù $s$ se tedy dá vyjádøit jako:
+\item Vıznamnım druhem celulárních automatù jsou totalistické automaty. Nehledì na to, jak velké se pouívá okolí a kolik stavù buòky nabıvají, v~totalistickıch automatech se pouze èíselnì posèítají hodnoty všech bunìk v okolí (vèetnì buòky samé) a podle souètu hodnot se pøiøadí vısledná hodnota. Pøechodová funkce pro totalistickı automat s okolím velikosti $o$ a poètem stavù $s$ se tedy dá vyjádøit jako:
 $$f:\{0,..,(s-1)(o+1)\} \rightarrow \{0,..,s-1\}$$
 \end{itemize}
 
@@ -66,7 +66,7 @@ Lepší jsou pro nás CA, která se chovají více \uv{chaoticky}. Mezi totalistickımi
 \label{replicator}
 \end{figure}
 
-Poslední dvourozmìrnı automat, kterı lze v programu získat pøímo pod urèitım jménem, je Replicator Universe. Ten má veselé pravidlo, které zapomíná pùvodní stav buòky a její novı stav je 1 právì tehdy, kdy má 1, 3, 5 èi 7 ivıch sousedù, viz \citep{Schiff08}, strana 116. V této práci je uveden jen pro zajímavost. Jakákoliv poèáteèní konfigurace je toti po urèitém poètu krokù zkopírovaná do všech 8 smìrù od poèátku (jako tøeba ta, co je na obrázku \ref{replicator}). A proè se tak vùbec chová? Jeho pøechodová funkce je vlastnì XOR sousedù a je to tak lineární zobrazení nad $\mathbb{Z}_2$. Proto i po jakémkoliv poètu krokù tento CA stále definuje lineární zobrazení mezi poèáteèním stavem a novım stavem. Díky linearitì mùeme prozkoumat zvláš, jaké všechny buòky budou ovlivnìny jednou ivou buòkou. Vısledek pak vznikne XORováním tìchto vısledkù pro všechny ivé buòky na vstupu (jako kdyby se kadá buòka vstupu vyvíjela zcela samostatnì). Pøi hraní s jedinou ivou buòkou na vstupu je u snadnìjší nahlédnout, proè vdy po provedení $2^n$ krokù je ivá buòka nakopírována do všech 8 stran s velkımi mezerami od jiné (všechny ve vzdálenosti $n$ od poèáteèního místa, a u \uv{rovnì} èi \uv{šikmo}).
+Poslední dvourozmìrnı automat, kterı lze v programu získat pøímo pod urèitım jménem, je Replicator Universe. Ten má veselé pravidlo, které zapomíná pùvodní stav buòky a její novı stav je 1 právì tehdy, kdy má 1, 3, 5 èi 7 ivıch sousedù, viz \citep{Schiff08}, strana 116. V této práci je uveden jen pro zajímavost. Jakákoliv poèáteèní konfigurace je toti po urèitém poètu krokù zkopírovaná do všech 8 smìrù od poèátku (jako tøeba ta, co je na obrázku \ref{replicator}). A proè se tak vùbec chová? Jeho pøechodová funkce je vlastnì XOR sousedù a je to tak lineární zobrazení nad $\mathbb{Z}_2$. Proto i po jakémkoliv poètu krokù tento CA stále definuje lineární zobrazení mezi poèáteèním stavem a novım stavem. Díky linearitì mùeme prozkoumat zvláš, jaké všechny buòky budou ovlivnìny jednou ivou buòkou. Vısledek pak vznikne XORováním tìchto vısledkù pro všechny ivé buòky na vstupu (jako kdyby se kadá buòka vstupu vyvíjela zcela samostatnì). Pøi hraní s~jedinou ivou buòkou na vstupu je u snadnìjší nahlédnout, proè vdy po provedení $2^n$ krokù je ivá buòka nakopírována do všech 8 stran s velkımi mezerami od jiné (všechny ve vzdálenosti $n$ od poèáteèního místa, a u \uv{rovnì} èi \uv{šikmo}).
 
 \section{Implementace celulárních automatù}
 

@@ -11,7 +11,7 @@
 \setlength\topmargin{0mm}
 \setlength\headsep{0mm}
 \setlength\headheight{0mm}
-% \openright za??d?, aby n?sleduj?c? text za??nal na prav? stran? knihy
+% \openright zaøídí, aby následující text zaèínal na pravé stranì knihy
 \let\openright=\clearpage
 
 %% Pokud tiskneme oboustrann?:
@@ -51,7 +51,7 @@
 \usepackage{booktabs}       % lep?? vodorovn? linky v tabulk?ch
 \usepackage{paralist}       % lep?? enumerate a itemize
 \usepackage[usenames]{xcolor}  % barevn? sazba
-\usepackage{tkz-kiviat,numprint,fullpage}     % radar charts
+\usepackage{tkz-kiviat}     % radar charts
 \usetikzlibrary{arrows}
 
 %%% ?daje o pr?ci
@@ -91,7 +91,7 @@
 % Nepovinn? pod?kov?n? (vedouc?mu pr?ce, konzultantovi, tomu, kdo
 % zap?j?il software, literaturu apod.)
 \def\Podekovani{%
-Dìkuji svému vedoucímu za ochotnou pomoc.
+Velice dìkuji svému vedoucímu za ochotnou pomoc.
 }
 
 % Abstrakt (doporu?en? rozsah cca 80-200 slov; nejedn? se o zad?n? pr?ce)
@@ -121,6 +121,8 @@ Cellular automata are discrete systems with very simple rules but very diverse b
 
 %% Definice r?zn?ch u?ite?n?ch maker (viz popis uvnit? souboru)
 \include{makra}
+
+\overfullrule=0pt
 
 %% Tituln? strana a r?zn? povinn? informa?n? strany
 \begin{document}
@@ -196,7 +198,7 @@ Složka Executables obsahuje tøi spustitelné programy. Ke spuštìní staèí mít nain
 
 \section*{Results}
 
-Složka Results obsahuje výsledky vybraných testù, abyste je nemuseli spouštìt sami a èekat na jejich dobìhnutí na svém poèítaèi. Výsledky jsou zapsány v textové podobì, která je dobøe èitelná pro èlovìka. Soubor results\_Hamming.txt obsahuje výsledky testù pøi využití Hammingovy vzdálenosti. Soubor results\_Levenshtein.txt obsahuje výsledky testù pøi použití Levenshteinovy vzdálenosti. Soubor results\_Genetic.txt obsahuje srovnání výsledkù obyèejných algoritmù s výsledky evoluèního algoritmu, kde evoluèní algoritmus používá nejprve implicitní nabídku stavebních kamenù (Primitives) a poté pøedgenerovanou nabídku stavebních kamenù (GoodPrimitives).
+Složka Results obsahuje výsledky vybraných testù, abyste je nemuseli spouštìt sami a èekat na jejich dobìhnutí. Výsledky jsou zapsány v textové podobì, která je dobøe èitelná pro èlovìka. Soubor results\_Hamming.txt obsahuje výsledky testù pøi využití Hammingovy vzdálenosti. Soubor results\_Levenshtein.txt obsahuje výsledky testù pøi použití Levenshteinovy vzdálenosti. Soubor results\_Genetic.txt obsahuje srovnání výsledkù obyèejných algoritmù s výsledky evoluèního algoritmu, kde evoluèní algoritmus používá nejprve implicitní nabídku stavebních kamenù (Primitives) a poté pøedgenerovanou nabídku stavebních kamenù (GoodPrimitives).
 
 Soubor statistika.txt obsahuje pouze údaje o zdrojovém kódu (poèty øádkù a podobnì). Soubor vykon.txt obsahuje srovnání èasu bìhu 5 rùzných implementací elementárních CA namìøených na nìkolika rùzných poèítaèích. Složka xtenderSearch obsahuje výstupy z 410 bìhù evoluèního algoritmu. Jsou to právì ty, které byly použity jako vstupy GoodPrimitives.
 

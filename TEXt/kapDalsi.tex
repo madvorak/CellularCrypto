@@ -10,7 +10,7 @@ A možná by tohle šlo dìlat i jako asymetrická kryptografie. Byla by k tomu potøe
 
 \section{Øešení}
 
-Uvedená symetrická varianta šifrování s využitím reverzibilních celulárních automatù byla implementována i v této práci. Reverzibilní CA je naprogramován ve tøídì Cellular.ReversibleAutomaton a jedná se o jednorozmìrný binární CA s pravidlem zahrnujícím $r$ sousedù na každou stranu a zacykleným okrajem. Tento automat si kromì souèasného stavu pamatuje i pøedchozí stav a svùj krok poèítá takto:
+Uvedená symetrická varianta šifrování s využitím reverzibilních celulárních automatù byla implementována i v této práci. Reverzibilní CA je naprogramován ve tøídì Cellular.ReversibleAutomaton a jedná se o jednorozmìrný binární CA s~pravidlem zahrnujícím $r$ sousedù na každou stranu a zacykleným okrajem. Tento automat si kromì souèasného stavu pamatuje i pøedchozí stav a svùj krok poèítá takto:
 $$x_i(t+1) = f(x_{i-r}(t), ... , x_{i-1}(t), x_i(t), x_{i+1}(t), ... , x_{i+r}(t))  \oplus x_i(t-1)$$
 Šifrovací algoritmus na nìm založený je pak ve tøídì Crypto.EncrypterReversibleCA. Šifrování probíhá tak, že algoritmus vytvoøí nový reverzibilní CA, jehož pøechodová funkce je urèena šifrovacím klíèem, který musí mít délku $2^{2r+1}$ (takže napøíklad 32, 128, 512, 2048, ...).
 
