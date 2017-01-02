@@ -60,12 +60,13 @@ Blokové šifry jsou klasickım zpùsobem symetrické kryptografie, které se dnes pou
 Existuje nìkolik operaèních módù blokovıch šifer. Ty popisují, jakım zpùsobem je bloková šifra zapojená pøi šifrování celé zprávy.
 
 \newcommand{\bcmoop}[2]{
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=140mm, height=50mm]{#1#2.png}
 \caption{#1 #2}
 \label{#1#2}
 \end{figure}}
+
 
 \bcmoop{ECB}{encryption}
 \bcmoop{ECB}{decryption}
@@ -77,17 +78,17 @@ Nejjednodušším módem je ECB (Electronic CodeBook). Ten šifruje kadı blok plaint
 
 Lepším módem je CBC (Cipher Block Chaining). Zde je kadı blok plaintextu pøed zašifrováním XORován s pøedchozím blokem ciphertextu (zašifrování je na obrázku \ref{CBCencryption}, rozšifrování je na obrázku \ref{CBCdecryption}). První plaintext je XORován s inicalizaèním vektorem. Pøi ponechání stejného plaintextu a stejného klíèe se zmìnou inicializaèního vektoru mìní celı ciphertext, co útoèníkovi komplikuje rozpoznání, kdy jsou odeslány 2 stejné zprávy. CBC má vıraznì lepší vlastnosti ne ECB, ale to neznamená, e bychom mohli pouit libovolnou blokovou šifru. Kdybychom jako blokovou šifru zvolili pouhı XOR mezi plaintextem a šifrovacím klíèem, tak by pøi CBC zapojení došlo k tomu, e kadı druhı blok zprávy by vùbec nebyl ovlivnìn klíèem (byl by to jen plaintext XOR inicializaèní vektor). Ale pøi vyuití vhodné blokové šifry (mající vysokou difuzi a konfuzi) jsou vısledky velmi dobré. Nevıhodou této metody je, e se zašifrování nedá paralelizovat (ale rozšifrování lze).
 
-\bcmoop{PCBC}{encryption}
-\bcmoop{PCBC}{decryption}
 
 Podobnım módem je PCBC (Propagating Cipher Block Chaining). Zde se do vıpoètu následujícího bloku neposílá jen ciphertext, ale i plaintext (zašifrování je na obrázku \ref{PCBCencryption}, rozšifrování je na obrázku \ref{PCBCdecryption}). Nejsou mi známy ádné vıhody této metody ve srovnání s CBC.
 
+A teï se dostáváme ke dvìma metodám, které umoòují pouít blokovou šifru jako Keystream Generator, protoe se XOR s plaintextem aplikuje zvláš a je moné ho provést a po všech vyvolání blokové šifry.
+
+\bcmoop{PCBC}{encryption}
+\bcmoop{PCBC}{decryption}
 \bcmoop{OFB}{encryption}
 \bcmoop{OFB}{decryption}
 
-A teï se dostáváme ke dvìma metodám, které umoòují pouít blokovou šifru jako Keystream Generator, protoe se XOR s plaintextem aplikuje zvláš a je moné ho provést a po všech vyvolání blokové šifry.
-
-První z nich je OFB (Output Feedback). OFB nejprve pouije blokovou šifru k tomu, aby zašifrovala inicializaèní vektor pomocí klíèe. Vısledek je jednak poslán ven a dále je poslán na vstup blokové šifry. Tento blok je zase zašifrován pomocí stejného klíèe a vısledek je poslán opìt jak na vıstup, tak do další blokové šifry. Postup si lze prohlédnout na obrázku \ref{OFBencryption}. Dá se øíci, e OFB posílá na vıstup Keystream, kterı se skládá z øady $f(x), f(f(x)), f(f(f(x))), f(f(f(f(x)))),~...$, kde $x$ je inicializaèní vektor a funkce $f$ je ji zobrazení s konkrétním klíèem. Rozšifrování je triviální obdobou tohoto postupu. Není k nìmu potøeba ádné inverzní zobrazení. Vıstup blokové šifry se XORuje s ciphertextem a vznikne plaintext (viz obrázek \ref{OFBdecryption}). Je zøejmé, e zašifrování ani rozšifrování nelze pøi OFB paralelizovat.
+První z nich je OFB (Output Feedback). OFB nejprve pouije blokovou šifru k~tomu, aby zašifrovala inicializaèní vektor pomocí klíèe. Vısledek je jednak poslán ven a dále je poslán na vstup blokové šifry. Tento blok je zase zašifrován pomocí stejného klíèe a vısledek je poslán opìt jak na vıstup, tak do další blokové šifry. Postup si lze prohlédnout na obrázku \ref{OFBencryption}. Dá se øíci, e OFB posílá na vıstup Keystream, kterı se skládá z øady $f(x), f(f(x)), f(f(f(x))), f(f(f(f(x)))),~...$, kde $x$ je inicializaèní vektor a funkce $f$ je ji zobrazení s konkrétním klíèem. Rozšifrování je triviální obdobou tohoto postupu. Není k nìmu potøeba ádné inverzní zobrazení. Vıstup blokové šifry se XORuje s ciphertextem a vznikne plaintext (viz obrázek \ref{OFBdecryption}). Je zøejmé, e zašifrování ani rozšifrování nelze pøi OFB paralelizovat.
 
 Jako poslední si ukáeme mód CTR (Counter). Na vstup blokové šifry jdou data, která se pokadé o 1 zmìní. Vıstup blokové šifry (keystream) je pak XORován s plaintextem resp. ciphertextem (viz obrázky \ref{CTRencryption} a \ref{CTRdecryption}). CTR se mùe podobat ECB v tom ohledu, e lze kadı blok plaintextu je šifrován samostatnì a proto je opìt moné paralelizovat jak zašifrování, tak rozšifrování. Nicménì zde jsou jednotlivé bloky plaintextu zašifrovány jinak, i kdyby byly všechny bloky plaintextu stejné. Bezpeèností aplikace se proto CTR blíí spíše OFB. Counter posílá na vıstup keystream, kterı se skládá postupnì z øady $f(x \oplus n), f(x \oplus (n+1)), f(x \oplus (n+2)), ...$, kde $n$ je \uv{nonce}. To je èíslo zvolené pro šifrování jedné konkrétní zprávy, které musí bıt pøiloeno k ciphertextu pro umonìní rozšifrování zprávy. Cílem je neopakovat znovu stejnı keystream pøi ponechání stejného klíèe (hraje tedy stejnou roli jako inicializaèní vektor u pøedchozích modù).
 
