@@ -57,8 +57,10 @@ MartinDvorakCD/
 Poster/
 TEXt/
 data_pro_cteni/
-MartinDvorakCD.zip/
 xtenderSearch/
 Dokumentace/
-obhajoba_kecy.txt/
 TestResults/
+
+# custom files
+obhajoba_kecy.txt
+MartinDvorakCD.zip
