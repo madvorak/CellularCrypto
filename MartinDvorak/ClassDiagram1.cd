@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Cellular.Automaton1D" Collapsed="true">
+    <Position X="6.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cellular\Automaton1D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cellular.Automaton2D" Collapsed="true">
+    <Position X="13.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cellular\Automaton2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cellular.Binary1DAutomaton" Collapsed="true">
+    <Position X="4" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAEAAAAQQAAAAAAIAECAgAAAAAACA=</HashCode>
+      <FileName>Cellular\Binary1DAutomaton.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Cellular.Binary2DAutomaton" Collapsed="true">
+    <Position X="13" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAEAAAAQQAAAAAAIAECAgAAAAAACA=</HashCode>
+      <FileName>Cellular\Binary2DAutomaton.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Cellular.BinaryRangeAutomaton" Collapsed="true">
+    <Position X="5.75" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAAAQAAIAAAAAAAAEAAAAAAAgAAAAAIAIAAAAAAAABA=</HashCode>
+      <FileName>Cellular\BinaryRangeAutomaton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cellular.BinaryRangeCyclicAutomaton" Collapsed="true">
+    <Position X="5.75" Y="9.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAEAAAAAAAgAAAAAAIAAAAAAAAABA=</HashCode>
+      <FileName>Cellular\BinaryRangeCyclicAutomaton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cellular.CellularAutomaton" Collapsed="true">
+    <Position X="8.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAABA=</HashCode>
+      <FileName>Cellular\CellularAutomaton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cellular.ElementaryAutomaton" Collapsed="true">
+    <Position X="1.5" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAAAQAAAQAAAAAAAEgAAAAAAAAAAAIAQIAAQAgAAABA=</HashCode>
+      <FileName>Cellular\ElementaryAutomaton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cellular.ElementaryAutomatonFast" Collapsed="true">
+    <Position X="0.5" Y="9" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAEAAAAAAAAAAAAAIAIAAAAAAAABA=</HashCode>
+      <FileName>Cellular\ElementaryAutomatonFast.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cellular.ElementaryAutomatonFaster" Collapsed="true">
+    <Position X="3" Y="9" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAIAAAAAAAAAAAgAIAAAAAAAABA=</HashCode>
+      <FileName>Cellular\ElementaryAutomatonFaster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cellular.ElementaryAutomatonParallel" Collapsed="true">
+    <Position X="3" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAEBA=</HashCode>
+      <FileName>Cellular\ElementaryAutomatonParallel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cellular.Nary1DAutomaton" Collapsed="true">
+    <Position X="10.25" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAAABAAAAA=</HashCode>
+      <FileName>Cellular\Nary1DAutomaton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cellular.NaryTotalisticAutomaton" Collapsed="true">
+    <Position X="10.25" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAAAQAAABAAAAAAAAAAAAAAAAAIAAAAAIAAAAAAAABA=</HashCode>
+      <FileName>Cellular\NaryTotalisticAutomaton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cellular.NaryTotalisticCyclicAutomaton" Collapsed="true">
+    <Position X="10" Y="9.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Cellular\NaryTotalisticCyclicAutomaton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cellular.ReversibleAutomaton" Collapsed="true">
+    <Position X="8.25" Y="7.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAAAQAAIAAAAAAQAEAAAAAAAAAAAAAAAIAAAAAAAABA=</HashCode>
+      <FileName>Cellular\ReversibleAutomaton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cellular.Totalistic2DAutomaton" Collapsed="true">
+    <Position X="13" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BgBABAMAAAABAAAoEAAAEAEAAAAAAAIAIBECAAAAAFA=</HashCode>
+      <FileName>Cellular\Totalistic2DAutomaton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cellular.Totalistic2DAutomatonInteractive" Collapsed="true">
+    <Position X="13" Y="9.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QAAEAAgAAAAAAAAAAAAAAAIAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Cellular\Totalistic2DAutomatonInteractive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cellular.Utilities" Collapsed="true">
+    <Position X="19.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAgAAAABAAAAAAAAAAIgAAEAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Cellular\Utilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crypto.CannotGenerateException" Collapsed="true">
+    <Position X="22.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Crypto\CannotGenerateException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crypto.EncrypterReversibleCA" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Crypto\EncrypterReversibleCA.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Crypto.EncrypterStreamCA" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Crypto\EncrypterStreamCA.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Crypto.EncryptionProvider" Collapsed="true">
+    <Position X="22.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAAAAAAAAAAAAAQAIAAAAABAAEAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Crypto\EncryptionProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crypto.Export" Collapsed="true">
+    <Position X="24.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAACAAAAAQAAAAAAACAAAAAA=</HashCode>
+      <FileName>Crypto\Export.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crypto.Factory" Collapsed="true">
+    <Position X="26.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Crypto\Factory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crypto.FunctionTesting" Collapsed="true">
+    <Position X="19.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAIAAAAAAQARAAAAAAEBFAAIAAAKAAACAAAAAEAABAA=</HashCode>
+      <FileName>Crypto\FunctionTesting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crypto.FunctionTestsForThesis" Collapsed="true">
+    <Position X="21" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABBAAAAAAAAAAAAESSAAAAAAAAAAAAAhA=</HashCode>
+      <FileName>Crypto\FunctionTestsForThesis.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crypto.KeyExtenderAbstractD" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAABAAgAA=</HashCode>
+      <FileName>Crypto\KeyExtenderAbstractD.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Crypto.KeyExtenderAbstractN" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAgAA=</HashCode>
+      <FileName>Crypto\KeyExtenderAbstractN.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Crypto.KeyExtenderCheating" Collapsed="true">
+    <Position X="15" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Crypto\KeyExtenderCheating.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crypto.KeyExtenderCopy" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAgAA=</HashCode>
+      <FileName>Crypto\KeyExtenderCopy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crypto.KeyExtenderGenetic" Collapsed="true">
+    <Position X="10.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAEAAAAQAAAAAkQAAAAAAAAIAAACAgAAABAAYAA=</HashCode>
+      <FileName>Crypto\KeyExtenderGenetic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crypto.KeyExtenderInterlaced" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAABAAAAAAAAAAMAAAAAAAAAAgAA=</HashCode>
+      <FileName>Crypto\KeyExtenderInterlaced.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crypto.KeyExtenderSimpleLinear" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAgAA=</HashCode>
+      <FileName>Crypto\KeyExtenderSimpleLinear.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crypto.KeyExtenderSimpleQuadratic" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAgAA=</HashCode>
+      <FileName>Crypto\KeyExtenderSimpleQuadratic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crypto.KeyExtenderUncertain" Collapsed="true">
+    <Position X="12.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABACAAA=</HashCode>
+      <FileName>Crypto\KeyExtenderUncertain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crypto.RandomnessTesting" Collapsed="true">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAEAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Crypto\RandomnessTesting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crypto.SearchSGA" Collapsed="true">
+    <Position X="26.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Crypto\SearchSGA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Program" Collapsed="true">
+    <Position X="17.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Testing.AutomataTest" Collapsed="true">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Testing\AutomataTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Testing.BinaryRangeNTest" Collapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Testing\BinaryRangeNTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Testing.ElementaryImplementationsTest" Collapsed="true">
+    <Position X="26.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Testing\ElementaryImplementationsTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Testing.ElementaryTimeMeasure" Collapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAQAAAAAAAAAAAACAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Testing\ElementaryTimeMeasure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Testing.FactoryTest" Collapsed="true">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Testing\FactoryTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Testing.FunctionTestTest" Collapsed="true">
+    <Position X="22.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAACAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Testing\FunctionTestTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Testing.GeneticTest" Collapsed="true">
+    <Position X="24.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Testing\GeneticTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Testing.MainTests" Collapsed="true">
+    <Position X="26.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Testing\MainTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Testing.RandomTestTest" Collapsed="true">
+    <Position X="21" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Testing\RandomTestTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Testing.ReversibleTest" Collapsed="true">
+    <Position X="22.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Testing\ReversibleTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Testing.SearchLongest" Collapsed="true">
+    <Position X="24.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAgA=</HashCode>
+      <FileName>Testing\SearchLongest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Testing.TotalisticTernaryTest" Collapsed="true">
+    <Position X="17.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Testing\TotalisticTernaryTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Testing.UtilityTest" Collapsed="true">
+    <Position X="21" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Testing\UtilityTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserForms.Adapter" Collapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>UserForms\Adapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserForms.DemoForm" Collapsed="true">
+    <Position X="24.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAABAUGABABAQABCQKCBCgIAAIAAAAAAACgACAAA=</HashCode>
+      <FileName>UserForms\DemoForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Cellular.IBinaryCA">
+    <Position X="17.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAACAAACAABAgCAAAAAAAIAAAAAAEAAA=</HashCode>
+      <FileName>Cellular\IBinaryCA.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Crypto.IEncrypter">
+    <Position X="21" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Crypto\IEncrypter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Crypto.IKeyExtender">
+    <Position X="19.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAgAA=</HashCode>
+      <FileName>Crypto\IKeyExtender.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
