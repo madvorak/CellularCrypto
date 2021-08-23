@@ -52,7 +52,6 @@ BenchmarkDotNet.Artifacts/
 #################################################
 
 # custom directories
-CryptographyUnitTests/
 MartinDvorakCD/
 Poster/
 TEXt/
