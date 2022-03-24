@@ -8,7 +8,7 @@ namespace Cellular
     /// Class containing base-constructors for all binary 1D automata and implementation of the <c>IBinaryCA</c> interface.
     /// The state is kept in a <c>BitArray</c>.
     /// </summary>
-    abstract class Binary1DAutomaton : Automaton1D, IBinaryCA
+    public abstract class Binary1DAutomaton : Automaton1D, IBinaryCA
     {
         protected BitArray state;
 

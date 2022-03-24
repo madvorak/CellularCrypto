@@ -6,7 +6,7 @@ namespace Cellular
     /// Common interface for all binary cellular automata. Most work with CA is done through this interface.
     /// Only subclasses of <c>CellularAutomaton</c> are supposed to implement this interface.
     /// </summary>
-    interface IBinaryCA
+    public interface IBinaryCA
     {
         /// <summary>
         /// Tells the size of the CA.

@@ -7,7 +7,7 @@ namespace Cellular
     /// Class representing 256 elementary CA with firmly set borders.
     /// This specific implementation calculates every bit separately.
     /// </summary>
-    class ElementaryAutomaton: Binary1DAutomaton
+    public class ElementaryAutomaton: Binary1DAutomaton
     {
         protected byte ruleNumber;
         protected bool[, ,] rule;
@@ -131,7 +131,7 @@ namespace Cellular
         /// Creates an equivalent CA, which only has a "more general" type.
         /// </summary>
         /// <returns>A "copy" of this CA as <c>BinaryRangeAutomaton</c>.</returns>
-        public BinaryRangeAutomaton ConvertToRangeN()
+        internal BinaryRangeAutomaton ConvertToRangeN()
         {           
             return new BinaryRangeAutomaton(1, getRangeRule(), state);
         }
@@ -140,7 +140,7 @@ namespace Cellular
         /// Creates a new CA with the same state and the same rule, but connected boundaries.
         /// </summary>
         /// <returns>A modified "copy" of this CA as <c>BinaryRangeCyclicAutomaton</c>.</returns>
-        public BinaryRangeCyclicAutomaton ConvertToCyclicN()
+        internal BinaryRangeCyclicAutomaton ConvertToCyclicN()
         {
             return new BinaryRangeCyclicAutomaton(1, getRangeRule(), state);
         }

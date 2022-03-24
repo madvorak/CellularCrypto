@@ -6,7 +6,7 @@ namespace Cellular
     /// Class representing 256 elementary CA with firmly set borders.
     /// This specific implementation reads every state only once, so it should be even faster.
     /// </summary>
-    class ElementaryAutomatonFaster : ElementaryAutomaton
+    public class ElementaryAutomatonFaster : ElementaryAutomaton
     {
         protected bool[] rule1D;
 

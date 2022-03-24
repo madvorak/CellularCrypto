@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MartinDvorak", "MartinDvorak\MartinDvorak.csproj", "{03DEF077-DD59-48D3-B2D8-B9FC82C5BA32}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "Program\Program.csproj", "{98E4FA4F-F377-4DD0-ADFC-46F9B64E0369}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptographyUnitTests", "CryptographyUnitTests\CryptographyUnitTests.csproj", "{54D06E93-6CC5-44E9-BF21-414F8D42B4F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratePicture", "GeneratePicture\GeneratePicture.csproj", "{36AED1E5-7382-40E0-8B09-81B3998E13E1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{03DEF077-DD59-48D3-B2D8-B9FC82C5BA32} = {03DEF077-DD59-48D3-B2D8-B9FC82C5BA32}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,8 +32,15 @@ Global
 		{54D06E93-6CC5-44E9-BF21-414F8D42B4F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54D06E93-6CC5-44E9-BF21-414F8D42B4F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54D06E93-6CC5-44E9-BF21-414F8D42B4F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36AED1E5-7382-40E0-8B09-81B3998E13E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36AED1E5-7382-40E0-8B09-81B3998E13E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36AED1E5-7382-40E0-8B09-81B3998E13E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36AED1E5-7382-40E0-8B09-81B3998E13E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28F32BC8-07C8-424A-A351-7F28B03A0123}
 	EndGlobalSection
 EndGlobal

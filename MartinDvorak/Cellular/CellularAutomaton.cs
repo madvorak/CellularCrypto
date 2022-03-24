@@ -5,7 +5,7 @@
     /// Every constructor should follow this logical order when considering its parametres:
     /// 1) specification of the type (usually not needed), 2) rule, 3) initial state / size (& rng).
     /// </summary>
-    abstract class CellularAutomaton
+    public abstract class CellularAutomaton
     {
         protected uint time = 0;
 

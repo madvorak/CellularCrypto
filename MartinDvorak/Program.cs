@@ -13,14 +13,14 @@ class Program
     static void Main(string[] args)
     {
         rnd = new Random();
+        AutomataTest.RunTest();
+        ElementaryImplementationsTest.RunTest();
         MainTests.RunTest();
         GeneticTest.RunTest();
-        ElementaryImplementationsTest.RunTest();
         ElementaryTimeMeasure.RunTest();
         Adapter.DisplayForm();
         FactoryTest.RunTest();
         FunctionTestTest.RunTest();
-        AutomataTest.RunTest();
         ReversibleTest.RunTest();
         TotalisticTernaryTest.RunTest();
         UtilityTest.RunTest();
